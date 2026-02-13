@@ -1,0 +1,9 @@
+{
+  "name": "investigatepro-landing",
+  "version": "1.0.0",
+  "description": "InvestigatePro Landing Page",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build needed'"
+  }
+}
