@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Incident Investigation Checklist | InvestigatePro</title>
+    <meta name="description" content="Download our free 25-point incident investigation checklist based on the ICAM methodology. Used by safety professionals worldwide.">
+    <meta name="keywords" content="incident investigation checklist, ICAM methodology, safety checklist, root cause analysis, workplace safety">
+    <link rel="canonical" href="https://investigatepro.app/checklist.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Free Incident Investigation Checklist | InvestigatePro">
+    <meta property="og:description" content="Download our free 25-point incident investigation checklist based on the ICAM methodology.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://investigatepro.app/checklist.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    
+    <style>
+        :root {
+            --navy: #0C142E;
+            --navy-light: #1a2544;
+            --cyan: #76DCEC;
+            --cyan-dark: #5bc4d4;
+            --white: #FFFFFF;
+            --gray-100: #f7f8fa;
+            --gray-200: #e5e7eb;
+            --gray-400: #9ca3af;
+            --gray-600: #4b5563;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--navy);
+            color: var(--white);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Header */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(118, 220, 236, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--cyan);
+        }
+        
+        .back-link {
+            color: var(--cyan);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 60px 0 40px;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: rgba(118, 220, 236, 0.15);
+            color: var(--cyan);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--gray-400);
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        
+        /* Email Capture Form */
+        .capture-form {
+            background: var(--navy-light);
+            border: 1px solid rgba(118, 220, 236, 0.2);
+            border-radius: 12px;
+            padding: 30px;
+            max-width: 500px;
+            margin: 0 auto 50px;
+        }
+        
+        .capture-form h3 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: var(--cyan);
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .form-row input {
+            flex: 1;
+            padding: 14px 16px;
+            border: 1px solid rgba(118, 220, 236, 0.3);
+            border-radius: 8px;
+            background: var(--navy);
+            color: var(--white);
+            font-size: 1rem;
+        }
+        
+        .form-row input::placeholder {
+            color: var(--gray-400);
+        }
+        
+        .form-row input:focus {
+            outline: none;
+            border-color: var(--cyan);
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 14px 24px;
+            background: var(--cyan);
+            color: var(--navy);
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .submit-btn:hover {
+            background: var(--cyan-dark);
+        }
+        
+        .form-note {
+            font-size: 0.8rem;
+            color: var(--gray-400);
+            margin-top: 12px;
+            text-align: center;
+        }
+        
+        /* Checklist Preview */
+        .checklist-preview {
+            background: var(--white);
+            color: var(--navy);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .checklist-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--gray-200);
+        }
+        
+        .checklist-header h2 {
+            font-size: 1.8rem;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+        
+        .checklist-header p {
+            color: var(--gray-600);
+        }
+        
+        .checklist-section {
+            margin-bottom: 30px;
+        }
+        
+        .checklist-section h3 {
+            color: var(--cyan-dark);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--gray-200);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-number {
+            background: var(--navy);
+            color: var(--white);
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--gray-100);
+        }
+        
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--gray-400);
+            border-radius: 4px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        .checklist-item span {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+        }
+        
+        .checklist-item strong {
+            color: var(--navy);
+        }
+        
+        /* Pro Tips */
+        .pro-tip {
+            background: rgba(118, 220, 236, 0.1);
+            border-left: 4px solid var(--cyan);
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .pro-tip strong {
+            color: var(--navy);
+        }
+        
+        .pro-tip p {
+            color: var(--gray-600);
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 60px 0;
+            border-top: 1px solid rgba(118, 220, 236, 0.1);
+        }
+        
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+        
+        .cta-section p {
+            color: var(--gray-400);
+            max-width: 500px;
+            margin: 0 auto 30px;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            padding: 16px 32px;
+            background: var(--cyan);
+            color: var(--navy);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background 0.2s;
+        }
+        
+        .cta-btn:hover {
+            background: var(--cyan-dark);
+        }
+        
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid rgba(118, 220, 236, 0.1);
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: var(--gray-400);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links a:hover {
+            color: var(--cyan);
+        }
+        
+        .copyright {
+            color: var(--gray-400);
+            font-size: 0.85rem;
+        }
+        
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+            
+            header, .hero, .capture-form, .cta-section, footer {
+                display: none;
+            }
+            
+            .checklist-preview {
+                box-shadow: none;
+                padding: 20px;
+            }
+            
+            .checkbox {
+                border-color: #333;
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .form-row {
+                flex-direction: column;
+            }
+            
+            .checklist-preview {
+                padding: 24px;
+            }
+        }
+        
+        /* Success state */
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .success-message.show {
+            display: block;
+        }
+        
+        .success-message h3 {
+            color: var(--cyan);
+            margin-bottom: 10px;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: var(--cyan);
+            color: var(--navy);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">Investigate<span>Pro</span></a>
+                <a href="/" class="back-link">← Back to Home</a>
+            </div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <span class="badge">📋 Free Download</span>
+            <h1>Incident Investigation Checklist</h1>
+            <p>A comprehensive 25-point checklist based on the ICAM methodology. Used by safety professionals at mining, construction, and manufacturing sites worldwide.</p>
+        </div>
+    </section>
+    
+    <section class="container">
+        <div class="capture-form" id="capture-form">
+            <h3>📥 Get the Printable PDF Version</h3>
+            <form id="download-form">
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Your name" required>
+                </div>
+                <div class="form-row">
+                    <input type="email" name="email" placeholder="Work email" required>
+                </div>
+                <div class="form-row">
+                    <input type="text" name="company" placeholder="Company (optional)">
+                </div>
+                <button type="submit" class="submit-btn">Download Free Checklist</button>
+            </form>
+            <p class="form-note">No spam. Unsubscribe anytime. We respect your inbox.</p>
+            
+            <div class="success-message" id="success-message">
+                <h3>✅ Check Your Email!</h3>
+                <p>We've sent the PDF checklist to your inbox. In the meantime, scroll down to view the full checklist.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="container">
+        <div class="checklist-preview">
+            <div class="checklist-header">
+                <h2>🔍 ICAM Incident Investigation Checklist</h2>
+                <p>25 Essential Steps for Thorough Root Cause Analysis</p>
+            </div>
+            
+            <!-- Phase 1 -->
+            <div class="checklist-section">
+                <h3><span class="section-number">1</span> Initial Response (First 30 Minutes)</h3>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <span><strong>Secure the scene</strong> — Prevent further harm and preserve evidence</span>
+                </div>
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <span><strong>Ensure medical attention</strong> — Confirm all injured persons are receiving care</span>
+                </div>
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <span><strong>Notify relevant parties</strong> — Supervisors, safety team, management as required</span>
+                </div>
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <span><strong>Document initial conditions</strong> — Photos, videos, sketches before anything changes</span>
+                </div>
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <span><strong>Identify witnesses</strong> — List everyone present before memories fade</span>
+                </div>
+                
+                <div class="pro-tip">
+                    <strong>💡 Pro Tip:</strong>
+                    <p>Take photos from multiple angles and distances. What seems obvious now may be crucial later.</p>
+                </div>
+            </div>
+            
+            <!-- Phase 2 -->
+            <div class="checklist-section">
+                <h3><span class="section-number">2</span> Evidence Collection</h3>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <span><strong>Collect physical evidence</strong> — Equipment, materials, PPE, environmental samples</span>
+                </div>
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <span><strong>Gather documentation</strong> — Work orders, procedures, training records, maintenance logs</span>
+                </div>
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <span><strong>Review CCTV/recordings</strong> — Security cameras, dashcams, wearable devices</span>
+                </div>
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <span><strong>Download equipment data</strong> — Black boxes, telemetry, sensor logs</span>
+                </div>
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <span><strong>Map the scene</strong> — Create detailed diagram with measurements</span>
+                </div>
+            </div>
+            
+            <!-- Phase 3 -->
+            <div class="checklist-section">
+                <h3><span class="section-number">3</span> Witness Interviews</h3>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <span><strong>Interview separately</strong> — Prevent influence between witnesses</span>
+                </div>
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <span><strong>Use open questions</strong> — "Tell me what happened" not "Did X cause this?"</span>
+                </div>
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <span><strong>Document verbatim quotes</strong> — Exact words matter for accuracy</span>
+                </div>
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <span><strong>Explore the timeline</strong> — Build minute-by-minute sequence of events</span>
+                </div>
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <span><strong>Ask about "normal" operations</strong> — Understand if this was typical or different</span>
+                </div>
+                
+                <div class="pro-tip">
+                    <strong>💡 Pro Tip:</strong>
+                    <p>Never ask "Why did you...?" — it triggers defensiveness. Ask "What was happening when...?" instead.</p>
+                </div>
+            </div>
+            
+            <!-- Phase 4 -->
+            <div class="checklist-section">
+                <h3><span class="section-number">4</span> ICAM Analysis</h3>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <span><strong>Identify Absent/Failed Defences</strong> — What barriers should have prevented harm?</span>
+                </div>
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <span><strong>List Individual/Team Actions</strong> — Actions and decisions (without blame)</span>
+                </div>
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <span><strong>Identify Task/Environmental Conditions</strong> — Context that shaped decisions</span>
+                </div>
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <span><strong>Uncover Organisational Factors</strong> — Systems, culture, resources that contributed</span>
+                </div>
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <span><strong>Apply the 5 Whys technique</strong> — Dig deeper on each contributing factor</span>
+                </div>
+            </div>
+            
+            <!-- Phase 5 -->
+            <div class="checklist-section">
+                <h3><span class="section-number">5</span> Corrective Actions & Close-out</h3>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <span><strong>Develop SMART actions</strong> — Specific, Measurable, Achievable, Relevant, Time-bound</span>
+                </div>
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <span><strong>Use the hierarchy of controls</strong> — Elimination > Substitution > Engineering > Admin > PPE</span>
+                </div>
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <span><strong>Assign clear ownership</strong> — One person accountable per action item</span>
+                </div>
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <span><strong>Share learnings widely</strong> — Safety alerts, toolbox talks, cross-site communication</span>
+                </div>
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <span><strong>Verify effectiveness</strong> — Follow up to confirm actions prevent recurrence</span>
+                </div>
+                
+                <div class="pro-tip">
+                    <strong>💡 Pro Tip:</strong>
+                    <p>60% of incidents have organizational root causes. If all your actions are "retraining," dig deeper.</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 2px solid var(--gray-200);">
+                <p style="color: var(--gray-600); font-size: 0.9rem;">
+                    <strong>Want AI-powered guidance through each step?</strong><br>
+                    InvestigatePro coaches you in real-time as you investigate.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Investigations?</h2>
+            <p>InvestigatePro uses AI to guide you through ICAM methodology, ask better questions, and find root causes faster.</p>
+            <a href="/#pricing" class="cta-btn">Start Free 14-Day Trial →</a>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/faq.html">FAQ</a>
+                <a href="/security.html">Security</a>
+                <a href="/privacy.html">Privacy</a>
+                <a href="/terms.html">Terms</a>
+                <a href="/cookie.html">Cookies</a>
+            </div>
+            <p class="copyright">© 2024 InvestigatePro. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.getElementById('download-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const formData = new FormData(form);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                company: formData.get('company') || '',
+                source: 'checklist-download',
+                timestamp: new Date().toISOString()
+            };
+            
+            // Send to our API
+            try {
+                await fetch('https://api.72-62-211-212.sslip.io/api/leads/capture', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+            } catch (err) {
+                console.log('Lead capture pending');
+            }
+            
+            // Show success message
+            form.style.display = 'none';
+            document.getElementById('success-message').classList.add('show');
+            
+            // Smooth scroll to checklist
+            setTimeout(() => {
+                document.querySelector('.checklist-preview').scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }, 1500);
+        });
+        
+        // Print button functionality
+        window.printChecklist = function() {
+            window.print();
+        };
+    </script>
+</body>
+</html>
