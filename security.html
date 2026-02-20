@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security — InvestigatePro</title>
+    <meta name="description" content="Learn about InvestigatePro's security practices, data protection, and compliance measures. Enterprise-grade security for your incident investigation data.">
+    <link rel="icon" type="image/png" href="assets/logos/logo-03-icon-only.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            900: '#0C142E',
+                            800: '#0F1A3A',
+                            700: '#1A2744',
+                            600: '#2A3A5C',
+                            500: '#3D4F70',
+                        },
+                        cyan: {
+                            500: '#76DCEC',
+                            400: '#88E0EE',
+                            300: '#A8EAF3',
+                            200: '#C8F1F8',
+                            100: '#E8F9FC',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-hero {
+            background: linear-gradient(180deg, #0C142E 0%, #1A2744 100%);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased bg-navy-900 text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-navy-900/95 backdrop-blur-sm z-50 border-b border-navy-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="index.html">
+                        <img src="assets/logos/logo-03-on-dark.png" alt="InvestigatePro" class="h-[80px] sm:h-[100px]">
+                    </a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="index.html#features" class="hidden sm:inline text-gray-300 hover:text-white transition-colors">Features</a>
+                    <a href="index.html#pricing" class="hidden sm:inline text-gray-300 hover:text-white transition-colors">Pricing</a>
+                    <a href="index.html#demo" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-5 py-2 rounded-lg font-semibold transition-colors">
+                        Start Free Trial
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="gradient-hero pt-40 pb-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center bg-navy-700 rounded-full px-4 py-1.5 mb-6">
+                <svg class="w-4 h-4 text-cyan-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+                <span class="text-sm text-gray-300">Enterprise-Grade Security</span>
+            </div>
+            <h1 class="text-4xl sm:text-5xl font-bold mb-6">
+                Security at <span class="text-cyan-500">InvestigatePro</span>
+            </h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                Your incident investigation data is sensitive. We treat its protection as our highest priority.
+            </p>
+        </div>
+    </section>
+
+    <!-- Security Overview -->
+    <section class="py-16 bg-navy-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Encryption -->
+                <div class="bg-navy-700 rounded-xl p-6 border border-navy-600">
+                    <div class="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Encryption</h3>
+                    <p class="text-gray-400">TLS 1.3 in transit, AES-256 at rest. Your data is encrypted at every stage.</p>
+                </div>
+
+                <!-- Access Control -->
+                <div class="bg-navy-700 rounded-xl p-6 border border-navy-600">
+                    <div class="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Access Control</h3>
+                    <p class="text-gray-400">Role-based permissions. Only authorized team members access investigation data.</p>
+                </div>
+
+                <!-- Compliance -->
+                <div class="bg-navy-700 rounded-xl p-6 border border-navy-600">
+                    <div class="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Compliance Ready</h3>
+                    <p class="text-gray-400">GDPR compliant with full data export, deletion, and audit capabilities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Security Practices -->
+    <section class="py-20 bg-navy-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-12 text-center">Our Security Practices</h2>
+
+            <!-- Data Protection -->
+            <div class="mb-12">
+                <h3 class="text-xl font-semibold mb-4 flex items-center">
+                    <svg class="w-6 h-6 text-cyan-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/>
+                    </svg>
+                    Data Protection
+                </h3>
+                <div class="bg-navy-800 rounded-xl p-6 border border-navy-700 space-y-4">
+                    <div class="flex items-start">
+                        <svg class="w-5 h-5 text-cyan-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <div>
+                            <span class="font-medium">TLS 1.3 Encryption</span>
+                            <p class="text-gray-400 text-sm mt-1">All data transmitted between your browser and our servers is encrypted using the latest TLS 1.3 protocol.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-5 h-5 text-cyan-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <div>
+                            <span class="font-medium">AES-256 Encryption at Rest</span>
+                            <p class="text-gray-400 text-sm mt-1">All stored data, including investigation reports and attachments, is encrypted using AES-256 encryption.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-5 h-5 text-cyan-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <div>
+                            <span class="font-medium">Automated Backups</span>
+                            <p class="text-gray-400 text-sm mt-1">Your data is backed up every 6 hours with 30-day retention. Backups are encrypted and stored in geographically separate locations.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-5 h-5 text-cyan-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <div>
+                            <span class="font-medium">Data Isolation</span>
+                            <p class="text-gray-400 text-sm mt-1">Each customer's data is logically isolated. Your investigation data is never mixed with other organizations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Access Control -->
+            <div class="mb-12">
+                <h3 class="text-xl font-semibold mb-4 flex items-center">
+                    <svg class="w-6 h-6 text-cyan-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                    </svg>
+                    Access Control
+                </h3>
+                <div class="bg-navy-800 rounded-xl p-6 border border-navy-700 space-y-4">
+                    <div class="flex items-start">
+                        <svg class="w-5 h-5 text-cyan-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <div>
+                            <span class="font-medium">Role-Based Access Control (RBAC)</span>
+                            <p class="text-gray-400 text-sm mt-1">Define roles for administrators, investigators, reviewers, and viewers. Each role has specific permissions.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-5 h-5 text-cyan-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <div>
+                            <span class="font-medium">SSO/SAML Integration (Enterprise)</span>
+                            <p class="text-gray-400 text-sm mt-1">Enterprise plans include single sign-on integration with your identity provider (Okta, Azure AD, etc.).</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-5 h-5 text-cyan-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <div>
+                            <span class="font-medium">Secure Password Requirements</span>
+                            <p class="text-gray-400 text-sm mt-1">Strong password requirements including minimum length, complexity, and protection against common passwords.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-5 h-5 text-cyan-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <div>
+                            <span class="font-medium">Session Management</span>
+                            <p class="text-gray-400 text-sm mt-1">Automatic session timeouts, secure session handling, and the ability to view/revoke active sessions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Infrastructure -->
+            <div class="mb-12">
+                <h3 class="text-xl font-semibold mb-4 flex items-center">
+                    <svg class="w-6 h-6 text-cyan-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/>
+                    </svg>
+                    Infrastructure Security
+                </h3>
+                <div class="bg-navy-800 rounded-xl p-6 border border-navy-700 space-y-4">
+                    <div class="flex items-start">
+                        <svg class="w-5 h-5 text-cyan-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <div>
+                            <span class="font-medium">Cloudflare Protection</span>
+                            <p class="text-gray-400 text-sm mt-1">DDoS protection, WAF (Web Application Firewall), and edge caching via Cloudflare.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-5 h-5 text-cyan-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <div>
+                            <span class="font-medium">Automatic SSL/TLS Certificates</span>
+                            <p class="text-gray-400 text-sm mt-1">Certificates are automatically provisioned and renewed. No manual certificate management required.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-5 h-5 text-cyan-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <div>
+                            <span class="font-medium">Security Monitoring</span>
+                            <p class="text-gray-400 text-sm mt-1">Real-time error tracking and security monitoring with Sentry. Alerts on suspicious activity.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-5 h-5 text-cyan-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <div>
+                            <span class="font-medium">Regular Updates</span>
+                            <p class="text-gray-400 text-sm mt-1">Dependencies and infrastructure are kept up to date with the latest security patches.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Compliance -->
+            <div class="mb-12">
+                <h3 class="text-xl font-semibold mb-4 flex items-center">
+                    <svg class="w-6 h-6 text-cyan-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                    Compliance
+                </h3>
+                <div class="bg-navy-800 rounded-xl p-6 border border-navy-700 space-y-4">
+                    <div class="flex items-start">
+                        <svg class="w-5 h-5 text-cyan-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <div>
+                            <span class="font-medium">GDPR Compliant</span>
+                            <p class="text-gray-400 text-sm mt-1">Full compliance with EU General Data Protection Regulation including data export, deletion, and access rights.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-5 h-5 text-cyan-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <div>
+                            <span class="font-medium">Data Export (Article 20)</span>
+                            <p class="text-gray-400 text-sm mt-1">Export all your data in machine-readable format at any time. Full data portability.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-5 h-5 text-cyan-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <div>
+                            <span class="font-medium">Right to Erasure (Article 17)</span>
+                            <p class="text-gray-400 text-sm mt-1">Request complete deletion of your data. We honor all erasure requests within 30 days.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-5 h-5 text-cyan-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <div>
+                            <span class="font-medium">Audit Logging</span>
+                            <p class="text-gray-400 text-sm mt-1">Complete audit trail of data access and modifications for compliance reporting.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-5 h-5 text-cyan-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <div>
+                            <span class="font-medium">DPA Available (Enterprise)</span>
+                            <p class="text-gray-400 text-sm mt-1">Data Processing Agreements available for enterprise customers upon request.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Security -->
+            <div class="mb-12">
+                <h3 class="text-xl font-semibold mb-4 flex items-center">
+                    <svg class="w-6 h-6 text-cyan-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                    </svg>
+                    AI Security & Privacy
+                </h3>
+                <div class="bg-navy-800 rounded-xl p-6 border border-navy-700 space-y-4">
+                    <div class="flex items-start">
+                        <svg class="w-5 h-5 text-cyan-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <div>
+                            <span class="font-medium">No AI Training on Your Data</span>
+                            <p class="text-gray-400 text-sm mt-1">Your investigation data is never used to train AI models. We use Anthropic's Claude API which has a zero data retention policy.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-5 h-5 text-cyan-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <div>
+                            <span class="font-medium">Data Minimization</span>
+                            <p class="text-gray-400 text-sm mt-1">Only necessary data is sent to AI for analysis. PII can be anonymized before processing.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-5 h-5 text-cyan-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <div>
+                            <span class="font-medium">AI Disable Option</span>
+                            <p class="text-gray-400 text-sm mt-1">Enterprise customers can disable AI features entirely if required by policy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Contact -->
+    <section class="py-16 bg-navy-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl font-bold mb-4">Questions About Security?</h2>
+            <p class="text-gray-300 mb-6">Our team is happy to discuss our security practices in more detail.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="mailto:security@investigatepro.app" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-6 py-3 rounded-lg font-semibold transition-colors">
+                    Contact Security Team
+                </a>
+                <a href="index.html#demo" class="border border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 px-6 py-3 rounded-lg font-semibold transition-colors">
+                    Request Security Review
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-navy-900 border-t border-navy-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <img src="assets/logos/logo-03-on-dark.png" alt="InvestigatePro" class="h-12">
+                </div>
+                <div class="flex space-x-6 text-gray-400 text-sm">
+                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy</a>
+                    <a href="terms.html" class="hover:text-white transition-colors">Terms</a>
+                    <a href="faq.html" class="hover:text-white transition-colors">FAQ</a>
+                    <a href="cookie.html" class="hover:text-white transition-colors">Cookies</a>
+                    <a href="security.html" class="text-cyan-500">Security</a>
+                    <a href="mailto:hello@investigatepro.app" class="hover:text-white transition-colors">Contact</a>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-gray-500 text-sm">
+                © 2026 InvestigatePro. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
