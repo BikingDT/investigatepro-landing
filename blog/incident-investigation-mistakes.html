@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Common Incident Investigation Mistakes — InvestigatePro</title>
+    <meta name="description" content="Why most workplace investigations fail to prevent recurrence—and what to do instead. Learn to avoid these common investigation pitfalls.">
+    <meta name="keywords" content="incident investigation, workplace safety, root cause analysis, investigation mistakes, safety management, accident investigation, ICAM, human error">
+    <link rel="icon" type="image/png" href="../assets/logos/logo-03-icon-only.png">
+    <link rel="canonical" href="https://investigatepro.app/blog/incident-investigation-mistakes.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://investigatepro.app/blog/incident-investigation-mistakes.html">
+    <meta property="og:title" content="5 Common Incident Investigation Mistakes (And How to Avoid Them)">
+    <meta property="og:description" content="Why most workplace investigations fail to prevent recurrence—and what to do instead.">
+    <meta property="og:image" content="https://investigatepro.app/assets/logos/logo-03-on-dark.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+                    colors: {
+                        navy: { 900: '#0C142E', 800: '#0F1A3A', 700: '#1A2744', 600: '#2A3A5C' },
+                        cyan: { 500: '#76DCEC', 400: '#88E0EE' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .prose h2 { @apply text-2xl font-bold mt-10 mb-4 text-white; }
+        .prose h3 { @apply text-xl font-semibold mt-8 mb-3 text-white; }
+        .prose p { @apply mb-4 text-gray-300 leading-relaxed; }
+        .prose ul, .prose ol { @apply mb-4 ml-6 text-gray-300; }
+        .prose li { @apply mb-2; }
+        .prose strong { @apply text-white font-semibold; }
+        .prose blockquote { @apply border-l-4 border-cyan-500 pl-4 italic text-gray-400 my-6; }
+        .mistake-box { @apply bg-red-500/10 border border-red-500/30 rounded-lg p-4 mb-4; }
+        .fix-box { @apply bg-green-500/10 border border-green-500/30 rounded-lg p-4 mb-4; }
+    </style>
+</head>
+<body class="font-sans antialiased bg-navy-900 text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-navy-900/95 backdrop-blur-sm z-50 border-b border-navy-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="/"><img src="../assets/logos/logo-03-on-dark.png" alt="InvestigatePro" class="h-[80px] sm:h-[100px]"></a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">← Back to Blog</a>
+                    <a href="/#demo" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-5 py-2 rounded-lg font-semibold transition-colors">Start Free Trial</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <header class="pt-36 pb-12 bg-gradient-to-b from-navy-900 to-navy-800">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-xs bg-red-500/20 text-red-400 px-3 py-1 rounded-full">Mistakes</span>
+                <span class="text-sm text-gray-400">10 min read</span>
+            </div>
+            <h1 class="text-4xl sm:text-5xl font-bold mb-6 leading-tight">5 Common Incident Investigation Mistakes</h1>
+            <p class="text-xl text-gray-300">Why most workplace investigations fail to prevent recurrence—and what to do instead</p>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <article class="py-12 bg-navy-800">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 prose">
+
+            <p>Every year, organizations spend thousands of hours investigating workplace incidents. Forms are filled, interviews conducted, reports written. Yet the same types of incidents keep happening.</p>
+            <p>Why? Because most investigations make the same fundamental mistakes.</p>
+            <p>Here are the five most common—and how to avoid them.</p>
+
+            <h2>Mistake #1: Stopping at "Human Error"</h2>
+            <div class="mistake-box">
+                <strong class="text-red-400">The problem:</strong> An investigation concludes that a worker "failed to follow procedure" or "made a mistake." Case closed.
+            </div>
+            <p>Except it's not closed. Nothing has been learned. And the same error will happen again—probably soon—because the <em>conditions</em> that made the error possible haven't changed.</p>
+            <p><strong>The reality:</strong> Human error is never a root cause. It's a starting point for investigation.</p>
+            <p>When someone makes a mistake, ask:</p>
+            <ul>
+                <li>Why did the action make sense to them at the time?</li>
+                <li>What information did they have (or lack)?</li>
+                <li>What pressures were they under?</li>
+                <li>Why didn't the system catch or prevent the error?</li>
+            </ul>
+            <div class="fix-box">
+                <strong class="text-green-400">The fix:</strong> Whenever your investigation identifies a human error, treat it as a symptom. Keep asking "why" until you reach organizational factors.
+            </div>
+            <p><strong>Example transformation:</strong></p>
+            <ul>
+                <li>❌ "Operator failed to lock out equipment before maintenance"</li>
+                <li>✅ "Production pressure led supervisor to approve shortcut. Lockout procedure was 45 minutes long, designed for annual shutdowns, not quick repairs. No alternative procedure existed for minor maintenance."</li>
+            </ul>
+
+            <h2>Mistake #2: Confusing "What" with "Why"</h2>
+            <div class="mistake-box">
+                <strong class="text-red-400">The problem:</strong> Investigations document what happened in excruciating detail but never explain why it happened.
+            </div>
+            <p>You end up with a 20-page report that tells you the worker was standing in the wrong place at the wrong time—but not why they were there, or why being there was dangerous.</p>
+            <p><strong>The reality:</strong> "What" questions describe the incident. "Why" questions explain it.</p>
+            <p>The purpose of investigation isn't to create a historical record. It's to understand causation so you can prevent recurrence.</p>
+            <div class="fix-box">
+                <strong class="text-green-400">The fix:</strong> For every fact in your investigation, ask "So what?" If you can't connect it to causation, it doesn't belong.
+            </div>
+            <p>Test your investigation with the "Five Whys":</p>
+            <ol>
+                <li>Why did this happen?</li>
+                <li>Why did that happen?</li>
+                <li>Why did <em>that</em> happen?</li>
+                <li>Why did <em>that</em> happen?</li>
+                <li>Why did <em>that</em> happen?</li>
+            </ol>
+            <p>If you can't answer at least five levels deep, you haven't finished.</p>
+
+            <h2>Mistake #3: Treating All Incidents the Same</h2>
+            <div class="mistake-box">
+                <strong class="text-red-400">The problem:</strong> Every incident—from a stubbed toe to a serious injury—gets the same superficial investigation. A form is filled, a box is ticked, and everyone moves on.
+            </div>
+            <p><strong>The reality:</strong> Investigation effort should match incident significance—but significance isn't just about outcomes.</p>
+            <p>A near-miss with high potential severity deserves more investigation than a minor injury with no systemic implications. The goal is learning, not paperwork.</p>
+            <div class="fix-box">
+                <strong class="text-green-400">The fix:</strong> Triage incidents by learning potential, not just outcome:
+            </div>
+            <ul>
+                <li><strong>Full ICAM investigation:</strong> Serious outcomes OR high-potential incidents</li>
+                <li><strong>Focused investigation:</strong> Moderate potential, clear contributing factors</li>
+                <li><strong>Quick review:</strong> Low potential, isolated occurrence, no systemic factors</li>
+            </ul>
+            <p>But here's the key: even quick reviews should identify whether deeper investigation is needed. A pattern of "minor" incidents often signals a major incident waiting to happen.</p>
+
+            <h2>Mistake #4: Writing Recommendations No One Will Follow</h2>
+            <div class="mistake-box">
+                <strong class="text-red-400">The problem:</strong> Your investigation concludes with recommendations like "Workers must be more careful," "Improve communication," or "Provide additional training."
+            </div>
+            <p>These aren't recommendations. They're wishes.</p>
+            <p><strong>The reality:</strong> Vague recommendations don't get implemented. Even when they do, they don't change anything.</p>
+            <p>"Retrain all workers" feels like action, but it usually means showing people the same ineffective training they've already forgotten.</p>
+            <div class="fix-box">
+                <strong class="text-green-400">The fix:</strong> Every recommendation should pass the SMART test:
+            </div>
+            <ul>
+                <li><strong>Specific:</strong> Exactly what will change?</li>
+                <li><strong>Measurable:</strong> How will you verify it worked?</li>
+                <li><strong>Actionable:</strong> Who will do it, and by when?</li>
+                <li><strong>Relevant:</strong> Does this address a root cause?</li>
+                <li><strong>Timely:</strong> Can it be implemented before another incident occurs?</li>
+            </ul>
+            <p><strong>Example transformation:</strong></p>
+            <ul>
+                <li>❌ "Improve lockout/tagout compliance"</li>
+                <li>✅ "By March 1, maintenance supervisor will develop 5-minute lockout procedure for minor equipment repairs, pilot with night shift, and revise based on feedback. Track compliance through supervisor observation during week 2."</li>
+            </ul>
+
+            <h2>Mistake #5: Investigating in Isolation</h2>
+            <div class="mistake-box">
+                <strong class="text-red-400">The problem:</strong> Each incident is investigated as if it's unique. No one looks for patterns. Learning stays siloed.
+            </div>
+            <p><strong>The reality:</strong> Most incidents aren't unique. They're manifestations of systemic issues that affect multiple areas.</p>
+            <p>If you're having lockout/tagout incidents in maintenance, you probably have procedure issues everywhere. If time pressure contributed to one incident, it's contributing to risk across your operation.</p>
+            <div class="fix-box">
+                <strong class="text-green-400">The fix:</strong> Build investigation into a learning system.
+            </div>
+            <p><strong>During investigation:</strong></p>
+            <ul>
+                <li>Review past similar incidents</li>
+                <li>Look for recurring contributing factors</li>
+                <li>Ask whether this incident reveals systemic issues</li>
+            </ul>
+            <p><strong>After investigation:</strong></p>
+            <ul>
+                <li>Share findings beyond the affected area</li>
+                <li>Track contributing factors across incidents</li>
+                <li>Look for organizational factors that appear repeatedly</li>
+            </ul>
+
+            <h2>The Underlying Problem</h2>
+            <p>All five mistakes stem from the same root cause: treating investigation as compliance activity rather than learning opportunity.</p>
+            <p>When investigation is about filling forms, you get superficial analysis, standardized treatment, checkbox recommendations, and isolated findings.</p>
+            <p>When investigation is about learning, you get deep understanding of why, proportionate effort for proportionate learning, actionable changes, and organizational learning that prevents recurrence.</p>
+
+            <h2>How to Transform Your Investigations</h2>
+            <ul>
+                <li><strong>Change the question.</strong> Instead of "What went wrong?" ask "What can we learn?"</li>
+                <li><strong>Invest in capability.</strong> Train investigators in methodology, interview techniques, and analysis.</li>
+                <li><strong>Create psychological safety.</strong> People won't share honest information if they fear blame.</li>
+                <li><strong>Use structured methodology.</strong> Frameworks like ICAM provide rigor and consistency.</li>
+                <li><strong>Follow through.</strong> Track recommendations, verify implementation, measure effectiveness.</li>
+                <li><strong>Share learning.</strong> Investigation findings should reach everyone who can benefit.</li>
+            </ul>
+            <p>The goal isn't perfect investigations. It's genuine organizational learning that makes your workplace safer over time.</p>
+
+            <!-- CTA Box -->
+            <div class="bg-navy-700 rounded-xl p-8 mt-12 border border-cyan-500/30">
+                <h3 class="text-xl font-semibold mb-3 mt-0">Avoid these mistakes with guided investigations</h3>
+                <p class="text-gray-300 mb-6">InvestigatePro guides investigators through proven methodology, helping teams conduct investigations that actually prevent recurrence.</p>
+                <a href="/#demo" class="inline-block bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-6 py-3 rounded-lg font-semibold transition-colors">Start Your Free Trial →</a>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="mt-12 pt-8 border-t border-navy-600">
+                <h3 class="text-lg font-semibold mb-4 mt-0">Related Articles</h3>
+                <ul class="space-y-2">
+                    <li><a href="/blog/icam-methodology-guide.html" class="text-cyan-400 hover:text-cyan-300">The Complete Guide to ICAM Methodology</a></li>
+                    <li><a href="/blog/blame-to-learning-culture.html" class="text-cyan-400 hover:text-cyan-300">From Blame Culture to Learning Culture: A Practical Guide</a></li>
+                    <li><a href="/blog/root-cause-analysis-guide.html" class="text-cyan-400 hover:text-cyan-300">Root Cause Analysis: The Complete Guide</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 border-t border-navy-700 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <img src="../assets/logos/logo-03-on-dark.png" alt="InvestigatePro" class="h-16 mb-6 md:mb-0">
+                <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
+                    <a href="/" class="hover:text-white">Home</a>
+                    <a href="/blog/" class="hover:text-white">Blog</a>
+                    <a href="/faq.html" class="hover:text-white">FAQ</a>
+                    <a href="/terms.html" class="hover:text-white">Terms</a>
+                    <a href="/privacy.html" class="hover:text-white">Privacy</a>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-sm text-gray-500">© 2026 InvestigatePro. All rights reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

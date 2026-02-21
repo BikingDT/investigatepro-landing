@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety Insights Blog — InvestigatePro</title>
+    <meta name="description" content="Expert insights on incident investigation, ICAM methodology, root cause analysis, and building a learning culture. Free resources from InvestigatePro.">
+    <link rel="icon" type="image/png" href="../assets/logos/logo-03-icon-only.png">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://investigatepro.app/blog/">
+    <meta property="og:title" content="Safety Insights Blog — InvestigatePro">
+    <meta property="og:description" content="Expert insights on incident investigation, ICAM methodology, and building a learning culture.">
+    <meta property="og:image" content="https://investigatepro.app/assets/logos/logo-03-on-dark.png">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            900: '#0C142E',
+                            800: '#0F1A3A',
+                            700: '#1A2744',
+                            600: '#2A3A5C',
+                            500: '#3D4F70',
+                        },
+                        cyan: {
+                            500: '#76DCEC',
+                            400: '#88E0EE',
+                            300: '#A8EAF3',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased bg-navy-900 text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-navy-900/95 backdrop-blur-sm z-50 border-b border-navy-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="/">
+                        <img src="../assets/logos/logo-03-on-dark.png" alt="InvestigatePro" class="h-[80px] sm:h-[120px]">
+                    </a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="/#features" class="hidden sm:inline text-gray-300 hover:text-white transition-colors">Features</a>
+                    <a href="/#pricing" class="hidden sm:inline text-gray-300 hover:text-white transition-colors">Pricing</a>
+                    <a href="/blog/" class="hidden sm:inline text-cyan-400 font-medium">Blog</a>
+                    <a href="/#demo" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-5 py-2 rounded-lg font-semibold transition-colors">
+                        Start Free Trial
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="pt-40 pb-16 bg-gradient-to-b from-navy-900 to-navy-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-5xl font-bold mb-4">Safety Insights</h1>
+            <p class="text-xl text-gray-300">Expert guidance on incident investigation, ICAM methodology, and building a learning culture</p>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="py-16 bg-navy-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Article 1 -->
+                <article class="bg-navy-700 rounded-xl overflow-hidden hover:ring-2 hover:ring-cyan-500/50 transition-all group">
+                    <div class="h-48 bg-gradient-to-br from-cyan-500/20 to-navy-600 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-xs bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded">ICAM</span>
+                            <span class="text-xs text-gray-400">12 min read</span>
+                        </div>
+                        <h2 class="text-xl font-semibold mb-3 group-hover:text-cyan-400 transition-colors">
+                            <a href="/blog/icam-methodology-guide.html">The Complete Guide to ICAM Methodology</a>
+                        </h2>
+                        <p class="text-gray-400 text-sm mb-4">Learn how the Incident Cause Analysis Method helps organizations uncover real causes and prevent recurrence.</p>
+                        <a href="/blog/icam-methodology-guide.html" class="text-cyan-400 text-sm font-medium hover:text-cyan-300">
+                            Read article →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="bg-navy-700 rounded-xl overflow-hidden hover:ring-2 hover:ring-cyan-500/50 transition-all group">
+                    <div class="h-48 bg-gradient-to-br from-red-500/20 to-navy-600 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-xs bg-red-500/20 text-red-400 px-2 py-1 rounded">Mistakes</span>
+                            <span class="text-xs text-gray-400">10 min read</span>
+                        </div>
+                        <h2 class="text-xl font-semibold mb-3 group-hover:text-cyan-400 transition-colors">
+                            <a href="/blog/incident-investigation-mistakes.html">5 Common Incident Investigation Mistakes</a>
+                        </h2>
+                        <p class="text-gray-400 text-sm mb-4">These common pitfalls waste resources, miss root causes, and leave organizations vulnerable to repeat incidents.</p>
+                        <a href="/blog/incident-investigation-mistakes.html" class="text-cyan-400 text-sm font-medium hover:text-cyan-300">
+                            Read article →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="bg-navy-700 rounded-xl overflow-hidden hover:ring-2 hover:ring-cyan-500/50 transition-all group">
+                    <div class="h-48 bg-gradient-to-br from-green-500/20 to-navy-600 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">Culture</span>
+                            <span class="text-xs text-gray-400">14 min read</span>
+                        </div>
+                        <h2 class="text-xl font-semibold mb-3 group-hover:text-cyan-400 transition-colors">
+                            <a href="/blog/blame-to-learning-culture.html">From Blame Culture to Learning Culture</a>
+                        </h2>
+                        <p class="text-gray-400 text-sm mb-4">A practical guide to transforming how your organization responds to incidents and near-misses.</p>
+                        <a href="/blog/blame-to-learning-culture.html" class="text-cyan-400 text-sm font-medium hover:text-cyan-300">
+                            Read article →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="bg-navy-700 rounded-xl overflow-hidden hover:ring-2 hover:ring-cyan-500/50 transition-all group">
+                    <div class="h-48 bg-gradient-to-br from-purple-500/20 to-navy-600 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-xs bg-purple-500/20 text-purple-400 px-2 py-1 rounded">AI</span>
+                            <span class="text-xs text-gray-400">15 min read</span>
+                        </div>
+                        <h2 class="text-xl font-semibold mb-3 group-hover:text-cyan-400 transition-colors">
+                            <a href="/blog/ai-safety-management.html">How AI is Transforming Safety Management</a>
+                        </h2>
+                        <p class="text-gray-400 text-sm mb-4">From predictive analytics to intelligent investigation coaching—the AI revolution in workplace safety.</p>
+                        <a href="/blog/ai-safety-management.html" class="text-cyan-400 text-sm font-medium hover:text-cyan-300">
+                            Read article →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="bg-navy-700 rounded-xl overflow-hidden hover:ring-2 hover:ring-cyan-500/50 transition-all group">
+                    <div class="h-48 bg-gradient-to-br from-orange-500/20 to-navy-600 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-xs bg-orange-500/20 text-orange-400 px-2 py-1 rounded">Analysis</span>
+                            <span class="text-xs text-gray-400">16 min read</span>
+                        </div>
+                        <h2 class="text-xl font-semibold mb-3 group-hover:text-cyan-400 transition-colors">
+                            <a href="/blog/root-cause-analysis-guide.html">Root Cause Analysis: The Complete Guide</a>
+                        </h2>
+                        <p class="text-gray-400 text-sm mb-4">Master the techniques that separate effective investigations from superficial ones. 5 Whys, Fishbone, and beyond.</p>
+                        <a href="/blog/root-cause-analysis-guide.html" class="text-cyan-400 text-sm font-medium hover:text-cyan-300">
+                            Read article →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- CTA Card -->
+                <article class="bg-gradient-to-br from-cyan-500/20 to-navy-700 rounded-xl overflow-hidden border border-cyan-500/30 flex flex-col justify-center p-8">
+                    <h3 class="text-xl font-semibold mb-3">Ready to investigate smarter?</h3>
+                    <p class="text-gray-300 text-sm mb-6">Start your 14-day free trial. No credit card required.</p>
+                    <a href="/#demo" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-6 py-3 rounded-lg font-semibold transition-colors text-center">
+                        Start Free Trial
+                    </a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-navy-900 border-t border-navy-700">
+        <div class="max-w-2xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold mb-4">Get Safety Insights Weekly</h2>
+            <p class="text-gray-400 mb-6">Join 500+ safety professionals getting practical ICAM tips, investigation techniques, and industry news.</p>
+            <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-lg bg-navy-700 border border-navy-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                <button type="submit" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-6 py-3 rounded-lg font-semibold transition-colors whitespace-nowrap">
+                    Subscribe
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 border-t border-navy-700 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <img src="../assets/logos/logo-03-on-dark.png" alt="InvestigatePro" class="h-16">
+                </div>
+                <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
+                    <a href="/" class="hover:text-white transition-colors">Home</a>
+                    <a href="/blog/" class="hover:text-white transition-colors">Blog</a>
+                    <a href="/faq.html" class="hover:text-white transition-colors">FAQ</a>
+                    <a href="/security.html" class="hover:text-white transition-colors">Security</a>
+                    <a href="/terms.html" class="hover:text-white transition-colors">Terms</a>
+                    <a href="/privacy.html" class="hover:text-white transition-colors">Privacy</a>
+                    <a href="/cookie.html" class="hover:text-white transition-colors">Cookies</a>
+                    <a href="/checklist.html" class="hover:text-white transition-colors">Free Checklist</a>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-sm text-gray-500">
+                © 2026 InvestigatePro. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
