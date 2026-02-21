@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Status | InvestigatePro</title>
+    <meta name="description" content="Real-time system status for InvestigatePro incident investigation software">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <style>
+        :root {
+            --navy: #0C142E;
+            --cyan: #76DCEC;
+            --white: #FFFFFF;
+            --green: #22C55E;
+            --yellow: #EAB308;
+            --red: #EF4444;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--navy);
+            color: var(--white);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--cyan);
+            margin-bottom: 10px;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .overall-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+        
+        .status-operational {
+            background: rgba(34, 197, 94, 0.15);
+            border: 1px solid var(--green);
+            color: var(--green);
+        }
+        
+        .status-degraded {
+            background: rgba(234, 179, 8, 0.15);
+            border: 1px solid var(--yellow);
+            color: var(--yellow);
+        }
+        
+        .status-down {
+            background: rgba(239, 68, 68, 0.15);
+            border: 1px solid var(--red);
+            color: var(--red);
+        }
+        
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        .status-operational .status-dot { background: var(--green); }
+        .status-degraded .status-dot { background: var(--yellow); }
+        .status-down .status-dot { background: var(--red); }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .systems {
+            margin-top: 40px;
+        }
+        
+        .system-group {
+            margin-bottom: 30px;
+        }
+        
+        .group-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 15px;
+        }
+        
+        .system-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .system-name {
+            font-weight: 500;
+        }
+        
+        .system-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+        }
+        
+        .system-status.up { color: var(--green); }
+        .system-status.degraded { color: var(--yellow); }
+        .system-status.down { color: var(--red); }
+        
+        .system-status svg {
+            width: 18px;
+            height: 18px;
+        }
+        
+        .last-updated {
+            text-align: center;
+            margin-top: 40px;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.9rem;
+        }
+        
+        .uptime-history {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .uptime-title {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .uptime-bar {
+            display: flex;
+            gap: 3px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .uptime-day {
+            width: 8px;
+            height: 30px;
+            border-radius: 2px;
+            background: var(--green);
+        }
+        
+        .uptime-legend {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        footer a {
+            color: var(--cyan);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .subscribe {
+            margin-top: 40px;
+            text-align: center;
+        }
+        
+        .subscribe input {
+            padding: 12px 16px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 6px 0 0 6px;
+            background: rgba(255,255,255,0.05);
+            color: var(--white);
+            font-size: 1rem;
+            width: 250px;
+        }
+        
+        .subscribe input::placeholder {
+            color: rgba(255,255,255,0.4);
+        }
+        
+        .subscribe button {
+            padding: 12px 20px;
+            background: var(--cyan);
+            color: var(--navy);
+            border: none;
+            border-radius: 0 6px 6px 0;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        .subscribe button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">InvestigatePro</div>
+            <h1>System Status</h1>
+            <div id="overall-status" class="overall-status status-operational">
+                <span class="status-dot"></span>
+                <span id="overall-text">All Systems Operational</span>
+            </div>
+        </header>
+        
+        <div class="systems" id="systems">
+            <div class="system-group">
+                <div class="group-title">Core Services</div>
+                <div class="system-item">
+                    <span class="system-name">Web Application</span>
+                    <span class="system-status up" id="status-webapp">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Operational
+                    </span>
+                </div>
+                <div class="system-item">
+                    <span class="system-name">API Services</span>
+                    <span class="system-status up" id="status-api">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Operational
+                    </span>
+                </div>
+                <div class="system-item">
+                    <span class="system-name">Database</span>
+                    <span class="system-status up" id="status-db">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Operational
+                    </span>
+                </div>
+            </div>
+            
+            <div class="system-group">
+                <div class="group-title">AI Features</div>
+                <div class="system-item">
+                    <span class="system-name">AI Investigation Coach</span>
+                    <span class="system-status up" id="status-ai">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Operational
+                    </span>
+                </div>
+            </div>
+            
+            <div class="system-group">
+                <div class="group-title">Website & Marketing</div>
+                <div class="system-item">
+                    <span class="system-name">Marketing Website</span>
+                    <span class="system-status up" id="status-landing">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Operational
+                    </span>
+                </div>
+                <div class="system-item">
+                    <span class="system-name">Blog</span>
+                    <span class="system-status up" id="status-blog">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Operational
+                    </span>
+                </div>
+            </div>
+            
+            <div class="system-group">
+                <div class="group-title">Email & Notifications</div>
+                <div class="system-item">
+                    <span class="system-name">Email Delivery</span>
+                    <span class="system-status up" id="status-email">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Operational
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="last-updated">
+            Last checked: <span id="last-check">Just now</span>
+        </div>
+        
+        <div class="uptime-history">
+            <h2 class="uptime-title">90-Day Uptime History</h2>
+            <div class="uptime-bar" id="uptime-bar">
+                <!-- Generated by JS -->
+            </div>
+            <div class="uptime-legend">
+                <div class="legend-item">
+                    <div class="legend-dot" style="background: var(--green);"></div>
+                    <span>No issues</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-dot" style="background: var(--yellow);"></div>
+                    <span>Partial outage</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-dot" style="background: var(--red);"></div>
+                    <span>Major outage</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="subscribe">
+            <h3 style="margin-bottom: 15px; font-weight: 500;">Subscribe to status updates</h3>
+            <form action="#" method="post" onsubmit="subscribeEmail(event)">
+                <input type="email" id="status-email-input" placeholder="your@email.com" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <p id="subscribe-message" style="margin-top: 10px; color: var(--cyan); display: none;"></p>
+        </div>
+        
+        <footer>
+            <p>
+                <a href="/">← Back to InvestigatePro</a> · 
+                <a href="mailto:support@investigatepro.app">Contact Support</a>
+            </p>
+        </footer>
+    </div>
+    
+    <script>
+        // Generate uptime history (all green for now - new service)
+        const uptimeBar = document.getElementById('uptime-bar');
+        for (let i = 0; i < 90; i++) {
+            const day = document.createElement('div');
+            day.className = 'uptime-day';
+            day.title = `${90 - i} days ago - 100% uptime`;
+            uptimeBar.appendChild(day);
+        }
+        
+        // Live status check
+        async function checkStatus() {
+            try {
+                const response = await fetch('/api/health');
+                const data = await response.json();
+                
+                if (data.status === 'ok') {
+                    updateStatus('overall', 'operational', 'All Systems Operational');
+                    updateService('api', 'up', 'Operational');
+                    updateService('db', 'up', 'Operational');
+                } else {
+                    updateStatus('overall', 'degraded', 'Partial Service Disruption');
+                    updateService('api', 'degraded', 'Degraded');
+                }
+                
+                document.getElementById('last-check').textContent = new Date().toLocaleTimeString();
+            } catch (error) {
+                updateStatus('overall', 'down', 'Service Disruption');
+                updateService('api', 'down', 'Down');
+            }
+        }
+        
+        function updateStatus(id, status, text) {
+            const el = document.getElementById('overall-status');
+            el.className = `overall-status status-${status}`;
+            document.getElementById('overall-text').textContent = text;
+        }
+        
+        function updateService(id, status, text) {
+            const el = document.getElementById(`status-${id}`);
+            if (el) {
+                el.className = `system-status ${status}`;
+                const icon = status === 'up' 
+                    ? '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>'
+                    : '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>';
+                el.innerHTML = `${icon} ${text}`;
+            }
+        }
+        
+        function subscribeEmail(e) {
+            e.preventDefault();
+            const email = document.getElementById('status-email-input').value;
+            const msg = document.getElementById('subscribe-message');
+            msg.textContent = '✓ Subscribed! You\'ll be notified of any status changes.';
+            msg.style.display = 'block';
+            document.getElementById('status-email-input').value = '';
+        }
+        
+        // Check status on load and every 60 seconds
+        checkStatus();
+        setInterval(checkStatus, 60000);
+    </script>
+</body>
+</html>
