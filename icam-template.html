@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICAM Investigation Template | InvestigatePro</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: #0C142E;
+            color: white;
+            padding: 30px;
+            margin: -40px -40px 30px -40px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+        }
+        .header img {
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            color: white;
+        }
+        .header p {
+            margin: 10px 0 0;
+            color: #76DCEC;
+            font-size: 14px;
+        }
+        h1 {
+            color: #0C142E;
+            border-bottom: 3px solid #76DCEC;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        h2 {
+            color: #0C142E;
+            margin-top: 30px;
+            font-size: 20px;
+        }
+        h3 {
+            color: #444;
+            font-size: 16px;
+            margin-top: 25px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background: #0C142E;
+            color: white;
+            font-weight: 600;
+        }
+        tr:nth-child(even) {
+            background: #f9fafb;
+        }
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+        .checklist li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .checklist li:before {
+            content: "☐ ";
+            color: #76DCEC;
+            font-weight: bold;
+        }
+        .section-box {
+            background: #f9fafb;
+            border-left: 4px solid #76DCEC;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .tip-box {
+            background: #e8f8fa;
+            border: 1px solid #76DCEC;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .tip-box strong {
+            color: #0C142E;
+        }
+        .peepo-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .peepo-item {
+            background: #0C142E;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 6px;
+        }
+        .peepo-item span {
+            display: block;
+            font-size: 24px;
+            font-weight: bold;
+            color: #76DCEC;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+        .footer a {
+            color: #76DCEC;
+            text-decoration: none;
+        }
+        .cta-box {
+            background: linear-gradient(135deg, #0C142E 0%, #1a2744 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        .cta-box h3 {
+            color: white;
+            margin-top: 0;
+        }
+        .cta-box a {
+            display: inline-block;
+            background: #76DCEC;
+            color: #0C142E;
+            padding: 12px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; padding: 0; }
+            .header { margin: 0 0 20px 0; }
+            .cta-box { display: none; }
+        }
+        @media (max-width: 600px) {
+            .peepo-grid { grid-template-columns: repeat(2, 1fr); }
+            .container { padding: 20px; }
+            .header { padding: 20px; margin: -20px -20px 20px -20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://investigatepro.app/assets/logos/email-logo.png" alt="InvestigatePro">
+            <h1>ICAM Investigation Template</h1>
+            <p>Complete Guide for Thorough Incident Investigations</p>
+        </div>
+
+        <div class="tip-box">
+            <strong>📋 How to Use This Template:</strong> Work through each section sequentially. Print or use digitally. Estimated time: 4-8 hours depending on incident complexity.
+        </div>
+
+        <h1>Section 1: Initial Response</h1>
+        
+        <h2>Immediate Actions (First 60 Minutes)</h2>
+        <ul class="checklist">
+            <li>Ensure scene is safe for investigators</li>
+            <li>Confirm injured persons are receiving care</li>
+            <li>Secure the incident scene (barriers, signage)</li>
+            <li>Identify and preserve evidence</li>
+            <li>Identify witnesses</li>
+            <li>Begin preliminary documentation (photos, notes)</li>
+            <li>Notify required parties (management, regulators)</li>
+        </ul>
+
+        <h2>Evidence Preservation Log</h2>
+        <table>
+            <tr><th>Evidence Type</th><th>Location</th><th>Preserved By</th><th>Date/Time</th></tr>
+            <tr><td>Physical evidence</td><td></td><td></td><td></td></tr>
+            <tr><td>Documents/records</td><td></td><td></td><td></td></tr>
+            <tr><td>Electronic data</td><td></td><td></td><td></td></tr>
+            <tr><td>Photographs</td><td></td><td></td><td></td></tr>
+            <tr><td>Video footage</td><td></td><td></td><td></td></tr>
+        </table>
+
+        <h2>Witness List</h2>
+        <table>
+            <tr><th>Name</th><th>Role</th><th>Contact</th><th>Priority</th></tr>
+            <tr><td></td><td></td><td></td><td>☐ High ☐ Med ☐ Low</td></tr>
+            <tr><td></td><td></td><td></td><td>☐ High ☐ Med ☐ Low</td></tr>
+            <tr><td></td><td></td><td></td><td>☐ High ☐ Med ☐ Low</td></tr>
+        </table>
+
+        <h1>Section 2: Incident Description</h1>
+
+        <h2>Basic Information</h2>
+        <table>
+            <tr><th width="30%">Field</th><th>Details</th></tr>
+            <tr><td>Incident Date</td><td></td></tr>
+            <tr><td>Incident Time</td><td></td></tr>
+            <tr><td>Location</td><td></td></tr>
+            <tr><td>Area/Department</td><td></td></tr>
+            <tr><td>Incident Type</td><td></td></tr>
+            <tr><td>Severity</td><td>☐ Fatality ☐ LTI ☐ MTI ☐ FAI ☐ Near Miss ☐ Property</td></tr>
+        </table>
+
+        <h2>What Happened?</h2>
+        <div class="section-box">
+            <p><strong>Pre-incident (What was happening before?):</strong></p>
+            <p style="min-height: 60px; border-bottom: 1px dashed #ccc;"></p>
+            <p><strong>The incident (What exactly occurred?):</strong></p>
+            <p style="min-height: 60px; border-bottom: 1px dashed #ccc;"></p>
+            <p><strong>Post-incident (What happened immediately after?):</strong></p>
+            <p style="min-height: 60px; border-bottom: 1px dashed #ccc;"></p>
+        </div>
+
+        <h1>Section 3: PEEPO Analysis</h1>
+
+        <div class="tip-box">
+            <strong>What is PEEPO?</strong> A systematic framework to identify contributing factors across five categories. Capture EVERYTHING that may have contributed—don't filter yet.
+        </div>
+
+        <div class="peepo-grid">
+            <div class="peepo-item"><span>P</span>People</div>
+            <div class="peepo-item"><span>E</span>Environment</div>
+            <div class="peepo-item"><span>E</span>Equipment</div>
+            <div class="peepo-item"><span>P</span>Procedures</div>
+            <div class="peepo-item"><span>O</span>Organisation</div>
+        </div>
+
+        <h2>P - People Factors</h2>
+        <p><em>Training, competence, experience, fitness, fatigue, supervision, communication</em></p>
+        <table>
+            <tr><th>Factor</th><th>Present?</th><th>Details/Evidence</th></tr>
+            <tr><td>Adequate training for task</td><td>☐ Yes ☐ No ☐ ?</td><td></td></tr>
+            <tr><td>Competency verified</td><td>☐ Yes ☐ No ☐ ?</td><td></td></tr>
+            <tr><td>Sufficient experience</td><td>☐ Yes ☐ No ☐ ?</td><td></td></tr>
+            <tr><td>Fit for duty</td><td>☐ Yes ☐ No ☐ ?</td><td></td></tr>
+            <tr><td>Adequate rest/not fatigued</td><td>☐ Yes ☐ No ☐ ?</td><td></td></tr>
+            <tr><td>Adequate supervision</td><td>☐ Yes ☐ No ☐ ?</td><td></td></tr>
+            <tr><td>Clear communication</td><td>☐ Yes ☐ No ☐ ?</td><td></td></tr>
+        </table>
+
+        <h2>E - Environment Factors</h2>
+        <p><em>Weather, lighting, noise, temperature, housekeeping, workspace layout</em></p>
+        <table>
+            <tr><th>Factor</th><th>Condition</th><th>Contributed?</th><th>Details</th></tr>
+            <tr><td>Weather conditions</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
+            <tr><td>Lighting adequacy</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
+            <tr><td>Noise levels</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
+            <tr><td>Housekeeping</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
+            <tr><td>Workspace layout</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
+            <tr><td>Ground conditions</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
+        </table>
+
+        <h2>E - Equipment Factors</h2>
+        <p><em>Design, condition, maintenance, guarding, PPE, tools</em></p>
+        <table>
+            <tr><th>Factor</th><th>Assessment</th><th>Contributed?</th><th>Details</th></tr>
+            <tr><td>Equipment fit for purpose</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
+            <tr><td>Maintenance current</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
+            <tr><td>Pre-use inspection done</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
+            <tr><td>Guards/safety devices working</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
+            <tr><td>Correct PPE available & worn</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
+        </table>
+
+        <h2>P - Procedures Factors</h2>
+        <p><em>Existence, quality, accessibility, clarity, compliance, permits, risk assessments</em></p>
+        <table>
+            <tr><th>Factor</th><th>Assessment</th><th>Contributed?</th><th>Details</th></tr>
+            <tr><td>Procedure exists for task</td><td>☐ Yes ☐ No</td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
+            <tr><td>Procedure followed</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
+            <tr><td>Risk assessment current</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
+            <tr><td>Permit obtained if required</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
+            <tr><td>JSA/JHA completed</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
+        </table>
+
+        <h2>O - Organisation Factors</h2>
+        <p><em>Culture, management systems, resources, priorities, change management</em></p>
+        <table>
+            <tr><th>Factor</th><th>Assessment</th><th>Contributed?</th><th>Details</th></tr>
+            <tr><td>Adequate staffing levels</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
+            <tr><td>Adequate resources</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
+            <tr><td>Production pressure</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
+            <tr><td>Safety culture</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
+            <tr><td>Management of change</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
+        </table>
+
+        <h1>Section 4: Root Cause Analysis (5-Whys)</h1>
+
+        <div class="tip-box">
+            <strong>How to Use 5-Whys:</strong> Start with a contributing factor. Ask "Why?" repeatedly until you reach a systemic root cause. Stop when the answer is something the organization can control and change.
+        </div>
+
+        <h2>5-Whys Chain #1</h2>
+        <p><strong>Contributing Factor:</strong> _________________________________</p>
+        <table>
+            <tr><th>Level</th><th>Question</th><th>Answer</th></tr>
+            <tr><td>Why 1</td><td>Why did this happen?</td><td></td></tr>
+            <tr><td>Why 2</td><td>Why?</td><td></td></tr>
+            <tr><td>Why 3</td><td>Why?</td><td></td></tr>
+            <tr><td>Why 4</td><td>Why?</td><td></td></tr>
+            <tr><td>Why 5</td><td>Why?</td><td></td></tr>
+        </table>
+        <p><strong>Root Cause Identified:</strong> _________________________________</p>
+
+        <h2>5-Whys Chain #2</h2>
+        <p><strong>Contributing Factor:</strong> _________________________________</p>
+        <table>
+            <tr><th>Level</th><th>Question</th><th>Answer</th></tr>
+            <tr><td>Why 1</td><td>Why did this happen?</td><td></td></tr>
+            <tr><td>Why 2</td><td>Why?</td><td></td></tr>
+            <tr><td>Why 3</td><td>Why?</td><td></td></tr>
+            <tr><td>Why 4</td><td>Why?</td><td></td></tr>
+            <tr><td>Why 5</td><td>Why?</td><td></td></tr>
+        </table>
+        <p><strong>Root Cause Identified:</strong> _________________________________</p>
+
+        <h1>Section 5: Corrective Actions</h1>
+
+        <div class="tip-box">
+            <strong>SMART Criteria:</strong> Specific, Measurable, Assignable, Realistic, Time-bound<br>
+            <strong>Hierarchy of Controls:</strong> Elimination → Substitution → Engineering → Administrative → PPE
+        </div>
+
+        <table>
+            <tr><th>#</th><th>Root Cause</th><th>Action</th><th>Control Level</th><th>Owner</th><th>Due Date</th><th>Status</th></tr>
+            <tr><td>1</td><td></td><td></td><td></td><td></td><td></td><td>☐</td></tr>
+            <tr><td>2</td><td></td><td></td><td></td><td></td><td></td><td>☐</td></tr>
+            <tr><td>3</td><td></td><td></td><td></td><td></td><td></td><td>☐</td></tr>
+            <tr><td>4</td><td></td><td></td><td></td><td></td><td></td><td>☐</td></tr>
+            <tr><td>5</td><td></td><td></td><td></td><td></td><td></td><td>☐</td></tr>
+        </table>
+
+        <h1>Section 6: Summary & Sign-Off</h1>
+
+        <h2>Executive Summary</h2>
+        <div class="section-box">
+            <p style="min-height: 80px;"><em>3-5 sentences summarizing incident, findings, and critical actions:</em></p>
+        </div>
+
+        <h2>Key Findings</h2>
+        <ol>
+            <li style="min-height: 30px;"></li>
+            <li style="min-height: 30px;"></li>
+            <li style="min-height: 30px;"></li>
+        </ol>
+
+        <h2>Sign-Off</h2>
+        <table>
+            <tr><th>Role</th><th>Name</th><th>Signature</th><th>Date</th></tr>
+            <tr><td>Lead Investigator</td><td></td><td></td><td></td></tr>
+            <tr><td>Area Manager</td><td></td><td></td><td></td></tr>
+            <tr><td>Safety Manager</td><td></td><td></td><td></td></tr>
+        </table>
+
+        <div class="cta-box">
+            <h3>Want AI to Guide You Through This Process?</h3>
+            <p>InvestigatePro automates ICAM methodology with real-time AI coaching. Complete investigations in 5 hours instead of 15.</p>
+            <a href="https://investigatepro.app">Try InvestigatePro Free →</a>
+        </div>
+
+        <div class="footer">
+            <p>This template is provided free by <a href="https://investigatepro.app">InvestigatePro</a></p>
+            <p>Created by Devon Turner | 15+ Years Mining Safety Experience</p>
+            <p>© 2026 InvestigatePro | <a href="https://investigatepro.app">investigatepro.app</a></p>
+        </div>
+    </div>
+</body>
+</html>
