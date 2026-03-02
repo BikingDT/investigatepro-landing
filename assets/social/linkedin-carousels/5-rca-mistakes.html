@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5 Root Cause Analysis Mistakes — LinkedIn Carousel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --navy-900: #0C142E;
+            --navy-800: #0F1A3A;
+            --navy-700: #1A2744;
+            --cyan-500: #76DCEC;
+            --red-500: #EF4444;
+            --green-500: #22C55E;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #1a1a1a;
+        }
+        
+        .slide {
+            width: 1080px;
+            height: 1350px;
+            background: linear-gradient(180deg, var(--navy-900) 0%, var(--navy-800) 100%);
+            color: white;
+            padding: 80px;
+            display: flex;
+            flex-direction: column;
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            right: -200px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(118, 220, 236, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .logo {
+            height: 60px;
+            margin-bottom: 40px;
+        }
+        
+        .slide-number {
+            position: absolute;
+            bottom: 60px;
+            right: 80px;
+            font-size: 24px;
+            color: rgba(255,255,255,0.3);
+            font-weight: 700;
+        }
+        
+        /* Cover Slide */
+        .cover {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .cover h1 {
+            font-size: 72px;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 40px;
+        }
+        
+        .cover h1 span {
+            color: var(--cyan-500);
+        }
+        
+        .cover p {
+            font-size: 32px;
+            color: #9CA3AF;
+            max-width: 700px;
+        }
+        
+        .cover .swipe {
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            color: var(--cyan-500);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .cover .swipe::after {
+            content: '→';
+            font-size: 32px;
+        }
+        
+        /* Content Slides */
+        .content {
+            justify-content: flex-start;
+        }
+        
+        .mistake-number {
+            font-size: 120px;
+            font-weight: 900;
+            color: var(--red-500);
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+        
+        .mistake-title {
+            font-size: 52px;
+            font-weight: 800;
+            margin-bottom: 40px;
+            line-height: 1.2;
+        }
+        
+        .mistake-bad {
+            background: rgba(239, 68, 68, 0.15);
+            border-left: 6px solid var(--red-500);
+            padding: 30px 40px;
+            margin-bottom: 40px;
+            border-radius: 0 16px 16px 0;
+        }
+        
+        .mistake-bad .label {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--red-500);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 12px;
+        }
+        
+        .mistake-bad p {
+            font-size: 28px;
+            color: #D1D5DB;
+            line-height: 1.5;
+        }
+        
+        .mistake-good {
+            background: rgba(34, 197, 94, 0.15);
+            border-left: 6px solid var(--green-500);
+            padding: 30px 40px;
+            border-radius: 0 16px 16px 0;
+        }
+        
+        .mistake-good .label {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--green-500);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 12px;
+        }
+        
+        .mistake-good p {
+            font-size: 28px;
+            color: #D1D5DB;
+            line-height: 1.5;
+        }
+        
+        /* CTA Slide */
+        .cta {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 40px;
+            line-height: 1.2;
+        }
+        
+        .cta h2 span {
+            color: var(--cyan-500);
+        }
+        
+        .cta .action {
+            background: var(--cyan-500);
+            color: var(--navy-900);
+            padding: 24px 48px;
+            border-radius: 16px;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+        
+        .cta .url {
+            font-size: 32px;
+            color: var(--cyan-500);
+            font-weight: 600;
+        }
+        
+        .cta .tagline {
+            font-size: 24px;
+            color: #6B7280;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Slide 1: Cover -->
+    <div class="slide cover">
+        <img src="../../logos/logo-03-on-dark.png" alt="InvestigatePro" class="logo">
+        <h1>5 Root Cause<br>Analysis <span>Mistakes</span></h1>
+        <p>That keep your incidents coming back</p>
+        <div class="swipe">Swipe to learn</div>
+        <div class="slide-number">1/7</div>
+    </div>
+    
+    <!-- Slide 2: Mistake 1 -->
+    <div class="slide content">
+        <img src="../../logos/logo-03-on-dark.png" alt="InvestigatePro" class="logo">
+        <div class="mistake-number">#1</div>
+        <h2 class="mistake-title">Stopping at "Human Error"</h2>
+        <div class="mistake-bad">
+            <div class="label">❌ The Mistake</div>
+            <p>"Root cause: Worker failed to follow procedure"</p>
+        </div>
+        <div class="mistake-good">
+            <div class="label">✓ Instead Ask</div>
+            <p>WHY was it possible for them to fail? Was the procedure practical? Was there pressure to shortcut?</p>
+        </div>
+        <div class="slide-number">2/7</div>
+    </div>
+    
+    <!-- Slide 3: Mistake 2 -->
+    <div class="slide content">
+        <img src="../../logos/logo-03-on-dark.png" alt="InvestigatePro" class="logo">
+        <div class="mistake-number">#2</div>
+        <h2 class="mistake-title">Weak Corrective Actions</h2>
+        <div class="mistake-bad">
+            <div class="label">❌ The Mistake</div>
+            <p>"Retrain all workers" or "Add more warning signs"</p>
+        </div>
+        <div class="mistake-good">
+            <div class="label">✓ Instead</div>
+            <p>Use the Hierarchy of Controls. Start with elimination and engineering — not just admin controls that rely on human behavior.</p>
+        </div>
+        <div class="slide-number">3/7</div>
+    </div>
+    
+    <!-- Slide 4: Mistake 3 -->
+    <div class="slide content">
+        <img src="../../logos/logo-03-on-dark.png" alt="InvestigatePro" class="logo">
+        <div class="mistake-number">#3</div>
+        <h2 class="mistake-title">Confirmation Bias</h2>
+        <div class="mistake-bad">
+            <div class="label">❌ The Mistake</div>
+            <p>Forming conclusions early, then gathering evidence that confirms your theory</p>
+        </div>
+        <div class="mistake-good">
+            <div class="label">✓ Instead</div>
+            <p>Deliberately seek disconfirming evidence. Ask: "What would prove my theory wrong?"</p>
+        </div>
+        <div class="slide-number">4/7</div>
+    </div>
+    
+    <!-- Slide 5: Mistake 4 -->
+    <div class="slide content">
+        <img src="../../logos/logo-03-on-dark.png" alt="InvestigatePro" class="logo">
+        <div class="mistake-number">#4</div>
+        <h2 class="mistake-title">Not Reaching Organization</h2>
+        <div class="mistake-bad">
+            <div class="label">❌ The Mistake</div>
+            <p>Stopping at equipment failure or procedural gaps without asking WHY</p>
+        </div>
+        <div class="mistake-good">
+            <div class="label">✓ Instead Ask</div>
+            <p>"What management decision or system allowed this condition to exist?" That's where root causes live.</p>
+        </div>
+        <div class="slide-number">5/7</div>
+    </div>
+    
+    <!-- Slide 6: Mistake 5 -->
+    <div class="slide content">
+        <img src="../../logos/logo-03-on-dark.png" alt="InvestigatePro" class="logo">
+        <div class="mistake-number">#5</div>
+        <h2 class="mistake-title">Investigating in Isolation</h2>
+        <div class="mistake-bad">
+            <div class="label">❌ The Mistake</div>
+            <p>Treating each incident as unique. Filing and forgetting.</p>
+        </div>
+        <div class="mistake-good">
+            <div class="label">✓ Instead</div>
+            <p>Look for patterns across incidents. The same organizational factors often appear again and again.</p>
+        </div>
+        <div class="slide-number">6/7</div>
+    </div>
+    
+    <!-- Slide 7: CTA -->
+    <div class="slide cta">
+        <img src="../../logos/logo-03-on-dark.png" alt="InvestigatePro" class="logo">
+        <h2>Ready to fix your<br><span>investigation process?</span></h2>
+        <div class="action">Download Free ICAM Toolkit</div>
+        <div class="url">investigatepro.app/icam-toolkit</div>
+        <p class="tagline">AI-powered incident investigation software</p>
+        <div class="slide-number">7/7</div>
+    </div>
+
+</body>
+</html>

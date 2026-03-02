@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PEEPO Framework — LinkedIn Carousel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --navy-900: #0C142E;
+            --navy-800: #0F1A3A;
+            --navy-700: #1A2744;
+            --cyan-500: #76DCEC;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #1a1a1a;
+        }
+        
+        .slide {
+            width: 1080px;
+            height: 1350px;
+            background: linear-gradient(180deg, var(--navy-900) 0%, var(--navy-800) 100%);
+            color: white;
+            padding: 80px;
+            display: flex;
+            flex-direction: column;
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            right: -200px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(118, 220, 236, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .logo {
+            height: 60px;
+            margin-bottom: 40px;
+        }
+        
+        .slide-number {
+            position: absolute;
+            bottom: 60px;
+            right: 80px;
+            font-size: 24px;
+            color: rgba(255,255,255,0.3);
+            font-weight: 700;
+        }
+        
+        /* Cover Slide */
+        .cover {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .cover h1 {
+            font-size: 72px;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 40px;
+        }
+        
+        .cover h1 span {
+            color: var(--cyan-500);
+        }
+        
+        .cover p {
+            font-size: 32px;
+            color: #9CA3AF;
+            max-width: 700px;
+        }
+        
+        .peepo-preview {
+            display: flex;
+            gap: 20px;
+            margin-top: 60px;
+        }
+        
+        .peepo-preview-item {
+            background: var(--navy-700);
+            width: 120px;
+            height: 120px;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .peepo-preview-item .letter {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--cyan-500);
+        }
+        
+        .peepo-preview-item .label {
+            font-size: 12px;
+            color: #9CA3AF;
+            margin-top: 4px;
+        }
+        
+        .cover .swipe {
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            color: var(--cyan-500);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .cover .swipe::after {
+            content: '→';
+            font-size: 32px;
+        }
+        
+        /* Letter Slides */
+        .letter-slide {
+            justify-content: flex-start;
+        }
+        
+        .big-letter {
+            font-size: 200px;
+            font-weight: 900;
+            color: var(--cyan-500);
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+        
+        .letter-title {
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 50px;
+        }
+        
+        .factors-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .factor-card {
+            background: var(--navy-700);
+            padding: 30px;
+            border-radius: 16px;
+        }
+        
+        .factor-card h4 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--cyan-500);
+            margin-bottom: 16px;
+        }
+        
+        .factor-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .factor-card li {
+            font-size: 20px;
+            color: #D1D5DB;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .factor-card li:last-child {
+            border-bottom: none;
+        }
+        
+        /* Key Insight */
+        .insight-box {
+            background: rgba(118, 220, 236, 0.15);
+            border-left: 6px solid var(--cyan-500);
+            padding: 30px 40px;
+            margin-top: auto;
+            margin-bottom: 60px;
+            border-radius: 0 16px 16px 0;
+        }
+        
+        .insight-box .label {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--cyan-500);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+        }
+        
+        .insight-box p {
+            font-size: 24px;
+            color: #D1D5DB;
+            line-height: 1.5;
+        }
+        
+        /* Summary Slide */
+        .summary .peepo-row {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding: 25px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .summary .peepo-row:last-child {
+            border-bottom: none;
+        }
+        
+        .summary .peepo-letter {
+            width: 80px;
+            height: 80px;
+            background: var(--cyan-500);
+            color: var(--navy-900);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            font-weight: 900;
+            flex-shrink: 0;
+        }
+        
+        .summary .peepo-text h4 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .summary .peepo-text p {
+            font-size: 20px;
+            color: #9CA3AF;
+        }
+        
+        /* CTA Slide */
+        .cta {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 52px;
+            font-weight: 800;
+            margin-bottom: 40px;
+            line-height: 1.2;
+        }
+        
+        .cta h2 span {
+            color: var(--cyan-500);
+        }
+        
+        .cta .action {
+            background: var(--cyan-500);
+            color: var(--navy-900);
+            padding: 24px 48px;
+            border-radius: 16px;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+        
+        .cta .url {
+            font-size: 32px;
+            color: var(--cyan-500);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Slide 1: Cover -->
+    <div class="slide cover">
+        <img src="../../logos/logo-03-on-dark.png" alt="InvestigatePro" class="logo">
+        <h1>The <span>PEEPO</span><br>Framework</h1>
+        <p>The systematic way to find root causes in incident investigations</p>
+        <div class="peepo-preview">
+            <div class="peepo-preview-item"><span class="letter">P</span><span class="label">People</span></div>
+            <div class="peepo-preview-item"><span class="letter">E</span><span class="label">Environment</span></div>
+            <div class="peepo-preview-item"><span class="letter">E</span><span class="label">Equipment</span></div>
+            <div class="peepo-preview-item"><span class="letter">P</span><span class="label">Procedures</span></div>
+            <div class="peepo-preview-item"><span class="letter">O</span><span class="label">Organization</span></div>
+        </div>
+        <div class="swipe">Swipe to learn each</div>
+        <div class="slide-number">1/8</div>
+    </div>
+    
+    <!-- Slide 2: People -->
+    <div class="slide letter-slide">
+        <img src="../../logos/logo-03-on-dark.png" alt="InvestigatePro" class="logo">
+        <div class="big-letter">P</div>
+        <h2 class="letter-title">People</h2>
+        <div class="factors-grid">
+            <div class="factor-card">
+                <h4>Physical State</h4>
+                <ul>
+                    <li>Fatigue / sleep</li>
+                    <li>Illness / injury</li>
+                    <li>Impairment</li>
+                </ul>
+            </div>
+            <div class="factor-card">
+                <h4>Mental State</h4>
+                <ul>
+                    <li>Stress / pressure</li>
+                    <li>Distraction</li>
+                    <li>Complacency</li>
+                </ul>
+            </div>
+            <div class="factor-card">
+                <h4>Knowledge</h4>
+                <ul>
+                    <li>Training adequacy</li>
+                    <li>Experience level</li>
+                    <li>Hazard awareness</li>
+                </ul>
+            </div>
+            <div class="factor-card">
+                <h4>Communication</h4>
+                <ul>
+                    <li>Instructions clear?</li>
+                    <li>Language barriers?</li>
+                    <li>Handover adequate?</li>
+                </ul>
+            </div>
+        </div>
+        <div class="insight-box">
+            <div class="label">💡 Key Insight</div>
+            <p>People factors explain HOW an incident happened — but rarely WHY it was possible. Always dig deeper.</p>
+        </div>
+        <div class="slide-number">2/8</div>
+    </div>
+    
+    <!-- Slide 3: Environment -->
+    <div class="slide letter-slide">
+        <img src="../../logos/logo-03-on-dark.png" alt="InvestigatePro" class="logo">
+        <div class="big-letter">E</div>
+        <h2 class="letter-title">Environment</h2>
+        <div class="factors-grid">
+            <div class="factor-card">
+                <h4>Physical Conditions</h4>
+                <ul>
+                    <li>Weather</li>
+                    <li>Lighting</li>
+                    <li>Noise / temperature</li>
+                </ul>
+            </div>
+            <div class="factor-card">
+                <h4>Workspace</h4>
+                <ul>
+                    <li>Housekeeping</li>
+                    <li>Layout / access</li>
+                    <li>Ground conditions</li>
+                </ul>
+            </div>
+            <div class="factor-card">
+                <h4>Temporal</h4>
+                <ul>
+                    <li>Time of day</li>
+                    <li>Shift patterns</li>
+                    <li>End of shift rush</li>
+                </ul>
+            </div>
+            <div class="factor-card">
+                <h4>Location</h4>
+                <ul>
+                    <li>Remote / isolated</li>
+                    <li>Multi-employer site</li>
+                    <li>Public interface</li>
+                </ul>
+            </div>
+        </div>
+        <div class="insight-box">
+            <div class="label">💡 Key Insight</div>
+            <p>Even the most skilled worker can fail in a hostile environment. The environment sets the stage.</p>
+        </div>
+        <div class="slide-number">3/8</div>
+    </div>
+    
+    <!-- Slide 4: Equipment -->
+    <div class="slide letter-slide">
+        <img src="../../logos/logo-03-on-dark.png" alt="InvestigatePro" class="logo">
+        <div class="big-letter">E</div>
+        <h2 class="letter-title">Equipment</h2>
+        <div class="factors-grid">
+            <div class="factor-card">
+                <h4>Design</h4>
+                <ul>
+                    <li>Suitable for task?</li>
+                    <li>Ergonomic?</li>
+                    <li>Fails safely?</li>
+                </ul>
+            </div>
+            <div class="factor-card">
+                <h4>Condition</h4>
+                <ul>
+                    <li>Maintenance status</li>
+                    <li>Known defects?</li>
+                    <li>Pre-use checks done?</li>
+                </ul>
+            </div>
+            <div class="factor-card">
+                <h4>Safety Features</h4>
+                <ul>
+                    <li>Guards in place?</li>
+                    <li>Interlocks working?</li>
+                    <li>E-stops accessible?</li>
+                </ul>
+            </div>
+            <div class="factor-card">
+                <h4>PPE</h4>
+                <ul>
+                    <li>Available?</li>
+                    <li>Good condition?</li>
+                    <li>Correct for hazard?</li>
+                </ul>
+            </div>
+        </div>
+        <div class="insight-box">
+            <div class="label">💡 Key Insight</div>
+            <p>Equipment doesn't maintain itself. Ask: who decided on maintenance schedules and budgets?</p>
+        </div>
+        <div class="slide-number">4/8</div>
+    </div>
+    
+    <!-- Slide 5: Procedures -->
+    <div class="slide letter-slide">
+        <img src="../../logos/logo-03-on-dark.png" alt="InvestigatePro" class="logo">
+        <div class="big-letter">P</div>
+        <h2 class="letter-title">Procedures</h2>
+        <div class="factors-grid">
+            <div class="factor-card">
+                <h4>Availability</h4>
+                <ul>
+                    <li>Does it exist?</li>
+                    <li>Accessible?</li>
+                    <li>Right format?</li>
+                </ul>
+            </div>
+            <div class="factor-card">
+                <h4>Quality</h4>
+                <ul>
+                    <li>Accurate?</li>
+                    <li>Complete?</li>
+                    <li>Up to date?</li>
+                </ul>
+            </div>
+            <div class="factor-card">
+                <h4>Practicality</h4>
+                <ul>
+                    <li>Can it be followed?</li>
+                    <li>Time to follow it?</li>
+                    <li>Resources available?</li>
+                </ul>
+            </div>
+            <div class="factor-card">
+                <h4>Compliance</h4>
+                <ul>
+                    <li>Workers know it?</li>
+                    <li>Trained on it?</li>
+                    <li>Actually followed?</li>
+                </ul>
+            </div>
+        </div>
+        <div class="insight-box">
+            <div class="label">💡 Key Insight</div>
+            <p>If workers routinely deviate from procedures, the procedure is the problem — not the workers.</p>
+        </div>
+        <div class="slide-number">5/8</div>
+    </div>
+    
+    <!-- Slide 6: Organization -->
+    <div class="slide letter-slide">
+        <img src="../../logos/logo-03-on-dark.png" alt="InvestigatePro" class="logo">
+        <div class="big-letter">O</div>
+        <h2 class="letter-title">Organization</h2>
+        <div class="factors-grid">
+            <div class="factor-card">
+                <h4>Management Systems</h4>
+                <ul>
+                    <li>Risk assessment</li>
+                    <li>Change management</li>
+                    <li>Permits / audits</li>
+                </ul>
+            </div>
+            <div class="factor-card">
+                <h4>Resources</h4>
+                <ul>
+                    <li>Staffing levels</li>
+                    <li>Budget allocation</li>
+                    <li>Time / schedules</li>
+                </ul>
+            </div>
+            <div class="factor-card">
+                <h4>Culture</h4>
+                <ul>
+                    <li>Safety priority</li>
+                    <li>Reporting culture</li>
+                    <li>Just culture</li>
+                </ul>
+            </div>
+            <div class="factor-card">
+                <h4>Competing Pressures</h4>
+                <ul>
+                    <li>Production vs safety</li>
+                    <li>Cost pressure</li>
+                    <li>Schedule pressure</li>
+                </ul>
+            </div>
+        </div>
+        <div class="insight-box">
+            <div class="label">💡 This is where root causes live</div>
+            <p>Every P-E-E-P factor traces back to an organizational decision. Don't stop until you find it.</p>
+        </div>
+        <div class="slide-number">6/8</div>
+    </div>
+    
+    <!-- Slide 7: Summary -->
+    <div class="slide summary">
+        <img src="../../logos/logo-03-on-dark.png" alt="InvestigatePro" class="logo">
+        <h2 style="font-size: 48px; font-weight: 800; margin-bottom: 40px;">The Complete Picture</h2>
+        
+        <div class="peepo-row">
+            <div class="peepo-letter">P</div>
+            <div class="peepo-text">
+                <h4>People</h4>
+                <p>Human factors and individual actions</p>
+            </div>
+        </div>
+        
+        <div class="peepo-row">
+            <div class="peepo-letter">E</div>
+            <div class="peepo-text">
+                <h4>Environment</h4>
+                <p>Physical conditions and surroundings</p>
+            </div>
+        </div>
+        
+        <div class="peepo-row">
+            <div class="peepo-letter">E</div>
+            <div class="peepo-text">
+                <h4>Equipment</h4>
+                <p>Tools, machinery, and PPE</p>
+            </div>
+        </div>
+        
+        <div class="peepo-row">
+            <div class="peepo-letter">P</div>
+            <div class="peepo-text">
+                <h4>Procedures</h4>
+                <p>Work methods and documentation</p>
+            </div>
+        </div>
+        
+        <div class="peepo-row">
+            <div class="peepo-letter">O</div>
+            <div class="peepo-text">
+                <h4>Organization</h4>
+                <p>Management systems and culture ← Root causes</p>
+            </div>
+        </div>
+        
+        <div class="slide-number">7/8</div>
+    </div>
+    
+    <!-- Slide 8: CTA -->
+    <div class="slide cta">
+        <img src="../../logos/logo-03-on-dark.png" alt="InvestigatePro" class="logo">
+        <h2>Want the full<br><span>PEEPO worksheets?</span></h2>
+        <div class="action">Download Free ICAM Toolkit</div>
+        <p style="font-size: 24px; color: #9CA3AF; margin-bottom: 40px;">23 pages of professional investigation templates</p>
+        <div class="url">investigatepro.app/icam-toolkit</div>
+        <div class="slide-number">8/8</div>
+    </div>
+
+</body>
+</html>

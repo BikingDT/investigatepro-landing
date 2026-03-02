@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEEPO Quick Reference Card — InvestigatePro</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --navy-900: #0C142E;
+            --navy-800: #0F1A3A;
+            --navy-700: #1A2744;
+            --cyan-500: #76DCEC;
+            --cyan-100: #E8F9FC;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-500: #6B7280;
+            --gray-700: #374151;
+            --gray-900: #111827;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 9pt;
+            line-height: 1.4;
+            color: var(--gray-900);
+            background: white;
+        }
+        
+        @page {
+            size: A4;
+            margin: 0.4in;
+        }
+        
+        @media print {
+            body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .page { page-break-after: always; }
+            .page:last-child { page-break-after: auto; }
+        }
+        
+        .page {
+            max-width: 8.27in;
+            margin: 0 auto;
+            padding: 0.4in;
+            background: white;
+        }
+        
+        @media screen {
+            .page {
+                margin: 20px auto;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+                border-radius: 8px;
+            }
+        }
+        
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 0.3in;
+            margin-bottom: 0.2in;
+            border-bottom: 3px solid var(--navy-900);
+        }
+        
+        .header-logo {
+            height: 40px;
+        }
+        
+        .header-title {
+            text-align: right;
+        }
+        
+        .header-title h1 {
+            font-size: 16pt;
+            font-weight: 800;
+            color: var(--navy-900);
+            margin: 0;
+        }
+        
+        .header-title p {
+            font-size: 9pt;
+            color: var(--gray-500);
+            margin: 0;
+        }
+        
+        /* PEEPO Grid */
+        .peepo-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 8px;
+            margin-bottom: 0.2in;
+        }
+        
+        .peepo-header {
+            background: var(--navy-900);
+            color: white;
+            padding: 12px 8px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .peepo-header .letter {
+            font-size: 24pt;
+            font-weight: 800;
+            color: var(--cyan-500);
+            display: block;
+        }
+        
+        .peepo-header .label {
+            font-size: 8pt;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 2px;
+        }
+        
+        .peepo-content {
+            background: var(--gray-100);
+            padding: 10px 8px;
+            border-radius: 0 0 8px 8px;
+            min-height: 200px;
+        }
+        
+        .peepo-content h4 {
+            font-size: 8pt;
+            font-weight: 700;
+            color: var(--navy-900);
+            margin-bottom: 4px;
+            margin-top: 8px;
+        }
+        
+        .peepo-content h4:first-child {
+            margin-top: 0;
+        }
+        
+        .peepo-content ul {
+            font-size: 7.5pt;
+            padding-left: 12px;
+            margin: 0;
+            color: var(--gray-700);
+        }
+        
+        .peepo-content li {
+            margin-bottom: 2px;
+        }
+        
+        /* Key Questions Section */
+        .section-title {
+            font-size: 11pt;
+            font-weight: 700;
+            color: var(--navy-900);
+            margin-top: 0.15in;
+            margin-bottom: 0.1in;
+            padding-bottom: 4px;
+            border-bottom: 2px solid var(--cyan-500);
+        }
+        
+        .questions-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        
+        .question-box {
+            background: var(--cyan-100);
+            border-left: 3px solid var(--cyan-500);
+            padding: 8px 10px;
+            border-radius: 0 6px 6px 0;
+        }
+        
+        .question-box strong {
+            font-size: 8pt;
+            color: var(--navy-900);
+            display: block;
+            margin-bottom: 3px;
+        }
+        
+        .question-box p {
+            font-size: 7.5pt;
+            color: var(--gray-700);
+            margin: 0;
+        }
+        
+        /* Footer */
+        .footer {
+            margin-top: 0.15in;
+            padding-top: 0.1in;
+            border-top: 1px solid var(--gray-200);
+            display: flex;
+            justify-content: space-between;
+            font-size: 7pt;
+            color: var(--gray-500);
+        }
+        
+        /* Page 2 Styles */
+        .org-factors-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+        
+        .org-factor {
+            background: var(--gray-100);
+            padding: 8px;
+            border-radius: 6px;
+            border-left: 3px solid var(--navy-900);
+        }
+        
+        .org-factor h4 {
+            font-size: 8pt;
+            font-weight: 700;
+            color: var(--navy-900);
+            margin-bottom: 4px;
+        }
+        
+        .org-factor p {
+            font-size: 7pt;
+            color: var(--gray-700);
+            margin: 0;
+        }
+        
+        /* Hierarchy of Controls */
+        .hoc-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+        
+        .hoc-rank {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10pt;
+            font-weight: 700;
+            color: white;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+        
+        .hoc-1 { background: #22c55e; }
+        .hoc-2 { background: #84cc16; }
+        .hoc-3 { background: #eab308; }
+        .hoc-4 { background: #f97316; }
+        .hoc-5 { background: #ef4444; }
+        
+        .hoc-text strong {
+            font-size: 9pt;
+            color: var(--navy-900);
+        }
+        
+        .hoc-text span {
+            font-size: 8pt;
+            color: var(--gray-600);
+        }
+        
+        /* Mistakes to Avoid */
+        .mistakes-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+        
+        .mistake {
+            background: #FEF2F2;
+            border-left: 3px solid #EF4444;
+            padding: 8px;
+            border-radius: 0 6px 6px 0;
+        }
+        
+        .mistake strong {
+            font-size: 8pt;
+            color: #991B1B;
+            display: block;
+        }
+        
+        .mistake p {
+            font-size: 7pt;
+            color: var(--gray-700);
+            margin: 4px 0 0 0;
+        }
+        
+        /* Two Column Layout */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PAGE 1: PEEPO Framework -->
+    <div class="page">
+        <div class="header">
+            <img src="../logos/logo-03-lettermark-ip.png" alt="InvestigatePro" class="header-logo">
+            <div class="header-title">
+                <h1>PEEPO Quick Reference</h1>
+                <p>Incident Investigation Analysis Framework</p>
+            </div>
+        </div>
+        
+        <div class="peepo-grid">
+            <!-- People -->
+            <div>
+                <div class="peepo-header">
+                    <span class="letter">P</span>
+                    <span class="label">People</span>
+                </div>
+                <div class="peepo-content">
+                    <h4>Physical State</h4>
+                    <ul>
+                        <li>Fatigue / sleep</li>
+                        <li>Illness / injury</li>
+                        <li>Impairment</li>
+                        <li>Physical capability</li>
+                    </ul>
+                    <h4>Mental State</h4>
+                    <ul>
+                        <li>Stress / pressure</li>
+                        <li>Distraction</li>
+                        <li>Complacency</li>
+                        <li>Rushing</li>
+                    </ul>
+                    <h4>Knowledge</h4>
+                    <ul>
+                        <li>Training adequacy</li>
+                        <li>Experience level</li>
+                        <li>Hazard awareness</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Environment -->
+            <div>
+                <div class="peepo-header">
+                    <span class="letter">E</span>
+                    <span class="label">Environment</span>
+                </div>
+                <div class="peepo-content">
+                    <h4>Physical</h4>
+                    <ul>
+                        <li>Weather conditions</li>
+                        <li>Lighting adequacy</li>
+                        <li>Noise levels</li>
+                        <li>Temperature</li>
+                        <li>Ventilation</li>
+                    </ul>
+                    <h4>Workspace</h4>
+                    <ul>
+                        <li>Housekeeping</li>
+                        <li>Layout / access</li>
+                        <li>Ground conditions</li>
+                        <li>Congestion</li>
+                    </ul>
+                    <h4>Temporal</h4>
+                    <ul>
+                        <li>Time of day</li>
+                        <li>Shift patterns</li>
+                        <li>Remote location</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Equipment -->
+            <div>
+                <div class="peepo-header">
+                    <span class="letter">E</span>
+                    <span class="label">Equipment</span>
+                </div>
+                <div class="peepo-content">
+                    <h4>Design</h4>
+                    <ul>
+                        <li>Suitability for task</li>
+                        <li>Ergonomics</li>
+                        <li>Human factors</li>
+                        <li>Fail-safe design</li>
+                    </ul>
+                    <h4>Condition</h4>
+                    <ul>
+                        <li>Maintenance status</li>
+                        <li>Wear / deterioration</li>
+                        <li>Known defects</li>
+                        <li>Pre-use checks</li>
+                    </ul>
+                    <h4>Safety Features</h4>
+                    <ul>
+                        <li>Guards in place</li>
+                        <li>Interlocks working</li>
+                        <li>E-stops accessible</li>
+                        <li>PPE adequate</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Procedures -->
+            <div>
+                <div class="peepo-header">
+                    <span class="letter">P</span>
+                    <span class="label">Procedures</span>
+                </div>
+                <div class="peepo-content">
+                    <h4>Availability</h4>
+                    <ul>
+                        <li>Procedure exists</li>
+                        <li>Accessible to workers</li>
+                        <li>Appropriate format</li>
+                    </ul>
+                    <h4>Quality</h4>
+                    <ul>
+                        <li>Accurate / correct</li>
+                        <li>Complete</li>
+                        <li>Clear / understandable</li>
+                        <li>Up to date</li>
+                    </ul>
+                    <h4>Compliance</h4>
+                    <ul>
+                        <li>Workers aware of it</li>
+                        <li>Trained on it</li>
+                        <li>Actually followed</li>
+                        <li>Practical to follow</li>
+                        <li>Enforced</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Organization -->
+            <div>
+                <div class="peepo-header">
+                    <span class="letter">O</span>
+                    <span class="label">Organization</span>
+                </div>
+                <div class="peepo-content">
+                    <h4>Systems</h4>
+                    <ul>
+                        <li>Risk assessment</li>
+                        <li>Change management</li>
+                        <li>Permit systems</li>
+                        <li>Contractor mgmt</li>
+                    </ul>
+                    <h4>Resources</h4>
+                    <ul>
+                        <li>Staffing levels</li>
+                        <li>Budget allocation</li>
+                        <li>Time / schedules</li>
+                    </ul>
+                    <h4>Culture</h4>
+                    <ul>
+                        <li>Safety priority</li>
+                        <li>Reporting culture</li>
+                        <li>Leadership commitment</li>
+                        <li>Competing pressures</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section-title">Key Questions to Ask</div>
+        
+        <div class="questions-grid">
+            <div class="question-box">
+                <strong>When you find "human error"...</strong>
+                <p>Ask: Why was that error possible? What system allowed it? Don't stop at blame.</p>
+            </div>
+            <div class="question-box">
+                <strong>When procedures weren't followed...</strong>
+                <p>Ask: Was it practical? Was there time? Was there pressure to shortcut?</p>
+            </div>
+            <div class="question-box">
+                <strong>For every P-E-E-P factor...</strong>
+                <p>Ask: What organizational decision created this condition?</p>
+            </div>
+            <div class="question-box">
+                <strong>Before closing investigation...</strong>
+                <p>Ask: If we fix this, will it actually prevent recurrence?</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <span>© InvestigatePro — investigatepro.app</span>
+            <span>PEEPO Quick Reference — Page 1 of 2</span>
+        </div>
+    </div>
+    
+    <!-- PAGE 2: Organizational Factors & Hierarchy of Controls -->
+    <div class="page">
+        <div class="header">
+            <img src="../logos/logo-03-lettermark-ip.png" alt="InvestigatePro" class="header-logo">
+            <div class="header-title">
+                <h1>PEEPO Quick Reference</h1>
+                <p>Organizational Factors & Corrective Actions</p>
+            </div>
+        </div>
+        
+        <div class="section-title">Organizational Factor Categories</div>
+        
+        <div class="org-factors-grid">
+            <div class="org-factor">
+                <h4>Hardware</h4>
+                <p>Equipment procurement, maintenance programs, capital investment decisions</p>
+            </div>
+            <div class="org-factor">
+                <h4>Training</h4>
+                <p>Program effectiveness, competency verification, refresher schedules</p>
+            </div>
+            <div class="org-factor">
+                <h4>Management Systems</h4>
+                <p>Risk assessment, change management, permit systems, audits</p>
+            </div>
+            <div class="org-factor">
+                <h4>Communication</h4>
+                <p>Information flow, shift handovers, safety alerts, feedback mechanisms</p>
+            </div>
+            <div class="org-factor">
+                <h4>Incompatible Goals</h4>
+                <p>Production vs safety, schedule pressure, cost cutting conflicts</p>
+            </div>
+            <div class="org-factor">
+                <h4>Culture</h4>
+                <p>Leadership commitment, psychological safety, reporting, just culture</p>
+            </div>
+            <div class="org-factor">
+                <h4>Risk Management</h4>
+                <p>Hazard identification, control effectiveness, monitoring</p>
+            </div>
+            <div class="org-factor">
+                <h4>Maintenance Mgmt</h4>
+                <p>Scheduling, preventive vs reactive, spare parts, deferrals</p>
+            </div>
+            <div class="org-factor">
+                <h4>Contractor Mgmt</h4>
+                <p>Selection, induction, supervision, integration</p>
+            </div>
+        </div>
+        
+        <div class="two-col" style="margin-top: 0.15in;">
+            <div>
+                <div class="section-title">Hierarchy of Controls</div>
+                
+                <div class="hoc-item">
+                    <div class="hoc-rank hoc-1">1</div>
+                    <div class="hoc-text">
+                        <strong>Elimination</strong><br>
+                        <span>Remove the hazard entirely</span>
+                    </div>
+                </div>
+                
+                <div class="hoc-item">
+                    <div class="hoc-rank hoc-2">2</div>
+                    <div class="hoc-text">
+                        <strong>Substitution</strong><br>
+                        <span>Replace with less hazardous</span>
+                    </div>
+                </div>
+                
+                <div class="hoc-item">
+                    <div class="hoc-rank hoc-3">3</div>
+                    <div class="hoc-text">
+                        <strong>Engineering Controls</strong><br>
+                        <span>Guards, barriers, interlocks</span>
+                    </div>
+                </div>
+                
+                <div class="hoc-item">
+                    <div class="hoc-rank hoc-4">4</div>
+                    <div class="hoc-text">
+                        <strong>Administrative Controls</strong><br>
+                        <span>Procedures, training, signage</span>
+                    </div>
+                </div>
+                
+                <div class="hoc-item">
+                    <div class="hoc-rank hoc-5">5</div>
+                    <div class="hoc-text">
+                        <strong>PPE</strong><br>
+                        <span>Personal protective equipment</span>
+                    </div>
+                </div>
+                
+                <p style="font-size: 7pt; color: var(--gray-500); margin-top: 8px; font-style: italic;">
+                    Always start at the top. Higher controls are more effective because they don't rely on human behavior.
+                </p>
+            </div>
+            
+            <div>
+                <div class="section-title">Common Mistakes to Avoid</div>
+                
+                <div class="mistakes-grid">
+                    <div class="mistake">
+                        <strong>❌ Stopping at "human error"</strong>
+                        <p>It's a symptom, not a root cause</p>
+                    </div>
+                    <div class="mistake">
+                        <strong>❌ "Retrain all workers"</strong>
+                        <p>Usually doesn't fix the real problem</p>
+                    </div>
+                    <div class="mistake">
+                        <strong>❌ Confirmation bias</strong>
+                        <p>Seek disconfirming evidence</p>
+                    </div>
+                    <div class="mistake">
+                        <strong>❌ Adding warning signs</strong>
+                        <p>Signs don't stop incidents</p>
+                    </div>
+                    <div class="mistake">
+                        <strong>❌ Not reaching Organization</strong>
+                        <p>That's where root causes live</p>
+                    </div>
+                    <div class="mistake">
+                        <strong>❌ "Be more careful"</strong>
+                        <p>Not actionable or measurable</p>
+                    </div>
+                </div>
+                
+                <div style="background: #ECFDF5; border-left: 3px solid #22C55E; padding: 8px; border-radius: 0 6px 6px 0; margin-top: 10px;">
+                    <strong style="font-size: 8pt; color: #166534;">✓ Good Root Cause Test</strong>
+                    <p style="font-size: 7pt; color: var(--gray-700); margin: 4px 0 0 0;">
+                        "If we fix this, will it prevent similar incidents?" and "Is this something we can actually change?"
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div style="background: var(--navy-900); color: white; padding: 12px 16px; border-radius: 8px; margin-top: 0.15in; display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <strong style="font-size: 10pt;">Want AI-powered ICAM analysis?</strong>
+                <p style="font-size: 8pt; margin: 2px 0 0 0; color: var(--gray-300);">InvestigatePro guides you through PEEPO with smart prompts.</p>
+            </div>
+            <div style="background: var(--cyan-500); color: var(--navy-900); padding: 8px 16px; border-radius: 6px; font-weight: 700; font-size: 9pt;">
+                investigatepro.app
+            </div>
+        </div>
+        
+        <div class="footer">
+            <span>© InvestigatePro — Free to use and share</span>
+            <span>PEEPO Quick Reference — Page 2 of 2</span>
+        </div>
+    </div>
+
+</body>
+</html>
