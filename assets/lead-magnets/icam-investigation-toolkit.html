@@ -1,0 +1,2295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICAM Investigation Toolkit — InvestigatePro</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --navy-900: #0C142E;
+            --navy-800: #0F1A3A;
+            --navy-700: #1A2744;
+            --navy-600: #2A3A5C;
+            --cyan-500: #76DCEC;
+            --cyan-400: #88E0EE;
+            --cyan-100: #E8F9FC;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-300: #D1D5DB;
+            --gray-500: #6B7280;
+            --gray-700: #374151;
+            --gray-900: #111827;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 11pt;
+            line-height: 1.6;
+            color: var(--gray-900);
+            background: white;
+        }
+        
+        /* Print Styles */
+        @page {
+            size: A4;
+            margin: 0.75in;
+        }
+        
+        @media print {
+            .page-break { page-break-after: always; }
+            .no-break { page-break-inside: avoid; }
+            body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+        
+        /* Page Layout */
+        .page {
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+            background: white;
+        }
+        
+        @media screen {
+            .page {
+                margin: 20px auto;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+                border-radius: 8px;
+            }
+            .page-break {
+                border-bottom: 2px dashed var(--gray-300);
+                margin-bottom: 40px;
+                padding-bottom: 40px;
+            }
+        }
+        
+        /* Cover Page */
+        .cover {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 9in;
+            text-align: center;
+            background: linear-gradient(180deg, var(--navy-900) 0%, var(--navy-700) 100%);
+            color: white;
+            border-radius: 8px;
+            padding: 2in 1in;
+        }
+        
+        .cover-logo {
+            width: 200px;
+            margin-bottom: 3rem;
+        }
+        
+        .cover h1 {
+            font-size: 36pt;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+        
+        .cover h1 span {
+            color: var(--cyan-500);
+        }
+        
+        .cover .subtitle {
+            font-size: 14pt;
+            color: var(--gray-300);
+            margin-bottom: 3rem;
+            max-width: 400px;
+        }
+        
+        .cover .edition {
+            font-size: 10pt;
+            color: var(--gray-500);
+            border-top: 1px solid var(--navy-600);
+            padding-top: 2rem;
+            margin-top: auto;
+        }
+        
+        /* Headers */
+        h1 {
+            font-size: 24pt;
+            font-weight: 800;
+            color: var(--navy-900);
+            margin-bottom: 1rem;
+        }
+        
+        h2 {
+            font-size: 16pt;
+            font-weight: 700;
+            color: var(--navy-900);
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--cyan-500);
+        }
+        
+        h3 {
+            font-size: 13pt;
+            font-weight: 700;
+            color: var(--navy-800);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        h4 {
+            font-size: 11pt;
+            font-weight: 600;
+            color: var(--gray-700);
+            margin-top: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        /* Page Header */
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--navy-900);
+        }
+        
+        .page-header-logo {
+            height: 40px;
+        }
+        
+        .page-header-title {
+            font-size: 10pt;
+            font-weight: 600;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        /* Content */
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        ul, ol {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Intro Box */
+        .intro-box {
+            background: var(--cyan-100);
+            border-left: 4px solid var(--cyan-500);
+            padding: 1rem 1.25rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .intro-box p {
+            margin: 0;
+            color: var(--navy-800);
+        }
+        
+        /* Callout */
+        .callout {
+            background: var(--gray-100);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+        }
+        
+        .callout-title {
+            font-weight: 700;
+            color: var(--navy-900);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .callout-icon {
+            width: 20px;
+            height: 20px;
+            background: var(--cyan-500);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: var(--navy-900);
+            font-weight: 700;
+        }
+        
+        /* Warning Callout */
+        .callout-warning {
+            background: #FEF3C7;
+            border-left: 4px solid #F59E0B;
+        }
+        
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 10pt;
+        }
+        
+        th {
+            background: var(--navy-900);
+            color: white;
+            padding: 0.75rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--gray-200);
+            vertical-align: top;
+        }
+        
+        tr:nth-child(even) {
+            background: var(--gray-100);
+        }
+        
+        /* Checklist */
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .checklist li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        
+        .checklist li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.6rem;
+            width: 16px;
+            height: 16px;
+            border: 2px solid var(--gray-400);
+            border-radius: 3px;
+        }
+        
+        /* Form Fields */
+        .form-field {
+            margin-bottom: 1rem;
+        }
+        
+        .form-label {
+            display: block;
+            font-size: 9pt;
+            font-weight: 600;
+            color: var(--gray-600);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.25rem;
+        }
+        
+        .form-input {
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid var(--gray-300);
+            padding: 0.5rem 0;
+            font-size: 11pt;
+            background: transparent;
+        }
+        
+        .form-input-large {
+            min-height: 80px;
+            border: 2px solid var(--gray-300);
+            border-radius: 4px;
+            padding: 0.5rem;
+        }
+        
+        /* PEEPO Cards */
+        .peepo-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .peepo-card {
+            background: var(--navy-900);
+            color: white;
+            padding: 1rem 0.5rem;
+            text-align: center;
+            border-radius: 8px;
+        }
+        
+        .peepo-card .letter {
+            font-size: 24pt;
+            font-weight: 800;
+            color: var(--cyan-500);
+        }
+        
+        .peepo-card .label {
+            font-size: 8pt;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.25rem;
+        }
+        
+        /* Analysis Section */
+        .analysis-section {
+            border: 2px solid var(--gray-200);
+            border-radius: 8px;
+            margin: 1rem 0;
+            overflow: hidden;
+        }
+        
+        .analysis-header {
+            background: var(--navy-900);
+            color: white;
+            padding: 0.75rem 1rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .analysis-header .letter {
+            background: var(--cyan-500);
+            color: var(--navy-900);
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+        }
+        
+        .analysis-body {
+            padding: 1rem;
+        }
+        
+        .analysis-prompts {
+            background: var(--gray-100);
+            padding: 0.75rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            font-size: 10pt;
+        }
+        
+        .analysis-prompts strong {
+            color: var(--navy-900);
+        }
+        
+        /* Two Column */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        
+        /* Numbered Steps */
+        .steps {
+            counter-reset: step;
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .steps li {
+            counter-increment: step;
+            padding-left: 3rem;
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+        
+        .steps li::before {
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2rem;
+            height: 2rem;
+            background: var(--cyan-500);
+            color: var(--navy-900);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+        
+        /* Footer */
+        .page-footer {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--gray-300);
+            font-size: 9pt;
+            color: var(--gray-500);
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        /* Timeline */
+        .timeline-row {
+            display: grid;
+            grid-template-columns: 100px 1fr 1fr;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-row > div {
+            border: 1px solid var(--gray-300);
+            padding: 0.5rem;
+            min-height: 40px;
+        }
+        
+        .timeline-header > div {
+            background: var(--navy-900);
+            color: white;
+            font-weight: 600;
+            font-size: 9pt;
+        }
+        
+        /* TOC */
+        .toc {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .toc li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--gray-200);
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .toc-number {
+            color: var(--cyan-500);
+            font-weight: 700;
+            margin-right: 0.5rem;
+        }
+        
+        .toc-page {
+            color: var(--gray-500);
+        }
+        
+        /* Rating Scale */
+        .rating-scale {
+            display: flex;
+            gap: 0.5rem;
+            margin: 0.5rem 0;
+        }
+        
+        .rating-scale span {
+            width: 30px;
+            height: 30px;
+            border: 2px solid var(--gray-300);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 10pt;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ======================= COVER PAGE ======================= -->
+    <div class="page">
+        <div class="cover">
+            <img src="../logos/logo-03-on-dark.png" alt="InvestigatePro" class="cover-logo">
+            <h1>ICAM Investigation<br><span>Toolkit</span></h1>
+            <p class="subtitle">The complete resource for conducting thorough, effective incident investigations using the ICAM methodology</p>
+            <p class="edition">2026 Edition — Version 1.0<br>© InvestigatePro. Free to use and share.</p>
+        </div>
+    </div>
+    <div class="page-break"></div>
+
+    <!-- ======================= TABLE OF CONTENTS ======================= -->
+    <div class="page">
+        <div class="page-header">
+            <img src="../logos/logo-03-lettermark-ip.png" alt="IP" class="page-header-logo">
+            <span class="page-header-title">ICAM Investigation Toolkit</span>
+        </div>
+        
+        <h1>Contents</h1>
+        
+        <div class="intro-box">
+            <p><strong>How to use this toolkit:</strong> This toolkit provides everything you need to conduct a thorough ICAM investigation. Use the worksheets during your investigation, and refer to the guides and checklists to ensure you don't miss critical steps.</p>
+        </div>
+        
+        <ul class="toc">
+            <li>
+                <span><span class="toc-number">01</span> Quick Start Guide</span>
+                <span class="toc-page">3</span>
+            </li>
+            <li>
+                <span><span class="toc-number">02</span> Investigation Process Overview</span>
+                <span class="toc-page">4</span>
+            </li>
+            <li>
+                <span><span class="toc-number">03</span> Initial Response Checklist</span>
+                <span class="toc-page">5</span>
+            </li>
+            <li>
+                <span><span class="toc-number">04</span> Evidence Collection Guide</span>
+                <span class="toc-page">6</span>
+            </li>
+            <li>
+                <span><span class="toc-number">05</span> Witness Interview Guide</span>
+                <span class="toc-page">8</span>
+            </li>
+            <li>
+                <span><span class="toc-number">06</span> Timeline Worksheet</span>
+                <span class="toc-page">10</span>
+            </li>
+            <li>
+                <span><span class="toc-number">07</span> PEEPO Analysis Worksheets</span>
+                <span class="toc-page">11</span>
+            </li>
+            <li>
+                <span><span class="toc-number">08</span> Organizational Factors Reference</span>
+                <span class="toc-page">17</span>
+            </li>
+            <li>
+                <span><span class="toc-number">09</span> Corrective Action Planner</span>
+                <span class="toc-page">19</span>
+            </li>
+            <li>
+                <span><span class="toc-number">10</span> Investigation Report Template</span>
+                <span class="toc-page">21</span>
+            </li>
+        </ul>
+        
+        <div class="page-footer">
+            <span>© InvestigatePro — investigatepro.app</span>
+            <span>Page 2</span>
+        </div>
+    </div>
+    <div class="page-break"></div>
+
+    <!-- ======================= QUICK START GUIDE ======================= -->
+    <div class="page">
+        <div class="page-header">
+            <img src="../logos/logo-03-lettermark-ip.png" alt="IP" class="page-header-logo">
+            <span class="page-header-title">Quick Start Guide</span>
+        </div>
+        
+        <h1>Quick Start Guide</h1>
+        
+        <div class="intro-box">
+            <p><strong>What is ICAM?</strong> The Incident Cause Analysis Method (ICAM) is a systematic investigation methodology that identifies not just immediate causes, but the deeper organizational factors that allowed an incident to occur.</p>
+        </div>
+        
+        <h2>The ICAM Investigation Process</h2>
+        
+        <ol class="steps">
+            <li>
+                <strong>Initial Response</strong><br>
+                Secure the scene, ensure safety, preserve evidence, and begin preliminary fact-finding. Notify relevant parties.
+            </li>
+            <li>
+                <strong>Data Gathering</strong><br>
+                Interview witnesses, collect physical evidence, review documents, examine equipment, and build a timeline.
+            </li>
+            <li>
+                <strong>Analysis</strong><br>
+                Use PEEPO to identify contributing factors (People, Environment, Equipment, Procedures, Organization). Validate with evidence.
+            </li>
+            <li>
+                <strong>Findings & Recommendations</strong><br>
+                Document root causes with evidence. Develop corrective actions using the hierarchy of controls.
+            </li>
+            <li>
+                <strong>Follow-up</strong><br>
+                Track corrective action completion, verify effectiveness, and share learnings.
+            </li>
+        </ol>
+        
+        <h2>The PEEPO Framework</h2>
+        
+        <div class="peepo-grid">
+            <div class="peepo-card">
+                <div class="letter">P</div>
+                <div class="label">People</div>
+            </div>
+            <div class="peepo-card">
+                <div class="letter">E</div>
+                <div class="label">Environment</div>
+            </div>
+            <div class="peepo-card">
+                <div class="letter">E</div>
+                <div class="label">Equipment</div>
+            </div>
+            <div class="peepo-card">
+                <div class="letter">P</div>
+                <div class="label">Procedures</div>
+            </div>
+            <div class="peepo-card">
+                <div class="letter">O</div>
+                <div class="label">Organization</div>
+            </div>
+        </div>
+        
+        <p>PEEPO ensures you examine all potential contributing factors systematically, rather than focusing only on the obvious or convenient.</p>
+        
+        <div class="callout callout-warning">
+            <div class="callout-title">⚠️ Key Principle</div>
+            <p style="margin:0">ICAM focuses on <strong>systems, not blame</strong>. The goal is to identify organizational factors that can be fixed — not to find someone to punish. "Human error" is almost never a root cause.</p>
+        </div>
+        
+        <div class="page-footer">
+            <span>© InvestigatePro — investigatepro.app</span>
+            <span>Page 3</span>
+        </div>
+    </div>
+    <div class="page-break"></div>
+
+    <!-- ======================= INVESTIGATION PROCESS ======================= -->
+    <div class="page">
+        <div class="page-header">
+            <img src="../logos/logo-03-lettermark-ip.png" alt="IP" class="page-header-logo">
+            <span class="page-header-title">Investigation Process Overview</span>
+        </div>
+        
+        <h1>Investigation Process Overview</h1>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:20%">Stage</th>
+                    <th style="width:40%">Key Activities</th>
+                    <th style="width:40%">Outputs</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>1. Initial Response</strong><br><em>0-24 hours</em></td>
+                    <td>
+                        • Ensure scene is safe and secure<br>
+                        • Provide first aid/emergency response<br>
+                        • Preserve evidence (don't disturb scene)<br>
+                        • Take photos/videos immediately<br>
+                        • Make required notifications<br>
+                        • Identify witnesses
+                    </td>
+                    <td>
+                        • Scene secured<br>
+                        • Initial photos/evidence<br>
+                        • Witness list<br>
+                        • Notifications complete<br>
+                        • Initial incident summary
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>2. Data Gathering</strong><br><em>Days 1-5</em></td>
+                    <td>
+                        • Interview witnesses (cognitive technique)<br>
+                        • Collect physical evidence<br>
+                        • Review documents (procedures, training records, maintenance logs)<br>
+                        • Examine equipment<br>
+                        • Survey environment<br>
+                        • Build timeline
+                    </td>
+                    <td>
+                        • Interview notes/transcripts<br>
+                        • Evidence log<br>
+                        • Document copies<br>
+                        • Equipment inspection reports<br>
+                        • Site survey notes<br>
+                        • Event timeline
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>3. Analysis</strong><br><em>Days 3-10</em></td>
+                    <td>
+                        • Identify what happened (event sequence)<br>
+                        • Identify absent/failed defenses<br>
+                        • Apply PEEPO framework<br>
+                        • Identify organizational factors<br>
+                        • Validate findings with evidence<br>
+                        • Determine root causes
+                    </td>
+                    <td>
+                        • PEEPO analysis worksheets<br>
+                        • Organizational factors analysis<br>
+                        • Root cause statements<br>
+                        • Evidence mapping
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>4. Findings</strong><br><em>Days 7-14</em></td>
+                    <td>
+                        • Document findings with evidence<br>
+                        • Develop corrective actions<br>
+                        • Apply hierarchy of controls<br>
+                        • Assign ownership and due dates<br>
+                        • Write investigation report<br>
+                        • Review with stakeholders
+                    </td>
+                    <td>
+                        • Corrective action plan<br>
+                        • Draft investigation report<br>
+                        • Stakeholder feedback<br>
+                        • Final approved report
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>5. Follow-up</strong><br><em>Ongoing</em></td>
+                    <td>
+                        • Track CA completion<br>
+                        • Verify effectiveness<br>
+                        • Share learnings<br>
+                        • Update systems/procedures<br>
+                        • Close investigation
+                    </td>
+                    <td>
+                        • CA completion records<br>
+                        • Effectiveness verification<br>
+                        • Safety alerts/lessons learned<br>
+                        • Updated documentation
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="callout">
+            <div class="callout-title"><span class="callout-icon">!</span> Timeline Guidance</div>
+            <p style="margin:0">These timeframes are guidelines for a moderate-complexity investigation. Serious incidents may require more time. The key is to be thorough but timely — don't let investigations drag on for months, but don't rush to close them either.</p>
+        </div>
+        
+        <div class="page-footer">
+            <span>© InvestigatePro — investigatepro.app</span>
+            <span>Page 4</span>
+        </div>
+    </div>
+    <div class="page-break"></div>
+
+    <!-- ======================= INITIAL RESPONSE CHECKLIST ======================= -->
+    <div class="page">
+        <div class="page-header">
+            <img src="../logos/logo-03-lettermark-ip.png" alt="IP" class="page-header-logo">
+            <span class="page-header-title">Initial Response Checklist</span>
+        </div>
+        
+        <h1>Initial Response Checklist</h1>
+        
+        <div class="intro-box">
+            <p>Complete these actions in the first 24 hours after an incident. Time-sensitive items are marked with ⚡.</p>
+        </div>
+        
+        <div class="form-field">
+            <label class="form-label">Incident Date/Time</label>
+            <input type="text" class="form-input" placeholder="">
+        </div>
+        
+        <div class="two-col">
+            <div class="form-field">
+                <label class="form-label">Location</label>
+                <input type="text" class="form-input" placeholder="">
+            </div>
+            <div class="form-field">
+                <label class="form-label">Investigator Name</label>
+                <input type="text" class="form-input" placeholder="">
+            </div>
+        </div>
+        
+        <h2>Immediate Safety (First 30 minutes) ⚡</h2>
+        <ul class="checklist">
+            <li>Scene is safe and secured from unauthorized access</li>
+            <li>All injured persons have received appropriate medical attention</li>
+            <li>Emergency services notified if required</li>
+            <li>Area isolated/barricaded if hazards remain</li>
+            <li>Witnesses identified and asked to remain available</li>
+        </ul>
+        
+        <h2>Evidence Preservation (First 2 hours) ⚡</h2>
+        <ul class="checklist">
+            <li>Photos taken from multiple angles (wide, medium, close-up)</li>
+            <li>Video recorded if beneficial</li>
+            <li>Physical evidence marked and protected</li>
+            <li>Equipment isolated (DO NOT clean, repair, or move)</li>
+            <li>Samples collected if applicable (spills, materials, etc.)</li>
+            <li>Environmental conditions documented (weather, lighting, noise)</li>
+            <li>CCTV/security footage secured and preserved</li>
+        </ul>
+        
+        <h2>Notifications (First 4 hours)</h2>
+        <ul class="checklist">
+            <li>Supervisor/manager notified</li>
+            <li>Safety department notified</li>
+            <li>Senior management notified (per escalation criteria)</li>
+            <li>Regulatory authority notified (if required)</li>
+            <li>Insurance/legal notified (if required)</li>
+            <li>Family/next of kin notified (if injury)</li>
+            <li>Union/employee representative notified (if applicable)</li>
+        </ul>
+        
+        <h2>Documentation (First 24 hours)</h2>
+        <ul class="checklist">
+            <li>Initial incident report completed</li>
+            <li>Witness list compiled with contact details</li>
+            <li>Evidence log started</li>
+            <li>Preliminary timeline drafted</li>
+            <li>Relevant documents identified for collection</li>
+            <li>Investigation team assigned</li>
+        </ul>
+        
+        <div class="page-footer">
+            <span>© InvestigatePro — investigatepro.app</span>
+            <span>Page 5</span>
+        </div>
+    </div>
+    <div class="page-break"></div>
+
+    <!-- ======================= EVIDENCE COLLECTION GUIDE ======================= -->
+    <div class="page">
+        <div class="page-header">
+            <img src="../logos/logo-03-lettermark-ip.png" alt="IP" class="page-header-logo">
+            <span class="page-header-title">Evidence Collection Guide</span>
+        </div>
+        
+        <h1>Evidence Collection Guide</h1>
+        
+        <div class="intro-box">
+            <p><strong>Golden Rule:</strong> Every finding in your investigation must be supported by evidence. If you can't point to specific data that supports a conclusion, it's speculation — not investigation.</p>
+        </div>
+        
+        <h2>Types of Evidence</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Examples</th>
+                    <th>Collection Tips</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Physical</strong></td>
+                    <td>Equipment, tools, materials, PPE, samples, debris</td>
+                    <td>Photograph in place before moving. Label and preserve. Document chain of custody.</td>
+                </tr>
+                <tr>
+                    <td><strong>Documentary</strong></td>
+                    <td>Procedures, training records, maintenance logs, permits, risk assessments</td>
+                    <td>Get originals or certified copies. Note version/revision dates. Check for recent changes.</td>
+                </tr>
+                <tr>
+                    <td><strong>Testimonial</strong></td>
+                    <td>Witness statements, interviews</td>
+                    <td>Interview as soon as possible. Use cognitive interview techniques. Record or take detailed notes.</td>
+                </tr>
+                <tr>
+                    <td><strong>Digital</strong></td>
+                    <td>CCTV, access logs, data recorders, emails, photos</td>
+                    <td>Preserve immediately — digital data can be overwritten. Get IT assistance if needed.</td>
+                </tr>
+                <tr>
+                    <td><strong>Environmental</strong></td>
+                    <td>Weather data, lighting levels, noise measurements, air quality</td>
+                    <td>Document conditions at time of incident. Re-measure if conditions may have changed.</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h2>Evidence Log</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:8%">#</th>
+                    <th style="width:25%">Description</th>
+                    <th style="width:15%">Type</th>
+                    <th style="width:15%">Location Found</th>
+                    <th style="width:12%">Date/Time</th>
+                    <th style="width:12%">Collected By</th>
+                    <th style="width:13%">Storage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td style="height:40px"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td style="height:40px"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td style="height:40px"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td style="height:40px"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td style="height:40px"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td style="height:40px"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td style="height:40px"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td style="height:40px"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="page-footer">
+            <span>© InvestigatePro — investigatepro.app</span>
+            <span>Page 6</span>
+        </div>
+    </div>
+    <div class="page-break"></div>
+
+    <!-- ======================= EVIDENCE COLLECTION PAGE 2 ======================= -->
+    <div class="page">
+        <div class="page-header">
+            <img src="../logos/logo-03-lettermark-ip.png" alt="IP" class="page-header-logo">
+            <span class="page-header-title">Evidence Collection Guide</span>
+        </div>
+        
+        <h2>Photography Checklist</h2>
+        
+        <p>Good photographs are critical evidence. Follow this sequence:</p>
+        
+        <ul class="checklist">
+            <li><strong>Overall scene</strong> — Wide shots from multiple angles showing the entire area</li>
+            <li><strong>Relationship shots</strong> — Medium shots showing how elements relate to each other</li>
+            <li><strong>Close-up details</strong> — Specific items, damage, marks, labels</li>
+            <li><strong>Equipment involved</strong> — Multiple angles, controls, displays, guards</li>
+            <li><strong>Environmental factors</strong> — Lighting, floor conditions, signage, layout</li>
+            <li><strong>Evidence markers</strong> — Items with scale reference (ruler, coin, person)</li>
+            <li><strong>Any injuries</strong> — With person's consent, for medical and investigation records</li>
+        </ul>
+        
+        <div class="callout">
+            <div class="callout-title"><span class="callout-icon">📷</span> Photography Tips</div>
+            <ul style="margin:0">
+                <li>Include a reference for scale in close-ups</li>
+                <li>Ensure adequate lighting — use flash if needed</li>
+                <li>Don't stage or move items before photographing</li>
+                <li>Record date/time stamps on all images</li>
+                <li>Back up photos immediately to prevent loss</li>
+            </ul>
+        </div>
+        
+        <h2>Document Collection Checklist</h2>
+        
+        <ul class="checklist">
+            <li>Work procedure/SOP for the task being performed</li>
+            <li>Risk assessment/JSA/SWMS for the activity</li>
+            <li>Permit to work (if applicable)</li>
+            <li>Training records for involved personnel</li>
+            <li>Competency/certification records</li>
+            <li>Equipment maintenance records</li>
+            <li>Inspection/pre-use check records</li>
+            <li>Manufacturer's instructions/manual</li>
+            <li>Previous incident reports (similar incidents)</li>
+            <li>Audit reports for the area/activity</li>
+            <li>Shift handover records</li>
+            <li>Work schedules/rosters</li>
+            <li>Email communications related to the work</li>
+            <li>Meeting minutes where relevant decisions were made</li>
+        </ul>
+        
+        <div class="callout callout-warning">
+            <div class="callout-title">⚠️ Document Preservation</div>
+            <p style="margin:0">Electronic documents can change. When collecting digital evidence, note the access date/time, take screenshots, or request certified copies. Check revision history to see recent changes.</p>
+        </div>
+        
+        <div class="page-footer">
+            <span>© InvestigatePro — investigatepro.app</span>
+            <span>Page 7</span>
+        </div>
+    </div>
+    <div class="page-break"></div>
+
+    <!-- ======================= WITNESS INTERVIEW GUIDE ======================= -->
+    <div class="page">
+        <div class="page-header">
+            <img src="../logos/logo-03-lettermark-ip.png" alt="IP" class="page-header-logo">
+            <span class="page-header-title">Witness Interview Guide</span>
+        </div>
+        
+        <h1>Witness Interview Guide</h1>
+        
+        <div class="intro-box">
+            <p><strong>Cognitive Interview Technique:</strong> The goal is to help witnesses recall what they actually observed — not what they think happened or what they've heard from others. Create a supportive environment and let them tell their story.</p>
+        </div>
+        
+        <h2>Before the Interview</h2>
+        
+        <ul class="checklist">
+            <li>Review what you already know about the incident</li>
+            <li>Identify what information you need from this witness</li>
+            <li>Choose a quiet, private location</li>
+            <li>Allow enough time (typically 30-60 minutes)</li>
+            <li>Prepare your note-taking method (written notes, recording device)</li>
+            <li>Decide if anyone else should be present (support person, union rep)</li>
+        </ul>
+        
+        <h2>Interview Structure</h2>
+        
+        <h3>1. Introduction (5 minutes)</h3>
+        <ul>
+            <li>Thank them for their time and cooperation</li>
+            <li>Explain the purpose: to understand what happened, not assign blame</li>
+            <li>Explain confidentiality and how information will be used</li>
+            <li>Ask permission to take notes or record</li>
+            <li>Encourage them to say "I don't know" if they don't know</li>
+        </ul>
+        
+        <h3>2. Free Recall (15-20 minutes)</h3>
+        <ul>
+            <li><strong>Ask:</strong> "Please tell me everything you remember about what happened, from the beginning."</li>
+            <li>Let them speak without interruption</li>
+            <li>Take notes but maintain eye contact</li>
+            <li>Use encouraging nods and "go on" prompts</li>
+            <li>Don't ask questions yet — just listen</li>
+        </ul>
+        
+        <h3>3. Clarification Questions (15-20 minutes)</h3>
+        <ul>
+            <li>Ask open-ended questions to fill gaps: "You mentioned X. Can you tell me more about that?"</li>
+            <li>Avoid leading questions that suggest an answer</li>
+            <li>Ask about specific details: times, locations, sequence</li>
+            <li>Ask what they saw, heard, smelled, felt</li>
+            <li>Ask about the period before the incident (context)</li>
+        </ul>
+        
+        <h3>4. Closing (5 minutes)</h3>
+        <ul>
+            <li>Ask: "Is there anything else you think is important that I haven't asked about?"</li>
+            <li>Summarize key points and confirm accuracy</li>
+            <li>Ask if they can suggest other witnesses</li>
+            <li>Explain next steps and thank them again</li>
+            <li>Provide contact information for follow-up questions</li>
+        </ul>
+        
+        <div class="page-footer">
+            <span>© InvestigatePro — investigatepro.app</span>
+            <span>Page 8</span>
+        </div>
+    </div>
+    <div class="page-break"></div>
+
+    <!-- ======================= WITNESS INTERVIEW PAGE 2 ======================= -->
+    <div class="page">
+        <div class="page-header">
+            <img src="../logos/logo-03-lettermark-ip.png" alt="IP" class="page-header-logo">
+            <span class="page-header-title">Witness Interview Guide</span>
+        </div>
+        
+        <h2>Useful Interview Questions</h2>
+        
+        <div class="two-col">
+            <div>
+                <h4>About the Incident</h4>
+                <ul>
+                    <li>Where were you when it happened?</li>
+                    <li>What were you doing at the time?</li>
+                    <li>What did you see/hear?</li>
+                    <li>What happened next?</li>
+                    <li>How did you react?</li>
+                    <li>Who else was there?</li>
+                </ul>
+                
+                <h4>About the Context</h4>
+                <ul>
+                    <li>What was happening in the lead-up?</li>
+                    <li>Was this a normal day/shift?</li>
+                    <li>Was anything unusual?</li>
+                    <li>Were there any time pressures?</li>
+                    <li>How was the weather/lighting/conditions?</li>
+                </ul>
+            </div>
+            <div>
+                <h4>About the Task/Work</h4>
+                <ul>
+                    <li>Was this task routine or unusual?</li>
+                    <li>What procedure was being followed?</li>
+                    <li>Had there been any problems with this task before?</li>
+                    <li>Were the right tools/equipment available?</li>
+                    <li>Were there any concerns before starting?</li>
+                </ul>
+                
+                <h4>About Contributing Factors</h4>
+                <ul>
+                    <li>In your opinion, why did this happen?</li>
+                    <li>Were there any warning signs?</li>
+                    <li>Has anything similar happened before?</li>
+                    <li>What could have prevented this?</li>
+                    <li>What would you do differently?</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h2>Questions to Avoid</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:50%">❌ Avoid (Leading)</th>
+                    <th style="width:50%">✅ Instead Ask (Open)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>"The guard was off, wasn't it?"</td>
+                    <td>"What do you remember about the machine guards?"</td>
+                </tr>
+                <tr>
+                    <td>"He wasn't wearing his PPE, right?"</td>
+                    <td>"What PPE was being worn?"</td>
+                </tr>
+                <tr>
+                    <td>"Why didn't you stop him?"</td>
+                    <td>"What happened next?"</td>
+                </tr>
+                <tr>
+                    <td>"Don't you think he should have known better?"</td>
+                    <td>"What training had been provided for this task?"</td>
+                </tr>
+                <tr>
+                    <td>"Was he rushing because of the deadline?"</td>
+                    <td>"How would you describe the pace of work?"</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="callout callout-warning">
+            <div class="callout-title">⚠️ Common Interview Pitfalls</div>
+            <ul style="margin:0">
+                <li><strong>Interrupting:</strong> Let witnesses complete their thoughts</li>
+                <li><strong>Showing judgment:</strong> Keep reactions neutral</li>
+                <li><strong>Asking compound questions:</strong> One question at a time</li>
+                <li><strong>Filling silences:</strong> Pause and let them think</li>
+                <li><strong>Confirming their account with others present:</strong> Interview separately first</li>
+            </ul>
+        </div>
+        
+        <div class="page-footer">
+            <span>© InvestigatePro — investigatepro.app</span>
+            <span>Page 9</span>
+        </div>
+    </div>
+    <div class="page-break"></div>
+
+    <!-- ======================= TIMELINE WORKSHEET ======================= -->
+    <div class="page">
+        <div class="page-header">
+            <img src="../logos/logo-03-lettermark-ip.png" alt="IP" class="page-header-logo">
+            <span class="page-header-title">Timeline Worksheet</span>
+        </div>
+        
+        <h1>Timeline Worksheet</h1>
+        
+        <div class="intro-box">
+            <p>Build a chronological sequence of events leading up to, during, and after the incident. Include times (even approximate), sources for each event, and any uncertainties.</p>
+        </div>
+        
+        <div class="two-col" style="margin-bottom:1rem">
+            <div class="form-field">
+                <label class="form-label">Incident Date</label>
+                <input type="text" class="form-input" placeholder="">
+            </div>
+            <div class="form-field">
+                <label class="form-label">Timeline Prepared By</label>
+                <input type="text" class="form-input" placeholder="">
+            </div>
+        </div>
+        
+        <div class="timeline-row timeline-header">
+            <div>Time</div>
+            <div>Event / Action</div>
+            <div>Source / Evidence</div>
+        </div>
+        
+        <div class="timeline-row">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="timeline-row">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="timeline-row">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="timeline-row">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="timeline-row">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="timeline-row">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="timeline-row">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="timeline-row">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="timeline-row">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="timeline-row">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="timeline-row">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="timeline-row">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        
+        <div class="callout" style="margin-top:1rem">
+            <div class="callout-title"><span class="callout-icon">💡</span> Timeline Tips</div>
+            <ul style="margin:0">
+                <li>Include events from hours or days before if relevant (fatigue, decisions, changes)</li>
+                <li>Mark the incident itself clearly</li>
+                <li>Continue through emergency response and initial actions</li>
+                <li>Note where times are uncertain with "~" or "approx"</li>
+                <li>Cross-reference multiple sources to validate times</li>
+            </ul>
+        </div>
+        
+        <div class="page-footer">
+            <span>© InvestigatePro — investigatepro.app</span>
+            <span>Page 10</span>
+        </div>
+    </div>
+    <div class="page-break"></div>
+
+    <!-- ======================= PEEPO ANALYSIS - PEOPLE ======================= -->
+    <div class="page">
+        <div class="page-header">
+            <img src="../logos/logo-03-lettermark-ip.png" alt="IP" class="page-header-logo">
+            <span class="page-header-title">PEEPO Analysis Worksheets</span>
+        </div>
+        
+        <h1>PEEPO Analysis Worksheets</h1>
+        
+        <p>Complete each section systematically. For each contributing factor identified, note the supporting evidence. Remember: factors in People, Environment, Equipment, and Procedures often point to deeper Organizational factors.</p>
+        
+        <div class="analysis-section no-break">
+            <div class="analysis-header">
+                <span class="letter">P</span>
+                <span>People — Human Factors</span>
+            </div>
+            <div class="analysis-body">
+                <div class="analysis-prompts">
+                    <strong>Consider:</strong> Physical condition (fatigue, illness, impairment) • Mental state (stress, distraction, complacency) • Knowledge and competence • Training and experience • Communication • Personal factors • Fitness for duty
+                </div>
+                
+                <h4>Guiding Questions</h4>
+                <ul>
+                    <li>What was the physical condition of involved persons? (fatigue, illness, fitness)</li>
+                    <li>What was their mental state? (stress, distraction, rushing)</li>
+                    <li>Were they trained and competent for this task?</li>
+                    <li>How experienced were they with this work?</li>
+                    <li>Were there communication issues or misunderstandings?</li>
+                    <li>Were any personal factors affecting their performance?</li>
+                </ul>
+                
+                <div class="form-field">
+                    <label class="form-label">Contributing Factors Identified</label>
+                    <div class="form-input form-input-large"></div>
+                </div>
+                
+                <div class="form-field">
+                    <label class="form-label">Supporting Evidence</label>
+                    <div class="form-input form-input-large"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="callout callout-warning" style="margin-top:1rem">
+            <div class="callout-title">⚠️ Important Note on "Human Error"</div>
+            <p style="margin:0">People factors explain <em>how</em> an incident occurred but rarely <em>why</em> it was possible. If you identify "failed to follow procedure" or similar, ask: Why didn't they follow it? Was it practical? Were they trained? Was there pressure? Always dig deeper to find the organizational factors that set people up to fail.</p>
+        </div>
+        
+        <div class="page-footer">
+            <span>© InvestigatePro — investigatepro.app</span>
+            <span>Page 11</span>
+        </div>
+    </div>
+    <div class="page-break"></div>
+
+    <!-- ======================= PEEPO - ENVIRONMENT ======================= -->
+    <div class="page">
+        <div class="page-header">
+            <img src="../logos/logo-03-lettermark-ip.png" alt="IP" class="page-header-logo">
+            <span class="page-header-title">PEEPO Analysis Worksheets</span>
+        </div>
+        
+        <div class="analysis-section no-break">
+            <div class="analysis-header">
+                <span class="letter">E</span>
+                <span>Environment — Physical Conditions</span>
+            </div>
+            <div class="analysis-body">
+                <div class="analysis-prompts">
+                    <strong>Consider:</strong> Weather and lighting • Noise and temperature • Housekeeping and layout • Ground conditions • Time of day/shift • Remote or isolated work • Congestion and access
+                </div>
+                
+                <h4>Guiding Questions</h4>
+                <ul>
+                    <li>What were the weather conditions? (rain, wind, heat, cold)</li>
+                    <li>Was lighting adequate for the task?</li>
+                    <li>Was noise a factor in communication or awareness?</li>
+                    <li>What was the state of housekeeping? (clear paths, organized)</li>
+                    <li>Were there space constraints or access issues?</li>
+                    <li>What was the time of day/shift? (fatigue-related times)</li>
+                    <li>Was the work in a remote or isolated location?</li>
+                    <li>Were floor/ground conditions a factor?</li>
+                </ul>
+                
+                <div class="form-field">
+                    <label class="form-label">Contributing Factors Identified</label>
+                    <div class="form-input form-input-large"></div>
+                </div>
+                
+                <div class="form-field">
+                    <label class="form-label">Supporting Evidence</label>
+                    <div class="form-input form-input-large"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="analysis-section no-break" style="margin-top:1.5rem">
+            <div class="analysis-header">
+                <span class="letter">E</span>
+                <span>Equipment — Tools & Technology</span>
+            </div>
+            <div class="analysis-body">
+                <div class="analysis-prompts">
+                    <strong>Consider:</strong> Equipment design and suitability • Maintenance condition • Availability of correct tools • Guards and safety devices • PPE adequacy • Alarms and warnings • Ergonomics
+                </div>
+                
+                <h4>Guiding Questions</h4>
+                <ul>
+                    <li>Was the equipment suitable for the task?</li>
+                    <li>What was its maintenance condition?</li>
+                    <li>Were all guards and safety devices in place and functional?</li>
+                    <li>Were correct tools available and used?</li>
+                    <li>Was PPE adequate, available, and in good condition?</li>
+                    <li>Did any equipment or tools fail or malfunction?</li>
+                    <li>Were warnings or alarms working?</li>
+                </ul>
+                
+                <div class="form-field">
+                    <label class="form-label">Contributing Factors Identified</label>
+                    <div class="form-input form-input-large"></div>
+                </div>
+                
+                <div class="form-field">
+                    <label class="form-label">Supporting Evidence</label>
+                    <div class="form-input form-input-large"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="page-footer">
+            <span>© InvestigatePro — investigatepro.app</span>
+            <span>Page 12</span>
+        </div>
+    </div>
+    <div class="page-break"></div>
+
+    <!-- ======================= PEEPO - PROCEDURES ======================= -->
+    <div class="page">
+        <div class="page-header">
+            <img src="../logos/logo-03-lettermark-ip.png" alt="IP" class="page-header-logo">
+            <span class="page-header-title">PEEPO Analysis Worksheets</span>
+        </div>
+        
+        <div class="analysis-section no-break">
+            <div class="analysis-header">
+                <span class="letter">P</span>
+                <span>Procedures — The Documented Way</span>
+            </div>
+            <div class="analysis-body">
+                <div class="analysis-prompts">
+                    <strong>Consider:</strong> Procedure existence and availability • Accuracy and completeness • Clarity and practicality • Currency (up to date?) • Compliance and enforcement • Normalized deviation
+                </div>
+                
+                <h4>Guiding Questions</h4>
+                <ul>
+                    <li>Did a procedure exist for this task?</li>
+                    <li>Was it readily accessible to workers?</li>
+                    <li>Was it accurate and up to date?</li>
+                    <li>Was it practical to follow as written?</li>
+                    <li>Was it clear and easy to understand?</li>
+                    <li>Was the procedure actually followed?</li>
+                    <li>If not followed, why not? (impractical, unknown, pressure)</li>
+                    <li>Were deviations normalized or routine?</li>
+                </ul>
+                
+                <div class="form-field">
+                    <label class="form-label">Contributing Factors Identified</label>
+                    <div class="form-input form-input-large"></div>
+                </div>
+                
+                <div class="form-field">
+                    <label class="form-label">Supporting Evidence</label>
+                    <div class="form-input form-input-large"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="callout" style="margin-top:1rem">
+            <div class="callout-title"><span class="callout-icon">💡</span> Procedure Reality Check</div>
+            <p style="margin:0">If workers routinely deviate from procedures, the problem is the procedure or the system — not the workers. Ask: Is the procedure achievable within the time/resources available? Does it reflect how experts actually do the work safely? Has anyone ever raised concerns about it?</p>
+        </div>
+        
+        <h2>Procedure Comparison</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:50%">What the Procedure Says</th>
+                    <th style="width:50%">What Actually Happened</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="height:60px"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td style="height:60px"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td style="height:60px"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td style="height:60px"></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="page-footer">
+            <span>© InvestigatePro — investigatepro.app</span>
+            <span>Page 13</span>
+        </div>
+    </div>
+    <div class="page-break"></div>
+
+    <!-- ======================= PEEPO - ORGANIZATION (2 pages) ======================= -->
+    <div class="page">
+        <div class="page-header">
+            <img src="../logos/logo-03-lettermark-ip.png" alt="IP" class="page-header-logo">
+            <span class="page-header-title">PEEPO Analysis Worksheets</span>
+        </div>
+        
+        <div class="analysis-section">
+            <div class="analysis-header">
+                <span class="letter">O</span>
+                <span>Organization — Management Systems & Culture</span>
+            </div>
+            <div class="analysis-body">
+                <div class="analysis-prompts">
+                    <strong>This is where true root causes are found.</strong> Organizational factors are the decisions, systems, and cultural elements that created conditions for the incident. Don't stop until you've examined this category thoroughly.
+                </div>
+                
+                <p><em>For each area below, consider whether it contributed to the incident:</em></p>
+                
+                <h4>Management Systems</h4>
+                <ul class="checklist">
+                    <li><strong>Risk Assessment:</strong> Was the hazard identified? Were controls adequate?</li>
+                    <li><strong>Change Management:</strong> Were recent changes properly assessed and communicated?</li>
+                    <li><strong>Permit Systems:</strong> Were required permits in place and followed?</li>
+                    <li><strong>Contractor Management:</strong> Were third parties properly selected, inducted, supervised?</li>
+                    <li><strong>Audit/Assurance:</strong> Had audits identified this risk? Were findings addressed?</li>
+                </ul>
+                
+                <h4>Resources</h4>
+                <ul class="checklist">
+                    <li><strong>Staffing:</strong> Were adequate numbers of competent people available?</li>
+                    <li><strong>Budget:</strong> Were safety requirements properly resourced?</li>
+                    <li><strong>Time:</strong> Were schedules realistic and achievable safely?</li>
+                    <li><strong>Equipment:</strong> Were proper tools/equipment available when needed?</li>
+                </ul>
+                
+                <h4>Training & Competency</h4>
+                <ul class="checklist">
+                    <li><strong>Training System:</strong> Was training effective and current?</li>
+                    <li><strong>Competency Verification:</strong> Was competency actually assessed?</li>
+                    <li><strong>Supervision:</strong> Was supervision appropriate for experience level?</li>
+                    <li><strong>Refresher Training:</strong> Were skills maintained over time?</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="page-footer">
+            <span>© InvestigatePro — investigatepro.app</span>
+            <span>Page 14</span>
+        </div>
+    </div>
+    <div class="page-break"></div>
+
+    <!-- ======================= PEEPO - ORGANIZATION PAGE 2 ======================= -->
+    <div class="page">
+        <div class="page-header">
+            <img src="../logos/logo-03-lettermark-ip.png" alt="IP" class="page-header-logo">
+            <span class="page-header-title">PEEPO Analysis Worksheets</span>
+        </div>
+        
+        <div class="analysis-section">
+            <div class="analysis-header">
+                <span class="letter">O</span>
+                <span>Organization — Continued</span>
+            </div>
+            <div class="analysis-body">
+                
+                <h4>Culture & Leadership</h4>
+                <ul class="checklist">
+                    <li><strong>Safety Priority:</strong> Is safety genuinely valued or just talked about?</li>
+                    <li><strong>Reporting Culture:</strong> Do workers feel safe reporting concerns?</li>
+                    <li><strong>Leadership Accountability:</strong> Are leaders accountable for safety?</li>
+                    <li><strong>Learning Culture:</strong> Does the organization genuinely learn from incidents?</li>
+                    <li><strong>Just Culture:</strong> Is there trust that honest errors won't be punished?</li>
+                </ul>
+                
+                <h4>Communication</h4>
+                <ul class="checklist">
+                    <li><strong>Information Flow:</strong> Did relevant people get relevant information?</li>
+                    <li><strong>Shift Handover:</strong> Was critical information transferred between shifts?</li>
+                    <li><strong>Safety Alerts:</strong> Are lessons from incidents shared effectively?</li>
+                    <li><strong>Feedback Mechanisms:</strong> Can workers raise concerns that get addressed?</li>
+                </ul>
+                
+                <h4>Competing Priorities</h4>
+                <ul class="checklist">
+                    <li><strong>Production vs Safety:</strong> Was there pressure to prioritize output over safety?</li>
+                    <li><strong>Cost Pressure:</strong> Were safety measures compromised to save money?</li>
+                    <li><strong>Schedule Pressure:</strong> Were shortcuts encouraged to meet deadlines?</li>
+                    <li><strong>Conflicting Goals:</strong> Were there conflicting management messages?</li>
+                </ul>
+                
+                <div class="form-field" style="margin-top:1.5rem">
+                    <label class="form-label">Organizational Factors Identified</label>
+                    <div class="form-input form-input-large"></div>
+                </div>
+                
+                <div class="form-field">
+                    <label class="form-label">Supporting Evidence</label>
+                    <div class="form-input form-input-large"></div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="callout callout-warning" style="margin-top:1rem">
+            <div class="callout-title">⚠️ The Critical Question</div>
+            <p style="margin:0">For every People, Environment, Equipment, or Procedure factor you identified, ask: <strong>"What organizational decision or system allowed this condition to exist?"</strong> That's where you'll find the root causes that, when addressed, actually prevent recurrence.</p>
+        </div>
+        
+        <div class="page-footer">
+            <span>© InvestigatePro — investigatepro.app</span>
+            <span>Page 15</span>
+        </div>
+    </div>
+    <div class="page-break"></div>
+
+    <!-- ======================= PEEPO SUMMARY ======================= -->
+    <div class="page">
+        <div class="page-header">
+            <img src="../logos/logo-03-lettermark-ip.png" alt="IP" class="page-header-logo">
+            <span class="page-header-title">PEEPO Analysis Worksheets</span>
+        </div>
+        
+        <h2>PEEPO Analysis Summary</h2>
+        
+        <p>Summarize the key contributing factors identified in each category:</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:15%">Category</th>
+                    <th style="width:55%">Contributing Factors</th>
+                    <th style="width:30%">Links to Organization?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>People</strong></td>
+                    <td style="height:60px"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>Environment</strong></td>
+                    <td style="height:60px"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>Equipment</strong></td>
+                    <td style="height:60px"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>Procedures</strong></td>
+                    <td style="height:60px"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong>Organization</strong></td>
+                    <td style="height:60px"></td>
+                    <td>—</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h2>Root Cause Statements</h2>
+        
+        <p>Based on your PEEPO analysis, write clear root cause statements. A good root cause statement describes a systemic factor that, if corrected, would prevent recurrence.</p>
+        
+        <div class="form-field">
+            <label class="form-label">Root Cause 1</label>
+            <div class="form-input form-input-large"></div>
+        </div>
+        
+        <div class="form-field">
+            <label class="form-label">Root Cause 2</label>
+            <div class="form-input form-input-large"></div>
+        </div>
+        
+        <div class="form-field">
+            <label class="form-label">Root Cause 3</label>
+            <div class="form-input form-input-large"></div>
+        </div>
+        
+        <div class="callout">
+            <div class="callout-title"><span class="callout-icon">✓</span> Root Cause Quality Check</div>
+            <p style="margin:0">For each root cause, ask: "If we fix this, will it prevent similar incidents?" If the answer is no or uncertain, dig deeper. Also ask: "Is this something we can actually control and change?" Root causes should be actionable.</p>
+        </div>
+        
+        <div class="page-footer">
+            <span>© InvestigatePro — investigatepro.app</span>
+            <span>Page 16</span>
+        </div>
+    </div>
+    <div class="page-break"></div>
+
+    <!-- ======================= ORGANIZATIONAL FACTORS REFERENCE ======================= -->
+    <div class="page">
+        <div class="page-header">
+            <img src="../logos/logo-03-lettermark-ip.png" alt="IP" class="page-header-logo">
+            <span class="page-header-title">Organizational Factors Reference</span>
+        </div>
+        
+        <h1>Organizational Factors Reference</h1>
+        
+        <div class="intro-box">
+            <p>This reference categorizes the types of organizational factors commonly found in incident investigations. Use it to prompt deeper analysis when identifying root causes.</p>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:25%">Factor Category</th>
+                    <th style="width:75%">Description & Examples</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Hardware</strong></td>
+                    <td>Decisions about equipment procurement, maintenance programs, capital investment, equipment standards, and replacement schedules.<br><em>Example: Aging equipment not replaced due to budget constraints</em></td>
+                </tr>
+                <tr>
+                    <td><strong>Training</strong></td>
+                    <td>Effectiveness of training programs, competency assessment systems, skill development, refresher training, and new employee induction.<br><em>Example: Training focused on compliance, not practical skills</em></td>
+                </tr>
+                <tr>
+                    <td><strong>Organization / Management Systems</strong></td>
+                    <td>Risk assessment processes, management of change, permit systems, contractor oversight, audit systems, and incident investigation quality.<br><em>Example: Change management not applied to "minor" changes</em></td>
+                </tr>
+                <tr>
+                    <td><strong>Communication</strong></td>
+                    <td>Information flow, shift handovers, safety alerts, toolbox talks, reporting systems, and feedback mechanisms.<br><em>Example: Critical information lost during shift handover</em></td>
+                </tr>
+                <tr>
+                    <td><strong>Incompatible Goals</strong></td>
+                    <td>Conflicts between production pressure and safety, between different management priorities, between stated values and actual decisions.<br><em>Example: "Safety first" messaging contradicted by schedule pressure</em></td>
+                </tr>
+                <tr>
+                    <td><strong>Organizational Culture</strong></td>
+                    <td>Leadership commitment, psychological safety, reporting culture, just culture, accountability, and learning orientation.<br><em>Example: Fear of blame prevents open discussion of near-misses</em></td>
+                </tr>
+                <tr>
+                    <td><strong>Risk Management</strong></td>
+                    <td>How risks are identified, assessed, controlled, monitored, and communicated. Quality of risk registers and bow-tie analysis.<br><em>Example: Risk assessment identified hazard but controls were inadequate</em></td>
+                </tr>
+                <tr>
+                    <td><strong>Management of Change</strong></td>
+                    <td>How changes to people, processes, equipment, and organization are identified, assessed, and managed.<br><em>Example: Procedure changed without updating training</em></td>
+                </tr>
+                <tr>
+                    <td><strong>Design</strong></td>
+                    <td>Engineering decisions that affect inherent safety. Application of hierarchy of controls during design. Human factors in design.<br><em>Example: Control panel layout created confusion during emergency</em></td>
+                </tr>
+                <tr>
+                    <td><strong>Maintenance Management</strong></td>
+                    <td>Planning, scheduling, and execution of maintenance. Preventive vs. reactive maintenance balance. Spare parts management.<br><em>Example: Preventive maintenance deferred to meet production targets</em></td>
+                </tr>
+                <tr>
+                    <td><strong>Contractor Management</strong></td>
+                    <td>Selection, pre-qualification, induction, supervision, and integration of contractors and third parties.<br><em>Example: Contractor not inducted on site-specific hazards</em></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="page-footer">
+            <span>© InvestigatePro — investigatepro.app</span>
+            <span>Page 17</span>
+        </div>
+    </div>
+    <div class="page-break"></div>
+
+    <!-- ======================= ORGANIZATIONAL FACTORS PAGE 2 ======================= -->
+    <div class="page">
+        <div class="page-header">
+            <img src="../logos/logo-03-lettermark-ip.png" alt="IP" class="page-header-logo">
+            <span class="page-header-title">Organizational Factors Reference</span>
+        </div>
+        
+        <h2>Tracing to Organizational Factors</h2>
+        
+        <p>For each immediate factor you identify, trace back to organizational factors using this approach:</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:30%">If You Found...</th>
+                    <th style="width:70%">Ask About These Organizational Factors...</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Worker didn't follow procedure</td>
+                    <td>Was the procedure practical? Was there time to follow it? Was there pressure to shortcut? Was deviation normalized? Was it enforced? Was the worker trained?</td>
+                </tr>
+                <tr>
+                    <td>Worker was fatigued</td>
+                    <td>What are the rostering practices? Was overtime excessive? Are fatigue risks managed? Are there fitness-for-duty policies?</td>
+                </tr>
+                <tr>
+                    <td>Equipment guard was removed</td>
+                    <td>Why was it removed? Is there a system to ensure guards are replaced? Is removal for maintenance managed? Is there pressure to work without guards?</td>
+                </tr>
+                <tr>
+                    <td>Maintenance was overdue</td>
+                    <td>Is the maintenance schedule resourced? Is preventive maintenance deferred for production? Who decides maintenance priorities?</td>
+                </tr>
+                <tr>
+                    <td>Hazard wasn't identified</td>
+                    <td>How effective is the risk assessment process? Are frontline workers involved? Is there time allowed for risk assessment? Are assessments reviewed and updated?</td>
+                </tr>
+                <tr>
+                    <td>Training was inadequate</td>
+                    <td>How is training designed and delivered? Is competency verified? Are refreshers provided? Is there time and budget for training?</td>
+                </tr>
+                <tr>
+                    <td>Communication failed</td>
+                    <td>What are the handover processes? How is critical information shared? Are there language barriers? Is there time for proper handover?</td>
+                </tr>
+                <tr>
+                    <td>Supervision was lacking</td>
+                    <td>What is the span of control? Are supervisors trained? Do they have time for safety? What are their competing priorities?</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="callout">
+            <div class="callout-title"><span class="callout-icon">💡</span> The "5 Whys" Technique</div>
+            <p style="margin:0">For any contributing factor, ask "why?" repeatedly until you reach organizational factors. Example:<br><br>
+            <strong>Why</strong> did the worker not wear hearing protection? → It wasn't available nearby<br>
+            <strong>Why</strong> wasn't it available? → The dispenser was empty<br>
+            <strong>Why</strong> was the dispenser empty? → No one had restocked it<br>
+            <strong>Why</strong> was restocking not done? → No one is assigned that responsibility<br>
+            <strong>Why</strong> is no one assigned? → <em>Organizational gap in PPE management system</em></p>
+        </div>
+        
+        <div class="page-footer">
+            <span>© InvestigatePro — investigatepro.app</span>
+            <span>Page 18</span>
+        </div>
+    </div>
+    <div class="page-break"></div>
+
+    <!-- ======================= CORRECTIVE ACTION PLANNER ======================= -->
+    <div class="page">
+        <div class="page-header">
+            <img src="../logos/logo-03-lettermark-ip.png" alt="IP" class="page-header-logo">
+            <span class="page-header-title">Corrective Action Planner</span>
+        </div>
+        
+        <h1>Corrective Action Planner</h1>
+        
+        <div class="intro-box">
+            <p><strong>The Hierarchy of Controls:</strong> Always start at the top. Controls higher on the hierarchy are more effective because they don't rely on human behavior.</p>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:5%">#</th>
+                    <th style="width:20%">Control Type</th>
+                    <th style="width:35%">Description</th>
+                    <th style="width:25%">Examples</th>
+                    <th style="width:15%">Effectiveness</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><strong>Elimination</strong></td>
+                    <td>Remove the hazard completely</td>
+                    <td>Eliminate the task, remove the substance, redesign the process</td>
+                    <td style="background:#22c55e;color:white;text-align:center">Highest</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><strong>Substitution</strong></td>
+                    <td>Replace with something less hazardous</td>
+                    <td>Use safer chemical, quieter equipment, automated process</td>
+                    <td style="background:#84cc16;color:white;text-align:center">High</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><strong>Engineering</strong></td>
+                    <td>Physically isolate people from hazard</td>
+                    <td>Guards, barriers, ventilation, interlocks, alarms</td>
+                    <td style="background:#eab308;color:white;text-align:center">Medium-High</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><strong>Administrative</strong></td>
+                    <td>Change how people work</td>
+                    <td>Procedures, training, signage, job rotation, supervision</td>
+                    <td style="background:#f97316;color:white;text-align:center">Medium-Low</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><strong>PPE</strong></td>
+                    <td>Protect the individual</td>
+                    <td>Safety glasses, gloves, hearing protection, harnesses</td>
+                    <td style="background:#ef4444;color:white;text-align:center">Lowest</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h2>Corrective Action Worksheet</h2>
+        
+        <p><em>For each root cause, develop corrective actions. Always consider controls higher on the hierarchy first.</em></p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:5%">#</th>
+                    <th style="width:25%">Root Cause Addressed</th>
+                    <th style="width:30%">Corrective Action</th>
+                    <th style="width:10%">Control Level</th>
+                    <th style="width:15%">Responsible</th>
+                    <th style="width:15%">Due Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td style="height:50px"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td style="height:50px"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td style="height:50px"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td style="height:50px"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td style="height:50px"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="page-footer">
+            <span>© InvestigatePro — investigatepro.app</span>
+            <span>Page 19</span>
+        </div>
+    </div>
+    <div class="page-break"></div>
+
+    <!-- ======================= CORRECTIVE ACTION PAGE 2 ======================= -->
+    <div class="page">
+        <div class="page-header">
+            <img src="../logos/logo-03-lettermark-ip.png" alt="IP" class="page-header-logo">
+            <span class="page-header-title">Corrective Action Planner</span>
+        </div>
+        
+        <h2>Corrective Action Quality Checklist</h2>
+        
+        <p>Before finalizing corrective actions, verify each one against these criteria:</p>
+        
+        <ul class="checklist">
+            <li><strong>Addresses root cause:</strong> Does it fix the underlying problem, not just the symptom?</li>
+            <li><strong>Specific and measurable:</strong> Is it clear what needs to be done and how you'll know it's complete?</li>
+            <li><strong>Assigned ownership:</strong> Is there a single person accountable for completion?</li>
+            <li><strong>Realistic due date:</strong> Is the timeline achievable given complexity and resources?</li>
+            <li><strong>Appropriately controlled:</strong> Is it as high on the hierarchy of controls as practical?</li>
+            <li><strong>Sustainable:</strong> Will it remain effective over time without constant attention?</li>
+            <li><strong>Doesn't create new risks:</strong> Have you considered unintended consequences?</li>
+            <li><strong>Can be verified:</strong> How will you know if it's working?</li>
+        </ul>
+        
+        <div class="callout callout-warning">
+            <div class="callout-title">⚠️ Weak Corrective Actions to Avoid</div>
+            <p>These common "corrective actions" rarely work:</p>
+            <ul style="margin:0">
+                <li><strong>"Retrain all workers"</strong> — Unless the original training was the problem</li>
+                <li><strong>"Remind workers to be more careful"</strong> — Not actionable or measurable</li>
+                <li><strong>"Update the procedure"</strong> — Unless the procedure was actually wrong</li>
+                <li><strong>"Add more warning signs"</strong> — Signs don't stop incidents</li>
+                <li><strong>"Increase supervision"</strong> — Vague and unsustainable</li>
+                <li><strong>"Discipline the worker"</strong> — Doesn't fix the system</li>
+            </ul>
+        </div>
+        
+        <h2>Verification Plan</h2>
+        
+        <p><em>How will you verify that corrective actions are effective? Complete after implementation.</em></p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:8%">CA #</th>
+                    <th style="width:30%">How Will Effectiveness Be Verified?</th>
+                    <th style="width:15%">Verification Date</th>
+                    <th style="width:15%">Verified By</th>
+                    <th style="width:17%">Result</th>
+                    <th style="width:15%">Further Action?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td style="height:40px"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td style="height:40px"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td style="height:40px"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td style="height:40px"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td style="height:40px"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="page-footer">
+            <span>© InvestigatePro — investigatepro.app</span>
+            <span>Page 20</span>
+        </div>
+    </div>
+    <div class="page-break"></div>
+
+    <!-- ======================= INVESTIGATION REPORT TEMPLATE ======================= -->
+    <div class="page">
+        <div class="page-header">
+            <img src="../logos/logo-03-lettermark-ip.png" alt="IP" class="page-header-logo">
+            <span class="page-header-title">Investigation Report Template</span>
+        </div>
+        
+        <h1>Investigation Report Template</h1>
+        
+        <div class="intro-box">
+            <p>Use this template to structure your final investigation report. A good report is clear, evidence-based, and focused on prevention.</p>
+        </div>
+        
+        <h2>Report Cover Page</h2>
+        
+        <div class="two-col">
+            <div>
+                <div class="form-field">
+                    <label class="form-label">Report Title</label>
+                    <input type="text" class="form-input" placeholder="">
+                </div>
+                <div class="form-field">
+                    <label class="form-label">Incident Date</label>
+                    <input type="text" class="form-input" placeholder="">
+                </div>
+                <div class="form-field">
+                    <label class="form-label">Location</label>
+                    <input type="text" class="form-input" placeholder="">
+                </div>
+            </div>
+            <div>
+                <div class="form-field">
+                    <label class="form-label">Report Number</label>
+                    <input type="text" class="form-input" placeholder="">
+                </div>
+                <div class="form-field">
+                    <label class="form-label">Report Date</label>
+                    <input type="text" class="form-input" placeholder="">
+                </div>
+                <div class="form-field">
+                    <label class="form-label">Lead Investigator</label>
+                    <input type="text" class="form-input" placeholder="">
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-field">
+            <label class="form-label">Incident Classification</label>
+            <input type="text" class="form-input" placeholder="e.g., Lost Time Injury, Recordable Injury, Near Miss, Property Damage, Environmental">
+        </div>
+        
+        <h2>Executive Summary</h2>
+        <p><em>Brief overview for senior leadership (one page max). Include: what happened, key findings, and critical recommendations.</em></p>
+        
+        <div class="form-field">
+            <label class="form-label">Summary</label>
+            <div class="form-input form-input-large" style="min-height:120px"></div>
+        </div>
+        
+        <h2>Incident Description</h2>
+        <p><em>Objective description of what happened. Include: date, time, location, persons involved, and sequence of events.</em></p>
+        
+        <div class="form-field">
+            <label class="form-label">Description</label>
+            <div class="form-input form-input-large" style="min-height:100px"></div>
+        </div>
+        
+        <div class="page-footer">
+            <span>© InvestigatePro — investigatepro.app</span>
+            <span>Page 21</span>
+        </div>
+    </div>
+    <div class="page-break"></div>
+
+    <!-- ======================= REPORT TEMPLATE PAGE 2 ======================= -->
+    <div class="page">
+        <div class="page-header">
+            <img src="../logos/logo-03-lettermark-ip.png" alt="IP" class="page-header-logo">
+            <span class="page-header-title">Investigation Report Template</span>
+        </div>
+        
+        <h2>Investigation Methodology</h2>
+        <p><em>Describe the investigation process: team members, methodology used (ICAM), evidence collected, witnesses interviewed.</em></p>
+        
+        <div class="form-field">
+            <label class="form-label">Investigation Team</label>
+            <div class="form-input form-input-large" style="min-height:60px"></div>
+        </div>
+        
+        <div class="form-field">
+            <label class="form-label">Evidence Collected</label>
+            <div class="form-input form-input-large" style="min-height:60px"></div>
+        </div>
+        
+        <div class="form-field">
+            <label class="form-label">Witnesses Interviewed</label>
+            <div class="form-input form-input-large" style="min-height:60px"></div>
+        </div>
+        
+        <h2>Analysis</h2>
+        <p><em>Present your PEEPO analysis findings. For each contributing factor, cite the supporting evidence.</em></p>
+        
+        <div class="form-field">
+            <label class="form-label">Contributing Factors (summarize PEEPO findings)</label>
+            <div class="form-input form-input-large" style="min-height:120px"></div>
+        </div>
+        
+        <h2>Root Causes</h2>
+        <p><em>State the root causes clearly. These should be organizational factors that, if addressed, will prevent recurrence.</em></p>
+        
+        <div class="form-field">
+            <label class="form-label">Root Cause Statements</label>
+            <div class="form-input form-input-large" style="min-height:100px"></div>
+        </div>
+        
+        <h2>Recommendations</h2>
+        <p><em>List corrective actions with ownership and due dates. Reference the hierarchy of controls level for each.</em></p>
+        
+        <div class="form-field">
+            <label class="form-label">Corrective Actions</label>
+            <div class="form-input form-input-large" style="min-height:100px"></div>
+        </div>
+        
+        <div class="page-footer">
+            <span>© InvestigatePro — investigatepro.app</span>
+            <span>Page 22</span>
+        </div>
+    </div>
+    <div class="page-break"></div>
+
+    <!-- ======================= BACK COVER ======================= -->
+    <div class="page">
+        <div class="cover" style="min-height:9in;justify-content:space-between">
+            <div></div>
+            <div>
+                <img src="../logos/logo-03-on-dark.png" alt="InvestigatePro" class="cover-logo">
+                <h2 style="font-size:20pt;margin-bottom:2rem">Ready to Upgrade Your Investigations?</h2>
+                <p class="subtitle" style="margin-bottom:2rem">InvestigatePro combines ICAM methodology with AI-powered analysis in a platform built specifically for incident investigation. Guided workflows, smart prompts, and automatic trend detection.</p>
+                <p style="margin-bottom:3rem">
+                    <a href="https://investigatepro.app" style="background:var(--cyan-500);color:var(--navy-900);padding:1rem 2rem;border-radius:8px;text-decoration:none;font-weight:700;display:inline-block">Start Your Free Trial →</a>
+                </p>
+            </div>
+            <div>
+                <p class="edition" style="border:none;padding:0">
+                    <strong>investigatepro.app</strong><br><br>
+                    This toolkit is provided free for educational purposes.<br>
+                    Feel free to share with colleagues and partners.<br><br>
+                    © 2026 InvestigatePro. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
