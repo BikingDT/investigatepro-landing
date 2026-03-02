@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEEPO Framework Explained: The Heart of ICAM Investigation | InvestigatePro</title>
+    <meta name="description" content="Learn the PEEPO framework for incident investigation. People, Environment, Equipment, Procedures, Organization — the systematic approach to finding root causes.">
+    <meta name="keywords" content="PEEPO framework, PEEPO analysis, ICAM PEEPO, incident investigation framework, root cause analysis">
+    <link rel="icon" type="image/png" href="../assets/logos/logo-03-icon-only.png">
+    <link rel="canonical" href="https://investigatepro.app/blog/peepo-framework-explained.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://investigatepro.app/blog/peepo-framework-explained.html">
+    <meta property="og:title" content="PEEPO Framework Explained: The Heart of ICAM Investigation">
+    <meta property="og:description" content="Master the PEEPO framework — People, Environment, Equipment, Procedures, Organization — for systematic root cause analysis.">
+    <meta property="og:image" content="https://investigatepro.app/assets/logos/logo-03-on-dark.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="article:published_time" content="2026-03-02">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            900: '#0C142E',
+                            800: '#0F1A3A',
+                            700: '#1A2744',
+                            600: '#2A3A5C',
+                            500: '#3D4F70',
+                        },
+                        cyan: {
+                            500: '#76DCEC',
+                            400: '#88E0EE',
+                            300: '#A8EAF3',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .prose h2 { color: #76DCEC; margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.75rem; font-weight: 700; }
+        .prose h3 { color: #fff; margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.25rem; font-weight: 600; }
+        .prose p { color: #d1d5db; margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose ul, .prose ol { color: #d1d5db; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .prose li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .prose strong { color: #fff; }
+        .prose a { color: #76DCEC; text-decoration: underline; }
+        .prose blockquote { border-left: 4px solid #76DCEC; padding-left: 1rem; margin: 1.5rem 0; font-style: italic; color: #9ca3af; }
+        .peepo-card { background: linear-gradient(135deg, #1A2744 0%, #0F1A3A 100%); }
+    </style>
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "PEEPO Framework Explained: The Heart of ICAM Investigation",
+        "description": "Master the PEEPO framework for systematic root cause analysis in incident investigations.",
+        "author": {"@type": "Organization", "name": "InvestigatePro"},
+        "publisher": {"@type": "Organization", "name": "InvestigatePro"},
+        "datePublished": "2026-03-02"
+    }
+    </script>
+</head>
+<body class="font-sans antialiased bg-navy-900 text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-navy-900/95 backdrop-blur-sm z-50 border-b border-navy-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="/" class="flex items-center">
+                    <img src="../assets/logos/logo-03-on-dark.png" alt="InvestigatePro" class="h-[60px] sm:h-[80px]">
+                </a>
+                <div class="flex items-center space-x-6">
+                    <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="/#features" class="hidden sm:inline text-gray-300 hover:text-white transition-colors">Features</a>
+                    <a href="/#demo" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-5 py-2 rounded-lg font-semibold transition-colors">
+                        Start Free Trial
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article -->
+    <article class="pt-32 pb-20">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6">
+            
+            <!-- Breadcrumb -->
+            <nav class="text-sm text-gray-400 mb-8">
+                <a href="/" class="hover:text-cyan-500">Home</a>
+                <span class="mx-2">›</span>
+                <a href="/blog/" class="hover:text-cyan-500">Blog</a>
+                <span class="mx-2">›</span>
+                <span class="text-gray-300">PEEPO Framework</span>
+            </nav>
+
+            <!-- Header -->
+            <header class="mb-12">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="bg-cyan-500/20 text-cyan-500 px-3 py-1 rounded-full text-sm font-medium">Methodology</span>
+                    <span class="text-gray-400 text-sm">10 min read</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl font-bold mb-6 leading-tight">PEEPO Framework Explained: The Heart of ICAM Investigation</h1>
+                <p class="text-xl text-gray-300 mb-6">The PEEPO framework is your systematic lens for analyzing any workplace incident. Learn how to use it to uncover the contributing factors others miss.</p>
+                <div class="flex items-center text-gray-400 text-sm">
+                    <span>Published March 2, 2026</span>
+                </div>
+            </header>
+
+            <!-- Visual Overview -->
+            <div class="grid grid-cols-5 gap-2 mb-12">
+                <div class="peepo-card rounded-lg p-4 text-center">
+                    <div class="text-3xl font-bold text-cyan-500">P</div>
+                    <div class="text-xs text-gray-400 mt-1">People</div>
+                </div>
+                <div class="peepo-card rounded-lg p-4 text-center">
+                    <div class="text-3xl font-bold text-cyan-500">E</div>
+                    <div class="text-xs text-gray-400 mt-1">Environment</div>
+                </div>
+                <div class="peepo-card rounded-lg p-4 text-center">
+                    <div class="text-3xl font-bold text-cyan-500">E</div>
+                    <div class="text-xs text-gray-400 mt-1">Equipment</div>
+                </div>
+                <div class="peepo-card rounded-lg p-4 text-center">
+                    <div class="text-3xl font-bold text-cyan-500">P</div>
+                    <div class="text-xs text-gray-400 mt-1">Procedures</div>
+                </div>
+                <div class="peepo-card rounded-lg p-4 text-center">
+                    <div class="text-3xl font-bold text-cyan-500">O</div>
+                    <div class="text-xs text-gray-400 mt-1">Organization</div>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="prose max-w-none">
+                
+                <h2>What is the PEEPO Framework?</h2>
+                
+                <p><strong>PEEPO</strong> is a structured analysis framework used in ICAM (Incident Cause Analysis Method) investigations to systematically identify all contributing factors to an incident. The acronym stands for:</p>
+                
+                <ul>
+                    <li><strong>P</strong>eople — Human factors and individual actions</li>
+                    <li><strong>E</strong>nvironment — Physical conditions and surroundings</li>
+                    <li><strong>E</strong>quipment — Tools, machinery, and PPE</li>
+                    <li><strong>P</strong>rocedures — Work methods and documentation</li>
+                    <li><strong>O</strong>rganization — Management systems and culture</li>
+                </ul>
+                
+                <p>The power of PEEPO lies in its comprehensiveness. By examining an incident through all five lenses, investigators avoid the common trap of fixating on a single cause — usually blaming the person closest to the incident.</p>
+                
+                <blockquote>
+                    "An incident is never just about one thing. PEEPO ensures you see the full picture."
+                </blockquote>
+
+                <h2>P — People: The Human Element</h2>
+                
+                <p>Human factors are often the most visible part of an incident, but they're rarely the root cause. When analyzing People factors, consider:</p>
+                
+                <h3>Physical State</h3>
+                <ul>
+                    <li><strong>Fatigue:</strong> How many hours had they worked? What was their sleep quality?</li>
+                    <li><strong>Health:</strong> Any illness, injury, or medication effects?</li>
+                    <li><strong>Impairment:</strong> Alcohol, drugs, or other substances?</li>
+                    <li><strong>Physical capability:</strong> Strength, reach, vision, hearing?</li>
+                </ul>
+                
+                <h3>Mental State</h3>
+                <ul>
+                    <li><strong>Stress:</strong> Work pressure, personal issues, deadlines?</li>
+                    <li><strong>Distraction:</strong> Multitasking, interruptions, personal concerns?</li>
+                    <li><strong>Complacency:</strong> Over-familiarity with the task?</li>
+                    <li><strong>Rushing:</strong> Time pressure affecting judgment?</li>
+                </ul>
+                
+                <h3>Knowledge & Skills</h3>
+                <ul>
+                    <li><strong>Training:</strong> Were they properly trained for the task?</li>
+                    <li><strong>Experience:</strong> How familiar were they with this work?</li>
+                    <li><strong>Competency:</strong> Had their skills been verified?</li>
+                    <li><strong>Awareness:</strong> Did they understand the hazards?</li>
+                </ul>
+                
+                <h3>Communication</h3>
+                <ul>
+                    <li><strong>Instructions:</strong> Were they clear and understood?</li>
+                    <li><strong>Language:</strong> Any barriers to understanding?</li>
+                    <li><strong>Handover:</strong> Was shift/task handover adequate?</li>
+                </ul>
+                
+                <div class="bg-navy-800 rounded-lg p-4 my-6">
+                    <p class="text-sm text-gray-300 mb-0"><strong>Remember:</strong> People factors explain <em>how</em> the incident happened, but rarely <em>why</em> it was possible. Always dig deeper into Equipment, Procedures, and Organization.</p>
+                </div>
+
+                <h2>E — Environment: The Physical Context</h2>
+                
+                <p>Environmental factors set the stage for incidents. Even the most skilled worker can fail in a hostile environment. Consider:</p>
+                
+                <h3>Physical Conditions</h3>
+                <ul>
+                    <li><strong>Weather:</strong> Rain, wind, extreme temperatures, ice?</li>
+                    <li><strong>Lighting:</strong> Too dark, too bright, glare, shadows?</li>
+                    <li><strong>Noise:</strong> Could they hear warnings or communicate?</li>
+                    <li><strong>Temperature:</strong> Heat stress, cold exposure?</li>
+                    <li><strong>Ventilation:</strong> Air quality, fumes, dust?</li>
+                </ul>
+                
+                <h3>Workspace</h3>
+                <ul>
+                    <li><strong>Housekeeping:</strong> Clutter, obstructions, slip hazards?</li>
+                    <li><strong>Layout:</strong> Awkward access, confined spaces?</li>
+                    <li><strong>Ergonomics:</strong> Work height, reach, posture?</li>
+                    <li><strong>Ground conditions:</strong> Uneven, slippery, unstable?</li>
+                </ul>
+                
+                <h3>Temporal Factors</h3>
+                <ul>
+                    <li><strong>Time of day:</strong> Night shift, early morning, end of shift?</li>
+                    <li><strong>Day of week:</strong> Monday restart, Friday rush?</li>
+                    <li><strong>Shift pattern:</strong> Rotating shifts, extended hours?</li>
+                    <li><strong>Season:</strong> Summer heat, winter conditions?</li>
+                </ul>
+                
+                <h3>Location</h3>
+                <ul>
+                    <li><strong>Remote/isolated:</strong> Distance from help or supervision?</li>
+                    <li><strong>Multi-employer:</strong> Other contractors working nearby?</li>
+                    <li><strong>Public interface:</strong> Pedestrians, traffic, customers?</li>
+                </ul>
+
+                <h2>E — Equipment: Tools and Technology</h2>
+                
+                <p>Equipment factors include everything workers use to do their jobs — from simple hand tools to complex machinery. Consider:</p>
+                
+                <h3>Design</h3>
+                <ul>
+                    <li><strong>Suitability:</strong> Right tool for the job?</li>
+                    <li><strong>Ergonomics:</strong> Comfortable to use safely?</li>
+                    <li><strong>Human factors:</strong> Controls intuitive? Displays readable?</li>
+                    <li><strong>Failure modes:</strong> Does it fail safely?</li>
+                </ul>
+                
+                <h3>Condition</h3>
+                <ul>
+                    <li><strong>Maintenance:</strong> Properly maintained? Up to date?</li>
+                    <li><strong>Wear:</strong> Signs of deterioration?</li>
+                    <li><strong>Defects:</strong> Known issues not addressed?</li>
+                    <li><strong>Inspections:</strong> Pre-use checks completed?</li>
+                </ul>
+                
+                <h3>Safety Features</h3>
+                <ul>
+                    <li><strong>Guards:</strong> Present and functional?</li>
+                    <li><strong>Interlocks:</strong> Working correctly?</li>
+                    <li><strong>Emergency stops:</strong> Accessible and tested?</li>
+                    <li><strong>Alarms/warnings:</strong> Audible/visible and understood?</li>
+                </ul>
+                
+                <h3>PPE</h3>
+                <ul>
+                    <li><strong>Availability:</strong> Correct PPE provided?</li>
+                    <li><strong>Condition:</strong> Good repair, not expired?</li>
+                    <li><strong>Fit:</strong> Properly sized for the individual?</li>
+                    <li><strong>Suitability:</strong> Right protection for the hazard?</li>
+                </ul>
+
+                <h2>P — Procedures: The Documented Way</h2>
+                
+                <p>Procedural factors examine how work is supposed to be done versus how it's actually done. This gap is often where incidents originate. Consider:</p>
+                
+                <h3>Existence & Availability</h3>
+                <ul>
+                    <li><strong>Documented:</strong> Does a procedure exist for this task?</li>
+                    <li><strong>Accessible:</strong> Can workers easily find and use it?</li>
+                    <li><strong>Format:</strong> Appropriate for the work environment?</li>
+                </ul>
+                
+                <h3>Quality</h3>
+                <ul>
+                    <li><strong>Accuracy:</strong> Does it reflect how the work should actually be done?</li>
+                    <li><strong>Completeness:</strong> Does it cover all steps and hazards?</li>
+                    <li><strong>Clarity:</strong> Easy to understand? Appropriate language?</li>
+                    <li><strong>Currency:</strong> Up to date with current equipment/methods?</li>
+                </ul>
+                
+                <h3>Practicality</h3>
+                <ul>
+                    <li><strong>Workable:</strong> Can it actually be followed as written?</li>
+                    <li><strong>Time:</strong> Does following it allow for realistic timeframes?</li>
+                    <li><strong>Resources:</strong> Are required tools/materials available?</li>
+                </ul>
+                
+                <h3>Compliance</h3>
+                <ul>
+                    <li><strong>Known:</strong> Are workers aware of the procedure?</li>
+                    <li><strong>Trained:</strong> Have they been trained on it?</li>
+                    <li><strong>Followed:</strong> Is it routinely followed?</li>
+                    <li><strong>Enforced:</strong> Are deviations addressed?</li>
+                </ul>
+                
+                <div class="bg-navy-800 rounded-lg p-4 my-6">
+                    <p class="text-sm text-gray-300 mb-0"><strong>Key insight:</strong> If workers routinely deviate from procedures, the procedure is the problem, not the workers. Either the procedure is impractical, or there's pressure to shortcut. Both are organizational issues.</p>
+                </div>
+
+                <h2>O — Organization: The Root of Most Causes</h2>
+                
+                <p>Organizational factors are where ICAM and PEEPO really shine. This is where you find the <em>true</em> root causes — the management decisions, systems, and culture that created the conditions for an incident.</p>
+                
+                <h3>Management Systems</h3>
+                <ul>
+                    <li><strong>Risk assessment:</strong> Was the hazard identified? Were controls adequate?</li>
+                    <li><strong>Change management:</strong> Were recent changes properly managed?</li>
+                    <li><strong>Permit systems:</strong> Were required permits in place?</li>
+                    <li><strong>Contractor management:</strong> Were third parties properly controlled?</li>
+                </ul>
+                
+                <h3>Resources</h3>
+                <ul>
+                    <li><strong>Staffing:</strong> Adequate numbers and skill levels?</li>
+                    <li><strong>Budget:</strong> Sufficient for safety requirements?</li>
+                    <li><strong>Time:</strong> Realistic schedules and deadlines?</li>
+                    <li><strong>Equipment:</strong> Proper tools available when needed?</li>
+                </ul>
+                
+                <h3>Training & Competency</h3>
+                <ul>
+                    <li><strong>Training system:</strong> Effective and current?</li>
+                    <li><strong>Verification:</strong> Is competency actually assessed?</li>
+                    <li><strong>Refresher:</strong> Are skills maintained over time?</li>
+                    <li><strong>Supervision:</strong> Appropriate oversight for experience level?</li>
+                </ul>
+                
+                <h3>Culture & Leadership</h3>
+                <ul>
+                    <li><strong>Safety priority:</strong> Is safety genuinely valued or just talked about?</li>
+                    <li><strong>Reporting:</strong> Do workers feel safe reporting concerns?</li>
+                    <li><strong>Accountability:</strong> Are leaders accountable for safety?</li>
+                    <li><strong>Learning:</strong> Does the organization learn from incidents?</li>
+                </ul>
+                
+                <h3>Communication</h3>
+                <ul>
+                    <li><strong>Information flow:</strong> Do relevant people get relevant information?</li>
+                    <li><strong>Safety alerts:</strong> Are lessons shared across the organization?</li>
+                    <li><strong>Feedback:</strong> Can workers raise concerns that get addressed?</li>
+                </ul>
+                
+                <h3>Competing Priorities</h3>
+                <ul>
+                    <li><strong>Production pressure:</strong> Was there pressure to prioritize output over safety?</li>
+                    <li><strong>Cost pressure:</strong> Were safety measures cut to save money?</li>
+                    <li><strong>Schedule pressure:</strong> Were shortcuts encouraged to meet deadlines?</li>
+                </ul>
+
+                <h2>How to Use PEEPO in Practice</h2>
+                
+                <h3>Step 1: Gather Data First</h3>
+                <p>Don't start analyzing until you have solid data from interviews, evidence, and documents. PEEPO is an analysis tool, not a data-gathering checklist.</p>
+                
+                <h3>Step 2: Work Through Each Category</h3>
+                <p>Systematically consider each PEEPO element. Use the questions above as prompts. Document what you find <em>and</em> what you rule out.</p>
+                
+                <h3>Step 3: Look for Connections</h3>
+                <p>Factors don't exist in isolation. A tired worker (People) + poor lighting (Environment) + inadequate procedure (Procedures) + lack of supervision (Organization) = a perfect storm.</p>
+                
+                <h3>Step 4: Always Reach Organization</h3>
+                <p>If your analysis stops at People, Equipment, or Procedures, keep asking "why?" The organizational factors that allowed those conditions to exist are where you'll find the leverage for real change.</p>
+                
+                <h3>Step 5: Validate with Evidence</h3>
+                <p>Every contributing factor you identify must be supported by evidence. If you can't point to specific data, it's speculation.</p>
+
+                <h2>Common PEEPO Pitfalls</h2>
+                
+                <ul>
+                    <li><strong>Stopping at People:</strong> "Worker error" is almost never the root cause.</li>
+                    <li><strong>Ignoring Organization:</strong> The hardest category to analyze, but the most important.</li>
+                    <li><strong>Listing everything:</strong> Focus on factors that actually contributed, not just existed.</li>
+                    <li><strong>Weak corrective actions:</strong> Use the hierarchy of controls — don't just retrain people.</li>
+                </ul>
+
+                <div class="bg-navy-700 rounded-xl p-6 my-8">
+                    <h3 style="margin-top: 0;">PEEPO Analysis Made Easy</h3>
+                    <p class="mb-4">InvestigatePro guides you through PEEPO analysis with AI-powered prompts that help you identify factors you might miss. No more staring at a blank chart wondering what to write.</p>
+                    <a href="/#demo" class="inline-block bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-6 py-3 rounded-lg font-semibold transition-colors">Try InvestigatePro Free →</a>
+                </div>
+
+                <h2>Conclusion</h2>
+                
+                <p>The PEEPO framework transforms incident investigation from a blame-finding exercise into a genuine learning opportunity. By systematically examining People, Environment, Equipment, Procedures, and Organization, you ensure no stone is left unturned — and you find the root causes that will actually prevent recurrence.</p>
+                
+                <p>Remember: <strong>most incidents have multiple contributing factors</strong>. PEEPO helps you see them all.</p>
+
+            </div>
+
+            <!-- CTA -->
+            <div class="mt-16 pt-8 border-t border-navy-700">
+                <div class="bg-navy-800 rounded-xl p-8">
+                    <h3 class="text-xl font-semibold mb-3">Master PEEPO Analysis</h3>
+                    <p class="text-gray-300 mb-6">InvestigatePro's AI coach guides you through each PEEPO category with smart prompts and suggestions based on your incident type.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="/#demo" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-6 py-3 rounded-lg font-semibold transition-colors text-center">Start Free Trial</a>
+                        <a href="/blog/icam-investigation-guide.html" class="border border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 px-6 py-3 rounded-lg font-semibold transition-colors text-center">Read Full ICAM Guide</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="bg-navy-800 border-t border-navy-700 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <img src="../assets/logos/logo-03-on-dark.png" alt="InvestigatePro" class="h-12">
+                </div>
+                <div class="flex flex-wrap justify-center gap-6 text-gray-400 text-sm">
+                    <a href="/blog/" class="hover:text-white">Blog</a>
+                    <a href="/privacy.html" class="hover:text-white">Privacy</a>
+                    <a href="/terms.html" class="hover:text-white">Terms</a>
+                    <a href="mailto:hello@investigatepro.app" class="hover:text-white">Contact</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-navy-700 text-center text-gray-500 text-sm">
+                © 2026 InvestigatePro. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

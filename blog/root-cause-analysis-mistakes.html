@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Root Cause Analysis Mistakes That Kill Your Investigations | InvestigatePro</title>
+    <meta name="description" content="Avoid these common root cause analysis mistakes. Learn why most incident investigations fail to prevent recurrence and how to fix your RCA process.">
+    <meta name="keywords" content="root cause analysis mistakes, RCA mistakes, incident investigation errors, why incidents repeat, investigation best practices">
+    <link rel="icon" type="image/png" href="../assets/logos/logo-03-icon-only.png">
+    <link rel="canonical" href="https://investigatepro.app/blog/root-cause-analysis-mistakes.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://investigatepro.app/blog/root-cause-analysis-mistakes.html">
+    <meta property="og:title" content="5 Root Cause Analysis Mistakes That Kill Your Investigations">
+    <meta property="og:description" content="Why most incident investigations fail to prevent recurrence — and how to fix your RCA process.">
+    <meta property="og:image" content="https://investigatepro.app/assets/logos/logo-03-on-dark.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="article:published_time" content="2026-03-02">
+    
+    <!-- Fonts & Tailwind -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+                    colors: {
+                        navy: { 900: '#0C142E', 800: '#0F1A3A', 700: '#1A2744', 600: '#2A3A5C' },
+                        cyan: { 500: '#76DCEC', 400: '#88E0EE' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .prose h2 { color: #76DCEC; margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.75rem; font-weight: 700; }
+        .prose h3 { color: #fff; margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.25rem; font-weight: 600; }
+        .prose p { color: #d1d5db; margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose ul, .prose ol { color: #d1d5db; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .prose li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .prose strong { color: #fff; }
+        .prose a { color: #76DCEC; text-decoration: underline; }
+        .prose blockquote { border-left: 4px solid #76DCEC; padding-left: 1rem; margin: 1.5rem 0; font-style: italic; color: #9ca3af; }
+        .mistake-card { background: linear-gradient(135deg, #1A2744 0%, #0F1A3A 100%); border-left: 4px solid #ef4444; }
+        .fix-card { background: linear-gradient(135deg, #1A2744 0%, #0F1A3A 100%); border-left: 4px solid #22c55e; }
+    </style>
+</head>
+<body class="font-sans antialiased bg-navy-900 text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-navy-900/95 backdrop-blur-sm z-50 border-b border-navy-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="/" class="flex items-center">
+                    <img src="../assets/logos/logo-03-on-dark.png" alt="InvestigatePro" class="h-[60px] sm:h-[80px]">
+                </a>
+                <div class="flex items-center space-x-6">
+                    <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="/#demo" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-5 py-2 rounded-lg font-semibold transition-colors">
+                        Start Free Trial
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article -->
+    <article class="pt-32 pb-20">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6">
+            
+            <!-- Breadcrumb -->
+            <nav class="text-sm text-gray-400 mb-8">
+                <a href="/" class="hover:text-cyan-500">Home</a>
+                <span class="mx-2">›</span>
+                <a href="/blog/" class="hover:text-cyan-500">Blog</a>
+                <span class="mx-2">›</span>
+                <span class="text-gray-300">RCA Mistakes</span>
+            </nav>
+
+            <!-- Header -->
+            <header class="mb-12">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-sm font-medium">Common Pitfalls</span>
+                    <span class="text-gray-400 text-sm">8 min read</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl font-bold mb-6 leading-tight">5 Root Cause Analysis Mistakes That Kill Your Investigations</h1>
+                <p class="text-xl text-gray-300 mb-6">You investigated. You found "root causes." You implemented corrective actions. Six months later — the same incident happens again. Here's why.</p>
+                <div class="flex items-center text-gray-400 text-sm">
+                    <span>Published March 2, 2026</span>
+                </div>
+            </header>
+
+            <!-- Content -->
+            <div class="prose max-w-none">
+                
+                <p>After reviewing thousands of incident investigations across mining, construction, and manufacturing, a pattern emerges: <strong>the same mistakes show up again and again</strong>.</p>
+                
+                <p>These aren't mistakes made by careless investigators. They're made by experienced safety professionals who genuinely want to prevent incidents. The mistakes are systemic — baked into how most organizations approach investigation.</p>
+                
+                <p>Here are the five most common mistakes — and how to avoid them.</p>
+
+                <h2>Mistake #1: Stopping at "Human Error"</h2>
+                
+                <div class="mistake-card rounded-lg p-5 my-6">
+                    <p class="text-red-400 font-semibold mb-2">❌ The Problem</p>
+                    <p class="text-gray-300 mb-0">"Root cause: Worker failed to follow procedure."</p>
+                </div>
+                
+                <p>This is the most common — and most damaging — investigation mistake. When your root cause is a variation of "the worker messed up," you haven't found a root cause at all. You've found a <strong>symptom</strong>.</p>
+                
+                <p>Human error is <em>always</em> the proximate cause of incidents. Someone did something (or didn't do something) that led to the event. But that tells us nothing useful.</p>
+                
+                <p>The question isn't <em>what</em> they did wrong. The question is <em>why was it possible for them to do it wrong?</em></p>
+                
+                <h3>Why This Happens</h3>
+                <ul>
+                    <li>It's the easiest conclusion — you can see the error clearly</li>
+                    <li>It feels satisfying — someone to "blame"</li>
+                    <li>It's fast — investigation can close quickly</li>
+                    <li>It protects the organization from harder questions</li>
+                </ul>
+                
+                <div class="fix-card rounded-lg p-5 my-6">
+                    <p class="text-green-400 font-semibold mb-2">✅ The Fix</p>
+                    <p class="text-gray-300 mb-0">When you identify a human error, ask "why was this error possible?" at least five more times. The worker didn't follow the procedure — <em>why?</em> Was it practical? Were they trained? Was there pressure to shortcut? Was the hazard even visible?</p>
+                </div>
+
+                <h2>Mistake #2: Writing Weak Corrective Actions</h2>
+                
+                <div class="mistake-card rounded-lg p-5 my-6">
+                    <p class="text-red-400 font-semibold mb-2">❌ The Problem</p>
+                    <p class="text-gray-300 mb-0">"Corrective action: Retrain all workers on the procedure."</p>
+                </div>
+                
+                <p>If retraining solved problems, we'd have zero incidents by now. Workers are trained constantly. And yet incidents keep happening.</p>
+                
+                <p>Retraining, adding warning signs, and "reminding workers to be careful" are all <strong>administrative controls</strong> — the weakest level on the hierarchy of controls. They rely on perfect human behavior, every time, forever.</p>
+                
+                <p>That's not how humans work.</p>
+                
+                <h3>The Hierarchy of Controls (Most → Least Effective)</h3>
+                <ol>
+                    <li><strong>Elimination:</strong> Remove the hazard entirely</li>
+                    <li><strong>Substitution:</strong> Replace with something less hazardous</li>
+                    <li><strong>Engineering controls:</strong> Physically prevent exposure</li>
+                    <li><strong>Administrative controls:</strong> Change how people work</li>
+                    <li><strong>PPE:</strong> Protect the individual</li>
+                </ol>
+                
+                <p>Most corrective actions cluster at levels 4 and 5. That's why incidents recur.</p>
+                
+                <div class="fix-card rounded-lg p-5 my-6">
+                    <p class="text-green-400 font-semibold mb-2">✅ The Fix</p>
+                    <p class="text-gray-300 mb-0">For every corrective action, ask: "Is there something higher on the hierarchy we could do instead?" If your action requires humans to remember something or choose correctly every time, it will eventually fail.</p>
+                </div>
+
+                <h2>Mistake #3: Confirmation Bias</h2>
+                
+                <div class="mistake-card rounded-lg p-5 my-6">
+                    <p class="text-red-400 font-semibold mb-2">❌ The Problem</p>
+                    <p class="text-gray-300 mb-0">You arrive at the scene with a theory. You gather evidence that supports your theory. You conclude your theory was correct.</p>
+                </div>
+                
+                <p>It's human nature. We form hypotheses quickly (often within minutes of hearing about an incident) and then seek evidence that confirms them. Evidence that contradicts our hypothesis? We minimize it, explain it away, or don't notice it at all.</p>
+                
+                <p>The result: investigations that feel thorough but miss critical contributing factors.</p>
+                
+                <h3>Signs of Confirmation Bias</h3>
+                <ul>
+                    <li>You knew the "root cause" within the first hour</li>
+                    <li>All the evidence points the same direction (too neatly)</li>
+                    <li>Witnesses who disagreed with your theory were "mistaken"</li>
+                    <li>The conclusion matches what management expected</li>
+                </ul>
+                
+                <div class="fix-card rounded-lg p-5 my-6">
+                    <p class="text-green-400 font-semibold mb-2">✅ The Fix</p>
+                    <p class="text-gray-300 mb-0">Deliberately seek disconfirming evidence. Ask: "What would have to be true for my current theory to be wrong?" Interview witnesses before forming conclusions. Have someone outside the investigation review your findings with fresh eyes.</p>
+                </div>
+
+                <h2>Mistake #4: Not Reaching Organizational Factors</h2>
+                
+                <div class="mistake-card rounded-lg p-5 my-6">
+                    <p class="text-red-400 font-semibold mb-2">❌ The Problem</p>
+                    <p class="text-gray-300 mb-0">Investigation identifies equipment failure and procedural gaps, but never asks: "What management decisions created these conditions?"</p>
+                </div>
+                
+                <p>Equipment doesn't maintain itself. Procedures don't write themselves. Training doesn't happen automatically. Behind every immediate cause is an <strong>organizational factor</strong> — a decision, system, or cultural element that allowed the conditions to exist.</p>
+                
+                <p>These are the true root causes. And most investigations never reach them.</p>
+                
+                <h3>Why Investigations Stop Short</h3>
+                <ul>
+                    <li>Organizational factors are uncomfortable — they implicate management</li>
+                    <li>They're harder to identify than physical causes</li>
+                    <li>They require deeper analysis and more time</li>
+                    <li>There's often organizational pressure to keep it simple</li>
+                </ul>
+                
+                <div class="fix-card rounded-lg p-5 my-6">
+                    <p class="text-green-400 font-semibold mb-2">✅ The Fix</p>
+                    <p class="text-gray-300 mb-0">Use the ICAM organizational factors framework. For every equipment, procedural, or human factor you identify, ask: "What organizational decision or system allowed this?" Budget? Training? Supervision? Management priorities? Change management?</p>
+                </div>
+
+                <h2>Mistake #5: Investigating in Isolation</h2>
+                
+                <div class="mistake-card rounded-lg p-5 my-6">
+                    <p class="text-red-400 font-semibold mb-2">❌ The Problem</p>
+                    <p class="text-gray-300 mb-0">Each incident is investigated as if it's unique. No one connects the dots across multiple events.</p>
+                </div>
+                
+                <p>Organizations experience patterns of incidents — similar contributing factors appearing again and again. But because each investigation is siloed, the pattern remains invisible.</p>
+                
+                <p>How many times has your organization had incidents where:</p>
+                <ul>
+                    <li>Shift handover communication was a factor?</li>
+                    <li>Time pressure contributed?</li>
+                    <li>Contractor management was involved?</li>
+                    <li>The procedure was outdated or impractical?</li>
+                </ul>
+                
+                <p>If you can't answer that immediately, you're investigating in isolation.</p>
+                
+                <div class="fix-card rounded-lg p-5 my-6">
+                    <p class="text-green-400 font-semibold mb-2">✅ The Fix</p>
+                    <p class="text-gray-300 mb-0">Implement trend analysis across investigations. Tag contributing factors consistently. Review patterns quarterly. When the same organizational factor appears in multiple incidents, address it at the systemic level — not one incident at a time.</p>
+                </div>
+
+                <h2>The Meta-Mistake: Treating Investigation as Compliance</h2>
+                
+                <p>Underlying all five mistakes is a deeper issue: many organizations treat incident investigation as a <strong>compliance exercise</strong> rather than a <strong>learning opportunity</strong>.</p>
+                
+                <p>When the goal is to complete the form, close the case, and satisfy the regulator, investigations become superficial. When the goal is to genuinely understand what happened and prevent recurrence, investigations become powerful.</p>
+                
+                <blockquote>
+                    "The quality of your investigations reveals whether your organization truly wants to learn — or just wants to look like it's learning."
+                </blockquote>
+
+                <h2>How to Fix Your Investigation Process</h2>
+                
+                <ol>
+                    <li><strong>Adopt ICAM methodology:</strong> It's specifically designed to reach organizational factors.</li>
+                    <li><strong>Train investigators properly:</strong> Investigation is a skill, not just common sense.</li>
+                    <li><strong>Allow adequate time:</strong> Rushing guarantees shallow results.</li>
+                    <li><strong>Create psychological safety:</strong> Investigators need freedom to report uncomfortable findings.</li>
+                    <li><strong>Track and trend:</strong> Connect the dots across multiple incidents.</li>
+                    <li><strong>Measure corrective action effectiveness:</strong> Did it actually work?</li>
+                </ol>
+
+                <div class="bg-navy-700 rounded-xl p-6 my-8">
+                    <h3 style="margin-top: 0;">Stop Making These Mistakes</h3>
+                    <p class="mb-4">InvestigatePro guides investigators through proper ICAM methodology, prompts for organizational factors, and automatically tracks trends across incidents. No more superficial investigations.</p>
+                    <a href="/#demo" class="inline-block bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-6 py-3 rounded-lg font-semibold transition-colors">Try InvestigatePro Free →</a>
+                </div>
+
+                <h2>Conclusion</h2>
+                
+                <p>If the same types of incidents keep happening in your organization, the investigation process itself is the problem. The five mistakes above — stopping at human error, weak corrective actions, confirmation bias, not reaching organizational factors, and investigating in isolation — are systemic issues that require systemic solutions.</p>
+                
+                <p>The good news: they're all fixable. It starts with recognizing that investigation isn't about finding someone to blame. It's about finding something to <em>fix</em>.</p>
+
+            </div>
+
+            <!-- CTA -->
+            <div class="mt-16 pt-8 border-t border-navy-700">
+                <div class="bg-navy-800 rounded-xl p-8">
+                    <h3 class="text-xl font-semibold mb-3">Ready to Transform Your Investigations?</h3>
+                    <p class="text-gray-300 mb-6">InvestigatePro helps you avoid these mistakes with built-in ICAM methodology, organizational factor prompts, and AI-powered analysis.</p>
+                    <a href="/#demo" class="inline-block bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-6 py-3 rounded-lg font-semibold transition-colors">Start Free Trial →</a>
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="bg-navy-800 border-t border-navy-700 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <img src="../assets/logos/logo-03-on-dark.png" alt="InvestigatePro" class="h-12 mb-6 md:mb-0">
+                <div class="flex flex-wrap justify-center gap-6 text-gray-400 text-sm">
+                    <a href="/blog/" class="hover:text-white">Blog</a>
+                    <a href="/privacy.html" class="hover:text-white">Privacy</a>
+                    <a href="/terms.html" class="hover:text-white">Terms</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-navy-700 text-center text-gray-500 text-sm">
+                © 2026 InvestigatePro. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

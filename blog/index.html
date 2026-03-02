@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Safety Insights Blog — InvestigatePro</title>
-    <meta name="description" content="Expert insights on incident investigation, ICAM methodology, root cause analysis, and building a learning culture. Free resources from InvestigatePro.">
+    <title>Blog — Incident Investigation Insights | InvestigatePro</title>
+    <meta name="description" content="Expert insights on ICAM methodology, root cause analysis, and incident investigation best practices. Learn how to improve your safety investigations.">
     <link rel="icon" type="image/png" href="../assets/logos/logo-03-icon-only.png">
+    <link rel="canonical" href="https://investigatepro.app/blog/">
     
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://investigatepro.app/blog/">
-    <meta property="og:title" content="Safety Insights Blog — InvestigatePro">
-    <meta property="og:description" content="Expert insights on incident investigation, ICAM methodology, and building a learning culture.">
+    <meta property="og:title" content="Blog — Incident Investigation Insights | InvestigatePro">
+    <meta property="og:description" content="Expert insights on ICAM methodology, root cause analysis, and incident investigation best practices.">
     <meta property="og:image" content="https://investigatepro.app/assets/logos/logo-03-on-dark.png">
-    <meta name="twitter:card" content="summary_large_image">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,18 +35,20 @@
                             800: '#0F1A3A',
                             700: '#1A2744',
                             600: '#2A3A5C',
-                            500: '#3D4F70',
                         },
                         cyan: {
                             500: '#76DCEC',
                             400: '#88E0EE',
-                            300: '#A8EAF3',
                         }
                     }
                 }
             }
         }
     </script>
+    <style>
+        .article-card { background: linear-gradient(135deg, #1A2744 0%, #0F1A3A 100%); transition: transform 0.2s, box-shadow 0.2s; }
+        .article-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(118, 220, 236, 0.15); }
+    </style>
 </head>
 <body class="font-sans antialiased bg-navy-900 text-white">
 
@@ -54,15 +56,13 @@
     <nav class="fixed w-full bg-navy-900/95 backdrop-blur-sm z-50 border-b border-navy-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
-                <div class="flex items-center">
-                    <a href="/">
-                        <img src="../assets/logos/logo-03-on-dark.png" alt="InvestigatePro" class="h-[80px] sm:h-[120px]">
-                    </a>
-                </div>
+                <a href="/" class="flex items-center">
+                    <img src="../assets/logos/logo-03-on-dark.png" alt="InvestigatePro" class="h-[60px] sm:h-[80px]">
+                </a>
                 <div class="flex items-center space-x-6">
+                    <a href="/blog/" class="text-cyan-500 font-medium">Blog</a>
                     <a href="/#features" class="hidden sm:inline text-gray-300 hover:text-white transition-colors">Features</a>
                     <a href="/#pricing" class="hidden sm:inline text-gray-300 hover:text-white transition-colors">Pricing</a>
-                    <a href="/blog/" class="hidden sm:inline text-cyan-400 font-medium">Blog</a>
                     <a href="/#demo" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-5 py-2 rounded-lg font-semibold transition-colors">
                         Start Free Trial
                     </a>
@@ -72,179 +72,117 @@
     </nav>
 
     <!-- Header -->
-    <section class="pt-40 pb-16 bg-gradient-to-b from-navy-900 to-navy-800">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl sm:text-5xl font-bold mb-4">Safety Insights</h1>
-            <p class="text-xl text-gray-300">Expert guidance on incident investigation, ICAM methodology, and building a learning culture</p>
+    <header class="pt-32 pb-12 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl sm:text-5xl font-bold mb-4">Incident Investigation Insights</h1>
+            <p class="text-xl text-gray-300">Expert guidance on ICAM methodology, root cause analysis, and investigation best practices.</p>
+        </div>
+    </header>
+
+    <!-- Featured Article -->
+    <section class="px-4 pb-12">
+        <div class="max-w-4xl mx-auto">
+            <a href="/blog/icam-investigation-guide.html" class="block article-card rounded-2xl overflow-hidden">
+                <div class="p-8 md:p-10">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="bg-cyan-500/20 text-cyan-500 px-3 py-1 rounded-full text-sm font-medium">Featured Guide</span>
+                        <span class="text-gray-400 text-sm">15 min read</span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4 hover:text-cyan-500 transition-colors">The Complete Guide to ICAM Investigation</h2>
+                    <p class="text-gray-300 mb-6">Master the Incident Cause Analysis Method — the gold standard for investigating workplace incidents and preventing recurrence. Includes PEEPO framework, organizational factors, and practical templates.</p>
+                    <span class="text-cyan-500 font-semibold">Read the guide →</span>
+                </div>
+            </a>
         </div>
     </section>
 
-    <!-- Blog Grid -->
-    <section class="py-16 bg-navy-800">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
+    <!-- Articles Grid -->
+    <section class="px-4 pb-20">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold mb-8">Latest Articles</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                
                 <!-- Article 1 -->
-                <article class="bg-navy-700 rounded-xl overflow-hidden hover:ring-2 hover:ring-cyan-500/50 transition-all group">
-                    <div class="h-48 bg-gradient-to-br from-cyan-500/20 to-navy-600 flex items-center justify-center">
-                        <svg class="w-16 h-16 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                        </svg>
+                <a href="/blog/peepo-framework-explained.html" class="article-card rounded-xl p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="bg-cyan-500/20 text-cyan-500 px-2 py-0.5 rounded text-xs font-medium">Methodology</span>
+                        <span class="text-gray-500 text-xs">10 min</span>
                     </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="text-xs bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded">ICAM</span>
-                            <span class="text-xs text-gray-400">12 min read</span>
-                        </div>
-                        <h2 class="text-xl font-semibold mb-3 group-hover:text-cyan-400 transition-colors">
-                            <a href="/blog/icam-methodology-guide.html">The Complete Guide to ICAM Methodology</a>
-                        </h2>
-                        <p class="text-gray-400 text-sm mb-4">Learn how the Incident Cause Analysis Method helps organizations uncover real causes and prevent recurrence.</p>
-                        <a href="/blog/icam-methodology-guide.html" class="text-cyan-400 text-sm font-medium hover:text-cyan-300">
-                            Read article →
-                        </a>
-                    </div>
-                </article>
-
+                    <h3 class="text-lg font-semibold mb-2 hover:text-cyan-500 transition-colors">PEEPO Framework Explained: The Heart of ICAM Investigation</h3>
+                    <p class="text-gray-400 text-sm mb-4">People, Environment, Equipment, Procedures, Organization — the systematic approach to finding root causes that others miss.</p>
+                    <span class="text-cyan-500 text-sm font-medium">Read article →</span>
+                </a>
+                
                 <!-- Article 2 -->
-                <article class="bg-navy-700 rounded-xl overflow-hidden hover:ring-2 hover:ring-cyan-500/50 transition-all group">
-                    <div class="h-48 bg-gradient-to-br from-red-500/20 to-navy-600 flex items-center justify-center">
-                        <svg class="w-16 h-16 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
-                        </svg>
+                <a href="/blog/root-cause-analysis-mistakes.html" class="article-card rounded-xl p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="bg-red-500/20 text-red-400 px-2 py-0.5 rounded text-xs font-medium">Common Pitfalls</span>
+                        <span class="text-gray-500 text-xs">8 min</span>
                     </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="text-xs bg-red-500/20 text-red-400 px-2 py-1 rounded">Mistakes</span>
-                            <span class="text-xs text-gray-400">10 min read</span>
-                        </div>
-                        <h2 class="text-xl font-semibold mb-3 group-hover:text-cyan-400 transition-colors">
-                            <a href="/blog/incident-investigation-mistakes.html">5 Common Incident Investigation Mistakes</a>
-                        </h2>
-                        <p class="text-gray-400 text-sm mb-4">These common pitfalls waste resources, miss root causes, and leave organizations vulnerable to repeat incidents.</p>
-                        <a href="/blog/incident-investigation-mistakes.html" class="text-cyan-400 text-sm font-medium hover:text-cyan-300">
-                            Read article →
-                        </a>
-                    </div>
-                </article>
-
+                    <h3 class="text-lg font-semibold mb-2 hover:text-cyan-500 transition-colors">5 Root Cause Analysis Mistakes That Kill Your Investigations</h3>
+                    <p class="text-gray-400 text-sm mb-4">You investigated. You implemented corrective actions. Six months later — the same incident happens again. Here's why.</p>
+                    <span class="text-cyan-500 text-sm font-medium">Read article →</span>
+                </a>
+                
                 <!-- Article 3 -->
-                <article class="bg-navy-700 rounded-xl overflow-hidden hover:ring-2 hover:ring-cyan-500/50 transition-all group">
-                    <div class="h-48 bg-gradient-to-br from-green-500/20 to-navy-600 flex items-center justify-center">
-                        <svg class="w-16 h-16 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-                        </svg>
+                <a href="/blog/why-incident-investigations-fail.html" class="article-card rounded-xl p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="bg-orange-500/20 text-orange-400 px-2 py-0.5 rounded text-xs font-medium">Industry Problem</span>
+                        <span class="text-gray-500 text-xs">12 min</span>
                     </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">Culture</span>
-                            <span class="text-xs text-gray-400">14 min read</span>
-                        </div>
-                        <h2 class="text-xl font-semibold mb-3 group-hover:text-cyan-400 transition-colors">
-                            <a href="/blog/blame-to-learning-culture.html">From Blame Culture to Learning Culture</a>
-                        </h2>
-                        <p class="text-gray-400 text-sm mb-4">A practical guide to transforming how your organization responds to incidents and near-misses.</p>
-                        <a href="/blog/blame-to-learning-culture.html" class="text-cyan-400 text-sm font-medium hover:text-cyan-300">
-                            Read article →
-                        </a>
-                    </div>
-                </article>
-
+                    <h3 class="text-lg font-semibold mb-2 hover:text-cyan-500 transition-colors">Why Most Incident Investigations Fail to Prevent Recurrence</h3>
+                    <p class="text-gray-400 text-sm mb-4">80% of investigations fail to prevent similar events. Learn the systemic reasons why — and how to fix your investigation process.</p>
+                    <span class="text-cyan-500 text-sm font-medium">Read article →</span>
+                </a>
+                
                 <!-- Article 4 -->
-                <article class="bg-navy-700 rounded-xl overflow-hidden hover:ring-2 hover:ring-cyan-500/50 transition-all group">
-                    <div class="h-48 bg-gradient-to-br from-purple-500/20 to-navy-600 flex items-center justify-center">
-                        <svg class="w-16 h-16 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                        </svg>
+                <a href="/blog/paper-vs-digital-investigation.html" class="article-card rounded-xl p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="bg-green-500/20 text-green-400 px-2 py-0.5 rounded text-xs font-medium">ROI Analysis</span>
+                        <span class="text-gray-500 text-xs">10 min</span>
                     </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="text-xs bg-purple-500/20 text-purple-400 px-2 py-1 rounded">AI</span>
-                            <span class="text-xs text-gray-400">15 min read</span>
-                        </div>
-                        <h2 class="text-xl font-semibold mb-3 group-hover:text-cyan-400 transition-colors">
-                            <a href="/blog/ai-safety-management.html">How AI is Transforming Safety Management</a>
-                        </h2>
-                        <p class="text-gray-400 text-sm mb-4">From predictive analytics to intelligent investigation coaching—the AI revolution in workplace safety.</p>
-                        <a href="/blog/ai-safety-management.html" class="text-cyan-400 text-sm font-medium hover:text-cyan-300">
-                            Read article →
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Article 5 -->
-                <article class="bg-navy-700 rounded-xl overflow-hidden hover:ring-2 hover:ring-cyan-500/50 transition-all group">
-                    <div class="h-48 bg-gradient-to-br from-orange-500/20 to-navy-600 flex items-center justify-center">
-                        <svg class="w-16 h-16 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                        </svg>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="text-xs bg-orange-500/20 text-orange-400 px-2 py-1 rounded">Analysis</span>
-                            <span class="text-xs text-gray-400">16 min read</span>
-                        </div>
-                        <h2 class="text-xl font-semibold mb-3 group-hover:text-cyan-400 transition-colors">
-                            <a href="/blog/root-cause-analysis-guide.html">Root Cause Analysis: The Complete Guide</a>
-                        </h2>
-                        <p class="text-gray-400 text-sm mb-4">Master the techniques that separate effective investigations from superficial ones. 5 Whys, Fishbone, and beyond.</p>
-                        <a href="/blog/root-cause-analysis-guide.html" class="text-cyan-400 text-sm font-medium hover:text-cyan-300">
-                            Read article →
-                        </a>
-                    </div>
-                </article>
-
-                <!-- CTA Card -->
-                <article class="bg-gradient-to-br from-cyan-500/20 to-navy-700 rounded-xl overflow-hidden border border-cyan-500/30 flex flex-col justify-center p-8">
-                    <h3 class="text-xl font-semibold mb-3">Ready to investigate smarter?</h3>
-                    <p class="text-gray-300 text-sm mb-6">Start your 14-day free trial. No credit card required.</p>
-                    <a href="/#demo" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-6 py-3 rounded-lg font-semibold transition-colors text-center">
-                        Start Free Trial
-                    </a>
-                </article>
-
+                    <h3 class="text-lg font-semibold mb-2 hover:text-cyan-500 transition-colors">Paper vs Digital: The True Cost of Manual Incident Investigation</h3>
+                    <p class="text-gray-400 text-sm mb-4">That paper form isn't free. Calculate the hidden costs of manual processes and your potential ROI from investigation software.</p>
+                    <span class="text-cyan-500 text-sm font-medium">Read article →</span>
+                </a>
+                
             </div>
         </div>
     </section>
 
-    <!-- Newsletter Section -->
-    <section class="py-16 bg-navy-900 border-t border-navy-700">
-        <div class="max-w-2xl mx-auto px-4 text-center">
-            <h2 class="text-2xl font-bold mb-4">Get Safety Insights Weekly</h2>
-            <p class="text-gray-400 mb-6">Join 500+ safety professionals getting practical ICAM tips, investigation techniques, and industry news.</p>
-            <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-                <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-lg bg-navy-700 border border-navy-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500">
-                <button type="submit" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-6 py-3 rounded-lg font-semibold transition-colors whitespace-nowrap">
-                    Subscribe
-                </button>
-            </form>
+    <!-- Newsletter CTA -->
+    <section class="px-4 pb-20">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-navy-800 rounded-2xl p-8 md:p-12 text-center">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">Get Investigation Insights in Your Inbox</h2>
+                <p class="text-gray-300 mb-6 max-w-xl mx-auto">Join safety professionals getting actionable tips on ICAM methodology, root cause analysis, and investigation best practices.</p>
+                <a href="/#demo" class="inline-block bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-8 py-3 rounded-lg font-semibold transition-colors">Start Free Trial →</a>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-navy-900 border-t border-navy-700 py-12">
+    <footer class="bg-navy-800 border-t border-navy-700 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-6 md:mb-0">
-                    <img src="../assets/logos/logo-03-on-dark.png" alt="InvestigatePro" class="h-16">
+                    <img src="../assets/logos/logo-03-on-dark.png" alt="InvestigatePro" class="h-12">
                 </div>
-                <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
-                    <a href="/" class="hover:text-white transition-colors">Home</a>
-                    <a href="/blog/" class="hover:text-white transition-colors">Blog</a>
-                    <a href="/faq.html" class="hover:text-white transition-colors">FAQ</a>
-                    <a href="/security.html" class="hover:text-white transition-colors">Security</a>
-                    <a href="/terms.html" class="hover:text-white transition-colors">Terms</a>
-                    <a href="/privacy.html" class="hover:text-white transition-colors">Privacy</a>
-                    <a href="/cookie.html" class="hover:text-white transition-colors">Cookies</a>
-                    <a href="/checklist.html" class="hover:text-white transition-colors">Free Checklist</a>
+                <div class="flex flex-wrap justify-center gap-6 text-gray-400 text-sm">
+                    <a href="/" class="hover:text-white">Home</a>
+                    <a href="/blog/" class="hover:text-white">Blog</a>
+                    <a href="/privacy.html" class="hover:text-white">Privacy</a>
+                    <a href="/terms.html" class="hover:text-white">Terms</a>
+                    <a href="/security.html" class="hover:text-white">Security</a>
+                    <a href="mailto:hello@investigatepro.app" class="hover:text-white">Contact</a>
                 </div>
             </div>
-            <div class="mt-8 text-center text-sm text-gray-500">
+            <div class="mt-8 pt-8 border-t border-navy-700 text-center text-gray-500 text-sm">
                 © 2026 InvestigatePro. All rights reserved.
             </div>
         </div>
     </footer>
 
-<script src="/analytics.js"></script>
 </body>
 </html>
