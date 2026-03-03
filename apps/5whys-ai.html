@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Whys AI — AI-Powered Root Cause Analysis App</title>
+    <meta name="description" content="Your AI investigation partner in your pocket. Get coached through rigorous 5 Whys root cause analysis with an AI that challenges shallow answers and pushes you deeper.">
+    <link rel="icon" type="image/png" href="../assets/logos/logo-03-icon-only.png">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://investigatepro.app/apps/5whys-ai.html">
+    <meta property="og:title" content="5 Whys AI — AI-Powered Root Cause Analysis">
+    <meta property="og:description" content="Your AI investigation partner in your pocket. Root cause analysis with AI coaching.">
+    <meta property="og:image" content="https://investigatepro.app/assets/logos/logo-03-on-dark.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            900: '#0C142E',
+                            800: '#0F1A3A',
+                            700: '#1A2744',
+                            600: '#2A3A5C',
+                            500: '#3D4F70',
+                        },
+                        cyan: {
+                            500: '#76DCEC',
+                            400: '#88E0EE',
+                            300: '#A8EAF3',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-hero { background: linear-gradient(180deg, #0C142E 0%, #1A2744 100%); }
+        .glow-cyan { box-shadow: 0 0 60px rgba(118, 220, 236, 0.3); }
+        .phone-mockup {
+            background: linear-gradient(145deg, #1A2744 0%, #0C142E 100%);
+            border-radius: 40px;
+            padding: 12px;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.5), inset 0 0 0 2px rgba(118, 220, 236, 0.1);
+        }
+        .phone-screen {
+            background: #0C142E;
+            border-radius: 32px;
+            overflow: hidden;
+        }
+        .chat-bubble-ai {
+            background: linear-gradient(135deg, rgba(118, 220, 236, 0.15) 0%, rgba(118, 220, 236, 0.05) 100%);
+            border: 1px solid rgba(118, 220, 236, 0.3);
+        }
+        .chat-bubble-user {
+            background: #2A3A5C;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased bg-navy-900 text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-navy-900/95 backdrop-blur-sm z-50 border-b border-navy-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="/">
+                        <img src="../assets/logos/logo-03-on-dark.png" alt="InvestigatePro" class="h-[80px] sm:h-[120px] lg:h-[150px]">
+                    </a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="/#features" class="hidden sm:inline text-gray-300 hover:text-white transition-colors">Features</a>
+                    <a href="/apps/" class="hidden sm:inline text-cyan-400 font-medium">Apps</a>
+                    <a href="/#demo" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-5 py-2 rounded-lg font-semibold transition-colors">
+                        Start Free Trial
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-hero pt-44 pb-16 lg:pt-56 lg:pb-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                
+                <!-- Left: Copy -->
+                <div>
+                    <div class="inline-flex items-center bg-navy-700 rounded-full px-4 py-1.5 mb-6">
+                        <span class="w-2 h-2 bg-cyan-500 rounded-full mr-2 animate-pulse"></span>
+                        <span class="text-sm text-gray-300">Coming Soon — Join the Waitlist</span>
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        5 Whys AI
+                    </h1>
+                    
+                    <p class="text-xl lg:text-2xl text-cyan-400 font-medium mb-4">
+                        Your AI investigation partner in your pocket
+                    </p>
+                    
+                    <p class="text-lg text-gray-300 mb-8">
+                        Stop at surface-level causes? Not anymore. Get coached through rigorous 
+                        root cause analysis with an AI that challenges shallow answers, 
+                        suggests blind spots, and pushes you to dig deeper.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <a href="#waitlist" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-6 py-3 rounded-lg font-semibold transition-colors text-center">
+                            Join the Waitlist
+                        </a>
+                        <a href="#how-it-works" class="border border-gray-600 hover:border-cyan-500 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center">
+                            See How It Works
+                        </a>
+                    </div>
+                    
+                    <div class="flex items-center gap-6 text-sm text-gray-400">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                            </svg>
+                            iOS & Android
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414"></path>
+                            </svg>
+                            Works Offline
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                            </svg>
+                            Free Tier Available
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right: Phone Mockup -->
+                <div class="flex justify-center lg:justify-end">
+                    <div class="phone-mockup w-[300px] lg:w-[340px] glow-cyan">
+                        <div class="phone-screen p-4 min-h-[580px]">
+                            <!-- App Header -->
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="text-lg font-bold">5 Whys AI</div>
+                                <div class="text-xs text-gray-500">Forklift Incident</div>
+                            </div>
+                            
+                            <!-- Chat Interface -->
+                            <div class="space-y-4">
+                                <!-- Problem Statement -->
+                                <div class="chat-bubble-user rounded-2xl rounded-br-md px-4 py-3 ml-8">
+                                    <div class="text-xs text-gray-500 mb-1">Problem</div>
+                                    <div class="text-sm">Forklift struck warehouse racking causing damage</div>
+                                </div>
+                                
+                                <!-- Why 1 -->
+                                <div class="chat-bubble-user rounded-2xl rounded-br-md px-4 py-3 ml-8">
+                                    <div class="text-xs text-cyan-400 mb-1">Why 1</div>
+                                    <div class="text-sm">Operator was going too fast</div>
+                                </div>
+                                
+                                <!-- AI Response -->
+                                <div class="chat-bubble-ai rounded-2xl rounded-bl-md px-4 py-3 mr-8">
+                                    <div class="flex items-center mb-2">
+                                        <div class="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-2">
+                                            <span class="text-navy-900 text-xs font-bold">AI</span>
+                                        </div>
+                                        <span class="text-xs text-cyan-400">Coach</span>
+                                    </div>
+                                    <div class="text-sm text-gray-300">
+                                        Speed is a factor. But <span class="text-cyan-400 font-medium">WHY</span> was the operator going too fast?
+                                    </div>
+                                    <div class="mt-2 text-xs text-gray-500">
+                                        Consider: Production pressure? Lack of awareness? Equipment issue?
+                                    </div>
+                                </div>
+                                
+                                <!-- Why 2 -->
+                                <div class="chat-bubble-user rounded-2xl rounded-br-md px-4 py-3 ml-8">
+                                    <div class="text-xs text-cyan-400 mb-1">Why 2</div>
+                                    <div class="text-sm">Rushing to meet shift deadline</div>
+                                </div>
+                                
+                                <!-- AI Challenge -->
+                                <div class="chat-bubble-ai rounded-2xl rounded-bl-md px-4 py-3 mr-8">
+                                    <div class="flex items-center mb-2">
+                                        <div class="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-2">
+                                            <span class="text-navy-900 text-xs font-bold">AI</span>
+                                        </div>
+                                        <span class="text-xs text-cyan-400">Challenge</span>
+                                    </div>
+                                    <div class="text-sm text-gray-300">
+                                        Time pressure identified. <span class="text-cyan-400 font-medium">WHY</span> was there a deadline pressure?
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Input Area -->
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <div class="bg-navy-700 rounded-full px-4 py-3 flex items-center">
+                                    <input type="text" placeholder="Enter Why 3..." class="bg-transparent flex-1 text-sm outline-none text-gray-300 placeholder-gray-500">
+                                    <button class="ml-2 w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-navy-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-16 lg:py-24 bg-navy-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">The Problem with 5 Whys Today</h2>
+                <p class="text-xl text-gray-300">
+                    5 Whys is powerful — when done right. But most investigators struggle.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-navy-700 rounded-xl p-6 border border-navy-600">
+                    <div class="w-12 h-12 bg-red-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Stop Too Soon</h3>
+                    <p class="text-gray-400">
+                        Most people stop at 2-3 whys, missing the systemic root causes that actually prevent recurrence.
+                    </p>
+                </div>
+                
+                <div class="bg-navy-700 rounded-xl p-6 border border-navy-600">
+                    <div class="w-12 h-12 bg-red-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">No Challenge</h3>
+                    <p class="text-gray-400">
+                        Without a skilled facilitator to challenge assumptions, investigators accept weak answers.
+                    </p>
+                </div>
+                
+                <div class="bg-navy-700 rounded-xl p-6 border border-navy-600">
+                    <div class="w-12 h-12 bg-red-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Inconsistent Quality</h3>
+                    <p class="text-gray-400">
+                        Results vary wildly depending on who's doing the analysis. No standardized approach across the team.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-16 lg:py-24 bg-navy-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">How 5 Whys AI Works</h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    An AI coach that guides you through rigorous root cause analysis — in the field or at your desk.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-navy-900">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Describe the Problem</h3>
+                    <p class="text-gray-400">
+                        Enter what happened — text, voice, or photos. The clearer the problem statement, the better the analysis.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-navy-900">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Answer the Whys</h3>
+                    <p class="text-gray-400">
+                        For each "Why," the AI asks follow-up questions and challenges weak answers to push you deeper.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-navy-900">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Explore Branches</h3>
+                    <p class="text-gray-400">
+                        Real incidents have multiple causes. Branch your analysis to capture the full causal picture.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-navy-900">4</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Export & Integrate</h3>
+                    <p class="text-gray-400">
+                        Share your analysis as PDF, or sync directly to InvestigatePro for a complete investigation record.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="py-16 lg:py-24 bg-navy-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Features That Make the Difference</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-navy-700 rounded-xl p-6 border border-navy-600">
+                    <div class="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold mb-2">AI Challenge Coach</h3>
+                    <p class="text-sm text-gray-400">
+                        "Is that really the root cause?" The AI pushes back on surface-level answers.
+                    </p>
+                </div>
+                
+                <div class="bg-navy-700 rounded-xl p-6 border border-navy-600">
+                    <div class="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold mb-2">Branching Analysis</h3>
+                    <p class="text-sm text-gray-400">
+                        Handle multiple causal chains. Real incidents rarely have a single linear cause.
+                    </p>
+                </div>
+                
+                <div class="bg-navy-700 rounded-xl p-6 border border-navy-600">
+                    <div class="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold mb-2">Voice Input</h3>
+                    <p class="text-sm text-gray-400">
+                        Speak your answers in the field. AI transcribes and continues the analysis.
+                    </p>
+                </div>
+                
+                <div class="bg-navy-700 rounded-xl p-6 border border-navy-600">
+                    <div class="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold mb-2">Photo Evidence</h3>
+                    <p class="text-sm text-gray-400">
+                        Attach photos at any level of the analysis. Visual evidence strengthens your findings.
+                    </p>
+                </div>
+                
+                <div class="bg-navy-700 rounded-xl p-6 border border-navy-600">
+                    <div class="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold mb-2">Offline Mode</h3>
+                    <p class="text-sm text-gray-400">
+                        No signal underground? No problem. Works offline, syncs when you're connected.
+                    </p>
+                </div>
+                
+                <div class="bg-navy-700 rounded-xl p-6 border border-navy-600">
+                    <div class="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold mb-2">InvestigatePro Sync</h3>
+                    <p class="text-sm text-gray-400">
+                        Push analyses directly to your InvestigatePro investigations. One ecosystem.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Templates -->
+    <section class="py-16 lg:py-24 bg-navy-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-6">
+                        Industry-Specific<br>
+                        <span class="text-cyan-400">Prompt Libraries</span>
+                    </h2>
+                    <p class="text-lg text-gray-300 mb-6">
+                        Not all incidents are the same. 5 Whys AI comes loaded with industry-specific 
+                        question sets that guide you toward the root causes that matter in your context.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-amber-500/20 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-amber-400 text-lg">⛏️</span>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Mining</div>
+                                <div class="text-sm text-gray-400">Ground control, vehicle interactions, energy isolation</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-orange-400 text-lg">🏗️</span>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Construction</div>
+                                <div class="text-sm text-gray-400">Falls, struck-by, excavation, electrical</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-blue-400 text-lg">🏭</span>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Manufacturing</div>
+                                <div class="text-sm text-gray-400">Machine guarding, ergonomics, chemical exposure</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-green-400 text-lg">🛢️</span>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Oil & Gas</div>
+                                <div class="text-sm text-gray-400">Process safety, H2S, dropped objects, confined space</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-navy-800 rounded-2xl p-8 border border-navy-600">
+                    <div class="text-sm text-gray-500 mb-4">Example: Mining Industry Prompt</div>
+                    <div class="space-y-4">
+                        <div class="bg-navy-700 rounded-lg p-4">
+                            <div class="text-cyan-400 text-sm mb-1">When analyzing vehicle interactions:</div>
+                            <ul class="text-sm text-gray-300 space-y-1">
+                                <li>• Was positive communication established?</li>
+                                <li>• Were traffic management protocols followed?</li>
+                                <li>• Was fatigue a contributing factor?</li>
+                                <li>• What was the visibility condition?</li>
+                            </ul>
+                        </div>
+                        <div class="bg-navy-700 rounded-lg p-4">
+                            <div class="text-cyan-400 text-sm mb-1">When analyzing energy isolation failures:</div>
+                            <ul class="text-sm text-gray-300 space-y-1">
+                                <li>• Was the isolation procedure current?</li>
+                                <li>• Was verification performed?</li>
+                                <li>• Were all energy sources identified?</li>
+                                <li>• Was the person competent and authorized?</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Preview -->
+    <section class="py-16 lg:py-24 bg-navy-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Simple Pricing</h2>
+                <p class="text-xl text-gray-300">Free to start. Upgrade when you need more.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-navy-700 rounded-2xl p-8 border border-navy-600">
+                    <div class="text-lg font-bold mb-2">Free</div>
+                    <div class="text-4xl font-bold mb-4">$0</div>
+                    <ul class="space-y-3 mb-8 text-sm text-gray-300">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            5 analyses per month
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Basic AI coaching
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            PDF export
+                        </li>
+                    </ul>
+                    <div class="text-sm text-gray-500">Perfect for trying it out</div>
+                </div>
+                
+                <div class="bg-gradient-to-b from-cyan-500/10 to-navy-700 rounded-2xl p-8 border border-cyan-500/30 relative">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-cyan-500 text-navy-900 text-xs font-bold px-3 py-1 rounded-full">
+                        MOST POPULAR
+                    </div>
+                    <div class="text-lg font-bold mb-2">Pro</div>
+                    <div class="text-4xl font-bold mb-4">$4.99<span class="text-lg text-gray-400">/mo</span></div>
+                    <ul class="space-y-3 mb-8 text-sm text-gray-300">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Unlimited analyses
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Voice input
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Industry templates
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Team sharing
+                        </li>
+                    </ul>
+                    <div class="text-sm text-gray-500">For serious safety professionals</div>
+                </div>
+                
+                <div class="bg-navy-700 rounded-2xl p-8 border border-navy-600">
+                    <div class="text-lg font-bold mb-2">Enterprise</div>
+                    <div class="text-4xl font-bold mb-4">Contact</div>
+                    <ul class="space-y-3 mb-8 text-sm text-gray-300">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Everything in Pro
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            InvestigatePro integration
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            SSO & admin controls
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Custom branding
+                        </li>
+                    </ul>
+                    <div class="text-sm text-gray-500">For organizations</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Waitlist CTA -->
+    <section id="waitlist" class="py-16 lg:py-24 bg-navy-900">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="bg-gradient-to-b from-cyan-500/10 to-navy-800 rounded-3xl p-8 lg:p-12 border border-cyan-500/20">
+                <div class="inline-flex items-center bg-cyan-500/20 rounded-full px-4 py-1.5 mb-6">
+                    <span class="w-2 h-2 bg-cyan-500 rounded-full mr-2 animate-pulse"></span>
+                    <span class="text-sm text-cyan-400">Coming Q2 2026</span>
+                </div>
+                
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Be First in Line</h2>
+                <p class="text-xl text-gray-300 mb-8">
+                    Join the waitlist for early access, beta testing opportunities, 
+                    and a lifetime discount when we launch.
+                </p>
+                
+                <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" action="https://formspree.io/f/your-form-id" method="POST">
+                    <input type="hidden" name="source" value="5whys-ai-waitlist">
+                    <input type="hidden" name="app" value="5whys-ai">
+                    <input 
+                        type="email" 
+                        name="email" 
+                        placeholder="Enter your work email" 
+                        required
+                        class="flex-1 px-4 py-3 bg-navy-700 border border-navy-600 rounded-lg focus:outline-none focus:border-cyan-500 text-white placeholder-gray-400"
+                    >
+                    <button type="submit" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-6 py-3 rounded-lg font-semibold transition-colors whitespace-nowrap">
+                        Join Waitlist
+                    </button>
+                </form>
+                
+                <p class="text-sm text-gray-500 mt-4">No spam. Just launch updates and early access.</p>
+                
+                <div class="flex justify-center gap-8 mt-8 pt-8 border-t border-navy-700">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-cyan-400">500+</div>
+                        <div class="text-sm text-gray-500">On waitlist</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-cyan-400">Q2 2026</div>
+                        <div class="text-sm text-gray-500">Expected launch</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-cyan-400">30%</div>
+                        <div class="text-sm text-gray-500">Early bird discount</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 border-t border-navy-700 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <img src="../assets/logos/logo-03-on-dark.png" alt="InvestigatePro" class="h-12">
+                </div>
+                <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
+                    <a href="/" class="hover:text-white transition-colors">Home</a>
+                    <a href="/apps/" class="hover:text-white transition-colors">Mobile Apps</a>
+                    <a href="/apps/psif-spotter.html" class="hover:text-white transition-colors">pSIF Spotter</a>
+                    <a href="/privacy.html" class="hover:text-white transition-colors">Privacy</a>
+                    <a href="mailto:hello@investigatepro.app" class="hover:text-white transition-colors">Contact</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-navy-700 text-center text-sm text-gray-500">
+                © 2026 InvestigatePro. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Analytics -->
+    <script src="../analytics.js"></script>
+</body>
+</html>

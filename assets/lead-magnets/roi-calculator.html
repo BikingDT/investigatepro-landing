@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigation ROI Calculator | InvestigatePro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0C142E;
+            --navy-light: #1a2744;
+            --cyan: #76DCEC;
+            --cyan-dark: #5bc4d4;
+            --white: #FFFFFF;
+            --gray-100: #f7f8fa;
+            --gray-200: #e5e7eb;
+            --gray-400: #9ca3af;
+            --gray-600: #4b5563;
+            --green: #10b981;
+            --red: #ef4444;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--navy);
+            color: var(--white);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--cyan);
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            color: var(--gray-400);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .calculator {
+            background: var(--navy-light);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--cyan);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section-title::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 24px;
+            background: var(--cyan);
+            border-radius: 2px;
+        }
+
+        .input-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-label {
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--gray-200);
+        }
+
+        .input-hint {
+            font-size: 0.75rem;
+            color: var(--gray-400);
+            margin-top: 0.25rem;
+        }
+
+        input[type="number"], select {
+            background: var(--navy);
+            border: 1px solid var(--gray-600);
+            border-radius: 8px;
+            padding: 0.875rem 1rem;
+            font-size: 1rem;
+            color: var(--white);
+            font-family: inherit;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        input[type="number"]:focus, select:focus {
+            outline: none;
+            border-color: var(--cyan);
+            box-shadow: 0 0 0 3px rgba(118, 220, 236, 0.2);
+        }
+
+        input[type="number"]::placeholder {
+            color: var(--gray-400);
+        }
+
+        .results {
+            background: linear-gradient(135deg, var(--navy-light) 0%, #162040 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid rgba(118, 220, 236, 0.2);
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .result-card {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            padding: 1.25rem;
+            text-align: center;
+        }
+
+        .result-label {
+            font-size: 0.875rem;
+            color: var(--gray-400);
+            margin-bottom: 0.5rem;
+        }
+
+        .result-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .result-value.positive {
+            color: var(--green);
+        }
+
+        .result-value.negative {
+            color: var(--red);
+        }
+
+        .result-value.cyan {
+            color: var(--cyan);
+        }
+
+        .result-subtext {
+            font-size: 0.75rem;
+            color: var(--gray-400);
+            margin-top: 0.25rem;
+        }
+
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 1rem;
+            align-items: stretch;
+            margin-top: 2rem;
+        }
+
+        .comparison-card {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+
+        .comparison-card.current {
+            border: 1px solid var(--gray-600);
+        }
+
+        .comparison-card.improved {
+            border: 1px solid var(--cyan);
+        }
+
+        .comparison-header {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .comparison-card.current .comparison-header {
+            color: var(--gray-400);
+        }
+
+        .comparison-card.improved .comparison-header {
+            color: var(--cyan);
+        }
+
+        .comparison-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.875rem;
+        }
+
+        .comparison-item:last-child {
+            border-bottom: none;
+        }
+
+        .comparison-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--cyan);
+            font-size: 1.5rem;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .cta-text {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--gray-200);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--cyan);
+            color: var(--navy);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .cta-button:hover {
+            background: var(--cyan-dark);
+            transform: translateY(-2px);
+        }
+
+        .hidden-costs {
+            margin-top: 2rem;
+        }
+
+        .hidden-cost-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background: rgba(239, 68, 68, 0.1);
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+            border-left: 3px solid var(--red);
+        }
+
+        .hidden-cost-label {
+            font-size: 0.875rem;
+        }
+
+        .hidden-cost-value {
+            font-weight: 600;
+            color: var(--red);
+        }
+
+        .industry-presets {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .preset-btn {
+            background: transparent;
+            border: 1px solid var(--gray-600);
+            color: var(--gray-200);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .preset-btn:hover, .preset-btn.active {
+            background: var(--cyan);
+            border-color: var(--cyan);
+            color: var(--navy);
+        }
+
+        .disclaimer {
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--gray-400);
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.75rem;
+            }
+            
+            .comparison {
+                grid-template-columns: 1fr;
+            }
+            
+            .comparison-arrow {
+                transform: rotate(90deg);
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .calculator, .results {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">InvestigatePro</div>
+            <h1>Investigation ROI Calculator</h1>
+            <p class="subtitle">Calculate the true cost of your current investigation process — and see what better investigations could save.</p>
+        </header>
+
+        <div class="calculator">
+            <div class="section-title">Industry Benchmarks</div>
+            <div class="industry-presets">
+                <button class="preset-btn" onclick="setPreset('mining')">Mining</button>
+                <button class="preset-btn" onclick="setPreset('construction')">Construction</button>
+                <button class="preset-btn" onclick="setPreset('manufacturing')">Manufacturing</button>
+                <button class="preset-btn" onclick="setPreset('oil-gas')">Oil & Gas</button>
+                <button class="preset-btn" onclick="setPreset('custom')">Custom</button>
+            </div>
+
+            <div class="section-title">Your Current State</div>
+            <div class="input-grid">
+                <div class="input-group">
+                    <label class="input-label">Recordable incidents per year</label>
+                    <input type="number" id="incidentCount" placeholder="12" min="0" oninput="calculate()">
+                    <span class="input-hint">OSHA recordables or equivalent</span>
+                </div>
+                <div class="input-group">
+                    <label class="input-label">Average cost per incident ($)</label>
+                    <input type="number" id="incidentCost" placeholder="47000" min="0" oninput="calculate()">
+                    <span class="input-hint">Direct + indirect costs (typically 4x direct)</span>
+                </div>
+                <div class="input-group">
+                    <label class="input-label">Days to close investigation</label>
+                    <input type="number" id="investigationDays" placeholder="14" min="1" oninput="calculate()">
+                    <span class="input-hint">From incident to final report</span>
+                </div>
+                <div class="input-group">
+                    <label class="input-label">Investigation hours per incident</label>
+                    <input type="number" id="investigationHours" placeholder="40" min="1" oninput="calculate()">
+                    <span class="input-hint">Total person-hours invested</span>
+                </div>
+                <div class="input-group">
+                    <label class="input-label">Investigator hourly cost ($)</label>
+                    <input type="number" id="hourlyRate" placeholder="75" min="0" oninput="calculate()">
+                    <span class="input-hint">Fully loaded labor cost</span>
+                </div>
+                <div class="input-group">
+                    <label class="input-label">Repeat incident rate (%)</label>
+                    <input type="number" id="repeatRate" placeholder="30" min="0" max="100" oninput="calculate()">
+                    <span class="input-hint">Similar incidents within 12 months</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="results">
+            <div class="section-title">Your Annual Impact</div>
+            
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-label">Current Annual Cost</div>
+                    <div class="result-value negative" id="currentCost">$564,000</div>
+                    <div class="result-subtext">Total incident-related costs</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-label">Investigation Labor Cost</div>
+                    <div class="result-value" id="laborCost">$36,000</div>
+                    <div class="result-subtext">Hours × rate × incidents</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-label">Potential Annual Savings</div>
+                    <div class="result-value positive" id="savings">$187,000</div>
+                    <div class="result-subtext">With improved investigations</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-label">ROI on InvestigatePro</div>
+                    <div class="result-value cyan" id="roi">1,045%</div>
+                    <div class="result-subtext">First year return</div>
+                </div>
+            </div>
+
+            <div class="hidden-costs">
+                <div class="section-title">Hidden Costs You're Absorbing</div>
+                <div class="hidden-cost-item">
+                    <span class="hidden-cost-label">🔄 Repeat incidents (preventable)</span>
+                    <span class="hidden-cost-value" id="repeatCost">$169,200</span>
+                </div>
+                <div class="hidden-cost-item">
+                    <span class="hidden-cost-label">⏱️ Extended investigation time</span>
+                    <span class="hidden-cost-value" id="timeCost">$21,600</span>
+                </div>
+                <div class="hidden-cost-item">
+                    <span class="hidden-cost-label">📋 Regulatory risk exposure</span>
+                    <span class="hidden-cost-value" id="regCost">$50,000+</span>
+                </div>
+                <div class="hidden-cost-item">
+                    <span class="hidden-cost-label">👥 Morale & retention impact</span>
+                    <span class="hidden-cost-value" id="moraleCost">Unquantified</span>
+                </div>
+            </div>
+
+            <div class="comparison">
+                <div class="comparison-card current">
+                    <div class="comparison-header">📋 Current State</div>
+                    <div class="comparison-item">
+                        <span>Investigation time</span>
+                        <span id="currentTime">14 days</span>
+                    </div>
+                    <div class="comparison-item">
+                        <span>Hours per investigation</span>
+                        <span id="currentHours">40 hrs</span>
+                    </div>
+                    <div class="comparison-item">
+                        <span>Root cause quality</span>
+                        <span>~20% find true RC</span>
+                    </div>
+                    <div class="comparison-item">
+                        <span>Repeat incident rate</span>
+                        <span id="currentRepeat">30%</span>
+                    </div>
+                    <div class="comparison-item">
+                        <span>Annual cost</span>
+                        <span id="currentTotal">$564,000</span>
+                    </div>
+                </div>
+
+                <div class="comparison-arrow">→</div>
+
+                <div class="comparison-card improved">
+                    <div class="comparison-header">🚀 With InvestigatePro</div>
+                    <div class="comparison-item">
+                        <span>Investigation time</span>
+                        <span id="improvedTime">5 days</span>
+                    </div>
+                    <div class="comparison-item">
+                        <span>Hours per investigation</span>
+                        <span id="improvedHours">16 hrs</span>
+                    </div>
+                    <div class="comparison-item">
+                        <span>Root cause quality</span>
+                        <span>~80% find true RC</span>
+                    </div>
+                    <div class="comparison-item">
+                        <span>Repeat incident rate</span>
+                        <span id="improvedRepeat">12%</span>
+                    </div>
+                    <div class="comparison-item">
+                        <span>Annual cost</span>
+                        <span id="improvedTotal" style="color: var(--green)">$377,000</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <p class="cta-text">See how InvestigatePro can transform your investigation process</p>
+                <a href="https://investigatepro.app" class="cta-button">Get Your Full ROI Assessment →</a>
+            </div>
+        </div>
+
+        <p class="disclaimer">
+            Calculations based on industry benchmarks (OSHA, NSC, Bureau of Labor Statistics). 
+            Actual results vary by organization. InvestigatePro improvement estimates based on ICAM methodology outcomes.
+        </p>
+    </div>
+
+    <script>
+        const presets = {
+            'mining': { incidents: 15, cost: 62000, days: 21, hours: 48, rate: 85, repeat: 35 },
+            'construction': { incidents: 18, cost: 47000, days: 14, hours: 32, rate: 65, repeat: 40 },
+            'manufacturing': { incidents: 12, cost: 38000, days: 10, hours: 24, rate: 55, repeat: 28 },
+            'oil-gas': { incidents: 8, cost: 85000, days: 28, hours: 60, rate: 95, repeat: 25 },
+            'custom': { incidents: '', cost: '', days: '', hours: '', rate: '', repeat: '' }
+        };
+
+        function setPreset(type) {
+            const preset = presets[type];
+            document.getElementById('incidentCount').value = preset.incidents;
+            document.getElementById('incidentCost').value = preset.cost;
+            document.getElementById('investigationDays').value = preset.days;
+            document.getElementById('investigationHours').value = preset.hours;
+            document.getElementById('hourlyRate').value = preset.rate;
+            document.getElementById('repeatRate').value = preset.repeat;
+
+            document.querySelectorAll('.preset-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            calculate();
+        }
+
+        function formatCurrency(num) {
+            if (num >= 1000000) {
+                return '$' + (num / 1000000).toFixed(1) + 'M';
+            }
+            return '$' + num.toLocaleString('en-US');
+        }
+
+        function calculate() {
+            const incidents = parseFloat(document.getElementById('incidentCount').value) || 12;
+            const incidentCost = parseFloat(document.getElementById('incidentCost').value) || 47000;
+            const days = parseFloat(document.getElementById('investigationDays').value) || 14;
+            const hours = parseFloat(document.getElementById('investigationHours').value) || 40;
+            const rate = parseFloat(document.getElementById('hourlyRate').value) || 75;
+            const repeatRate = parseFloat(document.getElementById('repeatRate').value) || 30;
+
+            // Current costs
+            const totalIncidentCost = incidents * incidentCost;
+            const laborCost = incidents * hours * rate;
+            const repeatCost = (repeatRate / 100) * totalIncidentCost;
+            const currentTotal = totalIncidentCost + laborCost;
+
+            // Improved state (InvestigatePro assumptions)
+            const improvedDays = Math.round(days * 0.36); // 64% reduction
+            const improvedHours = Math.round(hours * 0.4); // 60% reduction
+            const improvedRepeatRate = repeatRate * 0.4; // 60% reduction in repeats
+            const improvedIncidentCost = incidentCost * (1 - (repeatRate - improvedRepeatRate) / 100);
+            const improvedLaborCost = incidents * improvedHours * rate;
+            const improvedRepeatCost = (improvedRepeatRate / 100) * (incidents * incidentCost);
+            
+            // Savings calculation
+            const laborSavings = laborCost - improvedLaborCost;
+            const repeatSavings = repeatCost - improvedRepeatCost;
+            const totalSavings = laborSavings + repeatSavings;
+
+            // InvestigatePro cost (Team plan)
+            const investigateProCost = 149 * 12; // $149/month annual
+            const netSavings = totalSavings - investigateProCost;
+            const roi = ((netSavings / investigateProCost) * 100).toFixed(0);
+
+            // Improved total
+            const improvedTotal = (incidents * incidentCost * (1 - (repeatRate - improvedRepeatRate) / 200)) + improvedLaborCost;
+
+            // Time cost (opportunity cost of slow investigations)
+            const timeCost = incidents * (days - improvedDays) * (rate * 8 * 0.1); // 10% of daily rate
+
+            // Update display
+            document.getElementById('currentCost').textContent = formatCurrency(currentTotal);
+            document.getElementById('laborCost').textContent = formatCurrency(laborCost);
+            document.getElementById('savings').textContent = formatCurrency(Math.max(0, netSavings));
+            document.getElementById('roi').textContent = roi + '%';
+
+            document.getElementById('repeatCost').textContent = formatCurrency(repeatCost);
+            document.getElementById('timeCost').textContent = formatCurrency(timeCost);
+
+            document.getElementById('currentTime').textContent = days + ' days';
+            document.getElementById('currentHours').textContent = hours + ' hrs';
+            document.getElementById('currentRepeat').textContent = repeatRate + '%';
+            document.getElementById('currentTotal').textContent = formatCurrency(currentTotal);
+
+            document.getElementById('improvedTime').textContent = improvedDays + ' days';
+            document.getElementById('improvedHours').textContent = improvedHours + ' hrs';
+            document.getElementById('improvedRepeat').textContent = improvedRepeatRate.toFixed(0) + '%';
+            document.getElementById('improvedTotal').textContent = formatCurrency(improvedTotal);
+        }
+
+        // Initial calculation
+        calculate();
+    </script>
+</body>
+</html>

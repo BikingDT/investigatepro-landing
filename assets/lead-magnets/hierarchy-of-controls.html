@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hierarchy of Controls Poster — InvestigatePro</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --navy-900: #0C142E;
+            --navy-800: #0F1A3A;
+            --navy-700: #1A2744;
+            --cyan-500: #76DCEC;
+            --green-500: #22C55E;
+            --lime-500: #84CC16;
+            --yellow-500: #EAB308;
+            --orange-500: #F97316;
+            --red-500: #EF4444;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #1a1a1a;
+        }
+        
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        
+        @media print {
+            body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+        
+        .poster {
+            width: 8.27in;
+            min-height: 11.69in;
+            margin: 20px auto;
+            background: white;
+            padding: 0.5in;
+            color: var(--navy-900);
+        }
+        
+        @media screen {
+            .poster {
+                box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+                border-radius: 8px;
+            }
+        }
+        
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.3in;
+            padding-bottom: 0.2in;
+            border-bottom: 4px solid var(--navy-900);
+        }
+        
+        .header h1 {
+            font-size: 28pt;
+            font-weight: 900;
+            line-height: 1.1;
+        }
+        
+        .header h1 span {
+            color: var(--cyan-500);
+        }
+        
+        .header-logo {
+            height: 50px;
+        }
+        
+        /* Intro */
+        .intro {
+            background: #F3F4F6;
+            padding: 16px 20px;
+            border-radius: 12px;
+            margin-bottom: 0.3in;
+            font-size: 11pt;
+            line-height: 1.5;
+            color: #374151;
+        }
+        
+        .intro strong {
+            color: var(--navy-900);
+        }
+        
+        /* Pyramid */
+        .pyramid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 0.3in;
+        }
+        
+        .level {
+            display: flex;
+            align-items: stretch;
+            gap: 0;
+        }
+        
+        .level-rank {
+            width: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 28pt;
+            font-weight: 900;
+            border-radius: 12px 0 0 12px;
+            flex-shrink: 0;
+        }
+        
+        .level-content {
+            flex: 1;
+            padding: 20px 24px;
+            border-radius: 0 12px 12px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .level-1 .level-rank { background: var(--green-500); }
+        .level-1 .level-content { background: #DCFCE7; }
+        
+        .level-2 .level-rank { background: var(--lime-500); }
+        .level-2 .level-content { background: #ECFCCB; }
+        
+        .level-3 .level-rank { background: var(--yellow-500); }
+        .level-3 .level-content { background: #FEF9C3; }
+        
+        .level-4 .level-rank { background: var(--orange-500); }
+        .level-4 .level-content { background: #FFEDD5; }
+        
+        .level-5 .level-rank { background: var(--red-500); }
+        .level-5 .level-content { background: #FEE2E2; }
+        
+        .level-text h3 {
+            font-size: 14pt;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+        
+        .level-text p {
+            font-size: 10pt;
+            color: #4B5563;
+        }
+        
+        .level-examples {
+            text-align: right;
+            font-size: 9pt;
+            color: #6B7280;
+            max-width: 200px;
+        }
+        
+        .effectiveness {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 60px;
+            margin-bottom: 0.25in;
+        }
+        
+        .effectiveness-label {
+            font-size: 10pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .effectiveness-arrow {
+            flex: 1;
+            height: 2px;
+            background: linear-gradient(90deg, var(--green-500), var(--red-500));
+            margin: 0 20px;
+        }
+        
+        .effectiveness-high { color: var(--green-500); }
+        .effectiveness-low { color: var(--red-500); }
+        
+        /* Key Points */
+        .key-points {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 0.25in;
+        }
+        
+        .key-point {
+            background: #F9FAFB;
+            border-left: 4px solid var(--cyan-500);
+            padding: 12px 16px;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .key-point h4 {
+            font-size: 10pt;
+            font-weight: 700;
+            color: var(--navy-900);
+            margin-bottom: 4px;
+        }
+        
+        .key-point p {
+            font-size: 9pt;
+            color: #4B5563;
+            line-height: 1.4;
+        }
+        
+        /* Mistakes */
+        .mistakes {
+            background: #FEF2F2;
+            border: 2px solid #FECACA;
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-bottom: 0.25in;
+        }
+        
+        .mistakes h3 {
+            font-size: 11pt;
+            font-weight: 700;
+            color: #991B1B;
+            margin-bottom: 8px;
+        }
+        
+        .mistakes ul {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 6px 20px;
+            list-style: none;
+            padding: 0;
+        }
+        
+        .mistakes li {
+            font-size: 9pt;
+            color: #7F1D1D;
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
+        }
+        
+        .mistakes li::before {
+            content: '✗';
+            color: var(--red-500);
+            font-weight: 700;
+        }
+        
+        /* Footer CTA */
+        .footer-cta {
+            background: var(--navy-900);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer-cta p {
+            font-size: 11pt;
+        }
+        
+        .footer-cta strong {
+            font-size: 12pt;
+        }
+        
+        .footer-cta .url {
+            background: var(--cyan-500);
+            color: var(--navy-900);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 11pt;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="poster">
+        <div class="header">
+            <h1>Hierarchy of<br><span>Controls</span></h1>
+            <img src="../logos/logo-03-lettermark-ip.png" alt="InvestigatePro" class="header-logo">
+        </div>
+        
+        <div class="intro">
+            <strong>The Hierarchy of Controls</strong> ranks control measures by effectiveness. Always start at the top — higher controls don't rely on human behavior to work, making them more reliable at preventing incidents.
+        </div>
+        
+        <div class="pyramid">
+            <div class="level level-1">
+                <div class="level-rank">1</div>
+                <div class="level-content">
+                    <div class="level-text">
+                        <h3>Elimination</h3>
+                        <p>Remove the hazard completely</p>
+                    </div>
+                    <div class="level-examples">
+                        Eliminate the task, remove the substance, redesign the process
+                    </div>
+                </div>
+            </div>
+            
+            <div class="level level-2">
+                <div class="level-rank">2</div>
+                <div class="level-content">
+                    <div class="level-text">
+                        <h3>Substitution</h3>
+                        <p>Replace with something less hazardous</p>
+                    </div>
+                    <div class="level-examples">
+                        Safer chemical, quieter equipment, automated process
+                    </div>
+                </div>
+            </div>
+            
+            <div class="level level-3">
+                <div class="level-rank">3</div>
+                <div class="level-content">
+                    <div class="level-text">
+                        <h3>Engineering Controls</h3>
+                        <p>Physically isolate people from the hazard</p>
+                    </div>
+                    <div class="level-examples">
+                        Guards, barriers, ventilation, interlocks, alarms
+                    </div>
+                </div>
+            </div>
+            
+            <div class="level level-4">
+                <div class="level-rank">4</div>
+                <div class="level-content">
+                    <div class="level-text">
+                        <h3>Administrative Controls</h3>
+                        <p>Change how people work</p>
+                    </div>
+                    <div class="level-examples">
+                        Procedures, training, signage, job rotation, supervision
+                    </div>
+                </div>
+            </div>
+            
+            <div class="level level-5">
+                <div class="level-rank">5</div>
+                <div class="level-content">
+                    <div class="level-text">
+                        <h3>PPE</h3>
+                        <p>Protect the individual worker</p>
+                    </div>
+                    <div class="level-examples">
+                        Safety glasses, gloves, hearing protection, harnesses
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="effectiveness">
+            <span class="effectiveness-label effectiveness-high">Most Effective</span>
+            <div class="effectiveness-arrow"></div>
+            <span class="effectiveness-label effectiveness-low">Least Effective</span>
+        </div>
+        
+        <div class="key-points">
+            <div class="key-point">
+                <h4>💡 Start at the Top</h4>
+                <p>Always ask: "Can we eliminate or substitute first?" before defaulting to admin controls and PPE.</p>
+            </div>
+            <div class="key-point">
+                <h4>💡 Combine Controls</h4>
+                <p>Multiple layers of control are often needed. Don't rely on a single measure.</p>
+            </div>
+            <div class="key-point">
+                <h4>💡 Human Behavior</h4>
+                <p>Controls 4 & 5 require perfect human compliance every time. That's why they fail most often.</p>
+            </div>
+            <div class="key-point">
+                <h4>💡 Verify Effectiveness</h4>
+                <p>After implementing controls, verify they actually work and are maintained over time.</p>
+            </div>
+        </div>
+        
+        <div class="mistakes">
+            <h3>❌ Common Corrective Action Mistakes</h3>
+            <ul>
+                <li>"Retrain all workers" (doesn't address root cause)</li>
+                <li>"Add more warning signs" (signs don't stop incidents)</li>
+                <li>"Remind people to be careful" (not actionable)</li>
+                <li>"Update the procedure" (if the old one wasn't followed, why will this one be?)</li>
+                <li>"Increase supervision" (vague and unsustainable)</li>
+                <li>"Discipline the worker" (doesn't fix the system)</li>
+            </ul>
+        </div>
+        
+        <div class="footer-cta">
+            <div>
+                <strong>Get the Complete ICAM Toolkit</strong>
+                <p>23 pages of professional investigation templates</p>
+            </div>
+            <div class="url">investigatepro.app/icam-toolkit</div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pSIF Spotter — Train Your Eye for Potential Fatality Events</title>
+    <meta name="description" content="Build competence and confidence in identifying Potential Serious Injury or Fatality (pSIF) events through scenario-based training. The skill that prevents the next fatality.">
+    <link rel="icon" type="image/png" href="../assets/logos/logo-03-icon-only.png">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://investigatepro.app/apps/psif-spotter.html">
+    <meta property="og:title" content="pSIF Spotter — Identify High-Potential Incidents">
+    <meta property="og:description" content="Train your eye to see what could have killed. Scenario-based pSIF identification training.">
+    <meta property="og:image" content="https://investigatepro.app/assets/logos/logo-03-on-dark.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            900: '#0C142E',
+                            800: '#0F1A3A',
+                            700: '#1A2744',
+                            600: '#2A3A5C',
+                            500: '#3D4F70',
+                        },
+                        cyan: {
+                            500: '#76DCEC',
+                            400: '#88E0EE',
+                            300: '#A8EAF3',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-hero { background: linear-gradient(180deg, #0C142E 0%, #1A2744 100%); }
+        .glow-orange { box-shadow: 0 0 60px rgba(251, 146, 60, 0.2); }
+        .phone-mockup {
+            background: linear-gradient(145deg, #1A2744 0%, #0C142E 100%);
+            border-radius: 40px;
+            padding: 12px;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.5), inset 0 0 0 2px rgba(251, 146, 60, 0.1);
+        }
+        .phone-screen {
+            background: #0C142E;
+            border-radius: 32px;
+            overflow: hidden;
+        }
+        .psif-yes { background: linear-gradient(135deg, rgba(239, 68, 68, 0.2) 0%, rgba(239, 68, 68, 0.05) 100%); border: 1px solid rgba(239, 68, 68, 0.3); }
+        .psif-no { background: linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(34, 197, 94, 0.05) 100%); border: 1px solid rgba(34, 197, 94, 0.3); }
+    </style>
+</head>
+<body class="font-sans antialiased bg-navy-900 text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-navy-900/95 backdrop-blur-sm z-50 border-b border-navy-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="/">
+                        <img src="../assets/logos/logo-03-on-dark.png" alt="InvestigatePro" class="h-[80px] sm:h-[120px] lg:h-[150px]">
+                    </a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="/#features" class="hidden sm:inline text-gray-300 hover:text-white transition-colors">Features</a>
+                    <a href="/apps/" class="hidden sm:inline text-cyan-400 font-medium">Apps</a>
+                    <a href="/#demo" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-5 py-2 rounded-lg font-semibold transition-colors">
+                        Start Free Trial
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-hero pt-44 pb-16 lg:pt-56 lg:pb-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                
+                <!-- Left: Copy -->
+                <div>
+                    <div class="inline-flex items-center bg-navy-700 rounded-full px-4 py-1.5 mb-6">
+                        <span class="w-2 h-2 bg-orange-500 rounded-full mr-2 animate-pulse"></span>
+                        <span class="text-sm text-gray-300">Coming Soon — Join the Waitlist</span>
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        pSIF Spotter
+                    </h1>
+                    
+                    <p class="text-xl lg:text-2xl text-orange-400 font-medium mb-4">
+                        Train your eye to see what could have killed
+                    </p>
+                    
+                    <p class="text-lg text-gray-300 mb-8">
+                        The difference between a near-miss and a fatality is often just luck. 
+                        Build the skill to recognize Potential Serious Injury or Fatality events 
+                        before luck runs out.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <a href="#waitlist" class="bg-orange-500 hover:bg-orange-400 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center">
+                            Join the Waitlist
+                        </a>
+                        <a href="#why-psif" class="border border-gray-600 hover:border-orange-500 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center">
+                            Why pSIF Matters
+                        </a>
+                    </div>
+                    
+                    <div class="flex items-center gap-6 text-sm text-gray-400">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-orange-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                            </svg>
+                            iOS & Android
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-orange-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                            </svg>
+                            Earn Certifications
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-orange-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                            Team Leaderboards
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right: Phone Mockup -->
+                <div class="flex justify-center lg:justify-end">
+                    <div class="phone-mockup w-[300px] lg:w-[340px] glow-orange">
+                        <div class="phone-screen p-4 min-h-[580px]">
+                            <!-- App Header -->
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="text-lg font-bold">pSIF Spotter</div>
+                                <div class="flex items-center text-sm">
+                                    <span class="text-orange-400 mr-1">🔥</span>
+                                    <span class="text-gray-400">12 streak</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Scenario Card -->
+                            <div class="bg-navy-700 rounded-xl p-4 mb-4">
+                                <div class="text-xs text-gray-500 mb-2">SCENARIO 24 of 50</div>
+                                <div class="text-sm mb-3">
+                                    A worker was using a grinder when the disc shattered. 
+                                    Fragments struck his face shield, cracking it. 
+                                    Worker was uninjured but shaken.
+                                </div>
+                                <div class="bg-navy-600 rounded-lg h-32 flex items-center justify-center mb-3">
+                                    <div class="text-center">
+                                        <div class="text-3xl mb-1">🥽</div>
+                                        <div class="text-xs text-gray-500">Cracked face shield</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Question -->
+                            <div class="text-center mb-4">
+                                <div class="text-lg font-bold mb-2">Is this a pSIF event?</div>
+                                <div class="text-xs text-gray-500">Could this have resulted in serious injury or death?</div>
+                            </div>
+                            
+                            <!-- Answer Buttons -->
+                            <div class="grid grid-cols-2 gap-3 mb-4">
+                                <button class="psif-yes rounded-xl py-4 text-center">
+                                    <div class="text-2xl mb-1">⚠️</div>
+                                    <div class="font-semibold text-red-400">Yes</div>
+                                    <div class="text-xs text-gray-500">High potential</div>
+                                </button>
+                                <button class="psif-no rounded-xl py-4 text-center">
+                                    <div class="text-2xl mb-1">✓</div>
+                                    <div class="font-semibold text-green-400">No</div>
+                                    <div class="text-xs text-gray-500">Low potential</div>
+                                </button>
+                            </div>
+                            
+                            <!-- Progress -->
+                            <div class="mt-auto">
+                                <div class="flex justify-between text-xs text-gray-500 mb-1">
+                                    <span>Progress</span>
+                                    <span>48%</span>
+                                </div>
+                                <div class="h-2 bg-navy-700 rounded-full overflow-hidden">
+                                    <div class="h-full bg-orange-500 rounded-full" style="width: 48%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Why pSIF Matters -->
+    <section id="why-psif" class="py-16 lg:py-24 bg-navy-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Why pSIF Identification is Critical</h2>
+                <p class="text-xl text-gray-300">
+                    Most fatalities are preceded by near-misses. The question is: did anyone recognize them?
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-red-500/20 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">The Iceberg Problem</h3>
+                                <p class="text-gray-400">
+                                    For every fatality, there are hundreds of near-misses with the same potential. 
+                                    Most go unrecognized and unreported.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Outcome Bias</h3>
+                                <p class="text-gray-400">
+                                    We judge incidents by what happened, not what could have happened. 
+                                    A minor injury gets minor attention — even when it was nearly fatal.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Trainable Skill</h3>
+                                <p class="text-gray-400">
+                                    pSIF identification isn't intuition — it's a skill that can be developed 
+                                    through practice. That's exactly what this app does.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-navy-700 rounded-2xl p-8 border border-navy-600">
+                    <div class="text-center mb-6">
+                        <div class="text-6xl font-bold text-orange-400 mb-2">90%</div>
+                        <div class="text-gray-400">of workplace fatalities were preceded by near-misses with the same hazard profile</div>
+                    </div>
+                    <div class="border-t border-navy-600 pt-6 mt-6">
+                        <div class="text-sm text-gray-500 mb-4">Organizations that accurately identify pSIF events:</div>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Focus resources on high-severity-potential events
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Prevent the next fatality before it happens
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Demonstrate mature safety culture
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Assessment Framework -->
+    <section class="py-16 lg:py-24 bg-navy-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">The pSIF Assessment Framework</h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    A structured approach to evaluating whether an incident had serious potential — built into every scenario.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+                <div class="bg-navy-800 rounded-xl p-6 border border-navy-600 text-center">
+                    <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">⚡</span>
+                    </div>
+                    <div class="font-bold mb-2">1. Energy ID</div>
+                    <p class="text-sm text-gray-400">What hazardous energies were present?</p>
+                </div>
+                
+                <div class="bg-navy-800 rounded-xl p-6 border border-navy-600 text-center">
+                    <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">👤</span>
+                    </div>
+                    <div class="font-bold mb-2">2. Exposure</div>
+                    <p class="text-sm text-gray-400">How exposed was the person?</p>
+                </div>
+                
+                <div class="bg-navy-800 rounded-xl p-6 border border-navy-600 text-center">
+                    <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🎲</span>
+                    </div>
+                    <div class="font-bold mb-2">3. Variability</div>
+                    <p class="text-sm text-gray-400">What made this outcome low-severity?</p>
+                </div>
+                
+                <div class="bg-navy-800 rounded-xl p-6 border border-navy-600 text-center">
+                    <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🔄</span>
+                    </div>
+                    <div class="font-bold mb-2">4. Counterfactual</div>
+                    <p class="text-sm text-gray-400">Change one variable — does severity change?</p>
+                </div>
+                
+                <div class="bg-navy-800 rounded-xl p-6 border border-navy-600 text-center">
+                    <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">✓</span>
+                    </div>
+                    <div class="font-bold mb-2">5. Classify</div>
+                    <p class="text-sm text-gray-400">pSIF: Yes, No, or Escalate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-16 lg:py-24 bg-navy-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">How pSIF Spotter Works</h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    Learn by doing. 50+ real scenarios. Instant feedback. Track your improvement.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Training Mode -->
+                <div class="bg-navy-700 rounded-2xl p-8 border border-navy-600">
+                    <div class="w-14 h-14 bg-gradient-to-br from-orange-400 to-red-500 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Training Mode</h3>
+                    <p class="text-gray-400 mb-4">
+                        Work through 50+ scenarios from real incidents. Each one presents a situation 
+                        and asks: "Is this a pSIF?" Get instant feedback with detailed explanations.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li class="flex items-center">
+                            <span class="text-orange-400 mr-2">→</span>
+                            Beginner, Intermediate, Expert levels
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-orange-400 mr-2">→</span>
+                            Industry-specific scenarios
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-orange-400 mr-2">→</span>
+                            Detailed learning explanations
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Assessment Mode -->
+                <div class="bg-navy-700 rounded-2xl p-8 border border-navy-600">
+                    <div class="w-14 h-14 bg-gradient-to-br from-cyan-400 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-navy-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Assessment Mode</h3>
+                    <p class="text-gray-400 mb-4">
+                        Assess your own real incidents using the structured pSIF framework. 
+                        The app guides you through each step and provides a recommendation.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li class="flex items-center">
+                            <span class="text-cyan-400 mr-2">→</span>
+                            Enter your own incidents
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-cyan-400 mr-2">→</span>
+                            Guided framework walkthrough
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-cyan-400 mr-2">→</span>
+                            Export assessments to PDF
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Team Mode -->
+                <div class="bg-navy-700 rounded-2xl p-8 border border-navy-600">
+                    <div class="w-14 h-14 bg-gradient-to-br from-purple-400 to-purple-500 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Team Mode</h3>
+                    <p class="text-gray-400 mb-4">
+                        Train your whole team. Track competency across the organization. 
+                        Create friendly competition with leaderboards.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li class="flex items-center">
+                            <span class="text-purple-400 mr-2">→</span>
+                            Team leaderboards
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-purple-400 mr-2">→</span>
+                            Manager competency dashboard
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-purple-400 mr-2">→</span>
+                            Custom organization scenarios
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scenario Examples -->
+    <section class="py-16 lg:py-24 bg-navy-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Example Scenarios</h2>
+                <p class="text-xl text-gray-300">Real situations. Real learning.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Scenario 1 -->
+                <div class="bg-navy-800 rounded-xl overflow-hidden border border-navy-600">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-sm text-gray-500">Mining</span>
+                            <span class="bg-red-500/20 text-red-400 text-xs font-medium px-2 py-1 rounded">pSIF: YES</span>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            A haul truck reversed close to a light vehicle. The LV driver 
+                            saw it coming and moved forward. No contact was made.
+                        </p>
+                        <div class="bg-navy-700 rounded-lg p-4 text-sm">
+                            <div class="text-orange-400 font-medium mb-2">Why it's a pSIF:</div>
+                            <p class="text-gray-400">
+                                The energy differential between a haul truck and light vehicle 
+                                is extreme. The only thing preventing a fatality was the LV driver's 
+                                awareness. Under different circumstances (blind spot, fatigue, 
+                                distraction), this would have been fatal.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Scenario 2 -->
+                <div class="bg-navy-800 rounded-xl overflow-hidden border border-navy-600">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-sm text-gray-500">Construction</span>
+                            <span class="bg-green-500/20 text-green-400 text-xs font-medium px-2 py-1 rounded">pSIF: NO</span>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            Worker stepped on a nail that penetrated their work boot. 
+                            First aid treatment only. Worker returned to work next day.
+                        </p>
+                        <div class="bg-navy-700 rounded-lg p-4 text-sm">
+                            <div class="text-cyan-400 font-medium mb-2">Why it's NOT a pSIF:</div>
+                            <p class="text-gray-400">
+                                While painful, the energy involved (nail penetration) has limited 
+                                severity potential. Even under worse circumstances (deeper 
+                                penetration, infection), serious injury or fatality is unlikely. 
+                                This is a standard housekeeping issue.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gamification -->
+    <section class="py-16 lg:py-24 bg-navy-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-6">
+                        Learning That<br>
+                        <span class="text-orange-400">Sticks</span>
+                    </h2>
+                    <p class="text-lg text-gray-300 mb-6">
+                        Gamification isn't just fun — it drives engagement and retention. 
+                        pSIF Spotter uses game mechanics to make safety training actually effective.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mr-4">
+                                <span class="text-2xl">🔥</span>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Daily Streaks</div>
+                                <div class="text-sm text-gray-400">Build habits with streak tracking</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mr-4">
+                                <span class="text-2xl">🏆</span>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Leaderboards</div>
+                                <div class="text-sm text-gray-400">Compete with colleagues and teams</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mr-4">
+                                <span class="text-2xl">🎖️</span>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Certifications</div>
+                                <div class="text-sm text-gray-400">Earn badges for completing scenario sets</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mr-4">
+                                <span class="text-2xl">📈</span>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Progress Tracking</div>
+                                <div class="text-sm text-gray-400">Watch your accuracy improve over time</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-navy-700 rounded-2xl p-8 border border-navy-600">
+                    <div class="text-center mb-6">
+                        <div class="text-sm text-gray-500 mb-2">CERTIFICATION</div>
+                        <div class="inline-block bg-gradient-to-br from-orange-400 to-red-500 rounded-2xl p-6 mb-4">
+                            <div class="text-5xl">🎖️</div>
+                        </div>
+                        <div class="text-xl font-bold">pSIF Spotter — Gold</div>
+                        <div class="text-gray-400">90%+ accuracy on 50 scenarios</div>
+                    </div>
+                    
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-400">Scenarios completed</span>
+                            <span class="font-semibold">50/50</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-400">Accuracy</span>
+                            <span class="font-semibold text-green-400">94%</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-400">Best streak</span>
+                            <span class="font-semibold">23 correct</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-400">Time invested</span>
+                            <span class="font-semibold">4.2 hours</span>
+                        </div>
+                    </div>
+                    
+                    <button class="w-full mt-6 bg-navy-600 hover:bg-navy-500 text-white py-3 rounded-lg font-medium transition-colors">
+                        Share Certificate
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="py-16 lg:py-24 bg-navy-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Simple Pricing</h2>
+                <p class="text-xl text-gray-300">Free to try. Upgrade for your team.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-navy-800 rounded-2xl p-8 border border-navy-600">
+                    <div class="text-lg font-bold mb-2">Free</div>
+                    <div class="text-4xl font-bold mb-4">$0</div>
+                    <ul class="space-y-3 mb-8 text-sm text-gray-300">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-orange-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            10 training scenarios
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-orange-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Basic progress tracking
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-orange-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Learning explanations
+                        </li>
+                    </ul>
+                    <div class="text-sm text-gray-500">Try before you commit</div>
+                </div>
+                
+                <div class="bg-gradient-to-b from-orange-500/10 to-navy-800 rounded-2xl p-8 border border-orange-500/30 relative">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                        MOST POPULAR
+                    </div>
+                    <div class="text-lg font-bold mb-2">Pro</div>
+                    <div class="text-4xl font-bold mb-4">$4.99<span class="text-lg text-gray-400">/mo</span></div>
+                    <ul class="space-y-3 mb-8 text-sm text-gray-300">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-orange-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Full scenario library (50+)
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-orange-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Certifications
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-orange-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Global leaderboards
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-orange-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Assessment mode
+                        </li>
+                    </ul>
+                    <div class="text-sm text-gray-500">For safety professionals</div>
+                </div>
+                
+                <div class="bg-navy-800 rounded-2xl p-8 border border-navy-600">
+                    <div class="text-lg font-bold mb-2">Team</div>
+                    <div class="text-4xl font-bold mb-4">$19.99<span class="text-lg text-gray-400">/mo</span></div>
+                    <div class="text-sm text-gray-400 mb-4">Up to 5 users</div>
+                    <ul class="space-y-3 mb-8 text-sm text-gray-300">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-orange-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Everything in Pro
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-orange-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Team leaderboards
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-orange-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Manager dashboard
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-orange-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Custom scenarios
+                        </li>
+                    </ul>
+                    <div class="text-sm text-gray-500">For safety teams</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Waitlist CTA -->
+    <section id="waitlist" class="py-16 lg:py-24 bg-navy-800">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="bg-gradient-to-b from-orange-500/10 to-navy-700 rounded-3xl p-8 lg:p-12 border border-orange-500/20">
+                <div class="inline-flex items-center bg-orange-500/20 rounded-full px-4 py-1.5 mb-6">
+                    <span class="w-2 h-2 bg-orange-500 rounded-full mr-2 animate-pulse"></span>
+                    <span class="text-sm text-orange-400">Coming Q2 2026</span>
+                </div>
+                
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Train Your Team First</h2>
+                <p class="text-xl text-gray-300 mb-8">
+                    Join the waitlist for early access. Be among the first to build 
+                    pSIF identification skills across your organization.
+                </p>
+                
+                <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" action="https://formspree.io/f/your-form-id" method="POST">
+                    <input type="hidden" name="source" value="psif-spotter-waitlist">
+                    <input type="hidden" name="app" value="psif-spotter">
+                    <input 
+                        type="email" 
+                        name="email" 
+                        placeholder="Enter your work email" 
+                        required
+                        class="flex-1 px-4 py-3 bg-navy-700 border border-navy-600 rounded-lg focus:outline-none focus:border-orange-500 text-white placeholder-gray-400"
+                    >
+                    <button type="submit" class="bg-orange-500 hover:bg-orange-400 text-white px-6 py-3 rounded-lg font-semibold transition-colors whitespace-nowrap">
+                        Join Waitlist
+                    </button>
+                </form>
+                
+                <p class="text-sm text-gray-500 mt-4">No spam. Just launch updates and early access.</p>
+                
+                <div class="flex justify-center gap-8 mt-8 pt-8 border-t border-navy-700">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-orange-400">50+</div>
+                        <div class="text-sm text-gray-500">Launch scenarios</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-orange-400">Q2 2026</div>
+                        <div class="text-sm text-gray-500">Expected launch</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-orange-400">Free</div>
+                        <div class="text-sm text-gray-500">Beta access</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 border-t border-navy-700 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <img src="../assets/logos/logo-03-on-dark.png" alt="InvestigatePro" class="h-12">
+                </div>
+                <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
+                    <a href="/" class="hover:text-white transition-colors">Home</a>
+                    <a href="/apps/" class="hover:text-white transition-colors">Mobile Apps</a>
+                    <a href="/apps/5whys-ai.html" class="hover:text-white transition-colors">5 Whys AI</a>
+                    <a href="/privacy.html" class="hover:text-white transition-colors">Privacy</a>
+                    <a href="mailto:hello@investigatepro.app" class="hover:text-white transition-colors">Contact</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-navy-700 text-center text-sm text-gray-500">
+                © 2026 InvestigatePro. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Analytics -->
+    <script src="../analytics.js"></script>
+</body>
+</html>
