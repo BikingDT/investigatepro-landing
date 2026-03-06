@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .banner {
+      width: 1584px;
+      height: 396px;
+      background: linear-gradient(135deg, #0C142E 0%, #0C142E 70%, #0f1a38 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      padding: 0 80px;
+    }
+    
+    /* Decorative elements */
+    .accent-shape {
+      position: absolute;
+      right: -50px;
+      top: -100px;
+      width: 500px;
+      height: 600px;
+      background: linear-gradient(180deg, rgba(118, 220, 236, 0.15) 0%, rgba(118, 220, 236, 0.02) 100%);
+      transform: rotate(15deg);
+      border-radius: 50px;
+    }
+    
+    .accent-line {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #76DCEC 0%, transparent 50%);
+    }
+    
+    .grid-pattern {
+      position: absolute;
+      right: 100px;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.1;
+    }
+    
+    .grid-pattern svg {
+      width: 300px;
+      height: 300px;
+    }
+    
+    /* Content */
+    .content {
+      position: relative;
+      z-index: 10;
+    }
+    
+    .logo-text {
+      font-size: 72px;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: -2px;
+      margin-bottom: 8px;
+    }
+    
+    .logo-text span {
+      color: #76DCEC;
+    }
+    
+    .tagline {
+      font-size: 26px;
+      font-weight: 600;
+      color: #76DCEC;
+      margin-bottom: 12px;
+    }
+    
+    .subtitle {
+      font-size: 20px;
+      color: #9CA3AF;
+      margin-bottom: 20px;
+    }
+    
+    .url {
+      display: inline-block;
+      font-size: 18px;
+      color: #FFFFFF;
+      background: rgba(118, 220, 236, 0.15);
+      padding: 8px 20px;
+      border-radius: 6px;
+      border: 1px solid rgba(118, 220, 236, 0.3);
+    }
+    
+    /* Right side icon/graphic */
+    .icon-container {
+      position: absolute;
+      right: 120px;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.9;
+    }
+    
+    .icon-container svg {
+      width: 180px;
+      height: 180px;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <div class="accent-shape"></div>
+    <div class="accent-line"></div>
+    
+    <!-- Grid pattern decoration -->
+    <div class="grid-pattern">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="10" cy="10" r="2" fill="#76DCEC"/>
+        <circle cx="30" cy="10" r="2" fill="#76DCEC"/>
+        <circle cx="50" cy="10" r="2" fill="#76DCEC"/>
+        <circle cx="70" cy="10" r="2" fill="#76DCEC"/>
+        <circle cx="90" cy="10" r="2" fill="#76DCEC"/>
+        <circle cx="10" cy="30" r="2" fill="#76DCEC"/>
+        <circle cx="30" cy="30" r="2" fill="#76DCEC"/>
+        <circle cx="50" cy="30" r="2" fill="#76DCEC"/>
+        <circle cx="70" cy="30" r="2" fill="#76DCEC"/>
+        <circle cx="90" cy="30" r="2" fill="#76DCEC"/>
+        <circle cx="10" cy="50" r="2" fill="#76DCEC"/>
+        <circle cx="30" cy="50" r="2" fill="#76DCEC"/>
+        <circle cx="50" cy="50" r="2" fill="#76DCEC"/>
+        <circle cx="70" cy="50" r="2" fill="#76DCEC"/>
+        <circle cx="90" cy="50" r="2" fill="#76DCEC"/>
+        <circle cx="10" cy="70" r="2" fill="#76DCEC"/>
+        <circle cx="30" cy="70" r="2" fill="#76DCEC"/>
+        <circle cx="50" cy="70" r="2" fill="#76DCEC"/>
+        <circle cx="70" cy="70" r="2" fill="#76DCEC"/>
+        <circle cx="90" cy="70" r="2" fill="#76DCEC"/>
+        <circle cx="10" cy="90" r="2" fill="#76DCEC"/>
+        <circle cx="30" cy="90" r="2" fill="#76DCEC"/>
+        <circle cx="50" cy="90" r="2" fill="#76DCEC"/>
+        <circle cx="70" cy="90" r="2" fill="#76DCEC"/>
+        <circle cx="90" cy="90" r="2" fill="#76DCEC"/>
+      </svg>
+    </div>
+    
+    <!-- Investigation icon -->
+    <div class="icon-container">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Magnifying glass -->
+        <circle cx="40" cy="40" r="25" stroke="#76DCEC" stroke-width="4" fill="none"/>
+        <line x1="58" y1="58" x2="80" y2="80" stroke="#76DCEC" stroke-width="6" stroke-linecap="round"/>
+        <!-- AI sparkles -->
+        <circle cx="35" cy="35" r="3" fill="#76DCEC"/>
+        <circle cx="45" cy="30" r="2" fill="#76DCEC" opacity="0.7"/>
+        <circle cx="30" cy="45" r="2" fill="#76DCEC" opacity="0.7"/>
+        <!-- Checkmark inside -->
+        <path d="M30 40 L38 48 L52 32" stroke="#76DCEC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    
+    <div class="content">
+      <div class="logo-text">Investigate<span>Pro</span></div>
+      <div class="tagline">AI-Powered Incident Investigation</div>
+      <div class="subtitle">Find Root Causes Faster. Prevent Recurrence.</div>
+      <div class="url">investigatepro.app</div>
+    </div>
+  </div>
+</body>
+</html>

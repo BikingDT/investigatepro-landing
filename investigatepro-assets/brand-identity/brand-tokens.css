@@ -1,0 +1,163 @@
+/* InvestigatePro Brand Tokens
+ * CSS Custom Properties for consistent styling
+ * Last updated: February 2026
+ */
+
+:root {
+  /* ========================================
+   * PRIMARY COLORS - Navy
+   * ======================================== */
+  --ip-navy-900: #0C142E;
+  --ip-navy-800: #0F1A3A;
+  --ip-navy-700: #1A2744;
+  --ip-navy-600: #2A3A5C;
+  --ip-navy-500: #3D4F70;
+
+  /* ========================================
+   * PRIMARY COLORS - Cyan (Accent)
+   * ======================================== */
+  --ip-cyan-500: #76DCEC;
+  --ip-cyan-400: #88E0EE;
+  --ip-cyan-300: #A8EAF3;
+  --ip-cyan-200: #C8F1F8;
+  --ip-cyan-100: #E8F9FC;
+  --ip-cyan-50: #F4FCFD;
+
+  /* ========================================
+   * NEUTRALS
+   * ======================================== */
+  --ip-white: #FFFFFF;
+  --ip-gray-50: #F8FAFC;
+  --ip-gray-100: #F1F5F9;
+  --ip-gray-200: #E2E8F0;
+  --ip-gray-300: #CBD5E1;
+  --ip-gray-400: #94A3B8;
+  --ip-gray-500: #64748B;
+  --ip-gray-600: #475569;
+  --ip-gray-700: #334155;
+  --ip-gray-800: #1E293B;
+  --ip-gray-900: #0F172A;
+
+  /* ========================================
+   * SEMANTIC COLORS
+   * ======================================== */
+  --ip-success: #10B981;
+  --ip-success-light: #D1FAE5;
+  --ip-warning: #F59E0B;
+  --ip-warning-light: #FEF3C7;
+  --ip-error: #EF4444;
+  --ip-error-light: #FEE2E2;
+  --ip-info: #3B82F6;
+  --ip-info-light: #DBEAFE;
+
+  /* ========================================
+   * GRADIENTS
+   * ======================================== */
+  --ip-gradient-logo: linear-gradient(135deg, #FFFFFF 0%, #76DCEC 100%);
+  --ip-gradient-hero: linear-gradient(180deg, #0C142E 0%, #1A2744 100%);
+  --ip-gradient-accent: linear-gradient(135deg, #76DCEC 0%, #88E0EE 100%);
+
+  /* ========================================
+   * TYPOGRAPHY
+   * ======================================== */
+  --ip-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --ip-font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+
+  /* Font Sizes */
+  --ip-text-xs: 0.75rem;    /* 12px */
+  --ip-text-sm: 0.875rem;   /* 14px */
+  --ip-text-base: 1rem;     /* 16px */
+  --ip-text-lg: 1.125rem;   /* 18px */
+  --ip-text-xl: 1.25rem;    /* 20px */
+  --ip-text-2xl: 1.5rem;    /* 24px */
+  --ip-text-3xl: 1.875rem;  /* 30px */
+  --ip-text-4xl: 2.25rem;   /* 36px */
+  --ip-text-5xl: 3rem;      /* 48px */
+
+  /* Font Weights */
+  --ip-font-light: 300;
+  --ip-font-regular: 400;
+  --ip-font-medium: 500;
+  --ip-font-semibold: 600;
+  --ip-font-bold: 700;
+
+  /* Line Heights */
+  --ip-leading-tight: 1.25;
+  --ip-leading-snug: 1.375;
+  --ip-leading-normal: 1.5;
+  --ip-leading-relaxed: 1.625;
+
+  /* ========================================
+   * SPACING
+   * ======================================== */
+  --ip-space-1: 0.25rem;    /* 4px */
+  --ip-space-2: 0.5rem;     /* 8px */
+  --ip-space-3: 0.75rem;    /* 12px */
+  --ip-space-4: 1rem;       /* 16px */
+  --ip-space-5: 1.25rem;    /* 20px */
+  --ip-space-6: 1.5rem;     /* 24px */
+  --ip-space-8: 2rem;       /* 32px */
+  --ip-space-10: 2.5rem;    /* 40px */
+  --ip-space-12: 3rem;      /* 48px */
+  --ip-space-16: 4rem;      /* 64px */
+
+  /* ========================================
+   * BORDERS & RADIUS
+   * ======================================== */
+  --ip-radius-sm: 4px;
+  --ip-radius-md: 8px;
+  --ip-radius-lg: 12px;
+  --ip-radius-xl: 16px;
+  --ip-radius-full: 9999px;
+
+  --ip-border-width: 1px;
+  --ip-border-color: var(--ip-gray-300);
+
+  /* ========================================
+   * SHADOWS
+   * ======================================== */
+  --ip-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --ip-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --ip-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --ip-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* ========================================
+   * TRANSITIONS
+   * ======================================== */
+  --ip-transition-fast: 150ms ease;
+  --ip-transition-base: 200ms ease;
+  --ip-transition-slow: 300ms ease;
+
+  /* ========================================
+   * Z-INDEX SCALE
+   * ======================================== */
+  --ip-z-dropdown: 100;
+  --ip-z-sticky: 200;
+  --ip-z-modal: 300;
+  --ip-z-popover: 400;
+  --ip-z-tooltip: 500;
+}
+
+/* ========================================
+ * DARK MODE OVERRIDES
+ * ======================================== */
+[data-theme="dark"],
+.dark {
+  --ip-bg-primary: var(--ip-navy-900);
+  --ip-bg-secondary: var(--ip-navy-700);
+  --ip-text-primary: var(--ip-white);
+  --ip-text-secondary: var(--ip-gray-300);
+  --ip-border-color: var(--ip-navy-600);
+}
+
+/* ========================================
+ * LIGHT MODE DEFAULTS
+ * ======================================== */
+[data-theme="light"],
+:root {
+  --ip-bg-primary: var(--ip-white);
+  --ip-bg-secondary: var(--ip-gray-50);
+  --ip-text-primary: var(--ip-gray-900);
+  --ip-text-secondary: var(--ip-gray-500);
+  --ip-border-color: var(--ip-gray-300);
+}
