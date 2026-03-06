@@ -336,12 +336,12 @@
                         <a href="#demo" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-200 text-center glow-cyan cursor-pointer hover:scale-[1.02]">
                             Start Free Trial
                         </a>
-                        <a href="#demo" class="glass-light hover:bg-white/10 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-200 text-center cursor-pointer flex items-center justify-center gap-2">
+                        <button onclick="openVideoModal()" class="glass-light hover:bg-white/10 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-200 text-center cursor-pointer flex items-center justify-center gap-2">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
                             </svg>
                             Watch Demo
-                        </a>
+                        </button>
                     </div>
                     
                     <p class="mt-4 text-gray-400 text-sm">14-day free trial • No credit card required</p>
@@ -1147,5 +1147,56 @@
     </script>
 
     <script src="/analytics.js"></script>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm" onclick="closeVideoModal(event)">
+        <div class="relative w-full max-w-5xl mx-auto" onclick="event.stopPropagation()">
+            <!-- Close Button -->
+            <button onclick="closeVideoModal()" class="absolute -top-12 right-0 text-white hover:text-cyan-500 transition-colors">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            
+            <!-- Video Container -->
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl" style="box-shadow: 0 0 60px rgba(118, 220, 236, 0.3);">
+                <video id="demoVideo" class="w-full" controls preload="metadata" poster="assets/logos/logo-03-on-dark.png">
+                    <source src="assets/demo-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
+            <!-- Caption -->
+            <p class="text-center text-gray-400 mt-4 text-sm">InvestigatePro Demo — AI-Powered Incident Investigation</p>
+        </div>
+    </div>
+
+    <script>
+        function openVideoModal() {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('demoVideo');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            video.play();
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeVideoModal(event) {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('demoVideo');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            video.pause();
+            video.currentTime = 0;
+            document.body.style.overflow = '';
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeVideoModal();
+            }
+        });
+    </script>
 </body>
 </html>
