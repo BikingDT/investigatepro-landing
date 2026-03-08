@@ -9,7 +9,7 @@
   'use strict';
   
   // Config - API endpoint
-  const ENDPOINT = 'https://investigatepro.72-62-211-212.sslip.io/api/analytics/pageview';
+  const ENDPOINT = 'https://api.investigatepro.app/api/analytics/pageview';
   const DEBUG = false;
   
   // Get referrer domain only (privacy-friendly)
