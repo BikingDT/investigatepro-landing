@@ -68,7 +68,7 @@
                 <div class="flex items-center space-x-6">
                     <a href="#features" class="hidden sm:inline text-gray-300 hover:text-white transition-colors">Features</a>
                     <a href="#pricing" class="hidden sm:inline text-gray-300 hover:text-white transition-colors">Pricing</a>
-                    <a href="#demo" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-5 py-2 rounded-lg font-semibold transition-colors">
+                    <a href="https://investigatepro.72-62-211-212.sslip.io/signup" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-5 py-2 rounded-lg font-semibold transition-colors">
                         Start Free Trial
                     </a>
                 </div>
@@ -97,7 +97,7 @@
                     </p>
                     
                     <div class="mt-8 flex flex-col sm:flex-row gap-4">
-                        <a href="#demo" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-8 py-4 rounded-lg font-bold text-lg transition-colors text-center glow-cyan">
+                        <a href="https://investigatepro.72-62-211-212.sslip.io/signup" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-8 py-4 rounded-lg font-bold text-lg transition-colors text-center glow-cyan">
                             Start Free Trial
                         </a>
                         <a href="#demo" class="border border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 px-8 py-4 rounded-lg font-bold text-lg transition-colors text-center">
@@ -397,7 +397,7 @@
                             <span class="line-through">AI features</span>
                         </li>
                     </ul>
-                    <a href="#demo" class="block text-center border border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 px-6 py-3 rounded-lg font-semibold transition-colors">
+                    <a href="https://investigatepro.72-62-211-212.sslip.io/signup?plan=starter" class="checkout-link block text-center border border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 px-6 py-3 rounded-lg font-semibold transition-colors" data-plan="starter" data-monthly="price_1T97ewLD9G1AzPTIFLj0vkGT" data-annual="price_1T97ewLD9G1AzPTI84HsB3rm">
                         Start Free Trial
                     </a>
                 </div>
@@ -453,7 +453,7 @@
                             Priority support + 30min onboarding
                         </li>
                     </ul>
-                    <a href="#demo" class="block text-center bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-6 py-3 rounded-lg font-semibold transition-colors">
+                    <a href="https://investigatepro.72-62-211-212.sslip.io/signup?plan=professional" class="checkout-link block text-center bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-6 py-3 rounded-lg font-semibold transition-colors" data-plan="professional" data-monthly="price_1T97exLD9G1AzPTIFTcda0KB" data-annual="price_1T97exLD9G1AzPTIDKDBB7mc">
                         Start Free Trial
                     </a>
                 </div>
@@ -506,7 +506,7 @@
                             Dedicated CSM + 2hr onboarding
                         </li>
                     </ul>
-                    <a href="#demo" class="block text-center border border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 px-6 py-3 rounded-lg font-semibold transition-colors">
+                    <a href="https://investigatepro.72-62-211-212.sslip.io/signup?plan=business" class="checkout-link block text-center border border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 px-6 py-3 rounded-lg font-semibold transition-colors" data-plan="business" data-monthly="price_1T97eyLD9G1AzPTI6GBGcc0S" data-annual="price_1T97eyLD9G1AzPTIMbQu93RY">
                         Start Free Trial
                     </a>
                 </div>
@@ -519,23 +519,37 @@
                     const annualBtn = document.getElementById('annual-btn');
                     const monthlyPrices = document.querySelectorAll('.price-monthly');
                     const annualPrices = document.querySelectorAll('.price-annual');
+                    const checkoutLinks = document.querySelectorAll('.checkout-link');
+                    let isAnnual = false;
+                    
+                    function updateCheckoutLinks() {
+                        checkoutLinks.forEach(link => {
+                            const plan = link.dataset.plan;
+                            const billing = isAnnual ? 'annual' : 'monthly';
+                            link.href = `https://investigatepro.72-62-211-212.sslip.io/signup?plan=${plan}&billing=${billing}`;
+                        });
+                    }
                     
                     monthlyBtn.addEventListener('click', function() {
+                        isAnnual = false;
                         monthlyBtn.classList.add('bg-cyan-500', 'text-navy-900');
                         monthlyBtn.classList.remove('text-gray-300');
                         annualBtn.classList.remove('bg-cyan-500', 'text-navy-900');
                         annualBtn.classList.add('text-gray-300');
                         monthlyPrices.forEach(el => el.classList.remove('hidden'));
                         annualPrices.forEach(el => el.classList.add('hidden'));
+                        updateCheckoutLinks();
                     });
                     
                     annualBtn.addEventListener('click', function() {
+                        isAnnual = true;
                         annualBtn.classList.add('bg-cyan-500', 'text-navy-900');
                         annualBtn.classList.remove('text-gray-300');
                         monthlyBtn.classList.remove('bg-cyan-500', 'text-navy-900');
                         monthlyBtn.classList.add('text-gray-300');
                         annualPrices.forEach(el => el.classList.remove('hidden'));
                         monthlyPrices.forEach(el => el.classList.add('hidden'));
+                        updateCheckoutLinks();
                     });
                 });
             </script>
@@ -552,10 +566,10 @@
                 Join safety teams who've switched from logging incidents to actually investigating them.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-8 py-4 rounded-lg font-bold text-lg transition-colors glow-cyan">
+                <a href="https://investigatepro.72-62-211-212.sslip.io/signup" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-8 py-4 rounded-lg font-bold text-lg transition-colors glow-cyan">
                     Start Your Free Trial
                 </a>
-                <a href="#" class="border border-gray-600 text-gray-300 hover:border-gray-400 hover:text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors">
+                <a href="https://cal.com/investigatepro/demo" class="border border-gray-600 text-gray-300 hover:border-gray-400 hover:text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors">
                     Book a Demo
                 </a>
             </div>
