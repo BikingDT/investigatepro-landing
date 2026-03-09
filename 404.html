@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvestigatePro</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/png" href="/assets/logos/logo-03-icon-only.png">
+    <style>
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: linear-gradient(180deg, #0C142E 0%, #1A2744 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            padding: 2rem;
+        }
+        .spinner {
+            border: 3px solid rgba(118, 220, 236, 0.3);
+            border-top: 3px solid #76DCEC;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .message {
+            color: #94a3b8;
+            font-size: 0.875rem;
+        }
+        .not-found {
+            max-width: 400px;
+        }
+        .not-found h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .not-found p {
+            color: #94a3b8;
+            margin-bottom: 1.5rem;
+        }
+        .btn {
+            display: inline-block;
+            background: #76DCEC;
+            color: #0C142E;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .btn:hover {
+            background: #88E0EE;
+        }
+    </style>
+    <script>
+        // Handle referral redirects
+        // URL format: investigatepro.app/r/CODE
+        (function() {
+            var path = window.location.pathname;
+            
+            // Check for referral link pattern
+            if (path.startsWith('/r/')) {
+                var code = path.replace(/^\/r\//, '').replace(/\/$/, '');
+                if (code && code !== '') {
+                    var appUrl = 'https://investigatepro.72-62-211-212.sslip.io';
+                    window.location.href = appUrl + '/signup?ref=' + encodeURIComponent(code);
+                    return;
+                }
+            }
+            
+            // If not a referral link, show 404 after a moment
+            setTimeout(function() {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('not-found').style.display = 'block';
+            }, 500);
+        })();
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div id="loading">
+            <div class="spinner"></div>
+            <p class="message">Loading...</p>
+        </div>
+        <div id="not-found" class="not-found" style="display: none;">
+            <h1>Page Not Found</h1>
+            <p>The page you're looking for doesn't exist or has been moved.</p>
+            <a href="/" class="btn">Go to Homepage</a>
+        </div>
+    </div>
+</body>
+</html>

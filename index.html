@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvestigatePro — AI-Powered Incident Investigation Software with ICAM</title>
+    <meta name="description" content="The first incident investigation platform with real ICAM methodology and AI coaching. Used by construction, mining, and manufacturing safety teams. Start free trial.">
+    <link rel="icon" type="image/png" href="assets/logos/logo-03-icon-only.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            900: '#0C142E',
+                            800: '#0F1A3A',
+                            700: '#1A2744',
+                            600: '#2A3A5C',
+                            500: '#3D4F70',
+                        },
+                        cyan: {
+                            500: '#76DCEC',
+                            400: '#88E0EE',
+                            300: '#A8EAF3',
+                            200: '#C8F1F8',
+                            100: '#E8F9FC',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-hero {
+            background: linear-gradient(180deg, #0C142E 0%, #1A2744 100%);
+        }
+        .gradient-accent {
+            background: linear-gradient(135deg, #FFFFFF 0%, #76DCEC 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .glow-cyan {
+            box-shadow: 0 0 40px rgba(118, 220, 236, 0.3);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased bg-navy-900 text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-navy-900/95 backdrop-blur-sm z-50 border-b border-navy-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <img src="assets/logos/logo-03-horizontal.png" alt="InvestigatePro" class="h-8">
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="#features" class="hidden sm:inline text-gray-300 hover:text-white transition-colors">Features</a>
+                    <a href="#pricing" class="hidden sm:inline text-gray-300 hover:text-white transition-colors">Pricing</a>
+                    <a href="#demo" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-5 py-2 rounded-lg font-semibold transition-colors">
+                        Start Free Trial
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-hero pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left: Copy -->
+                <div>
+                    <div class="inline-flex items-center bg-navy-700 rounded-full px-4 py-1.5 mb-6">
+                        <span class="w-2 h-2 bg-cyan-500 rounded-full mr-2 animate-pulse"></span>
+                        <span class="text-sm text-gray-300">AI-Powered ICAM Methodology</span>
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+                        Investigate Incidents<br>
+                        <span class="gradient-accent">Smarter, Not Harder</span>
+                    </h1>
+                    
+                    <p class="mt-6 text-xl text-gray-300 max-w-lg">
+                        The first incident investigation platform that combines real ICAM methodology with AI coaching — helping you find root causes faster.
+                    </p>
+                    
+                    <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                        <a href="#demo" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-8 py-4 rounded-lg font-bold text-lg transition-colors text-center glow-cyan">
+                            Start Free Trial
+                        </a>
+                        <a href="#demo" class="border border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 px-8 py-4 rounded-lg font-bold text-lg transition-colors text-center">
+                            Watch Demo
+                        </a>
+                    </div>
+                    
+                    <p class="mt-4 text-gray-400 text-sm">14-day free trial • No credit card required</p>
+                    
+                    <!-- Trust indicators -->
+                    <div class="mt-10 flex items-center space-x-8 text-gray-400 text-sm">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-cyan-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            ICAM Certified
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-cyan-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            SOC 2 Compliant
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right: Dashboard Preview -->
+                <div class="relative">
+                    <div class="bg-navy-700 rounded-xl p-2 glow-cyan">
+                        <div class="bg-white rounded-lg overflow-hidden">
+                            <!-- Mock Dashboard Header -->
+                            <div class="bg-navy-900 px-4 py-3 flex items-center justify-between">
+                                <div class="flex items-center space-x-2">
+                                    <img src="assets/logos/logo-03-icon-only.png" alt="" class="h-6 w-6">
+                                    <span class="text-white font-semibold text-sm">InvestigatePro</span>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <div class="w-3 h-3 rounded-full bg-gray-600"></div>
+                                    <div class="w-3 h-3 rounded-full bg-gray-600"></div>
+                                    <div class="w-3 h-3 rounded-full bg-gray-600"></div>
+                                </div>
+                            </div>
+                            <!-- Mock Dashboard Content -->
+                            <div class="p-6 bg-gray-50">
+                                <div class="flex space-x-2 mb-4">
+                                    <div class="px-3 py-1 bg-cyan-500 text-navy-900 text-xs font-medium rounded">Dashboard</div>
+                                    <div class="px-3 py-1 bg-gray-200 text-gray-600 text-xs rounded">Cases</div>
+                                    <div class="px-3 py-1 bg-gray-200 text-gray-600 text-xs rounded">Reports</div>
+                                </div>
+                                <div class="grid grid-cols-3 gap-4 mb-4">
+                                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                                        <div class="text-gray-500 text-xs mb-1">Open Cases</div>
+                                        <div class="text-2xl font-bold text-navy-900">24</div>
+                                        <div class="w-full h-1 bg-cyan-100 rounded mt-2">
+                                            <div class="w-3/4 h-1 bg-cyan-500 rounded"></div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                                        <div class="text-gray-500 text-xs mb-1">Critical</div>
+                                        <div class="text-2xl font-bold text-red-500">8</div>
+                                        <div class="w-full h-1 bg-red-100 rounded mt-2">
+                                            <div class="w-1/3 h-1 bg-red-500 rounded"></div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                                        <div class="text-gray-500 text-xs mb-1">Avg. Time</div>
+                                        <div class="text-2xl font-bold text-navy-900">1h 12m</div>
+                                        <div class="text-green-500 text-xs">↓ 23% faster</div>
+                                    </div>
+                                </div>
+                                <div class="bg-white p-4 rounded-lg shadow-sm">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <div class="text-sm font-medium text-navy-900">AI Root Cause Analysis</div>
+                                        <div class="text-xs text-cyan-500 font-medium">Active</div>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                            <div class="h-2 bg-gradient-to-r from-cyan-500 to-cyan-300 rounded-full" style="width: 78%"></div>
+                                        </div>
+                                        <span class="text-xs text-gray-500">78%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-20 bg-navy-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-6">
+                    Most "Investigation" Software Just <span class="text-cyan-500">Logs Incidents</span>
+                </h2>
+                <p class="text-xl text-gray-300">
+                    Your team needs proper ICAM methodology to find real root causes — not just another form to fill out.
+                </p>
+            </div>
+            
+            <div class="mt-16 grid md:grid-cols-3 gap-8">
+                <div class="bg-navy-700 rounded-xl p-6 border border-navy-600">
+                    <div class="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Blame-Focused</h3>
+                    <p class="text-gray-400">Legacy systems encourage finding who to blame instead of what went wrong in the system.</p>
+                </div>
+                
+                <div class="bg-navy-700 rounded-xl p-6 border border-navy-600">
+                    <div class="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Time-Consuming</h3>
+                    <p class="text-gray-400">Hours spent on paperwork and formatting instead of actual investigation work.</p>
+                </div>
+                
+                <div class="bg-navy-700 rounded-xl p-6 border border-navy-600">
+                    <div class="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">No Methodology</h3>
+                    <p class="text-gray-400">Just forms and checklists — no guided investigation process to find real root causes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-navy-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-6">
+                    Real ICAM Methodology.<br><span class="text-cyan-500">Powered by AI.</span>
+                </h2>
+                <p class="text-xl text-gray-300">
+                    InvestigatePro guides your team through every step of proper incident investigation.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-navy-800 rounded-xl p-6 border border-navy-700 hover:border-cyan-500/50 transition-colors">
+                    <div class="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Guided ICAM Workflow</h3>
+                    <p class="text-gray-400">Step-by-step investigation process following official ICAM methodology used by industry leaders.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-navy-800 rounded-xl p-6 border border-navy-700 hover:border-cyan-500/50 transition-colors">
+                    <div class="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">AI Root Cause Analysis</h3>
+                    <p class="text-gray-400">Our AI coach asks the right questions and helps identify contributing factors you might miss.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-navy-800 rounded-xl p-6 border border-navy-700 hover:border-cyan-500/50 transition-colors">
+                    <div class="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Visual PEEPO Charts</h3>
+                    <p class="text-gray-400">Automatically generate PEEPO contribution charts that communicate findings clearly to leadership.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="bg-navy-800 rounded-xl p-6 border border-navy-700 hover:border-cyan-500/50 transition-colors">
+                    <div class="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Team Collaboration</h3>
+                    <p class="text-gray-400">Involve witnesses, supervisors, and experts in the investigation process seamlessly.</p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="bg-navy-800 rounded-xl p-6 border border-navy-700 hover:border-cyan-500/50 transition-colors">
+                    <div class="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">One-Click Reports</h3>
+                    <p class="text-gray-400">Generate professional investigation reports instantly — no more hours formatting documents.</p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="bg-navy-800 rounded-xl p-6 border border-navy-700 hover:border-cyan-500/50 transition-colors">
+                    <div class="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Trend Analytics</h3>
+                    <p class="text-gray-400">Spot patterns across investigations and track improvement in your safety performance over time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="py-16 bg-navy-800 border-y border-navy-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-gray-400 mb-8">Trusted methodology used by leading safety teams</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
+                <span class="text-xl font-bold text-gray-400">BHP</span>
+                <span class="text-xl font-bold text-gray-400">Rio Tinto</span>
+                <span class="text-xl font-bold text-gray-400">Newmont</span>
+                <span class="text-xl font-bold text-gray-400">Anglo American</span>
+                <span class="text-xl font-bold text-gray-400">Glencore</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-navy-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-6">
+                    Simple, Transparent Pricing
+                </h2>
+                <p class="text-xl text-gray-300 mb-6">
+                    No per-seat licenses. No hidden fees. Just powerful investigation tools.
+                </p>
+                <!-- Annual toggle -->
+                <div class="inline-flex items-center bg-navy-800 rounded-full p-1">
+                    <button id="monthly-btn" class="px-4 py-2 rounded-full text-sm font-medium bg-cyan-500 text-navy-900">Monthly</button>
+                    <button id="annual-btn" class="px-4 py-2 rounded-full text-sm font-medium text-gray-300 hover:text-white">Annual <span class="text-cyan-400 text-xs">Save 15%</span></button>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Starter -->
+                <div class="bg-navy-800 rounded-xl p-8 border border-navy-700">
+                    <h3 class="text-lg font-semibold text-gray-300 mb-2">Starter</h3>
+                    <p class="text-gray-400 text-sm mb-4">Professional ICAM methodology for small teams</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold price-monthly">$149</span>
+                        <span class="text-4xl font-bold price-annual hidden">$127</span>
+                        <span class="text-gray-400">/month</span>
+                        <div class="text-sm text-gray-500 price-annual hidden">Billed annually at $1,519/yr</div>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-300">
+                            <svg class="w-5 h-5 text-cyan-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Up to 5 users, 1 site
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <svg class="w-5 h-5 text-cyan-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            10 investigations/month
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <svg class="w-5 h-5 text-cyan-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Full ICAM methodology
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <svg class="w-5 h-5 text-cyan-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            PEEPO data collection
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <svg class="w-5 h-5 text-cyan-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            3 regulatory report templates
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <svg class="w-5 h-5 text-gray-600 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="line-through">AI features</span>
+                        </li>
+                    </ul>
+                    <a href="#demo" class="block text-center border border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 px-6 py-3 rounded-lg font-semibold transition-colors">
+                        Start Free Trial
+                    </a>
+                </div>
+                
+                <!-- Professional (Highlighted) -->
+                <div class="bg-navy-800 rounded-xl p-8 border-2 border-cyan-500 relative glow-cyan">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-cyan-500 text-navy-900 px-3 py-1 rounded-full text-sm font-semibold">
+                        Most Popular
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-300 mb-2">Professional</h3>
+                    <p class="text-gray-400 text-sm mb-4">AI-powered investigations for growing teams</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold price-monthly">$349</span>
+                        <span class="text-4xl font-bold price-annual hidden">$297</span>
+                        <span class="text-gray-400">/month</span>
+                        <div class="text-sm text-gray-500 price-annual hidden">Billed annually at $3,560/yr</div>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-300">
+                            <svg class="w-5 h-5 text-cyan-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Up to 15 users, 5 sites
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <svg class="w-5 h-5 text-cyan-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            50 investigations/month
+                        </li>
+                        <li class="flex items-center text-white font-medium">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-cyan-400">✨ AI Coaching & Recommendations</span>
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <svg class="w-5 h-5 text-cyan-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            AI Root Cause Analysis
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <svg class="w-5 h-5 text-cyan-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            All 14 regulatory templates
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <svg class="w-5 h-5 text-cyan-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Priority support + 30min onboarding
+                        </li>
+                    </ul>
+                    <a href="#demo" class="block text-center bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-6 py-3 rounded-lg font-semibold transition-colors">
+                        Start Free Trial
+                    </a>
+                </div>
+                
+                <!-- Business -->
+                <div class="bg-navy-800 rounded-xl p-8 border border-navy-700 relative">
+                    <div class="absolute -top-3 right-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                        📱 Mobile Apps
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-300 mb-2">Business</h3>
+                    <p class="text-gray-400 text-sm mb-4">Complete platform with mobile apps included</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold price-monthly">$549</span>
+                        <span class="text-4xl font-bold price-annual hidden">$467</span>
+                        <span class="text-gray-400">/month</span>
+                        <div class="text-sm text-gray-500 price-annual hidden">Billed annually at $5,599/yr</div>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-300">
+                            <svg class="w-5 h-5 text-cyan-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <strong>Unlimited</strong> users & sites
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <svg class="w-5 h-5 text-cyan-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Everything in Professional
+                        </li>
+                        <li class="flex items-center text-white font-medium">
+                            <svg class="w-5 h-5 text-purple-400 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-purple-300">📱 Mobile App Suite (iOS/Android)</span>
+                        </li>
+                        <li class="flex items-center text-gray-400 text-sm pl-7">
+                            • 5 Whys AI • pSIF Spotter • Field Investigator
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <svg class="w-5 h-5 text-cyan-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            API Access & SSO/SAML
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <svg class="w-5 h-5 text-cyan-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Dedicated CSM + 2hr onboarding
+                        </li>
+                    </ul>
+                    <a href="#demo" class="block text-center border border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 px-6 py-3 rounded-lg font-semibold transition-colors">
+                        Start Free Trial
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Annual toggle script -->
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const monthlyBtn = document.getElementById('monthly-btn');
+                    const annualBtn = document.getElementById('annual-btn');
+                    const monthlyPrices = document.querySelectorAll('.price-monthly');
+                    const annualPrices = document.querySelectorAll('.price-annual');
+                    
+                    monthlyBtn.addEventListener('click', function() {
+                        monthlyBtn.classList.add('bg-cyan-500', 'text-navy-900');
+                        monthlyBtn.classList.remove('text-gray-300');
+                        annualBtn.classList.remove('bg-cyan-500', 'text-navy-900');
+                        annualBtn.classList.add('text-gray-300');
+                        monthlyPrices.forEach(el => el.classList.remove('hidden'));
+                        annualPrices.forEach(el => el.classList.add('hidden'));
+                    });
+                    
+                    annualBtn.addEventListener('click', function() {
+                        annualBtn.classList.add('bg-cyan-500', 'text-navy-900');
+                        annualBtn.classList.remove('text-gray-300');
+                        monthlyBtn.classList.remove('bg-cyan-500', 'text-navy-900');
+                        monthlyBtn.classList.add('text-gray-300');
+                        annualPrices.forEach(el => el.classList.remove('hidden'));
+                        monthlyPrices.forEach(el => el.classList.add('hidden'));
+                    });
+                });
+            </script>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="demo" class="py-20 bg-navy-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6">
+                Ready to Investigate <span class="text-cyan-500">Smarter</span>?
+            </h2>
+            <p class="text-xl text-gray-300 mb-8">
+                Join safety teams who've switched from logging incidents to actually investigating them.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-8 py-4 rounded-lg font-bold text-lg transition-colors glow-cyan">
+                    Start Your Free Trial
+                </a>
+                <a href="#" class="border border-gray-600 text-gray-300 hover:border-gray-400 hover:text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors">
+                    Book a Demo
+                </a>
+            </div>
+            <p class="mt-4 text-gray-400 text-sm">14-day free trial • No credit card required • Cancel anytime</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-navy-900 border-t border-navy-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <img src="assets/logos/logo-03-horizontal.png" alt="InvestigatePro" class="h-8">
+                </div>
+                <div class="flex space-x-6 text-gray-400 text-sm">
+                    <a href="#" class="hover:text-white transition-colors">Privacy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms</a>
+                    <a href="mailto:hello@investigatepro.app" class="hover:text-white transition-colors">Contact</a>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-gray-500 text-sm">
+                © 2026 InvestigatePro. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
