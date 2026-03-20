@@ -12,21 +12,23 @@
             font-family: 'Segoe UI', system-ui, sans-serif;
             color: #fff;
             padding: 20px;
+            overflow-x: hidden;
         }
-        .header { text-align: center; margin-bottom: 30px; }
+        .header { text-align: center; margin-bottom: 20px; }
         .header h1 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             color: #22C55E;
             text-shadow: 0 0 30px rgba(34, 197, 94, 0.6);
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
-        .header .live-badge {
+        .live-badge {
             display: inline-block;
             background: #22C55E;
             color: #000;
             padding: 5px 15px;
             border-radius: 20px;
             font-weight: bold;
+            font-size: 0.85rem;
             animation: pulse 1.5s infinite;
         }
         @keyframes pulse {
@@ -36,101 +38,215 @@
         .status-bar {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            margin-bottom: 30px;
+            gap: 20px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
         }
         .status-item {
             display: flex;
             align-items: center;
-            gap: 8px;
-            padding: 10px 20px;
+            gap: 6px;
+            padding: 8px 16px;
             background: rgba(34, 197, 94, 0.1);
             border-radius: 20px;
             border: 1px solid rgba(34, 197, 94, 0.4);
+            font-size: 0.85rem;
         }
         .status-dot {
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
             background: #22C55E;
-            box-shadow: 0 0 10px #22C55E;
+            box-shadow: 0 0 8px #22C55E;
             animation: blink 1s infinite;
         }
         @keyframes blink {
             0%, 100% { opacity: 1; }
-            50% { opacity: 0.6; }
+            50% { opacity: 0.5; }
         }
+        
+        /* Main Layout */
         .swarm-container {
-            position: relative;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
+            position: relative;
         }
-        .tier {
+        
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin: 30px 0 15px;
+            position: relative;
+        }
+        .section-header h2 {
+            display: inline-block;
+            background: linear-gradient(90deg, transparent, rgba(118, 220, 236, 0.2), transparent);
+            padding: 8px 30px;
+            border-radius: 20px;
+            color: #76DCEC;
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+        
+        /* Agent Nodes */
+        .agent-row {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin-bottom: 30px;
+            gap: 15px;
+            margin: 15px 0;
+            flex-wrap: wrap;
             position: relative;
             z-index: 2;
-            flex-wrap: wrap;
         }
         .agent-node {
-            width: 150px;
-            padding: 18px 12px;
-            background: linear-gradient(145deg, rgba(34, 197, 94, 0.15), rgba(34, 197, 94, 0.05));
-            border-radius: 16px;
+            width: 140px;
+            padding: 14px 10px;
+            background: linear-gradient(145deg, rgba(34, 197, 94, 0.12), rgba(34, 197, 94, 0.04));
+            border-radius: 14px;
             border: 2px solid #22C55E;
             text-align: center;
             transition: all 0.3s ease;
             position: relative;
-            box-shadow: 0 0 20px rgba(34, 197, 94, 0.2);
         }
         .agent-node:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 10px 40px rgba(34, 197, 94, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(34, 197, 94, 0.4);
         }
+        .agent-icon { font-size: 1.8rem; margin-bottom: 6px; }
+        .agent-name { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 4px; }
+        .agent-status { font-size: 0.65rem; color: #22C55E; margin-bottom: 4px; }
+        .agent-detail { font-size: 0.6rem; color: #9CA3AF; line-height: 1.3; }
+        
+        /* Special Nodes */
         .agent-node.controller {
-            width: 260px;
+            width: 220px;
             background: linear-gradient(145deg, rgba(118, 220, 236, 0.2), rgba(118, 220, 236, 0.05));
             border-color: #76DCEC;
-            box-shadow: 0 0 30px rgba(118, 220, 236, 0.3);
+            box-shadow: 0 0 25px rgba(118, 220, 236, 0.3);
         }
         .agent-node.database {
-            width: 300px;
+            width: 280px;
             background: linear-gradient(145deg, rgba(147, 51, 234, 0.2), rgba(147, 51, 234, 0.05));
             border-color: #9333EA;
             box-shadow: 0 0 25px rgba(147, 51, 234, 0.3);
         }
-        .agent-icon { font-size: 2.2rem; margin-bottom: 8px; }
-        .agent-name { font-weight: 600; font-size: 0.85rem; margin-bottom: 5px; }
-        .agent-status {
-            font-size: 0.7rem;
-            padding: 3px 10px;
-            border-radius: 10px;
-            display: inline-block;
-            margin-bottom: 6px;
-            background: rgba(34, 197, 94, 0.2);
-            color: #22C55E;
-            font-weight: 600;
+        .agent-node.pipeline {
+            border-color: #F59E0B;
+            background: linear-gradient(145deg, rgba(245, 158, 11, 0.15), rgba(245, 158, 11, 0.05));
         }
-        .agent-detail { font-size: 0.65rem; color: #9CA3AF; line-height: 1.3; }
-        .flow-section { text-align: center; margin: 15px 0; }
+        .agent-node.pipeline .agent-status { color: #F59E0B; }
+        .agent-node.webhook {
+            border-color: #EC4899;
+            background: linear-gradient(145deg, rgba(236, 72, 153, 0.15), rgba(236, 72, 153, 0.05));
+        }
+        .agent-node.webhook .agent-status { color: #EC4899; }
+        
+        /* Flow Connections */
+        .flow-container {
+            position: relative;
+            margin: 10px 0;
+        }
         .flow-arrow {
+            text-align: center;
             color: #22C55E;
             font-size: 1.2rem;
-            animation: flowDown 1s infinite;
+            opacity: 0.7;
+            animation: flowPulse 1.5s infinite;
         }
-        @keyframes flowDown {
-            0%, 100% { transform: translateY(0); opacity: 1; }
-            50% { transform: translateY(5px); opacity: 0.6; }
+        @keyframes flowPulse {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 1; }
         }
-        .connection-lines {
+        
+        /* Pipeline Flow (Horizontal) */
+        .pipeline-flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin: 15px 0;
+            padding: 20px;
+            background: rgba(245, 158, 11, 0.05);
+            border-radius: 16px;
+            border: 1px solid rgba(245, 158, 11, 0.2);
+        }
+        .pipeline-node {
+            padding: 10px 14px;
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.4);
+            border-radius: 10px;
+            text-align: center;
+            min-width: 100px;
+        }
+        .pipeline-node .p-icon { font-size: 1.4rem; }
+        .pipeline-node .p-name { font-size: 0.65rem; font-weight: 600; margin-top: 4px; color: #F59E0B; }
+        .pipeline-node .p-tool { font-size: 0.55rem; color: #9CA3AF; }
+        .pipeline-arrow {
+            color: #F59E0B;
+            font-size: 1.2rem;
+            animation: flowRight 1s infinite;
+        }
+        @keyframes flowRight {
+            0%, 100% { opacity: 0.4; transform: translateX(0); }
+            50% { opacity: 1; transform: translateX(3px); }
+        }
+        
+        /* Lead Flow (Horizontal) */
+        .lead-flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin: 15px 0;
+            padding: 20px;
+            background: rgba(34, 197, 94, 0.05);
+            border-radius: 16px;
+            border: 1px solid rgba(34, 197, 94, 0.2);
+        }
+        .lead-node {
+            padding: 10px 14px;
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.4);
+            border-radius: 10px;
+            text-align: center;
+            min-width: 90px;
+        }
+        .lead-node .l-icon { font-size: 1.4rem; }
+        .lead-node .l-name { font-size: 0.65rem; font-weight: 600; margin-top: 4px; color: #22C55E; }
+        .lead-node .l-detail { font-size: 0.55rem; color: #9CA3AF; }
+        .lead-arrow {
+            color: #22C55E;
+            font-size: 1.2rem;
+            animation: flowRight 1s infinite;
+        }
+        
+        /* Communication Lines SVG */
+        .comm-lines {
             position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             pointer-events: none;
             z-index: 1;
         }
+        
+        /* Data Exchange Indicators */
+        .data-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #9333EA;
+            color: white;
+            font-size: 0.5rem;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+        
+        /* Metrics Panel */
         .metrics-panel {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -138,59 +254,67 @@
             margin-top: 30px;
         }
         .metric-card {
-            background: rgba(34, 197, 94, 0.05);
+            background: rgba(255,255,255,0.03);
             border-radius: 12px;
             padding: 15px;
             text-align: center;
-            border: 1px solid rgba(34, 197, 94, 0.2);
+            border: 1px solid rgba(255,255,255,0.08);
         }
-        .metric-value { font-size: 1.8rem; font-weight: 700; color: #22C55E; }
-        .metric-label { font-size: 0.8rem; color: #9CA3AF; margin-top: 5px; }
-        .data-flow {
-            margin-top: 30px;
-            padding: 20px;
-            background: rgba(255,255,255,0.03);
-            border-radius: 12px;
+        .metric-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #76DCEC;
         }
-        .data-flow h3 { color: #76DCEC; margin-bottom: 15px; text-align: center; }
-        .flow-step {
+        .metric-label {
+            font-size: 0.75rem;
+            color: #9CA3AF;
+            margin-top: 4px;
+        }
+        
+        /* Legend */
+        .legend {
             display: flex;
-            align-items: center;
             justify-content: center;
-            gap: 10px;
-            margin: 10px 0;
+            gap: 20px;
+            margin-top: 25px;
             flex-wrap: wrap;
         }
-        .flow-box {
-            background: rgba(118, 220, 236, 0.1);
-            border: 1px solid rgba(118, 220, 236, 0.3);
-            border-radius: 8px;
-            padding: 8px 15px;
-            font-size: 0.8rem;
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.7rem;
+            color: #9CA3AF;
         }
-        .flow-arrow-right { color: #22C55E; font-size: 1.2rem; }
+        .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 3px;
+        }
+        
         @media (max-width: 900px) {
-            .tier { gap: 10px; }
-            .agent-node { width: 130px; padding: 12px 8px; }
+            .agent-row { gap: 10px; }
+            .agent-node { width: 120px; padding: 10px 8px; }
             .metrics-panel { grid-template-columns: repeat(2, 1fr); }
+            .pipeline-flow, .lead-flow { padding: 15px 10px; }
         }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>🤖 AI Agent Swarm</h1>
-        <span class="live-badge">🟢 LIVE - ALL SYSTEMS ACTIVE</span>
-        <p style="color: #9CA3AF; margin-top: 10px;">InvestigatePro Autonomous Sales Machine</p>
+        <span class="live-badge">🟢 LIVE - 11 AGENTS ACTIVE</span>
+        <p style="color: #9CA3AF; margin-top: 8px; font-size: 0.9rem;">InvestigatePro Autonomous Sales Machine</p>
     </div>
     
     <div class="status-bar">
         <div class="status-item">
             <div class="status-dot"></div>
-            <span>11 Agents Running</span>
+            <span>n8n Connected</span>
         </div>
         <div class="status-item">
             <div class="status-dot"></div>
-            <span>n8n Connected</span>
+            <span>Supabase Synced</span>
         </div>
         <div class="status-item">
             <span>🎯 Target: $30K MRR</span>
@@ -198,135 +322,244 @@
     </div>
     
     <div class="swarm-container">
-        <!-- Controller -->
-        <div class="tier">
+        
+        <!-- ORCHESTRATION LAYER -->
+        <div class="section-header">
+            <h2>🧠 ORCHESTRATION LAYER</h2>
+        </div>
+        
+        <div class="agent-row">
             <div class="agent-node controller">
                 <div class="agent-icon">🧠</div>
                 <div class="agent-name">CENTRAL CONTROLLER</div>
-                <div class="agent-status">✅ ACTIVE</div>
-                <div class="agent-detail">Health Monitoring • Auto-Healing<br>Every 15 min</div>
+                <div class="agent-status">✅ MONITORING ALL AGENTS</div>
+                <div class="agent-detail">Health Checks • Auto-Healing • Alerts<br>Every 15 min</div>
             </div>
         </div>
         
-        <div class="flow-section"><div class="flow-arrow">▼ ▼ ▼</div></div>
+        <div class="flow-container">
+            <div class="flow-arrow">▼ monitors & orchestrates ▼</div>
+        </div>
         
-        <!-- Main Agents -->
-        <div class="tier">
-            <div class="agent-node">
-                <div class="agent-icon">🔗</div>
-                <div class="agent-name">LINKEDIN LEADS</div>
-                <div class="agent-status">✅ NEW</div>
-                <div class="agent-detail">Apify Scraping<br>25 connects/day</div>
+        <!-- LEAD GENERATION FLOW -->
+        <div class="section-header">
+            <h2>🎯 LEAD GENERATION FLOW</h2>
+        </div>
+        
+        <div class="lead-flow">
+            <div class="lead-node">
+                <div class="l-icon">🔗</div>
+                <div class="l-name">LINKEDIN SCOUT</div>
+                <div class="l-detail">Apify Scraping</div>
             </div>
-            <div class="agent-node">
-                <div class="agent-icon">🎯</div>
-                <div class="agent-name">LEAD GEN</div>
-                <div class="agent-status">✅ ACTIVE</div>
-                <div class="agent-detail">Saleshandy<br>AI Scoring</div>
+            <div class="lead-arrow">→</div>
+            <div class="lead-node">
+                <div class="l-icon">🎯</div>
+                <div class="l-name">ICP FILTER</div>
+                <div class="l-detail">&lt;500 emp</div>
             </div>
+            <div class="lead-arrow">→</div>
+            <div class="lead-node">
+                <div class="l-icon">🧮</div>
+                <div class="l-name">AI SCORING</div>
+                <div class="l-detail">1-100 score</div>
+            </div>
+            <div class="lead-arrow">→</div>
+            <div class="lead-node">
+                <div class="l-icon">🗄️</div>
+                <div class="l-name">SUPABASE</div>
+                <div class="l-detail">CRM Store</div>
+            </div>
+            <div class="lead-arrow">→</div>
+            <div class="lead-node">
+                <div class="l-icon">👤</div>
+                <div class="l-name">CONNECT</div>
+                <div class="l-detail">25/day max</div>
+            </div>
+            <div class="lead-arrow">→</div>
+            <div class="lead-node">
+                <div class="l-icon">📧</div>
+                <div class="l-name">EMAIL SEQ</div>
+                <div class="l-detail">Saleshandy</div>
+            </div>
+        </div>
+        
+        <!-- CONTENT PIPELINE FLOW -->
+        <div class="section-header">
+            <h2>🎬 CONTENT PIPELINE FLOW</h2>
+        </div>
+        
+        <div class="pipeline-flow">
+            <div class="pipeline-node">
+                <div class="p-icon">🔍</div>
+                <div class="p-name">VIRAL SCOUT</div>
+                <div class="p-tool">Apify + Reddit</div>
+            </div>
+            <div class="pipeline-arrow">→</div>
+            <div class="pipeline-node">
+                <div class="p-icon">✍️</div>
+                <div class="p-name">NARRATIVE</div>
+                <div class="p-tool">Claude AI</div>
+            </div>
+            <div class="pipeline-arrow">→</div>
+            <div class="pipeline-node">
+                <div class="p-icon">🎨</div>
+                <div class="p-name">IMG PROMPT</div>
+                <div class="p-tool">Claude AI</div>
+            </div>
+            <div class="pipeline-arrow">→</div>
+            <div class="pipeline-node">
+                <div class="p-icon">🖼️</div>
+                <div class="p-name">IMG CREATE</div>
+                <div class="p-tool">DALL-E 3</div>
+            </div>
+            <div class="pipeline-arrow">→</div>
+            <div class="pipeline-node">
+                <div class="p-icon">📤</div>
+                <div class="p-name">PUBLISH</div>
+                <div class="p-tool">LinkedIn API</div>
+            </div>
+        </div>
+        
+        <!-- ENGAGEMENT & NURTURE LAYER -->
+        <div class="section-header">
+            <h2>📧 ENGAGEMENT & NURTURE LAYER</h2>
+        </div>
+        
+        <div class="agent-row">
             <div class="agent-node">
+                <span class="data-badge">288 active</span>
                 <div class="agent-icon">📧</div>
                 <div class="agent-name">EMAIL NURTURE</div>
-                <div class="agent-status">✅ ACTIVE</div>
-                <div class="agent-detail">288 in sequence<br>7-email journey</div>
+                <div class="agent-status">✅ SEQUENCES RUNNING</div>
+                <div class="agent-detail">7-email journey<br>AI personalized</div>
+            </div>
+            <div class="agent-node">
+                <div class="agent-icon">💬</div>
+                <div class="agent-name">INBOX MONITOR</div>
+                <div class="agent-status">✅ WATCHING</div>
+                <div class="agent-detail">Reply detection<br>Every 30 min</div>
             </div>
             <div class="agent-node">
                 <div class="agent-icon">📊</div>
                 <div class="agent-name">ANALYTICS</div>
-                <div class="agent-status">✅ ACTIVE</div>
-                <div class="agent-detail">Daily Reports<br>KPI Tracking</div>
+                <div class="agent-status">✅ TRACKING</div>
+                <div class="agent-detail">KPIs & Reports<br>Daily digest</div>
             </div>
             <div class="agent-node">
                 <div class="agent-icon">📱</div>
-                <div class="agent-name">LINKEDIN</div>
+                <div class="agent-name">SOCIAL ENGAGE</div>
                 <div class="agent-status">✅ ACTIVE</div>
-                <div class="agent-detail">1 post today<br>Engagement</div>
-            </div>
-            <div class="agent-node" style="border-color: #F59E0B; background: linear-gradient(145deg, rgba(245, 158, 11, 0.15), rgba(245, 158, 11, 0.05));">
-                <div class="agent-icon">🎬</div>
-                <div class="agent-name">CONTENT PIPELINE</div>
-                <div class="agent-status" style="color: #F59E0B;">✅ NEW</div>
-                <div class="agent-detail">5 Sub-Agents<br>Scout→Write→Image→Post</div>
+                <div class="agent-detail">Likes & Comments<br>Brand building</div>
             </div>
         </div>
         
-        <div class="flow-section"><div class="flow-arrow">▼ ▼ ▼</div></div>
+        <div class="flow-container">
+            <div class="flow-arrow">▼ data flows to ▼</div>
+        </div>
         
-        <!-- Support Agents -->
-        <div class="tier">
-            <div class="agent-node">
-                <div class="agent-icon">💬</div>
-                <div class="agent-name">INBOX MONITOR</div>
-                <div class="agent-status">✅ ACTIVE</div>
-                <div class="agent-detail">Every 30 min<br>Reply Detection</div>
-            </div>
-            <div class="agent-node">
+        <!-- WEBHOOK & INTEGRATION LAYER -->
+        <div class="section-header">
+            <h2>⚡ WEBHOOK & INTEGRATION LAYER</h2>
+        </div>
+        
+        <div class="agent-row">
+            <div class="agent-node webhook">
                 <div class="agent-icon">📬</div>
-                <div class="agent-name">CSV IMPORT</div>
-                <div class="agent-status">✅ ACTIVE</div>
-                <div class="agent-detail">Saleshandy Export<br>Lead Processing</div>
+                <div class="agent-name">EMAIL WEBHOOK</div>
+                <div class="agent-status">⚡ LISTENING</div>
+                <div class="agent-detail">Opens, clicks<br>Resend events</div>
             </div>
-            <div class="agent-node">
+            <div class="agent-node webhook">
                 <div class="agent-icon">💳</div>
                 <div class="agent-name">STRIPE WEBHOOK</div>
-                <div class="agent-status">✅ ACTIVE</div>
-                <div class="agent-detail">Payments<br>Revenue Tracking</div>
+                <div class="agent-status">⚡ LISTENING</div>
+                <div class="agent-detail">Payments<br>Subscriptions</div>
             </div>
-            <div class="agent-node">
+            <div class="agent-node webhook">
+                <div class="agent-icon">📥</div>
+                <div class="agent-name">CSV IMPORT</div>
+                <div class="agent-status">⚡ READY</div>
+                <div class="agent-detail">Bulk leads<br>Saleshandy export</div>
+            </div>
+            <div class="agent-node webhook">
                 <div class="agent-icon">🧪</div>
                 <div class="agent-name">HEALTH CHECK</div>
-                <div class="agent-status">✅ ACTIVE</div>
-                <div class="agent-detail">System Monitor<br>Auto-Alerts</div>
+                <div class="agent-status">⚡ MONITORING</div>
+                <div class="agent-detail">System status<br>Auto-alerts</div>
             </div>
         </div>
         
-        <div class="flow-section"><div class="flow-arrow">▼ ▼ ▼</div></div>
+        <div class="flow-container">
+            <div class="flow-arrow">▼ all data centralizes ▼</div>
+        </div>
         
-        <!-- Database -->
-        <div class="tier">
+        <!-- DATA LAYER -->
+        <div class="section-header">
+            <h2>🗄️ CENTRAL DATA LAYER</h2>
+        </div>
+        
+        <div class="agent-row">
             <div class="agent-node database">
                 <div class="agent-icon">🗄️</div>
                 <div class="agent-name">SUPABASE DATABASE</div>
-                <div class="agent-status">✅ CONNECTED</div>
-                <div class="agent-detail">505 Leads • Email Sequences • Metrics • Revenue</div>
+                <div class="agent-status">✅ CONNECTED - 505 LEADS</div>
+                <div class="agent-detail">Leads • Sequences • Emails • Metrics • Revenue<br>Real-time sync with all agents</div>
             </div>
         </div>
+        
+        <!-- Metrics -->
+        <div class="metrics-panel">
+            <div class="metric-card">
+                <div class="metric-value">11</div>
+                <div class="metric-label">Agents Active</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">505</div>
+                <div class="metric-label">Total Leads</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">288</div>
+                <div class="metric-label">In Sequences</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">$0</div>
+                <div class="metric-label">MRR (Pre-Launch)</div>
+            </div>
+        </div>
+        
+        <!-- Legend -->
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-dot" style="background: #76DCEC;"></div>
+                <span>Controller</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-dot" style="background: #22C55E;"></div>
+                <span>Lead Gen</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-dot" style="background: #F59E0B;"></div>
+                <span>Content Pipeline</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-dot" style="background: #EC4899;"></div>
+                <span>Webhooks</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-dot" style="background: #9333EA;"></div>
+                <span>Database</span>
+            </div>
+        </div>
+        
     </div>
     
-    <div class="metrics-panel">
-        <div class="metric-card">
-            <div class="metric-value">11</div>
-            <div class="metric-label">Agents Active</div>
-        </div>
-        <div class="metric-card">
-            <div class="metric-value">505</div>
-            <div class="metric-label">Total Leads</div>
-        </div>
-        <div class="metric-card">
-            <div class="metric-value">288</div>
-            <div class="metric-label">In Sequences</div>
-        </div>
-        <div class="metric-card">
-            <div class="metric-value">1</div>
-            <div class="metric-label">Hot Lead</div>
-        </div>
-    </div>
+    <p style="text-align: center; margin-top: 30px; color: #6B7280; font-size: 0.75rem;">
+        Last updated: <span id="timestamp"></span> • InvestigatePro AI Swarm v2.0
+    </p>
     
-    <div class="data-flow">
-        <h3>📈 Lead Journey (Automated)</h3>
-        <div class="flow-step">
-            <div class="flow-box">🎯 Apollo/Saleshandy</div>
-            <span class="flow-arrow-right">→</span>
-            <div class="flow-box">🧠 AI Scoring</div>
-            <span class="flow-arrow-right">→</span>
-            <div class="flow-box">📧 Email Sequence</div>
-            <span class="flow-arrow-right">→</span>
-            <div class="flow-box">💬 Reply Detection</div>
-            <span class="flow-arrow-right">→</span>
-            <div class="flow-box">🔥 Hot Lead Alert</div>
-            <span class="flow-arrow-right">→</span>
-            <div class="flow-box">💳 Stripe Checkout</div>
-        </div>
-    </div>
+    <script>
+        document.getElementById('timestamp').textContent = new Date().toLocaleString();
+    </script>
 </body>
 </html>
