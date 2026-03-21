@@ -375,7 +375,7 @@
 <body>
     <div class="header">
         <h1>🤖 InvestigatePro AI Swarm</h1>
-        <span class="live-badge">🟢 LIVE — 17 AGENTS ACTIVE</span>
+        <span class="live-badge">🟢 LIVE — 18 AGENTS ACTIVE</span>
         <p style="color: #9CA3AF; margin-top: 10px; font-size: 0.95rem;">Autonomous Sales & Marketing Machine</p>
     </div>
     
@@ -546,6 +546,43 @@
                 <div class="p-icon">📤</div>
                 <div class="p-name">PUBLISH</div>
                 <div class="p-tool">LinkedIn API</div>
+            </div>
+        </div>
+        
+        <!-- VIDEO CONTENT FACTORY -->
+        <div class="section-header">
+            <h2>🎬 VIDEO CONTENT FACTORY (Agent 13 — n8n Workflow)</h2>
+        </div>
+        
+        <div class="pipeline-flow" style="border-color: rgba(139, 92, 246, 0.3); background: rgba(139, 92, 246, 0.05);">
+            <div class="pipeline-node" style="border-color: rgba(139, 92, 246, 0.4); background: rgba(139, 92, 246, 0.1);">
+                <div class="p-icon">⏰</div>
+                <div class="p-name" style="color: #8B5CF6;">SCHEDULE</div>
+                <div class="p-tool">Daily cron</div>
+            </div>
+            <div class="pipeline-arrow" style="color: #8B5CF6;">→</div>
+            <div class="pipeline-node" style="border-color: rgba(139, 92, 246, 0.4); background: rgba(139, 92, 246, 0.1);">
+                <div class="p-icon">🎨</div>
+                <div class="p-name" style="color: #8B5CF6;">THEME SELECT</div>
+                <div class="p-tool">4 industry themes</div>
+            </div>
+            <div class="pipeline-arrow" style="color: #8B5CF6;">→</div>
+            <div class="pipeline-node" style="border-color: rgba(139, 92, 246, 0.4); background: rgba(139, 92, 246, 0.1);">
+                <div class="p-icon">🎥</div>
+                <div class="p-name" style="color: #8B5CF6;">GENERATE</div>
+                <div class="p-tool">Python + Remotion</div>
+            </div>
+            <div class="pipeline-arrow" style="color: #8B5CF6;">→</div>
+            <div class="pipeline-node" style="border-color: rgba(139, 92, 246, 0.4); background: rgba(139, 92, 246, 0.1);">
+                <div class="p-icon">☁️</div>
+                <div class="p-name" style="color: #8B5CF6;">UPLOAD R2</div>
+                <div class="p-tool">Cloudflare CDN</div>
+            </div>
+            <div class="pipeline-arrow" style="color: #8B5CF6;">→</div>
+            <div class="pipeline-node" style="border-color: rgba(139, 92, 246, 0.4); background: rgba(139, 92, 246, 0.1);">
+                <div class="p-icon">📱</div>
+                <div class="p-name" style="color: #8B5CF6;">NOTIFY</div>
+                <div class="p-tool">Telegram alert</div>
             </div>
         </div>
         
@@ -734,7 +771,7 @@
         
         <!-- CRON SCHEDULE -->
         <div class="section-header">
-            <h2>⏰ CRON JOB SCHEDULE (17 JOBS)</h2>
+            <h2>⏰ CRON JOB SCHEDULE (18 JOBS)</h2>
         </div>
         
         <table class="cron-table">
@@ -849,17 +886,23 @@
                     <td>Revenue & expense review</td>
                     <td><span class="cron-status active">ACTIVE</span></td>
                 </tr>
+                <tr>
+                    <td>🎬 Video Content Factory</td>
+                    <td>Daily</td>
+                    <td>Auto-generate promo videos</td>
+                    <td><span class="cron-status active">ACTIVE</span></td>
+                </tr>
             </tbody>
         </table>
         
         <!-- Metrics -->
         <div class="metrics-panel">
             <div class="metric-card">
-                <div class="metric-value">17</div>
+                <div class="metric-value">18</div>
                 <div class="metric-label">Cron Jobs</div>
             </div>
             <div class="metric-card">
-                <div class="metric-value">8</div>
+                <div class="metric-value">9</div>
                 <div class="metric-label">n8n Workflows</div>
             </div>
             <div class="metric-card">
@@ -905,6 +948,10 @@
             <div class="legend-item">
                 <div class="legend-dot" style="background: #9333EA;"></div>
                 <span>Database</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-dot" style="background: #8B5CF6;"></div>
+                <span>Video Factory</span>
             </div>
         </div>
         
