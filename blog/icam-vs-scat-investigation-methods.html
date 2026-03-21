@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICAM vs SCAT: Which Incident Investigation Method Should You Use? | InvestigatePro</title>
+    <meta name="description" content="Compare ICAM and SCAT incident investigation methodologies. Learn the key differences, strengths, and when to use each method for root cause analysis.">
+    <link rel="canonical" href="https://investigatepro.app/blog/icam-vs-scat-investigation-methods.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://investigatepro.app/blog/icam-vs-scat-investigation-methods.html">
+    <meta property="og:title" content="ICAM vs SCAT: Which Incident Investigation Method Should You Use?">
+    <meta property="og:description" content="Compare ICAM and SCAT methodologies for incident investigation. Learn when to use each approach.">
+    <meta property="og:image" content="https://investigatepro.app/assets/blog/icam-vs-scat.png">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Schema.org Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "ICAM vs SCAT: Which Incident Investigation Method Should You Use?",
+        "description": "A comprehensive comparison of ICAM and SCAT incident investigation methodologies for safety professionals.",
+        "image": "https://investigatepro.app/assets/blog/icam-vs-scat.png",
+        "author": {
+            "@type": "Organization",
+            "name": "InvestigatePro"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "InvestigatePro",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://investigatepro.app/assets/logos/logo-03-on-dark.png"
+            }
+        },
+        "datePublished": "2026-03-21",
+        "dateModified": "2026-03-21",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://investigatepro.app/blog/icam-vs-scat-investigation-methods.html"
+        }
+    }
+    </script>
+    
+    <link rel="icon" type="image/png" href="../assets/logos/logo-03-icon-only.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        heading: ['Lexend', 'system-ui', 'sans-serif'],
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            950: '#080E1F',
+                            900: '#0C142E',
+                            800: '#0F1A3A',
+                            700: '#1A2744',
+                        },
+                        cyan: {
+                            500: '#76DCEC',
+                            400: '#88E0EE',
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .prose h2 { font-family: 'Lexend', sans-serif; }
+        .prose h3 { font-family: 'Lexend', sans-serif; }
+        .prose p { line-height: 1.8; }
+        .prose li { line-height: 1.7; }
+    </style>
+</head>
+<body class="bg-navy-950 text-gray-100 font-sans">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-navy-900/95 backdrop-blur-md border-b border-navy-700">
+        <div class="max-w-4xl mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <a href="/" class="flex items-center space-x-2">
+                    <img src="../assets/logos/logo-03-icon-only.png" alt="InvestigatePro" class="h-8 w-8">
+                    <span class="font-heading font-bold text-xl text-white">InvestigatePro</span>
+                </a>
+                <a href="https://cal.com/investigatepro/demo" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-4 py-2 rounded-lg font-semibold text-sm">
+                    Book Demo
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article -->
+    <article class="pt-24 pb-16">
+        <div class="max-w-3xl mx-auto px-4">
+            <!-- Breadcrumb -->
+            <nav class="text-sm text-gray-400 mb-8">
+                <a href="/" class="hover:text-cyan-400">Home</a>
+                <span class="mx-2">›</span>
+                <a href="/blog/" class="hover:text-cyan-400">Blog</a>
+                <span class="mx-2">›</span>
+                <span class="text-gray-300">ICAM vs SCAT</span>
+            </nav>
+            
+            <!-- Header -->
+            <header class="mb-12">
+                <div class="flex items-center gap-2 text-cyan-400 text-sm font-medium mb-4">
+                    <span>Methodology</span>
+                    <span>•</span>
+                    <time datetime="2026-03-21">March 21, 2026</time>
+                    <span>•</span>
+                    <span>12 min read</span>
+                </div>
+                <h1 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                    ICAM vs SCAT: Which Incident Investigation Method Should You Use?
+                </h1>
+                <p class="text-xl text-gray-300 leading-relaxed">
+                    Both ICAM and SCAT are powerful incident investigation methodologies used by safety professionals worldwide. But they take fundamentally different approaches. Here's how to choose the right one for your organization.
+                </p>
+            </header>
+
+            <!-- Table of Contents -->
+            <div class="bg-navy-800 rounded-xl p-6 mb-12 border border-navy-700">
+                <h2 class="font-heading font-semibold text-lg text-white mb-4">In This Article</h2>
+                <ul class="space-y-2 text-gray-300">
+                    <li><a href="#what-is-icam" class="hover:text-cyan-400">→ What is ICAM?</a></li>
+                    <li><a href="#what-is-scat" class="hover:text-cyan-400">→ What is SCAT?</a></li>
+                    <li><a href="#key-differences" class="hover:text-cyan-400">→ Key Differences</a></li>
+                    <li><a href="#comparison-table" class="hover:text-cyan-400">→ Side-by-Side Comparison</a></li>
+                    <li><a href="#when-to-use" class="hover:text-cyan-400">→ When to Use Each Method</a></li>
+                    <li><a href="#combining-methods" class="hover:text-cyan-400">→ Can You Combine Them?</a></li>
+                    <li><a href="#conclusion" class="hover:text-cyan-400">→ Conclusion</a></li>
+                </ul>
+            </div>
+
+            <!-- Content -->
+            <div class="prose prose-lg prose-invert max-w-none">
+                
+                <h2 id="what-is-icam" class="text-2xl font-bold text-white mt-12 mb-6">What is ICAM?</h2>
+                
+                <p class="text-gray-300 mb-6">
+                    <strong class="text-white">ICAM (Incident Cause Analysis Method)</strong> is a systematic investigation methodology developed in Australia by the Minerals Council. It's designed to identify the organizational factors that contribute to incidents—not just the immediate causes.
+                </p>
+                
+                <p class="text-gray-300 mb-6">
+                    ICAM is built on James Reason's "Swiss Cheese" model of accident causation. It recognizes that incidents rarely have a single cause. Instead, multiple failures must align—like holes in slices of Swiss cheese—for an incident to occur.
+                </p>
+                
+                <h3 class="text-xl font-semibold text-white mt-8 mb-4">The ICAM Framework</h3>
+                
+                <p class="text-gray-300 mb-6">ICAM uses a structured approach with five key elements:</p>
+                
+                <ol class="list-decimal list-inside space-y-3 text-gray-300 mb-6">
+                    <li><strong class="text-white">Absent or Failed Defences:</strong> The barriers that should have prevented the incident</li>
+                    <li><strong class="text-white">Individual/Team Actions:</strong> The actions (or inactions) that directly led to the incident</li>
+                    <li><strong class="text-white">Task/Environmental Conditions:</strong> The workplace conditions present at the time</li>
+                    <li><strong class="text-white">Organizational Factors:</strong> The systemic issues within the organization (using PEEPO categories)</li>
+                    <li><strong class="text-white">Risk Controls:</strong> Recommendations to prevent recurrence</li>
+                </ol>
+                
+                <div class="bg-cyan-500/10 border border-cyan-500/30 rounded-lg p-6 my-8">
+                    <h4 class="font-semibold text-cyan-400 mb-2">💡 PEEPO Categories</h4>
+                    <p class="text-gray-300 text-sm">
+                        ICAM uses PEEPO to categorize organizational factors: <strong>P</strong>eople, <strong>E</strong>nvironment, <strong>E</strong>quipment, <strong>P</strong>rocedures, and <strong>O</strong>rganization. This ensures investigators look beyond individual blame to systemic issues.
+                    </p>
+                </div>
+
+                <h2 id="what-is-scat" class="text-2xl font-bold text-white mt-12 mb-6">What is SCAT?</h2>
+                
+                <p class="text-gray-300 mb-6">
+                    <strong class="text-white">SCAT (Systematic Cause Analysis Technique)</strong> was developed by the International Loss Control Institute (ILCI) as part of the Bird-Germain loss causation model. It's one of the most widely used investigation methods globally.
+                </p>
+                
+                <p class="text-gray-300 mb-6">
+                    SCAT uses a domino-effect model: incidents happen when a sequence of causes align, like falling dominoes. Remove one domino, and you break the chain.
+                </p>
+                
+                <h3 class="text-xl font-semibold text-white mt-8 mb-4">The SCAT Framework</h3>
+                
+                <p class="text-gray-300 mb-6">SCAT investigates incidents through four levels:</p>
+                
+                <ol class="list-decimal list-inside space-y-3 text-gray-300 mb-6">
+                    <li><strong class="text-white">Loss:</strong> The injury, damage, or business interruption</li>
+                    <li><strong class="text-white">Incident:</strong> The contact with energy or substance that caused the loss</li>
+                    <li><strong class="text-white">Immediate Causes:</strong> Substandard acts and conditions</li>
+                    <li><strong class="text-white">Basic Causes:</strong> Personal factors and job factors</li>
+                    <li><strong class="text-white">Lack of Control:</strong> Inadequate program, standards, or compliance</li>
+                </ol>
+                
+                <p class="text-gray-300 mb-6">
+                    SCAT provides extensive checklists for each level, making it easier for investigators to identify contributing factors without missing anything.
+                </p>
+
+                <h2 id="key-differences" class="text-2xl font-bold text-white mt-12 mb-6">Key Differences Between ICAM and SCAT</h2>
+                
+                <h3 class="text-xl font-semibold text-white mt-8 mb-4">1. Philosophy</h3>
+                
+                <p class="text-gray-300 mb-6">
+                    <strong class="text-cyan-400">ICAM</strong> is explicitly "blame-free." It focuses on systemic failures, not individual fault. The methodology assumes that people generally try to do the right thing, and incidents occur due to organizational weaknesses.
+                </p>
+                
+                <p class="text-gray-300 mb-6">
+                    <strong class="text-cyan-400">SCAT</strong> identifies "substandard acts" as immediate causes, which can feel more blame-oriented. However, it does trace these back to system failures.
+                </p>
+                
+                <h3 class="text-xl font-semibold text-white mt-8 mb-4">2. Structure</h3>
+                
+                <p class="text-gray-300 mb-6">
+                    <strong class="text-cyan-400">ICAM</strong> is more flexible. Investigators build a narrative and identify contributing factors organically, using the framework as a guide.
+                </p>
+                
+                <p class="text-gray-300 mb-6">
+                    <strong class="text-cyan-400">SCAT</strong> is more prescriptive. It provides detailed checklists with hundreds of potential causes. This is helpful for consistency but can feel mechanical.
+                </p>
+                
+                <h3 class="text-xl font-semibold text-white mt-8 mb-4">3. Organizational Focus</h3>
+                
+                <p class="text-gray-300 mb-6">
+                    <strong class="text-cyan-400">ICAM</strong> puts heavy emphasis on organizational factors through PEEPO. It's designed to surface management system failures.
+                </p>
+                
+                <p class="text-gray-300 mb-6">
+                    <strong class="text-cyan-400">SCAT</strong> addresses organizational issues through "Lack of Control" but with less structured guidance.
+                </p>
+
+                <h2 id="comparison-table" class="text-2xl font-bold text-white mt-12 mb-6">Side-by-Side Comparison</h2>
+                
+                <div class="overflow-x-auto mb-8">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="border-b border-navy-600">
+                                <th class="py-4 px-4 text-cyan-400 font-semibold">Aspect</th>
+                                <th class="py-4 px-4 text-cyan-400 font-semibold">ICAM</th>
+                                <th class="py-4 px-4 text-cyan-400 font-semibold">SCAT</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-300">
+                            <tr class="border-b border-navy-700">
+                                <td class="py-4 px-4 font-medium text-white">Origin</td>
+                                <td class="py-4 px-4">Australia (Minerals Council)</td>
+                                <td class="py-4 px-4">USA (ILCI/DNV)</td>
+                            </tr>
+                            <tr class="border-b border-navy-700">
+                                <td class="py-4 px-4 font-medium text-white">Model</td>
+                                <td class="py-4 px-4">Swiss Cheese (Reason)</td>
+                                <td class="py-4 px-4">Domino (Bird-Germain)</td>
+                            </tr>
+                            <tr class="border-b border-navy-700">
+                                <td class="py-4 px-4 font-medium text-white">Blame approach</td>
+                                <td class="py-4 px-4">Explicitly blame-free</td>
+                                <td class="py-4 px-4">Can feel blame-oriented</td>
+                            </tr>
+                            <tr class="border-b border-navy-700">
+                                <td class="py-4 px-4 font-medium text-white">Structure</td>
+                                <td class="py-4 px-4">Flexible framework</td>
+                                <td class="py-4 px-4">Detailed checklists</td>
+                            </tr>
+                            <tr class="border-b border-navy-700">
+                                <td class="py-4 px-4 font-medium text-white">Org factors</td>
+                                <td class="py-4 px-4">Strong (PEEPO)</td>
+                                <td class="py-4 px-4">Present but less structured</td>
+                            </tr>
+                            <tr class="border-b border-navy-700">
+                                <td class="py-4 px-4 font-medium text-white">Training required</td>
+                                <td class="py-4 px-4">2-3 days</td>
+                                <td class="py-4 px-4">1-2 days</td>
+                            </tr>
+                            <tr class="border-b border-navy-700">
+                                <td class="py-4 px-4 font-medium text-white">Best for</td>
+                                <td class="py-4 px-4">Complex, high-severity incidents</td>
+                                <td class="py-4 px-4">High-volume, standardized investigations</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-4 font-medium text-white">Industries</td>
+                                <td class="py-4 px-4">Mining, construction, rail</td>
+                                <td class="py-4 px-4">Manufacturing, oil & gas, general industry</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="when-to-use" class="text-2xl font-bold text-white mt-12 mb-6">When to Use Each Method</h2>
+                
+                <h3 class="text-xl font-semibold text-white mt-8 mb-4">Choose ICAM When:</h3>
+                
+                <ul class="list-disc list-inside space-y-2 text-gray-300 mb-6">
+                    <li>Investigating serious or complex incidents</li>
+                    <li>Your organization wants to move away from blame culture</li>
+                    <li>You need to identify systemic/management failures</li>
+                    <li>Operating in high-risk industries (mining, construction, rail)</li>
+                    <li>Regulatory requirements favor human factors analysis</li>
+                    <li>You want investigations that drive organizational change</li>
+                </ul>
+                
+                <h3 class="text-xl font-semibold text-white mt-8 mb-4">Choose SCAT When:</h3>
+                
+                <ul class="list-disc list-inside space-y-2 text-gray-300 mb-6">
+                    <li>Investigating high volumes of incidents consistently</li>
+                    <li>Your team has limited investigation experience</li>
+                    <li>You need standardized, comparable data across sites</li>
+                    <li>Quick turnaround is important</li>
+                    <li>Your industry already uses SCAT widely (easier benchmarking)</li>
+                    <li>You want checklist-driven thoroughness</li>
+                </ul>
+
+                <h2 id="combining-methods" class="text-2xl font-bold text-white mt-12 mb-6">Can You Combine ICAM and SCAT?</h2>
+                
+                <p class="text-gray-300 mb-6">
+                    Absolutely. Many organizations use a tiered approach:
+                </p>
+                
+                <ul class="list-disc list-inside space-y-2 text-gray-300 mb-6">
+                    <li><strong class="text-white">Minor incidents:</strong> Use SCAT checklists for quick, consistent analysis</li>
+                    <li><strong class="text-white">Serious incidents:</strong> Use full ICAM methodology with PEEPO organizational analysis</li>
+                    <li><strong class="text-white">High-potential incidents:</strong> Use ICAM regardless of actual severity</li>
+                </ul>
+                
+                <p class="text-gray-300 mb-6">
+                    You can also use SCAT's detailed checklists as a prompt when conducting ICAM investigations. The two methods complement each other well.
+                </p>
+
+                <h2 id="conclusion" class="text-2xl font-bold text-white mt-12 mb-6">Conclusion</h2>
+                
+                <p class="text-gray-300 mb-6">
+                    Both ICAM and SCAT are effective incident investigation methodologies. The right choice depends on your organization's culture, industry, incident severity, and investigation resources.
+                </p>
+                
+                <p class="text-gray-300 mb-6">
+                    <strong class="text-white">Our recommendation:</strong> For organizations committed to learning from incidents and driving systemic improvement, ICAM's blame-free approach and organizational focus typically delivers better long-term results. SCAT's checklists can supplement ICAM investigations for thoroughness.
+                </p>
+                
+                <div class="bg-gradient-to-r from-cyan-500/20 to-cyan-400/10 border border-cyan-500/30 rounded-xl p-8 my-12 text-center">
+                    <h3 class="font-heading text-2xl font-bold text-white mb-4">Ready to Transform Your Incident Investigations?</h3>
+                    <p class="text-gray-300 mb-6">
+                        InvestigatePro is built on ICAM methodology with AI coaching to guide your team through every investigation.
+                    </p>
+                    <a href="https://cal.com/investigatepro/demo" class="inline-block bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-8 py-3 rounded-lg font-bold transition-all">
+                        Book a Free Demo
+                    </a>
+                </div>
+                
+                <!-- Related Posts -->
+                <h3 class="text-xl font-semibold text-white mt-12 mb-6">Related Articles</h3>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <a href="/blog/icam-investigation-guide.html" class="block bg-navy-800 rounded-lg p-6 border border-navy-700 hover:border-cyan-500/50 transition-all">
+                        <h4 class="font-semibold text-white mb-2">The Complete ICAM Investigation Guide</h4>
+                        <p class="text-gray-400 text-sm">Step-by-step guide to conducting ICAM investigations.</p>
+                    </a>
+                    <a href="/blog/root-cause-analysis-mistakes.html" class="block bg-navy-800 rounded-lg p-6 border border-navy-700 hover:border-cyan-500/50 transition-all">
+                        <h4 class="font-semibold text-white mb-2">5 Root Cause Analysis Mistakes to Avoid</h4>
+                        <p class="text-gray-400 text-sm">Common pitfalls that undermine your investigations.</p>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 border-t border-navy-700 py-12">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <a href="/" class="inline-flex items-center space-x-2 mb-6">
+                <img src="../assets/logos/logo-03-icon-only.png" alt="InvestigatePro" class="h-8 w-8">
+                <span class="font-heading font-bold text-xl text-white">InvestigatePro</span>
+            </a>
+            <p class="text-gray-400 text-sm">
+                AI-powered incident investigation software using ICAM methodology.
+            </p>
+            <div class="mt-6 flex justify-center space-x-6 text-sm text-gray-500">
+                <a href="/privacy.html" class="hover:text-gray-300">Privacy</a>
+                <a href="/terms.html" class="hover:text-gray-300">Terms</a>
+                <a href="/security.html" class="hover:text-gray-300">Security</a>
+            </div>
+            <p class="mt-6 text-gray-600 text-xs">© 2026 InvestigatePro. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
