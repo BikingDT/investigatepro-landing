@@ -5,5 +5,8 @@
   "scripts": {
     "dev": "npx serve .",
     "build": "echo 'Static site - no build needed'"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.5"
   }
 }
