@@ -48,6 +48,28 @@
             box-shadow: 0 0 40px rgba(118, 220, 236, 0.25);
         }
     </style>
+
+    <!-- Structured Data: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://investigatepro.app/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Book Demo",
+                "item": "https://investigatepro.app/demo.html"
+            }
+        ]
+    }
+    </script>
 </head>
 <body class="font-sans antialiased bg-navy-950 text-white">
 

@@ -27,6 +27,28 @@
         .article-card { background: linear-gradient(135deg, #1A2744 0%, #0F1A3A 100%); transition: transform 0.2s, box-shadow 0.2s; }
         .article-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(118, 220, 236, 0.15); }
     </style>
+
+    <!-- Structured Data: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://investigatepro.app/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://investigatepro.app/blog/"
+            }
+        ]
+    }
+    </script>
 </head>
 <body class="font-sans antialiased bg-navy-900 text-white">
 

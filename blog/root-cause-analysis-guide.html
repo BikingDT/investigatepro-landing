@@ -34,6 +34,61 @@
         .prose strong { @apply text-white font-semibold; }
         .prose blockquote { @apply border-l-4 border-cyan-500 pl-4 italic text-gray-400 my-6; }
     </style>
+
+    <!-- Structured Data: Breadcrumb + Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://investigatepro.app/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://investigatepro.app/blog/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Root Cause Analysis: The Complete Guide",
+                "item": "https://investigatepro.app/blog/root-cause-analysis-guide.html"
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Root Cause Analysis: The Complete Guide",
+        "description": "Master root cause analysis techniques including 5 Whys, Fishbone diagrams, and more.",
+        "datePublished": "2026-02-18",
+        "dateModified": "2026-03-21",
+        "author": {
+            "@type": "Organization",
+            "name": "InvestigatePro",
+            "url": "https://investigatepro.app"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "InvestigatePro",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://investigatepro.app/assets/logos/logo-03-on-dark.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://investigatepro.app/blog/root-cause-analysis-guide.html"
+        }
+    }
+    </script>
 </head>
 <body class="font-sans antialiased bg-navy-900 text-white">
 

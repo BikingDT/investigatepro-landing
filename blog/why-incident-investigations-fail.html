@@ -37,6 +37,61 @@
         .prose blockquote { border-left: 4px solid #76DCEC; padding-left: 1rem; margin: 1.5rem 0; font-style: italic; color: #9ca3af; }
         .stat-card { background: linear-gradient(135deg, #1A2744 0%, #0F1A3A 100%); }
     </style>
+
+    <!-- Structured Data: Breadcrumb + Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://investigatepro.app/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://investigatepro.app/blog/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Why Most Incident Investigations Fail to Prevent Recurrence",
+                "item": "https://investigatepro.app/blog/why-incident-investigations-fail.html"
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Why Most Incident Investigations Fail to Prevent Recurrence",
+        "description": "80% of incident investigations fail to prevent similar events.",
+        "datePublished": "2026-02-28",
+        "dateModified": "2026-03-21",
+        "author": {
+            "@type": "Organization",
+            "name": "InvestigatePro",
+            "url": "https://investigatepro.app"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "InvestigatePro",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://investigatepro.app/assets/logos/logo-03-on-dark.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://investigatepro.app/blog/why-incident-investigations-fail.html"
+        }
+    }
+    </script>
 </head>
 <body class="font-sans antialiased bg-navy-900 text-white">
 

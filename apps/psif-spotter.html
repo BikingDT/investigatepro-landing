@@ -39,6 +39,34 @@
         .psif-yes { background: linear-gradient(135deg, rgba(239, 68, 68, 0.2) 0%, rgba(239, 68, 68, 0.05) 100%); border: 1px solid rgba(239, 68, 68, 0.3); }
         .psif-no { background: linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(34, 197, 94, 0.05) 100%); border: 1px solid rgba(34, 197, 94, 0.3); }
     </style>
+
+    <!-- Structured Data: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://investigatepro.app/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Mobile Apps",
+                "item": "https://investigatepro.app/apps/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "pSIF Spotter",
+                "item": "https://investigatepro.app/apps/psif-spotter.html"
+            }
+        ]
+    }
+    </script>
 </head>
 <body class="font-sans antialiased bg-navy-900 text-white">
 

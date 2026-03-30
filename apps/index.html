@@ -28,6 +28,28 @@
         .card-hover { transition: all 0.3s ease; }
         .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 60px rgba(118, 220, 236, 0.15); }
     </style>
+
+    <!-- Structured Data: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://investigatepro.app/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Mobile Apps",
+                "item": "https://investigatepro.app/apps/"
+            }
+        ]
+    }
+    </script>
 </head>
 <body class="font-sans antialiased bg-navy-900 text-white">
 
