@@ -17,34 +17,12 @@
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <!-- Tailwind CSS (built) -->
+    <link rel="stylesheet" href="../assets/css/styles.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    },
-                    colors: {
-                        navy: {
-                            900: '#0C142E',
-                            800: '#0F1A3A',
-                            700: '#1A2744',
-                            600: '#2A3A5C',
-                        },
-                        cyan: {
-                            500: '#76DCEC',
-                            400: '#88E0EE',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
     <style>
         .article-card { background: linear-gradient(135deg, #1A2744 0%, #0F1A3A 100%); transition: transform 0.2s, box-shadow 0.2s; }
         .article-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(118, 220, 236, 0.15); }
