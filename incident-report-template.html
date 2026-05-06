@@ -454,7 +454,7 @@ function unlock() {
     }
     err.style.display = 'none';
     btn.disabled = true; btn.textContent = 'Loading…';
-    fetch('https://api.72-62-211-212.sslip.io/api/leads/capture', {
+    fetch('https://api.investigatepro.app/api/leads/capture', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ first_name: name, email, company, source: 'incident_report_template', lead_magnet: 'incident_report_template' })
