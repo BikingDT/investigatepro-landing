@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use 5 Whys Analysis: Step-by-Step Guide with Examples (2026) | InvestigatePro</title>
+    <meta name="description" content="Learn how to use 5 Whys root cause analysis with real examples. Step-by-step guide covering when to use it, how to avoid common mistakes, and when ICAM or fishbone is a better choice.">
+    <meta name="keywords" content="5 whys analysis, 5 whys root cause analysis, how to use 5 whys, five whys method, 5 whys examples, root cause analysis technique, incident investigation method">
+    <link rel="icon" type="image/png" href="../assets/logos/logo-03-icon-only-optimized.png">
+    <link rel="canonical" href="https://investigatepro.app/blog/how-to-use-5-whys-analysis.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://investigatepro.app/blog/how-to-use-5-whys-analysis.html">
+    <meta property="og:title" content="How to Use 5 Whys Analysis: Step-by-Step Guide with Examples (2026)">
+    <meta property="og:description" content="Master the 5 Whys root cause analysis technique with real-world examples, a step-by-step process, and guidance on when to use a deeper method instead.">
+    <meta property="og:image" content="https://investigatepro.app/assets/logos/logo-03-on-dark.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="article:published_time" content="2026-05-05">
+    <meta property="article:author" content="InvestigatePro">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="../assets/css/styles.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        .prose h2 { color: #76DCEC; margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.75rem; font-weight: 700; }
+        .prose h3 { color: #fff; margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.25rem; font-weight: 600; }
+        .prose p { color: #d1d5db; margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose ul, .prose ol { color: #d1d5db; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .prose li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .prose strong { color: #fff; }
+        .prose a { color: #76DCEC; text-decoration: underline; }
+        .prose blockquote { border-left: 4px solid #76DCEC; padding-left: 1rem; margin: 1.5rem 0; font-style: italic; color: #9ca3af; }
+        .why-chain { background: #0f1a2e; border-left: 3px solid #76DCEC; border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; margin: 0.5rem 0; }
+        .why-label { color: #76DCEC; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .why-text { color: #e5e7eb; margin-top: 0.25rem; }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://investigatepro.app/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://investigatepro.app/blog/" },
+            { "@type": "ListItem", "position": 3, "name": "How to Use 5 Whys Analysis", "item": "https://investigatepro.app/blog/how-to-use-5-whys-analysis.html" }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How to Use 5 Whys Analysis: Step-by-Step Guide with Examples (2026)",
+        "description": "Master the 5 Whys root cause analysis technique with real-world examples, a step-by-step process, and guidance on when to use a deeper method instead.",
+        "datePublished": "2026-05-05",
+        "dateModified": "2026-05-05",
+        "author": { "@type": "Organization", "name": "InvestigatePro", "url": "https://investigatepro.app" },
+        "publisher": {
+            "@type": "Organization",
+            "name": "InvestigatePro",
+            "logo": { "@type": "ImageObject", "url": "https://investigatepro.app/assets/logos/logo-03-on-dark.png" }
+        },
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://investigatepro.app/blog/how-to-use-5-whys-analysis.html" }
+    }
+    </script>
+</head>
+<body class="font-sans antialiased bg-navy-900 text-white">
+
+    <nav class="fixed w-full bg-navy-900/95 backdrop-blur-sm z-50 border-b border-navy-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="/" class="flex items-center">
+                    <picture><source srcset="../assets/logos/logo-03-on-dark.webp" type="image/webp"><img src="../assets/logos/logo-03-on-dark.png" alt="InvestigatePro" class="h-[60px] sm:h-[80px]"></picture>
+                </a>
+                <div class="flex items-center space-x-6">
+                    <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="/#features" class="hidden sm:inline text-gray-300 hover:text-white transition-colors">Features</a>
+                    <a href="/#pricing" class="hidden sm:inline text-gray-300 hover:text-white transition-colors">Pricing</a>
+                    <a href="/#demo" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-5 py-2 rounded-lg font-semibold transition-colors">
+                        Start Free Trial
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <article class="pt-32 pb-20">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6">
+            
+            <nav class="text-sm text-gray-400 mb-8">
+                <a href="/" class="hover:text-cyan-500">Home</a>
+                <span class="mx-2">›</span>
+                <a href="/blog/" class="hover:text-cyan-500">Blog</a>
+                <span class="mx-2">›</span>
+                <span class="text-gray-300">How to Use 5 Whys Analysis</span>
+            </nav>
+
+            <header class="mb-12">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="bg-cyan-500/20 text-cyan-500 px-3 py-1 rounded-full text-sm font-medium">Root Cause Analysis</span>
+                    <span class="text-gray-400 text-sm">14 min read</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl font-bold mb-6 leading-tight">How to Use 5 Whys Analysis: Step-by-Step Guide with Examples</h1>
+                <p class="text-xl text-gray-300 mb-6">The 5 Whys is the most widely-used root cause analysis technique in the world — and one of the most misused. Here's how to do it properly, when it's the right tool, and when you need something more powerful.</p>
+                <div class="flex items-center text-gray-400 text-sm">
+                    <span>Published May 5, 2026</span>
+                    <span class="mx-3">•</span>
+                    <span>Updated May 5, 2026</span>
+                </div>
+            </header>
+
+            <div class="bg-navy-800 rounded-xl p-6 mb-12">
+                <h2 class="text-lg font-semibold mb-4 text-white" style="margin-top: 0;">Table of Contents</h2>
+                <ol class="text-gray-300 space-y-2">
+                    <li><a href="#what-is-5-whys" class="hover:text-cyan-500">1. What Is the 5 Whys Method?</a></li>
+                    <li><a href="#how-to-do-it" class="hover:text-cyan-500">2. How to Conduct a 5 Whys Analysis</a></li>
+                    <li><a href="#examples" class="hover:text-cyan-500">3. Real-World Examples</a></li>
+                    <li><a href="#common-mistakes" class="hover:text-cyan-500">4. Common Mistakes (and How to Avoid Them)</a></li>
+                    <li><a href="#when-to-use" class="hover:text-cyan-500">5. When to Use 5 Whys — and When Not To</a></li>
+                    <li><a href="#vs-icam" class="hover:text-cyan-500">6. 5 Whys vs ICAM: Choosing the Right Method</a></li>
+                    <li><a href="#template" class="hover:text-cyan-500">7. 5 Whys Template & Worksheet</a></li>
+                </ol>
+            </div>
+
+            <div class="prose max-w-none">
+
+                <h2 id="what-is-5-whys">1. What Is the 5 Whys Method?</h2>
+
+                <p>The <strong>5 Whys</strong> is a root cause analysis technique developed by Sakichi Toyoda and popularised through the Toyota Production System. The premise is simple: by repeatedly asking "why?" — typically five times — you move from the surface symptom of a problem to its underlying root cause.</p>
+
+                <p>It's used across industries for quality problems, process failures, equipment breakdowns, and workplace incidents. Its appeal is its simplicity: no special training required, no complex tools, and it can be done in minutes for simple problems.</p>
+
+                <p>Developed in the 1930s and formalised in Toyota's manufacturing processes through the 1970s, 5 Whys became a global standard through the lean manufacturing movement. Today it's used everywhere from Silicon Valley product teams to hospital safety departments to oil refineries.</p>
+
+                <blockquote>
+                    "The basis of Toyota's scientific approach is to ask why five times whenever we find a problem." — Taiichi Ohno, Toyota Production System (1978)
+                </blockquote>
+
+                <h2 id="how-to-do-it">2. How to Conduct a 5 Whys Analysis</h2>
+
+                <p>Here is the step-by-step process for running an effective 5 Whys investigation:</p>
+
+                <h3>Step 1: Define the Problem Precisely</h3>
+                <p>The quality of your analysis depends entirely on how well you define the starting problem. A vague problem produces vague answers. Be specific:</p>
+                <ul>
+                    <li>❌ Vague: "The machine broke down"</li>
+                    <li>✅ Specific: "Conveyor belt on Line 3 stopped at 14:32 on Monday, causing a 90-minute production halt"</li>
+                </ul>
+                <p>Include: what happened, where, when, and what the impact was. The more precise your problem statement, the more useful your root cause analysis will be.</p>
+
+                <h3>Step 2: Gather the Right People</h3>
+                <p>5 Whys works best as a team exercise, not a solo activity. Include people who:</p>
+                <ul>
+                    <li>Were present when the problem occurred</li>
+                    <li>Have technical knowledge of the process or equipment</li>
+                    <li>Can challenge assumptions without assigning blame</li>
+                </ul>
+                <p>For workplace incidents, this means the affected workers and their supervisor, not just the safety manager at a desk.</p>
+
+                <h3>Step 3: Ask "Why?" and Document the Answer</h3>
+                <p>Ask why the problem occurred. Write down the answer. Be factual — base answers on evidence, not assumptions. Each answer becomes the new "problem" for the next why.</p>
+                <p>If you find yourself writing "because someone didn't follow the procedure," stop and ask <em>why</em> they didn't follow it. What made following the procedure difficult? That's where the real information is.</p>
+
+                <h3>Step 4: Repeat Until You Reach a Root Cause</h3>
+                <p>Keep asking why. You'll know you've reached a root cause when:</p>
+                <ul>
+                    <li>The answer points to a process, system, or management decision — not a person</li>
+                    <li>Fixing this cause would prevent the problem from recurring</li>
+                    <li>Further "why" questions produce answers outside your control</li>
+                </ul>
+                <p>It doesn't have to be exactly five. Some problems need three. Complex incidents may need seven. The "5" is a guideline, not a rule.</p>
+
+                <h3>Step 5: Identify and Implement Corrective Actions</h3>
+                <p>For each root cause identified, define a corrective action that addresses it. Assign an owner and a due date. Without these, the analysis has no value.</p>
+
+                <h3>Step 6: Verify the Fix</h3>
+                <p>After implementing corrections, confirm the problem hasn't recurred. If it has, return to your analysis — you may not have gone deep enough.</p>
+
+                <h2 id="examples">3. Real-World Examples</h2>
+
+                <h3>Example 1: Equipment Failure (Manufacturing)</h3>
+
+                <p><strong>Problem:</strong> CNC machine stopped mid-run, scrapping a batch of parts worth $4,200.</p>
+
+                <div class="why-chain not-prose">
+                    <div class="why-label">Why 1</div>
+                    <div class="why-text">The cutting tool broke during operation.</div>
+                </div>
+                <div class="why-chain not-prose">
+                    <div class="why-label">Why 2</div>
+                    <div class="why-text">The tool exceeded its wear life before being replaced.</div>
+                </div>
+                <div class="why-chain not-prose">
+                    <div class="why-label">Why 3</div>
+                    <div class="why-text">The tool change schedule wasn't being followed by the operator.</div>
+                </div>
+                <div class="why-chain not-prose">
+                    <div class="why-label">Why 4</div>
+                    <div class="why-text">The schedule was stored in a binder at the supervisor's desk, not at the machine where it could be checked.</div>
+                </div>
+                <div class="why-chain not-prose">
+                    <div class="why-label">Why 5 — Root Cause</div>
+                    <div class="why-text">There is no system for making maintenance schedules visible at the point of use. Information is centralised rather than accessible.</div>
+                </div>
+
+                <p><strong>Corrective action:</strong> Mount tool change schedules on each machine. Implement a visual management system for maintenance tracking. Review all similar information-access gaps across the facility.</p>
+
+                <h3>Example 2: Workplace Injury (Construction)</h3>
+
+                <p><strong>Problem:</strong> Worker sustained a laceration to the right hand while cutting conduit on a construction site.</p>
+
+                <div class="why-chain not-prose">
+                    <div class="why-label">Why 1</div>
+                    <div class="why-text">The cutting disc slipped and contacted the worker's hand.</div>
+                </div>
+                <div class="why-chain not-prose">
+                    <div class="why-label">Why 2</div>
+                    <div class="why-text">The conduit wasn't secured properly when cutting began.</div>
+                </div>
+                <div class="why-chain not-prose">
+                    <div class="why-label">Why 3</div>
+                    <div class="why-text">The correct clamp for the task wasn't available at the work area.</div>
+                </div>
+                <div class="why-chain not-prose">
+                    <div class="why-label">Why 4</div>
+                    <div class="why-text">The pre-task equipment checklist doesn't include workholding equipment for cutting tasks.</div>
+                </div>
+                <div class="why-chain not-prose">
+                    <div class="why-label">Why 5 — Root Cause</div>
+                    <div class="why-text">The SWMS (Safe Work Method Statement) for cutting tasks was written generically and hasn't been reviewed against actual task conditions. Equipment requirements are incomplete.</div>
+                </div>
+
+                <p><strong>Corrective action:</strong> Review and update SWMS for all cutting tasks. Add workholding equipment to the pre-task checklist. Implement task-specific toolbox talks before cutting operations.</p>
+
+                <h3>Example 3: Process Failure (Mining — Haul Truck Collision)</h3>
+
+                <p><strong>Problem:</strong> Two haul trucks made contact at an intersection in the pit, causing $85,000 in damage. No injuries.</p>
+
+                <div class="why-chain not-prose">
+                    <div class="why-label">Why 1</div>
+                    <div class="why-text">Both trucks entered the intersection simultaneously.</div>
+                </div>
+                <div class="why-chain not-prose">
+                    <div class="why-label">Why 2</div>
+                    <div class="why-text">Neither driver saw the other before entering.</div>
+                </div>
+                <div class="why-chain not-prose">
+                    <div class="why-label">Why 3</div>
+                    <div class="why-text">A berm that should have provided sightlines had been partially removed for a blast the previous week and not reinstated.</div>
+                </div>
+                <div class="why-chain not-prose">
+                    <div class="why-label">Why 4</div>
+                    <div class="why-text">There is no formal process to assess and restore traffic management controls after blasting activity.</div>
+                </div>
+                <div class="why-chain not-prose">
+                    <div class="why-label">Why 5 — Root Cause</div>
+                    <div class="why-text">The blasting management procedure doesn't include a post-blast traffic management reinstatement checklist. This is a systemic gap in the procedure, not an individual failure.</div>
+                </div>
+
+                <p><strong>Corrective action:</strong> Update blasting procedure to include post-blast traffic management reinstatement as a mandatory step. Assign the blast crew supervisor as responsible for sign-off before traffic resumes.</p>
+
+                <h2 id="common-mistakes">4. Common Mistakes (and How to Avoid Them)</h2>
+
+                <h3>Mistake 1: Stopping at "Human Error"</h3>
+                <p>The most common failure in 5 Whys. When you reach "the operator made a mistake" or "the worker didn't follow the procedure," the instinct is to stop. Don't. Ask why the person made that choice — what conditions made the error likely? What system allowed the error to happen? Human error is almost always a symptom, not a root cause.</p>
+
+                <h3>Mistake 2: Asking Leading Questions</h3>
+                <p>5 Whys is not an interrogation. The facilitator's job is to ask open questions and document honest answers, not guide the team toward a predetermined conclusion. "Why didn't he read the procedure?" is leading. "Why wasn't the procedure followed?" is open.</p>
+
+                <h3>Mistake 3: Following Only One Chain</h3>
+                <p>Real problems often have multiple contributing causes, not a single linear chain. If at any "why" you identify multiple contributing answers, document all of them. Run parallel chains when needed. A single-path 5 Whys often misses important causes.</p>
+
+                <h3>Mistake 4: Guessing Instead of Evidencing</h3>
+                <p>Each "why" answer should be supported by evidence — physical evidence, documents, witness accounts. If you're speculating, say so explicitly, then go verify. Speculative root causes produce speculative corrective actions that don't fix the real problem.</p>
+
+                <h3>Mistake 5: No Corrective Actions</h3>
+                <p>The analysis is worthless without action. Every root cause needs at least one corrective action with an owner and a due date. "We'll be more careful" is not a corrective action.</p>
+
+                <h3>Mistake 6: Using It for Complex Incidents</h3>
+                <p>5 Whys is a simple tool designed for simple-to-moderate problems. For serious incidents — fatalities, high-potential near misses, complex multi-factor events — it's not deep enough. You need a structured methodology like ICAM. More on this below.</p>
+
+                <h2 id="when-to-use">5. When to Use 5 Whys — and When Not To</h2>
+
+                <h3>Use 5 Whys When:</h3>
+                <ul>
+                    <li>The problem is relatively simple with a clear causal chain</li>
+                    <li>You need a quick analysis — less than 30 minutes</li>
+                    <li>The incident is low-to-moderate severity (minor injuries, quality issues, process delays)</li>
+                    <li>You're dealing with recurring operational problems or equipment issues</li>
+                    <li>It's a first pass to decide if a deeper investigation is warranted</li>
+                </ul>
+
+                <h3>Don't Use 5 Whys Alone When:</h3>
+                <ul>
+                    <li>The incident involved a fatality or serious injury</li>
+                    <li>Multiple people, systems, or departments were involved</li>
+                    <li>The incident has regulatory reporting requirements</li>
+                    <li>You need to analyse organizational factors (management decisions, resource allocation, culture)</li>
+                    <li>The same type of incident has recurred despite previous 5 Whys investigations</li>
+                    <li>You're in a high-hazard industry with potential for fatal events (mining, construction, oil & gas)</li>
+                </ul>
+
+                <h2 id="vs-icam">6. 5 Whys vs ICAM: Choosing the Right Method</h2>
+
+                <p>Both 5 Whys and ICAM are root cause analysis methods — but they're designed for different problems.</p>
+
+                <table style="width:100%; border-collapse: collapse;">
+                    <thead>
+                        <tr>
+                            <th style="background:#1e2d4a; color:#76DCEC; padding:0.75rem 1rem; text-align:left;">Dimension</th>
+                            <th style="background:#1e2d4a; color:#76DCEC; padding:0.75rem 1rem; text-align:left;">5 Whys</th>
+                            <th style="background:#1e2d4a; color:#76DCEC; padding:0.75rem 1rem; text-align:left;">ICAM</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;"><strong>Best for</strong></td>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;">Simple, single-cause problems</td>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;">Complex, multi-factor incidents</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;"><strong>Time to complete</strong></td>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;">15 minutes to 2 hours</td>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;">Hours to days</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;"><strong>Organizational factors</strong></td>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;">Possible but often missed</td>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;">Explicitly required</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;"><strong>Structure</strong></td>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;">Minimal — depends on facilitator</td>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;">Highly structured framework</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;"><strong>Regulatory acceptance</strong></td>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;">Adequate for minor incidents</td>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;">Gold standard for serious events</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;"><strong>Training required</strong></td>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;">Minimal</td>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;">Moderate (1–2 days)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:0.75rem 1rem; color:#d1d5db;"><strong>Industries</strong></td>
+                            <td style="padding:0.75rem 1rem; color:#d1d5db;">All industries</td>
+                            <td style="padding:0.75rem 1rem; color:#d1d5db;">Mining, oil & gas, construction, energy</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>Many organisations use both: 5 Whys for everyday problems and quality issues, ICAM for serious incidents and high-potential near misses. This tiered approach is practical and sensible.</p>
+
+                <p>To learn more about ICAM and when it's the right choice, read our <a href="/blog/icam-investigation-guide.html">Complete ICAM Investigation Guide</a>. For a broader comparison of root cause analysis methods including Fishbone, Fault Tree Analysis, and SCAT, see our <a href="/blog/root-cause-analysis-guide.html">Root Cause Analysis Methods Guide</a>.</p>
+
+                <h2 id="template">7. 5 Whys Template & Worksheet</h2>
+
+                <p>Here's a simple 5 Whys template you can use immediately. For a downloadable version with more RCA tools, see our <a href="/blog/root-cause-analysis-templates.html">Root Cause Analysis Templates</a>.</p>
+
+                <div class="bg-navy-800 rounded-xl p-6 not-prose mt-6">
+                    <h3 class="text-lg font-bold text-cyan-400 mb-4">5 Whys Worksheet</h3>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="text-xs text-gray-400 uppercase tracking-wider mb-1">Problem Statement</div>
+                            <div class="bg-navy-900 rounded-lg p-3 border border-navy-600 text-gray-400 italic text-sm">Describe what happened, where, when, and the impact</div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-cyan-500 uppercase tracking-wider font-bold mb-1">Why 1 — Why did this happen?</div>
+                            <div class="bg-navy-900 rounded-lg p-3 border border-navy-600 text-gray-400 italic text-sm">First-level cause (the most direct answer)</div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-cyan-500 uppercase tracking-wider font-bold mb-1">Why 2 — Why did that happen?</div>
+                            <div class="bg-navy-900 rounded-lg p-3 border border-navy-600 text-gray-400 italic text-sm">Cause of the cause above</div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-cyan-500 uppercase tracking-wider font-bold mb-1">Why 3 — Why did that happen?</div>
+                            <div class="bg-navy-900 rounded-lg p-3 border border-navy-600 text-gray-400 italic text-sm">Going deeper...</div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-cyan-500 uppercase tracking-wider font-bold mb-1">Why 4 — Why did that happen?</div>
+                            <div class="bg-navy-900 rounded-lg p-3 border border-navy-600 text-gray-400 italic text-sm">Getting close to root cause...</div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-cyan-500 uppercase tracking-wider font-bold mb-1">Why 5 — Root Cause</div>
+                            <div class="bg-navy-900 rounded-lg p-3 border border-cyan-500/30 text-gray-300 italic text-sm">The systemic or organisational cause — fixing this prevents recurrence</div>
+                        </div>
+                        <div class="border-t border-navy-700 pt-3 mt-3">
+                            <div class="text-xs text-gray-400 uppercase tracking-wider mb-1">Corrective Action(s)</div>
+                            <div class="bg-navy-900 rounded-lg p-3 border border-navy-600 text-gray-400 italic text-sm">What will be done / Who is responsible / By when / How verified</div>
+                        </div>
+                    </div>
+                </div>
+
+                <p>For more complex incidents — especially in high-hazard environments — consider supplementing 5 Whys with the ICAM framework to ensure organizational factors are captured. InvestigatePro includes structured 5 Whys as part of its AI-guided investigation toolkit.</p>
+
+                <p>📥 <strong><a href="/5-whys-worksheet.html">Download the free 5 Whys Worksheet</a></strong> — interactive worksheet with worked example and corrective action tracker.</p>
+
+                <p>📋 <strong><a href="/rca-template-pack.html">Download the free RCA Template Pack</a></strong> — 4 templates in one: 5 Whys, Fishbone Diagram, ICAM-aligned RCA, and full Investigation Report. Fill in online or print.</p>
+
+                <!-- CTA Block -->
+                <div class="bg-navy-800 rounded-xl p-8 mt-12 not-prose">
+                    <h3 class="font-heading text-2xl font-bold text-white mb-4">Run Better Investigations</h3>
+                    <p class="text-gray-300 mb-6">
+                        InvestigatePro guides your team through structured root cause analysis — 5 Whys, ICAM, and PEEPO — with AI coaching that ensures you don't stop at surface-level causes. Free 14-day trial.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="/#demo" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-6 py-3 rounded-lg font-semibold transition-colors text-center">Start Free Trial</a>
+                        <a href="https://cal.com/investigatepro/demo" class="border border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 px-6 py-3 rounded-lg font-semibold transition-colors text-center">Book a Demo</a>
+                    </div>
+                </div>
+
+                <!-- Related Articles -->
+                <h3 class="text-xl font-semibold text-white mt-12 mb-6">Related Articles</h3>
+                
+                <div class="grid md:grid-cols-2 gap-6 not-prose">
+                    <a href="/blog/root-cause-analysis-guide.html" class="block bg-navy-800 rounded-lg p-6 border border-navy-700 hover:border-cyan-500/50 transition-all">
+                        <h4 class="font-semibold text-white mb-2">Root Cause Analysis: The Complete Guide</h4>
+                        <p class="text-gray-400 text-sm">All major RCA methods — 5 Whys, Fishbone, Fault Tree, ICAM — compared and explained.</p>
+                    </a>
+                    <a href="/blog/icam-investigation-guide.html" class="block bg-navy-800 rounded-lg p-6 border border-navy-700 hover:border-cyan-500/50 transition-all">
+                        <h4 class="font-semibold text-white mb-2">The Complete ICAM Investigation Guide</h4>
+                        <p class="text-gray-400 text-sm">When 5 Whys isn't enough — the structured methodology for serious incidents.</p>
+                    </a>
+                    <a href="/blog/root-cause-analysis-templates.html" class="block bg-navy-800 rounded-lg p-6 border border-navy-700 hover:border-cyan-500/50 transition-all">
+                        <h4 class="font-semibold text-white mb-2">Root Cause Analysis Templates</h4>
+                        <p class="text-gray-400 text-sm">Free downloadable templates including 5 Whys, ICAM, and Fishbone worksheets.</p>
+                    </a>
+                    <a href="/blog/root-cause-analysis-mistakes.html" class="block bg-navy-800 rounded-lg p-6 border border-navy-700 hover:border-cyan-500/50 transition-all">
+                        <h4 class="font-semibold text-white mb-2">5 Root Cause Analysis Mistakes to Avoid</h4>
+                        <p class="text-gray-400 text-sm">Why investigations produce poor results — and how to fix them.</p>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </article>
+
+    <footer class="bg-navy-900 border-t border-navy-700 py-12">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <a href="/" class="inline-flex items-center space-x-2 mb-6">
+                <img src="../assets/logos/logo-03-icon-only-optimized.png" alt="InvestigatePro" class="h-8 w-8" loading="lazy">
+                <span class="font-heading font-bold text-xl text-white">InvestigatePro</span>
+            </a>
+            <p class="text-gray-400 text-sm">AI-powered incident investigation software using ICAM methodology.</p>
+            <div class="mt-6 flex justify-center space-x-6 text-sm text-gray-500">
+                <a href="/privacy.html" class="hover:text-gray-300">Privacy</a>
+                <a href="/terms.html" class="hover:text-gray-300">Terms</a>
+                <a href="/security.html" class="hover:text-gray-300">Security</a>
+            </div>
+            <p class="mt-6 text-gray-600 text-xs">© 2026 InvestigatePro. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

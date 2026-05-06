@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI in Safety: How Machine Learning Is Transforming Root Cause Analysis (2026) | InvestigatePro</title>
+    <meta name="description" content="How AI and machine learning are changing incident investigation and root cause analysis in 2026. Real applications in mining, construction, and manufacturing — plus what AI can and can't do yet.">
+    <meta name="keywords" content="AI safety management, machine learning root cause analysis, AI incident investigation, artificial intelligence safety, AI HSE, predictive safety analytics, AI root cause analysis software">
+    <link rel="icon" type="image/png" href="../assets/logos/logo-03-icon-only-optimized.png">
+    <link rel="canonical" href="https://investigatepro.app/blog/ai-in-safety-machine-learning-root-cause-analysis.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://investigatepro.app/blog/ai-in-safety-machine-learning-root-cause-analysis.html">
+    <meta property="og:title" content="AI in Safety: How Machine Learning Is Transforming Root Cause Analysis (2026)">
+    <meta property="og:description" content="How AI and machine learning are changing incident investigation in 2026 — real applications, current limitations, and what it means for Safety Managers and HSE teams.">
+    <meta property="og:image" content="https://investigatepro.app/assets/logos/logo-03-on-dark.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="article:published_time" content="2026-05-05">
+    <meta property="article:author" content="InvestigatePro">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="../assets/css/styles.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        .prose h2 { color: #76DCEC; margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.75rem; font-weight: 700; }
+        .prose h3 { color: #fff; margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.25rem; font-weight: 600; }
+        .prose p { color: #d1d5db; margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose ul, .prose ol { color: #d1d5db; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .prose li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .prose strong { color: #fff; }
+        .prose a { color: #76DCEC; text-decoration: underline; }
+        .prose blockquote { border-left: 4px solid #76DCEC; padding-left: 1rem; margin: 1.5rem 0; font-style: italic; color: #9ca3af; }
+        .ai-app-card { background: #0d1b2e; border: 1px solid #1e3a5f; border-radius: 10px; padding: 1.25rem; margin: 0.75rem 0; }
+        .ai-app-card .label { color: #76DCEC; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
+        .ai-app-card .title { color: #fff; font-weight: 600; margin-bottom: 0.5rem; }
+        .ai-app-card .desc { color: #9ca3af; font-size: 0.9rem; line-height: 1.6; }
+        .reality-check { background: #1a0d0d; border: 1px solid #5f1e1e; border-radius: 10px; padding: 1.25rem; margin: 1rem 0; }
+        .reality-check .label { color: #f87171; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://investigatepro.app/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://investigatepro.app/blog/" },
+            { "@type": "ListItem", "position": 3, "name": "AI in Safety: Machine Learning for Root Cause Analysis", "item": "https://investigatepro.app/blog/ai-in-safety-machine-learning-root-cause-analysis.html" }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "AI in Safety: How Machine Learning Is Transforming Root Cause Analysis (2026)",
+        "description": "How AI and machine learning are changing incident investigation in 2026 — real applications, current limitations, and what it means for Safety Managers and HSE teams.",
+        "datePublished": "2026-05-05",
+        "dateModified": "2026-05-05",
+        "author": { "@type": "Organization", "name": "InvestigatePro", "url": "https://investigatepro.app" },
+        "publisher": {
+            "@type": "Organization",
+            "name": "InvestigatePro",
+            "logo": { "@type": "ImageObject", "url": "https://investigatepro.app/assets/logos/logo-03-on-dark.png" }
+        },
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://investigatepro.app/blog/ai-in-safety-machine-learning-root-cause-analysis.html" }
+    }
+    </script>
+</head>
+<body class="font-sans antialiased bg-navy-900 text-white">
+
+    <nav class="fixed w-full bg-navy-900/95 backdrop-blur-sm z-50 border-b border-navy-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="/" class="flex items-center">
+                    <picture><source srcset="../assets/logos/logo-03-on-dark.webp" type="image/webp"><img src="../assets/logos/logo-03-on-dark.png" alt="InvestigatePro" class="h-[60px] sm:h-[80px]"></picture>
+                </a>
+                <div class="flex items-center space-x-6">
+                    <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="/#features" class="hidden sm:inline text-gray-300 hover:text-white transition-colors">Features</a>
+                    <a href="/#pricing" class="hidden sm:inline text-gray-300 hover:text-white transition-colors">Pricing</a>
+                    <a href="/#demo" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-5 py-2 rounded-lg font-semibold transition-colors">
+                        Start Free Trial
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <article class="pt-32 pb-20">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6">
+            
+            <nav class="text-sm text-gray-400 mb-8">
+                <a href="/" class="hover:text-cyan-500">Home</a>
+                <span class="mx-2">›</span>
+                <a href="/blog/" class="hover:text-cyan-500">Blog</a>
+                <span class="mx-2">›</span>
+                <span class="text-gray-300">AI in Safety: Machine Learning for RCA</span>
+            </nav>
+
+            <header class="mb-12">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="bg-cyan-500/20 text-cyan-500 px-3 py-1 rounded-full text-sm font-medium">AI & Technology</span>
+                    <span class="text-gray-400 text-sm">16 min read</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl font-bold mb-6 leading-tight">AI in Safety: How Machine Learning Is Transforming Root Cause Analysis</h1>
+                <p class="text-xl text-gray-300 mb-6">Artificial intelligence is starting to change how safety teams investigate incidents and identify root causes. Here's what's real, what's hype, and what it means for Safety Managers in high-hazard industries right now.</p>
+                <div class="flex items-center text-gray-400 text-sm">
+                    <span>Published May 5, 2026</span>
+                    <span class="mx-3">•</span>
+                    <span>Updated May 5, 2026</span>
+                </div>
+            </header>
+
+            <div class="bg-navy-800 rounded-xl p-6 mb-12">
+                <h2 class="text-lg font-semibold mb-4 text-white" style="margin-top: 0;">Table of Contents</h2>
+                <ol class="text-gray-300 space-y-2">
+                    <li><a href="#why-now" class="hover:text-cyan-500">1. Why AI in Safety Is Accelerating Now</a></li>
+                    <li><a href="#real-applications" class="hover:text-cyan-500">2. Real AI Applications in Safety Management</a></li>
+                    <li><a href="#ai-investigation-coaching" class="hover:text-cyan-500">3. AI Investigation Coaching: The Biggest Near-Term Opportunity</a></li>
+                    <li><a href="#predictive-analytics" class="hover:text-cyan-500">4. Predictive Safety Analytics</a></li>
+                    <li><a href="#limitations" class="hover:text-cyan-500">5. What AI Cannot Do (Yet)</a></li>
+                    <li><a href="#for-safety-managers" class="hover:text-cyan-500">6. What This Means for Safety Managers Today</a></li>
+                    <li><a href="#choosing-ai-tools" class="hover:text-cyan-500">7. How to Evaluate AI Safety Tools</a></li>
+                </ol>
+            </div>
+
+            <div class="prose max-w-none">
+
+                <h2 id="why-now">1. Why AI in Safety Is Accelerating Now</h2>
+
+                <p>The application of AI to workplace safety is not a new idea. Researchers have been exploring machine learning for safety prediction since the early 2010s. But three things have changed in the past two years that are making AI in safety genuinely practical:</p>
+
+                <h3>Large Language Models Changed the Interface Problem</h3>
+                <p>The biggest barrier to AI adoption in safety was always the user interface problem. Safety professionals aren't data scientists. They don't want to query databases or interpret model outputs — they want to investigate incidents, manage corrective actions, and keep their workforce safe.</p>
+
+                <p>Large language models (LLMs) like Claude and GPT-4 have created a natural language interface that makes AI accessible to safety professionals without technical training. You can now describe an incident in plain language and have AI help you structure the investigation, identify gaps in your analysis, or suggest causal factors you may have missed.</p>
+
+                <h3>Data Accumulation Has Reached Critical Mass</h3>
+                <p>Machine learning requires data. Many large mining companies, construction groups, and energy operators have now accumulated years of structured incident data — thousands of investigations with coded causal factors, corrective actions, and outcomes. This data is the fuel for genuinely useful predictive models.</p>
+
+                <h3>Regulatory Pressure Is Increasing</h3>
+                <p>Mining regulators in Australia, the UK's HSE, and MSHA in the US are increasingly asking operators to demonstrate systematic learning from incidents. "We investigated it and took corrective action" is no longer sufficient — regulators want to see trend analysis, pattern identification, and evidence that the same contributing factors aren't recurring across multiple incidents. AI makes this analysis tractable at scale.</p>
+
+                <h2 id="real-applications">2. Real AI Applications in Safety Management</h2>
+
+                <p>Here are the AI applications that are genuinely useful today, versus those that are still largely aspirational:</p>
+
+                <div class="ai-app-card not-prose">
+                    <div class="label">✅ Working Now</div>
+                    <div class="title">AI Investigation Coaching</div>
+                    <div class="desc">LLM-powered coaching that guides investigators through structured methodology, challenges shallow analyses, and prompts consideration of organizational factors. Works well with ICAM and 5 Whys frameworks.</div>
+                </div>
+
+                <div class="ai-app-card not-prose">
+                    <div class="label">✅ Working Now</div>
+                    <div class="title">Causal Factor Classification</div>
+                    <div class="desc">NLP models that automatically classify incident reports into causal factor categories (human, equipment, environment, organizational), enabling trend analysis across large datasets without manual coding.</div>
+                </div>
+
+                <div class="ai-app-card not-prose">
+                    <div class="label">✅ Working Now</div>
+                    <div class="title">Similar Incident Retrieval</div>
+                    <div class="desc">When a new incident is entered, semantic search identifies similar historical incidents and their root causes — giving investigators the benefit of institutional knowledge even when experienced investigators have left the organisation.</div>
+                </div>
+
+                <div class="ai-app-card not-prose">
+                    <div class="label">✅ Working Now</div>
+                    <div class="title">Report Quality Checking</div>
+                    <div class="desc">AI analysis of completed investigation reports to identify structural gaps — missing organizational factor analysis, corrective actions without owners, causal factors unsupported by evidence.</div>
+                </div>
+
+                <div class="ai-app-card not-prose">
+                    <div class="label">✅ Working Now</div>
+                    <div class="title">Trend Analysis and Pattern Detection</div>
+                    <div class="desc">ML models that identify recurring causal factors, high-risk locations, time-of-day patterns, and contractor interfaces that produce disproportionate incident rates across large datasets.</div>
+                </div>
+
+                <div class="ai-app-card not-prose">
+                    <div class="label">⚠️ Emerging</div>
+                    <div class="title">Predictive Risk Scoring</div>
+                    <div class="desc">Models that assign real-time risk scores to work areas, shifts, or task types based on historical data and current conditions. Promising but requires substantial historical data and careful validation.</div>
+                </div>
+
+                <div class="ai-app-card not-prose">
+                    <div class="label">⚠️ Emerging</div>
+                    <div class="title">Computer Vision for Hazard Detection</div>
+                    <div class="desc">AI analysis of site cameras to automatically detect PPE non-compliance, proximity hazards, and unsafe conditions. Works in controlled environments; still challenged by construction and mining site complexity.</div>
+                </div>
+
+                <div class="ai-app-card not-prose">
+                    <div class="label">🔬 Research Stage</div>
+                    <div class="title">Autonomous Incident Investigation</div>
+                    <div class="desc">AI systems that independently investigate incidents without human involvement. Not practically available and raises significant accountability and accuracy concerns. Human expertise remains essential.</div>
+                </div>
+
+                <h2 id="ai-investigation-coaching">3. AI Investigation Coaching: The Biggest Near-Term Opportunity</h2>
+
+                <p>Of all the AI applications in safety, investigation coaching has the highest near-term impact potential — and it's available now.</p>
+
+                <p>Here's the problem it solves: investigation quality in most organisations is highly variable. When a senior, experienced investigator runs an ICAM investigation, the output is thorough — organizational factors are identified, causal chains are traced back to management decisions, and corrective actions are substantive. When a less experienced investigator runs the same investigation, the output is shallow — a few contributing factors, corrective actions that amount to "retrain the worker," and no organizational factors analysis at all.</p>
+
+                <p>Both investigations look structurally similar. Both produce a report. But one actually identifies what needs to change; the other doesn't.</p>
+
+                <h3>How AI Coaching Changes This</h3>
+                <p>AI investigation coaching works by analysing what the investigator has documented and generating targeted prompts that push them deeper:</p>
+
+                <ul>
+                    <li><strong>Shallow analysis detection:</strong> "You've identified that the operator didn't follow the lockout procedure. What conditions made following the procedure difficult? Was there time pressure? Was the procedure practical for the task being performed?"</li>
+                    <li><strong>Organizational factor prompting:</strong> "This investigation has identified individual and task factors. Have you examined what management decisions or system gaps created these conditions?"</li>
+                    <li><strong>Evidence gap flagging:</strong> "You've stated that training was inadequate. What evidence supports this conclusion? Have you reviewed the training records?"</li>
+                    <li><strong>Corrective action quality checking:</strong> "This corrective action doesn't have an owner assigned. Actions without owners rarely get implemented."</li>
+                </ul>
+
+                <p>The effect is that every investigator — regardless of experience level — produces investigations that meet a minimum quality standard. This is the equaliser that organisations with mixed-experience teams need.</p>
+
+                <blockquote>
+                    "AI doesn't replace the experienced investigator. It raises the floor — ensuring that even junior investigators consistently identify the organizational factors that prevent recurrence."
+                </blockquote>
+
+                <h3>What This Looks Like in Practice</h3>
+                <p>InvestigatePro's AI coaching works alongside the investigation as it's being built. As the investigator documents causal factors and contributing conditions, the AI analyses the investigation in real time and surfaces coaching prompts where depth is missing. It's not a post-hoc review — it's embedded in the investigation workflow itself.</p>
+
+                <p>For high-hazard industries where investigation quality directly determines whether the next person lives or dies, this is not a nice-to-have. It's a genuine safety improvement mechanism.</p>
+
+                <h2 id="predictive-analytics">4. Predictive Safety Analytics</h2>
+
+                <p>Beyond investigation coaching, machine learning is enabling a shift from reactive safety management (responding to incidents) to predictive safety management (identifying risk before incidents occur).</p>
+
+                <h3>Leading vs Lagging Indicators</h3>
+                <p>Traditional safety metrics are almost entirely lagging indicators — they measure what's already happened (injury rate, TRIFR, LTIFR). By the time a trend becomes visible in these metrics, the incidents have already occurred.</p>
+
+                <p>AI-powered leading indicators change this. By analysing patterns in:</p>
+                <ul>
+                    <li>Near miss and hazard report frequency and type</li>
+                    <li>Inspection non-conformance rates by area and contractor</li>
+                    <li>Training compliance and competency assessment results</li>
+                    <li>Equipment maintenance patterns and fault rates</li>
+                    <li>Corrective action close-out rates and overdue actions</li>
+                    <li>Workforce fatigue indicators (shift patterns, travel time, hours worked)</li>
+                </ul>
+
+                <p>ML models can identify risk trajectories before they produce incidents. An area that's accumulating near misses of a similar type, combined with increasing corrective action overdue rates and declining inspection frequency, may be at elevated incident risk weeks before anything actually goes wrong.</p>
+
+                <h3>The Data Prerequisite</h3>
+                <p>Predictive analytics requires data volume and consistency that many SMB operations don't yet have. The organisations getting the most value from predictive safety ML are typically large mining groups or construction majors with tens of thousands of incident records over multiple years.</p>
+
+                <p>For SMB operations, the immediate value is in trend analysis — identifying which causal factors keep recurring, which areas or contractors produce disproportionate incident rates, and which corrective action types actually reduce recurrence. This is achievable with far less data than full predictive modelling.</p>
+
+                <h2 id="limitations">5. What AI Cannot Do (Yet)</h2>
+
+                <p>Amid genuine AI progress, there's significant hype in the safety technology space. Being clear about current limitations helps organisations invest wisely:</p>
+
+                <div class="reality-check not-prose">
+                    <div class="label">⚠️ Reality Check</div>
+                    <p style="color:#d1d5db; margin:0; font-size:0.95rem; line-height:1.7;"><strong style="color:#fff;">AI cannot replace human judgement in serious incident investigations.</strong> An AI system can prompt an investigator to consider organizational factors, but it cannot interview a witness, assess credibility, or make the nuanced professional judgement about causation that an experienced investigator makes. Human expertise is still the irreplaceable core of investigation quality.</p>
+                </div>
+
+                <div class="reality-check not-prose">
+                    <div class="label">⚠️ Reality Check</div>
+                    <p style="color:#d1d5db; margin:0; font-size:0.95rem; line-height:1.7;"><strong style="color:#fff;">AI can't fix poor investigation data inputs.</strong> Garbage in, garbage out applies fully. If investigations are being closed quickly with shallow causal factors to meet reporting deadlines, AI trend analysis of those investigations will produce shallow insights. AI amplifies quality, but can't create it from nothing.</p>
+                </div>
+
+                <div class="reality-check not-prose">
+                    <div class="label">⚠️ Reality Check</div>
+                    <p style="color:#d1d5db; margin:0; font-size:0.95rem; line-height:1.7;"><strong style="color:#fff;">Computer vision in complex field environments remains hard.</strong> PPE detection in a controlled warehouse environment works reasonably well. On a dynamic underground mine or a complex construction site with variable lighting, dust, multiple trades, and unpredictable human movement, false positive rates and coverage gaps limit practical utility today.</p>
+                </div>
+
+                <div class="reality-check not-prose">
+                    <div class="label">⚠️ Reality Check</div>
+                    <p style="color:#d1d5db; margin:0; font-size:0.95rem; line-height:1.7;"><strong style="color:#fff;">Predictive models need substantial data to be reliable.</strong> A model trained on 50 incidents will produce unreliable predictions. Organisations without years of consistently coded incident data should focus on building that data quality before investing in advanced predictive analytics.</p>
+                </div>
+
+                <h2 id="for-safety-managers">6. What This Means for Safety Managers Today</h2>
+
+                <p>If you're a Safety Manager in mining, construction, oil and gas, or manufacturing, here's the practical takeaway:</p>
+
+                <h3>What You Should Be Doing Now</h3>
+                <ul>
+                    <li><strong>Use AI-assisted investigation tools</strong> for structured root cause analysis. The technology is mature, the benefit is immediate, and the barrier to adoption is low.</li>
+                    <li><strong>Invest in investigation data quality.</strong> Consistent causal factor coding, thorough organizational factor analysis, and corrective action close-out tracking are the foundation for everything AI can do for you in the future.</li>
+                    <li><strong>Look for AI tools that augment rather than replace investigator judgement.</strong> The best AI safety tools make your investigators better; they don't try to remove them from the loop.</li>
+                    <li><strong>Start trend analysis now</strong> — even simple analysis of recurring causal factors across your incident database is more valuable than most organisations realize.</li>
+                </ul>
+
+                <h3>What You Should Be Watching</h3>
+                <ul>
+                    <li>Computer vision for PPE compliance and proximity monitoring — getting better rapidly, worth piloting in 2026–2027</li>
+                    <li>Equipment telemetry integration with incident data — combining maintenance patterns with incident records for predictive maintenance-linked safety analysis</li>
+                    <li>Regulatory expectations around AI — some jurisdictions are beginning to develop guidance on AI use in safety management systems</li>
+                </ul>
+
+                <h3>What You Should Be Skeptical Of</h3>
+                <ul>
+                    <li>Vendors claiming AI can autonomously investigate incidents without human involvement</li>
+                    <li>Predictive safety analytics sold to operations without sufficient historical incident data</li>
+                    <li>Generic AI tools applied to safety without industry-specific training and safety methodology built in</li>
+                </ul>
+
+                <h2 id="choosing-ai-tools">7. How to Evaluate AI Safety Tools</h2>
+
+                <p>When evaluating an AI-powered safety platform, ask these questions:</p>
+
+                <ol>
+                    <li><strong>Is the AI trained on safety methodology?</strong> Generic LLMs can help with writing and structure, but safety-specific AI that understands ICAM, causal factor classification, and investigation quality criteria produces significantly better outputs for investigation coaching.</li>
+                    <li><strong>Does it augment or replace investigator judgement?</strong> The answer should always be augment. If a vendor claims their AI investigates incidents independently, that's a red flag.</li>
+                    <li><strong>How is the AI integrated into the investigation workflow?</strong> AI coaching embedded in the investigation process (real-time prompts as the investigation is built) is more valuable than post-hoc report review.</li>
+                    <li><strong>Can it analyse trends across your incident database?</strong> Pattern identification across multiple investigations is where AI delivers long-term safety value, not just individual investigation assistance.</li>
+                    <li><strong>Is it priced appropriately for your operation size?</strong> Enterprise AI safety platforms designed for tier-1 mining companies are not right for 100-person SMB operations. Look for tools built for your scale.</li>
+                </ol>
+
+                <p>InvestigatePro is built specifically for this space: ICAM methodology with AI coaching embedded in the investigation workflow, designed for high-hazard industry SMBs, with trend analysis and pattern identification across your incident database.</p>
+
+                <p>To understand the ICAM methodology that our AI coaching is built around, read our <a href="/blog/icam-investigation-guide.html">Complete ICAM Investigation Guide</a>. For more on how AI applies specifically to mining operations, see our <a href="/blog/mining-incident-investigation-guide.html">Mining Incident Investigation Guide</a>.</p>
+
+                <!-- CTA Block -->
+                <div class="bg-navy-800 rounded-xl p-8 mt-12 not-prose">
+                    <h3 class="font-heading text-2xl font-bold text-white mb-4">AI-Powered Investigation, Built for Your Industry</h3>
+                    <p class="text-gray-300 mb-6">
+                        InvestigatePro combines ICAM methodology with AI coaching that raises the quality floor across your investigation team — so every investigator consistently identifies organizational factors and produces substantive corrective actions. Free 14-day trial.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="/#demo" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-6 py-3 rounded-lg font-semibold transition-colors text-center">Start Free Trial</a>
+                        <a href="https://cal.com/investigatepro/demo" class="border border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 px-6 py-3 rounded-lg font-semibold transition-colors text-center">Book a Demo</a>
+                    </div>
+                </div>
+
+                <!-- Related Articles -->
+                <h3 class="text-xl font-semibold text-white mt-12 mb-6">Related Articles</h3>
+                
+                <div class="grid md:grid-cols-2 gap-6 not-prose">
+                    <a href="/blog/icam-investigation-guide.html" class="block bg-navy-800 rounded-lg p-6 border border-navy-700 hover:border-cyan-500/50 transition-all">
+                        <h4 class="font-semibold text-white mb-2">The Complete ICAM Investigation Guide</h4>
+                        <p class="text-gray-400 text-sm">The methodology our AI coaching is built around — explained in full.</p>
+                    </a>
+                    <a href="/blog/ai-safety-management.html" class="block bg-navy-800 rounded-lg p-6 border border-navy-700 hover:border-cyan-500/50 transition-all">
+                        <h4 class="font-semibold text-white mb-2">AI in Safety Management</h4>
+                        <p class="text-gray-400 text-sm">How AI is changing safety management systems and what it means for HSE professionals.</p>
+                    </a>
+                    <a href="/blog/mining-incident-investigation-guide.html" class="block bg-navy-800 rounded-lg p-6 border border-navy-700 hover:border-cyan-500/50 transition-all">
+                        <h4 class="font-semibold text-white mb-2">Mining Incident Investigation Guide</h4>
+                        <p class="text-gray-400 text-sm">AI-assisted investigation applied to mining's unique hazards and challenges.</p>
+                    </a>
+                    <a href="/blog/root-cause-analysis-guide.html" class="block bg-navy-800 rounded-lg p-6 border border-navy-700 hover:border-cyan-500/50 transition-all">
+                        <h4 class="font-semibold text-white mb-2">Root Cause Analysis: The Complete Guide</h4>
+                        <p class="text-gray-400 text-sm">The RCA methods AI is augmenting — explained for safety professionals.</p>
+                    </a>
+                </div>
+
+                <div class="mt-8 not-prose">
+                    <a href="/rca-template-pack.html" class="block bg-navy-800 rounded-xl p-6 border border-cyan-500/30 hover:border-cyan-500/60 transition-all text-center">
+                        <div class="text-2xl mb-2">📋</div>
+                        <h4 class="font-semibold text-white mb-1">Free RCA Template Pack — 4 Templates</h4>
+                        <p class="text-gray-400 text-sm">5 Whys · Fishbone Diagram · ICAM-aligned RCA · Investigation Report. Ready to use before AI tools are in place.</p>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </article>
+
+    <footer class="bg-navy-900 border-t border-navy-700 py-12">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <a href="/" class="inline-flex items-center space-x-2 mb-6">
+                <img src="../assets/logos/logo-03-icon-only-optimized.png" alt="InvestigatePro" class="h-8 w-8" loading="lazy">
+                <span class="font-heading font-bold text-xl text-white">InvestigatePro</span>
+            </a>
+            <p class="text-gray-400 text-sm">AI-powered incident investigation software using ICAM methodology.</p>
+            <div class="mt-6 flex justify-center space-x-6 text-sm text-gray-500">
+                <a href="/privacy.html" class="hover:text-gray-300">Privacy</a>
+                <a href="/terms.html" class="hover:text-gray-300">Terms</a>
+                <a href="/security.html" class="hover:text-gray-300">Security</a>
+            </div>
+            <p class="mt-6 text-gray-600 text-xs">© 2026 InvestigatePro. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

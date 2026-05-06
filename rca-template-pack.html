@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Root Cause Analysis Template Pack — 4 RCA Templates | InvestigatePro</title>
+    <meta name="description" content="Download 4 free root cause analysis templates: 5 Whys, Fishbone Diagram, ICAM-aligned RCA, and Incident Investigation Report. Used by safety professionals in mining, construction, and oil &amp; gas.">
+    <meta name="keywords" content="root cause analysis template, RCA template free download, incident investigation template, 5 whys template, fishbone diagram template, ICAM template, safety investigation template">
+    <link rel="canonical" href="https://investigatepro.app/rca-template-pack.html">
+
+    <meta property="og:title" content="Free Root Cause Analysis Template Pack — 4 RCA Templates">
+    <meta property="og:description" content="4 professional RCA templates used by safety teams in mining, construction, and oil &amp; gas. Download free.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://investigatepro.app/rca-template-pack.html">
+
+    <!-- Schema: LeadGenerationPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Free Root Cause Analysis Template Pack",
+      "description": "4 free root cause analysis templates for safety professionals in mining, construction, and oil & gas.",
+      "url": "https://investigatepro.app/rca-template-pack.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "InvestigatePro",
+        "url": "https://investigatepro.app"
+      }
+    }
+    </script>
+
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <style>
+        :root {
+            --navy: #0C142E;
+            --navy-light: #1a2544;
+            --navy-mid: #0f1e3a;
+            --cyan: #76DCEC;
+            --cyan-dark: #5bc4d4;
+            --white: #FFFFFF;
+            --gray-100: #f7f8fa;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-600: #4b5563;
+            --green: #10b981;
+            --amber: #f59e0b;
+            --red: #ef4444;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--navy);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        .container { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(118, 220, 236, 0.1);
+        }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--white); text-decoration: none; }
+        .logo span { color: var(--cyan); }
+        .back-link { color: var(--cyan); text-decoration: none; font-size: 0.9rem; }
+        .back-link:hover { text-decoration: underline; }
+
+        /* Hero */
+        .hero { text-align: center; padding: 50px 0 36px; }
+        .badge { display: inline-block; background: rgba(118, 220, 236, 0.15); color: var(--cyan); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; margin-bottom: 18px; }
+        h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 14px; line-height: 1.2; }
+        .hero-sub { font-size: 1.05rem; color: var(--gray-400); max-width: 600px; margin: 0 auto 28px; }
+
+        .template-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            max-width: 560px;
+            margin: 0 auto 32px;
+        }
+        .template-tag {
+            background: var(--navy-light);
+            border: 1px solid rgba(118, 220, 236, 0.2);
+            border-radius: 8px;
+            padding: 10px 14px;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .template-tag .icon { color: var(--cyan); font-size: 1rem; }
+
+        /* Capture Form */
+        .capture-form {
+            background: var(--navy-light);
+            border: 1px solid rgba(118, 220, 236, 0.3);
+            border-radius: 14px;
+            padding: 40px;
+            margin: 40px 0;
+            text-align: center;
+            max-width: 520px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .capture-form h3 { font-size: 1.4rem; margin-bottom: 8px; }
+        .capture-form p { color: var(--gray-400); margin-bottom: 28px; font-size: 0.95rem; }
+        .form-row { margin-bottom: 12px; }
+        .form-row input {
+            width: 100%;
+            padding: 13px 16px;
+            background: var(--navy);
+            border: 1px solid rgba(118, 220, 236, 0.2);
+            border-radius: 8px;
+            color: var(--white);
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .form-row input::placeholder { color: var(--gray-600); }
+        .form-row input:focus { border-color: var(--cyan); }
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background: var(--cyan);
+            color: var(--navy);
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 8px;
+            transition: background 0.2s;
+        }
+        .submit-btn:hover { background: var(--cyan-dark); }
+        .form-note { color: var(--gray-400); font-size: 0.8rem; margin-top: 12px; }
+
+        /* Success state */
+        .success-state { display: none; }
+        .success-icon { font-size: 3rem; margin-bottom: 16px; }
+        .success-title { font-size: 1.5rem; font-weight: 700; color: var(--cyan); margin-bottom: 8px; }
+        .success-sub { color: var(--gray-400); }
+
+        /* Template pack content */
+        .template-pack { display: none; margin-top: 32px; }
+
+        /* Section header */
+        .section-header { text-align: center; margin: 60px 0 32px; }
+        .section-header h2 { font-size: 1.9rem; margin-bottom: 8px; }
+        .section-header p { color: var(--gray-400); max-width: 560px; margin: 0 auto; }
+        .section-divider { height: 2px; background: linear-gradient(90deg, transparent, rgba(118,220,236,0.3), transparent); margin: 48px 0; }
+
+        /* Template number badge */
+        .template-number {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(118, 220, 236, 0.1);
+            border: 1px solid rgba(118, 220, 236, 0.25);
+            border-radius: 20px;
+            padding: 5px 16px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--cyan);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 14px;
+        }
+
+        /* Template card */
+        .template-card {
+            background: var(--navy-mid);
+            border: 1px solid rgba(118, 220, 236, 0.15);
+            border-radius: 14px;
+            padding: 32px;
+            margin-bottom: 16px;
+        }
+        .template-card h3 { font-size: 1.25rem; margin-bottom: 6px; }
+        .template-card .template-desc { color: var(--gray-400); font-size: 0.9rem; margin-bottom: 24px; }
+
+        /* Field styles */
+        .field-group { margin-bottom: 20px; }
+        .field-label {
+            color: var(--cyan);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .field-input {
+            width: 100%;
+            background: var(--navy);
+            border: 1px solid rgba(118, 220, 236, 0.15);
+            border-radius: 8px;
+            padding: 12px 14px;
+            color: var(--white);
+            font-family: inherit;
+            font-size: 0.95rem;
+            resize: vertical;
+            outline: none;
+            transition: border-color 0.2s;
+            min-height: 52px;
+        }
+        .field-input::placeholder { color: rgba(156, 163, 175, 0.4); }
+        .field-input:focus { border-color: rgba(118, 220, 236, 0.4); }
+        .field-input.short { min-height: 42px; resize: none; }
+
+        .fields-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .fields-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+
+        /* Why-chain (Template 1) */
+        .why-chain { margin-top: 8px; }
+        .why-step-row {
+            display: grid;
+            grid-template-columns: 38px 1fr;
+            gap: 12px;
+            margin-bottom: 10px;
+            align-items: start;
+        }
+        .why-num {
+            background: rgba(118, 220, 236, 0.12);
+            color: var(--cyan);
+            border: 1px solid rgba(118, 220, 236, 0.25);
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+            margin-top: 10px;
+        }
+        .why-num.root { background: rgba(118, 220, 236, 0.25); }
+
+        /* Fishbone diagram (Template 2) */
+        .fishbone-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 8px; }
+        .fishbone-bone {
+            background: var(--navy);
+            border: 1px solid rgba(118, 220, 236, 0.12);
+            border-radius: 10px;
+            padding: 16px;
+        }
+        .bone-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        .bone-icon { font-size: 1.1rem; }
+        .bone-title { font-size: 0.85rem; font-weight: 700; color: var(--cyan); }
+        .bone-causes textarea { min-height: 70px; font-size: 0.85rem; }
+
+        /* ICAM template (Template 3) */
+        .icam-section {
+            background: var(--navy);
+            border: 1px solid rgba(118, 220, 236, 0.12);
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 14px;
+        }
+        .icam-section-title {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--cyan);
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(118, 220, 236, 0.1);
+        }
+        .icam-fields { display: grid; gap: 10px; }
+
+        /* Severity selector */
+        .severity-row { display: flex; gap: 8px; margin-top: 4px; }
+        .severity-btn {
+            flex: 1;
+            padding: 8px 4px;
+            border-radius: 6px;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: transparent;
+            color: var(--gray-400);
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.15s;
+            text-align: center;
+        }
+        .severity-btn:hover { border-color: rgba(255,255,255,0.3); }
+        .severity-btn.active-low { background: rgba(16, 185, 129, 0.2); border-color: var(--green); color: var(--green); }
+        .severity-btn.active-med { background: rgba(245, 158, 11, 0.2); border-color: var(--amber); color: var(--amber); }
+        .severity-btn.active-high { background: rgba(239, 68, 68, 0.2); border-color: var(--red); color: var(--red); }
+        .severity-btn.active-crit { background: rgba(239, 68, 68, 0.35); border-color: var(--red); color: var(--red); }
+
+        /* Investigation Report Template (Template 4) */
+        .report-section {
+            background: var(--navy);
+            border-left: 3px solid rgba(118, 220, 236, 0.4);
+            border-radius: 0 8px 8px 0;
+            padding: 16px 18px;
+            margin-bottom: 14px;
+        }
+        .report-section-title {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--cyan);
+            margin-bottom: 12px;
+        }
+        .report-section .field-input { min-height: 60px; }
+
+        /* Actions table */
+        .actions-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+        .actions-table th {
+            background: rgba(118, 220, 236, 0.1);
+            color: var(--cyan);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 8px 10px;
+            text-align: left;
+            font-weight: 700;
+        }
+        .actions-table td { padding: 6px 4px; vertical-align: top; }
+        .actions-table td input {
+            width: 100%;
+            background: var(--navy);
+            border: 1px solid rgba(118, 220, 236, 0.12);
+            border-radius: 6px;
+            padding: 8px 10px;
+            color: var(--white);
+            font-family: inherit;
+            font-size: 0.85rem;
+            outline: none;
+        }
+        .actions-table td input:focus { border-color: rgba(118, 220, 236, 0.35); }
+        .actions-table .add-row-btn {
+            background: none;
+            border: 1px dashed rgba(118, 220, 236, 0.3);
+            border-radius: 6px;
+            color: var(--cyan);
+            font-size: 0.8rem;
+            padding: 8px 14px;
+            cursor: pointer;
+            margin-top: 8px;
+            width: 100%;
+            transition: all 0.15s;
+        }
+        .actions-table .add-row-btn:hover { background: rgba(118, 220, 236, 0.08); }
+
+        /* Print buttons */
+        .print-bar {
+            background: var(--navy-light);
+            border: 1px solid rgba(118, 220, 236, 0.2);
+            border-radius: 10px;
+            padding: 18px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+        .print-bar p { color: var(--gray-400); font-size: 0.9rem; }
+        .print-bar-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+        .print-btn {
+            background: var(--cyan);
+            color: var(--navy);
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .print-btn:hover { background: var(--cyan-dark); }
+        .print-btn.secondary {
+            background: transparent;
+            border: 1px solid rgba(118, 220, 236, 0.4);
+            color: var(--cyan);
+        }
+        .print-btn.secondary:hover { background: rgba(118, 220, 236, 0.08); }
+
+        /* CTA */
+        .bottom-cta {
+            background: linear-gradient(135deg, var(--navy-light), var(--navy-mid));
+            border: 1px solid rgba(118, 220, 236, 0.25);
+            border-radius: 14px;
+            padding: 40px;
+            text-align: center;
+            margin: 60px 0;
+        }
+        .bottom-cta h3 { font-size: 1.6rem; margin-bottom: 10px; }
+        .bottom-cta p { color: var(--gray-400); margin-bottom: 28px; max-width: 480px; margin-left: auto; margin-right: auto; }
+        .cta-btn {
+            display: inline-block;
+            background: var(--cyan);
+            color: var(--navy);
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .cta-btn:hover { background: var(--cyan-dark); }
+        .cta-features { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-top: 20px; }
+        .cta-feature { display: flex; align-items: center; gap: 6px; font-size: 0.85rem; color: var(--gray-400); }
+        .cta-feature svg { color: var(--green); }
+
+        /* Footer */
+        footer {
+            padding: 32px 0;
+            border-top: 1px solid rgba(118, 220, 236, 0.08);
+            text-align: center;
+        }
+        footer p { color: var(--gray-600); font-size: 0.85rem; }
+        footer a { color: var(--cyan); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+
+        /* Print styles */
+        @media print {
+            body { background: white; color: #0C142E; }
+            header, .capture-form, .print-bar, .bottom-cta, footer { display: none !important; }
+            .template-pack { display: block !important; }
+            .template-card {
+                background: white;
+                border: 1px solid #ccc;
+                page-break-inside: avoid;
+                margin-bottom: 24px;
+            }
+            .field-input, .actions-table td input {
+                background: #f9f9f9;
+                color: #0C142E;
+                border-color: #ccc;
+            }
+            .field-label, .bone-title, .icam-section-title, .report-section-title, .template-number { color: #0C142E; }
+            .template-number { background: #eee; border-color: #ccc; }
+            .bone-label .bone-title, .icam-section-title, .report-section-title { color: #0C142E; }
+            .section-header h2 { color: #0C142E; }
+            .template-card h3 { color: #0C142E; }
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            .template-grid { grid-template-columns: 1fr; }
+            .fields-row, .fields-row-3, .fishbone-grid { grid-template-columns: 1fr; }
+            .capture-form { padding: 28px 20px; }
+            .print-bar { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="header-content">
+            <a href="/" class="logo">Investigate<span>Pro</span></a>
+            <a href="/blog/" class="back-link">← Back to Resources</a>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+
+    <!-- HERO -->
+    <div class="hero">
+        <div class="badge">📋 Free Download — 4 Templates Included</div>
+        <h1>Root Cause Analysis<br>Template Pack</h1>
+        <p class="hero-sub">Professional RCA templates used by safety teams in mining, construction, and oil &amp; gas. Fill in online or print — no software needed.</p>
+
+        <div class="template-grid">
+            <div class="template-tag"><span class="icon">🔍</span> 5 Whys Analysis</div>
+            <div class="template-tag"><span class="icon">🐟</span> Fishbone Diagram</div>
+            <div class="template-tag"><span class="icon">🎯</span> ICAM-Aligned RCA</div>
+            <div class="template-tag"><span class="icon">📄</span> Investigation Report</div>
+        </div>
+    </div>
+
+    <!-- CAPTURE FORM -->
+    <div class="capture-form" id="captureSection">
+        <div class="form-state" id="formState">
+            <h3>Get the Free Template Pack</h3>
+            <p>Enter your details below to unlock all 4 templates instantly.</p>
+            <div class="form-row">
+                <input type="text" id="firstName" placeholder="Your first name" autocomplete="given-name">
+            </div>
+            <div class="form-row">
+                <input type="email" id="emailInput" placeholder="Work email address" autocomplete="email">
+            </div>
+            <div class="form-row">
+                <input type="text" id="companyInput" placeholder="Company name" autocomplete="organization">
+            </div>
+            <button class="submit-btn" onclick="unlockTemplates()">Unlock Free Templates →</button>
+            <p class="form-note">🔒 No spam. Unsubscribe anytime. Your data is protected under GDPR.</p>
+        </div>
+        <div class="success-state" id="successState">
+            <div class="success-icon">✅</div>
+            <div class="success-title">Templates Unlocked!</div>
+            <p class="success-sub">Scroll down to access all 4 templates. You can fill them in online or use your browser's print function.</p>
+        </div>
+    </div>
+
+    <!-- TEMPLATE PACK (hidden until email submitted) -->
+    <div class="template-pack" id="templatePack">
+
+        <div class="print-bar">
+            <p>💡 Fill in online, then print or save as PDF using your browser (Ctrl+P / ⌘+P)</p>
+            <div class="print-bar-btns">
+                <button class="print-btn" onclick="window.print()">🖨️ Print All Templates</button>
+                <button class="print-btn secondary" onclick="clearAll()">🔄 Clear All Fields</button>
+            </div>
+        </div>
+
+        <!-- ===== TEMPLATE 1: 5 WHYS ===== -->
+        <div class="section-header">
+            <div class="template-number">Template 1 of 4</div>
+            <h2>5 Whys Root Cause Analysis</h2>
+            <p>Best for: Simple to moderate incidents where the causal chain is relatively linear. Ask "Why?" five times to reach the root cause.</p>
+        </div>
+
+        <div class="template-card">
+            <h3>Incident Details</h3>
+            <p class="template-desc">Record the basic facts before starting the analysis.</p>
+            <div class="fields-row">
+                <div class="field-group">
+                    <label class="field-label">Incident Date</label>
+                    <input class="field-input short" type="text" placeholder="DD/MM/YYYY">
+                </div>
+                <div class="field-group">
+                    <label class="field-label">Report Number</label>
+                    <input class="field-input short" type="text" placeholder="e.g. INC-2026-047">
+                </div>
+            </div>
+            <div class="fields-row">
+                <div class="field-group">
+                    <label class="field-label">Location / Site</label>
+                    <input class="field-input short" type="text" placeholder="e.g. Open Pit — Level 4">
+                </div>
+                <div class="field-group">
+                    <label class="field-label">Facilitator Name</label>
+                    <input class="field-input short" type="text" placeholder="Name of person leading RCA">
+                </div>
+            </div>
+            <div class="field-group">
+                <label class="field-label">Problem Statement (What happened?)</label>
+                <textarea class="field-input" placeholder="Describe the incident clearly and specifically. E.g. 'A worker slipped on the haul road ramp at Level 4 on the morning shift, resulting in a sprained ankle.'"></textarea>
+            </div>
+        </div>
+
+        <div class="template-card">
+            <h3>5 Whys Analysis Chain</h3>
+            <p class="template-desc">Start from the problem statement and ask "Why did this happen?" for each answer. Stop when you reach a root cause you can fix.</p>
+
+            <div class="why-chain">
+                <div class="why-step-row">
+                    <div class="why-num">W1</div>
+                    <div class="field-group" style="flex:1;margin-bottom:0">
+                        <label class="field-label">Why 1 — Why did the incident occur?</label>
+                        <textarea class="field-input" placeholder="Your answer to Why #1..."></textarea>
+                    </div>
+                </div>
+                <div class="why-step-row">
+                    <div class="why-num">W2</div>
+                    <div class="field-group" style="flex:1;margin-bottom:0">
+                        <label class="field-label">Why 2 — Why did that happen?</label>
+                        <textarea class="field-input" placeholder="Your answer to Why #2..."></textarea>
+                    </div>
+                </div>
+                <div class="why-step-row">
+                    <div class="why-num">W3</div>
+                    <div class="field-group" style="flex:1;margin-bottom:0">
+                        <label class="field-label">Why 3 — Why did that happen?</label>
+                        <textarea class="field-input" placeholder="Your answer to Why #3..."></textarea>
+                    </div>
+                </div>
+                <div class="why-step-row">
+                    <div class="why-num">W4</div>
+                    <div class="field-group" style="flex:1;margin-bottom:0">
+                        <label class="field-label">Why 4 — Why did that happen?</label>
+                        <textarea class="field-input" placeholder="Your answer to Why #4..."></textarea>
+                    </div>
+                </div>
+                <div class="why-step-row">
+                    <div class="why-num root">RC</div>
+                    <div class="field-group" style="flex:1;margin-bottom:0">
+                        <label class="field-label">Why 5 / Root Cause — The fundamental reason</label>
+                        <textarea class="field-input" placeholder="Root cause identified..."></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="template-card">
+            <h3>Corrective Actions</h3>
+            <p class="template-desc">For each root cause identified, define a corrective action with a responsible owner and due date.</p>
+            <table class="actions-table" id="whysActionsTable">
+                <thead>
+                    <tr>
+                        <th style="width:40%">Corrective Action</th>
+                        <th style="width:25%">Responsible Person</th>
+                        <th style="width:20%">Due Date</th>
+                        <th style="width:15%">Status</th>
+                    </tr>
+                </thead>
+                <tbody id="whysActionsBody">
+                    <tr>
+                        <td><input type="text" placeholder="Action description..."></td>
+                        <td><input type="text" placeholder="Name"></td>
+                        <td><input type="text" placeholder="DD/MM/YYYY"></td>
+                        <td><input type="text" placeholder="Open"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" placeholder="Action description..."></td>
+                        <td><input type="text" placeholder="Name"></td>
+                        <td><input type="text" placeholder="DD/MM/YYYY"></td>
+                        <td><input type="text" placeholder="Open"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="add-row-btn" onclick="addRow('whysActionsBody')">+ Add Row</button>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- ===== TEMPLATE 2: FISHBONE ===== -->
+        <div class="section-header">
+            <div class="template-number">Template 2 of 4</div>
+            <h2>Fishbone (Ishikawa) Diagram</h2>
+            <p>Best for: Brainstorming all possible causes across multiple categories before prioritising root causes. Works well for complex incidents with multiple contributing factors.</p>
+        </div>
+
+        <div class="template-card">
+            <h3>Problem Statement</h3>
+            <p class="template-desc">Define the effect (the problem) that you are investigating.</p>
+            <div class="fields-row">
+                <div class="field-group">
+                    <label class="field-label">Problem / Effect</label>
+                    <textarea class="field-input" placeholder="State the problem clearly. E.g. 'Conveyor belt derailed causing 4-hour production stoppage'"></textarea>
+                </div>
+                <div>
+                    <div class="fields-row" style="grid-template-columns:1fr 1fr;gap:10px;">
+                        <div class="field-group">
+                            <label class="field-label">Date</label>
+                            <input class="field-input short" type="text" placeholder="DD/MM/YYYY">
+                        </div>
+                        <div class="field-group">
+                            <label class="field-label">Team</label>
+                            <input class="field-input short" type="text" placeholder="Investigation team">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="template-card">
+            <h3>Cause Categories</h3>
+            <p class="template-desc">List all possible causes under each category. Don't filter yet — capture everything the team suggests.</p>
+            <div class="fishbone-grid">
+                <div class="fishbone-bone">
+                    <div class="bone-label">
+                        <span class="bone-icon">👷</span>
+                        <span class="bone-title">People / Human Factors</span>
+                    </div>
+                    <textarea class="field-input bone-causes" placeholder="Training gaps&#10;Fatigue / shift work&#10;Communication failure&#10;Procedure not followed..."></textarea>
+                </div>
+                <div class="fishbone-bone">
+                    <div class="bone-label">
+                        <span class="bone-icon">⚙️</span>
+                        <span class="bone-title">Equipment / Machinery</span>
+                    </div>
+                    <textarea class="field-input bone-causes" placeholder="Worn components&#10;Maintenance overdue&#10;Wrong specification&#10;Design flaw..."></textarea>
+                </div>
+                <div class="fishbone-bone">
+                    <div class="bone-label">
+                        <span class="bone-icon">📋</span>
+                        <span class="bone-title">Process / Methods</span>
+                    </div>
+                    <textarea class="field-input bone-causes" placeholder="Procedure missing&#10;SOP outdated&#10;Steps unclear&#10;Verification missing..."></textarea>
+                </div>
+                <div class="fishbone-bone">
+                    <div class="bone-label">
+                        <span class="bone-icon">🏗️</span>
+                        <span class="bone-title">Environment / Conditions</span>
+                    </div>
+                    <textarea class="field-input bone-causes" placeholder="Poor lighting&#10;High temperature&#10;Wet / slippery surface&#10;Noise / distraction..."></textarea>
+                </div>
+                <div class="fishbone-bone">
+                    <div class="bone-label">
+                        <span class="bone-icon">📏</span>
+                        <span class="bone-title">Materials / Substances</span>
+                    </div>
+                    <textarea class="field-input bone-causes" placeholder="Wrong material used&#10;Quality control failure&#10;Storage issue&#10;Contamination..."></textarea>
+                </div>
+                <div class="fishbone-bone">
+                    <div class="bone-label">
+                        <span class="bone-icon">🏛️</span>
+                        <span class="bone-title">Management / Systems</span>
+                    </div>
+                    <textarea class="field-input bone-causes" placeholder="Supervision gaps&#10;Risk assessment missed&#10;Culture / norms&#10;Resource constraints..."></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="template-card">
+            <h3>Prioritised Root Causes &amp; Actions</h3>
+            <p class="template-desc">From the brainstorm above, identify the most likely root causes and assign corrective actions.</p>
+            <div class="field-group">
+                <label class="field-label">Most Likely Root Causes (from the diagram)</label>
+                <textarea class="field-input" placeholder="1. &#10;2. &#10;3. "></textarea>
+            </div>
+            <table class="actions-table">
+                <thead>
+                    <tr>
+                        <th style="width:40%">Corrective Action</th>
+                        <th style="width:25%">Owner</th>
+                        <th style="width:20%">Due Date</th>
+                        <th style="width:15%">Priority</th>
+                    </tr>
+                </thead>
+                <tbody id="fishActionsBody">
+                    <tr>
+                        <td><input type="text" placeholder="Action..."></td>
+                        <td><input type="text" placeholder="Name"></td>
+                        <td><input type="text" placeholder="DD/MM/YYYY"></td>
+                        <td><input type="text" placeholder="High / Med / Low"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" placeholder="Action..."></td>
+                        <td><input type="text" placeholder="Name"></td>
+                        <td><input type="text" placeholder="DD/MM/YYYY"></td>
+                        <td><input type="text" placeholder="High / Med / Low"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="add-row-btn" onclick="addRow('fishActionsBody')">+ Add Row</button>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- ===== TEMPLATE 3: ICAM-ALIGNED RCA ===== -->
+        <div class="section-header">
+            <div class="template-number">Template 3 of 4</div>
+            <h2>ICAM-Aligned Root Cause Analysis</h2>
+            <p>Best for: Serious incidents in high-hazard industries (mining, oil &amp; gas, construction). Based on the Incident Cause Analysis Method — the gold standard for complex, multi-causal events.</p>
+        </div>
+
+        <div class="template-card">
+            <h3>Incident Classification</h3>
+            <div class="fields-row">
+                <div class="field-group">
+                    <label class="field-label">Incident Reference</label>
+                    <input class="field-input short" type="text" placeholder="INC-YYYY-###">
+                </div>
+                <div class="field-group">
+                    <label class="field-label">Date &amp; Time</label>
+                    <input class="field-input short" type="text" placeholder="DD/MM/YYYY — HH:MM">
+                </div>
+            </div>
+            <div class="fields-row">
+                <div class="field-group">
+                    <label class="field-label">Location</label>
+                    <input class="field-input short" type="text" placeholder="Site / Area / Equipment">
+                </div>
+                <div class="field-group">
+                    <label class="field-label">Lead Investigator</label>
+                    <input class="field-input short" type="text" placeholder="Name and role">
+                </div>
+            </div>
+            <div class="field-group">
+                <label class="field-label">Incident Severity</label>
+                <div class="severity-row">
+                    <button class="severity-btn" onclick="setSeverity(this,'low')">Low</button>
+                    <button class="severity-btn" onclick="setSeverity(this,'med')">Medium</button>
+                    <button class="severity-btn" onclick="setSeverity(this,'high')">High</button>
+                    <button class="severity-btn" onclick="setSeverity(this,'crit')">Critical</button>
+                </div>
+            </div>
+            <div class="field-group">
+                <label class="field-label">Brief Incident Description</label>
+                <textarea class="field-input" placeholder="Factual summary of what happened — what, where, when, who was involved."></textarea>
+            </div>
+        </div>
+
+        <div class="template-card">
+            <h3>ICAM Analysis — Four Factor Categories</h3>
+            <p class="template-desc">ICAM structures causes across four levels. Work upwards from immediate events to organisational factors.</p>
+
+            <div class="icam-section">
+                <div class="icam-section-title">1. Absent / Failed Defences — What barriers were missing or failed?</div>
+                <div class="icam-fields">
+                    <div class="field-group" style="margin-bottom:0">
+                        <textarea class="field-input" placeholder="List safety barriers that should have prevented this incident but were absent or ineffective. E.g. 'Guardrail absent at excavation edge', 'PPE not enforced at entry point', 'Lock-out tag-out not completed'"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="icam-section">
+                <div class="icam-section-title">2. Individual / Team Actions — What did people do or not do?</div>
+                <div class="icam-fields">
+                    <textarea class="field-input" placeholder="Describe the specific actions or inactions by individuals/teams that contributed. E.g. 'Operator bypassed pre-start check', 'Supervisor did not verify task risk assessment'"></textarea>
+                    <div class="fields-row">
+                        <div class="field-group" style="margin-bottom:0">
+                            <label class="field-label">Contributing factors (human)</label>
+                            <textarea class="field-input" style="min-height:60px" placeholder="Fatigue, distraction, time pressure..."></textarea>
+                        </div>
+                        <div class="field-group" style="margin-bottom:0">
+                            <label class="field-label">Task / environmental factors</label>
+                            <textarea class="field-input" style="min-height:60px" placeholder="Poor lighting, noise, unfamiliar task..."></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="icam-section">
+                <div class="icam-section-title">3. Task / Environmental Conditions — What workplace conditions contributed?</div>
+                <div class="icam-fields">
+                    <textarea class="field-input" placeholder="Equipment condition, work area layout, time pressures, communications quality, workload, hazards in the environment..."></textarea>
+                </div>
+            </div>
+
+            <div class="icam-section">
+                <div class="icam-section-title">4. Organisational Factors — What management system or cultural issues enabled this?</div>
+                <div class="icam-fields">
+                    <textarea class="field-input" placeholder="Procedure quality, risk assessment process, supervision system, safety culture, resource allocation, training system, management priorities..."></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="template-card">
+            <h3>Root Causes &amp; Recommendations</h3>
+            <div class="field-group">
+                <label class="field-label">Identified Root Causes (from ICAM analysis)</label>
+                <textarea class="field-input" placeholder="1. &#10;2. &#10;3. "></textarea>
+            </div>
+            <table class="actions-table">
+                <thead>
+                    <tr>
+                        <th style="width:35%">Recommendation / Action</th>
+                        <th style="width:15%">ICAM Factor</th>
+                        <th style="width:20%">Owner</th>
+                        <th style="width:15%">Due Date</th>
+                        <th style="width:15%">Status</th>
+                    </tr>
+                </thead>
+                <tbody id="icamActionsBody">
+                    <tr>
+                        <td><input type="text" placeholder="Action..."></td>
+                        <td><input type="text" placeholder="Defence / ITA / Task / Org"></td>
+                        <td><input type="text" placeholder="Name"></td>
+                        <td><input type="text" placeholder="DD/MM/YYYY"></td>
+                        <td><input type="text" placeholder="Open"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" placeholder="Action..."></td>
+                        <td><input type="text" placeholder="Defence / ITA / Task / Org"></td>
+                        <td><input type="text" placeholder="Name"></td>
+                        <td><input type="text" placeholder="DD/MM/YYYY"></td>
+                        <td><input type="text" placeholder="Open"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="add-row-btn" onclick="addRow('icamActionsBody')">+ Add Row</button>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- ===== TEMPLATE 4: INVESTIGATION REPORT ===== -->
+        <div class="section-header">
+            <div class="template-number">Template 4 of 4</div>
+            <h2>Incident Investigation Report</h2>
+            <p>A complete investigation report template that meets the documentation requirements for high-hazard industries. Use this to present findings to management and regulators.</p>
+        </div>
+
+        <div class="template-card">
+            <h3>Report Header</h3>
+            <div class="fields-row">
+                <div class="field-group">
+                    <label class="field-label">Organisation / Company</label>
+                    <input class="field-input short" type="text" placeholder="Company name">
+                </div>
+                <div class="field-group">
+                    <label class="field-label">Report Reference</label>
+                    <input class="field-input short" type="text" placeholder="RPT-YYYY-###">
+                </div>
+            </div>
+            <div class="fields-row">
+                <div class="field-group">
+                    <label class="field-label">Incident Date</label>
+                    <input class="field-input short" type="text" placeholder="DD/MM/YYYY">
+                </div>
+                <div class="field-group">
+                    <label class="field-label">Report Date</label>
+                    <input class="field-input short" type="text" placeholder="DD/MM/YYYY">
+                </div>
+            </div>
+            <div class="fields-row">
+                <div class="field-group">
+                    <label class="field-label">Investigation Team</label>
+                    <input class="field-input short" type="text" placeholder="Names and roles">
+                </div>
+                <div class="field-group">
+                    <label class="field-label">Report Classification</label>
+                    <input class="field-input short" type="text" placeholder="e.g. Confidential / Internal">
+                </div>
+            </div>
+        </div>
+
+        <div class="template-card">
+            <div class="report-section">
+                <div class="report-section-title">Section 1 — Executive Summary</div>
+                <textarea class="field-input" style="min-height:80px" placeholder="2–3 sentence summary of what happened, the severity, key root cause, and headline recommendation."></textarea>
+            </div>
+
+            <div class="report-section">
+                <div class="report-section-title">Section 2 — Incident Description</div>
+                <textarea class="field-input" style="min-height:100px" placeholder="Detailed factual account of the incident: sequence of events, what was happening before, during, and immediately after. Include time, location, personnel involved, equipment/materials involved, and environmental conditions."></textarea>
+            </div>
+
+            <div class="report-section">
+                <div class="report-section-title">Section 3 — People Involved</div>
+                <table class="actions-table" style="margin-bottom:8px">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Role / Position</th>
+                            <th>Involvement</th>
+                            <th>Injury / Outcome</th>
+                        </tr>
+                    </thead>
+                    <tbody id="peopleBody">
+                        <tr>
+                            <td><input type="text" placeholder="Name"></td>
+                            <td><input type="text" placeholder="Role"></td>
+                            <td><input type="text" placeholder="Witness / Involved / Injured"></td>
+                            <td><input type="text" placeholder="None / First aid / LTI"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" placeholder="Name"></td>
+                            <td><input type="text" placeholder="Role"></td>
+                            <td><input type="text" placeholder="Witness / Involved / Injured"></td>
+                            <td><input type="text" placeholder="None / First aid / LTI"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="add-row-btn" onclick="addRow('peopleBody')">+ Add Person</button>
+            </div>
+
+            <div class="report-section">
+                <div class="report-section-title">Section 4 — Evidence Collected</div>
+                <textarea class="field-input" placeholder="List all evidence gathered: photographs, physical samples, CCTV, equipment inspection records, maintenance logs, training records, witness statements, pre-task risk assessments..."></textarea>
+            </div>
+
+            <div class="report-section">
+                <div class="report-section-title">Section 5 — Root Cause Analysis Summary</div>
+                <div class="field-group">
+                    <label class="field-label">Method Used</label>
+                    <input class="field-input short" type="text" placeholder="e.g. ICAM / 5 Whys / Fishbone / Bow-Tie">
+                </div>
+                <textarea class="field-input" placeholder="Summarise the root causes identified. Reference your detailed RCA in the appendix."></textarea>
+            </div>
+
+            <div class="report-section">
+                <div class="report-section-title">Section 6 — Contributing Factors</div>
+                <textarea class="field-input" placeholder="List all contributing factors identified (not root causes — factors that made the incident more likely or more severe)."></textarea>
+            </div>
+
+            <div class="report-section">
+                <div class="report-section-title">Section 7 — Recommendations &amp; Corrective Actions</div>
+                <table class="actions-table">
+                    <thead>
+                        <tr>
+                            <th style="width:35%">Recommendation</th>
+                            <th style="width:20%">Root Cause Addressed</th>
+                            <th style="width:20%">Responsible</th>
+                            <th style="width:15%">Due Date</th>
+                            <th style="width:10%">Priority</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reportActionsBody">
+                        <tr>
+                            <td><input type="text" placeholder="Recommendation..."></td>
+                            <td><input type="text" placeholder="Root cause #"></td>
+                            <td><input type="text" placeholder="Name / Dept"></td>
+                            <td><input type="text" placeholder="DD/MM/YYYY"></td>
+                            <td><input type="text" placeholder="H/M/L"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" placeholder="Recommendation..."></td>
+                            <td><input type="text" placeholder="Root cause #"></td>
+                            <td><input type="text" placeholder="Name / Dept"></td>
+                            <td><input type="text" placeholder="DD/MM/YYYY"></td>
+                            <td><input type="text" placeholder="H/M/L"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" placeholder="Recommendation..."></td>
+                            <td><input type="text" placeholder="Root cause #"></td>
+                            <td><input type="text" placeholder="Name / Dept"></td>
+                            <td><input type="text" placeholder="DD/MM/YYYY"></td>
+                            <td><input type="text" placeholder="H/M/L"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="add-row-btn" onclick="addRow('reportActionsBody')">+ Add Row</button>
+            </div>
+
+            <div class="report-section">
+                <div class="report-section-title">Section 8 — Lessons Learned</div>
+                <textarea class="field-input" placeholder="What broader lessons can the organisation learn from this incident? What should be communicated to other sites or teams?"></textarea>
+            </div>
+
+            <div class="report-section">
+                <div class="report-section-title">Section 9 — Sign-Off</div>
+                <div class="fields-row">
+                    <div class="field-group">
+                        <label class="field-label">Lead Investigator</label>
+                        <input class="field-input short" type="text" placeholder="Name / Date">
+                    </div>
+                    <div class="field-group">
+                        <label class="field-label">Reviewed By</label>
+                        <input class="field-input short" type="text" placeholder="Manager / HSE Lead / Date">
+                    </div>
+                </div>
+                <div class="fields-row">
+                    <div class="field-group">
+                        <label class="field-label">Approved By</label>
+                        <input class="field-input short" type="text" placeholder="GM / Site Director / Date">
+                    </div>
+                    <div class="field-group">
+                        <label class="field-label">Report Status</label>
+                        <input class="field-input short" type="text" placeholder="Draft / Final / Closed">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTTOM CTA -->
+        <div class="bottom-cta">
+            <h3>Want to run investigations like this — automatically?</h3>
+            <p>InvestigatePro guides your team through ICAM investigations step by step, generates reports instantly, and tracks corrective actions to closure. Built for mining, construction, and oil &amp; gas.</p>
+            <a href="https://investigatepro.app" class="cta-btn">Start Free 14-Day Trial →</a>
+            <div class="cta-features">
+                <div class="cta-feature">
+                    <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    No credit card required
+                </div>
+                <div class="cta-feature">
+                    <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    AI-assisted root cause analysis
+                </div>
+                <div class="cta-feature">
+                    <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    Instant professional reports
+                </div>
+                <div class="cta-feature">
+                    <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    Action tracking to closure
+                </div>
+            </div>
+        </div>
+
+        <!-- Related resources -->
+        <div style="text-align:center; padding: 20px 0 40px; color: var(--gray-400); font-size: 0.9rem;">
+            Also download: <a href="/5-whys-worksheet.html" style="color:var(--cyan);text-decoration:none;">5 Whys Worksheet →</a> &nbsp;|&nbsp;
+            <a href="/checklist.html" style="color:var(--cyan);text-decoration:none;">ICAM Investigation Checklist →</a> &nbsp;|&nbsp;
+            <a href="/blog/" style="color:var(--cyan);text-decoration:none;">Safety Resources Blog →</a>
+        </div>
+
+    </div><!-- end template-pack -->
+
+</div><!-- end container -->
+
+<footer>
+    <div class="container">
+        <p>© 2026 InvestigatePro · <a href="/">Home</a> · <a href="/blog/">Resources</a> · <a href="https://investigatepro.72-62-211-212.sslip.io">Sign In</a></p>
+        <p style="margin-top:8px;font-size:0.8rem;">Used by safety professionals in mining, construction, oil &amp; gas, and manufacturing.</p>
+    </div>
+</footer>
+
+<script>
+    const LEAD_API = 'https://api.72-62-211-212.sslip.io/api/leads/capture';
+
+    function unlockTemplates() {
+        const firstName = document.getElementById('firstName').value.trim();
+        const email = document.getElementById('emailInput').value.trim();
+        const company = document.getElementById('companyInput').value.trim();
+
+        if (!firstName) { alert('Please enter your first name.'); return; }
+        if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
+
+        // Submit to lead capture API
+        fetch(LEAD_API, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                first_name: firstName,
+                email: email,
+                company: company || '',
+                source: 'rca_template_pack',
+                lead_magnet: 'rca-template-pack'
+            })
+        }).catch(() => {}); // Silent fail — don't block the user
+
+        // Show success + unlock templates
+        document.getElementById('formState').style.display = 'none';
+        document.getElementById('successState').style.display = 'block';
+        document.getElementById('templatePack').style.display = 'block';
+
+        // Smooth scroll to templates
+        setTimeout(() => {
+            document.getElementById('templatePack').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 400);
+    }
+
+    // Allow Enter key on form fields
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' && e.target.tagName === 'INPUT' && e.target.closest('#captureSection')) {
+            unlockTemplates();
+        }
+    });
+
+    function addRow(tbodyId) {
+        const tbody = document.getElementById(tbodyId);
+        const firstRow = tbody.querySelector('tr');
+        if (!firstRow) return;
+        const newRow = firstRow.cloneNode(true);
+        newRow.querySelectorAll('input').forEach(inp => inp.value = '');
+        tbody.appendChild(newRow);
+    }
+
+    function setSeverity(btn, level) {
+        const row = btn.parentElement;
+        row.querySelectorAll('.severity-btn').forEach(b => {
+            b.className = 'severity-btn';
+        });
+        btn.classList.add('active-' + level);
+    }
+
+    function clearAll() {
+        if (!confirm('Clear all fields in all templates? This cannot be undone.')) return;
+        document.querySelectorAll('.template-pack textarea, .template-pack input[type="text"]').forEach(el => {
+            el.value = '';
+        });
+        document.querySelectorAll('.severity-btn').forEach(b => b.className = 'severity-btn');
+    }
+</script>
+
+</body>
+</html>

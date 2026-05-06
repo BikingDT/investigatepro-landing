@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mining Incident Investigation Guide: ICAM for Mining Operations (2026) | InvestigatePro</title>
+    <meta name="description" content="Complete guide to mining incident investigation using ICAM methodology. Learn how to investigate safety incidents in mines, comply with regulations, and prevent recurrence. Free templates included.">
+    <meta name="keywords" content="mining incident investigation, mine safety investigation, ICAM mining, mining workplace incident, mine accident investigation, MSHA investigation, mining safety management, mining HSE, root cause analysis mining">
+    <link rel="icon" type="image/png" href="../assets/logos/logo-03-icon-only-optimized.png">
+    <link rel="canonical" href="https://investigatepro.app/blog/mining-incident-investigation-guide.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://investigatepro.app/blog/mining-incident-investigation-guide.html">
+    <meta property="og:title" content="Mining Incident Investigation Guide: ICAM for Mining Operations (2026)">
+    <meta property="og:description" content="Complete guide to mining incident investigation using ICAM methodology. Prevent recurrence, comply with regulations, and build a safer mine.">
+    <meta property="og:image" content="https://investigatepro.app/assets/logos/logo-03-on-dark.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="article:published_time" content="2026-05-05">
+    <meta property="article:author" content="InvestigatePro">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <!-- Tailwind CSS (built) -->
+    <link rel="stylesheet" href="../assets/css/styles.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        .prose h2 { color: #76DCEC; margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.75rem; font-weight: 700; }
+        .prose h3 { color: #fff; margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.25rem; font-weight: 600; }
+        .prose p { color: #d1d5db; margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose ul, .prose ol { color: #d1d5db; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .prose li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .prose strong { color: #fff; }
+        .prose a { color: #76DCEC; text-decoration: underline; }
+        .prose blockquote { border-left: 4px solid #76DCEC; padding-left: 1rem; margin: 1.5rem 0; font-style: italic; color: #9ca3af; }
+        .prose table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+        .prose th { background: #1e2d4a; color: #76DCEC; padding: 0.75rem 1rem; text-align: left; font-weight: 600; }
+        .prose td { padding: 0.75rem 1rem; border-bottom: 1px solid #1e2d4a; color: #d1d5db; }
+        .prose tr:hover td { background: #0f1a2e; }
+    </style>
+
+    <!-- Structured Data: Breadcrumb + Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://investigatepro.app/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://investigatepro.app/blog/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Mining Incident Investigation Guide",
+                "item": "https://investigatepro.app/blog/mining-incident-investigation-guide.html"
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Mining Incident Investigation Guide: ICAM for Mining Operations (2026)",
+        "description": "Complete guide to mining incident investigation using ICAM methodology. Prevent recurrence, comply with regulations, and build a safer mine.",
+        "datePublished": "2026-05-05",
+        "dateModified": "2026-05-05",
+        "author": {
+            "@type": "Organization",
+            "name": "InvestigatePro",
+            "url": "https://investigatepro.app"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "InvestigatePro",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://investigatepro.app/assets/logos/logo-03-on-dark.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://investigatepro.app/blog/mining-incident-investigation-guide.html"
+        }
+    }
+    </script>
+</head>
+<body class="font-sans antialiased bg-navy-900 text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-navy-900/95 backdrop-blur-sm z-50 border-b border-navy-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="/" class="flex items-center">
+                    <picture><source srcset="../assets/logos/logo-03-on-dark.webp" type="image/webp"><img src="../assets/logos/logo-03-on-dark.png" alt="InvestigatePro" class="h-[60px] sm:h-[80px]"></picture>
+                </a>
+                <div class="flex items-center space-x-6">
+                    <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="/#features" class="hidden sm:inline text-gray-300 hover:text-white transition-colors">Features</a>
+                    <a href="/#pricing" class="hidden sm:inline text-gray-300 hover:text-white transition-colors">Pricing</a>
+                    <a href="/#demo" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-5 py-2 rounded-lg font-semibold transition-colors">
+                        Start Free Trial
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article -->
+    <article class="pt-32 pb-20">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6">
+            
+            <!-- Breadcrumb -->
+            <nav class="text-sm text-gray-400 mb-8">
+                <a href="/" class="hover:text-cyan-500">Home</a>
+                <span class="mx-2">›</span>
+                <a href="/blog/" class="hover:text-cyan-500">Blog</a>
+                <span class="mx-2">›</span>
+                <span class="text-gray-300">Mining Incident Investigation Guide</span>
+            </nav>
+
+            <!-- Header -->
+            <header class="mb-12">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="bg-cyan-500/20 text-cyan-500 px-3 py-1 rounded-full text-sm font-medium">Mining Safety</span>
+                    <span class="text-gray-400 text-sm">18 min read</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl font-bold mb-6 leading-tight">Mining Incident Investigation Guide: ICAM for Mining Operations</h1>
+                <p class="text-xl text-gray-300 mb-6">A practical, field-tested guide for Safety Managers and HSE teams in mining — covering how to investigate incidents properly, find root causes, and prevent the next one from happening.</p>
+                <div class="flex items-center text-gray-400 text-sm">
+                    <span>Published May 5, 2026</span>
+                    <span class="mx-3">•</span>
+                    <span>Updated May 5, 2026</span>
+                </div>
+            </header>
+
+            <!-- Table of Contents -->
+            <div class="bg-navy-800 rounded-xl p-6 mb-12">
+                <h2 class="text-lg font-semibold mb-4 text-white" style="margin-top: 0;">Table of Contents</h2>
+                <ol class="text-gray-300 space-y-2">
+                    <li><a href="#why-mining-is-different" class="hover:text-cyan-500">1. Why Mining Investigations Are Different</a></li>
+                    <li><a href="#common-mining-incidents" class="hover:text-cyan-500">2. Most Common Incident Types in Mining</a></li>
+                    <li><a href="#icam-for-mining" class="hover:text-cyan-500">3. Why ICAM Is the Standard for Mining</a></li>
+                    <li><a href="#investigation-process" class="hover:text-cyan-500">4. The Mining Incident Investigation Process</a></li>
+                    <li><a href="#pSIF" class="hover:text-cyan-500">5. Identifying Potential Serious Injuries & Fatalities (pSIF)</a></li>
+                    <li><a href="#regulatory-compliance" class="hover:text-cyan-500">6. Regulatory Compliance: Africa, Australia & the Americas</a></li>
+                    <li><a href="#common-mistakes" class="hover:text-cyan-500">7. Common Investigation Mistakes in Mining</a></li>
+                    <li><a href="#technology" class="hover:text-cyan-500">8. Technology & Software for Mining Investigation</a></li>
+                    <li><a href="#templates" class="hover:text-cyan-500">9. Templates & Resources</a></li>
+                </ol>
+            </div>
+
+            <!-- Content -->
+            <div class="prose max-w-none">
+                
+                <h2 id="why-mining-is-different">1. Why Mining Investigations Are Different</h2>
+                
+                <p>Mining is one of the world's most hazardous industries — and incident investigation in mining has unique challenges that don't exist in office environments or light manufacturing. If you're a Safety Manager or HSE Director at a mine, you already know this. But let's be precise about what makes mining so different.</p>
+
+                <h3>The Complexity of Mine Environments</h3>
+                <p>Mining incidents rarely have a single cause. They occur at the intersection of:</p>
+                <ul>
+                    <li><strong>Geotechnical hazards</strong> — ground instability, rockfalls, highwall failures</li>
+                    <li><strong>Mobile equipment</strong> — haul trucks, LHDs, graders, drills operating in close proximity</li>
+                    <li><strong>Blasting operations</strong> — fragmentation, flyrock, misfire risks</li>
+                    <li><strong>Confined spaces</strong> — underground stopes, drawpoints, ore passes</li>
+                    <li><strong>Shift fatigue</strong> — 12-hour shifts, fly-in-fly-out (FIFO) patterns, heat stress</li>
+                    <li><strong>Contractor interfaces</strong> — multiple companies working in shared zones</li>
+                    <li><strong>Remote locations</strong> — limited emergency response, limited communications</li>
+                </ul>
+
+                <p>This complexity means that surface-level investigation — "the operator didn't follow procedure" — is almost always incomplete. The real causes are buried deeper in organizational systems, supervision practices, and management decisions made weeks or months before the incident.</p>
+
+                <h3>The Investigator Pressure Problem</h3>
+                <p>In mining, production pressure is real. When a section is shut down for investigation, the cost per hour is significant. This creates an unconscious pressure on investigators to move quickly, identify a simple cause, assign blame, and reopen the area. This is precisely how the same incident happens again — often with worse consequences.</p>
+
+                <blockquote>
+                    "The mine that ignores the high-potential near miss is writing the obituary for the next fatal."
+                </blockquote>
+
+                <p>Effective mining incident investigation requires structured methodology, adequate time, and protection from production pressure. That's where ICAM comes in.</p>
+
+                <h2 id="common-mining-incidents">2. Most Common Incident Types in Mining</h2>
+
+                <p>Understanding what you're likely to investigate helps you prepare your team and your systems. Based on global mining safety data, the most frequently investigated incident types are:</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Examples</th>
+                            <th>High-Potential Risk</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Ground control</strong></td>
+                            <td>Rockfall, seismic event, highwall failure</td>
+                            <td>Fatal</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mobile equipment</strong></td>
+                            <td>Vehicle collision, roll-over, pedestrian strike</td>
+                            <td>Fatal</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Falls of persons</strong></td>
+                            <td>Fall from height, fall into excavation</td>
+                            <td>Fatal/Serious</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Explosives</strong></td>
+                            <td>Premature detonation, misfire, flyrock</td>
+                            <td>Fatal</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Electricity</strong></td>
+                            <td>Electrocution, arc flash, damaged cables</td>
+                            <td>Fatal</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Caught in/between</strong></td>
+                            <td>Conveyor entanglement, pinch points</td>
+                            <td>Serious/Fatal</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Material handling</strong></td>
+                            <td>Manual handling injuries, dropped objects</td>
+                            <td>Serious</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hazardous substances</strong></td>
+                            <td>Chemical exposure, dust (silica), gas</td>
+                            <td>Chronic/Fatal</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>Each of these categories has its own investigation nuances. A ground control incident requires geotechnical expertise. A mobile equipment collision requires analysis of traffic management systems, visibility, fatigue, and task planning. A structured investigation framework ensures nothing is missed — regardless of incident type.</p>
+
+                <h2 id="icam-for-mining">3. Why ICAM Is the Standard for Mining</h2>
+
+                <p>ICAM — the <strong>Incident Cause Analysis Method</strong> — was literally developed for mining. It emerged from the Australian mining industry in the 1990s as a response to fatalities that other investigation methods had failed to prevent. It's now used by some of the world's largest mining companies including BHP, Rio Tinto, Anglo American, Barrick Gold, and Glencore.</p>
+
+                <p>ICAM works for mining because it:</p>
+
+                <h3>Goes Beyond the Individual</h3>
+                <p>ICAM explicitly recognizes that most incidents are not caused by one person making one mistake. It requires investigators to look at <strong>absent/failed defences</strong> (the safeguards that should have prevented the incident), <strong>individual/team actions</strong> (what happened at the workface), and <strong>task/environmental conditions</strong> (what made the task difficult). Critically, it then traces these back to <strong>organizational factors</strong> — management systems, leadership decisions, resource allocation.</p>
+
+                <h3>Prevents Blame Culture</h3>
+                <p>Blame culture kills investigation quality. If workers and supervisors expect blame, they withhold information. ICAM's systems-focus — asking "what conditions made this likely?" rather than "who failed?" — creates a safer environment for honest reporting.</p>
+
+                <h3>Produces Actionable Recommendations</h3>
+                <p>ICAM investigations end with corrective actions that are traceable to specific causal factors. This means your recommendations fix the actual problem, not a surface symptom. It also means your auditors and regulators can see the logic chain: cause → contributing factor → corrective action.</p>
+
+                <h3>Scales Across Severity</h3>
+                <p>ICAM works for everything from a sprained ankle to a fatal event. This matters in mining where you want consistency in how you investigate — both to satisfy regulators and to build organizational learning over time.</p>
+
+                <p>For a deeper dive into the ICAM framework itself, see our <a href="/blog/icam-investigation-guide.html">Complete ICAM Investigation Guide</a>.</p>
+
+                <h2 id="investigation-process">4. The Mining Incident Investigation Process</h2>
+
+                <p>Here's how a properly-run mining incident investigation should flow, from the moment something happens to the point where learning is embedded:</p>
+
+                <h3>Step 1: Secure the Scene (0–2 Hours)</h3>
+                <p>Before any investigation begins, the scene must be secured and preserved. This means:</p>
+                <ul>
+                    <li>Establish an exclusion zone — nobody enters without authorisation</li>
+                    <li>Ensure the injured person receives immediate medical care</li>
+                    <li>Notify required parties (mine manager, regulatory authority if required)</li>
+                    <li>Preserve physical evidence — do not move equipment, tools, or materials</li>
+                    <li>Photograph and video the scene before anything is disturbed</li>
+                    <li>Identify and separate witnesses — don't let them discuss the event before statements are taken</li>
+                </ul>
+
+                <p><strong>Common mistake:</strong> Production pressure to reopen the area leads to the scene being disturbed or equipment moved before documentation is complete. This permanently destroys evidence.</p>
+
+                <h3>Step 2: Appoint the Investigation Team (2–4 Hours)</h3>
+                <p>Who is on your investigation team matters enormously. For mining incidents, a well-formed team typically includes:</p>
+                <ul>
+                    <li><strong>Lead investigator</strong> — trained in ICAM, independent from the affected section</li>
+                    <li><strong>Technical specialist</strong> — e.g., geotechnical engineer for ground control incidents, equipment OEM representative for machinery failures</li>
+                    <li><strong>Worker representative</strong> — peer-level person from the work area, builds trust with witnesses</li>
+                    <li><strong>HSE representative</strong> — ensures regulatory requirements are met</li>
+                    <li><strong>Operations representative</strong> — understands the context and task demands</li>
+                </ul>
+
+                <p>For serious or fatal incidents, the lead investigator should be completely independent from the section — ideally from a different department or site.</p>
+
+                <h3>Step 3: Gather Evidence (Days 1–3)</h3>
+                <p>Evidence gathering in mining is multi-layered:</p>
+                <ul>
+                    <li><strong>Physical evidence</strong> — photographs, measurements, samples, equipment condition reports</li>
+                    <li><strong>Document evidence</strong> — risk assessments, pre-shift inspections, training records, permits, maintenance logs, procedures</li>
+                    <li><strong>Electronic evidence</strong> — equipment data recorders (many modern haul trucks have black boxes), CCTV footage, access control logs, blast data</li>
+                    <li><strong>People evidence</strong> — witness interviews conducted individually, using open questions, non-judgmental tone</li>
+                </ul>
+
+                <p>Witness interviews are often the weakest part of mining investigations. Untrained interviewers ask leading questions, interview witnesses together, or allow the interview to become an interrogation. Use structured cognitive interview techniques: ask witnesses to describe the whole event in their own words before asking specific questions.</p>
+
+                <h3>Step 4: Build the Timeline</h3>
+                <p>Before identifying causes, map out exactly what happened in sequence. A good incident timeline shows:</p>
+                <ul>
+                    <li>Each discrete event with a timestamp</li>
+                    <li>What was happening (the normal work activity)</li>
+                    <li>When the hazard was present but uncontrolled</li>
+                    <li>The moment of the incident</li>
+                    <li>Post-incident events (emergency response, notifications)</li>
+                </ul>
+
+                <p>Timeline gaps are important — they often point to where investigation needs to go deeper.</p>
+
+                <h3>Step 5: Identify Causal Factors Using ICAM</h3>
+                <p>Now apply the ICAM framework systematically:</p>
+                <ol>
+                    <li><strong>What were the absent/failed defences?</strong> What controls should have prevented this but didn't?</li>
+                    <li><strong>What were the individual/team actions?</strong> What did people do or not do?</li>
+                    <li><strong>What task/environmental conditions contributed?</strong> What made the task harder or more dangerous?</li>
+                    <li><strong>What organizational factors enabled these conditions?</strong> What management decisions, system failures, or resource constraints created this situation?</li>
+                </ol>
+
+                <p>The organizational factors level is where most value lies — and where most investigations stop short. Pushing through to this level is what prevents the incident from recurring.</p>
+
+                <h3>Step 6: Develop Corrective Actions</h3>
+                <p>For every causal factor identified, develop at least one corrective action. Rate each action using the hierarchy of controls:</p>
+                <ul>
+                    <li><strong>Elimination</strong> (highest value) — remove the hazard entirely</li>
+                    <li><strong>Substitution</strong> — replace with something safer</li>
+                    <li><strong>Engineering controls</strong> — physical barriers, automation, interlocks</li>
+                    <li><strong>Administrative controls</strong> — procedures, training, supervision</li>
+                    <li><strong>PPE</strong> (lowest value) — last line of defence only</li>
+                </ul>
+
+                <p>Assign each action an owner, a due date, and a verification method. Without these three elements, corrective actions are just wishes.</p>
+
+                <h3>Step 7: Report, Communicate, Close Out</h3>
+                <p>The investigation report serves multiple audiences:</p>
+                <ul>
+                    <li><strong>Regulatory authority</strong> — formal compliance submission</li>
+                    <li><strong>Senior management</strong> — what it means for the business, what resources are needed</li>
+                    <li><strong>The workforce</strong> — what happened, what we're doing about it, safety moment sharing</li>
+                    <li><strong>The wider industry</strong> — safety alerts, lessons learned sharing</li>
+                </ul>
+
+                <p>Sharing learnings across sites is one of the highest-value activities in mining safety. Most mining companies have networks for this — use them.</p>
+
+                <h2 id="pSIF">5. Identifying Potential Serious Injuries & Fatalities (pSIF)</h2>
+
+                <p>One of the most important developments in mining safety in the past decade is the recognition of <strong>pSIF events</strong> — incidents and near misses that had the potential to cause a serious injury or fatality, even if they didn't.</p>
+
+                <p>Traditional safety metrics (TRIFR, LTIFR) measure what went wrong. pSIF analysis measures what <em>nearly</em> went wrong — giving you a forward-looking view of your fatality risk.</p>
+
+                <h3>What Qualifies as a pSIF?</h3>
+                <p>pSIF events typically involve one or more of these energy sources or hazards:</p>
+                <ul>
+                    <li>Ground movement (rockfall, seismic, highwall collapse)</li>
+                    <li>Moving or energised equipment (vehicles, conveyors, rotating machinery)</li>
+                    <li>Working at height or near excavations</li>
+                    <li>Explosives or high-energy release</li>
+                    <li>Electrical energy above low voltage</li>
+                    <li>Pressurised systems</li>
+                </ul>
+
+                <p>Any event where someone could have been killed if the circumstances were slightly different should be classified as a pSIF and investigated accordingly — even if nobody was injured.</p>
+
+                <h3>Investigate pSIFs Like Fatalities</h3>
+                <p>The most progressive mining companies apply full ICAM methodology to pSIF events, not just to actual injuries. The logic: the difference between a near miss and a fatality is often just a few centimetres or a few seconds. The organizational causes are identical. Fix them now.</p>
+
+                <p>This requires a culture shift — supervisors and workers need to understand that reporting a pSIF is valued, not punished. Building this culture is a leadership responsibility.</p>
+
+                <h2 id="regulatory-compliance">6. Regulatory Compliance: Africa, Australia & the Americas</h2>
+
+                <p>Mining companies operating across multiple regions face a complex regulatory landscape. Here's a simplified overview of investigation requirements in key mining jurisdictions:</p>
+
+                <h3>Africa (Sub-Saharan)</h3>
+                <p>Mining regulations across Africa vary significantly by country:</p>
+                <ul>
+                    <li><strong>South Africa</strong> — The Mine Health and Safety Act (MHSA) requires investigation of all Section 23 occurrences (accidents, injuries, dangerous occurrences). Serious injuries and fatalities require notification to the Department of Mineral Resources and formal investigation reports.</li>
+                    <li><strong>DRC</strong> — Le Code Minier requires notification of accidents to SAESSCAM and formal investigation for fatalities and serious injuries.</li>
+                    <li><strong>Zambia</strong> — The Mines and Minerals Development Act requires investigation of accidents causing injury, death, or serious damage to property.</li>
+                    <li><strong>Mali</strong> — The Mining Code (Code Minier) requires notification and investigation of workplace accidents.</li>
+                    <li><strong>Ghana</strong> — The Minerals and Mining Act requires reporting and investigation of mining accidents to the Minerals Commission.</li>
+                </ul>
+
+                <p>In all jurisdictions, companies with international backing (listed on NYSE, TSX, ASX) typically apply their own global investigation standards on top of local requirements — often ICAM or equivalent.</p>
+
+                <h3>Australia</h3>
+                <p>Australia has some of the most rigorous mining safety regulations in the world. Requirements vary by state:</p>
+                <ul>
+                    <li><strong>NSW</strong> — Work Health and Safety (Mines and Petroleum Sites) Act 2013. Serious incidents require immediate notification to SafeWork NSW and formal investigation.</li>
+                    <li><strong>Queensland</strong> — The Coal Mining Safety and Health Act and Mineral Resources (Safety) Act require notification and investigation of serious accidents.</li>
+                    <li><strong>Western Australia</strong> — The Mines Safety and Inspection Act requires investigation of all incidents and formal reporting of serious incidents to the Department of Mines, Industry Regulation and Safety (DMIRS).</li>
+                </ul>
+
+                <p>Australia's Mine Safety Technology Centre (MinSAFE) and state inspectorates regularly review investigation quality. ICAM is widely recognised as meeting best-practice investigation standards across Australian jurisdictions.</p>
+
+                <h3>Americas</h3>
+                <ul>
+                    <li><strong>USA</strong> — The Mine Safety and Health Administration (MSHA) has strict investigation requirements. Fatalities require immediate 15-day notice and formal investigation. MSHA may conduct its own parallel investigation. Non-fatal accidents with injuries require investigation and record-keeping per 30 CFR Part 50.</li>
+                    <li><strong>Canada</strong> — Varies by province. Ontario's Occupational Health and Safety Act and British Columbia's Mines Act both require critical injury and fatality investigations with inspector involvement.</li>
+                    <li><strong>Chile/Peru/Brazil</strong> — Each has national mining safety regulations. Major miners typically apply internal ICAM-equivalent standards regardless of local minimums.</li>
+                </ul>
+
+                <p>Regardless of jurisdiction, the common thread is: <strong>formal documentation, root cause identification, corrective actions, and closeout verification</strong> are the core requirements. ICAM satisfies all of these when applied correctly.</p>
+
+                <h2 id="common-mistakes">7. Common Investigation Mistakes in Mining</h2>
+
+                <p>These are the investigation failures we see most frequently — and the ones that lead to the same incident repeating:</p>
+
+                <h3>Mistake 1: Stopping at the First Cause</h3>
+                <p>Identifying "the operator failed to check clearance before moving" and calling it done. That's not investigation — that's blame assignment. Why didn't the operator check? What conditions made that step easy to skip? What supervisory or system factors contributed?</p>
+
+                <h3>Mistake 2: Focusing Only on the Worker in Contact</h3>
+                <p>The person who was injured is often the least responsible party. They were operating within a system that others designed and managed. Investigation that focuses only on the person at the workface misses the organizational causes that actually need fixing.</p>
+
+                <h3>Mistake 3: Interviewing Witnesses Together</h3>
+                <p>Group interviews produce consensus stories, not accurate accounts. Witnesses naturally align their recollections with each other, particularly under pressure. Always interview witnesses individually, as soon as possible, in a private setting.</p>
+
+                <h3>Mistake 4: Corrective Actions Without Owners or Deadlines</h3>
+                <p>"Review the procedure" with no owner and no date is not a corrective action. It's a way of feeling like something was done without actually doing it. Every action needs: what will be done, who will do it, and by when.</p>
+
+                <h3>Mistake 5: Not Verifying Close-Out</h3>
+                <p>Corrective actions that are marked "complete" but never actually implemented. Without verification — someone physically confirming the control is in place — actions stay on paper.</p>
+
+                <h3>Mistake 6: Treating High-Potential Near Misses as Low Priority</h3>
+                <p>The hierarchy of investigation effort should be based on potential consequence, not actual consequence. A near miss with fatal potential deserves the same investigation rigor as an actual fatality. This is the pSIF principle in practice.</p>
+
+                <h3>Mistake 7: Not Sharing Learnings</h3>
+                <p>An incident investigation that produces a report that stays in a filing cabinet has almost zero safety value. Learnings need to be communicated to all affected workers, shared across sites, and built into training and procedures.</p>
+
+                <p>For more on investigation pitfalls, see our article on <a href="/blog/incident-investigation-mistakes.html">Why Incident Investigations Fail</a>.</p>
+
+                <h2 id="technology">8. Technology & Software for Mining Investigation</h2>
+
+                <p>For much of the past decade, mining companies have investigated incidents using a combination of paper forms, Word documents, spreadsheets, and shared drives. This approach has real costs:</p>
+
+                <ul>
+                    <li>Reports get lost or are inaccessible when needed</li>
+                    <li>No consistent structure across sites or investigators</li>
+                    <li>No way to analyse trends across incidents over time</li>
+                    <li>Corrective action tracking is manual and unreliable</li>
+                    <li>Regulatory reporting is time-consuming to compile</li>
+                    <li>New investigators have no guidance or quality checks</li>
+                </ul>
+
+                <h3>What Good Investigation Software Does</h3>
+                <p>A purpose-built incident investigation platform should:</p>
+                <ul>
+                    <li><strong>Structure the investigation</strong> — guide investigators through the ICAM framework step-by-step, so nothing is missed</li>
+                    <li><strong>Coach investigators in real time</strong> — AI-assisted prompts that ask "have you considered organizational factors?" when an investigation looks too shallow</li>
+                    <li><strong>Track corrective actions</strong> — owners, deadlines, automated reminders, verification workflow</li>
+                    <li><strong>Generate professional reports</strong> — formatted output that meets regulatory requirements</li>
+                    <li><strong>Enable trend analysis</strong> — which causal factors keep appearing? Which areas have the most high-potential incidents?</li>
+                    <li><strong>Work in the field</strong> — mobile access so investigators can document evidence on-site, not back at the office</li>
+                </ul>
+
+                <h3>What to Look For as a Safety Manager</h3>
+                <p>When evaluating investigation software for your mining operation, prioritise:</p>
+                <ul>
+                    <li><strong>ICAM methodology built-in</strong> — not a generic form builder you have to configure yourself</li>
+                    <li><strong>Appropriate pricing for SMB operations</strong> — enterprise tools built for BHP or Rio Tinto are overkill and expensive for 50-500 person operations</li>
+                    <li><strong>Mobile accessibility</strong> — your investigators are in the field, not at a desktop</li>
+                    <li><strong>Contractor and multi-site support</strong> — mines typically have multiple contractors working in shared areas</li>
+                    <li><strong>Fast onboarding</strong> — your team shouldn't need weeks of training to use it</li>
+                </ul>
+
+                <p>InvestigatePro is built specifically for this space — ICAM methodology with AI coaching, designed for mining and high-hazard industries, priced for operations that aren't the size of a global mining major.</p>
+
+                <h2 id="templates">9. Templates & Resources</h2>
+
+                <p>Use these resources to improve your mining investigation capability:</p>
+
+                <ul>
+                    <li><a href="/icam-template.html">ICAM Investigation Template</a> — structured investigation template you can use immediately</li>
+                    <li><a href="/checklist.html">25-Point ICAM Investigation Checklist</a> — quick reference for investigators in the field</li>
+                    <li><a href="/blog/icam-investigation-guide.html">Complete ICAM Investigation Guide</a> — full methodology reference</li>
+                    <li><a href="/blog/root-cause-analysis-guide.html">Root Cause Analysis Methods Guide</a> — 5 Whys, fishbone, fault tree analysis explained</li>
+                    <li><a href="/blog/peepo-framework-explained.html">PEEPO Framework Guide</a> — how to use the PEEPO tool for causal factor analysis</li>
+                </ul>
+
+                <!-- CTA Block -->
+                <div class="bg-navy-800 rounded-xl p-8 mt-12 not-prose">
+                    <h3 class="font-heading text-2xl font-bold text-white mb-4">Built for Mining Safety Teams</h3>
+                    <p class="text-gray-300 mb-6">
+                        InvestigatePro uses ICAM methodology with AI coaching to guide your investigators through every incident — from near miss to high-potential event. Designed for SMB mining operations. 14-day free trial.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="/#demo" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-6 py-3 rounded-lg font-semibold transition-colors text-center">Start Free Trial</a>
+                        <a href="https://cal.com/investigatepro/demo" class="border border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 px-6 py-3 rounded-lg font-semibold transition-colors text-center">Book a Demo</a>
+                    </div>
+                </div>
+
+                <!-- Related Articles -->
+                <h3 class="text-xl font-semibold text-white mt-12 mb-6">Related Articles</h3>
+                
+                <div class="grid md:grid-cols-2 gap-6 not-prose">
+                    <a href="/blog/icam-investigation-guide.html" class="block bg-navy-800 rounded-lg p-6 border border-navy-700 hover:border-cyan-500/50 transition-all">
+                        <h4 class="font-semibold text-white mb-2">The Complete ICAM Investigation Guide</h4>
+                        <p class="text-gray-400 text-sm">Step-by-step guide to the full ICAM methodology.</p>
+                    </a>
+                    <a href="/blog/why-incident-investigations-fail.html" class="block bg-navy-800 rounded-lg p-6 border border-navy-700 hover:border-cyan-500/50 transition-all">
+                        <h4 class="font-semibold text-white mb-2">Why Incident Investigations Fail</h4>
+                        <p class="text-gray-400 text-sm">The systemic reasons investigations produce poor results — and how to fix them.</p>
+                    </a>
+                    <a href="/blog/peepo-framework-explained.html" class="block bg-navy-800 rounded-lg p-6 border border-navy-700 hover:border-cyan-500/50 transition-all">
+                        <h4 class="font-semibold text-white mb-2">PEEPO Framework Explained</h4>
+                        <p class="text-gray-400 text-sm">How to use PEEPO for systematic causal factor analysis in ICAM investigations.</p>
+                    </a>
+                    <a href="/blog/blame-to-learning-culture.html" class="block bg-navy-800 rounded-lg p-6 border border-navy-700 hover:border-cyan-500/50 transition-all">
+                        <h4 class="font-semibold text-white mb-2">From Blame to Learning Culture</h4>
+                        <p class="text-gray-400 text-sm">How to build a safety culture where workers report honestly instead of hiding incidents.</p>
+                    </a>
+                    <a href="/rca-template-pack.html" class="block bg-navy-800 rounded-lg p-6 border border-cyan-500/30 hover:border-cyan-500/60 transition-all">
+                        <h4 class="font-semibold text-white mb-2">📋 Free RCA Template Pack</h4>
+                        <p class="text-gray-400 text-sm">4 templates in one: 5 Whys, Fishbone Diagram, ICAM-aligned RCA, and Investigation Report. Fill in online or print.</p>
+                    </a>
+                    <a href="/industries/mining-incident-investigation.html" class="block bg-navy-800 rounded-lg p-6 border border-navy-700 hover:border-cyan-500/50 transition-all">
+                        <h4 class="font-semibold text-white mb-2">⛏️ InvestigatePro for Mining Operations</h4>
+                        <p class="text-gray-400 text-sm">How InvestigatePro is purpose-built for mining's specific hazards — underground, open cut, and processing plant.</p>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 border-t border-navy-700 py-12">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <a href="/" class="inline-flex items-center space-x-2 mb-6">
+                <img src="../assets/logos/logo-03-icon-only-optimized.png" alt="InvestigatePro" class="h-8 w-8" loading="lazy">
+                <span class="font-heading font-bold text-xl text-white">InvestigatePro</span>
+            </a>
+            <p class="text-gray-400 text-sm">
+                AI-powered incident investigation software using ICAM methodology.
+            </p>
+            <div class="mt-6 flex justify-center space-x-6 text-sm text-gray-500">
+                <a href="/privacy.html" class="hover:text-gray-300">Privacy</a>
+                <a href="/terms.html" class="hover:text-gray-300">Terms</a>
+                <a href="/security.html" class="hover:text-gray-300">Security</a>
+            </div>
+            <p class="mt-6 text-gray-600 text-xs">© 2026 InvestigatePro. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incident Investigation Report Template — Free Fillable | InvestigatePro</title>
+    <meta name="description" content="Free professional incident investigation report template. Fillable, printable, ICAM-aligned. Covers immediate causes, contributing factors, PEEPO analysis, corrective actions and sign-off. No registration required.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://investigatepro.app/incident-report-template.html">
+    <link rel="icon" type="image/png" href="/assets/logos/logo-03-lettermark-ip.png">
+    <meta property="og:title" content="Free Incident Investigation Report Template — Fillable & Printable">
+    <meta property="og:description" content="ICAM-aligned investigation report. Fill online, print as PDF. Covers all phases from immediate cause to corrective action sign-off.">
+    <meta property="og:url" content="https://investigatepro.app/incident-report-template.html">
+    <meta property="og:type" content="website">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Incident Investigation Report Template",
+      "description": "Free fillable incident investigation report template — ICAM-aligned, printable",
+      "url": "https://investigatepro.app/incident-report-template.html",
+      "applicationCategory": "BusinessApplication",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "creator": { "@type": "Organization", "name": "InvestigatePro", "url": "https://investigatepro.app" }
+    }
+    </script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #0C142E; color: #e2e8f0; min-height: 100vh; }
+
+        nav { background: #0C142E; border-bottom: 1px solid rgba(118,220,236,0.15); padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-logo { height: 36px; }
+        .nav-cta { background: #76DCEC; color: #0C142E; padding: 8px 18px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.875rem; }
+
+        .hero { text-align: center; padding: 60px 24px 44px; max-width: 700px; margin: 0 auto; }
+        .badge { display: inline-block; background: rgba(118,220,236,0.1); border: 1px solid rgba(118,220,236,0.3); color: #76DCEC; padding: 6px 16px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 18px; }
+        .hero h1 { font-size: 2.1rem; font-weight: 800; color: #fff; line-height: 1.25; margin-bottom: 14px; }
+        .hero h1 span { color: #76DCEC; }
+        .hero p { color: #94a3b8; font-size: 1rem; line-height: 1.7; margin-bottom: 28px; }
+        .chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+        .chip { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 5px 14px; font-size: 0.78rem; color: #cbd5e1; }
+
+        /* GATE */
+        #gate { max-width: 460px; margin: 0 auto 60px; padding: 0 24px; }
+        .gate-card { background: #1a2544; border: 1px solid rgba(118,220,236,0.2); border-radius: 16px; padding: 34px; }
+        .gate-card h2 { font-size: 1.15rem; font-weight: 700; color: #fff; margin-bottom: 6px; }
+        .gate-card p { color: #94a3b8; font-size: 0.875rem; margin-bottom: 22px; }
+        .frow { display: flex; flex-direction: column; gap: 11px; }
+        .frow input { background: #0C142E; border: 1px solid rgba(255,255,255,0.14); border-radius: 8px; padding: 11px 15px; color: #fff; font-size: 0.925rem; outline: none; }
+        .frow input:focus { border-color: #76DCEC; }
+        .frow input::placeholder { color: #374151; }
+        .btn-go { background: #76DCEC; color: #0C142E; border: none; border-radius: 8px; padding: 13px; font-weight: 700; font-size: 0.95rem; cursor: pointer; width: 100%; margin-top: 4px; }
+        .btn-go:hover { background: #5bc8d8; }
+        .btn-go:disabled { background: #4a5568; cursor: not-allowed; }
+        .gate-note { font-size: 0.73rem; color: #4b5563; text-align: center; margin-top: 10px; }
+        #gate-err { color: #f87171; font-size: 0.83rem; margin-top: 6px; display: none; }
+
+        /* REPORT */
+        #report { display: none; max-width: 860px; margin: 0 auto; padding: 0 24px 80px; }
+
+        /* sections */
+        .section { background: #1a2544; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 26px; margin-bottom: 22px; }
+        .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+        .section-num { background: #76DCEC; color: #0C142E; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; flex-shrink: 0; }
+        .section-header h2 { font-size: 1rem; font-weight: 700; color: #fff; }
+        .section-header p { font-size: 0.78rem; color: #64748b; margin-top: 2px; }
+
+        .field-grid { display: grid; gap: 14px; }
+        .field-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+        .field-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+        .field { display: flex; flex-direction: column; gap: 5px; }
+        label.fl { font-size: 0.78rem; font-weight: 600; color: #76DCEC; text-transform: uppercase; letter-spacing: 0.04em; }
+        input.fi, select.fi, textarea.fi { background: #0C142E; border: 1px solid rgba(255,255,255,0.1); border-radius: 7px; padding: 9px 12px; color: #fff; font-size: 0.9rem; outline: none; font-family: inherit; }
+        input.fi:focus, select.fi:focus, textarea.fi:focus { border-color: rgba(118,220,236,0.5); }
+        input.fi::placeholder, textarea.fi::placeholder { color: #2d3748; }
+        select.fi { cursor: pointer; }
+        select.fi option { background: #1a2544; }
+        textarea.fi { resize: vertical; }
+        textarea.fi.sm { min-height: 60px; }
+        textarea.fi.md { min-height: 90px; }
+        textarea.fi.lg { min-height: 120px; }
+
+        /* Severity badge */
+        .sev-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+        .sev-btn { border: 2px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 8px 16px; font-size: 0.83rem; font-weight: 600; cursor: pointer; background: transparent; transition: all 0.15s; color: #94a3b8; }
+        .sev-btn:hover { border-color: rgba(255,255,255,0.3); }
+        .sev-btn.active-low { background: rgba(16,185,129,0.15); border-color: #10b981; color: #6ee7b7; }
+        .sev-btn.active-med { background: rgba(245,158,11,0.15); border-color: #f59e0b; color: #fcd34d; }
+        .sev-btn.active-high { background: rgba(239,68,68,0.15); border-color: #ef4444; color: #fca5a5; }
+        .sev-btn.active-crit { background: rgba(139,0,0,0.2); border-color: #dc2626; color: #fca5a5; }
+
+        /* Rows with +/- */
+        .row-list { display: flex; flex-direction: column; gap: 9px; margin-bottom: 10px; }
+        .row-item { display: flex; gap: 8px; align-items: flex-start; }
+        .row-item .row-num { background: rgba(118,220,236,0.1); color: #76DCEC; min-width: 26px; height: 26px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; margin-top: 8px; flex-shrink: 0; }
+        .row-item textarea { flex: 1; }
+        .btn-del { background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.2); color: #f87171; border-radius: 6px; padding: 5px 9px; cursor: pointer; font-size: 0.75rem; margin-top: 6px; flex-shrink: 0; }
+        .btn-del:hover { background: rgba(239,68,68,0.15); }
+        .btn-add { background: transparent; border: 1px dashed rgba(255,255,255,0.15); border-radius: 7px; padding: 8px 14px; color: #4b5563; font-size: 0.83rem; cursor: pointer; width: 100%; transition: all 0.15s; }
+        .btn-add:hover { border-color: rgba(118,220,236,0.35); color: #76DCEC; }
+
+        /* PEEPO mini */
+        .peepo-mini { display: flex; flex-direction: column; gap: 14px; }
+        .pm-row { border-left: 3px solid; border-radius: 0 8px 8px 0; padding: 12px 14px; }
+        .pm-row.P1 { border-color: #93c5fd; background: rgba(59,130,246,0.04); }
+        .pm-row.E1 { border-color: #6ee7b7; background: rgba(16,185,129,0.04); }
+        .pm-row.E2 { border-color: #fcd34d; background: rgba(245,158,11,0.04); }
+        .pm-row.P2 { border-color: #c4b5fd; background: rgba(139,92,246,0.04); }
+        .pm-row.O  { border-color: #fca5a5; background: rgba(239,68,68,0.04); }
+        .pm-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+        .pm-row.P1 .pm-label { color: #93c5fd; }
+        .pm-row.E1 .pm-label { color: #6ee7b7; }
+        .pm-row.E2 .pm-label { color: #fcd34d; }
+        .pm-row.P2 .pm-label { color: #c4b5fd; }
+        .pm-row.O  .pm-label { color: #fca5a5; }
+
+        /* Corrective actions table */
+        .ca-table { width: 100%; border-collapse: collapse; }
+        .ca-table th { background: #0C142E; padding: 9px 10px; text-align: left; font-size: 0.73rem; font-weight: 600; color: #76DCEC; text-transform: uppercase; letter-spacing: 0.04em; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        .ca-table td { padding: 7px 8px; vertical-align: top; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .ca-table input, .ca-table textarea, .ca-table select { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 7px 9px; color: #fff; font-size: 0.85rem; width: 100%; outline: none; font-family: inherit; }
+        .ca-table input:focus, .ca-table textarea:focus, .ca-table select:focus { border-color: rgba(118,220,236,0.4); }
+        .ca-table input::placeholder, .ca-table textarea::placeholder { color: #2d3748; }
+        .ca-priority { border-radius: 5px; padding: 4px 8px; font-size: 0.75rem; font-weight: 700; border: none; cursor: pointer; }
+        .btn-add-ca { background: transparent; border: 1px dashed rgba(255,255,255,0.15); border-radius: 7px; padding: 8px 14px; color: #4b5563; font-size: 0.83rem; cursor: pointer; width: 100%; margin-top: 10px; }
+        .btn-add-ca:hover { border-color: rgba(118,220,236,0.35); color: #76DCEC; }
+
+        /* Signoff */
+        .signoff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .sign-box { background: #0C142E; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 14px; }
+        .sign-box label { font-size: 0.73rem; font-weight: 600; color: #76DCEC; text-transform: uppercase; display: block; margin-bottom: 8px; }
+        .sign-box input { background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.15); width: 100%; color: #fff; font-size: 0.875rem; padding: 4px 0; outline: none; margin-bottom: 8px; display: block; }
+        .sign-line { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 24px; padding-top: 8px; font-size: 0.72rem; color: #374151; }
+
+        /* Actions bar */
+        .actions { display: flex; gap: 12px; flex-wrap: wrap; margin: 8px 0 24px; }
+        .btn-p { background: #76DCEC; color: #0C142E; border: none; border-radius: 8px; padding: 12px 22px; font-weight: 700; font-size: 0.9rem; cursor: pointer; }
+        .btn-p:hover { background: #5bc8d8; }
+        .btn-s { background: transparent; border: 1px solid rgba(255,255,255,0.2); color: #e2e8f0; border-radius: 8px; padding: 12px 22px; font-weight: 600; font-size: 0.9rem; cursor: pointer; }
+        .btn-s:hover { border-color: rgba(118,220,236,0.5); color: #76DCEC; }
+
+        /* CTA */
+        .cta-box { background: linear-gradient(135deg, rgba(118,220,236,0.07), rgba(12,20,46,0)); border: 1px solid rgba(118,220,236,0.18); border-radius: 14px; padding: 30px; text-align: center; margin-top: 36px; }
+        .cta-box h3 { color: #fff; font-size: 1.1rem; margin-bottom: 8px; }
+        .cta-box p { color: #94a3b8; font-size: 0.875rem; margin-bottom: 18px; }
+        .cta-box a { display: inline-block; background: #76DCEC; color: #0C142E; padding: 11px 26px; border-radius: 8px; font-weight: 700; text-decoration: none; }
+
+        /* PRINT */
+        @media print {
+            nav, #gate, .actions, .btn-del, .btn-add, .btn-add-ca, .cta-box { display: none !important; }
+            body { background: #fff; color: #000; font-size: 11pt; }
+            .section { background: #fff !important; border: 1px solid #ccc !important; break-inside: avoid; margin-bottom: 14px; }
+            .section-header { border-bottom: 1px solid #ddd !important; }
+            .section-num { background: #0C142E !important; }
+            input.fi, textarea.fi, select.fi, .ca-table input, .ca-table textarea, .ca-table select { border: none !important; border-bottom: 1px solid #ccc !important; background: transparent !important; color: #000 !important; }
+            .pm-row { background: #f9f9f9 !important; }
+            .ca-table th { background: #f0f0f0 !important; color: #000 !important; }
+            .ca-table input, .ca-table select { background: transparent !important; }
+            h1, h2, .section-header h2, label.fl, .pm-label, .section-header h2 { color: #000 !important; }
+            .sign-box { background: #f9f9f9 !important; border: 1px solid #ccc !important; }
+            .sign-box input { color: #000 !important; }
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.65rem; }
+            .field-grid.cols-2, .field-grid.cols-3 { grid-template-columns: 1fr; }
+            .signoff-grid { grid-template-columns: 1fr; }
+            .ca-table { font-size: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="/"><picture><source srcset="/assets/logos/logo-03-on-dark.webp" type="image/webp"><img src="/assets/logos/logo-03-on-dark.png" alt="InvestigatePro" class="nav-logo" loading="lazy"></picture></a>
+    <a href="/#demo" class="nav-cta">Start Free Trial →</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="badge">Free Fillable Template</div>
+    <h1>Incident Investigation <span>Report Template</span></h1>
+    <p>A complete, ICAM-aligned investigation report you can fill in your browser, then print or save as PDF. Covers every phase from incident details to corrective action sign-off.</p>
+    <div class="chips">
+        <span class="chip">✓ Incident Details</span>
+        <span class="chip">✓ Immediate Cause</span>
+        <span class="chip">✓ PEEPO Analysis</span>
+        <span class="chip">✓ Absent Defences</span>
+        <span class="chip">✓ Corrective Actions</span>
+        <span class="chip">✓ Sign-off</span>
+        <span class="chip">✓ Printable PDF</span>
+    </div>
+</div>
+
+<!-- GATE -->
+<div id="gate">
+    <div class="gate-card">
+        <h2>Download Free Template</h2>
+        <p>Enter your work email to access the full fillable report template — no account required.</p>
+        <div class="frow">
+            <input type="text" id="g-name" placeholder="First name" autocomplete="given-name">
+            <input type="email" id="g-email" placeholder="Work email address" autocomplete="email">
+            <input type="text" id="g-company" placeholder="Company name" autocomplete="organization">
+            <button class="btn-go" id="btn-go" onclick="unlock()">Access Free Template →</button>
+        </div>
+        <p id="gate-err">Please enter your name, a valid email, and company.</p>
+        <p class="gate-note">No spam. Unsubscribe anytime.</p>
+    </div>
+</div>
+
+<!-- REPORT TEMPLATE -->
+<div id="report">
+
+    <div class="actions">
+        <button class="btn-p" onclick="window.print()">🖨 Print / Save as PDF</button>
+        <button class="btn-s" onclick="clearReport()">🗑 Clear All Fields</button>
+    </div>
+
+    <!-- 1. INCIDENT DETAILS -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-num">1</div>
+            <div><h2>Incident Details</h2><p>Basic classification and location information</p></div>
+        </div>
+        <div class="field-grid cols-2">
+            <div class="field"><label class="fl">Report Number</label><input class="fi" type="text" placeholder="e.g. INV-2026-047"></div>
+            <div class="field"><label class="fl">Date of Incident</label><input class="fi" type="date" id="r-date"></div>
+            <div class="field"><label class="fl">Time of Incident</label><input class="fi" type="time"></div>
+            <div class="field"><label class="fl">Date Reported</label><input class="fi" type="date"></div>
+            <div class="field"><label class="fl">Location / Site</label><input class="fi" type="text" placeholder="e.g. Open pit, Crusher area"></div>
+            <div class="field"><label class="fl">Department / Section</label><input class="fi" type="text" placeholder="e.g. Mining, Maintenance"></div>
+        </div>
+        <div style="margin-top:14px;">
+            <label class="fl" style="display:block;margin-bottom:8px;">Severity Classification</label>
+            <div class="sev-row" id="sev-row">
+                <button class="sev-btn" onclick="setSev(this,'active-low')">🟢 Low (First Aid / Near Miss)</button>
+                <button class="sev-btn" onclick="setSev(this,'active-med')">🟡 Medium (Medical Treatment)</button>
+                <button class="sev-btn" onclick="setSev(this,'active-high')">🔴 High (Lost Time / Serious)</button>
+                <button class="sev-btn" onclick="setSev(this,'active-crit')">⚫ Critical (Fatality / pSIF)</button>
+            </div>
+        </div>
+        <div class="field-grid" style="margin-top:14px;">
+            <div class="field"><label class="fl">Type of Incident</label>
+                <select class="fi">
+                    <option value="">Select type…</option>
+                    <option>Struck by / contact with object</option>
+                    <option>Pedestrian-vehicle interaction</option>
+                    <option>Fall from height</option>
+                    <option>Slip, trip or fall on same level</option>
+                    <option>Caught in / between</option>
+                    <option>Electrical contact</option>
+                    <option>Hazardous substance exposure</option>
+                    <option>Explosion / fire</option>
+                    <option>Ground control / structural</option>
+                    <option>Ergonomic / musculoskeletal</option>
+                    <option>Environmental release</option>
+                    <option>Near miss — high potential</option>
+                    <option>Other</option>
+                </select>
+            </div>
+        </div>
+        <div class="field-grid" style="margin-top:14px;">
+            <div class="field"><label class="fl">Personnel Involved (names, roles)</label><textarea class="fi sm" placeholder="List all involved parties and their roles…"></textarea></div>
+        </div>
+    </div>
+
+    <!-- 2. INCIDENT DESCRIPTION -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-num">2</div>
+            <div><h2>Incident Description</h2><p>What happened — factual, chronological, no conclusions</p></div>
+        </div>
+        <div class="field-grid">
+            <div class="field"><label class="fl">Narrative Description</label><textarea class="fi lg" placeholder="Describe exactly what happened, in chronological order. State facts only — avoid assigning blame or drawing conclusions at this stage."></textarea></div>
+            <div class="field"><label class="fl">Activity Being Performed</label><textarea class="fi sm" placeholder="What specific task was being carried out at the time?"></textarea></div>
+            <div class="field"><label class="fl">Environmental / Site Conditions</label><textarea class="fi sm" placeholder="Weather, lighting, shift timing, noise levels, housekeeping…"></textarea></div>
+        </div>
+    </div>
+
+    <!-- 3. IMMEDIATE CAUSE -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-num">3</div>
+            <div><h2>Immediate Cause</h2><p>The direct action or condition that caused harm — NOT the root cause</p></div>
+        </div>
+        <div class="field-grid">
+            <div class="field"><label class="fl">Immediate Cause (what directly caused the harm?)</label><textarea class="fi md" placeholder="e.g. Worker's hand contacted unguarded rotating shaft — this is the immediate cause, not the root cause."></textarea></div>
+        </div>
+        <div style="margin-top:14px;">
+            <label class="fl" style="display:block;margin-bottom:10px;">Absent or Failed Defences</label>
+            <p style="color:#64748b;font-size:0.78rem;margin-bottom:10px;">Barriers or controls that should have prevented harm but were absent, failed, or bypassed.</p>
+            <div class="row-list" id="defs-list"></div>
+            <button class="btn-add" onclick="addRow('defs-list','Describe the absent or failed defence…')">+ Add defence</button>
+        </div>
+    </div>
+
+    <!-- 4. PEEPO CONTRIBUTING FACTORS -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-num">4</div>
+            <div><h2>Contributing Factors (PEEPO)</h2><p>Conditions that enabled the incident — the full causal picture</p></div>
+        </div>
+        <div class="peepo-mini">
+            <div class="pm-row P1">
+                <div class="pm-label">P — People</div>
+                <textarea class="fi sm" placeholder="Fatigue, skill gaps, communication failures, risk perception, distraction, physical condition…"></textarea>
+            </div>
+            <div class="pm-row E1">
+                <div class="pm-label">E — Environment</div>
+                <textarea class="fi sm" placeholder="Lighting, noise, weather, housekeeping, workspace layout, production pressure culture…"></textarea>
+            </div>
+            <div class="pm-row E2">
+                <div class="pm-label">E — Equipment</div>
+                <textarea class="fi sm" placeholder="Design flaws, deferred maintenance, PPE gaps, safety device failures, alarm fatigue…"></textarea>
+            </div>
+            <div class="pm-row P2">
+                <div class="pm-label">P — Procedures</div>
+                <textarea class="fi sm" placeholder="Missing, outdated, impractical or unfollowed procedures; PTW/isolation failures; absent risk assessment…"></textarea>
+            </div>
+            <div class="pm-row O">
+                <div class="pm-label">O — Organization</div>
+                <textarea class="fi md" placeholder="Supervision gaps, training system failures, Management of Change, incompatible goals, contractor management, resource constraints, leadership failures…"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. ROOT CAUSES -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-num">5</div>
+            <div><h2>Root Causes</h2><p>Underlying organizational or systemic failures — if fixed, would prevent recurrence</p></div>
+        </div>
+        <p style="color:#64748b;font-size:0.8rem;margin-bottom:14px;">Root causes are systemic — typically management systems, organizational culture, resource constraints, or design failures. <strong style="color:#94a3b8;">"Human error" is not a root cause.</strong></p>
+        <div class="row-list" id="roots-list"></div>
+        <button class="btn-add" onclick="addRow('roots-list','Describe the root cause and the organizational system that failed…')">+ Add root cause</button>
+    </div>
+
+    <!-- 6. CORRECTIVE ACTIONS -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-num">6</div>
+            <div><h2>Corrective Actions</h2><p>What will be done, by whom, and by when</p></div>
+        </div>
+        <p style="color:#64748b;font-size:0.8rem;margin-bottom:14px;">Prioritize elimination and engineering controls over administrative and PPE. Every root cause should have at least one corrective action.</p>
+        <div style="overflow-x:auto;">
+        <table class="ca-table" id="ca-table">
+            <thead>
+                <tr>
+                    <th style="width:35%;">Action Description</th>
+                    <th style="width:18%;">Responsible Person</th>
+                    <th style="width:13%;">Due Date</th>
+                    <th style="width:12%;">Priority</th>
+                    <th style="width:15%;">Status</th>
+                    <th style="width:7%;"></th>
+                </tr>
+            </thead>
+            <tbody id="ca-body">
+            </tbody>
+        </table>
+        </div>
+        <button class="btn-add-ca" onclick="addCARow()">+ Add corrective action</button>
+    </div>
+
+    <!-- 7. LESSONS LEARNED -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-num">7</div>
+            <div><h2>Lessons Learned</h2><p>Key learnings to share with the broader organization</p></div>
+        </div>
+        <div class="field-grid">
+            <div class="field"><label class="fl">Key Lessons (for sharing across teams / sites)</label><textarea class="fi lg" placeholder="What are the most important things others should know from this investigation? What conditions made this incident possible — and where else might they exist?"></textarea></div>
+            <div class="field"><label class="fl">Similar Incidents / Hazards at Other Locations</label><textarea class="fi sm" placeholder="Are there other sites or areas where the same contributing factors may exist?"></textarea></div>
+        </div>
+    </div>
+
+    <!-- 8. SIGN-OFF -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-num">8</div>
+            <div><h2>Sign-Off</h2><p>Investigation team authorization</p></div>
+        </div>
+        <div class="signoff-grid">
+            <div class="sign-box">
+                <label>Lead Investigator</label>
+                <input type="text" placeholder="Full name">
+                <input type="text" placeholder="Title / Role">
+                <input type="date">
+                <div class="sign-line">Signature: ___________________________</div>
+            </div>
+            <div class="sign-box">
+                <label>Site Manager / Approver</label>
+                <input type="text" placeholder="Full name">
+                <input type="text" placeholder="Title / Role">
+                <input type="date">
+                <div class="sign-line">Signature: ___________________________</div>
+            </div>
+            <div class="sign-box">
+                <label>Safety Manager / HSE</label>
+                <input type="text" placeholder="Full name">
+                <input type="text" placeholder="Title / Role">
+                <input type="date">
+                <div class="sign-line">Signature: ___________________________</div>
+            </div>
+            <div class="sign-box">
+                <label>Management Representative</label>
+                <input type="text" placeholder="Full name">
+                <input type="text" placeholder="Title / Role">
+                <input type="date">
+                <div class="sign-line">Signature: ___________________________</div>
+            </div>
+        </div>
+        <div class="field-grid" style="margin-top:16px;">
+            <div class="field"><label class="fl">Corrective Action Verification Date</label><input class="fi" type="date" placeholder="Date all corrective actions verified complete"></div>
+        </div>
+    </div>
+
+    <div class="actions">
+        <button class="btn-p" onclick="window.print()">🖨 Print / Save as PDF</button>
+    </div>
+
+    <div class="cta-box">
+        <h3>Need to run investigations at scale?</h3>
+        <p>InvestigatePro gives your whole team a structured, ICAM-aligned investigation platform — with AI coaching, automated report generation, corrective action tracking, and trend analysis across incidents.</p>
+        <a href="/#demo">Start Free Trial →</a>
+    </div>
+
+</div><!-- /report -->
+
+<footer style="background:#1a2544;border-top:1px solid rgba(255,255,255,0.06);padding:36px 24px;text-align:center;margin-top:48px;">
+    <picture><source srcset="/assets/logos/logo-03-on-dark.webp" type="image/webp"><img src="/assets/logos/logo-03-on-dark.png" alt="InvestigatePro" style="height:30px;margin-bottom:18px;" loading="lazy"></picture>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:18px;font-size:0.83rem;color:#4b5563;margin-bottom:16px;">
+        <a href="/blog/" style="color:#4b5563;text-decoration:none;">Blog</a>
+        <a href="/checklist.html" style="color:#4b5563;text-decoration:none;">ICAM Checklist</a>
+        <a href="/peepo-chart-builder.html" style="color:#4b5563;text-decoration:none;">PEEPO Builder</a>
+        <a href="/5-whys-worksheet.html" style="color:#4b5563;text-decoration:none;">5 Whys Worksheet</a>
+        <a href="/rca-template-pack.html" style="color:#4b5563;text-decoration:none;">RCA Templates</a>
+        <a href="/privacy.html" style="color:#4b5563;text-decoration:none;">Privacy</a>
+    </div>
+    <p style="color:#1f2937;font-size:0.75rem;">© 2026 InvestigatePro. All rights reserved.</p>
+</footer>
+
+<script>
+// ===== GATE =====
+function unlock() {
+    const name = document.getElementById('g-name').value.trim();
+    const email = document.getElementById('g-email').value.trim();
+    const company = document.getElementById('g-company').value.trim();
+    const err = document.getElementById('gate-err');
+    const btn = document.getElementById('btn-go');
+    if (!name || !company || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        err.style.display = 'block'; return;
+    }
+    err.style.display = 'none';
+    btn.disabled = true; btn.textContent = 'Loading…';
+    fetch('https://api.72-62-211-212.sslip.io/api/leads/capture', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ first_name: name, email, company, source: 'incident_report_template', lead_magnet: 'incident_report_template' })
+    }).catch(() => {});
+    setTimeout(() => {
+        document.getElementById('gate').style.display = 'none';
+        document.getElementById('report').style.display = 'block';
+        document.getElementById('r-date').value = new Date().toISOString().split('T')[0];
+        // pre-add rows
+        addRow('defs-list','');
+        addRow('roots-list','');
+        addCARow(); addCARow(); addCARow();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 500);
+}
+['g-name','g-email','g-company'].forEach(id => {
+    document.getElementById(id)?.addEventListener('keypress', e => { if(e.key==='Enter') unlock(); });
+});
+
+// ===== SEVERITY =====
+function setSev(btn, cls) {
+    document.querySelectorAll('.sev-btn').forEach(b => b.className = 'sev-btn');
+    btn.classList.add(cls);
+}
+
+// ===== DYNAMIC ROWS =====
+let rowCounters = {};
+function addRow(listId, placeholder) {
+    rowCounters[listId] = (rowCounters[listId] || 0) + 1;
+    const list = document.getElementById(listId);
+    const div = document.createElement('div');
+    div.className = 'row-item';
+    div.innerHTML = `
+        <div class="row-num">${rowCounters[listId]}</div>
+        <textarea class="fi sm" style="flex:1" placeholder="${placeholder}"></textarea>
+        <button class="btn-del" onclick="removeRow(this,'${listId}')">✕</button>`;
+    list.appendChild(div);
+}
+function removeRow(btn, listId) {
+    btn.parentElement.remove();
+    // Renumber
+    document.querySelectorAll('#' + listId + ' .row-num').forEach((el, i) => el.textContent = i+1);
+    rowCounters[listId] = document.querySelectorAll('#' + listId + ' .row-item').length;
+}
+
+// ===== CORRECTIVE ACTIONS =====
+let caCount = 0;
+function addCARow() {
+    caCount++;
+    const tbody = document.getElementById('ca-body');
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+        <td><textarea placeholder="Describe the action…" style="min-height:52px;"></textarea></td>
+        <td><input type="text" placeholder="Name / Role"></td>
+        <td><input type="date"></td>
+        <td>
+            <select>
+                <option value="P1">🔴 P1 — Immediate</option>
+                <option value="P2" selected>🟡 P2 — Short-term</option>
+                <option value="P3">🟢 P3 — Long-term</option>
+            </select>
+        </td>
+        <td>
+            <select>
+                <option>Open</option>
+                <option>In Progress</option>
+                <option>Complete</option>
+                <option>Verified</option>
+            </select>
+        </td>
+        <td style="text-align:center;"><button class="btn-del" onclick="this.closest('tr').remove()">✕</button></td>`;
+    tbody.appendChild(tr);
+}
+
+// ===== CLEAR =====
+function clearReport() {
+    if (!confirm('Clear all fields? This cannot be undone.')) return;
+    document.querySelectorAll('#report input, #report textarea, #report select').forEach(el => {
+        if (el.tagName === 'SELECT') el.selectedIndex = 0;
+        else el.value = '';
+    });
+    document.querySelectorAll('.sev-btn').forEach(b => b.className = 'sev-btn');
+    document.getElementById('defs-list').innerHTML = '';
+    document.getElementById('roots-list').innerHTML = '';
+    document.getElementById('ca-body').innerHTML = '';
+    rowCounters = {}; caCount = 0;
+    addRow('defs-list',''); addRow('roots-list','');
+    addCARow(); addCARow(); addCARow();
+}
+</script>
+</body>
+</html>

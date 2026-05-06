@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free 5 Whys Worksheet — Root Cause Analysis Template | InvestigatePro</title>
+    <meta name="description" content="Download a free 5 Whys root cause analysis worksheet. Includes step-by-step guidance, a worked example, and a blank template you can use immediately for incident investigations.">
+    <meta name="keywords" content="5 whys worksheet, 5 whys template, root cause analysis worksheet, free RCA template, 5 whys download, incident investigation template">
+    <link rel="canonical" href="https://investigatepro.app/5-whys-worksheet.html">
+    
+    <meta property="og:title" content="Free 5 Whys Worksheet — Root Cause Analysis Template">
+    <meta property="og:description" content="Download a free 5 Whys worksheet with step-by-step guidance and a worked example. Used by safety professionals in mining, construction, and manufacturing.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://investigatepro.app/5-whys-worksheet.html">
+    
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    
+    <style>
+        :root {
+            --navy: #0C142E;
+            --navy-light: #1a2544;
+            --navy-mid: #0f1e3a;
+            --cyan: #76DCEC;
+            --cyan-dark: #5bc4d4;
+            --white: #FFFFFF;
+            --gray-100: #f7f8fa;
+            --gray-200: #e5e7eb;
+            --gray-400: #9ca3af;
+            --gray-600: #4b5563;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--navy);
+            color: var(--white);
+            line-height: 1.6;
+        }
+        
+        .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+        
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(118, 220, 236, 0.1);
+        }
+        
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--white); text-decoration: none; }
+        .logo span { color: var(--cyan); }
+        .back-link { color: var(--cyan); text-decoration: none; font-size: 0.9rem; }
+        .back-link:hover { text-decoration: underline; }
+        
+        .hero { text-align: center; padding: 50px 0 36px; }
+        .badge { display: inline-block; background: rgba(118, 220, 236, 0.15); color: var(--cyan); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; margin-bottom: 18px; }
+        h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 14px; line-height: 1.2; }
+        .hero p { font-size: 1.05rem; color: var(--gray-400); max-width: 580px; margin: 0 auto 28px; }
+        
+        .value-props { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-top: 20px; }
+        .value-prop { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: var(--gray-400); }
+        .value-prop span { color: var(--cyan); font-weight: 600; }
+        
+        /* Capture Form */
+        .capture-form {
+            background: var(--navy-light);
+            border: 1px solid rgba(118, 220, 236, 0.25);
+            border-radius: 12px;
+            padding: 36px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        .capture-form h3 { font-size: 1.4rem; margin-bottom: 8px; }
+        .capture-form p { color: var(--gray-400); margin-bottom: 24px; font-size: 0.95rem; }
+        .form-row { margin-bottom: 12px; }
+        .form-row input {
+            width: 100%;
+            padding: 12px 16px;
+            background: var(--navy);
+            border: 1px solid rgba(118, 220, 236, 0.2);
+            border-radius: 8px;
+            color: var(--white);
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .form-row input::placeholder { color: var(--gray-600); }
+        .form-row input:focus { border-color: var(--cyan); }
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background: var(--cyan);
+            color: var(--navy);
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 8px;
+            transition: background 0.2s;
+        }
+        .submit-btn:hover { background: var(--cyan-dark); }
+        .form-note { color: var(--gray-400); font-size: 0.8rem; margin-top: 12px; }
+        
+        /* Success state */
+        .success-state { display: none; }
+        .success-icon { font-size: 3rem; margin-bottom: 16px; }
+        .success-title { font-size: 1.5rem; font-weight: 700; color: var(--cyan); margin-bottom: 8px; }
+        
+        /* Worksheet */
+        .worksheet-section {
+            display: none;
+            margin-top: 20px;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .section-header h2 { font-size: 1.8rem; margin-bottom: 8px; }
+        .section-header p { color: var(--gray-400); }
+        
+        /* Example card */
+        .example-card {
+            background: var(--navy-mid);
+            border: 1px solid rgba(118, 220, 236, 0.15);
+            border-radius: 12px;
+            padding: 28px;
+            margin-bottom: 40px;
+        }
+        .example-card h3 { color: var(--cyan); font-size: 1.1rem; margin-bottom: 6px; }
+        .example-card .incident-label { color: var(--gray-400); font-size: 0.85rem; margin-bottom: 16px; }
+        
+        .why-chain { margin-top: 12px; }
+        .why-step {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 12px;
+            align-items: flex-start;
+        }
+        .why-number {
+            background: rgba(118, 220, 236, 0.15);
+            color: var(--cyan);
+            border: 1px solid rgba(118, 220, 236, 0.3);
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .why-content {}
+        .why-q { color: var(--cyan); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+        .why-a { color: var(--white); font-size: 0.95rem; margin-top: 2px; }
+        .root-cause-step .why-number { background: rgba(118, 220, 236, 0.3); }
+        .root-cause-step .why-a { color: var(--cyan); font-weight: 600; }
+        
+        /* Blank Worksheet */
+        .blank-worksheet {
+            background: var(--navy-mid);
+            border: 2px solid rgba(118, 220, 236, 0.2);
+            border-radius: 12px;
+            padding: 28px;
+            margin-bottom: 32px;
+        }
+        .blank-worksheet h3 { margin-bottom: 20px; font-size: 1.1rem; }
+        
+        .problem-field {
+            background: var(--navy);
+            border: 1px solid rgba(118, 220, 236, 0.2);
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 20px;
+        }
+        .problem-field label { color: var(--cyan); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 8px; }
+        .problem-field textarea {
+            width: 100%;
+            background: transparent;
+            border: none;
+            color: var(--white);
+            font-family: inherit;
+            font-size: 0.95rem;
+            resize: none;
+            outline: none;
+            min-height: 60px;
+        }
+        .problem-field textarea::placeholder { color: rgba(156, 163, 175, 0.5); }
+        
+        .why-field {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 12px;
+            align-items: flex-start;
+        }
+        .why-field-number {
+            background: rgba(118, 220, 236, 0.1);
+            color: var(--cyan);
+            border: 1px solid rgba(118, 220, 236, 0.25);
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+            margin-top: 8px;
+        }
+        .why-field-content { flex: 1; }
+        .why-field-content label { color: var(--cyan); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px; }
+        .why-field-content input {
+            width: 100%;
+            background: var(--navy);
+            border: 1px solid rgba(118, 220, 236, 0.15);
+            border-radius: 8px;
+            padding: 10px 14px;
+            color: var(--white);
+            font-family: inherit;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .why-field-content input::placeholder { color: rgba(156, 163, 175, 0.4); }
+        .why-field-content input:focus { border-color: var(--cyan); }
+        .root-cause-field .why-field-number { background: rgba(118, 220, 236, 0.2); }
+        .root-cause-field .why-field-content input { border-color: rgba(118, 220, 236, 0.35); }
+        
+        .action-field {
+            background: var(--navy);
+            border: 1px solid rgba(118, 220, 236, 0.2);
+            border-radius: 8px;
+            padding: 16px;
+            margin-top: 20px;
+        }
+        .action-field h4 { color: var(--white); font-size: 0.9rem; margin-bottom: 12px; }
+        .action-row { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+        .action-row input {
+            background: var(--navy-light);
+            border: 1px solid rgba(118, 220, 236, 0.1);
+            border-radius: 6px;
+            padding: 8px 12px;
+            color: var(--white);
+            font-family: inherit;
+            font-size: 0.85rem;
+            outline: none;
+        }
+        .action-row input::placeholder { color: rgba(156, 163, 175, 0.4); font-size: 0.8rem; }
+        .action-row input:focus { border-color: var(--cyan); }
+        
+        /* Print button */
+        .print-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            border: 1px solid var(--cyan);
+            color: var(--cyan);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 16px;
+            transition: all 0.2s;
+        }
+        .print-btn:hover { background: rgba(118, 220, 236, 0.1); }
+        
+        /* Tips section */
+        .tips-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 32px 0; }
+        .tip-card {
+            background: var(--navy-light);
+            border: 1px solid rgba(118, 220, 236, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .tip-number { color: var(--cyan); font-size: 1.5rem; font-weight: 700; margin-bottom: 8px; }
+        .tip-card h4 { font-size: 0.95rem; margin-bottom: 6px; }
+        .tip-card p { color: var(--gray-400); font-size: 0.85rem; line-height: 1.5; }
+        
+        /* CTA */
+        .cta-section { text-align: center; padding: 50px 0; border-top: 1px solid rgba(118, 220, 236, 0.1); margin-top: 40px; }
+        .cta-section h2 { font-size: 1.8rem; margin-bottom: 12px; }
+        .cta-section p { color: var(--gray-400); max-width: 500px; margin: 0 auto 28px; }
+        .cta-btn {
+            display: inline-block;
+            background: var(--cyan);
+            color: var(--navy);
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.2s;
+            margin-right: 12px;
+        }
+        .cta-btn:hover { background: var(--cyan-dark); }
+        .cta-link { color: var(--cyan); text-decoration: underline; font-size: 0.95rem; }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid rgba(118, 220, 236, 0.1);
+            color: var(--gray-400);
+            font-size: 0.85rem;
+        }
+        .footer-links { display: flex; justify-content: center; gap: 20px; margin-bottom: 12px; flex-wrap: wrap; }
+        .footer-links a { color: var(--gray-400); text-decoration: none; }
+        .footer-links a:hover { color: var(--white); }
+        
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            .action-row { grid-template-columns: 1fr; }
+            .capture-form { padding: 24px; }
+        }
+        
+        @media print {
+            header, .hero, .capture-form, .cta-section, footer, .print-btn { display: none !important; }
+            .worksheet-section { display: block !important; }
+            body { background: white; color: black; }
+            .blank-worksheet { border: 1px solid #ccc; }
+            .why-field-content input, .problem-field textarea, .action-row input { border: 1px solid #ccc; color: black; background: white; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">Investigate<span>Pro</span></a>
+                <a href="/blog/how-to-use-5-whys-analysis.html" class="back-link">← 5 Whys Guide</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="badge">🔍 Free Template</div>
+            <h1>5 Whys Root Cause Analysis<br>Worksheet</h1>
+            <p>A structured worksheet for safety professionals. Includes a worked example, blank template, and corrective action tracker.</p>
+            <div class="value-props">
+                <div class="value-prop"><span>✓</span> Printable & digital</div>
+                <div class="value-prop"><span>✓</span> Worked example included</div>
+                <div class="value-prop"><span>✓</span> Corrective action tracker</div>
+                <div class="value-prop"><span>✓</span> Free — no credit card</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Email Gate -->
+    <div class="container">
+        <div class="capture-form" id="capture-form">
+            <h3>Get Your Free 5 Whys Worksheet</h3>
+            <p>Enter your details to access the full worksheet — including worked example and corrective action tracker.</p>
+            <form id="download-form">
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Your name" required>
+                </div>
+                <div class="form-row">
+                    <input type="email" name="email" placeholder="Work email" required>
+                </div>
+                <div class="form-row">
+                    <input type="text" name="company" placeholder="Company (optional)">
+                </div>
+                <button type="submit" class="submit-btn">Get Free Worksheet →</button>
+            </form>
+            <p class="form-note">No spam. Unsubscribe anytime. Used by 500+ safety professionals.</p>
+        </div>
+
+        <!-- Success State -->
+        <div class="capture-form success-state" id="success-state">
+            <div class="success-icon">✅</div>
+            <div class="success-title">Your Worksheet Is Ready</div>
+            <p>Scroll down to access your 5 Whys worksheet and worked example.</p>
+        </div>
+    </div>
+
+    <!-- Worksheet Content (revealed after form) -->
+    <div class="container worksheet-section" id="worksheet-section">
+
+        <div class="section-header">
+            <h2>Your 5 Whys Worksheet</h2>
+            <p>A worked example followed by a blank worksheet you can fill in or print.</p>
+        </div>
+
+        <!-- Worked Example -->
+        <div class="example-card">
+            <h3>📋 Worked Example</h3>
+            <p class="incident-label">Incident: Worker sustained a hand laceration while cutting conduit on a construction site.</p>
+
+            <div class="why-chain">
+                <div class="why-step">
+                    <div class="why-number">W1</div>
+                    <div class="why-content">
+                        <div class="why-q">Why did the incident occur?</div>
+                        <div class="why-a">The angle grinder slipped and contacted the worker's left hand.</div>
+                    </div>
+                </div>
+                <div class="why-step">
+                    <div class="why-number">W2</div>
+                    <div class="why-content">
+                        <div class="why-q">Why did the grinder slip?</div>
+                        <div class="why-a">The conduit wasn't secured when cutting started — it was held with the free hand instead of clamped.</div>
+                    </div>
+                </div>
+                <div class="why-step">
+                    <div class="why-number">W3</div>
+                    <div class="why-content">
+                        <div class="why-q">Why wasn't the conduit clamped?</div>
+                        <div class="why-a">The correct clamping tool wasn't available at the work area.</div>
+                    </div>
+                </div>
+                <div class="why-step">
+                    <div class="why-number">W4</div>
+                    <div class="why-content">
+                        <div class="why-q">Why wasn't the clamping tool available?</div>
+                        <div class="why-a">The pre-task equipment checklist for cutting work doesn't include workholding equipment.</div>
+                    </div>
+                </div>
+                <div class="why-step root-cause-step">
+                    <div class="why-number">W5</div>
+                    <div class="why-content">
+                        <div class="why-q">Why is workholding not on the cutting checklist? → ROOT CAUSE</div>
+                        <div class="why-a">The Safe Work Method Statement for cutting tasks was written generically and has never been reviewed against actual site conditions or task requirements. Equipment needs are incomplete at the system level.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(118,220,236,0.15);">
+                <p style="color: var(--cyan); font-size: 0.85rem; font-weight: 600; margin-bottom: 8px;">✅ Corrective Actions</p>
+                <ul style="color: var(--gray-400); font-size: 0.9rem; padding-left: 20px;">
+                    <li>Review and update SWMS for all cutting tasks to include workholding requirements — HSE Manager — 14 days</li>
+                    <li>Add clamping equipment to pre-task checklist for cutting work — Site Supervisor — 7 days</li>
+                    <li>SWMS review process: schedule periodic field verification for all high-risk task procedures — HSE Manager — 30 days</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Blank Worksheet -->
+        <div class="blank-worksheet">
+            <h3>📝 Your 5 Whys Worksheet — Fill In or Print</h3>
+
+            <div class="problem-field">
+                <label>Problem Statement</label>
+                <textarea placeholder="Describe what happened, where, when, and the impact. Be specific — a vague problem produces vague answers.&#10;&#10;Example: 'Conveyor belt on Line 3 stopped at 14:32 on Monday, causing a 90-minute production halt and scrapping 240kg of product.'"></textarea>
+            </div>
+
+            <div class="why-chain">
+                <div class="why-field">
+                    <div class="why-field-number">W1</div>
+                    <div class="why-field-content">
+                        <label>Why 1 — Why did this happen? (most direct cause)</label>
+                        <input type="text" placeholder="First-level cause...">
+                    </div>
+                </div>
+                <div class="why-field">
+                    <div class="why-field-number">W2</div>
+                    <div class="why-field-content">
+                        <label>Why 2 — Why did that happen?</label>
+                        <input type="text" placeholder="Cause of the cause above...">
+                    </div>
+                </div>
+                <div class="why-field">
+                    <div class="why-field-number">W3</div>
+                    <div class="why-field-content">
+                        <label>Why 3 — Why did that happen?</label>
+                        <input type="text" placeholder="Going deeper...">
+                    </div>
+                </div>
+                <div class="why-field">
+                    <div class="why-field-number">W4</div>
+                    <div class="why-field-content">
+                        <label>Why 4 — Why did that happen?</label>
+                        <input type="text" placeholder="Getting close to the root cause...">
+                    </div>
+                </div>
+                <div class="why-field root-cause-field">
+                    <div class="why-field-number">W5</div>
+                    <div class="why-field-content">
+                        <label>Why 5 — Root Cause (systemic or organisational)</label>
+                        <input type="text" placeholder="The root cause — a system, process, or management decision that, if fixed, prevents recurrence...">
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-field">
+                <h4>Corrective Actions</h4>
+                <div class="action-row" style="font-size: 0.75rem; color: var(--gray-400); padding-bottom: 4px;">
+                    <span>Action</span><span>Owner</span><span>Due Date</span>
+                </div>
+                <div class="action-row">
+                    <input type="text" placeholder="What will be done...">
+                    <input type="text" placeholder="Who is responsible">
+                    <input type="text" placeholder="Due date">
+                </div>
+                <div class="action-row">
+                    <input type="text" placeholder="Action 2...">
+                    <input type="text" placeholder="Owner">
+                    <input type="text" placeholder="Due date">
+                </div>
+                <div class="action-row">
+                    <input type="text" placeholder="Action 3...">
+                    <input type="text" placeholder="Owner">
+                    <input type="text" placeholder="Due date">
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <button class="print-btn" onclick="window.print()">🖨️ Print Worksheet</button>
+        </div>
+
+        <!-- Tips -->
+        <h2 style="margin: 40px 0 20px; font-size: 1.4rem;">5 Common 5 Whys Mistakes</h2>
+        <div class="tips-grid">
+            <div class="tip-card">
+                <div class="tip-number">1</div>
+                <h4>Stopping at Human Error</h4>
+                <p>"The operator made a mistake" is never a root cause. Ask why the error was possible — what conditions or systems made it likely?</p>
+            </div>
+            <div class="tip-card">
+                <div class="tip-number">2</div>
+                <h4>Guessing Instead of Evidencing</h4>
+                <p>Each answer should be supported by evidence — documents, physical evidence, or witness accounts. Mark speculation clearly and verify it.</p>
+            </div>
+            <div class="tip-card">
+                <div class="tip-number">3</div>
+                <h4>Following Only One Chain</h4>
+                <p>Real problems often have multiple causes. If you find multiple answers to one "why," run parallel chains.</p>
+            </div>
+            <div class="tip-card">
+                <div class="tip-number">4</div>
+                <h4>No Owners on Actions</h4>
+                <p>"We'll retrain everyone" with no assigned owner is not a corrective action. Every action needs: what, who, and when.</p>
+            </div>
+            <div class="tip-card">
+                <div class="tip-number">5</div>
+                <h4>Using It for Complex Events</h4>
+                <p>5 Whys is for simple to moderate incidents. For fatalities, serious injuries, or multi-factor events, use ICAM methodology instead.</p>
+            </div>
+            <div class="tip-card">
+                <div class="tip-number">6</div>
+                <h4>Interviewing Witnesses Together</h4>
+                <p>Group interviews produce consensus stories, not accurate accounts. Always interview witnesses individually, as soon as possible.</p>
+            </div>
+        </div>
+
+        <!-- When to use ICAM instead -->
+        <div style="background: var(--navy-mid); border: 1px solid rgba(118,220,236,0.2); border-radius: 12px; padding: 24px; margin: 32px 0;">
+            <h3 style="color: var(--cyan); margin-bottom: 12px; font-size: 1.1rem;">When 5 Whys Isn't Enough</h3>
+            <p style="color: var(--gray-400); font-size: 0.95rem; margin-bottom: 12px;">For serious incidents — fatalities, high-potential near misses, or events with multiple contributing factors in mining, construction, or oil & gas — 5 Whys alone doesn't go deep enough. You need ICAM (Incident Cause Analysis Method).</p>
+            <a href="/blog/icam-investigation-guide.html" style="color: var(--cyan); font-size: 0.9rem; font-weight: 600;">Read: The Complete ICAM Investigation Guide →</a>
+        </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="container">
+        <div class="cta-section">
+            <h2>Investigate More Thoroughly</h2>
+            <p>InvestigatePro combines 5 Whys with full ICAM methodology and AI coaching — guiding your team to find root causes that the worksheet alone might miss.</p>
+            <a href="/#demo" class="cta-btn">Start Free 14-Day Trial</a>
+            <a href="https://cal.com/investigatepro/demo" class="cta-link">Book a demo →</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/blog/">Blog</a>
+                <a href="/checklist.html">ICAM Checklist</a>
+                <a href="/privacy.html">Privacy</a>
+                <a href="/terms.html">Terms</a>
+            </div>
+            <p class="copyright">© 2026 InvestigatePro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('download-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const formData = new FormData(form);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                company: formData.get('company') || '',
+                source: '5-whys-worksheet',
+                timestamp: new Date().toISOString()
+            };
+            
+            try {
+                await fetch('https://api.72-62-211-212.sslip.io/api/leads/capture', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+            } catch (err) {
+                console.log('Lead capture failed silently:', err);
+            }
+            
+            // Show success and reveal worksheet
+            document.getElementById('capture-form').style.display = 'none';
+            document.getElementById('success-state').style.display = 'block';
+            document.getElementById('worksheet-section').style.display = 'block';
+            
+            // Scroll to worksheet
+            setTimeout(() => {
+                document.getElementById('worksheet-section').scrollIntoView({ behavior: 'smooth' });
+            }, 300);
+        });
+    </script>
+</body>
+</html>

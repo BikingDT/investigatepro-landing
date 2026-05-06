@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEEPO Chart Builder — Free Interactive Tool | InvestigatePro</title>
+    <meta name="description" content="Build a complete PEEPO analysis chart for any workplace incident. Free interactive tool covering People, Environment, Equipment, Procedures, and Organization. Instant download.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://investigatepro.app/peepo-chart-builder.html">
+    <link rel="icon" type="image/png" href="/assets/logos/logo-03-lettermark-ip.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Free PEEPO Chart Builder — Interactive Incident Analysis Tool">
+    <meta property="og:description" content="Systematically identify all contributing factors using the PEEPO framework. Free, interactive, printable.">
+    <meta property="og:image" content="https://investigatepro.app/assets/social/og-peepo-builder.png">
+    <meta property="og:url" content="https://investigatepro.app/peepo-chart-builder.html">
+    <meta property="og:type" content="website">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "PEEPO Chart Builder",
+      "description": "Interactive PEEPO analysis tool for workplace incident investigation",
+      "url": "https://investigatepro.app/peepo-chart-builder.html",
+      "applicationCategory": "BusinessApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "InvestigatePro",
+        "url": "https://investigatepro.app"
+      }
+    }
+    </script>
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #0C142E; color: #e2e8f0; min-height: 100vh; }
+
+        /* NAV */
+        nav { background: #0C142E; border-bottom: 1px solid rgba(118,220,236,0.15); padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-logo { height: 36px; }
+        .nav-cta { background: #76DCEC; color: #0C142E; padding: 8px 18px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.875rem; white-space: nowrap; }
+
+        /* HERO */
+        .hero { text-align: center; padding: 64px 24px 48px; max-width: 720px; margin: 0 auto; }
+        .hero-badge { display: inline-block; background: rgba(118,220,236,0.1); border: 1px solid rgba(118,220,236,0.3); color: #76DCEC; padding: 6px 16px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px; }
+        .hero h1 { font-size: 2.25rem; font-weight: 800; color: #fff; line-height: 1.2; margin-bottom: 16px; }
+        .hero h1 span { color: #76DCEC; }
+        .hero p { color: #94a3b8; font-size: 1.05rem; line-height: 1.7; margin-bottom: 32px; }
+        .hero-features { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+        .feat-chip { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 6px 14px; font-size: 0.8rem; color: #cbd5e1; }
+
+        /* GATE */
+        #gate-section { max-width: 480px; margin: 0 auto 64px; padding: 0 24px; }
+        .gate-card { background: #1a2544; border: 1px solid rgba(118,220,236,0.2); border-radius: 16px; padding: 36px; }
+        .gate-card h2 { font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
+        .gate-card p { color: #94a3b8; font-size: 0.9rem; margin-bottom: 24px; }
+        .form-row { display: flex; flex-direction: column; gap: 12px; }
+        .form-row input { background: #0C142E; border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 12px 16px; color: #fff; font-size: 0.95rem; width: 100%; outline: none; transition: border-color 0.2s; }
+        .form-row input:focus { border-color: #76DCEC; }
+        .form-row input::placeholder { color: #4a5568; }
+        .btn-unlock { background: #76DCEC; color: #0C142E; border: none; border-radius: 8px; padding: 14px; font-weight: 700; font-size: 1rem; cursor: pointer; width: 100%; transition: background 0.2s; margin-top: 4px; }
+        .btn-unlock:hover { background: #5bc8d8; }
+        .btn-unlock:disabled { background: #4a5568; cursor: not-allowed; }
+        .gate-note { font-size: 0.75rem; color: #64748b; margin-top: 12px; text-align: center; }
+        .gate-error { color: #f87171; font-size: 0.85rem; margin-top: 8px; display: none; }
+
+        /* BUILDER (hidden until unlocked) */
+        #builder-section { display: none; max-width: 900px; margin: 0 auto; padding: 0 24px 80px; }
+
+        /* INCIDENT BOX */
+        .incident-box { background: #1a2544; border: 1px solid rgba(118,220,236,0.25); border-radius: 12px; padding: 28px; margin-bottom: 32px; }
+        .incident-box label { display: block; font-weight: 600; color: #76DCEC; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+        .incident-box input, .incident-box textarea { width: 100%; background: #0C142E; border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 12px 14px; color: #fff; font-size: 0.95rem; outline: none; }
+        .incident-box input:focus, .incident-box textarea:focus { border-color: #76DCEC; }
+        .incident-box textarea { min-height: 80px; resize: vertical; }
+        .incident-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+
+        /* PEEPO SECTIONS */
+        .peepo-grid { display: flex; flex-direction: column; gap: 24px; margin-bottom: 32px; }
+        .peepo-card { border-radius: 12px; border: 1px solid; padding: 24px; }
+        .peepo-card.people { background: rgba(59,130,246,0.06); border-color: rgba(59,130,246,0.25); }
+        .peepo-card.environment { background: rgba(16,185,129,0.06); border-color: rgba(16,185,129,0.25); }
+        .peepo-card.equipment { background: rgba(245,158,11,0.06); border-color: rgba(245,158,11,0.25); }
+        .peepo-card.procedures { background: rgba(139,92,246,0.06); border-color: rgba(139,92,246,0.25); }
+        .peepo-card.organization { background: rgba(239,68,68,0.06); border-color: rgba(239,68,68,0.25); }
+
+        .peepo-header { display: flex; align-items: center; gap: 14px; margin-bottom: 6px; }
+        .peepo-letter { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 900; flex-shrink: 0; }
+        .people .peepo-letter { background: rgba(59,130,246,0.2); color: #93c5fd; }
+        .environment .peepo-letter { background: rgba(16,185,129,0.2); color: #6ee7b7; }
+        .equipment .peepo-letter { background: rgba(245,158,11,0.2); color: #fcd34d; }
+        .procedures .peepo-letter { background: rgba(139,92,246,0.2); color: #c4b5fd; }
+        .organization .peepo-letter { background: rgba(239,68,68,0.2); color: #fca5a5; }
+
+        .peepo-title h3 { font-size: 1.05rem; font-weight: 700; color: #fff; }
+        .peepo-title p { font-size: 0.8rem; color: #94a3b8; margin-top: 2px; }
+
+        .prompts { margin: 16px 0 12px; }
+        .prompts p { font-size: 0.8rem; color: #64748b; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 10px; }
+        .prompt-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+        .prompt-chip { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 5px 10px; font-size: 0.78rem; color: #94a3b8; cursor: pointer; transition: all 0.15s; user-select: none; }
+        .prompt-chip:hover { background: rgba(118,220,236,0.08); border-color: rgba(118,220,236,0.3); color: #76DCEC; }
+        .prompt-chip.selected { background: rgba(118,220,236,0.12); border-color: rgba(118,220,236,0.5); color: #76DCEC; }
+
+        .factor-entries { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
+        .factor-entry { display: flex; gap: 8px; align-items: flex-start; }
+        .factor-entry textarea { flex: 1; background: #0C142E; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 10px 12px; color: #fff; font-size: 0.875rem; min-height: 52px; resize: vertical; outline: none; }
+        .factor-entry textarea:focus { border-color: rgba(118,220,236,0.5); }
+        .factor-entry textarea::placeholder { color: #374151; }
+        .btn-remove { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.2); color: #f87171; border-radius: 6px; padding: 6px 10px; cursor: pointer; font-size: 0.8rem; flex-shrink: 0; margin-top: 4px; transition: all 0.15s; }
+        .btn-remove:hover { background: rgba(239,68,68,0.2); }
+        .btn-add-factor { background: transparent; border: 1px dashed rgba(255,255,255,0.2); border-radius: 8px; padding: 9px 14px; color: #64748b; font-size: 0.85rem; cursor: pointer; width: 100%; margin-top: 8px; transition: all 0.15s; }
+        .btn-add-factor:hover { border-color: rgba(118,220,236,0.4); color: #76DCEC; }
+
+        /* ACTIONS */
+        .actions-bar { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+        .btn-primary { background: #76DCEC; color: #0C142E; border: none; border-radius: 8px; padding: 13px 24px; font-weight: 700; font-size: 0.95rem; cursor: pointer; transition: background 0.2s; }
+        .btn-primary:hover { background: #5bc8d8; }
+        .btn-secondary { background: transparent; border: 1px solid rgba(255,255,255,0.2); color: #e2e8f0; border-radius: 8px; padding: 13px 24px; font-weight: 600; font-size: 0.95rem; cursor: pointer; transition: all 0.2s; }
+        .btn-secondary:hover { border-color: rgba(118,220,236,0.5); color: #76DCEC; }
+
+        /* SUMMARY PANEL */
+        #summary-panel { display: none; background: #1a2544; border: 1px solid rgba(118,220,236,0.25); border-radius: 16px; padding: 32px; margin-top: 32px; }
+        #summary-panel h2 { font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 16px; }
+        .summary-section { margin-bottom: 20px; }
+        .summary-section h4 { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; }
+        .summary-section ul { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+        .summary-section li { font-size: 0.9rem; color: #cbd5e1; padding-left: 16px; position: relative; }
+        .summary-section li::before { content: '→'; position: absolute; left: 0; color: #76DCEC; font-weight: 700; }
+        .summary-section .empty { color: #4a5568; font-style: italic; font-size: 0.85rem; padding-left: 0; }
+        .summary-section .empty::before { display: none; }
+        .summary-people h4 { color: #93c5fd; }
+        .summary-environment h4 { color: #6ee7b7; }
+        .summary-equipment h4 { color: #fcd34d; }
+        .summary-procedures h4 { color: #c4b5fd; }
+        .summary-organization h4 { color: #fca5a5; }
+
+        .count-bar { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
+        .count-pill { background: rgba(255,255,255,0.05); border-radius: 8px; padding: 10px 16px; text-align: center; flex: 1; min-width: 80px; }
+        .count-pill .num { font-size: 1.6rem; font-weight: 800; color: #76DCEC; }
+        .count-pill .lbl { font-size: 0.7rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; }
+
+        /* CTA */
+        .cta-strip { background: linear-gradient(135deg, rgba(118,220,236,0.08), rgba(12,20,46,0)); border: 1px solid rgba(118,220,236,0.2); border-radius: 16px; padding: 32px; margin-top: 40px; text-align: center; }
+        .cta-strip h3 { font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 10px; }
+        .cta-strip p { color: #94a3b8; font-size: 0.9rem; margin-bottom: 20px; }
+        .cta-strip a { display: inline-block; background: #76DCEC; color: #0C142E; padding: 12px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; }
+        .cta-strip a:hover { background: #5bc8d8; }
+
+        /* PRINT */
+        @media print {
+            nav, #gate-section, .actions-bar, .btn-add-factor, .btn-remove, .prompt-chips, .prompts, .cta-strip { display: none !important; }
+            body { background: #fff; color: #000; }
+            .peepo-card { border: 2px solid #ddd !important; background: #fff !important; }
+            .peepo-letter { background: #eee !important; color: #000 !important; }
+            .peepo-title h3, h1, h2, h3 { color: #000 !important; }
+            .incident-box { background: #f9f9f9 !important; border: 1px solid #ddd !important; }
+            .incident-box input, .incident-box textarea { background: transparent !important; border: none !important; border-bottom: 1px solid #ccc !important; color: #000 !important; }
+            .factor-entry textarea { border: none !important; border-bottom: 1px solid #eee !important; background: transparent !important; color: #000 !important; }
+            #summary-panel { display: block !important; background: #f9f9f9 !important; border: 1px solid #ddd !important; }
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.7rem; }
+            .incident-meta { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="/"><picture><source srcset="/assets/logos/logo-03-on-dark.webp" type="image/webp"><img src="/assets/logos/logo-03-on-dark.png" alt="InvestigatePro" class="nav-logo" loading="lazy"></picture></a>
+    <a href="/#demo" class="nav-cta">Start Free Trial →</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-badge">Free Interactive Tool</div>
+    <h1>PEEPO Chart <span>Builder</span></h1>
+    <p>Systematically map all contributing factors for any workplace incident using the PEEPO framework — the backbone of ICAM investigation. Works in your browser. Print or save when done.</p>
+    <div class="hero-features">
+        <span class="feat-chip">✓ People</span>
+        <span class="feat-chip">✓ Environment</span>
+        <span class="feat-chip">✓ Equipment</span>
+        <span class="feat-chip">✓ Procedures</span>
+        <span class="feat-chip">✓ Organization</span>
+        <span class="feat-chip">✓ Printable summary</span>
+    </div>
+</div>
+
+<!-- EMAIL GATE -->
+<div id="gate-section">
+    <div class="gate-card">
+        <h2>Access the PEEPO Chart Builder</h2>
+        <p>Enter your work email to unlock the full interactive tool — including guided prompts, factor tracking, and printable chart.</p>
+        <div class="form-row">
+            <input type="text" id="gate-name" placeholder="Your first name" autocomplete="given-name">
+            <input type="email" id="gate-email" placeholder="Work email address" autocomplete="email">
+            <input type="text" id="gate-company" placeholder="Company name" autocomplete="organization">
+            <button class="btn-unlock" id="btn-unlock" onclick="unlockTool()">Get Free Access →</button>
+        </div>
+        <p id="gate-error" class="gate-error">Please fill in all fields with a valid email address.</p>
+        <p class="gate-note">No spam. Unsubscribe anytime. We respect your privacy.</p>
+    </div>
+</div>
+
+<!-- BUILDER (unlocked after gate) -->
+<div id="builder-section">
+
+    <!-- Incident Details -->
+    <div class="incident-box">
+        <div class="incident-meta">
+            <div>
+                <label>Incident / Near Miss Title</label>
+                <input type="text" id="incident-title" placeholder="e.g. Pedestrian struck by reversing vehicle">
+            </div>
+            <div>
+                <label>Date of Incident</label>
+                <input type="date" id="incident-date">
+            </div>
+        </div>
+        <div class="incident-meta">
+            <div>
+                <label>Location / Site</label>
+                <input type="text" id="incident-location" placeholder="e.g. Open pit haul road, Level 4">
+            </div>
+            <div>
+                <label>Investigator Name</label>
+                <input type="text" id="investigator-name" placeholder="Your name">
+            </div>
+        </div>
+        <label>Brief Incident Description</label>
+        <textarea id="incident-desc" placeholder="Describe what happened in 2–3 sentences..."></textarea>
+    </div>
+
+    <!-- PEEPO SECTIONS -->
+    <div class="peepo-grid">
+
+        <!-- PEOPLE -->
+        <div class="peepo-card people">
+            <div class="peepo-header">
+                <div class="peepo-letter">P</div>
+                <div class="peepo-title">
+                    <h3>People</h3>
+                    <p>Human factors — physical state, skill, behaviour, situational awareness</p>
+                </div>
+            </div>
+            <div class="prompts">
+                <p>Guided prompts — click to add:</p>
+                <div class="prompt-chips" id="chips-people">
+                    <span class="prompt-chip" onclick="addPrompt('people', this, 'Fatigue or shift length')">Fatigue / shift length</span>
+                    <span class="prompt-chip" onclick="addPrompt('people', this, 'Inadequate competency or skill gap')">Competency / skill gap</span>
+                    <span class="prompt-chip" onclick="addPrompt('people', this, 'Distraction or inattention')">Distraction / inattention</span>
+                    <span class="prompt-chip" onclick="addPrompt('people', this, 'Risk perception failure')">Risk perception failure</span>
+                    <span class="prompt-chip" onclick="addPrompt('people', this, 'Communication breakdown')">Communication breakdown</span>
+                    <span class="prompt-chip" onclick="addPrompt('people', this, 'Physical impairment or illness')">Physical impairment</span>
+                    <span class="prompt-chip" onclick="addPrompt('people', this, 'Complacency due to task familiarity')">Complacency</span>
+                    <span class="prompt-chip" onclick="addPrompt('people', this, 'Language or literacy barrier')">Language barrier</span>
+                </div>
+            </div>
+            <div class="factor-entries" id="entries-people"></div>
+            <button class="btn-add-factor" onclick="addEntry('people')">+ Add People factor</button>
+        </div>
+
+        <!-- ENVIRONMENT -->
+        <div class="peepo-card environment">
+            <div class="peepo-header">
+                <div class="peepo-letter">E</div>
+                <div class="peepo-title">
+                    <h3>Environment</h3>
+                    <p>Physical & social conditions — weather, noise, lighting, workplace layout, culture</p>
+                </div>
+            </div>
+            <div class="prompts">
+                <p>Guided prompts — click to add:</p>
+                <div class="prompt-chips" id="chips-environment">
+                    <span class="prompt-chip" onclick="addPrompt('environment', this, 'Poor lighting or visibility conditions')">Poor lighting / visibility</span>
+                    <span class="prompt-chip" onclick="addPrompt('environment', this, 'Noise masking warning signals')">Noise masking signals</span>
+                    <span class="prompt-chip" onclick="addPrompt('environment', this, 'Adverse weather conditions')">Adverse weather</span>
+                    <span class="prompt-chip" onclick="addPrompt('environment', this, 'Confined or restricted workspace')">Confined workspace</span>
+                    <span class="prompt-chip" onclick="addPrompt('environment', this, 'Housekeeping or congestion issue')">Housekeeping / congestion</span>
+                    <span class="prompt-chip" onclick="addPrompt('environment', this, 'Heat stress or extreme temperature')">Heat stress</span>
+                    <span class="prompt-chip" onclick="addPrompt('environment', this, 'Blame culture discouraging hazard reporting')">Blame culture</span>
+                    <span class="prompt-chip" onclick="addPrompt('environment', this, 'Production pressure creating unsafe norms')">Production pressure norms</span>
+                </div>
+            </div>
+            <div class="factor-entries" id="entries-environment"></div>
+            <button class="btn-add-factor" onclick="addEntry('environment')">+ Add Environment factor</button>
+        </div>
+
+        <!-- EQUIPMENT -->
+        <div class="peepo-card equipment">
+            <div class="peepo-header">
+                <div class="peepo-letter">E</div>
+                <div class="peepo-title">
+                    <h3>Equipment</h3>
+                    <p>Tools, machinery, vehicles, PPE — design, maintenance, suitability</p>
+                </div>
+            </div>
+            <div class="prompts">
+                <p>Guided prompts — click to add:</p>
+                <div class="prompt-chips" id="chips-equipment">
+                    <span class="prompt-chip" onclick="addPrompt('equipment', this, 'Equipment not fit for purpose or wrong tool used')">Wrong tool / not fit for purpose</span>
+                    <span class="prompt-chip" onclick="addPrompt('equipment', this, 'Inadequate or deferred maintenance')">Deferred maintenance</span>
+                    <span class="prompt-chip" onclick="addPrompt('equipment', this, 'Design flaw or ergonomic deficiency')">Design / ergonomic flaw</span>
+                    <span class="prompt-chip" onclick="addPrompt('equipment', this, 'Safety device bypassed or missing')">Safety device bypassed</span>
+                    <span class="prompt-chip" onclick="addPrompt('equipment', this, 'PPE inadequate or not available')">PPE inadequate</span>
+                    <span class="prompt-chip" onclick="addPrompt('equipment', this, 'Warning system failure or alarm fatigue')">Warning / alarm failure</span>
+                    <span class="prompt-chip" onclick="addPrompt('equipment', this, 'Poor visibility from operator cab or equipment')">Poor operator visibility</span>
+                    <span class="prompt-chip" onclick="addPrompt('equipment', this, 'Unplanned modification or field change')">Unplanned modification</span>
+                </div>
+            </div>
+            <div class="factor-entries" id="entries-equipment"></div>
+            <button class="btn-add-factor" onclick="addEntry('equipment')">+ Add Equipment factor</button>
+        </div>
+
+        <!-- PROCEDURES -->
+        <div class="peepo-card procedures">
+            <div class="peepo-header">
+                <div class="peepo-letter">P</div>
+                <div class="peepo-title">
+                    <h3>Procedures</h3>
+                    <p>Work instructions, SOPs, permits, risk assessments — existence, adequacy, compliance</p>
+                </div>
+            </div>
+            <div class="prompts">
+                <p>Guided prompts — click to add:</p>
+                <div class="prompt-chips" id="chips-procedures">
+                    <span class="prompt-chip" onclick="addPrompt('procedures', this, 'No procedure existed for this task')">No procedure existed</span>
+                    <span class="prompt-chip" onclick="addPrompt('procedures', this, 'Procedure existed but was not followed')">Procedure not followed</span>
+                    <span class="prompt-chip" onclick="addPrompt('procedures', this, 'Procedure was outdated or inaccurate')">Outdated procedure</span>
+                    <span class="prompt-chip" onclick="addPrompt('procedures', this, 'Procedure not practical or too difficult to follow')">Impractical procedure</span>
+                    <span class="prompt-chip" onclick="addPrompt('procedures', this, 'Permit-to-work or isolation not completed')">PTW / isolation incomplete</span>
+                    <span class="prompt-chip" onclick="addPrompt('procedures', this, 'Risk assessment not conducted for this task')">Risk assessment missing</span>
+                    <span class="prompt-chip" onclick="addPrompt('procedures', this, 'Emergency procedure inadequate')">Emergency procedure gap</span>
+                    <span class="prompt-chip" onclick="addPrompt('procedures', this, 'Procedure not communicated or accessible')">Procedure not communicated</span>
+                </div>
+            </div>
+            <div class="factor-entries" id="entries-procedures"></div>
+            <button class="btn-add-factor" onclick="addEntry('procedures')">+ Add Procedures factor</button>
+        </div>
+
+        <!-- ORGANIZATION -->
+        <div class="peepo-card organization">
+            <div class="peepo-header">
+                <div class="peepo-letter">O</div>
+                <div class="peepo-title">
+                    <h3>Organization</h3>
+                    <p>Management systems, leadership, resourcing, culture — the root of most serious incidents</p>
+                </div>
+            </div>
+            <div class="prompts">
+                <p>Guided prompts — click to add:</p>
+                <div class="prompt-chips" id="chips-organization">
+                    <span class="prompt-chip" onclick="addPrompt('organization', this, 'Inadequate supervision or oversight')">Inadequate supervision</span>
+                    <span class="prompt-chip" onclick="addPrompt('organization', this, 'Training system failure — certified without competence')">Training system failure</span>
+                    <span class="prompt-chip" onclick="addPrompt('organization', this, 'Management of Change process not followed')">MoC process failure</span>
+                    <span class="prompt-chip" onclick="addPrompt('organization', this, 'Incompatible goals — production vs safety')">Incompatible goals</span>
+                    <span class="prompt-chip" onclick="addPrompt('organization', this, 'Inadequate contractor management')">Contractor management gap</span>
+                    <span class="prompt-chip" onclick="addPrompt('organization', this, 'Resource constraints — understaffing or time pressure')">Resource constraints</span>
+                    <span class="prompt-chip" onclick="addPrompt('organization', this, 'Leadership not visibly supporting safety')">Leadership safety gap</span>
+                    <span class="prompt-chip" onclick="addPrompt('organization', this, 'Previous incidents / hazards not acted on')">Prior incidents ignored</span>
+                    <span class="prompt-chip" onclick="addPrompt('organization', this, 'Communication breakdown across teams or shifts')">Cross-team communication</span>
+                    <span class="prompt-chip" onclick="addPrompt('organization', this, 'Design deficiency not identified in planning')">Design planning failure</span>
+                </div>
+            </div>
+            <div class="factor-entries" id="entries-organization"></div>
+            <button class="btn-add-factor" onclick="addEntry('organization')">+ Add Organization factor</button>
+        </div>
+
+    </div><!-- /peepo-grid -->
+
+    <!-- ACTIONS -->
+    <div class="actions-bar">
+        <button class="btn-primary" onclick="generateSummary()">📊 Generate Summary Chart</button>
+        <button class="btn-secondary" onclick="window.print()">🖨 Print / Save as PDF</button>
+        <button class="btn-secondary" onclick="clearAll()">🗑 Clear All</button>
+    </div>
+
+    <!-- SUMMARY PANEL -->
+    <div id="summary-panel">
+        <h2>PEEPO Analysis Summary</h2>
+        <div id="summary-meta" style="color:#94a3b8;font-size:0.85rem;margin-bottom:20px;"></div>
+        <div class="count-bar" id="count-bar"></div>
+        <div id="summary-content"></div>
+
+        <div class="actions-bar" style="margin-top:24px;">
+            <button class="btn-primary" onclick="window.print()">🖨 Print / Save as PDF</button>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-strip">
+        <h3>Need to run a full ICAM investigation?</h3>
+        <p>InvestigatePro has PEEPO analysis, AI coaching, and structured ICAM methodology built in — so your whole team investigates to the same standard, every time.</p>
+        <a href="/#demo">Start Free Trial →</a>
+    </div>
+
+</div><!-- /builder-section -->
+
+<!-- FOOTER -->
+<footer style="background:#1a2544;border-top:1px solid rgba(255,255,255,0.06);padding:40px 24px;text-align:center;margin-top:64px;">
+    <picture><source srcset="/assets/logos/logo-03-on-dark.webp" type="image/webp"><img src="/assets/logos/logo-03-on-dark.png" alt="InvestigatePro" style="height:32px;margin-bottom:20px;" loading="lazy"></picture>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;font-size:0.85rem;color:#64748b;margin-bottom:20px;">
+        <a href="/blog/" style="color:#64748b;text-decoration:none;">Blog</a>
+        <a href="/checklist.html" style="color:#64748b;text-decoration:none;">ICAM Checklist</a>
+        <a href="/5-whys-worksheet.html" style="color:#64748b;text-decoration:none;">5 Whys Worksheet</a>
+        <a href="/rca-template-pack.html" style="color:#64748b;text-decoration:none;">RCA Templates</a>
+        <a href="/privacy.html" style="color:#64748b;text-decoration:none;">Privacy</a>
+        <a href="mailto:hello@investigatepro.app" style="color:#64748b;text-decoration:none;">Contact</a>
+    </div>
+    <p style="color:#374151;font-size:0.78rem;">© 2026 InvestigatePro. All rights reserved.</p>
+</footer>
+
+<script>
+    // ==================== GATE ====================
+    function unlockTool() {
+        const name = document.getElementById('gate-name').value.trim();
+        const email = document.getElementById('gate-email').value.trim();
+        const company = document.getElementById('gate-company').value.trim();
+        const err = document.getElementById('gate-error');
+        const btn = document.getElementById('btn-unlock');
+
+        if (!name || !company || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            err.style.display = 'block';
+            return;
+        }
+        err.style.display = 'none';
+        btn.disabled = true;
+        btn.textContent = 'Unlocking…';
+
+        // Save lead to Supabase
+        fetch('https://api.72-62-211-212.sslip.io/api/leads/capture', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                first_name: name,
+                email: email,
+                company: company,
+                source: 'peepo_chart_builder',
+                lead_magnet: 'peepo_chart_builder'
+            })
+        }).catch(() => {}); // fail silently — still unlock
+
+        setTimeout(() => {
+            document.getElementById('gate-section').style.display = 'none';
+            document.getElementById('builder-section').style.display = 'block';
+            document.getElementById('investigator-name').value = name;
+            document.getElementById('incident-date').value = new Date().toISOString().split('T')[0];
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 600);
+    }
+
+    // Allow Enter key on gate inputs
+    document.addEventListener('DOMContentLoaded', () => {
+        ['gate-name','gate-email','gate-company'].forEach(id => {
+            document.getElementById(id).addEventListener('keypress', e => {
+                if (e.key === 'Enter') unlockTool();
+            });
+        });
+    });
+
+    // ==================== ENTRIES ====================
+    function addEntry(category, value = '') {
+        const container = document.getElementById('entries-' + category);
+        const div = document.createElement('div');
+        div.className = 'factor-entry';
+        div.innerHTML = `
+            <textarea placeholder="Describe the contributing factor in this category…">${value}</textarea>
+            <button class="btn-remove" onclick="this.parentElement.remove()">✕</button>
+        `;
+        container.appendChild(div);
+        div.querySelector('textarea').focus();
+    }
+
+    function addPrompt(category, chip, text) {
+        if (chip.classList.contains('selected')) return;
+        chip.classList.add('selected');
+        addEntry(category, text);
+    }
+
+    function getEntries(category) {
+        const textareas = document.querySelectorAll('#entries-' + category + ' textarea');
+        return Array.from(textareas).map(t => t.value.trim()).filter(Boolean);
+    }
+
+    // ==================== SUMMARY ====================
+    function generateSummary() {
+        const cats = ['people', 'environment', 'equipment', 'procedures', 'organization'];
+        const labels = { people: 'People', environment: 'Environment', equipment: 'Equipment', procedures: 'Procedures', organization: 'Organization' };
+        const colors = { people: '#93c5fd', environment: '#6ee7b7', equipment: '#fcd34d', procedures: '#c4b5fd', organization: '#fca5a5' };
+
+        const allFactors = {};
+        let total = 0;
+        cats.forEach(c => {
+            allFactors[c] = getEntries(c);
+            total += allFactors[c].length;
+        });
+
+        const panel = document.getElementById('summary-panel');
+        const title = document.getElementById('incident-title').value || 'Untitled Incident';
+        const date = document.getElementById('incident-date').value || '';
+        const loc = document.getElementById('incident-location').value || '';
+        const inv = document.getElementById('investigator-name').value || '';
+        const desc = document.getElementById('incident-desc').value || '';
+
+        document.getElementById('summary-meta').innerHTML = `
+            <strong style="color:#fff;">${title}</strong>${date ? ' · ' + date : ''}${loc ? ' · ' + loc : ''}${inv ? ' · Investigator: ' + inv : ''}<br>
+            ${desc ? '<em style="color:#64748b;">' + desc + '</em>' : ''}
+        `;
+
+        // Count bar
+        let countHtml = `<div class="count-pill"><div class="num">${total}</div><div class="lbl">Total Factors</div></div>`;
+        cats.forEach(c => {
+            countHtml += `<div class="count-pill"><div class="num" style="color:${colors[c]}">${allFactors[c].length}</div><div class="lbl">${labels[c]}</div></div>`;
+        });
+        document.getElementById('count-bar').innerHTML = countHtml;
+
+        // Content
+        let html = '';
+        cats.forEach(c => {
+            const items = allFactors[c];
+            html += `<div class="summary-section summary-${c}">
+                <h4 style="color:${colors[c]};">${labels[c].toUpperCase()}</h4>
+                <ul>${items.length ? items.map(i => `<li>${i}</li>`).join('') : '<li class="empty">No factors identified</li>'}</ul>
+            </div>`;
+        });
+
+        if (total === 0) {
+            html = '<p style="color:#64748b;font-style:italic;">No factors entered yet. Add contributing factors above, then generate the summary.</p>';
+        }
+
+        document.getElementById('summary-content').innerHTML = html;
+        panel.style.display = 'block';
+        panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function clearAll() {
+        if (!confirm('Clear all entries? This cannot be undone.')) return;
+        ['people','environment','equipment','procedures','organization'].forEach(c => {
+            document.getElementById('entries-' + c).innerHTML = '';
+            document.querySelectorAll('#chips-' + c + ' .prompt-chip').forEach(ch => ch.classList.remove('selected'));
+        });
+        ['incident-title','incident-date','incident-location','investigator-name','incident-desc'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.value = '';
+        });
+        document.getElementById('summary-panel').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
