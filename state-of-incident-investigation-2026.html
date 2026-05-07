@@ -99,7 +99,8 @@
         .bar-pct { font-size: 0.8rem; color: #76DCEC; font-weight: 700; min-width: 36px; text-align: right; }
 
         /* COMPARISON TABLE */
-        .comp-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.875rem; }
+        .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .comp-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.875rem; min-width: 540px; }
         .comp-table th { background: #0C142E; padding: 11px 14px; text-align: left; color: #76DCEC; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; border-bottom: 1px solid rgba(255,255,255,0.1); }
         .comp-table td { padding: 11px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; vertical-align: top; }
         .comp-table tr:last-child td { border-bottom: none; }
@@ -267,6 +268,7 @@
         <p class="rp">The access gap is real but closing. Digital investigation platforms have significantly reduced the cost and complexity of methodology adoption. Browser-based tools, guided workflows, and AI assistance are making ICAM-quality investigations accessible to organizations that previously couldn't justify the investment.</p>
 
         <h3 class="rh3">ICAM vs Other Methodologies: Adoption by Industry</h3>
+        <div class="table-scroll">
         <table class="comp-table">
             <thead>
                 <tr>
@@ -321,6 +323,7 @@
                 </tr>
             </tbody>
         </table>
+        </div>
     </div>
 
     <hr class="divider">
