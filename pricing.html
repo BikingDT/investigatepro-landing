@@ -540,5 +540,48 @@
             document.getElementById('business-period').textContent = periodText;
         }
     </script>
+    <style>
+      .mm-btn{display:none;background:none;border:0;color:#E5E7EB;padding:10px;margin-left:4px;cursor:pointer;border-radius:8px}
+      .mm-btn:hover{color:#fff;background:rgba(255,255,255,.08)}
+      .mm-panel{display:none;position:fixed;top:0;left:0;right:0;z-index:40;background:rgba(8,14,31,.98);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid rgba(118,220,236,.25);padding:96px 24px 24px;max-height:100vh;overflow-y:auto}
+      .mm-panel a{display:block;padding:14px 8px;color:#D1D5DB;font-size:18px;font-weight:500;border-bottom:1px solid rgba(255,255,255,.06);text-decoration:none}
+      .mm-panel a:hover{color:#fff}
+      .mm-panel a.mm-cta{margin-top:16px;background:#06B6D4;color:#0A1228;text-align:center;border-radius:10px;font-weight:700;border-bottom:0;padding:14px}
+      .mm-open .mm-panel{display:block}
+      @media (max-width:767px){.mm-btn{display:inline-flex;align-items:center}}
+      body.mm-noscroll{overflow:hidden}
+    </style>
+    <script>
+    (function(){
+      var nav=document.querySelector('nav'); if(!nav) return;
+      var links=nav.querySelector('div.hidden');
+      var cal=nav.querySelector('a[href*="cal.com"]');
+      if(!links||!cal) return;
+      var ICONS={open:'<svg width="26" height="26" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>',close:'<svg width="26" height="26" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>'};
+      var btn=document.createElement('button');
+      btn.className='mm-btn'; btn.type='button';
+      btn.setAttribute('aria-label','Open menu'); btn.setAttribute('aria-expanded','false'); btn.setAttribute('aria-controls','mm-panel');
+      btn.innerHTML=ICONS.open;
+      cal.parentNode.appendChild(btn);
+      var panel=document.createElement('div');
+      panel.id='mm-panel'; panel.className='mm-panel';
+      links.querySelectorAll('a').forEach(function(a){panel.appendChild(a.cloneNode(true));});
+      var login=nav.querySelector('a[href*="/login"]');
+      if(login){var l=login.cloneNode(true); l.removeAttribute('class'); panel.appendChild(l);}
+      var cta=cal.cloneNode(true); cta.className='mm-cta'; panel.appendChild(cta);
+      nav.appendChild(panel);
+      function setOpen(o){
+        document.documentElement.classList.toggle('mm-open',o);
+        document.body.classList.toggle('mm-noscroll',o);
+        btn.setAttribute('aria-expanded',String(o));
+        btn.setAttribute('aria-label',o?'Close menu':'Open menu');
+        btn.innerHTML=o?ICONS.close:ICONS.open;
+      }
+      btn.addEventListener('click',function(){setOpen(!document.documentElement.classList.contains('mm-open'));});
+      panel.addEventListener('click',function(e){if(e.target.closest('a'))setOpen(false);});
+      document.addEventListener('keydown',function(e){if(e.key==='Escape')setOpen(false);});
+      window.addEventListener('resize',function(){if(window.innerWidth>=768)setOpen(false);});
+    })();
+    </script>
 </body>
 </html>
