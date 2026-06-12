@@ -6,7 +6,7 @@
     <title>Free PEEPO Quick Reference Card — Download PDF | InvestigatePro</title>
     <meta name="description" content="Download the PEEPO Quick Reference Card: 2-page printable PDF with the complete PEEPO framework, organizational factors, hierarchy of controls, and common mistakes to avoid.">
     <meta name="keywords" content="PEEPO cheatsheet, PEEPO reference card, PEEPO framework PDF, ICAM PEEPO, incident investigation cheatsheet">
-    <link rel="icon" type="image/png" href="assets/logos/logo-03-icon-only-optimized.png">
+    <link rel="icon" type="image/png" href="assets/brand/favicon-32.png">
     <link rel="canonical" href="https://investigatepro.app/peepo-cheatsheet.html">
     
     <!-- Open Graph -->
@@ -14,7 +14,7 @@
     <meta property="og:url" content="https://investigatepro.app/peepo-cheatsheet.html">
     <meta property="og:title" content="Free PEEPO Quick Reference Card — 2-Page PDF">
     <meta property="og:description" content="Printable PEEPO framework cheatsheet with organizational factors, hierarchy of controls, and common mistakes.">
-    <meta property="og:image" content="https://investigatepro.app/assets/logos/logo-03-on-dark.png">
+    <meta property="og:image" content="https://investigatepro.app/assets/brand/og-image.png">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,18 +23,18 @@
     <link rel="preload" href="assets/css/styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="assets/css/styles.min.css"></noscript>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
     
     <style>
-        .gradient-hero { background: linear-gradient(180deg, #0C142E 0%, #1A2744 100%); }
-        .feature-icon { background: linear-gradient(135deg, #76DCEC 0%, #88E0EE 100%); }
+        .gradient-hero {background:linear-gradient(180deg,#EBF1F0 0%,#F4F7F9 45%,#FFFFFF 100%)}
+        .feature-icon { background: linear-gradient(135deg, #004D40 0%, #004D40 100%); }
         .form-success { display: none; }
         .form-success.show { display: block; }
         .form-container.hide { display: none; }
         .peepo-letter { 
             width: 60px; height: 60px; 
-            background: #76DCEC; color: #0C142E; 
+            background: #004D40; color: #FFFFFF; 
             border-radius: 12px; 
             display: flex; align-items: center; justify-content: center;
             font-size: 32px; font-weight: 800;
@@ -42,46 +42,44 @@
     </style>
 
     <!-- Structured Data: Breadcrumb -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://investigatepro.app/"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Resources",
-                "item": "https://investigatepro.app/blog/"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "PEEPO Cheatsheet",
-                "item": "https://investigatepro.app/peepo-cheatsheet.html"
-            }
-        ]
-    }
-    </script>
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://investigatepro.app/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Resources",
+            "item": "https://investigatepro.app/blog/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "PEEPO Cheatsheet",
+            "item": "https://investigatepro.app/peepo-cheatsheet.html"
+        }
+    ]
+}</script>
 </head>
-<body class="font-sans antialiased bg-navy-900 text-white">
+<body class="font-sans antialiased bg-cloud text-ink">
 
     <!-- Navigation -->
-    <nav class="fixed w-full bg-navy-900/95 backdrop-blur-sm z-50 border-b border-navy-700">
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-mist">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <a href="/" class="flex items-center">
-                    <picture><source srcset="assets/logos/logo-03-on-dark.webp" type="image/webp"><img src="assets/logos/logo-03-on-dark.png" alt="InvestigatePro" class="h-[60px] sm:h-[80px]"></picture>
+                    <picture><source srcset="assets/brand/logo-horizontal.svg" type="image/webp"><img src="assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="h-[60px] sm:h-[80px]"></picture>
                 </a>
                 <div class="flex items-center space-x-6">
-                    <a href="/blog/" class="hidden sm:inline text-gray-300 hover:text-white transition-colors">Blog</a>
-                    <a href="/icam-toolkit.html" class="hidden sm:inline text-gray-300 hover:text-white transition-colors">Full Toolkit</a>
-                    <a href="/#demo" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-5 py-2 rounded-lg font-semibold transition-colors">
+                    <a href="/blog/" class="hidden sm:inline text-slate hover:text-ink transition-colors">Blog</a>
+                    <a href="/icam-toolkit.html" class="hidden sm:inline text-slate hover:text-ink transition-colors">Full Toolkit</a>
+                    <a href="/#demo" class="bg-apex-500 hover:bg-apex-700 text-white px-5 py-2 rounded-lg font-semibold transition-colors">
                         Start Free Trial
                     </a>
                 </div>
@@ -96,44 +94,44 @@
                 
                 <!-- Left: Copy & Form -->
                 <div>
-                    <div class="inline-flex items-center bg-cyan-500/20 rounded-full px-4 py-1.5 mb-6">
-                        <span class="text-sm text-cyan-400 font-medium">Free Download — Print & Use</span>
+                    <div class="inline-flex items-center bg-apex-500/10 rounded-full px-4 py-1.5 mb-6">
+                        <span class="text-sm text-apex-500 font-medium">Free Download — Print & Use</span>
                     </div>
                     
                     <h1 class="text-4xl sm:text-5xl font-bold mb-6 leading-tight">
                         PEEPO Quick<br>
-                        <span class="text-cyan-500">Reference Card</span>
+                        <span class="text-apex-500">Reference Card</span>
                     </h1>
                     
-                    <p class="text-xl text-gray-300 mb-8">
+                    <p class="text-xl text-slate mb-8">
                         The complete PEEPO framework on two printable pages. Keep it on your desk, in your investigation kit, or share with your team.
                     </p>
                     
                     <!-- What's Inside -->
                     <div class="space-y-4 mb-8">
                         <div class="flex items-center gap-3">
-                            <svg class="w-6 h-6 text-cyan-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-6 h-6 text-apex-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span class="text-gray-300">Complete PEEPO factors for all 5 categories</span>
+                            <span class="text-slate">Complete PEEPO factors for all 5 categories</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <svg class="w-6 h-6 text-cyan-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-6 h-6 text-apex-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span class="text-gray-300">Organizational factor categories</span>
+                            <span class="text-slate">Organizational factor categories</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <svg class="w-6 h-6 text-cyan-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-6 h-6 text-apex-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span class="text-gray-300">Hierarchy of controls visual</span>
+                            <span class="text-slate">Hierarchy of controls visual</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <svg class="w-6 h-6 text-cyan-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-6 h-6 text-apex-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span class="text-gray-300">Common mistakes to avoid</span>
+                            <span class="text-slate">Common mistakes to avoid</span>
                         </div>
                     </div>
                     
@@ -141,57 +139,57 @@
                     <a 
                         href="assets/lead-magnets/peepo-quick-reference.pdf"
                         download="PEEPO-Quick-Reference-InvestigatePro.pdf"
-                        class="inline-flex items-center gap-3 bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-8 py-4 rounded-xl font-semibold text-lg transition-colors"
+                        class="inline-flex items-center gap-3 bg-apex-500 hover:bg-apex-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-colors"
                     >
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
                         </svg>
                         Download Free PDF
                     </a>
-                    <p class="text-sm text-gray-500 mt-4">No email required. 395KB PDF.</p>
+                    <p class="text-sm text-graphite mt-4">No email required. 395KB PDF.</p>
                     
                 </div>
                 
                 <!-- Right: Preview -->
                 <div class="hidden lg:block">
-                    <div class="bg-navy-800 rounded-2xl p-8 shadow-2xl">
+                    <div class="bg-white rounded-2xl p-8 shadow-2xl">
                         <!-- PEEPO Grid Preview -->
                         <div class="grid grid-cols-5 gap-3 mb-8">
                             <div class="text-center">
                                 <div class="peepo-letter mx-auto mb-2">P</div>
-                                <span class="text-xs text-gray-400">People</span>
+                                <span class="text-xs text-graphite">People</span>
                             </div>
                             <div class="text-center">
                                 <div class="peepo-letter mx-auto mb-2">E</div>
-                                <span class="text-xs text-gray-400">Environment</span>
+                                <span class="text-xs text-graphite">Environment</span>
                             </div>
                             <div class="text-center">
                                 <div class="peepo-letter mx-auto mb-2">E</div>
-                                <span class="text-xs text-gray-400">Equipment</span>
+                                <span class="text-xs text-graphite">Equipment</span>
                             </div>
                             <div class="text-center">
                                 <div class="peepo-letter mx-auto mb-2">P</div>
-                                <span class="text-xs text-gray-400">Procedures</span>
+                                <span class="text-xs text-graphite">Procedures</span>
                             </div>
                             <div class="text-center">
                                 <div class="peepo-letter mx-auto mb-2">O</div>
-                                <span class="text-xs text-gray-400">Organization</span>
+                                <span class="text-xs text-graphite">Organization</span>
                             </div>
                         </div>
                         
                         <div class="space-y-3">
-                            <div class="bg-navy-700 rounded-lg p-4">
-                                <span class="text-cyan-500 font-semibold text-sm">Page 1:</span>
-                                <span class="text-gray-300 text-sm ml-2">All PEEPO factors + key questions</span>
+                            <div class="bg-cloud rounded-lg p-4">
+                                <span class="text-apex-500 font-semibold text-sm">Page 1:</span>
+                                <span class="text-slate text-sm ml-2">All PEEPO factors + key questions</span>
                             </div>
-                            <div class="bg-navy-700 rounded-lg p-4">
-                                <span class="text-cyan-500 font-semibold text-sm">Page 2:</span>
-                                <span class="text-gray-300 text-sm ml-2">Org factors, controls, mistakes</span>
+                            <div class="bg-cloud rounded-lg p-4">
+                                <span class="text-apex-500 font-semibold text-sm">Page 2:</span>
+                                <span class="text-slate text-sm ml-2">Org factors, controls, mistakes</span>
                             </div>
                         </div>
                         
-                        <div class="mt-6 pt-6 border-t border-navy-600 text-center">
-                            <span class="text-gray-400 text-sm">Printable A4 • Brand free version available</span>
+                        <div class="mt-6 pt-6 border-t border-mist text-center">
+                            <span class="text-graphite text-sm">Printable A4 • Brand free version available</span>
                         </div>
                     </div>
                 </div>
@@ -201,11 +199,11 @@
     </section>
 
     <!-- Upsell to Full Toolkit -->
-    <section class="py-16 bg-navy-800">
+    <section class="py-16 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-2xl font-bold mb-4">Need More Than a Cheatsheet?</h2>
-            <p class="text-gray-400 mb-8 max-w-2xl mx-auto">The full ICAM Investigation Toolkit includes 23 pages of professional worksheets: PEEPO analysis forms, witness interview guides, timeline templates, and more.</p>
-            <a href="/icam-toolkit.html" class="inline-flex items-center gap-2 bg-navy-700 hover:bg-navy-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+            <p class="text-graphite mb-8 max-w-2xl mx-auto">The full ICAM Investigation Toolkit includes 23 pages of professional worksheets: PEEPO analysis forms, witness interview guides, timeline templates, and more.</p>
+            <a href="/icam-toolkit.html" class="inline-flex items-center gap-2 bg-cloud hover:bg-mist text-ink px-6 py-3 rounded-lg font-semibold transition-colors">
                 Get the Full Toolkit
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
@@ -215,18 +213,18 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-navy-900 border-t border-navy-700 py-12">
+    <footer class="bg-cloud border-t border-mist py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
-                <picture><source srcset="assets/logos/logo-03-on-dark.webp" type="image/webp"><img src="assets/logos/logo-03-on-dark.png" alt="InvestigatePro" class="h-12 mb-6 md:mb-0"></picture>
-                <div class="flex flex-wrap justify-center gap-6 text-gray-400 text-sm">
-                    <a href="/" class="hover:text-white">Home</a>
-                    <a href="/blog/" class="hover:text-white">Blog</a>
-                    <a href="/icam-toolkit.html" class="hover:text-white">ICAM Toolkit</a>
-                    <a href="/privacy.html" class="hover:text-white">Privacy</a>
+                <picture><source srcset="assets/brand/logo-horizontal.svg" type="image/webp"><img src="assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="h-12 mb-6 md:mb-0"></picture>
+                <div class="flex flex-wrap justify-center gap-6 text-graphite text-sm">
+                    <a href="/" class="hover:text-ink">Home</a>
+                    <a href="/blog/" class="hover:text-ink">Blog</a>
+                    <a href="/icam-toolkit.html" class="hover:text-ink">ICAM Toolkit</a>
+                    <a href="/privacy.html" class="hover:text-ink">Privacy</a>
                 </div>
             </div>
-            <div class="mt-8 pt-8 border-t border-navy-700 text-center text-gray-500 text-sm">
+            <div class="mt-8 pt-8 border-t border-mist text-center text-graphite text-sm">
                 © 2026 InvestigatePro. All rights reserved.
             </div>
         </div>

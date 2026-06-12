@@ -19,15 +19,15 @@
     
     <style>
         :root {
-            --navy: #0C142E;
-            --navy-light: #1a2544;
-            --cyan: #76DCEC;
-            --cyan-dark: #5bc4d4;
+            --navy: #F4F7F9;
+            --navy-light: #FFFFFF;
+            --cyan: #004D40;
+            --cyan-dark: #004D40;
             --white: #FFFFFF;
             --gray-100: #f7f8fa;
-            --gray-200: #e5e7eb;
-            --gray-400: #9ca3af;
-            --gray-600: #4b5563;
+            --gray-200: #D9E2E8;
+            --gray-400: #5A6B76;
+            --gray-600: #37474F;
         }
         
         * {
@@ -52,7 +52,7 @@
         /* Header */
         header {
             padding: 20px 0;
-            border-bottom: 1px solid rgba(118, 220, 236, 0.1);
+            border-bottom: 1px solid rgba(0,77,64,0.1);
         }
         
         .header-content {
@@ -90,7 +90,7 @@
         
         .badge {
             display: inline-block;
-            background: rgba(118, 220, 236, 0.15);
+            background: rgba(0,77,64,0.15);
             color: var(--cyan);
             padding: 6px 16px;
             border-radius: 20px;
@@ -116,7 +116,7 @@
         /* Email Capture Form */
         .capture-form {
             background: var(--navy-light);
-            border: 1px solid rgba(118, 220, 236, 0.2);
+            border: 1px solid rgba(0,77,64,0.2);
             border-radius: 12px;
             padding: 30px;
             max-width: 500px;
@@ -138,7 +138,7 @@
         .form-row input {
             flex: 1;
             padding: 14px 16px;
-            border: 1px solid rgba(118, 220, 236, 0.3);
+            border: 1px solid rgba(0,77,64,0.3);
             border-radius: 8px;
             background: var(--navy);
             color: var(--white);
@@ -260,7 +260,7 @@
         
         /* Pro Tips */
         .pro-tip {
-            background: rgba(118, 220, 236, 0.1);
+            background: rgba(0,77,64,0.1);
             border-left: 4px solid var(--cyan);
             padding: 15px 20px;
             margin: 20px 0;
@@ -281,7 +281,7 @@
         .cta-section {
             text-align: center;
             padding: 60px 0;
-            border-top: 1px solid rgba(118, 220, 236, 0.1);
+            border-top: 1px solid rgba(0,77,64,0.1);
         }
         
         .cta-section h2 {
@@ -314,7 +314,7 @@
         /* Footer */
         footer {
             padding: 40px 0;
-            border-top: 1px solid rgba(118, 220, 236, 0.1);
+            border-top: 1px solid rgba(0,77,64,0.1);
             text-align: center;
         }
         
@@ -406,32 +406,30 @@
     </style>
 
     <!-- Structured Data: Breadcrumb -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://investigatepro.app/"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Resources",
-                "item": "https://investigatepro.app/blog/"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "ICAM Checklist",
-                "item": "https://investigatepro.app/checklist.html"
-            }
-        ]
-    }
-    </script>
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://investigatepro.app/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Resources",
+            "item": "https://investigatepro.app/blog/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "ICAM Checklist",
+            "item": "https://investigatepro.app/checklist.html"
+        }
+    ]
+}</script>
 </head>
 <body>
     <header>

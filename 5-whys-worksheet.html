@@ -17,16 +17,16 @@
     
     <style>
         :root {
-            --navy: #0C142E;
-            --navy-light: #1a2544;
-            --navy-mid: #0f1e3a;
-            --cyan: #76DCEC;
-            --cyan-dark: #5bc4d4;
+            --navy: #F4F7F9;
+            --navy-light: #FFFFFF;
+            --navy-mid: #F4F7F9;
+            --cyan: #004D40;
+            --cyan-dark: #004D40;
             --white: #FFFFFF;
             --gray-100: #f7f8fa;
-            --gray-200: #e5e7eb;
-            --gray-400: #9ca3af;
-            --gray-600: #4b5563;
+            --gray-200: #D9E2E8;
+            --gray-400: #5A6B76;
+            --gray-600: #37474F;
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -42,7 +42,7 @@
         
         header {
             padding: 20px 0;
-            border-bottom: 1px solid rgba(118, 220, 236, 0.1);
+            border-bottom: 1px solid rgba(0,77,64,0.1);
         }
         
         .header-content { display: flex; justify-content: space-between; align-items: center; }
@@ -52,7 +52,7 @@
         .back-link:hover { text-decoration: underline; }
         
         .hero { text-align: center; padding: 50px 0 36px; }
-        .badge { display: inline-block; background: rgba(118, 220, 236, 0.15); color: var(--cyan); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; margin-bottom: 18px; }
+        .badge { display: inline-block; background: rgba(0,77,64,0.15); color: var(--cyan); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; margin-bottom: 18px; }
         h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 14px; line-height: 1.2; }
         .hero p { font-size: 1.05rem; color: var(--gray-400); max-width: 580px; margin: 0 auto 28px; }
         
@@ -63,7 +63,7 @@
         /* Capture Form */
         .capture-form {
             background: var(--navy-light);
-            border: 1px solid rgba(118, 220, 236, 0.25);
+            border: 1px solid rgba(0,77,64,0.25);
             border-radius: 12px;
             padding: 36px;
             margin: 40px 0;
@@ -76,7 +76,7 @@
             width: 100%;
             padding: 12px 16px;
             background: var(--navy);
-            border: 1px solid rgba(118, 220, 236, 0.2);
+            border: 1px solid rgba(0,77,64,0.2);
             border-radius: 8px;
             color: var(--white);
             font-size: 1rem;
@@ -122,7 +122,7 @@
         /* Example card */
         .example-card {
             background: var(--navy-mid);
-            border: 1px solid rgba(118, 220, 236, 0.15);
+            border: 1px solid rgba(0,77,64,0.15);
             border-radius: 12px;
             padding: 28px;
             margin-bottom: 40px;
@@ -138,9 +138,9 @@
             align-items: flex-start;
         }
         .why-number {
-            background: rgba(118, 220, 236, 0.15);
+            background: rgba(0,77,64,0.15);
             color: var(--cyan);
-            border: 1px solid rgba(118, 220, 236, 0.3);
+            border: 1px solid rgba(0,77,64,0.3);
             border-radius: 50%;
             width: 32px;
             height: 32px;
@@ -155,13 +155,13 @@
         .why-content {}
         .why-q { color: var(--cyan); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
         .why-a { color: var(--white); font-size: 0.95rem; margin-top: 2px; }
-        .root-cause-step .why-number { background: rgba(118, 220, 236, 0.3); }
+        .root-cause-step .why-number { background: rgba(0,77,64,0.3); }
         .root-cause-step .why-a { color: var(--cyan); font-weight: 600; }
         
         /* Blank Worksheet */
         .blank-worksheet {
             background: var(--navy-mid);
-            border: 2px solid rgba(118, 220, 236, 0.2);
+            border: 2px solid rgba(0,77,64,0.2);
             border-radius: 12px;
             padding: 28px;
             margin-bottom: 32px;
@@ -170,7 +170,7 @@
         
         .problem-field {
             background: var(--navy);
-            border: 1px solid rgba(118, 220, 236, 0.2);
+            border: 1px solid rgba(0,77,64,0.2);
             border-radius: 8px;
             padding: 16px;
             margin-bottom: 20px;
@@ -196,9 +196,9 @@
             align-items: flex-start;
         }
         .why-field-number {
-            background: rgba(118, 220, 236, 0.1);
+            background: rgba(0,77,64,0.1);
             color: var(--cyan);
-            border: 1px solid rgba(118, 220, 236, 0.25);
+            border: 1px solid rgba(0,77,64,0.25);
             border-radius: 50%;
             width: 36px;
             height: 36px;
@@ -215,7 +215,7 @@
         .why-field-content input {
             width: 100%;
             background: var(--navy);
-            border: 1px solid rgba(118, 220, 236, 0.15);
+            border: 1px solid rgba(0,77,64,0.15);
             border-radius: 8px;
             padding: 10px 14px;
             color: var(--white);
@@ -226,12 +226,12 @@
         }
         .why-field-content input::placeholder { color: rgba(156, 163, 175, 0.4); }
         .why-field-content input:focus { border-color: var(--cyan); }
-        .root-cause-field .why-field-number { background: rgba(118, 220, 236, 0.2); }
-        .root-cause-field .why-field-content input { border-color: rgba(118, 220, 236, 0.35); }
+        .root-cause-field .why-field-number { background: rgba(0,77,64,0.2); }
+        .root-cause-field .why-field-content input { border-color: rgba(0,77,64,0.35); }
         
         .action-field {
             background: var(--navy);
-            border: 1px solid rgba(118, 220, 236, 0.2);
+            border: 1px solid rgba(0,77,64,0.2);
             border-radius: 8px;
             padding: 16px;
             margin-top: 20px;
@@ -240,7 +240,7 @@
         .action-row { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 10px; margin-bottom: 10px; }
         .action-row input {
             background: var(--navy-light);
-            border: 1px solid rgba(118, 220, 236, 0.1);
+            border: 1px solid rgba(0,77,64,0.1);
             border-radius: 6px;
             padding: 8px 12px;
             color: var(--white);
@@ -267,13 +267,13 @@
             margin-top: 16px;
             transition: all 0.2s;
         }
-        .print-btn:hover { background: rgba(118, 220, 236, 0.1); }
+        .print-btn:hover { background: rgba(0,77,64,0.1); }
         
         /* Tips section */
         .tips-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 32px 0; }
         .tip-card {
             background: var(--navy-light);
-            border: 1px solid rgba(118, 220, 236, 0.1);
+            border: 1px solid rgba(0,77,64,0.1);
             border-radius: 10px;
             padding: 20px;
         }
@@ -282,7 +282,7 @@
         .tip-card p { color: var(--gray-400); font-size: 0.85rem; line-height: 1.5; }
         
         /* CTA */
-        .cta-section { text-align: center; padding: 50px 0; border-top: 1px solid rgba(118, 220, 236, 0.1); margin-top: 40px; }
+        .cta-section { text-align: center; padding: 50px 0; border-top: 1px solid rgba(0,77,64,0.1); margin-top: 40px; }
         .cta-section h2 { font-size: 1.8rem; margin-bottom: 12px; }
         .cta-section p { color: var(--gray-400); max-width: 500px; margin: 0 auto 28px; }
         .cta-btn {
@@ -303,7 +303,7 @@
         footer {
             text-align: center;
             padding: 30px 0;
-            border-top: 1px solid rgba(118, 220, 236, 0.1);
+            border-top: 1px solid rgba(0,77,64,0.1);
             color: var(--gray-400);
             font-size: 0.85rem;
         }
@@ -429,7 +429,7 @@
                 </div>
             </div>
 
-            <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(118,220,236,0.15);">
+            <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(0,77,64,0.15);">
                 <p style="color: var(--cyan); font-size: 0.85rem; font-weight: 600; margin-bottom: 8px;">✅ Corrective Actions</p>
                 <ul style="color: var(--gray-400); font-size: 0.9rem; padding-left: 20px;">
                     <li>Review and update SWMS for all cutting tasks to include workholding requirements — HSE Manager — 14 days</li>
@@ -549,7 +549,7 @@
         </div>
 
         <!-- When to use ICAM instead -->
-        <div style="background: var(--navy-mid); border: 1px solid rgba(118,220,236,0.2); border-radius: 12px; padding: 24px; margin: 32px 0;">
+        <div style="background: var(--navy-mid); border: 1px solid rgba(0,77,64,0.2); border-radius: 12px; padding: 24px; margin: 32px 0;">
             <h3 style="color: var(--cyan); margin-bottom: 12px; font-size: 1.1rem;">When 5 Whys Isn't Enough</h3>
             <p style="color: var(--gray-400); font-size: 0.95rem; margin-bottom: 12px;">For serious incidents — fatalities, high-potential near misses, or events with multiple contributing factors in mining, construction, or oil & gas — 5 Whys alone doesn't go deep enough. You need ICAM (Incident Cause Analysis Method).</p>
             <a href="/blog/icam-investigation-guide.html" style="color: var(--cyan); font-size: 0.9rem; font-weight: 600;">Read: The Complete ICAM Investigation Guide →</a>

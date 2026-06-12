@@ -6,7 +6,7 @@
     <title>AI in Safety: How Machine Learning Is Transforming Root Cause Analysis (2026) | InvestigatePro</title>
     <meta name="description" content="How AI and machine learning are changing incident investigation and root cause analysis in 2026. Real applications in mining, construction, and manufacturing — plus what AI can and can't do yet.">
     <meta name="keywords" content="AI safety management, machine learning root cause analysis, AI incident investigation, artificial intelligence safety, AI HSE, predictive safety analytics, AI root cause analysis software">
-    <link rel="icon" type="image/png" href="../assets/logos/logo-03-icon-only-optimized.png">
+    <link rel="icon" type="image/png" href="../assets/brand/favicon-32.png">
     <link rel="canonical" href="https://investigatepro.app/blog/ai-in-safety-machine-learning-root-cause-analysis.html">
     
     <!-- Open Graph -->
@@ -14,7 +14,7 @@
     <meta property="og:url" content="https://investigatepro.app/blog/ai-in-safety-machine-learning-root-cause-analysis.html">
     <meta property="og:title" content="AI in Safety: How Machine Learning Is Transforming Root Cause Analysis (2026)">
     <meta property="og:description" content="How AI and machine learning are changing incident investigation in 2026 — real applications, current limitations, and what it means for Safety Managers and HSE teams.">
-    <meta property="og:image" content="https://investigatepro.app/assets/logos/logo-03-on-dark.png">
+    <meta property="og:image" content="https://investigatepro.app/assets/brand/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="article:published_time" content="2026-05-05">
     <meta property="article:author" content="InvestigatePro">
@@ -23,68 +23,89 @@
     <link rel="preload" href="../assets/css/styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="../assets/css/styles.min.css"></noscript>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
     
     <style>
-        .prose h2 { color: #76DCEC; margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.75rem; font-weight: 700; }
-        .prose h3 { color: #fff; margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.25rem; font-weight: 600; }
-        .prose p { color: #d1d5db; margin-bottom: 1.25rem; line-height: 1.8; }
-        .prose ul, .prose ol { color: #d1d5db; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .prose h2 { color: #004D40; margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.75rem; font-weight: 700; }
+        .prose h3 { color: #112D3C; margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.25rem; font-weight: 600; }
+        .prose p { color: #37474F; margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose ul, .prose ol { color: #37474F; margin-bottom: 1.25rem; padding-left: 1.5rem; }
         .prose li { margin-bottom: 0.5rem; line-height: 1.7; }
-        .prose strong { color: #fff; }
-        .prose a { color: #76DCEC; text-decoration: underline; }
-        .prose blockquote { border-left: 4px solid #76DCEC; padding-left: 1rem; margin: 1.5rem 0; font-style: italic; color: #9ca3af; }
+        .prose strong { color: #112D3C; }
+        .prose a { color: #004D40; text-decoration: underline; }
+        .prose blockquote { border-left: 4px solid #004D40; padding-left: 1rem; margin: 1.5rem 0; font-style: italic; color: #5A6B76; }
         .ai-app-card { background: #0d1b2e; border: 1px solid #1e3a5f; border-radius: 10px; padding: 1.25rem; margin: 0.75rem 0; }
-        .ai-app-card .label { color: #76DCEC; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
-        .ai-app-card .title { color: #fff; font-weight: 600; margin-bottom: 0.5rem; }
-        .ai-app-card .desc { color: #9ca3af; font-size: 0.9rem; line-height: 1.6; }
+        .ai-app-card .label { color: #004D40; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
+        .ai-app-card .title { color: #112D3C; font-weight: 600; margin-bottom: 0.5rem; }
+        .ai-app-card .desc { color: #5A6B76; font-size: 0.9rem; line-height: 1.6; }
         .reality-check { background: #1a0d0d; border: 1px solid #5f1e1e; border-radius: 10px; padding: 1.25rem; margin: 1rem 0; }
-        .reality-check .label { color: #f87171; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+        .reality-check .label { color: #E53935; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
     </style>
 
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://investigatepro.app/" },
-            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://investigatepro.app/blog/" },
-            { "@type": "ListItem", "position": 3, "name": "AI in Safety: Machine Learning for Root Cause Analysis", "item": "https://investigatepro.app/blog/ai-in-safety-machine-learning-root-cause-analysis.html" }
-        ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "AI in Safety: How Machine Learning Is Transforming Root Cause Analysis (2026)",
-        "description": "How AI and machine learning are changing incident investigation in 2026 — real applications, current limitations, and what it means for Safety Managers and HSE teams.",
-        "datePublished": "2026-05-05",
-        "dateModified": "2026-05-05",
-        "author": { "@type": "Organization", "name": "InvestigatePro", "url": "https://investigatepro.app" },
-        "publisher": {
-            "@type": "Organization",
-            "name": "InvestigatePro",
-            "logo": { "@type": "ImageObject", "url": "https://investigatepro.app/assets/logos/logo-03-on-dark.png" }
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://investigatepro.app/"
         },
-        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://investigatepro.app/blog/ai-in-safety-machine-learning-root-cause-analysis.html" }
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://investigatepro.app/blog/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "AI in Safety: Machine Learning for Root Cause Analysis",
+            "item": "https://investigatepro.app/blog/ai-in-safety-machine-learning-root-cause-analysis.html"
+        }
+    ]
+}</script>
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "AI in Safety: How Machine Learning Is Transforming Root Cause Analysis (2026)",
+    "description": "How AI and machine learning are changing incident investigation in 2026 \u2014 real applications, current limitations, and what it means for Safety Managers and HSE teams.",
+    "datePublished": "2026-05-05",
+    "dateModified": "2026-05-05",
+    "author": {
+        "@type": "Organization",
+        "name": "InvestigatePro",
+        "url": "https://investigatepro.app"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "InvestigatePro",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://investigatepro.app/assets/brand/og-image.png"
+        }
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://investigatepro.app/blog/ai-in-safety-machine-learning-root-cause-analysis.html"
     }
-    </script>
+}</script>
 </head>
-<body class="font-sans antialiased bg-navy-900 text-white">
+<body class="font-sans antialiased bg-cloud text-ink">
 
-    <nav class="fixed w-full bg-navy-900/95 backdrop-blur-sm z-50 border-b border-navy-700">
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-mist">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <a href="/" class="flex items-center">
-                    <picture><source srcset="../assets/logos/logo-03-on-dark.webp" type="image/webp"><img src="../assets/logos/logo-03-on-dark.png" alt="InvestigatePro" class="h-[60px] sm:h-[80px]"></picture>
+                    <picture><source srcset="../assets/brand/logo-horizontal.svg" type="image/webp"><img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="h-[60px] sm:h-[80px]"></picture>
                 </a>
                 <div class="flex items-center space-x-6">
-                    <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
-                    <a href="/#features" class="hidden sm:inline text-gray-300 hover:text-white transition-colors">Features</a>
-                    <a href="/#pricing" class="hidden sm:inline text-gray-300 hover:text-white transition-colors">Pricing</a>
-                    <a href="/#demo" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-5 py-2 rounded-lg font-semibold transition-colors">
+                    <a href="/blog/" class="text-slate hover:text-ink transition-colors">Blog</a>
+                    <a href="/#features" class="hidden sm:inline text-slate hover:text-ink transition-colors">Features</a>
+                    <a href="/#pricing" class="hidden sm:inline text-slate hover:text-ink transition-colors">Pricing</a>
+                    <a href="/#demo" class="bg-apex-500 hover:bg-apex-700 text-white px-5 py-2 rounded-lg font-semibold transition-colors">
                         Start Free Trial
                     </a>
                 </div>
@@ -95,38 +116,38 @@
     <article class="pt-32 pb-20">
         <div class="max-w-3xl mx-auto px-4 sm:px-6">
             
-            <nav class="text-sm text-gray-400 mb-8">
-                <a href="/" class="hover:text-cyan-500">Home</a>
+            <nav class="text-sm text-graphite mb-8">
+                <a href="/" class="hover:text-apex-700">Home</a>
                 <span class="mx-2">›</span>
-                <a href="/blog/" class="hover:text-cyan-500">Blog</a>
+                <a href="/blog/" class="hover:text-apex-700">Blog</a>
                 <span class="mx-2">›</span>
-                <span class="text-gray-300">AI in Safety: Machine Learning for RCA</span>
+                <span class="text-slate">AI in Safety: Machine Learning for RCA</span>
             </nav>
 
             <header class="mb-12">
                 <div class="flex items-center gap-3 mb-4">
-                    <span class="bg-cyan-500/20 text-cyan-500 px-3 py-1 rounded-full text-sm font-medium">AI & Technology</span>
-                    <span class="text-gray-400 text-sm">16 min read</span>
+                    <span class="bg-apex-500/10 text-apex-500 px-3 py-1 rounded-full text-sm font-medium">AI & Technology</span>
+                    <span class="text-graphite text-sm">16 min read</span>
                 </div>
                 <h1 class="text-4xl sm:text-5xl font-bold mb-6 leading-tight">AI in Safety: How Machine Learning Is Transforming Root Cause Analysis</h1>
-                <p class="text-xl text-gray-300 mb-6">Artificial intelligence is starting to change how safety teams investigate incidents and identify root causes. Here's what's real, what's hype, and what it means for Safety Managers in high-hazard industries right now.</p>
-                <div class="flex items-center text-gray-400 text-sm">
+                <p class="text-xl text-slate mb-6">Artificial intelligence is starting to change how safety teams investigate incidents and identify root causes. Here's what's real, what's hype, and what it means for Safety Managers in high-hazard industries right now.</p>
+                <div class="flex items-center text-graphite text-sm">
                     <span>Published May 5, 2026</span>
                     <span class="mx-3">•</span>
                     <span>Updated May 5, 2026</span>
                 </div>
             </header>
 
-            <div class="bg-navy-800 rounded-xl p-6 mb-12">
-                <h2 class="text-lg font-semibold mb-4 text-white" style="margin-top: 0;">Table of Contents</h2>
-                <ol class="text-gray-300 space-y-2">
-                    <li><a href="#why-now" class="hover:text-cyan-500">1. Why AI in Safety Is Accelerating Now</a></li>
-                    <li><a href="#real-applications" class="hover:text-cyan-500">2. Real AI Applications in Safety Management</a></li>
-                    <li><a href="#ai-investigation-coaching" class="hover:text-cyan-500">3. AI Investigation Coaching: The Biggest Near-Term Opportunity</a></li>
-                    <li><a href="#predictive-analytics" class="hover:text-cyan-500">4. Predictive Safety Analytics</a></li>
-                    <li><a href="#limitations" class="hover:text-cyan-500">5. What AI Cannot Do (Yet)</a></li>
-                    <li><a href="#for-safety-managers" class="hover:text-cyan-500">6. What This Means for Safety Managers Today</a></li>
-                    <li><a href="#choosing-ai-tools" class="hover:text-cyan-500">7. How to Evaluate AI Safety Tools</a></li>
+            <div class="bg-white rounded-xl p-6 mb-12">
+                <h2 class="text-lg font-semibold mb-4 text-ink" style="margin-top: 0;">Table of Contents</h2>
+                <ol class="text-slate space-y-2">
+                    <li><a href="#why-now" class="hover:text-apex-700">1. Why AI in Safety Is Accelerating Now</a></li>
+                    <li><a href="#real-applications" class="hover:text-apex-700">2. Real AI Applications in Safety Management</a></li>
+                    <li><a href="#ai-investigation-coaching" class="hover:text-apex-700">3. AI Investigation Coaching: The Biggest Near-Term Opportunity</a></li>
+                    <li><a href="#predictive-analytics" class="hover:text-apex-700">4. Predictive Safety Analytics</a></li>
+                    <li><a href="#limitations" class="hover:text-apex-700">5. What AI Cannot Do (Yet)</a></li>
+                    <li><a href="#for-safety-managers" class="hover:text-apex-700">6. What This Means for Safety Managers Today</a></li>
+                    <li><a href="#choosing-ai-tools" class="hover:text-apex-700">7. How to Evaluate AI Safety Tools</a></li>
                 </ol>
             </div>
 
@@ -258,22 +279,22 @@
 
                 <div class="reality-check not-prose">
                     <div class="label">⚠️ Reality Check</div>
-                    <p style="color:#d1d5db; margin:0; font-size:0.95rem; line-height:1.7;"><strong style="color:#fff;">AI cannot replace human judgement in serious incident investigations.</strong> An AI system can prompt an investigator to consider organizational factors, but it cannot interview a witness, assess credibility, or make the nuanced professional judgement about causation that an experienced investigator makes. Human expertise is still the irreplaceable core of investigation quality.</p>
+                    <p style="color:#37474F; margin:0; font-size:0.95rem; line-height:1.7;"><strong style="color:#112D3C;">AI cannot replace human judgement in serious incident investigations.</strong> An AI system can prompt an investigator to consider organizational factors, but it cannot interview a witness, assess credibility, or make the nuanced professional judgement about causation that an experienced investigator makes. Human expertise is still the irreplaceable core of investigation quality.</p>
                 </div>
 
                 <div class="reality-check not-prose">
                     <div class="label">⚠️ Reality Check</div>
-                    <p style="color:#d1d5db; margin:0; font-size:0.95rem; line-height:1.7;"><strong style="color:#fff;">AI can't fix poor investigation data inputs.</strong> Garbage in, garbage out applies fully. If investigations are being closed quickly with shallow causal factors to meet reporting deadlines, AI trend analysis of those investigations will produce shallow insights. AI amplifies quality, but can't create it from nothing.</p>
+                    <p style="color:#37474F; margin:0; font-size:0.95rem; line-height:1.7;"><strong style="color:#112D3C;">AI can't fix poor investigation data inputs.</strong> Garbage in, garbage out applies fully. If investigations are being closed quickly with shallow causal factors to meet reporting deadlines, AI trend analysis of those investigations will produce shallow insights. AI amplifies quality, but can't create it from nothing.</p>
                 </div>
 
                 <div class="reality-check not-prose">
                     <div class="label">⚠️ Reality Check</div>
-                    <p style="color:#d1d5db; margin:0; font-size:0.95rem; line-height:1.7;"><strong style="color:#fff;">Computer vision in complex field environments remains hard.</strong> PPE detection in a controlled warehouse environment works reasonably well. On a dynamic underground mine or a complex construction site with variable lighting, dust, multiple trades, and unpredictable human movement, false positive rates and coverage gaps limit practical utility today.</p>
+                    <p style="color:#37474F; margin:0; font-size:0.95rem; line-height:1.7;"><strong style="color:#112D3C;">Computer vision in complex field environments remains hard.</strong> PPE detection in a controlled warehouse environment works reasonably well. On a dynamic underground mine or a complex construction site with variable lighting, dust, multiple trades, and unpredictable human movement, false positive rates and coverage gaps limit practical utility today.</p>
                 </div>
 
                 <div class="reality-check not-prose">
                     <div class="label">⚠️ Reality Check</div>
-                    <p style="color:#d1d5db; margin:0; font-size:0.95rem; line-height:1.7;"><strong style="color:#fff;">Predictive models need substantial data to be reliable.</strong> A model trained on 50 incidents will produce unreliable predictions. Organisations without years of consistently coded incident data should focus on building that data quality before investing in advanced predictive analytics.</p>
+                    <p style="color:#37474F; margin:0; font-size:0.95rem; line-height:1.7;"><strong style="color:#112D3C;">Predictive models need substantial data to be reliable.</strong> A model trained on 50 incidents will produce unreliable predictions. Organisations without years of consistently coded incident data should focus on building that data quality before investing in advanced predictive analytics.</p>
                 </div>
 
                 <h2 id="for-safety-managers">6. What This Means for Safety Managers Today</h2>
@@ -319,44 +340,44 @@
                 <p>To understand the ICAM methodology that our AI coaching is built around, read our <a href="/blog/icam-investigation-guide.html">Complete ICAM Investigation Guide</a>. For more on how AI applies specifically to mining operations, see our <a href="/blog/mining-incident-investigation-guide.html">Mining Incident Investigation Guide</a>.</p>
 
                 <!-- CTA Block -->
-                <div class="bg-navy-800 rounded-xl p-8 mt-12 not-prose">
-                    <h3 class="font-heading text-2xl font-bold text-white mb-4">AI-Powered Investigation, Built for Your Industry</h3>
-                    <p class="text-gray-300 mb-6">
+                <div class="bg-white rounded-xl p-8 mt-12 not-prose">
+                    <h3 class="font-heading text-2xl font-bold text-ink mb-4">AI-Powered Investigation, Built for Your Industry</h3>
+                    <p class="text-slate mb-6">
                         InvestigatePro combines ICAM methodology with AI coaching that raises the quality floor across your investigation team — so every investigator consistently identifies organizational factors and produces substantive corrective actions. Free 14-day trial.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="/#demo" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-6 py-3 rounded-lg font-semibold transition-colors text-center">Start Free Trial</a>
-                        <a href="https://cal.com/devon-turner-investigatepro/15min" class="border border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 px-6 py-3 rounded-lg font-semibold transition-colors text-center">Book a Demo</a>
+                        <a href="/#demo" class="bg-apex-500 hover:bg-apex-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center">Start Free Trial</a>
+                        <a href="https://cal.com/devon-turner-investigatepro/15min" class="border border-apex-500 text-apex-500 hover:bg-apex-500/10 px-6 py-3 rounded-lg font-semibold transition-colors text-center">Book a Demo</a>
                     </div>
                 </div>
 
                 <!-- Related Articles -->
-                <h3 class="text-xl font-semibold text-white mt-12 mb-6">Related Articles</h3>
+                <h3 class="text-xl font-semibold text-ink mt-12 mb-6">Related Articles</h3>
                 
                 <div class="grid md:grid-cols-2 gap-6 not-prose">
-                    <a href="/blog/icam-investigation-guide.html" class="block bg-navy-800 rounded-lg p-6 border border-navy-700 hover:border-cyan-500/50 transition-all">
-                        <h4 class="font-semibold text-white mb-2">The Complete ICAM Investigation Guide</h4>
-                        <p class="text-gray-400 text-sm">The methodology our AI coaching is built around — explained in full.</p>
+                    <a href="/blog/icam-investigation-guide.html" class="block bg-white rounded-lg p-6 border border-mist hover:border-apex-500 transition-all">
+                        <h4 class="font-semibold text-ink mb-2">The Complete ICAM Investigation Guide</h4>
+                        <p class="text-graphite text-sm">The methodology our AI coaching is built around — explained in full.</p>
                     </a>
-                    <a href="/blog/ai-safety-management.html" class="block bg-navy-800 rounded-lg p-6 border border-navy-700 hover:border-cyan-500/50 transition-all">
-                        <h4 class="font-semibold text-white mb-2">AI in Safety Management</h4>
-                        <p class="text-gray-400 text-sm">How AI is changing safety management systems and what it means for HSE professionals.</p>
+                    <a href="/blog/ai-safety-management.html" class="block bg-white rounded-lg p-6 border border-mist hover:border-apex-500 transition-all">
+                        <h4 class="font-semibold text-ink mb-2">AI in Safety Management</h4>
+                        <p class="text-graphite text-sm">How AI is changing safety management systems and what it means for HSE professionals.</p>
                     </a>
-                    <a href="/blog/mining-incident-investigation-guide.html" class="block bg-navy-800 rounded-lg p-6 border border-navy-700 hover:border-cyan-500/50 transition-all">
-                        <h4 class="font-semibold text-white mb-2">Mining Incident Investigation Guide</h4>
-                        <p class="text-gray-400 text-sm">AI-assisted investigation applied to mining's unique hazards and challenges.</p>
+                    <a href="/blog/mining-incident-investigation-guide.html" class="block bg-white rounded-lg p-6 border border-mist hover:border-apex-500 transition-all">
+                        <h4 class="font-semibold text-ink mb-2">Mining Incident Investigation Guide</h4>
+                        <p class="text-graphite text-sm">AI-assisted investigation applied to mining's unique hazards and challenges.</p>
                     </a>
-                    <a href="/blog/root-cause-analysis-guide.html" class="block bg-navy-800 rounded-lg p-6 border border-navy-700 hover:border-cyan-500/50 transition-all">
-                        <h4 class="font-semibold text-white mb-2">Root Cause Analysis: The Complete Guide</h4>
-                        <p class="text-gray-400 text-sm">The RCA methods AI is augmenting — explained for safety professionals.</p>
+                    <a href="/blog/root-cause-analysis-guide.html" class="block bg-white rounded-lg p-6 border border-mist hover:border-apex-500 transition-all">
+                        <h4 class="font-semibold text-ink mb-2">Root Cause Analysis: The Complete Guide</h4>
+                        <p class="text-graphite text-sm">The RCA methods AI is augmenting — explained for safety professionals.</p>
                     </a>
                 </div>
 
                 <div class="mt-8 not-prose">
-                    <a href="/rca-template-pack.html" class="block bg-navy-800 rounded-xl p-6 border border-cyan-500/30 hover:border-cyan-500/60 transition-all text-center">
+                    <a href="/rca-template-pack.html" class="block bg-white rounded-xl p-6 border border-apex-500/30 hover:border-apex-500 transition-all text-center">
                         <div class="text-2xl mb-2">📋</div>
-                        <h4 class="font-semibold text-white mb-1">Free RCA Template Pack — 4 Templates</h4>
-                        <p class="text-gray-400 text-sm">5 Whys · Fishbone Diagram · ICAM-aligned RCA · Investigation Report. Ready to use before AI tools are in place.</p>
+                        <h4 class="font-semibold text-ink mb-1">Free RCA Template Pack — 4 Templates</h4>
+                        <p class="text-graphite text-sm">5 Whys · Fishbone Diagram · ICAM-aligned RCA · Investigation Report. Ready to use before AI tools are in place.</p>
                     </a>
                 </div>
 
@@ -364,19 +385,19 @@
         </div>
     </article>
 
-    <footer class="bg-navy-900 border-t border-navy-700 py-12">
+    <footer class="bg-cloud border-t border-mist py-12">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <a href="/" class="inline-flex items-center space-x-2 mb-6">
-                <img src="../assets/logos/logo-03-icon-only-optimized.png" alt="InvestigatePro" class="h-8 w-8" loading="lazy">
-                <span class="font-heading font-bold text-xl text-white">InvestigatePro</span>
+                <img src="../assets/brand/icon-color.svg" alt="InvestigatePro" class="h-8 w-8" loading="lazy">
+                <span class="font-heading font-bold text-xl text-ink">InvestigatePro</span>
             </a>
-            <p class="text-gray-400 text-sm">AI-powered incident investigation software using ICAM methodology.</p>
-            <div class="mt-6 flex justify-center space-x-6 text-sm text-gray-500">
-                <a href="/privacy.html" class="hover:text-gray-300">Privacy</a>
-                <a href="/terms.html" class="hover:text-gray-300">Terms</a>
-                <a href="/security.html" class="hover:text-gray-300">Security</a>
+            <p class="text-graphite text-sm">AI-powered incident investigation software using ICAM methodology.</p>
+            <div class="mt-6 flex justify-center space-x-6 text-sm text-graphite">
+                <a href="/privacy.html" class="hover:text-slate">Privacy</a>
+                <a href="/terms.html" class="hover:text-slate">Terms</a>
+                <a href="/security.html" class="hover:text-slate">Security</a>
             </div>
-            <p class="mt-6 text-gray-600 text-xs">© 2026 InvestigatePro. All rights reserved.</p>
+            <p class="mt-6 text-graphite text-xs">© 2026 InvestigatePro. All rights reserved.</p>
         </div>
     </footer>
 </body>

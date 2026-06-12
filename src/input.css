@@ -1,25 +1,54 @@
 @import "tailwindcss";
 
-/* Custom theme configuration */
+/* InvestigatePro Brand v1.0 — light theme (Cloud surfaces, Apex Teal primary) */
 @theme {
-  --font-family-heading: 'Lexend', system-ui, sans-serif;
+  --font-family-heading: 'Montserrat', system-ui, sans-serif;
   --font-family-sans: 'Inter', system-ui, sans-serif;
-  
-  /* Navy colors */
-  --color-navy-950: #080E1F;
-  --color-navy-900: #0C142E;
-  --color-navy-800: #0F1A3A;
-  --color-navy-700: #1A2744;
-  --color-navy-600: #2A3A5C;
-  --color-navy-500: #3D4F70;
-  
-  /* Cyan accent */
-  --color-cyan-500: #76DCEC;
-  --color-cyan-400: #88E0EE;
-  --color-cyan-300: #A8EAF3;
-  --color-cyan-200: #C8F1F8;
-  --color-cyan-100: #E8F9FC;
-  
+  --font-heading: 'Montserrat', system-ui, sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  /* Neutrals */
+  --color-cloud: #F4F7F9;
+  --color-mist: #D9E2E8;
+  --color-ink: #112D3C;
+  --color-slate: #37474F;
+  --color-graphite: #5A6B76;
+
+  /* Apex Teal (primary) */
+  --color-apex-50: #EBF1F0;
+  --color-apex-100: #CCDBD9;
+  --color-apex-300: #739D96;
+  --color-apex-500: #004D40;
+  --color-apex-600: #00695C;
+  --color-apex-700: #003A30;
+  --color-apex-900: #002620;
+
+  /* Neural Blue */
+  --color-neural-50: #EDF7FE;
+  --color-neural-100: #D3EAFD;
+  --color-neural-300: #85C5F8;
+  --color-neural-500: #2196F3;
+  --color-neural-700: #1970B6;
+  --color-neural-900: #104B7A;
+
+  /* Growth Green */
+  --color-growth-50: #F1F9F1;
+  --color-growth-100: #DBEFDC;
+  --color-growth-300: #9DD39F;
+  --color-growth-500: #4CAF50;
+  --color-growth-700: #39833C;
+  --color-growth-900: #265828;
+
+  /* Signal Mint — dark backgrounds only */
+  --color-mint: #64FFDA;
+
+  /* Semantic */
+  --color-success: #4CAF50;
+  --color-info: #2196F3;
+  --color-warning: #FFB300;
+  --color-warning-700: #9A6B00;
+  --color-critical: #E53935;
+
   /* Animations */
   --animate-fade-in: fadeIn 0.5s ease-out;
   --animate-slide-up: slideUp 0.5s ease-out;
@@ -39,37 +68,41 @@
 /* Base styles */
 html {
   scroll-behavior: smooth;
+  color-scheme: light;
 }
 
 body {
   font-family: var(--font-family-sans);
+  color: var(--color-ink);
+  background-color: var(--color-cloud);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-heading);
+  color: var(--color-ink);
 }
 
 /* Component classes */
 .btn-primary {
-  background-color: var(--color-cyan-500);
-  color: var(--color-navy-900);
+  background-color: var(--color-apex-500);
+  color: #FFFFFF;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   font-weight: 600;
   transition: all 0.2s;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  box-shadow: 0 10px 15px -3px rgb(0 38 32 / 0.15);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-cyan-400);
+  background-color: var(--color-apex-700);
   transform: translateY(-2px);
 }
 
 .btn-secondary {
-  border: 1px solid var(--color-cyan-500);
-  color: var(--color-cyan-500);
+  border: 1px solid var(--color-apex-500);
+  color: var(--color-apex-600);
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   font-weight: 600;
@@ -77,18 +110,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-secondary:hover {
-  background-color: rgb(118 220 236 / 0.1);
+  background-color: var(--color-apex-50);
 }
 
 .card {
-  background-color: var(--color-navy-800);
+  background-color: #FFFFFF;
   border-radius: 0.75rem;
-  border: 1px solid var(--color-navy-600);
+  border: 1px solid var(--color-mist);
   padding: 1.5rem;
 }
 
 .gradient-text {
-  background: linear-gradient(to right, var(--color-cyan-400), var(--color-cyan-300));
+  background: linear-gradient(to right, var(--color-apex-600), var(--color-apex-500));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

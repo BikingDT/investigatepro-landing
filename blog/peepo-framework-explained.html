@@ -6,7 +6,7 @@
     <title>PEEPO Framework Explained: The Heart of ICAM Investigation | InvestigatePro</title>
     <meta name="description" content="Learn the PEEPO framework for incident investigation. People, Environment, Equipment, Procedures, Organization — the systematic approach to finding root causes.">
     <meta name="keywords" content="PEEPO framework, PEEPO analysis, ICAM PEEPO, incident investigation framework, root cause analysis">
-    <link rel="icon" type="image/png" href="../assets/logos/logo-03-icon-only-optimized.png">
+    <link rel="icon" type="image/png" href="../assets/brand/favicon-32.png">
     <link rel="canonical" href="https://investigatepro.app/blog/peepo-framework-explained.html">
     
     <!-- Open Graph -->
@@ -14,7 +14,7 @@
     <meta property="og:url" content="https://investigatepro.app/blog/peepo-framework-explained.html">
     <meta property="og:title" content="PEEPO Framework Explained: The Heart of ICAM Investigation">
     <meta property="og:description" content="Master the PEEPO framework — People, Environment, Equipment, Procedures, Organization — for systematic root cause analysis.">
-    <meta property="og:image" content="https://investigatepro.app/assets/logos/logo-03-on-dark.png">
+    <meta property="og:image" content="https://investigatepro.app/assets/brand/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="article:published_time" content="2026-03-02">
     
@@ -25,75 +25,77 @@
     <link rel="preload" href="../assets/css/styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="../assets/css/styles.min.css"></noscript>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
     
     <style>
-        .prose h2 { color: #76DCEC; margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.75rem; font-weight: 700; }
-        .prose h3 { color: #fff; margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.25rem; font-weight: 600; }
-        .prose p { color: #d1d5db; margin-bottom: 1.25rem; line-height: 1.8; }
-        .prose ul, .prose ol { color: #d1d5db; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .prose h2 { color: #004D40; margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.75rem; font-weight: 700; }
+        .prose h3 { color: #112D3C; margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.25rem; font-weight: 600; }
+        .prose p { color: #37474F; margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose ul, .prose ol { color: #37474F; margin-bottom: 1.25rem; padding-left: 1.5rem; }
         .prose li { margin-bottom: 0.5rem; line-height: 1.7; }
-        .prose strong { color: #fff; }
-        .prose a { color: #76DCEC; text-decoration: underline; }
-        .prose blockquote { border-left: 4px solid #76DCEC; padding-left: 1rem; margin: 1.5rem 0; font-style: italic; color: #9ca3af; }
-        .peepo-card { background: linear-gradient(135deg, #1A2744 0%, #0F1A3A 100%); }
+        .prose strong { color: #112D3C; }
+        .prose a { color: #004D40; text-decoration: underline; }
+        .prose blockquote { border-left: 4px solid #004D40; padding-left: 1rem; margin: 1.5rem 0; font-style: italic; color: #5A6B76; }
+        .peepo-card { background: linear-gradient(135deg, #FFFFFF 0%, #FFFFFF 100%); }
     </style>
 
     <!-- Schema.org -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "PEEPO Framework Explained: The Heart of ICAM Investigation",
-        "description": "Master the PEEPO framework for systematic root cause analysis in incident investigations.",
-        "author": {"@type": "Organization", "name": "InvestigatePro"},
-        "publisher": {"@type": "Organization", "name": "InvestigatePro"},
-        "datePublished": "2026-03-02"
-    }
-    </script>
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "PEEPO Framework Explained: The Heart of ICAM Investigation",
+    "description": "Master the PEEPO framework for systematic root cause analysis in incident investigations.",
+    "author": {
+        "@type": "Organization",
+        "name": "InvestigatePro"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "InvestigatePro"
+    },
+    "datePublished": "2026-03-02"
+}</script>
 
     <!-- Structured Data: Breadcrumb + Article -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://investigatepro.app/"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Blog",
-                "item": "https://investigatepro.app/blog/"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "PEEPO Framework Explained: The Heart of ICAM Investigation",
-                "item": "https://investigatepro.app/blog/peepo-framework-explained.html"
-            }
-        ]
-    }
-    </script>
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://investigatepro.app/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://investigatepro.app/blog/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "PEEPO Framework Explained: The Heart of ICAM Investigation",
+            "item": "https://investigatepro.app/blog/peepo-framework-explained.html"
+        }
+    ]
+}</script>
 </head>
-<body class="font-sans antialiased bg-navy-900 text-white">
+<body class="font-sans antialiased bg-cloud text-ink">
 
     <!-- Navigation -->
-    <nav class="fixed w-full bg-navy-900/95 backdrop-blur-sm z-50 border-b border-navy-700">
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-mist">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <a href="/" class="flex items-center">
-                    <picture><source srcset="../assets/logos/logo-03-on-dark.webp" type="image/webp"><img src="../assets/logos/logo-03-on-dark.png" alt="InvestigatePro" class="h-[60px] sm:h-[80px]"></picture>
+                    <picture><source srcset="../assets/brand/logo-horizontal.svg" type="image/webp"><img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="h-[60px] sm:h-[80px]"></picture>
                 </a>
                 <div class="flex items-center space-x-6">
-                    <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
-                    <a href="/#features" class="hidden sm:inline text-gray-300 hover:text-white transition-colors">Features</a>
-                    <a href="/#demo" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-5 py-2 rounded-lg font-semibold transition-colors">
+                    <a href="/blog/" class="text-slate hover:text-ink transition-colors">Blog</a>
+                    <a href="/#features" class="hidden sm:inline text-slate hover:text-ink transition-colors">Features</a>
+                    <a href="/#demo" class="bg-apex-500 hover:bg-apex-700 text-white px-5 py-2 rounded-lg font-semibold transition-colors">
                         Start Free Trial
                     </a>
                 </div>
@@ -106,23 +108,23 @@
         <div class="max-w-3xl mx-auto px-4 sm:px-6">
             
             <!-- Breadcrumb -->
-            <nav class="text-sm text-gray-400 mb-8">
-                <a href="/" class="hover:text-cyan-500">Home</a>
+            <nav class="text-sm text-graphite mb-8">
+                <a href="/" class="hover:text-apex-700">Home</a>
                 <span class="mx-2">›</span>
-                <a href="/blog/" class="hover:text-cyan-500">Blog</a>
+                <a href="/blog/" class="hover:text-apex-700">Blog</a>
                 <span class="mx-2">›</span>
-                <span class="text-gray-300">PEEPO Framework</span>
+                <span class="text-slate">PEEPO Framework</span>
             </nav>
 
             <!-- Header -->
             <header class="mb-12">
                 <div class="flex items-center gap-3 mb-4">
-                    <span class="bg-cyan-500/20 text-cyan-500 px-3 py-1 rounded-full text-sm font-medium">Methodology</span>
-                    <span class="text-gray-400 text-sm">10 min read</span>
+                    <span class="bg-apex-500/10 text-apex-500 px-3 py-1 rounded-full text-sm font-medium">Methodology</span>
+                    <span class="text-graphite text-sm">10 min read</span>
                 </div>
                 <h1 class="text-4xl sm:text-5xl font-bold mb-6 leading-tight">PEEPO Framework Explained: The Heart of ICAM Investigation</h1>
-                <p class="text-xl text-gray-300 mb-6">The PEEPO framework is your systematic lens for analyzing any workplace incident. Learn how to use it to uncover the contributing factors others miss.</p>
-                <div class="flex items-center text-gray-400 text-sm">
+                <p class="text-xl text-slate mb-6">The PEEPO framework is your systematic lens for analyzing any workplace incident. Learn how to use it to uncover the contributing factors others miss.</p>
+                <div class="flex items-center text-graphite text-sm">
                     <span>Published March 2, 2026</span>
                 </div>
             </header>
@@ -130,24 +132,24 @@
             <!-- Visual Overview -->
             <div class="grid grid-cols-5 gap-2 mb-12">
                 <div class="peepo-card rounded-lg p-4 text-center">
-                    <div class="text-3xl font-bold text-cyan-500">P</div>
-                    <div class="text-xs text-gray-400 mt-1">People</div>
+                    <div class="text-3xl font-bold text-apex-500">P</div>
+                    <div class="text-xs text-graphite mt-1">People</div>
                 </div>
                 <div class="peepo-card rounded-lg p-4 text-center">
-                    <div class="text-3xl font-bold text-cyan-500">E</div>
-                    <div class="text-xs text-gray-400 mt-1">Environment</div>
+                    <div class="text-3xl font-bold text-apex-500">E</div>
+                    <div class="text-xs text-graphite mt-1">Environment</div>
                 </div>
                 <div class="peepo-card rounded-lg p-4 text-center">
-                    <div class="text-3xl font-bold text-cyan-500">E</div>
-                    <div class="text-xs text-gray-400 mt-1">Equipment</div>
+                    <div class="text-3xl font-bold text-apex-500">E</div>
+                    <div class="text-xs text-graphite mt-1">Equipment</div>
                 </div>
                 <div class="peepo-card rounded-lg p-4 text-center">
-                    <div class="text-3xl font-bold text-cyan-500">P</div>
-                    <div class="text-xs text-gray-400 mt-1">Procedures</div>
+                    <div class="text-3xl font-bold text-apex-500">P</div>
+                    <div class="text-xs text-graphite mt-1">Procedures</div>
                 </div>
                 <div class="peepo-card rounded-lg p-4 text-center">
-                    <div class="text-3xl font-bold text-cyan-500">O</div>
-                    <div class="text-xs text-gray-400 mt-1">Organization</div>
+                    <div class="text-3xl font-bold text-apex-500">O</div>
+                    <div class="text-xs text-graphite mt-1">Organization</div>
                 </div>
             </div>
 
@@ -207,8 +209,8 @@
                     <li><strong>Handover:</strong> Was shift/task handover adequate?</li>
                 </ul>
                 
-                <div class="bg-navy-800 rounded-lg p-4 my-6">
-                    <p class="text-sm text-gray-300 mb-0"><strong>Remember:</strong> People factors explain <em>how</em> the incident happened, but rarely <em>why</em> it was possible. Always dig deeper into Equipment, Procedures, and Organization.</p>
+                <div class="bg-white rounded-lg p-4 my-6">
+                    <p class="text-sm text-slate mb-0"><strong>Remember:</strong> People factors explain <em>how</em> the incident happened, but rarely <em>why</em> it was possible. Always dig deeper into Equipment, Procedures, and Organization.</p>
                 </div>
 
                 <h2>E — Environment: The Physical Context</h2>
@@ -317,8 +319,8 @@
                     <li><strong>Enforced:</strong> Are deviations addressed?</li>
                 </ul>
                 
-                <div class="bg-navy-800 rounded-lg p-4 my-6">
-                    <p class="text-sm text-gray-300 mb-0"><strong>Key insight:</strong> If workers routinely deviate from procedures, the procedure is the problem, not the workers. Either the procedure is impractical, or there's pressure to shortcut. Both are organizational issues.</p>
+                <div class="bg-white rounded-lg p-4 my-6">
+                    <p class="text-sm text-slate mb-0"><strong>Key insight:</strong> If workers routinely deviate from procedures, the procedure is the problem, not the workers. Either the procedure is impractical, or there's pressure to shortcut. Both are organizational issues.</p>
                 </div>
 
                 <h2>O — Organization: The Root of Most Causes</h2>
@@ -397,10 +399,10 @@
                     <li><strong>Weak corrective actions:</strong> Use the hierarchy of controls — don't just retrain people.</li>
                 </ul>
 
-                <div class="bg-navy-700 rounded-xl p-6 my-8">
+                <div class="bg-cloud rounded-xl p-6 my-8">
                     <h3 style="margin-top: 0;">PEEPO Analysis Made Easy</h3>
                     <p class="mb-4">InvestigatePro guides you through PEEPO analysis with AI-powered prompts that help you identify factors you might miss. No more staring at a blank chart wondering what to write.</p>
-                    <a href="/#demo" class="inline-block bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-6 py-3 rounded-lg font-semibold transition-colors">Try InvestigatePro Free →</a>
+                    <a href="/#demo" class="inline-block bg-apex-500 hover:bg-apex-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">Try InvestigatePro Free →</a>
                 </div>
 
                 <h2>Conclusion</h2>
@@ -414,21 +416,21 @@
             </div>
 
             <!-- Free Tool Callout -->
-            <div style="background:#1a2544;border:1px solid rgba(118,220,236,0.25);border-radius:12px;padding:28px;margin:32px 0;">
-                <p style="color:#76DCEC;font-weight:700;margin:0 0 12px;font-size:0.9rem;">🛠 FREE INTERACTIVE TOOL</p>
-                <h3 style="color:#fff;font-size:1.1rem;margin:0 0 8px;">PEEPO Chart Builder</h3>
-                <p style="color:#94a3b8;font-size:0.9rem;margin:0 0 16px;">Use our free browser-based PEEPO Chart Builder to map all contributing factors for any incident. Includes guided prompts for each category, a printable summary chart, and factor count breakdown.</p>
-                <a href="/peepo-chart-builder.html" style="display:inline-block;background:#76DCEC;color:#0C142E;padding:10px 20px;border-radius:8px;font-weight:700;text-decoration:none;font-size:0.9rem;">Open PEEPO Chart Builder →</a>
+            <div style="background:#FFFFFF;border:1px solid rgba(0,77,64,0.25);border-radius:12px;padding:28px;margin:32px 0;">
+                <p style="color:#004D40;font-weight:700;margin:0 0 12px;font-size:0.9rem;">🛠 FREE INTERACTIVE TOOL</p>
+                <h3 style="color:#112D3C;font-size:1.1rem;margin:0 0 8px;">PEEPO Chart Builder</h3>
+                <p style="color:#5A6B76;font-size:0.9rem;margin:0 0 16px;">Use our free browser-based PEEPO Chart Builder to map all contributing factors for any incident. Includes guided prompts for each category, a printable summary chart, and factor count breakdown.</p>
+                <a href="/peepo-chart-builder.html" style="display:inline-block;background:#004D40;color:#FFFFFF;padding:10px 20px;border-radius:8px;font-weight:700;text-decoration:none;font-size:0.9rem;">Open PEEPO Chart Builder →</a>
             </div>
 
             <!-- CTA -->
-            <div class="mt-16 pt-8 border-t border-navy-700">
-                <div class="bg-navy-800 rounded-xl p-8">
+            <div class="mt-16 pt-8 border-t border-mist">
+                <div class="bg-white rounded-xl p-8">
                     <h3 class="text-xl font-semibold mb-3">Master PEEPO Analysis</h3>
-                    <p class="text-gray-300 mb-6">InvestigatePro's AI coach guides you through each PEEPO category with smart prompts and suggestions based on your incident type.</p>
+                    <p class="text-slate mb-6">InvestigatePro's AI coach guides you through each PEEPO category with smart prompts and suggestions based on your incident type.</p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="/#demo" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-6 py-3 rounded-lg font-semibold transition-colors text-center">Start Free Trial</a>
-                        <a href="/blog/icam-investigation-guide.html" class="border border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 px-6 py-3 rounded-lg font-semibold transition-colors text-center">Read Full ICAM Guide</a>
+                        <a href="/#demo" class="bg-apex-500 hover:bg-apex-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center">Start Free Trial</a>
+                        <a href="/blog/icam-investigation-guide.html" class="border border-apex-500 text-apex-500 hover:bg-apex-500/10 px-6 py-3 rounded-lg font-semibold transition-colors text-center">Read Full ICAM Guide</a>
                     </div>
                 </div>
             </div>
@@ -437,20 +439,20 @@
     </article>
 
     <!-- Footer -->
-    <footer class="bg-navy-800 border-t border-navy-700 py-12">
+    <footer class="bg-white border-t border-mist py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-6 md:mb-0">
-                    <picture><source srcset="../assets/logos/logo-03-on-dark.webp" type="image/webp"><img src="../assets/logos/logo-03-on-dark.png" alt="InvestigatePro" class="h-12" loading="lazy"></picture>
+                    <picture><source srcset="../assets/brand/logo-horizontal.svg" type="image/webp"><img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="h-12" loading="lazy"></picture>
                 </div>
-                <div class="flex flex-wrap justify-center gap-6 text-gray-400 text-sm">
-                    <a href="/blog/" class="hover:text-white">Blog</a>
-                    <a href="/privacy.html" class="hover:text-white">Privacy</a>
-                    <a href="/terms.html" class="hover:text-white">Terms</a>
-                    <a href="mailto:hello@investigatepro.app" class="hover:text-white">Contact</a>
+                <div class="flex flex-wrap justify-center gap-6 text-graphite text-sm">
+                    <a href="/blog/" class="hover:text-ink">Blog</a>
+                    <a href="/privacy.html" class="hover:text-ink">Privacy</a>
+                    <a href="/terms.html" class="hover:text-ink">Terms</a>
+                    <a href="mailto:hello@investigatepro.app" class="hover:text-ink">Contact</a>
                 </div>
             </div>
-            <div class="mt-8 pt-8 border-t border-navy-700 text-center text-gray-500 text-sm">
+            <div class="mt-8 pt-8 border-t border-mist text-center text-graphite text-sm">
                 © 2026 InvestigatePro. All rights reserved.
             </div>
         </div>

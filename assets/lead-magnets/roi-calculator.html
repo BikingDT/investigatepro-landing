@@ -6,20 +6,20 @@
     <title>Investigation ROI Calculator | InvestigatePro</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --navy: #0C142E;
-            --navy-light: #1a2744;
-            --cyan: #76DCEC;
-            --cyan-dark: #5bc4d4;
+            --navy: #F4F7F9;
+            --navy-light: #FFFFFF;
+            --cyan: #004D40;
+            --cyan-dark: #004D40;
             --white: #FFFFFF;
             --gray-100: #f7f8fa;
-            --gray-200: #e5e7eb;
-            --gray-400: #9ca3af;
-            --gray-600: #4b5563;
-            --green: #10b981;
-            --red: #ef4444;
+            --gray-200: #D9E2E8;
+            --gray-400: #5A6B76;
+            --gray-600: #37474F;
+            --green: #4CAF50;
+            --red: #E53935;
         }
 
         * {
@@ -133,7 +133,7 @@
         input[type="number"]:focus, select:focus {
             outline: none;
             border-color: var(--cyan);
-            box-shadow: 0 0 0 3px rgba(118, 220, 236, 0.2);
+            box-shadow: 0 0 0 3px rgba(0,77,64,0.2);
         }
 
         input[type="number"]::placeholder {
@@ -144,7 +144,7 @@
             background: linear-gradient(135deg, var(--navy-light) 0%, #162040 100%);
             border-radius: 16px;
             padding: 2rem;
-            border: 1px solid rgba(118, 220, 236, 0.2);
+            border: 1px solid rgba(0,77,64,0.2);
         }
 
         .results-grid {
@@ -155,7 +155,7 @@
         }
 
         .result-card {
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(17,45,60,0.06);
             border-radius: 12px;
             padding: 1.25rem;
             text-align: center;
@@ -200,7 +200,7 @@
         }
 
         .comparison-card {
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(17,45,60,0.08);
             border-radius: 12px;
             padding: 1.5rem;
         }
@@ -231,7 +231,7 @@
             display: flex;
             justify-content: space-between;
             padding: 0.5rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(17,45,60,0.06);
             font-size: 0.875rem;
         }
 
@@ -251,7 +251,7 @@
             text-align: center;
             margin-top: 2rem;
             padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(17,45,60,0.06);
         }
 
         .cta-text {

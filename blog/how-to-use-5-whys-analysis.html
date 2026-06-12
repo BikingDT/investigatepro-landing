@@ -6,7 +6,7 @@
     <title>How to Use 5 Whys Analysis: Step-by-Step Guide with Examples (2026) | InvestigatePro</title>
     <meta name="description" content="Learn how to use 5 Whys root cause analysis with real examples. Step-by-step guide covering when to use it, how to avoid common mistakes, and when ICAM or fishbone is a better choice.">
     <meta name="keywords" content="5 whys analysis, 5 whys root cause analysis, how to use 5 whys, five whys method, 5 whys examples, root cause analysis technique, incident investigation method">
-    <link rel="icon" type="image/png" href="../assets/logos/logo-03-icon-only-optimized.png">
+    <link rel="icon" type="image/png" href="../assets/brand/favicon-32.png">
     <link rel="canonical" href="https://investigatepro.app/blog/how-to-use-5-whys-analysis.html">
     
     <!-- Open Graph -->
@@ -14,7 +14,7 @@
     <meta property="og:url" content="https://investigatepro.app/blog/how-to-use-5-whys-analysis.html">
     <meta property="og:title" content="How to Use 5 Whys Analysis: Step-by-Step Guide with Examples (2026)">
     <meta property="og:description" content="Master the 5 Whys root cause analysis technique with real-world examples, a step-by-step process, and guidance on when to use a deeper method instead.">
-    <meta property="og:image" content="https://investigatepro.app/assets/logos/logo-03-on-dark.png">
+    <meta property="og:image" content="https://investigatepro.app/assets/brand/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="article:published_time" content="2026-05-05">
     <meta property="article:author" content="InvestigatePro">
@@ -23,65 +23,86 @@
     <link rel="preload" href="../assets/css/styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="../assets/css/styles.min.css"></noscript>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
     
     <style>
-        .prose h2 { color: #76DCEC; margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.75rem; font-weight: 700; }
-        .prose h3 { color: #fff; margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.25rem; font-weight: 600; }
-        .prose p { color: #d1d5db; margin-bottom: 1.25rem; line-height: 1.8; }
-        .prose ul, .prose ol { color: #d1d5db; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .prose h2 { color: #004D40; margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.75rem; font-weight: 700; }
+        .prose h3 { color: #112D3C; margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.25rem; font-weight: 600; }
+        .prose p { color: #37474F; margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose ul, .prose ol { color: #37474F; margin-bottom: 1.25rem; padding-left: 1.5rem; }
         .prose li { margin-bottom: 0.5rem; line-height: 1.7; }
-        .prose strong { color: #fff; }
-        .prose a { color: #76DCEC; text-decoration: underline; }
-        .prose blockquote { border-left: 4px solid #76DCEC; padding-left: 1rem; margin: 1.5rem 0; font-style: italic; color: #9ca3af; }
-        .why-chain { background: #0f1a2e; border-left: 3px solid #76DCEC; border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; margin: 0.5rem 0; }
-        .why-label { color: #76DCEC; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
-        .why-text { color: #e5e7eb; margin-top: 0.25rem; }
+        .prose strong { color: #112D3C; }
+        .prose a { color: #004D40; text-decoration: underline; }
+        .prose blockquote { border-left: 4px solid #004D40; padding-left: 1rem; margin: 1.5rem 0; font-style: italic; color: #5A6B76; }
+        .why-chain { background: #F4F7F9; border-left: 3px solid #004D40; border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; margin: 0.5rem 0; }
+        .why-label { color: #004D40; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .why-text { color: #37474F; margin-top: 0.25rem; }
     </style>
 
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://investigatepro.app/" },
-            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://investigatepro.app/blog/" },
-            { "@type": "ListItem", "position": 3, "name": "How to Use 5 Whys Analysis", "item": "https://investigatepro.app/blog/how-to-use-5-whys-analysis.html" }
-        ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "How to Use 5 Whys Analysis: Step-by-Step Guide with Examples (2026)",
-        "description": "Master the 5 Whys root cause analysis technique with real-world examples, a step-by-step process, and guidance on when to use a deeper method instead.",
-        "datePublished": "2026-05-05",
-        "dateModified": "2026-05-05",
-        "author": { "@type": "Organization", "name": "InvestigatePro", "url": "https://investigatepro.app" },
-        "publisher": {
-            "@type": "Organization",
-            "name": "InvestigatePro",
-            "logo": { "@type": "ImageObject", "url": "https://investigatepro.app/assets/logos/logo-03-on-dark.png" }
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://investigatepro.app/"
         },
-        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://investigatepro.app/blog/how-to-use-5-whys-analysis.html" }
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://investigatepro.app/blog/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "How to Use 5 Whys Analysis",
+            "item": "https://investigatepro.app/blog/how-to-use-5-whys-analysis.html"
+        }
+    ]
+}</script>
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Use 5 Whys Analysis: Step-by-Step Guide with Examples (2026)",
+    "description": "Master the 5 Whys root cause analysis technique with real-world examples, a step-by-step process, and guidance on when to use a deeper method instead.",
+    "datePublished": "2026-05-05",
+    "dateModified": "2026-05-05",
+    "author": {
+        "@type": "Organization",
+        "name": "InvestigatePro",
+        "url": "https://investigatepro.app"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "InvestigatePro",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://investigatepro.app/assets/brand/og-image.png"
+        }
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://investigatepro.app/blog/how-to-use-5-whys-analysis.html"
     }
-    </script>
+}</script>
 </head>
-<body class="font-sans antialiased bg-navy-900 text-white">
+<body class="font-sans antialiased bg-cloud text-ink">
 
-    <nav class="fixed w-full bg-navy-900/95 backdrop-blur-sm z-50 border-b border-navy-700">
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-mist">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <a href="/" class="flex items-center">
-                    <picture><source srcset="../assets/logos/logo-03-on-dark.webp" type="image/webp"><img src="../assets/logos/logo-03-on-dark.png" alt="InvestigatePro" class="h-[60px] sm:h-[80px]"></picture>
+                    <picture><source srcset="../assets/brand/logo-horizontal.svg" type="image/webp"><img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="h-[60px] sm:h-[80px]"></picture>
                 </a>
                 <div class="flex items-center space-x-6">
-                    <a href="/blog/" class="text-gray-300 hover:text-white transition-colors">Blog</a>
-                    <a href="/#features" class="hidden sm:inline text-gray-300 hover:text-white transition-colors">Features</a>
-                    <a href="/#pricing" class="hidden sm:inline text-gray-300 hover:text-white transition-colors">Pricing</a>
-                    <a href="/#demo" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-5 py-2 rounded-lg font-semibold transition-colors">
+                    <a href="/blog/" class="text-slate hover:text-ink transition-colors">Blog</a>
+                    <a href="/#features" class="hidden sm:inline text-slate hover:text-ink transition-colors">Features</a>
+                    <a href="/#pricing" class="hidden sm:inline text-slate hover:text-ink transition-colors">Pricing</a>
+                    <a href="/#demo" class="bg-apex-500 hover:bg-apex-700 text-white px-5 py-2 rounded-lg font-semibold transition-colors">
                         Start Free Trial
                     </a>
                 </div>
@@ -92,38 +113,38 @@
     <article class="pt-32 pb-20">
         <div class="max-w-3xl mx-auto px-4 sm:px-6">
             
-            <nav class="text-sm text-gray-400 mb-8">
-                <a href="/" class="hover:text-cyan-500">Home</a>
+            <nav class="text-sm text-graphite mb-8">
+                <a href="/" class="hover:text-apex-700">Home</a>
                 <span class="mx-2">›</span>
-                <a href="/blog/" class="hover:text-cyan-500">Blog</a>
+                <a href="/blog/" class="hover:text-apex-700">Blog</a>
                 <span class="mx-2">›</span>
-                <span class="text-gray-300">How to Use 5 Whys Analysis</span>
+                <span class="text-slate">How to Use 5 Whys Analysis</span>
             </nav>
 
             <header class="mb-12">
                 <div class="flex items-center gap-3 mb-4">
-                    <span class="bg-cyan-500/20 text-cyan-500 px-3 py-1 rounded-full text-sm font-medium">Root Cause Analysis</span>
-                    <span class="text-gray-400 text-sm">14 min read</span>
+                    <span class="bg-apex-500/10 text-apex-500 px-3 py-1 rounded-full text-sm font-medium">Root Cause Analysis</span>
+                    <span class="text-graphite text-sm">14 min read</span>
                 </div>
                 <h1 class="text-4xl sm:text-5xl font-bold mb-6 leading-tight">How to Use 5 Whys Analysis: Step-by-Step Guide with Examples</h1>
-                <p class="text-xl text-gray-300 mb-6">The 5 Whys is the most widely-used root cause analysis technique in the world — and one of the most misused. Here's how to do it properly, when it's the right tool, and when you need something more powerful.</p>
-                <div class="flex items-center text-gray-400 text-sm">
+                <p class="text-xl text-slate mb-6">The 5 Whys is the most widely-used root cause analysis technique in the world — and one of the most misused. Here's how to do it properly, when it's the right tool, and when you need something more powerful.</p>
+                <div class="flex items-center text-graphite text-sm">
                     <span>Published May 5, 2026</span>
                     <span class="mx-3">•</span>
                     <span>Updated May 5, 2026</span>
                 </div>
             </header>
 
-            <div class="bg-navy-800 rounded-xl p-6 mb-12">
-                <h2 class="text-lg font-semibold mb-4 text-white" style="margin-top: 0;">Table of Contents</h2>
-                <ol class="text-gray-300 space-y-2">
-                    <li><a href="#what-is-5-whys" class="hover:text-cyan-500">1. What Is the 5 Whys Method?</a></li>
-                    <li><a href="#how-to-do-it" class="hover:text-cyan-500">2. How to Conduct a 5 Whys Analysis</a></li>
-                    <li><a href="#examples" class="hover:text-cyan-500">3. Real-World Examples</a></li>
-                    <li><a href="#common-mistakes" class="hover:text-cyan-500">4. Common Mistakes (and How to Avoid Them)</a></li>
-                    <li><a href="#when-to-use" class="hover:text-cyan-500">5. When to Use 5 Whys — and When Not To</a></li>
-                    <li><a href="#vs-icam" class="hover:text-cyan-500">6. 5 Whys vs ICAM: Choosing the Right Method</a></li>
-                    <li><a href="#template" class="hover:text-cyan-500">7. 5 Whys Template & Worksheet</a></li>
+            <div class="bg-white rounded-xl p-6 mb-12">
+                <h2 class="text-lg font-semibold mb-4 text-ink" style="margin-top: 0;">Table of Contents</h2>
+                <ol class="text-slate space-y-2">
+                    <li><a href="#what-is-5-whys" class="hover:text-apex-700">1. What Is the 5 Whys Method?</a></li>
+                    <li><a href="#how-to-do-it" class="hover:text-apex-700">2. How to Conduct a 5 Whys Analysis</a></li>
+                    <li><a href="#examples" class="hover:text-apex-700">3. Real-World Examples</a></li>
+                    <li><a href="#common-mistakes" class="hover:text-apex-700">4. Common Mistakes (and How to Avoid Them)</a></li>
+                    <li><a href="#when-to-use" class="hover:text-apex-700">5. When to Use 5 Whys — and When Not To</a></li>
+                    <li><a href="#vs-icam" class="hover:text-apex-700">6. 5 Whys vs ICAM: Choosing the Right Method</a></li>
+                    <li><a href="#template" class="hover:text-apex-700">7. 5 Whys Template & Worksheet</a></li>
                 </ol>
             </div>
 
@@ -312,46 +333,46 @@
                 <table style="width:100%; border-collapse: collapse;">
                     <thead>
                         <tr>
-                            <th style="background:#1e2d4a; color:#76DCEC; padding:0.75rem 1rem; text-align:left;">Dimension</th>
-                            <th style="background:#1e2d4a; color:#76DCEC; padding:0.75rem 1rem; text-align:left;">5 Whys</th>
-                            <th style="background:#1e2d4a; color:#76DCEC; padding:0.75rem 1rem; text-align:left;">ICAM</th>
+                            <th style="background:#FFFFFF; color:#004D40; padding:0.75rem 1rem; text-align:left;">Dimension</th>
+                            <th style="background:#FFFFFF; color:#004D40; padding:0.75rem 1rem; text-align:left;">5 Whys</th>
+                            <th style="background:#FFFFFF; color:#004D40; padding:0.75rem 1rem; text-align:left;">ICAM</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;"><strong>Best for</strong></td>
-                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;">Simple, single-cause problems</td>
-                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;">Complex, multi-factor incidents</td>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #D9E2E8; color:#37474F;"><strong>Best for</strong></td>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #D9E2E8; color:#37474F;">Simple, single-cause problems</td>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #D9E2E8; color:#37474F;">Complex, multi-factor incidents</td>
                         </tr>
                         <tr>
-                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;"><strong>Time to complete</strong></td>
-                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;">15 minutes to 2 hours</td>
-                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;">Hours to days</td>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #D9E2E8; color:#37474F;"><strong>Time to complete</strong></td>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #D9E2E8; color:#37474F;">15 minutes to 2 hours</td>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #D9E2E8; color:#37474F;">Hours to days</td>
                         </tr>
                         <tr>
-                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;"><strong>Organizational factors</strong></td>
-                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;">Possible but often missed</td>
-                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;">Explicitly required</td>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #D9E2E8; color:#37474F;"><strong>Organizational factors</strong></td>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #D9E2E8; color:#37474F;">Possible but often missed</td>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #D9E2E8; color:#37474F;">Explicitly required</td>
                         </tr>
                         <tr>
-                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;"><strong>Structure</strong></td>
-                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;">Minimal — depends on facilitator</td>
-                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;">Highly structured framework</td>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #D9E2E8; color:#37474F;"><strong>Structure</strong></td>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #D9E2E8; color:#37474F;">Minimal — depends on facilitator</td>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #D9E2E8; color:#37474F;">Highly structured framework</td>
                         </tr>
                         <tr>
-                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;"><strong>Regulatory acceptance</strong></td>
-                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;">Adequate for minor incidents</td>
-                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;">Gold standard for serious events</td>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #D9E2E8; color:#37474F;"><strong>Regulatory acceptance</strong></td>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #D9E2E8; color:#37474F;">Adequate for minor incidents</td>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #D9E2E8; color:#37474F;">Gold standard for serious events</td>
                         </tr>
                         <tr>
-                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;"><strong>Training required</strong></td>
-                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;">Minimal</td>
-                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #1e2d4a; color:#d1d5db;">Moderate (1–2 days)</td>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #D9E2E8; color:#37474F;"><strong>Training required</strong></td>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #D9E2E8; color:#37474F;">Minimal</td>
+                            <td style="padding:0.75rem 1rem; border-bottom:1px solid #D9E2E8; color:#37474F;">Moderate (1–2 days)</td>
                         </tr>
                         <tr>
-                            <td style="padding:0.75rem 1rem; color:#d1d5db;"><strong>Industries</strong></td>
-                            <td style="padding:0.75rem 1rem; color:#d1d5db;">All industries</td>
-                            <td style="padding:0.75rem 1rem; color:#d1d5db;">Mining, oil & gas, construction, energy</td>
+                            <td style="padding:0.75rem 1rem; color:#37474F;"><strong>Industries</strong></td>
+                            <td style="padding:0.75rem 1rem; color:#37474F;">All industries</td>
+                            <td style="padding:0.75rem 1rem; color:#37474F;">Mining, oil & gas, construction, energy</td>
                         </tr>
                     </tbody>
                 </table>
@@ -364,36 +385,36 @@
 
                 <p>Here's a simple 5 Whys template you can use immediately. For a downloadable version with more RCA tools, see our <a href="/blog/root-cause-analysis-templates.html">Root Cause Analysis Templates</a>.</p>
 
-                <div class="bg-navy-800 rounded-xl p-6 not-prose mt-6">
-                    <h3 class="text-lg font-bold text-cyan-400 mb-4">5 Whys Worksheet</h3>
+                <div class="bg-white rounded-xl p-6 not-prose mt-6">
+                    <h3 class="text-lg font-bold text-apex-500 mb-4">5 Whys Worksheet</h3>
                     <div class="space-y-3">
                         <div>
-                            <div class="text-xs text-gray-400 uppercase tracking-wider mb-1">Problem Statement</div>
-                            <div class="bg-navy-900 rounded-lg p-3 border border-navy-600 text-gray-400 italic text-sm">Describe what happened, where, when, and the impact</div>
+                            <div class="text-xs text-graphite uppercase tracking-wider mb-1">Problem Statement</div>
+                            <div class="bg-cloud rounded-lg p-3 border border-mist text-graphite italic text-sm">Describe what happened, where, when, and the impact</div>
                         </div>
                         <div>
-                            <div class="text-xs text-cyan-500 uppercase tracking-wider font-bold mb-1">Why 1 — Why did this happen?</div>
-                            <div class="bg-navy-900 rounded-lg p-3 border border-navy-600 text-gray-400 italic text-sm">First-level cause (the most direct answer)</div>
+                            <div class="text-xs text-apex-500 uppercase tracking-wider font-bold mb-1">Why 1 — Why did this happen?</div>
+                            <div class="bg-cloud rounded-lg p-3 border border-mist text-graphite italic text-sm">First-level cause (the most direct answer)</div>
                         </div>
                         <div>
-                            <div class="text-xs text-cyan-500 uppercase tracking-wider font-bold mb-1">Why 2 — Why did that happen?</div>
-                            <div class="bg-navy-900 rounded-lg p-3 border border-navy-600 text-gray-400 italic text-sm">Cause of the cause above</div>
+                            <div class="text-xs text-apex-500 uppercase tracking-wider font-bold mb-1">Why 2 — Why did that happen?</div>
+                            <div class="bg-cloud rounded-lg p-3 border border-mist text-graphite italic text-sm">Cause of the cause above</div>
                         </div>
                         <div>
-                            <div class="text-xs text-cyan-500 uppercase tracking-wider font-bold mb-1">Why 3 — Why did that happen?</div>
-                            <div class="bg-navy-900 rounded-lg p-3 border border-navy-600 text-gray-400 italic text-sm">Going deeper...</div>
+                            <div class="text-xs text-apex-500 uppercase tracking-wider font-bold mb-1">Why 3 — Why did that happen?</div>
+                            <div class="bg-cloud rounded-lg p-3 border border-mist text-graphite italic text-sm">Going deeper...</div>
                         </div>
                         <div>
-                            <div class="text-xs text-cyan-500 uppercase tracking-wider font-bold mb-1">Why 4 — Why did that happen?</div>
-                            <div class="bg-navy-900 rounded-lg p-3 border border-navy-600 text-gray-400 italic text-sm">Getting close to root cause...</div>
+                            <div class="text-xs text-apex-500 uppercase tracking-wider font-bold mb-1">Why 4 — Why did that happen?</div>
+                            <div class="bg-cloud rounded-lg p-3 border border-mist text-graphite italic text-sm">Getting close to root cause...</div>
                         </div>
                         <div>
-                            <div class="text-xs text-cyan-500 uppercase tracking-wider font-bold mb-1">Why 5 — Root Cause</div>
-                            <div class="bg-navy-900 rounded-lg p-3 border border-cyan-500/30 text-gray-300 italic text-sm">The systemic or organisational cause — fixing this prevents recurrence</div>
+                            <div class="text-xs text-apex-500 uppercase tracking-wider font-bold mb-1">Why 5 — Root Cause</div>
+                            <div class="bg-cloud rounded-lg p-3 border border-apex-500/30 text-slate italic text-sm">The systemic or organisational cause — fixing this prevents recurrence</div>
                         </div>
-                        <div class="border-t border-navy-700 pt-3 mt-3">
-                            <div class="text-xs text-gray-400 uppercase tracking-wider mb-1">Corrective Action(s)</div>
-                            <div class="bg-navy-900 rounded-lg p-3 border border-navy-600 text-gray-400 italic text-sm">What will be done / Who is responsible / By when / How verified</div>
+                        <div class="border-t border-mist pt-3 mt-3">
+                            <div class="text-xs text-graphite uppercase tracking-wider mb-1">Corrective Action(s)</div>
+                            <div class="bg-cloud rounded-lg p-3 border border-mist text-graphite italic text-sm">What will be done / Who is responsible / By when / How verified</div>
                         </div>
                     </div>
                 </div>
@@ -405,36 +426,36 @@
                 <p>📋 <strong><a href="/rca-template-pack.html">Download the free RCA Template Pack</a></strong> — 4 templates in one: 5 Whys, Fishbone Diagram, ICAM-aligned RCA, and full Investigation Report. Fill in online or print.</p>
 
                 <!-- CTA Block -->
-                <div class="bg-navy-800 rounded-xl p-8 mt-12 not-prose">
-                    <h3 class="font-heading text-2xl font-bold text-white mb-4">Run Better Investigations</h3>
-                    <p class="text-gray-300 mb-6">
+                <div class="bg-white rounded-xl p-8 mt-12 not-prose">
+                    <h3 class="font-heading text-2xl font-bold text-ink mb-4">Run Better Investigations</h3>
+                    <p class="text-slate mb-6">
                         InvestigatePro guides your team through structured root cause analysis — 5 Whys, ICAM, and PEEPO — with AI coaching that ensures you don't stop at surface-level causes. Free 14-day trial.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="/#demo" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-6 py-3 rounded-lg font-semibold transition-colors text-center">Start Free Trial</a>
-                        <a href="https://cal.com/devon-turner-investigatepro/15min" class="border border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 px-6 py-3 rounded-lg font-semibold transition-colors text-center">Book a Demo</a>
+                        <a href="/#demo" class="bg-apex-500 hover:bg-apex-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center">Start Free Trial</a>
+                        <a href="https://cal.com/devon-turner-investigatepro/15min" class="border border-apex-500 text-apex-500 hover:bg-apex-500/10 px-6 py-3 rounded-lg font-semibold transition-colors text-center">Book a Demo</a>
                     </div>
                 </div>
 
                 <!-- Related Articles -->
-                <h3 class="text-xl font-semibold text-white mt-12 mb-6">Related Articles</h3>
+                <h3 class="text-xl font-semibold text-ink mt-12 mb-6">Related Articles</h3>
                 
                 <div class="grid md:grid-cols-2 gap-6 not-prose">
-                    <a href="/blog/root-cause-analysis-guide.html" class="block bg-navy-800 rounded-lg p-6 border border-navy-700 hover:border-cyan-500/50 transition-all">
-                        <h4 class="font-semibold text-white mb-2">Root Cause Analysis: The Complete Guide</h4>
-                        <p class="text-gray-400 text-sm">All major RCA methods — 5 Whys, Fishbone, Fault Tree, ICAM — compared and explained.</p>
+                    <a href="/blog/root-cause-analysis-guide.html" class="block bg-white rounded-lg p-6 border border-mist hover:border-apex-500 transition-all">
+                        <h4 class="font-semibold text-ink mb-2">Root Cause Analysis: The Complete Guide</h4>
+                        <p class="text-graphite text-sm">All major RCA methods — 5 Whys, Fishbone, Fault Tree, ICAM — compared and explained.</p>
                     </a>
-                    <a href="/blog/icam-investigation-guide.html" class="block bg-navy-800 rounded-lg p-6 border border-navy-700 hover:border-cyan-500/50 transition-all">
-                        <h4 class="font-semibold text-white mb-2">The Complete ICAM Investigation Guide</h4>
-                        <p class="text-gray-400 text-sm">When 5 Whys isn't enough — the structured methodology for serious incidents.</p>
+                    <a href="/blog/icam-investigation-guide.html" class="block bg-white rounded-lg p-6 border border-mist hover:border-apex-500 transition-all">
+                        <h4 class="font-semibold text-ink mb-2">The Complete ICAM Investigation Guide</h4>
+                        <p class="text-graphite text-sm">When 5 Whys isn't enough — the structured methodology for serious incidents.</p>
                     </a>
-                    <a href="/blog/root-cause-analysis-templates.html" class="block bg-navy-800 rounded-lg p-6 border border-navy-700 hover:border-cyan-500/50 transition-all">
-                        <h4 class="font-semibold text-white mb-2">Root Cause Analysis Templates</h4>
-                        <p class="text-gray-400 text-sm">Free downloadable templates including 5 Whys, ICAM, and Fishbone worksheets.</p>
+                    <a href="/blog/root-cause-analysis-templates.html" class="block bg-white rounded-lg p-6 border border-mist hover:border-apex-500 transition-all">
+                        <h4 class="font-semibold text-ink mb-2">Root Cause Analysis Templates</h4>
+                        <p class="text-graphite text-sm">Free downloadable templates including 5 Whys, ICAM, and Fishbone worksheets.</p>
                     </a>
-                    <a href="/blog/root-cause-analysis-mistakes.html" class="block bg-navy-800 rounded-lg p-6 border border-navy-700 hover:border-cyan-500/50 transition-all">
-                        <h4 class="font-semibold text-white mb-2">5 Root Cause Analysis Mistakes to Avoid</h4>
-                        <p class="text-gray-400 text-sm">Why investigations produce poor results — and how to fix them.</p>
+                    <a href="/blog/root-cause-analysis-mistakes.html" class="block bg-white rounded-lg p-6 border border-mist hover:border-apex-500 transition-all">
+                        <h4 class="font-semibold text-ink mb-2">5 Root Cause Analysis Mistakes to Avoid</h4>
+                        <p class="text-graphite text-sm">Why investigations produce poor results — and how to fix them.</p>
                     </a>
                 </div>
 
@@ -442,19 +463,19 @@
         </div>
     </article>
 
-    <footer class="bg-navy-900 border-t border-navy-700 py-12">
+    <footer class="bg-cloud border-t border-mist py-12">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <a href="/" class="inline-flex items-center space-x-2 mb-6">
-                <img src="../assets/logos/logo-03-icon-only-optimized.png" alt="InvestigatePro" class="h-8 w-8" loading="lazy">
-                <span class="font-heading font-bold text-xl text-white">InvestigatePro</span>
+                <img src="../assets/brand/icon-color.svg" alt="InvestigatePro" class="h-8 w-8" loading="lazy">
+                <span class="font-heading font-bold text-xl text-ink">InvestigatePro</span>
             </a>
-            <p class="text-gray-400 text-sm">AI-powered incident investigation software using ICAM methodology.</p>
-            <div class="mt-6 flex justify-center space-x-6 text-sm text-gray-500">
-                <a href="/privacy.html" class="hover:text-gray-300">Privacy</a>
-                <a href="/terms.html" class="hover:text-gray-300">Terms</a>
-                <a href="/security.html" class="hover:text-gray-300">Security</a>
+            <p class="text-graphite text-sm">AI-powered incident investigation software using ICAM methodology.</p>
+            <div class="mt-6 flex justify-center space-x-6 text-sm text-graphite">
+                <a href="/privacy.html" class="hover:text-slate">Privacy</a>
+                <a href="/terms.html" class="hover:text-slate">Terms</a>
+                <a href="/security.html" class="hover:text-slate">Security</a>
             </div>
-            <p class="mt-6 text-gray-600 text-xs">© 2026 InvestigatePro. All rights reserved.</p>
+            <p class="mt-6 text-graphite text-xs">© 2026 InvestigatePro. All rights reserved.</p>
         </div>
     </footer>
 </body>

@@ -7,23 +7,23 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            background: linear-gradient(135deg, #0C142E 0%, #1a2744 100%);
+            background: linear-gradient(135deg, #F4F7F9 0%, #FFFFFF 100%);
             min-height: 100vh;
             font-family: 'Segoe UI', system-ui, sans-serif;
-            color: #fff;
+            color: #112D3C;
             padding: 20px;
             overflow-x: hidden;
         }
         .header { text-align: center; margin-bottom: 20px; }
         .header h1 {
             font-size: 2.4rem;
-            color: #76DCEC;
-            text-shadow: 0 0 30px rgba(118, 220, 236, 0.6);
+            color: #004D40;
+            text-shadow: 0 0 30px rgba(0,77,64,0.6);
             margin-bottom: 8px;
         }
         .live-badge {
             display: inline-block;
-            background: #22C55E;
+            background: #4CAF50;
             color: #000;
             padding: 6px 18px;
             border-radius: 20px;
@@ -32,8 +32,8 @@
             animation: pulse 1.5s infinite;
         }
         @keyframes pulse {
-            0%, 100% { box-shadow: 0 0 10px #22C55E; }
-            50% { box-shadow: 0 0 30px #22C55E; }
+            0%, 100% { box-shadow: 0 0 10px #4CAF50; }
+            50% { box-shadow: 0 0 30px #4CAF50; }
         }
         .status-bar {
             display: flex;
@@ -56,8 +56,8 @@
             width: 10px;
             height: 10px;
             border-radius: 50%;
-            background: #22C55E;
-            box-shadow: 0 0 8px #22C55E;
+            background: #4CAF50;
+            box-shadow: 0 0 8px #4CAF50;
             animation: blink 1s infinite;
         }
         @keyframes blink {
@@ -80,10 +80,10 @@
         }
         .section-header h2 {
             display: inline-block;
-            background: linear-gradient(90deg, transparent, rgba(118, 220, 236, 0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(0,77,64,0.2), transparent);
             padding: 10px 35px;
             border-radius: 25px;
-            color: #76DCEC;
+            color: #004D40;
             font-size: 1.1rem;
             letter-spacing: 2px;
         }
@@ -103,7 +103,7 @@
             padding: 16px 12px;
             background: linear-gradient(145deg, rgba(34, 197, 94, 0.12), rgba(34, 197, 94, 0.04));
             border-radius: 14px;
-            border: 2px solid #22C55E;
+            border: 2px solid #4CAF50;
             text-align: center;
             transition: all 0.3s ease;
             position: relative;
@@ -114,8 +114,8 @@
         }
         .agent-icon { font-size: 2rem; margin-bottom: 8px; }
         .agent-name { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 5px; }
-        .agent-status { font-size: 0.65rem; color: #22C55E; margin-bottom: 5px; }
-        .agent-detail { font-size: 0.6rem; color: #9CA3AF; line-height: 1.4; }
+        .agent-status { font-size: 0.65rem; color: #4CAF50; margin-bottom: 5px; }
+        .agent-detail { font-size: 0.6rem; color: #5A6B76; line-height: 1.4; }
         
         /* CEO Node */
         .agent-node.ceo {
@@ -129,30 +129,30 @@
         /* Department Head Nodes */
         .agent-node.dept-head {
             width: 170px;
-            background: linear-gradient(145deg, rgba(118, 220, 236, 0.15), rgba(118, 220, 236, 0.05));
-            border-color: #76DCEC;
-            box-shadow: 0 0 20px rgba(118, 220, 236, 0.2);
+            background: linear-gradient(145deg, rgba(0,77,64,0.15), rgba(0,77,64,0.05));
+            border-color: #004D40;
+            box-shadow: 0 0 20px rgba(0,77,64,0.2);
         }
-        .agent-node.dept-head .agent-status { color: #76DCEC; }
+        .agent-node.dept-head .agent-status { color: #004D40; }
         
         /* Special Nodes */
         .agent-node.controller {
             width: 240px;
-            background: linear-gradient(145deg, rgba(118, 220, 236, 0.2), rgba(118, 220, 236, 0.05));
-            border-color: #76DCEC;
-            box-shadow: 0 0 25px rgba(118, 220, 236, 0.3);
+            background: linear-gradient(145deg, rgba(0,77,64,0.2), rgba(0,77,64,0.05));
+            border-color: #004D40;
+            box-shadow: 0 0 25px rgba(0,77,64,0.3);
         }
         .agent-node.database {
             width: 300px;
             background: linear-gradient(145deg, rgba(147, 51, 234, 0.2), rgba(147, 51, 234, 0.05));
-            border-color: #9333EA;
+            border-color: #2196F3;
             box-shadow: 0 0 25px rgba(147, 51, 234, 0.3);
         }
         .agent-node.pipeline {
-            border-color: #F59E0B;
+            border-color: #FFB300;
             background: linear-gradient(145deg, rgba(245, 158, 11, 0.15), rgba(245, 158, 11, 0.05));
         }
-        .agent-node.pipeline .agent-status { color: #F59E0B; }
+        .agent-node.pipeline .agent-status { color: #FFB300; }
         .agent-node.webhook {
             border-color: #EC4899;
             background: linear-gradient(145deg, rgba(236, 72, 153, 0.15), rgba(236, 72, 153, 0.05));
@@ -171,7 +171,7 @@
         }
         .flow-arrow {
             text-align: center;
-            color: #76DCEC;
+            color: #004D40;
             font-size: 1rem;
             opacity: 0.8;
             animation: flowPulse 1.5s infinite;
@@ -203,10 +203,10 @@
             min-width: 110px;
         }
         .pipeline-node .p-icon { font-size: 1.5rem; }
-        .pipeline-node .p-name { font-size: 0.68rem; font-weight: 600; margin-top: 5px; color: #F59E0B; }
-        .pipeline-node .p-tool { font-size: 0.58rem; color: #9CA3AF; }
+        .pipeline-node .p-name { font-size: 0.68rem; font-weight: 600; margin-top: 5px; color: #FFB300; }
+        .pipeline-node .p-tool { font-size: 0.58rem; color: #5A6B76; }
         .pipeline-arrow {
-            color: #F59E0B;
+            color: #FFB300;
             font-size: 1.3rem;
             animation: flowRight 1s infinite;
         }
@@ -237,10 +237,10 @@
             min-width: 95px;
         }
         .lead-node .l-icon { font-size: 1.5rem; }
-        .lead-node .l-name { font-size: 0.68rem; font-weight: 600; margin-top: 5px; color: #22C55E; }
-        .lead-node .l-detail { font-size: 0.58rem; color: #9CA3AF; }
+        .lead-node .l-name { font-size: 0.68rem; font-weight: 600; margin-top: 5px; color: #4CAF50; }
+        .lead-node .l-detail { font-size: 0.58rem; color: #5A6B76; }
         .lead-arrow {
-            color: #22C55E;
+            color: #4CAF50;
             font-size: 1.3rem;
             animation: flowRight 1s infinite;
         }
@@ -254,19 +254,19 @@
             font-size: 0.75rem;
         }
         .cron-table th {
-            background: rgba(118, 220, 236, 0.2);
-            color: #76DCEC;
+            background: rgba(0,77,64,0.2);
+            color: #004D40;
             padding: 12px;
             text-align: left;
-            border: 1px solid rgba(118, 220, 236, 0.3);
+            border: 1px solid rgba(0,77,64,0.3);
         }
         .cron-table td {
             padding: 10px 12px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(17,45,60,0.06);
+            background: rgba(17,45,60,0.04);
         }
         .cron-table tr:hover td {
-            background: rgba(118, 220, 236, 0.08);
+            background: rgba(0,77,64,0.08);
         }
         .cron-status {
             display: inline-block;
@@ -275,8 +275,8 @@
             font-size: 0.65rem;
             font-weight: bold;
         }
-        .cron-status.active { background: rgba(34, 197, 94, 0.2); color: #22C55E; }
-        .cron-status.warning { background: rgba(245, 158, 11, 0.2); color: #F59E0B; }
+        .cron-status.active { background: rgba(34, 197, 94, 0.2); color: #4CAF50; }
+        .cron-status.warning { background: rgba(245, 158, 11, 0.2); color: #FFB300; }
         
         /* Integration Cards */
         .integration-grid {
@@ -289,27 +289,27 @@
             margin-right: auto;
         }
         .integration-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(17,45,60,0.04);
+            border: 1px solid rgba(17,45,60,0.06);
             border-radius: 10px;
             padding: 15px 10px;
             text-align: center;
             transition: all 0.3s ease;
         }
         .integration-card:hover {
-            background: rgba(255, 255, 255, 0.06);
+            background: rgba(17,45,60,0.04);
             transform: translateY(-3px);
         }
         .integration-card .i-icon { font-size: 1.8rem; margin-bottom: 6px; }
-        .integration-card .i-name { font-size: 0.7rem; font-weight: 600; color: #76DCEC; }
-        .integration-card .i-status { font-size: 0.6rem; color: #22C55E; margin-top: 3px; }
+        .integration-card .i-name { font-size: 0.7rem; font-weight: 600; color: #004D40; }
+        .integration-card .i-status { font-size: 0.6rem; color: #4CAF50; margin-top: 3px; }
         
         /* Data Exchange Indicators */
         .data-badge {
             position: absolute;
             top: -8px;
             right: -8px;
-            background: #9333EA;
+            background: #2196F3;
             color: white;
             font-size: 0.55rem;
             padding: 3px 8px;
@@ -325,20 +325,20 @@
             margin-top: 30px;
         }
         .metric-card {
-            background: rgba(255,255,255,0.03);
+            background: rgba(17,45,60,0.04);
             border-radius: 12px;
             padding: 18px;
             text-align: center;
-            border: 1px solid rgba(255,255,255,0.08);
+            border: 1px solid rgba(17,45,60,0.048);
         }
         .metric-value {
             font-size: 2rem;
             font-weight: 700;
-            color: #76DCEC;
+            color: #004D40;
         }
         .metric-label {
             font-size: 0.75rem;
-            color: #9CA3AF;
+            color: #5A6B76;
             margin-top: 5px;
         }
         
@@ -355,7 +355,7 @@
             align-items: center;
             gap: 8px;
             font-size: 0.72rem;
-            color: #9CA3AF;
+            color: #5A6B76;
         }
         .legend-dot {
             width: 14px;
@@ -376,7 +376,7 @@
     <div class="header">
         <h1>🤖 InvestigatePro AI Swarm</h1>
         <span class="live-badge">🟢 LIVE — 18 AGENTS ACTIVE</span>
-        <p style="color: #9CA3AF; margin-top: 10px; font-size: 0.95rem;">Autonomous Sales & Marketing Machine</p>
+        <p style="color: #5A6B76; margin-top: 10px; font-size: 0.95rem;">Autonomous Sales & Marketing Machine</p>
     </div>
     
     <div class="status-bar">
@@ -557,31 +557,31 @@
         <div class="pipeline-flow" style="border-color: rgba(139, 92, 246, 0.3); background: rgba(139, 92, 246, 0.05);">
             <div class="pipeline-node" style="border-color: rgba(139, 92, 246, 0.4); background: rgba(139, 92, 246, 0.1);">
                 <div class="p-icon">⏰</div>
-                <div class="p-name" style="color: #8B5CF6;">SCHEDULE</div>
+                <div class="p-name" style="color: #2196F3;">SCHEDULE</div>
                 <div class="p-tool">Daily cron</div>
             </div>
-            <div class="pipeline-arrow" style="color: #8B5CF6;">→</div>
+            <div class="pipeline-arrow" style="color: #2196F3;">→</div>
             <div class="pipeline-node" style="border-color: rgba(139, 92, 246, 0.4); background: rgba(139, 92, 246, 0.1);">
                 <div class="p-icon">🎨</div>
-                <div class="p-name" style="color: #8B5CF6;">THEME SELECT</div>
+                <div class="p-name" style="color: #2196F3;">THEME SELECT</div>
                 <div class="p-tool">4 industry themes</div>
             </div>
-            <div class="pipeline-arrow" style="color: #8B5CF6;">→</div>
+            <div class="pipeline-arrow" style="color: #2196F3;">→</div>
             <div class="pipeline-node" style="border-color: rgba(139, 92, 246, 0.4); background: rgba(139, 92, 246, 0.1);">
                 <div class="p-icon">🎥</div>
-                <div class="p-name" style="color: #8B5CF6;">GENERATE</div>
+                <div class="p-name" style="color: #2196F3;">GENERATE</div>
                 <div class="p-tool">Python + Remotion</div>
             </div>
-            <div class="pipeline-arrow" style="color: #8B5CF6;">→</div>
+            <div class="pipeline-arrow" style="color: #2196F3;">→</div>
             <div class="pipeline-node" style="border-color: rgba(139, 92, 246, 0.4); background: rgba(139, 92, 246, 0.1);">
                 <div class="p-icon">☁️</div>
-                <div class="p-name" style="color: #8B5CF6;">UPLOAD R2</div>
+                <div class="p-name" style="color: #2196F3;">UPLOAD R2</div>
                 <div class="p-tool">Cloudflare CDN</div>
             </div>
-            <div class="pipeline-arrow" style="color: #8B5CF6;">→</div>
+            <div class="pipeline-arrow" style="color: #2196F3;">→</div>
             <div class="pipeline-node" style="border-color: rgba(139, 92, 246, 0.4); background: rgba(139, 92, 246, 0.1);">
                 <div class="p-icon">📱</div>
-                <div class="p-name" style="color: #8B5CF6;">NOTIFY</div>
+                <div class="p-name" style="color: #2196F3;">NOTIFY</div>
                 <div class="p-tool">Telegram alert</div>
             </div>
         </div>
@@ -926,15 +926,15 @@
                 <span>AI CEO</span>
             </div>
             <div class="legend-item">
-                <div class="legend-dot" style="background: #76DCEC;"></div>
+                <div class="legend-dot" style="background: #004D40;"></div>
                 <span>Dept Heads / Controller</span>
             </div>
             <div class="legend-item">
-                <div class="legend-dot" style="background: #22C55E;"></div>
+                <div class="legend-dot" style="background: #4CAF50;"></div>
                 <span>Lead Gen</span>
             </div>
             <div class="legend-item">
-                <div class="legend-dot" style="background: #F59E0B;"></div>
+                <div class="legend-dot" style="background: #FFB300;"></div>
                 <span>Content Pipeline</span>
             </div>
             <div class="legend-item">
@@ -946,20 +946,20 @@
                 <span>Webhooks</span>
             </div>
             <div class="legend-item">
-                <div class="legend-dot" style="background: #9333EA;"></div>
+                <div class="legend-dot" style="background: #2196F3;"></div>
                 <span>Database</span>
             </div>
             <div class="legend-item">
-                <div class="legend-dot" style="background: #8B5CF6;"></div>
+                <div class="legend-dot" style="background: #2196F3;"></div>
                 <span>Video Factory</span>
             </div>
         </div>
         
     </div>
     
-    <p style="text-align: center; margin-top: 35px; color: #6B7280; font-size: 0.8rem;">
+    <p style="text-align: center; margin-top: 35px; color: #5A6B76; font-size: 0.8rem;">
         Last updated: <span id="timestamp"></span> • InvestigatePro AI Swarm v3.0<br>
-        <span style="color: #76DCEC;">Built with 🤖 by Steve</span>
+        <span style="color: #004D40;">Built with 🤖 by Steve</span>
     </p>
     
     <script>

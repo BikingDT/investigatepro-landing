@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog — Incident Investigation Insights | InvestigatePro</title>
     <meta name="description" content="Expert insights on ICAM methodology, root cause analysis, and incident investigation best practices. Learn how to improve your safety investigations.">
-    <link rel="icon" type="image/png" href="../assets/logos/logo-03-icon-only-optimized.png">
+    <link rel="icon" type="image/png" href="../assets/brand/favicon-32.png">
     <link rel="canonical" href="https://investigatepro.app/blog/">
     
     <!-- Open Graph -->
@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://investigatepro.app/blog/">
     <meta property="og:title" content="Blog — Incident Investigation Insights | InvestigatePro">
     <meta property="og:description" content="Expert insights on ICAM methodology, root cause analysis, and incident investigation best practices.">
-    <meta property="og:image" content="https://investigatepro.app/assets/logos/logo-03-on-dark.png">
+    <meta property="og:image" content="https://investigatepro.app/assets/brand/og-image.png">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,50 +22,48 @@
     <link rel="preload" href="../assets/css/styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="../assets/css/styles.min.css"></noscript>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
     
     <style>
-        .article-card { background: linear-gradient(135deg, #1A2744 0%, #0F1A3A 100%); transition: transform 0.2s, box-shadow 0.2s; }
-        .article-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(118, 220, 236, 0.15); }
+        .article-card { background: linear-gradient(135deg, #FFFFFF 0%, #FFFFFF 100%); transition: transform 0.2s, box-shadow 0.2s; }
+        .article-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,77,64,0.15); }
     </style>
 
     <!-- Structured Data: Breadcrumb -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://investigatepro.app/"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Blog",
-                "item": "https://investigatepro.app/blog/"
-            }
-        ]
-    }
-    </script>
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://investigatepro.app/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://investigatepro.app/blog/"
+        }
+    ]
+}</script>
 </head>
-<body class="font-sans antialiased bg-navy-900 text-white">
+<body class="font-sans antialiased bg-cloud text-ink">
 
     <!-- Navigation -->
-    <nav class="fixed w-full bg-navy-900/95 backdrop-blur-sm z-50 border-b border-navy-700">
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-mist">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <a href="/" class="flex items-center">
-                    <picture><source srcset="../assets/logos/logo-03-on-dark.webp" type="image/webp"><img src="../assets/logos/logo-03-on-dark.png" alt="InvestigatePro" class="h-[60px] sm:h-[80px]"></picture>
+                    <picture><source srcset="../assets/brand/logo-horizontal.svg" type="image/webp"><img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="h-[60px] sm:h-[80px]"></picture>
                 </a>
                 <div class="flex items-center space-x-6">
-                    <a href="/blog/" class="text-cyan-500 font-medium">Blog</a>
-                    <a href="/#features" class="hidden sm:inline text-gray-300 hover:text-white transition-colors">Features</a>
-                    <a href="/#pricing" class="hidden sm:inline text-gray-300 hover:text-white transition-colors">Pricing</a>
-                    <a href="/#demo" class="bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-5 py-2 rounded-lg font-semibold transition-colors">
+                    <a href="/blog/" class="text-apex-500 font-medium">Blog</a>
+                    <a href="/#features" class="hidden sm:inline text-slate hover:text-ink transition-colors">Features</a>
+                    <a href="/#pricing" class="hidden sm:inline text-slate hover:text-ink transition-colors">Pricing</a>
+                    <a href="/#demo" class="bg-apex-500 hover:bg-apex-700 text-white px-5 py-2 rounded-lg font-semibold transition-colors">
                         Start Free Trial
                     </a>
                 </div>
@@ -77,7 +75,7 @@
     <header class="pt-32 pb-12 px-4">
         <div class="max-w-4xl mx-auto text-center">
             <h1 class="text-4xl sm:text-5xl font-bold mb-4">Incident Investigation Insights</h1>
-            <p class="text-xl text-gray-300">Expert guidance on ICAM methodology, root cause analysis, and investigation best practices.</p>
+            <p class="text-xl text-slate">Expert guidance on ICAM methodology, root cause analysis, and investigation best practices.</p>
         </div>
     </header>
 
@@ -87,12 +85,12 @@
             <a href="/blog/icam-investigation-guide.html" class="block article-card rounded-2xl overflow-hidden">
                 <div class="p-8 md:p-10">
                     <div class="flex items-center gap-3 mb-4">
-                        <span class="bg-cyan-500/20 text-cyan-500 px-3 py-1 rounded-full text-sm font-medium">Featured Guide</span>
-                        <span class="text-gray-400 text-sm">15 min read</span>
+                        <span class="bg-apex-500/10 text-apex-500 px-3 py-1 rounded-full text-sm font-medium">Featured Guide</span>
+                        <span class="text-graphite text-sm">15 min read</span>
                     </div>
-                    <h2 class="text-2xl md:text-3xl font-bold mb-4 hover:text-cyan-500 transition-colors">The Complete Guide to ICAM Investigation</h2>
-                    <p class="text-gray-300 mb-6">Master the Incident Cause Analysis Method — the gold standard for investigating workplace incidents and preventing recurrence. Includes PEEPO framework, organizational factors, and practical templates.</p>
-                    <span class="text-cyan-500 font-semibold">Read the guide →</span>
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4 hover:text-apex-700 transition-colors">The Complete Guide to ICAM Investigation</h2>
+                    <p class="text-slate mb-6">Master the Incident Cause Analysis Method — the gold standard for investigating workplace incidents and preventing recurrence. Includes PEEPO framework, organizational factors, and practical templates.</p>
+                    <span class="text-apex-500 font-semibold">Read the guide →</span>
                 </div>
             </a>
         </div>
@@ -108,155 +106,155 @@
                 <!-- Article: Mining Investigation Guide (NEW) -->
                 <a href="/blog/mining-incident-investigation-guide.html" class="article-card rounded-xl p-6">
                     <div class="flex items-center gap-2 mb-3">
-                        <span class="bg-cyan-500/20 text-cyan-500 px-2 py-0.5 rounded text-xs font-medium">Mining Safety</span>
-                        <span class="text-gray-500 text-xs">18 min</span>
+                        <span class="bg-apex-500/10 text-apex-500 px-2 py-0.5 rounded text-xs font-medium">Mining Safety</span>
+                        <span class="text-graphite text-xs">18 min</span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2 hover:text-cyan-500 transition-colors">Mining Incident Investigation Guide: ICAM for Mining Operations</h3>
-                    <p class="text-gray-400 text-sm mb-4">Ground control, mobile equipment, pSIF events, regulatory compliance across Africa, Australia & the Americas. Field-tested and practical.</p>
-                    <span class="text-cyan-500 text-sm font-medium">Read article →</span>
+                    <h3 class="text-lg font-semibold mb-2 hover:text-apex-700 transition-colors">Mining Incident Investigation Guide: ICAM for Mining Operations</h3>
+                    <p class="text-graphite text-sm mb-4">Ground control, mobile equipment, pSIF events, regulatory compliance across Africa, Australia & the Americas. Field-tested and practical.</p>
+                    <span class="text-apex-500 text-sm font-medium">Read article →</span>
                 </a>
 
                 <!-- Article: Intelex Alternative (NEW) -->
                 <a href="/blog/intelex-alternative-incident-investigation.html" class="article-card rounded-xl p-6">
                     <div class="flex items-center gap-2 mb-3">
-                        <span class="bg-purple-500/20 text-purple-400 px-2 py-0.5 rounded text-xs font-medium">Comparison</span>
-                        <span class="text-gray-500 text-xs">11 min</span>
+                        <span class="bg-neural-500/10 text-neural-500 px-2 py-0.5 rounded text-xs font-medium">Comparison</span>
+                        <span class="text-graphite text-xs">11 min</span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2 hover:text-cyan-500 transition-colors">Intelex Alternative for Incident Investigation (2026)</h3>
-                    <p class="text-gray-400 text-sm mb-4">Intelex is powerful but expensive and slow to deploy. If investigation quality is your priority, here's a faster, more focused alternative built for mining and construction.</p>
-                    <span class="text-cyan-500 text-sm font-medium">Read article →</span>
+                    <h3 class="text-lg font-semibold mb-2 hover:text-apex-700 transition-colors">Intelex Alternative for Incident Investigation (2026)</h3>
+                    <p class="text-graphite text-sm mb-4">Intelex is powerful but expensive and slow to deploy. If investigation quality is your priority, here's a faster, more focused alternative built for mining and construction.</p>
+                    <span class="text-apex-500 text-sm font-medium">Read article →</span>
                 </a>
 
                 <!-- Article: VelocityEHS Alternative (NEW) -->
                 <a href="/blog/velocityehs-alternative-incident-investigation.html" class="article-card rounded-xl p-6">
                     <div class="flex items-center gap-2 mb-3">
-                        <span class="bg-purple-500/20 text-purple-400 px-2 py-0.5 rounded text-xs font-medium">Comparison</span>
-                        <span class="text-gray-500 text-xs">11 min</span>
+                        <span class="bg-neural-500/10 text-neural-500 px-2 py-0.5 rounded text-xs font-medium">Comparison</span>
+                        <span class="text-graphite text-xs">11 min</span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2 hover:text-cyan-500 transition-colors">VelocityEHS Alternative for Incident Investigation (2026)</h3>
-                    <p class="text-gray-400 text-sm mb-4">VelocityEHS handles EHS compliance well — but post-acquisition uncertainty and no ICAM support are driving teams to look for a more focused investigation tool.</p>
-                    <span class="text-cyan-500 text-sm font-medium">Read article →</span>
+                    <h3 class="text-lg font-semibold mb-2 hover:text-apex-700 transition-colors">VelocityEHS Alternative for Incident Investigation (2026)</h3>
+                    <p class="text-graphite text-sm mb-4">VelocityEHS handles EHS compliance well — but post-acquisition uncertainty and no ICAM support are driving teams to look for a more focused investigation tool.</p>
+                    <span class="text-apex-500 text-sm font-medium">Read article →</span>
                 </a>
 
                 <!-- Article: EHS Insight Alternative (NEW) -->
                 <a href="/blog/ehs-insight-alternative-incident-investigation.html" class="article-card rounded-xl p-6">
                     <div class="flex items-center gap-2 mb-3">
-                        <span class="bg-purple-500/20 text-purple-400 px-2 py-0.5 rounded text-xs font-medium">Comparison</span>
-                        <span class="text-gray-500 text-xs">10 min</span>
+                        <span class="bg-neural-500/10 text-neural-500 px-2 py-0.5 rounded text-xs font-medium">Comparison</span>
+                        <span class="text-graphite text-xs">10 min</span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2 hover:text-cyan-500 transition-colors">EHS Insight Alternative for Incident Investigation (2026)</h3>
-                    <p class="text-gray-400 text-sm mb-4">EHS Insight covers the EHS basics — but for ICAM-based investigation in mining, construction, and energy, a purpose-built tool delivers meaningfully better outcomes.</p>
-                    <span class="text-cyan-500 text-sm font-medium">Read article →</span>
+                    <h3 class="text-lg font-semibold mb-2 hover:text-apex-700 transition-colors">EHS Insight Alternative for Incident Investigation (2026)</h3>
+                    <p class="text-graphite text-sm mb-4">EHS Insight covers the EHS basics — but for ICAM-based investigation in mining, construction, and energy, a purpose-built tool delivers meaningfully better outcomes.</p>
+                    <span class="text-apex-500 text-sm font-medium">Read article →</span>
                 </a>
 
                 <!-- Article: Cority Alternative (NEW) -->
                 <a href="/blog/cority-alternative-incident-investigation.html" class="article-card rounded-xl p-6">
                     <div class="flex items-center gap-2 mb-3">
-                        <span class="bg-purple-500/20 text-purple-400 px-2 py-0.5 rounded text-xs font-medium">Comparison</span>
-                        <span class="text-gray-500 text-xs">12 min</span>
+                        <span class="bg-neural-500/10 text-neural-500 px-2 py-0.5 rounded text-xs font-medium">Comparison</span>
+                        <span class="text-graphite text-xs">12 min</span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2 hover:text-cyan-500 transition-colors">Cority Alternative for Incident Investigation (2026)</h3>
-                    <p class="text-gray-400 text-sm mb-4">Cority is enterprise-grade and priced to match. If incident investigation with ICAM methodology is your core need, here's a focused alternative that's live in under an hour.</p>
-                    <span class="text-cyan-500 text-sm font-medium">Read article →</span>
+                    <h3 class="text-lg font-semibold mb-2 hover:text-apex-700 transition-colors">Cority Alternative for Incident Investigation (2026)</h3>
+                    <p class="text-graphite text-sm mb-4">Cority is enterprise-grade and priced to match. If incident investigation with ICAM methodology is your core need, here's a focused alternative that's live in under an hour.</p>
+                    <span class="text-apex-500 text-sm font-medium">Read article →</span>
                 </a>
 
                 <!-- Article: Best RCA Software 2026 (NEW) -->
                 <a href="/blog/best-root-cause-analysis-software-2026.html" class="article-card rounded-xl p-6">
                     <div class="flex items-center gap-2 mb-3">
-                        <span class="bg-cyan-500/20 text-cyan-500 px-2 py-0.5 rounded text-xs font-medium">Comparison</span>
-                        <span class="text-gray-500 text-xs">14 min</span>
+                        <span class="bg-apex-500/10 text-apex-500 px-2 py-0.5 rounded text-xs font-medium">Comparison</span>
+                        <span class="text-graphite text-xs">14 min</span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2 hover:text-cyan-500 transition-colors">Best Root Cause Analysis Software in 2026 — Compared & Reviewed</h3>
-                    <p class="text-gray-400 text-sm mb-4">We reviewed 7 of the most widely used RCA tools — InvestigatePro, SafetyCulture, Intelex, Cority, and more. Here's who each one is actually built for.</p>
-                    <span class="text-cyan-500 text-sm font-medium">Read article →</span>
+                    <h3 class="text-lg font-semibold mb-2 hover:text-apex-700 transition-colors">Best Root Cause Analysis Software in 2026 — Compared & Reviewed</h3>
+                    <p class="text-graphite text-sm mb-4">We reviewed 7 of the most widely used RCA tools — InvestigatePro, SafetyCulture, Intelex, Cority, and more. Here's who each one is actually built for.</p>
+                    <span class="text-apex-500 text-sm font-medium">Read article →</span>
                 </a>
 
                 <!-- Article: SafetyCulture Alternative (NEW) -->
                 <a href="/blog/safetyculture-alternative-incident-investigation.html" class="article-card rounded-xl p-6">
                     <div class="flex items-center gap-2 mb-3">
-                        <span class="bg-purple-500/20 text-purple-400 px-2 py-0.5 rounded text-xs font-medium">Comparison</span>
-                        <span class="text-gray-500 text-xs">12 min</span>
+                        <span class="bg-neural-500/10 text-neural-500 px-2 py-0.5 rounded text-xs font-medium">Comparison</span>
+                        <span class="text-graphite text-xs">12 min</span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2 hover:text-cyan-500 transition-colors">SafetyCulture Alternative for Incident Investigation (2026)</h3>
-                    <p class="text-gray-400 text-sm mb-4">SafetyCulture is great for audits and inspections. But if you need structured ICAM investigation with AI coaching, there's a better fit.</p>
-                    <span class="text-cyan-500 text-sm font-medium">Read article →</span>
+                    <h3 class="text-lg font-semibold mb-2 hover:text-apex-700 transition-colors">SafetyCulture Alternative for Incident Investigation (2026)</h3>
+                    <p class="text-graphite text-sm mb-4">SafetyCulture is great for audits and inspections. But if you need structured ICAM investigation with AI coaching, there's a better fit.</p>
+                    <span class="text-apex-500 text-sm font-medium">Read article →</span>
                 </a>
                 
                 <!-- Article: 5 Whys Analysis (NEW) -->
                 <a href="/blog/how-to-use-5-whys-analysis.html" class="article-card rounded-xl p-6">
                     <div class="flex items-center gap-2 mb-3">
-                        <span class="bg-cyan-500/20 text-cyan-500 px-2 py-0.5 rounded text-xs font-medium">Root Cause Analysis</span>
-                        <span class="text-gray-500 text-xs">14 min</span>
+                        <span class="bg-apex-500/10 text-apex-500 px-2 py-0.5 rounded text-xs font-medium">Root Cause Analysis</span>
+                        <span class="text-graphite text-xs">14 min</span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2 hover:text-cyan-500 transition-colors">How to Use 5 Whys Analysis: Step-by-Step Guide with Examples</h3>
-                    <p class="text-gray-400 text-sm mb-4">The most widely-used RCA technique explained properly — with real examples from manufacturing, construction, and mining, and a free worksheet.</p>
-                    <span class="text-cyan-500 text-sm font-medium">Read article →</span>
+                    <h3 class="text-lg font-semibold mb-2 hover:text-apex-700 transition-colors">How to Use 5 Whys Analysis: Step-by-Step Guide with Examples</h3>
+                    <p class="text-graphite text-sm mb-4">The most widely-used RCA technique explained properly — with real examples from manufacturing, construction, and mining, and a free worksheet.</p>
+                    <span class="text-apex-500 text-sm font-medium">Read article →</span>
                 </a>
 
                 <!-- Article: Construction Checklist (NEW) -->
                 <a href="/blog/construction-site-incident-investigation-checklist.html" class="article-card rounded-xl p-6">
                     <div class="flex items-center gap-2 mb-3">
                         <span class="bg-orange-500/20 text-orange-400 px-2 py-0.5 rounded text-xs font-medium">Construction Safety</span>
-                        <span class="text-gray-500 text-xs">10 min</span>
+                        <span class="text-graphite text-xs">10 min</span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2 hover:text-cyan-500 transition-colors">Construction Site Incident Investigation Checklist (2026)</h3>
-                    <p class="text-gray-400 text-sm mb-4">8-phase field checklist covering scene preservation, evidence, witness interviews, root cause analysis, and corrective action close-out.</p>
-                    <span class="text-cyan-500 text-sm font-medium">Read article →</span>
+                    <h3 class="text-lg font-semibold mb-2 hover:text-apex-700 transition-colors">Construction Site Incident Investigation Checklist (2026)</h3>
+                    <p class="text-graphite text-sm mb-4">8-phase field checklist covering scene preservation, evidence, witness interviews, root cause analysis, and corrective action close-out.</p>
+                    <span class="text-apex-500 text-sm font-medium">Read article →</span>
                 </a>
 
                 <!-- Article: AI in Safety (NEW) -->
                 <a href="/blog/ai-in-safety-machine-learning-root-cause-analysis.html" class="article-card rounded-xl p-6">
                     <div class="flex items-center gap-2 mb-3">
-                        <span class="bg-purple-500/20 text-purple-400 px-2 py-0.5 rounded text-xs font-medium">AI & Technology</span>
-                        <span class="text-gray-500 text-xs">16 min</span>
+                        <span class="bg-neural-500/10 text-neural-500 px-2 py-0.5 rounded text-xs font-medium">AI & Technology</span>
+                        <span class="text-graphite text-xs">16 min</span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2 hover:text-cyan-500 transition-colors">AI in Safety: How Machine Learning Is Transforming Root Cause Analysis</h3>
-                    <p class="text-gray-400 text-sm mb-4">What's real, what's hype, and what AI investigation coaching actually does for safety teams in high-hazard industries right now.</p>
-                    <span class="text-cyan-500 text-sm font-medium">Read article →</span>
+                    <h3 class="text-lg font-semibold mb-2 hover:text-apex-700 transition-colors">AI in Safety: How Machine Learning Is Transforming Root Cause Analysis</h3>
+                    <p class="text-graphite text-sm mb-4">What's real, what's hype, and what AI investigation coaching actually does for safety teams in high-hazard industries right now.</p>
+                    <span class="text-apex-500 text-sm font-medium">Read article →</span>
                 </a>
 
                 <!-- Article 1 -->
                 <a href="/blog/peepo-framework-explained.html" class="article-card rounded-xl p-6">
                     <div class="flex items-center gap-2 mb-3">
-                        <span class="bg-cyan-500/20 text-cyan-500 px-2 py-0.5 rounded text-xs font-medium">Methodology</span>
-                        <span class="text-gray-500 text-xs">10 min</span>
+                        <span class="bg-apex-500/10 text-apex-500 px-2 py-0.5 rounded text-xs font-medium">Methodology</span>
+                        <span class="text-graphite text-xs">10 min</span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2 hover:text-cyan-500 transition-colors">PEEPO Framework Explained: The Heart of ICAM Investigation</h3>
-                    <p class="text-gray-400 text-sm mb-4">People, Environment, Equipment, Procedures, Organization — the systematic approach to finding root causes that others miss.</p>
-                    <span class="text-cyan-500 text-sm font-medium">Read article →</span>
+                    <h3 class="text-lg font-semibold mb-2 hover:text-apex-700 transition-colors">PEEPO Framework Explained: The Heart of ICAM Investigation</h3>
+                    <p class="text-graphite text-sm mb-4">People, Environment, Equipment, Procedures, Organization — the systematic approach to finding root causes that others miss.</p>
+                    <span class="text-apex-500 text-sm font-medium">Read article →</span>
                 </a>
                 
                 <!-- Article 2 -->
                 <a href="/blog/root-cause-analysis-mistakes.html" class="article-card rounded-xl p-6">
                     <div class="flex items-center gap-2 mb-3">
-                        <span class="bg-red-500/20 text-red-400 px-2 py-0.5 rounded text-xs font-medium">Common Pitfalls</span>
-                        <span class="text-gray-500 text-xs">8 min</span>
+                        <span class="bg-critical/10 text-critical px-2 py-0.5 rounded text-xs font-medium">Common Pitfalls</span>
+                        <span class="text-graphite text-xs">8 min</span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2 hover:text-cyan-500 transition-colors">5 Root Cause Analysis Mistakes That Kill Your Investigations</h3>
-                    <p class="text-gray-400 text-sm mb-4">You investigated. You implemented corrective actions. Six months later — the same incident happens again. Here's why.</p>
-                    <span class="text-cyan-500 text-sm font-medium">Read article →</span>
+                    <h3 class="text-lg font-semibold mb-2 hover:text-apex-700 transition-colors">5 Root Cause Analysis Mistakes That Kill Your Investigations</h3>
+                    <p class="text-graphite text-sm mb-4">You investigated. You implemented corrective actions. Six months later — the same incident happens again. Here's why.</p>
+                    <span class="text-apex-500 text-sm font-medium">Read article →</span>
                 </a>
                 
                 <!-- Article 3 -->
                 <a href="/blog/why-incident-investigations-fail.html" class="article-card rounded-xl p-6">
                     <div class="flex items-center gap-2 mb-3">
                         <span class="bg-orange-500/20 text-orange-400 px-2 py-0.5 rounded text-xs font-medium">Industry Problem</span>
-                        <span class="text-gray-500 text-xs">12 min</span>
+                        <span class="text-graphite text-xs">12 min</span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2 hover:text-cyan-500 transition-colors">Why Most Incident Investigations Fail to Prevent Recurrence</h3>
-                    <p class="text-gray-400 text-sm mb-4">80% of investigations fail to prevent similar events. Learn the systemic reasons why — and how to fix your investigation process.</p>
-                    <span class="text-cyan-500 text-sm font-medium">Read article →</span>
+                    <h3 class="text-lg font-semibold mb-2 hover:text-apex-700 transition-colors">Why Most Incident Investigations Fail to Prevent Recurrence</h3>
+                    <p class="text-graphite text-sm mb-4">80% of investigations fail to prevent similar events. Learn the systemic reasons why — and how to fix your investigation process.</p>
+                    <span class="text-apex-500 text-sm font-medium">Read article →</span>
                 </a>
                 
                 <!-- Article 4 -->
                 <a href="/blog/paper-vs-digital-investigation.html" class="article-card rounded-xl p-6">
                     <div class="flex items-center gap-2 mb-3">
-                        <span class="bg-green-500/20 text-green-400 px-2 py-0.5 rounded text-xs font-medium">ROI Analysis</span>
-                        <span class="text-gray-500 text-xs">10 min</span>
+                        <span class="bg-growth-500/10 text-growth-700 px-2 py-0.5 rounded text-xs font-medium">ROI Analysis</span>
+                        <span class="text-graphite text-xs">10 min</span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2 hover:text-cyan-500 transition-colors">Paper vs Digital: The True Cost of Manual Incident Investigation</h3>
-                    <p class="text-gray-400 text-sm mb-4">That paper form isn't free. Calculate the hidden costs of manual processes and your potential ROI from investigation software.</p>
-                    <span class="text-cyan-500 text-sm font-medium">Read article →</span>
+                    <h3 class="text-lg font-semibold mb-2 hover:text-apex-700 transition-colors">Paper vs Digital: The True Cost of Manual Incident Investigation</h3>
+                    <p class="text-graphite text-sm mb-4">That paper form isn't free. Calculate the hidden costs of manual processes and your potential ROI from investigation software.</p>
+                    <span class="text-apex-500 text-sm font-medium">Read article →</span>
                 </a>
                 
             </div>
@@ -266,26 +264,26 @@
     <!-- Free Downloads Section -->
     <section class="px-4 pb-12">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-2xl font-bold text-white text-center mb-3">Free Downloads</h2>
-            <p class="text-gray-400 text-center mb-8">Professional templates and checklists used by safety teams in mining, construction, and oil &amp; gas.</p>
+            <h2 class="text-2xl font-bold text-ink text-center mb-3">Free Downloads</h2>
+            <p class="text-graphite text-center mb-8">Professional templates and checklists used by safety teams in mining, construction, and oil &amp; gas.</p>
             <div class="grid md:grid-cols-3 gap-5">
-                <a href="/rca-template-pack.html" class="block bg-navy-800 rounded-xl p-6 border border-cyan-500/30 hover:border-cyan-500/60 transition-all">
+                <a href="/rca-template-pack.html" class="block bg-white rounded-xl p-6 border border-apex-500/30 hover:border-apex-500 transition-all">
                     <div class="text-2xl mb-3">📋</div>
-                    <h3 class="font-bold text-white mb-2">RCA Template Pack</h3>
-                    <p class="text-gray-400 text-sm mb-3">4 templates: 5 Whys, Fishbone, ICAM-aligned RCA, and Investigation Report.</p>
-                    <span class="text-cyan-400 text-sm font-semibold">Download Free →</span>
+                    <h3 class="font-bold text-ink mb-2">RCA Template Pack</h3>
+                    <p class="text-graphite text-sm mb-3">4 templates: 5 Whys, Fishbone, ICAM-aligned RCA, and Investigation Report.</p>
+                    <span class="text-apex-500 text-sm font-semibold">Download Free →</span>
                 </a>
-                <a href="/5-whys-worksheet.html" class="block bg-navy-800 rounded-xl p-6 border border-navy-700 hover:border-cyan-500/40 transition-all">
+                <a href="/5-whys-worksheet.html" class="block bg-white rounded-xl p-6 border border-mist hover:border-apex-500 transition-all">
                     <div class="text-2xl mb-3">🔍</div>
-                    <h3 class="font-bold text-white mb-2">5 Whys Worksheet</h3>
-                    <p class="text-gray-400 text-sm mb-3">Interactive worksheet with worked example and corrective action tracker.</p>
-                    <span class="text-cyan-400 text-sm font-semibold">Download Free →</span>
+                    <h3 class="font-bold text-ink mb-2">5 Whys Worksheet</h3>
+                    <p class="text-graphite text-sm mb-3">Interactive worksheet with worked example and corrective action tracker.</p>
+                    <span class="text-apex-500 text-sm font-semibold">Download Free →</span>
                 </a>
-                <a href="/checklist.html" class="block bg-navy-800 rounded-xl p-6 border border-navy-700 hover:border-cyan-500/40 transition-all">
+                <a href="/checklist.html" class="block bg-white rounded-xl p-6 border border-mist hover:border-apex-500 transition-all">
                     <div class="text-2xl mb-3">✅</div>
-                    <h3 class="font-bold text-white mb-2">ICAM Checklist</h3>
-                    <p class="text-gray-400 text-sm mb-3">25-point checklist for ICAM investigations — from scene preservation to close-out.</p>
-                    <span class="text-cyan-400 text-sm font-semibold">Download Free →</span>
+                    <h3 class="font-bold text-ink mb-2">ICAM Checklist</h3>
+                    <p class="text-graphite text-sm mb-3">25-point checklist for ICAM investigations — from scene preservation to close-out.</p>
+                    <span class="text-apex-500 text-sm font-semibold">Download Free →</span>
                 </a>
             </div>
         </div>
@@ -294,31 +292,31 @@
     <!-- Newsletter CTA -->
     <section class="px-4 pb-20">
         <div class="max-w-4xl mx-auto">
-            <div class="bg-navy-800 rounded-2xl p-8 md:p-12 text-center">
+            <div class="bg-white rounded-2xl p-8 md:p-12 text-center">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4">Get Investigation Insights in Your Inbox</h2>
-                <p class="text-gray-300 mb-6 max-w-xl mx-auto">Join safety professionals getting actionable tips on ICAM methodology, root cause analysis, and investigation best practices.</p>
-                <a href="/#demo" class="inline-block bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-8 py-3 rounded-lg font-semibold transition-colors">Start Free Trial →</a>
+                <p class="text-slate mb-6 max-w-xl mx-auto">Join safety professionals getting actionable tips on ICAM methodology, root cause analysis, and investigation best practices.</p>
+                <a href="/#demo" class="inline-block bg-apex-500 hover:bg-apex-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">Start Free Trial →</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-navy-800 border-t border-navy-700 py-12">
+    <footer class="bg-white border-t border-mist py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-6 md:mb-0">
-                    <picture><source srcset="../assets/logos/logo-03-on-dark.webp" type="image/webp"><img src="../assets/logos/logo-03-on-dark.png" alt="InvestigatePro" class="h-12" loading="lazy"></picture>
+                    <picture><source srcset="../assets/brand/logo-horizontal.svg" type="image/webp"><img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="h-12" loading="lazy"></picture>
                 </div>
-                <div class="flex flex-wrap justify-center gap-6 text-gray-400 text-sm">
-                    <a href="/" class="hover:text-white">Home</a>
-                    <a href="/blog/" class="hover:text-white">Blog</a>
-                    <a href="/privacy.html" class="hover:text-white">Privacy</a>
-                    <a href="/terms.html" class="hover:text-white">Terms</a>
-                    <a href="/security.html" class="hover:text-white">Security</a>
-                    <a href="mailto:hello@investigatepro.app" class="hover:text-white">Contact</a>
+                <div class="flex flex-wrap justify-center gap-6 text-graphite text-sm">
+                    <a href="/" class="hover:text-ink">Home</a>
+                    <a href="/blog/" class="hover:text-ink">Blog</a>
+                    <a href="/privacy.html" class="hover:text-ink">Privacy</a>
+                    <a href="/terms.html" class="hover:text-ink">Terms</a>
+                    <a href="/security.html" class="hover:text-ink">Security</a>
+                    <a href="mailto:hello@investigatepro.app" class="hover:text-ink">Contact</a>
                 </div>
             </div>
-            <div class="mt-8 pt-8 border-t border-navy-700 text-center text-gray-500 text-sm">
+            <div class="mt-8 pt-8 border-t border-mist text-center text-graphite text-sm">
                 © 2026 InvestigatePro. All rights reserved.
             </div>
         </div>

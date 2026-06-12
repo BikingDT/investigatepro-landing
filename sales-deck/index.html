@@ -6,22 +6,22 @@
     <title>InvestigatePro — Sales Deck</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --navy-900: #0C142E;
-            --navy-800: #0F1A3A;
-            --navy-700: #1A2744;
-            --navy-600: #2A3A5C;
-            --cyan-500: #76DCEC;
-            --cyan-400: #88E0EE;
-            --cyan-300: #A8EAF3;
+            --navy-900: #F4F7F9;
+            --navy-800: #FFFFFF;
+            --navy-700: #FFFFFF;
+            --navy-600: #D9E2E8;
+            --cyan-500: #004D40;
+            --cyan-400: #004D40;
+            --cyan-300: #004D40;
             --white: #FFFFFF;
-            --gray-300: #CBD5E1;
-            --gray-500: #64748B;
-            --success: #10B981;
-            --warning: #F59E0B;
-            --error: #EF4444;
+            --gray-300: #D9E2E8;
+            --gray-500: #5A6B76;
+            --success: #4CAF50;
+            --warning: #FFB300;
+            --error: #E53935;
         }
 
         * {
@@ -54,7 +54,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(118, 220, 236, 0.08) 0%, transparent 50%);
+            background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0,77,64,0.08) 0%, transparent 50%);
             pointer-events: none;
         }
 
@@ -151,13 +151,13 @@
         /* Cards */
         .card {
             background: var(--navy-700);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(17,45,60,0.06);
             border-radius: 16px;
             padding: 32px;
         }
 
         .card-highlight {
-            background: linear-gradient(135deg, rgba(118, 220, 236, 0.15) 0%, rgba(118, 220, 236, 0.05) 100%);
+            background: linear-gradient(135deg, rgba(0,77,64,0.15) 0%, rgba(0,77,64,0.05) 100%);
             border: 1px solid var(--cyan-500);
         }
 
@@ -232,7 +232,7 @@
         }
 
         tr:hover td {
-            background: rgba(118, 220, 236, 0.05);
+            background: rgba(0,77,64,0.05);
         }
 
         /* CTA Button */
@@ -294,7 +294,7 @@
         /* Badge */
         .badge {
             display: inline-block;
-            background: rgba(118, 220, 236, 0.2);
+            background: rgba(0,77,64,0.2);
             color: var(--cyan-500);
             padding: 6px 16px;
             border-radius: 20px;
@@ -380,7 +380,7 @@
 
         .pricing-card {
             background: var(--navy-700);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(17,45,60,0.06);
             border-radius: 16px;
             padding: 32px;
             text-align: center;
@@ -431,7 +431,7 @@
 
 <!-- Slide 1: Title -->
 <div class="slide title-slide">
-    <img src="../investigatepro-assets/logos/logo-03-dark-bg.png" alt="InvestigatePro" class="logo">
+    <img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="logo">
     <h1>Investigate <span class="highlight">Smarter</span></h1>
     <p class="subtitle">AI-Powered Incident Investigation for Safety Teams Who Care About Root Cause</p>
     <p style="color: var(--gray-500); margin-top: 60px;">Sales Presentation 2026</p>
@@ -440,7 +440,7 @@
 <!-- Slide 2: The Problem -->
 <div class="slide">
     <div class="slide-header">
-        <picture><source srcset="../investigatepro-assets/logos/logo-03-horizontal.webp" type="image/webp"><img src="../investigatepro-assets/logos/logo-03-horizontal.png" alt="InvestigatePro" class="logo"></picture>
+        <picture><source srcset="../assets/brand/logo-horizontal.svg" type="image/webp"><img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="logo"></picture>
         <span class="slide-number">02</span>
     </div>
     <div class="content">
@@ -452,7 +452,7 @@
                 <div class="quote">
                     "We investigate incidents, but the same things keep happening."
                 </div>
-                <p style="margin-top: 24px;">Safety teams spend weeks filling out forms, but rarely find the real root cause. Incidents get logged. Reports get filed. Nothing changes.</p>
+                <p style="margin-top: 24px;">Safety teams spend weeks filling out forms, but rarely find the causes — and fix the system. Incidents get logged. Reports get filed. Nothing changes.</p>
             </div>
             <div class="content-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                 <div class="card">
@@ -487,7 +487,7 @@
 <!-- Slide 3: The Solution -->
 <div class="slide">
     <div class="slide-header">
-        <picture><source srcset="../investigatepro-assets/logos/logo-03-horizontal.webp" type="image/webp"><img src="../investigatepro-assets/logos/logo-03-horizontal.png" alt="InvestigatePro" class="logo"></picture>
+        <picture><source srcset="../assets/brand/logo-horizontal.svg" type="image/webp"><img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="logo"></picture>
         <span class="slide-number">03</span>
     </div>
     <div class="content">
@@ -497,7 +497,7 @@
         
         <div class="vs" style="margin-top: 40px;">
             <div class="vs-item vs-old">
-                <h4 style="color: #EF4444;">❌ Traditional Tools</h4>
+                <h4 style="color: #E53935;">❌ Traditional Tools</h4>
                 <ul>
                     <li>Blank text boxes</li>
                     <li>No methodology guidance</li>
@@ -507,7 +507,7 @@
             </div>
             <div class="vs-divider">→</div>
             <div class="vs-item vs-new">
-                <h4 style="color: #10B981;">✓ InvestigatePro</h4>
+                <h4 style="color: #4CAF50;">✓ InvestigatePro</h4>
                 <ul>
                     <li>ICAM methodology built-in</li>
                     <li>AI coaching at every step</li>
@@ -526,7 +526,7 @@
 <!-- Slide 4: How It Works -->
 <div class="slide">
     <div class="slide-header">
-        <picture><source srcset="../investigatepro-assets/logos/logo-03-horizontal.webp" type="image/webp"><img src="../investigatepro-assets/logos/logo-03-horizontal.png" alt="InvestigatePro" class="logo"></picture>
+        <picture><source srcset="../assets/brand/logo-horizontal.svg" type="image/webp"><img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="logo"></picture>
         <span class="slide-number">04</span>
     </div>
     <div class="content">
@@ -573,7 +573,7 @@
 <!-- Slide 5: Key Features -->
 <div class="slide">
     <div class="slide-header">
-        <picture><source srcset="../investigatepro-assets/logos/logo-03-horizontal.webp" type="image/webp"><img src="../investigatepro-assets/logos/logo-03-horizontal.png" alt="InvestigatePro" class="logo"></picture>
+        <picture><source srcset="../assets/brand/logo-horizontal.svg" type="image/webp"><img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="logo"></picture>
         <span class="slide-number">05</span>
     </div>
     <div class="content">
@@ -622,7 +622,7 @@
 <!-- Slide 6: Results -->
 <div class="slide">
     <div class="slide-header">
-        <picture><source srcset="../investigatepro-assets/logos/logo-03-horizontal.webp" type="image/webp"><img src="../investigatepro-assets/logos/logo-03-horizontal.png" alt="InvestigatePro" class="logo"></picture>
+        <picture><source srcset="../assets/brand/logo-horizontal.svg" type="image/webp"><img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="logo"></picture>
         <span class="slide-number">06</span>
     </div>
     <div class="content" style="text-align: center;">
@@ -662,7 +662,7 @@
 <!-- Slide 7: Market Position -->
 <div class="slide">
     <div class="slide-header">
-        <picture><source srcset="../investigatepro-assets/logos/logo-03-horizontal.webp" type="image/webp"><img src="../investigatepro-assets/logos/logo-03-horizontal.png" alt="InvestigatePro" class="logo"></picture>
+        <picture><source srcset="../assets/brand/logo-horizontal.svg" type="image/webp"><img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="logo"></picture>
         <span class="slide-number">07</span>
     </div>
     <div class="content">
@@ -715,7 +715,7 @@
 <!-- Slide 8: Why Us -->
 <div class="slide">
     <div class="slide-header">
-        <picture><source srcset="../investigatepro-assets/logos/logo-03-horizontal.webp" type="image/webp"><img src="../investigatepro-assets/logos/logo-03-horizontal.png" alt="InvestigatePro" class="logo"></picture>
+        <picture><source srcset="../assets/brand/logo-horizontal.svg" type="image/webp"><img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="logo"></picture>
         <span class="slide-number">08</span>
     </div>
     <div class="content">
@@ -773,7 +773,7 @@
 <!-- Slide 9: Pricing -->
 <div class="slide">
     <div class="slide-header">
-        <picture><source srcset="../investigatepro-assets/logos/logo-03-horizontal.webp" type="image/webp"><img src="../investigatepro-assets/logos/logo-03-horizontal.png" alt="InvestigatePro" class="logo"></picture>
+        <picture><source srcset="../assets/brand/logo-horizontal.svg" type="image/webp"><img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="logo"></picture>
         <span class="slide-number">09</span>
     </div>
     <div class="content">
@@ -842,7 +842,7 @@
 <!-- Slide 10: Industries -->
 <div class="slide">
     <div class="slide-header">
-        <picture><source srcset="../investigatepro-assets/logos/logo-03-horizontal.webp" type="image/webp"><img src="../investigatepro-assets/logos/logo-03-horizontal.png" alt="InvestigatePro" class="logo"></picture>
+        <picture><source srcset="../assets/brand/logo-horizontal.svg" type="image/webp"><img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="logo"></picture>
         <span class="slide-number">10</span>
     </div>
     <div class="content">
@@ -891,7 +891,7 @@
 <!-- Slide 11: Founder -->
 <div class="slide">
     <div class="slide-header">
-        <picture><source srcset="../investigatepro-assets/logos/logo-03-horizontal.webp" type="image/webp"><img src="../investigatepro-assets/logos/logo-03-horizontal.png" alt="InvestigatePro" class="logo"></picture>
+        <picture><source srcset="../assets/brand/logo-horizontal.svg" type="image/webp"><img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="logo"></picture>
         <span class="slide-number">11</span>
     </div>
     <div class="content">
@@ -931,7 +931,7 @@
 <!-- Slide 12: Next Steps -->
 <div class="slide">
     <div class="slide-header">
-        <picture><source srcset="../investigatepro-assets/logos/logo-03-horizontal.webp" type="image/webp"><img src="../investigatepro-assets/logos/logo-03-horizontal.png" alt="InvestigatePro" class="logo"></picture>
+        <picture><source srcset="../assets/brand/logo-horizontal.svg" type="image/webp"><img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="logo"></picture>
         <span class="slide-number">12</span>
     </div>
     <div class="content" style="text-align: center;">
@@ -973,7 +973,7 @@
 
 <!-- Slide 13: Thank You -->
 <div class="slide title-slide">
-    <img src="../investigatepro-assets/logos/logo-03-dark-bg.png" alt="InvestigatePro" class="logo">
+    <img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="logo">
     <h1>Thank <span class="highlight">You</span></h1>
     <p class="subtitle">Questions?</p>
     <div style="margin-top: 60px;">
