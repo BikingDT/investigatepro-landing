@@ -31,19 +31,19 @@
     ]
 }</script>
 </head>
-<body class="bg-gray-50 text-ink">
+<body class="bg-cloud text-ink">
   <!-- Header -->
-  <header class="bg-primary text-ink">
+  <header class="bg-ink">
     <nav class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
       <a href="/" class="flex items-center gap-2">
-        <div class="h-8 w-8 rounded-lg bg-accent flex items-center justify-center">
-          <span class="text-primary font-bold text-sm">IP</span>
+        <div class="h-8 w-8 rounded-lg bg-mint flex items-center justify-center">
+          <span class="text-white font-bold text-sm">IP</span>
         </div>
         <span class="font-semibold text-lg">InvestigatePro</span>
       </a>
       <div class="flex items-center gap-6">
-        <a href="/faq.html" class="text-slate hover:text-ink text-sm">Help</a>
-        <a href="/status.html" class="text-slate hover:text-ink text-sm">Status</a>
+        <a href="/faq.html" class="text-mist hover:text-white text-sm">Help</a>
+        <a href="/status.html" class="text-mist hover:text-white text-sm">Status</a>
         <a href="https://app.investigatepro.app" class="bg-accent text-primary px-4 py-2 rounded-lg font-medium hover:bg-accent/90 transition text-sm">Sign In</a>
       </div>
     </nav>
@@ -63,7 +63,7 @@
       <form class="flex gap-2 max-w-md mx-auto" action="/api/leads/capture" method="POST">
         <input type="hidden" name="source" value="changelog">
         <input type="email" name="email" placeholder="you@company.com" required class="flex-1 px-4 py-2 rounded-lg border border-mist focus:ring-2 focus:ring-accent focus:border-accent text-sm">
-        <button type="submit" class="bg-primary text-ink px-4 py-2 rounded-lg font-medium hover:bg-primary/90 transition text-sm whitespace-nowrap">Subscribe</button>
+        <button type="submit" class="bg-apex-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-apex-700 transition text-sm whitespace-nowrap">Subscribe</button>
       </form>
     </div>
 
@@ -153,25 +153,25 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-primary text-ink mt-16">
+  <footer class="bg-ink py-12 border-t border-white/10">
     <div class="max-w-6xl mx-auto px-4 py-8">
       <div class="flex flex-wrap justify-between items-center gap-4">
         <div class="flex items-center gap-2">
-          <div class="h-6 w-6 rounded bg-accent flex items-center justify-center">
+          <div class="h-6 w-6 rounded bg-mint flex items-center justify-center">
             <span class="text-primary font-bold text-xs">IP</span>
           </div>
           <span class="font-medium">InvestigatePro</span>
         </div>
-        <div class="flex flex-wrap gap-6 text-sm text-graphite">
-          <a href="/terms.html" class="hover:text-ink">Terms</a>
-          <a href="/privacy.html" class="hover:text-ink">Privacy</a>
-          <a href="/security.html" class="hover:text-ink">Security</a>
-          <a href="/status.html" class="hover:text-ink">Status</a>
-          <a href="/changelog.html" class="hover:text-ink text-accent">Changelog</a>
-          <a href="/faq.html" class="hover:text-ink">Help</a>
+        <div class="flex flex-wrap gap-6 text-sm text-mist/70">
+          <a href="/terms.html" class="hover:text-mint">Terms</a>
+          <a href="/privacy.html" class="hover:text-mint">Privacy</a>
+          <a href="/security.html" class="hover:text-mint">Security</a>
+          <a href="/status.html" class="hover:text-mint">Status</a>
+          <a href="/changelog.html" class="hover:text-mint text-accent">Changelog</a>
+          <a href="/faq.html" class="hover:text-mint">Help</a>
         </div>
       </div>
-      <p class="text-graphite text-sm mt-6">© 2026 InvestigatePro. All rights reserved.</p>
+      <p class="text-mist/70 text-sm mt-6">© 2026 InvestigatePro. All rights reserved.</p>
     </div>
   </footer>
 

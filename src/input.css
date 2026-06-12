@@ -9,7 +9,7 @@
 
   /* Neutrals */
   --color-cloud: #F4F7F9;
-  --color-mist: #D9E2E8;
+  --color-mist: #C9D6DD;
   --color-ink: #112D3C;
   --color-slate: #37474F;
   --color-graphite: #5A6B76;
@@ -41,6 +41,7 @@
 
   /* Signal Mint — dark backgrounds only */
   --color-mint: #64FFDA;
+  --color-mint-600: #2BD9B5;
 
   /* Semantic */
   --color-success: #4CAF50;
