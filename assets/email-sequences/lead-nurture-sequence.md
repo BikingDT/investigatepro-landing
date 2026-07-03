@@ -438,7 +438,7 @@ InvestigatePro makes that change systematic:
 ✅ Professional reporting for leadership and regulators
 
 We're offering founding customers:
-- 3 months free
+- 50% off year one
 - White-glove onboarding
 - Priority feature requests
 

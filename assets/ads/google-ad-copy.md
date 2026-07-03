@@ -236,7 +236,7 @@
 
 **Descriptions:**
 1. Your investigation work is still there. Reactivate your account and pick up where you left off.
-2. Founding customer offer: 3 months free. Limited time. Start transforming your investigations.
+2. Founding customer offer: 50% off year one. Limited time. Start transforming your investigations.
 
 ---
 

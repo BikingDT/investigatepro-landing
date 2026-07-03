@@ -122,21 +122,22 @@ Historical data enables immediate pattern recognition and organizational learnin
 ## Pricing & Plans
 
 ### How much does InvestigatePro cost?
-We offer three plans:
-- **Starter:** $49/month — Up to 3 users, core features
-- **Team:** $149/month — Up to 10 users, AI coaching, analytics
-- **Enterprise:** $349/month — Unlimited users, advanced features, dedicated support
+We offer four plans:
+- **Starter:** $149/month — Up to 5 users, full ICAM methodology, evidence management
+- **Professional:** $349/month — Up to 20 users, AI Root Cause Coach, PEEPO charts, advanced analytics
+- **Business:** $749/month — Unlimited users, SSO/SAML, API access, mobile apps, dedicated success manager
+- **Enterprise:** from ~$1,500/month — 100+ users or multi-site, custom scope
 
-All plans include unlimited investigations. [See full pricing →]
+All plans include unlimited investigations. Annual billing saves 15%. [See full pricing →]
 
 ### Is there a free trial?
-Yes. We offer a 14-day free trial of the Team plan. No credit card required to start.
+Yes. We offer a 14-day free trial of the Professional plan. No credit card required to start.
 
 For enterprise evaluations, we offer extended pilots with dedicated support.
 
 ### What's included in the founding customer offer?
 Founding customers receive:
-- **3 months free** on any plan
+- **50% off year one** on any plan
 - **White-glove onboarding** (typically $2,500 value)
 - **Priority feature requests** — Help shape the product
 - **Locked-in pricing** — Current rates guaranteed for 2 years

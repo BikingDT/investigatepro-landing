@@ -193,7 +193,7 @@ Sound good? Anything you'd like to add to that agenda?"
 "You mentioned [trigger/timeline]. To hit that, we'd want to start [timeframe].
 
 We're offering founding customers:
-- 3 months free
+- 50% off year one
 - White-glove onboarding
 - Direct line to our team for feature requests"
 

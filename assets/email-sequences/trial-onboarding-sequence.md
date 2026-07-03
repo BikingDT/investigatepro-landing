@@ -249,7 +249,7 @@ You've got 8 days left on your trial. Quick question:
 
 **Is InvestigatePro solving the problem you came here for?**
 
-If yes → Let's talk about getting your team set up. We're offering founding customers 3 months free + white-glove onboarding.
+If yes → Let's talk about getting your team set up. We're offering founding customers 50% off year one + white-glove onboarding.
 
 If not sure → Let me know what's missing. Maybe we can help, maybe we can't — but I'd rather know.
 
@@ -284,7 +284,7 @@ If this is working for you, here's what I'd suggest:
 
 **Next step:** Let's schedule 15 minutes to:
 1. Answer any questions about scaling to your team
-2. Discuss the founding customer offer (3 months free)
+2. Discuss the founding customer offer (50% off year one)
 3. Plan your rollout timeline
 
 [Book a call →]
@@ -318,7 +318,7 @@ A few possibilities:
 
 **If it's not the right fit:** I'd love to understand why. Your feedback helps us improve.
 
-**If you're ready to move forward:** Let's talk. The founding customer offer (3 months free) is still available.
+**If you're ready to move forward:** Let's talk. The founding customer offer (50% off year one) is still available.
 
 What would be most helpful?
 
@@ -343,7 +343,7 @@ I want to make sure you have everything you need to make a decision.
 
 **If you're ready to continue:**
 - [Upgrade now] — Keep your data, keep your settings
-- Founding customer offer still available: 3 months free
+- Founding customer offer still available: 50% off year one
 - [Book a quick call] if you have questions
 
 **If you need more time:**
@@ -377,7 +377,7 @@ Your InvestigatePro trial has ended — but your data and settings are preserved
 
 If you want to continue:
 - [Reactivate now →] — Pick up right where you left off
-- The founding customer offer (3 months free) is still available this week
+- The founding customer offer (50% off year one) is still available this week
 
 If the timing isn't right:
 - No worries. I'll check back in 30 days before your data is deleted.

@@ -271,7 +271,7 @@ Across 1,000+ investigations, the same organizational factors appear:
 - Corrective action tracking
 - Cross-incident pattern recognition
 
-"We're offering webinar attendees 3 months free if it's a fit."
+"We're offering webinar attendees 50% off year one if it's a fit."
 
 [Book a Demo →]
 
@@ -314,7 +314,7 @@ Here's everything we promised:
 📘 **ICAM Guide:** [Link]
 
 If you'd like to explore InvestigatePro for your team, I'm offering webinar attendees:
-- 3 months free
+- 50% off year one
 - White-glove onboarding
 - Priority support
 

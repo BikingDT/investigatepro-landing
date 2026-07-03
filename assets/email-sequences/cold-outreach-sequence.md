@@ -32,7 +32,7 @@ Would you be open to a 15-minute demo to see how it works for {{Industry}} compa
 Best,
 {{SenderName}}
 
-P.S. We're offering founding customers 3 months free + white-glove onboarding. Happy to share details.
+P.S. We're offering founding customers 50% off year one + white-glove onboarding. Happy to share details.
 
 **Variables:** {{FirstName}}, {{Company}}, {{Industry}}, {{SenderName}}
 
@@ -204,7 +204,7 @@ InvestigatePro helps {{Industry}} safety teams:
 ✓ Track corrective actions to completion
 ✓ Build organizational learning over time
 
-We're offering founding customers 3 months free + priority support.
+We're offering founding customers 50% off year one + priority support.
 
 Worth 15 minutes to see if it fits?
 
