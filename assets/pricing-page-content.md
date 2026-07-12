@@ -15,7 +15,7 @@
 
 - **Annual billing = 15% off.** Exact billed amounts: Starter $1,519.80/yr · Professional $3,559.80/yr · Business $7,639.80/yr (display convention rounds the per-month equivalent: $127/$297/$637).
 - **AI starts at Professional** — Starter card shows AI Root Cause Coach crossed out (upsell cue).
-- 14-day free trial, no credit card. All paid CTAs are demo-led (cal.com/devon-turner-investigatepro/15min).
+- 14-day free trial, no credit card. All paid CTAs are demo-led (cal.com/investigatepro/15min).
 
 ## Founding Customer Offer
 
