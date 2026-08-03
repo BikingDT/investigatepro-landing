@@ -79,7 +79,7 @@ InvestigatePro generates professional reports for multiple audiences:
 - **OSHA/regulatory formats** — Compliance documentation
 - **Trend reports** — Patterns across incidents
 - **Corrective action status** — What's open, overdue, completed
-- **Custom exports** — Excel, PDF, API access
+- **Custom exports** — Excel, PDF, and scoped data exchange on Business and Enterprise
 
 ---
 
@@ -125,7 +125,7 @@ Historical data enables immediate pattern recognition and organizational learnin
 We offer four plans:
 - **Starter:** $149/month — Up to 5 users, full ICAM methodology, evidence management
 - **Professional:** $349/month — Up to 20 users, AI Root Cause Coach, PEEPO charts, advanced analytics
-- **Business:** $749/month — Unlimited users, SSO/SAML, API access, mobile apps, dedicated success manager
+- **Business:** $749/month — Up to 100 users, SSO/SAML, scoped data exchange, dedicated success manager
 - **Enterprise:** from ~$1,500/month — 100+ users or multi-site, custom scope
 
 All plans include unlimited investigations. Annual billing saves 15%. [See full pricing →]

@@ -52,8 +52,18 @@
         {
             "@type": "Offer",
             "name": "Business",
-            "description": "Complete platform with mobile apps",
-            "price": "549",
+            "description": "Up to 100 users, SSO/SAML and scoped data exchange",
+            "price": "749",
+            "priceCurrency": "USD",
+            "priceValidUntil": "2027-12-31",
+            "availability": "https://schema.org/InStock",
+            "url": "https://investigatepro.app/pricing.html"
+        },
+        {
+            "@type": "Offer",
+            "name": "Enterprise",
+            "description": "100+ users or multi-site, SLA-backed, on-premise option",
+            "price": "1500",
             "priceCurrency": "USD",
             "priceValidUntil": "2027-12-31",
             "availability": "https://schema.org/InStock",
@@ -127,6 +137,7 @@
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="/#solutions" class="text-mist hover:text-white transition-colors duration-200">Solutions</a>
                     <a href="/#features" class="text-mist hover:text-white transition-colors duration-200">Features</a>
+                    <a href="/platform.html" class="text-mist hover:text-white transition-colors duration-200">Platform</a>
                     <a href="/pricing.html" class="text-apex-500 font-semibold">Pricing</a>
                     <a href="/apps/" class="text-mist hover:text-white transition-colors duration-200">Apps</a>
                     <a href="/blog/" class="text-mist hover:text-white transition-colors duration-200">Blog</a>
@@ -169,7 +180,7 @@
             <div class="max-w-3xl mx-auto mb-10 text-center">
                 <p class="rounded-lg border border-mist bg-white px-6 py-3 text-slate"><strong class="text-ink">Founding customer offer:</strong> 50% off your first year &mdash; limited cohort. <a href="https://cal.com/investigatepro/15min" class="text-apex-500 hover:underline font-medium">Book a demo</a></p>
             </div>
-            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
                 
                 <!-- Starter -->
                 <div class="glass-card rounded-xl p-8">
@@ -289,7 +300,7 @@
                             <svg class="w-5 h-5 text-apex-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                             </svg>
-                            <strong>Unlimited users</strong>
+                            <strong>Up to 100 users</strong>
                         </li>
                         <li class="flex items-center text-slate">
                             <svg class="w-5 h-5 text-apex-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -307,7 +318,7 @@
                             <svg class="w-5 h-5 text-apex-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                             </svg>
-                            Custom integrations & API
+                            Scoped data exchange (per integration)
                         </li>
                         <li class="flex items-center text-slate">
                             <svg class="w-5 h-5 text-apex-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -326,11 +337,55 @@
                         Contact Sales
                     </a>
                 </div>
+
+                <!-- Enterprise -->
+                <div class="glass-card rounded-xl p-8">
+                    <h3 class="font-heading text-lg font-semibold text-slate mb-2">Enterprise</h3>
+                    <p class="text-graphite text-sm mb-4">For multi-site operations and 100+ users</p>
+                    <div class="mb-6">
+                        <span class="text-graphite text-sm">From </span><span class="text-3xl font-heading font-bold">$1,500</span><span class="text-graphite text-sm">/month</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-slate">
+                            <svg class="w-5 h-5 text-apex-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <strong>100+ users or multi-site</strong>
+                        </li>
+                        <li class="flex items-center text-slate">
+                            <svg class="w-5 h-5 text-apex-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Everything in Business
+                        </li>
+                        <li class="flex items-center text-slate">
+                            <svg class="w-5 h-5 text-apex-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            SLA-backed support
+                        </li>
+                        <li class="flex items-center text-slate">
+                            <svg class="w-5 h-5 text-apex-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Multi-site rollout
+                        </li>
+                        <li class="flex items-center text-slate">
+                            <svg class="w-5 h-5 text-apex-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            On-premise option
+                        </li>
+                    </ul>
+                    <a href="https://cal.com/investigatepro/15min" class="block text-center border border-apex-500 text-apex-500 hover:bg-apex-500/10 px-6 py-3 rounded-lg font-semibold transition-all duration-200">
+                        Talk to Us
+                    </a>
+                </div>
             </div>
             
-            <!-- Enterprise callout -->
-            <div class="mt-12 text-center">
-                <p class="text-graphite">Enterprise plans for 100+ users or multiple sites start at ~$1,500/month. <a href="https://cal.com/investigatepro/15min" class="text-apex-500 hover:underline font-medium">Talk to us</a></p>
+            <div class="mt-10 text-center">
+                <p class="text-graphite text-sm">All plans billed per organisation, not per seat. Annual billing saves 15%.</p>
+                <p class="mt-3"><a href="/platform.html#capabilities" class="text-apex-500 hover:underline font-medium">See exactly what each tier includes &rarr;</a></p>
             </div>
         </div>
     </section>
@@ -348,72 +403,98 @@
                             <th class="py-4 text-center text-graphite font-medium">Starter</th>
                             <th class="py-4 text-center text-apex-500 font-medium">Professional</th>
                             <th class="py-4 text-center text-graphite font-medium">Business</th>
+                            <th class="py-4 text-center text-graphite font-medium">Enterprise</th>
                         </tr>
                     </thead>
-                    <tbody class="text-slate">
+                    <tbody>
                         <tr class="border-b border-mist">
                             <td class="py-4">Users</td>
                             <td class="py-4 text-center">5</td>
                             <td class="py-4 text-center">20</td>
-                            <td class="py-4 text-center">Unlimited</td>
+                            <td class="py-4 text-center">Up to 100</td>
+                            <td class="py-4 text-center">100+ / multi-site</td>
                         </tr>
                         <tr class="border-b border-mist">
                             <td class="py-4">ICAM methodology</td>
-                            <td class="py-4 text-center text-apex-500">✓</td>
-                            <td class="py-4 text-center text-apex-500">✓</td>
-                            <td class="py-4 text-center text-apex-500">✓</td>
+                            <td class="py-4 text-center text-apex-500">&check;</td>
+                            <td class="py-4 text-center text-apex-500">&check;</td>
+                            <td class="py-4 text-center text-apex-500">&check;</td>
+                            <td class="py-4 text-center text-apex-500">&check;</td>
                         </tr>
                         <tr class="border-b border-mist">
                             <td class="py-4">Evidence management</td>
-                            <td class="py-4 text-center text-apex-500">✓</td>
-                            <td class="py-4 text-center text-apex-500">✓</td>
-                            <td class="py-4 text-center text-apex-500">✓</td>
+                            <td class="py-4 text-center text-apex-500">&check;</td>
+                            <td class="py-4 text-center text-apex-500">&check;</td>
+                            <td class="py-4 text-center text-apex-500">&check;</td>
+                            <td class="py-4 text-center text-apex-500">&check;</td>
+                        </tr>
+                        <tr class="border-b border-mist">
+                            <td class="py-4">Board &amp; statutory reports</td>
+                            <td class="py-4 text-center text-apex-500">&check;</td>
+                            <td class="py-4 text-center text-apex-500">&check;</td>
+                            <td class="py-4 text-center text-apex-500">&check;</td>
+                            <td class="py-4 text-center text-apex-500">&check;</td>
                         </tr>
                         <tr class="border-b border-mist">
                             <td class="py-4">AI Root Cause Coach</td>
-                            <td class="py-4 text-center text-graphite">—</td>
-                            <td class="py-4 text-center text-apex-500">✓</td>
-                            <td class="py-4 text-center text-apex-500">✓</td>
+                            <td class="py-4 text-center text-graphite">&mdash;</td>
+                            <td class="py-4 text-center text-apex-500">&check;</td>
+                            <td class="py-4 text-center text-apex-500">&check;</td>
+                            <td class="py-4 text-center text-apex-500">&check;</td>
                         </tr>
                         <tr class="border-b border-mist">
                             <td class="py-4">PEEPO charts</td>
-                            <td class="py-4 text-center text-graphite">—</td>
-                            <td class="py-4 text-center text-apex-500">✓</td>
-                            <td class="py-4 text-center text-apex-500">✓</td>
+                            <td class="py-4 text-center text-graphite">&mdash;</td>
+                            <td class="py-4 text-center text-apex-500">&check;</td>
+                            <td class="py-4 text-center text-apex-500">&check;</td>
+                            <td class="py-4 text-center text-apex-500">&check;</td>
                         </tr>
                         <tr class="border-b border-mist">
                             <td class="py-4">Advanced analytics</td>
-                            <td class="py-4 text-center text-graphite">—</td>
-                            <td class="py-4 text-center text-apex-500">✓</td>
-                            <td class="py-4 text-center text-apex-500">✓</td>
+                            <td class="py-4 text-center text-graphite">&mdash;</td>
+                            <td class="py-4 text-center text-apex-500">&check;</td>
+                            <td class="py-4 text-center text-apex-500">&check;</td>
+                            <td class="py-4 text-center text-apex-500">&check;</td>
                         </tr>
                         <tr class="border-b border-mist">
                             <td class="py-4">SSO / SAML</td>
-                            <td class="py-4 text-center text-graphite">—</td>
-                            <td class="py-4 text-center text-graphite">—</td>
-                            <td class="py-4 text-center text-apex-500">✓</td>
+                            <td class="py-4 text-center text-graphite">&mdash;</td>
+                            <td class="py-4 text-center text-graphite">&mdash;</td>
+                            <td class="py-4 text-center text-apex-500">&check;</td>
+                            <td class="py-4 text-center text-apex-500">&check;</td>
                         </tr>
                         <tr class="border-b border-mist">
                             <td class="py-4">Mobile apps</td>
-                            <td class="py-4 text-center text-graphite">—</td>
-                            <td class="py-4 text-center text-graphite">—</td>
-                            <td class="py-4 text-center text-apex-500">✓</td>
+                            <td class="py-4 text-center text-graphite">&mdash;</td>
+                            <td class="py-4 text-center text-graphite">&mdash;</td>
+                            <td class="py-4 text-center text-apex-500">&check;</td>
+                            <td class="py-4 text-center text-apex-500">&check;</td>
                         </tr>
                         <tr class="border-b border-mist">
-                            <td class="py-4">API access</td>
-                            <td class="py-4 text-center text-graphite">—</td>
-                            <td class="py-4 text-center text-graphite">—</td>
-                            <td class="py-4 text-center text-apex-500">✓</td>
+                            <td class="py-4">Data exchange <span class="text-graphite">*</span></td>
+                            <td class="py-4 text-center text-graphite">&mdash;</td>
+                            <td class="py-4 text-center text-graphite">&mdash;</td>
+                            <td class="py-4 text-center">Scoped</td>
+                            <td class="py-4 text-center">Scoped</td>
                         </tr>
-                        <tr>
+                        <tr class="border-b border-mist">
                             <td class="py-4">Support</td>
                             <td class="py-4 text-center">Email</td>
                             <td class="py-4 text-center">Priority</td>
                             <td class="py-4 text-center">Dedicated</td>
+                            <td class="py-4 text-center">SLA-backed</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4">Deployment</td>
+                            <td class="py-4 text-center">Hosted</td>
+                            <td class="py-4 text-center">Hosted</td>
+                            <td class="py-4 text-center">Hosted</td>
+                            <td class="py-4 text-center">Hosted or on-premise</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+            <p class="mt-6 text-sm text-graphite">* Data exchange with an existing EHS platform is delivered as a scoped export and import contract, built per integration &mdash; not a self-serve API. <a href="/platform.html#capabilities" class="text-apex-500 hover:underline">See the full capability inventory</a>.</p>
         </div>
     </section>
 
@@ -567,5 +648,6 @@
       window.addEventListener('resize',function(){if(window.innerWidth>=768)setOpen(false);});
     })();
     </script>
+    <script src="/analytics.js"></script>
 </body>
 </html>
