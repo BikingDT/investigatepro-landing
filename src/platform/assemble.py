@@ -126,6 +126,9 @@ MODULES = [
         (0, "Data exchange",
          "There is no self-serve public API today. Exchange with an existing EHS platform is a scoped export and "
          "import contract, built per integration. Not SOC&nbsp;2 or ISO&nbsp;27001 certified."),
+        (0, "Mobile field capture",
+         "Companion apps for field capture are in build and not in service today. The web application is "
+         "responsive and works on a phone browser; anything beyond that is roadmap, not product."),
     ]),
 ]
 
