@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#112D3C">
-    <title>InvestigatePro — AI Incident Investigation with ICAM</title>
-    <meta name="description" content="AI-powered incident investigation with real ICAM methodology. Used by mining, construction, and manufacturing safety teams. Book a free demo.">
-    <link rel="icon" type="image/png" href="assets/brand/favicon-32.png">
-    
-    <!-- Open Graph / Social -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://investigatepro.app/">
-    <meta property="og:title" content="InvestigatePro — AI-Powered Incident Investigation Software">
-    <meta property="og:description" content="The first incident investigation platform with real ICAM methodology and AI coaching. Find root causes faster.">
-    <meta property="og:image" content="https://investigatepro.app/assets/brand/og-image.png">
-    <meta name="twitter:card" content="summary_large_image">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://investigatepro.app/">
-    
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">{
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InvestigatePro — AI Incident Investigation with ICAM</title>
+<meta name="description" content="AI-powered incident investigation with real ICAM methodology. Used by mining, construction, and manufacturing safety teams. Book a free demo.">
+<link rel="canonical" href="https://investigatepro.app/">
+<meta property="og:title" content="InvestigatePro — AI Incident Investigation with ICAM">
+<meta property="og:description" content="AI-powered incident investigation with real ICAM methodology. Used by mining, construction, and manufacturing safety teams. Book a free demo.">
+<meta property="og:image" content="https://investigatepro.app/assets/brand/og-image.png">
+<meta property="og:url" content="https://investigatepro.app/">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/assets/brand/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="/assets/css/ip2.css">
+<script type="application/ld+json">{
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "InvestigatePro",
@@ -45,7 +43,7 @@
         "url": "https://investigatepro.app"
     }
 }</script>
-    <script type="application/ld+json">{
+<script type="application/ld+json">{
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "InvestigatePro",
@@ -62,131 +60,7 @@
         "availableLanguage": "English"
     }
 }</script>
-    
-    <!-- Fonts: Brand Pairing (Montserrat + Inter) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- CSS: preload + async to eliminate render-blocking -->
-    <link rel="stylesheet" href="assets/css/styles.min.css">
-
-    <!-- Google Fonts: async load to avoid render-blocking -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
-    
-    <style>
-        /* Smooth transitions - 200-300ms per UX guidelines */
-        * {
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        /* Vibrant gradient backgrounds for glassmorphism */
-        .gradient-hero {background:linear-gradient(180deg,#EBF1F0 0%,#F4F7F9 45%,#FFFFFF 100%)}
-        
-        .gradient-accent {
-            background: linear-gradient(135deg,#00695C 0%,#004D40 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .glow-cyan {
-            box-shadow: 0 0 40px rgba(0,77,64,0.25);
-        }
-        
-        .glow-cyan-strong {
-            box-shadow: 0 0 60px rgba(0,77,64,0.35);
-        }
-        
-        /* === GLASSMORPHISM SYSTEM === */
-        
-        /* Primary glass - cards and containers */
-        .glass{background:#FFFFFF;border:1px solid #C9D6DD;box-shadow:0 1px 3px rgba(17,45,60,.08),0 8px 24px rgba(17,45,60,.05)}
-        
-        /* Glass with cyan tint */
-        .glass-cyan{background:#FFFFFF;border:1px solid #C9D6DD;box-shadow:0 1px 3px rgba(17,45,60,.08),0 8px 24px rgba(17,45,60,.05);border-color:#739D96}
-        
-        /* Light glass for buttons/overlays */
-        .glass-light{background:#FFFFFF;border:1px solid #C9D6DD;box-shadow:0 1px 3px rgba(17,45,60,.08)}
-        
-        /* Dark glass for navigation */
-        .glass-dark {background:rgba(255,255,255,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(217,226,232,.8)}
-        
-        /* Glass card with shine effect */
-        .glass-card{background:#FFFFFF;border:1px solid #C9D6DD;box-shadow:0 1px 3px rgba(17,45,60,.08),0 8px 24px rgba(17,45,60,.05);position:relative;overflow:hidden}
-        
-        /* Shine/reflection effect */
-        .glass-card::before{content:none}
-        
-        .glass-card:hover::before{content:none}
-        
-        /* Glass hover state */
-        .glass-hover:hover{border-color:#739D96;box-shadow:0 4px 14px rgba(17,45,60,.14);transform:translateY(-2px)}
-        
-        /* Frosted panel - stronger blur */
-        .glass-frosted{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);box-shadow:0 8px 32px rgba(0,0,0,.25)}
-        
-        /* Trust badges with glass */
-        .trust-badge {background:#FFFFFF;border:1px solid #C9D6DD;box-shadow:0 1px 3px rgba(17,45,60,.1)}
-        
-        /* Glass button */
-        .btn-glass {
-            background: linear-gradient(135deg, rgba(17,45,60,0.09) 0%, rgba(17,45,60,0.048) 100%);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(17,45,60,0.12);
-            box-shadow: 
-                0 4px 15px rgba(17,45,60,0.06),
-                inset 0 1px 0 rgba(17,45,60,0.15);
-        }
-        
-        .btn-glass:hover {
-            background: linear-gradient(135deg, rgba(17,45,60,0.12) 0%, rgba(17,45,60,0.072) 100%);
-            border-color: rgba(17,45,60,0.18);
-            box-shadow: 
-                0 6px 20px rgba(17,45,60,0.08),
-                inset 0 1px 0 rgba(17,45,60,0.18);
-        }
-        
-        /* Floating glass orbs for background decoration */
-        .glass-orb {
-            position: absolute;
-            border-radius: 50%;
-            background: radial-gradient(circle at 30% 30%, rgba(0,77,64,0.2), transparent 70%);
-            filter: blur(40px);
-            pointer-events: none;
-        }
-        
-        /* Focus states for accessibility */
-        button:focus-visible, a:focus-visible, input:focus-visible {
-            outline: 3px solid #004D40;
-            outline-offset: 2px;
-        }
-        
-        /* Reduced motion */
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-        
-        /* Logo carousel */
-        .logo-scroll {
-            animation: scroll 30s linear infinite;
-        }
-        
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        
-        /* Industry tabs */
-        .industry-tab.active{background:#004D40;border-color:#004D40;color:#FFFFFF}
-    </style>
-
-    <!-- Structured Data: Breadcrumb -->
-    <script type="application/ld+json">{
+<script type="application/ld+json">{
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -198,1227 +72,371 @@
         }
     ]
 }</script>
-<style>html{color-scheme:light}.skip-link{position:absolute;left:-9999px;top:0;z-index:100;background:#004D40;color:#FFFFFF;padding:12px 20px;border-radius:0 0 8px 0;font-weight:600}.skip-link:focus{left:0}</style>
-<style id="ip-chrome">
-nav.ip-nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(17,45,60,.95);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.1);font-family:'Inter',ui-sans-serif,system-ui,sans-serif;margin:0;padding:0;box-shadow:none}
-.ip-nav-in{max-width:80rem;margin:0 auto;padding:0 1rem}
-@media(min-width:640px){.ip-nav-in{padding:0 1.5rem}}
-@media(min-width:1024px){.ip-nav-in{padding:0 2rem}}
-.ip-nav-row{display:flex;justify-content:space-between;align-items:center;padding:12px 0}
-nav.ip-nav a{text-decoration:none}
-.ip-logo{display:flex;align-items:center;padding:0}
-.ip-logo img,.ip-fbrand img{height:48px;width:auto;display:block}
-.ip-links{display:none;align-items:center;gap:2rem}
-@media(min-width:768px){.ip-links{display:flex}}
-nav.ip-nav .ip-links a{color:#C9D6DD;font-size:16px;font-weight:400;transition:color .2s;padding:2px 0}
-nav.ip-nav .ip-links a:hover{color:#FFFFFF}
-nav.ip-nav .ip-links a[aria-current="page"]{color:#FFFFFF;font-weight:600;box-shadow:inset 0 -2px 0 #64FFDA}
-.ip-right{display:flex;align-items:center;gap:1rem}
-nav.ip-nav .ip-login{display:none;color:#C9D6DD;transition:color .2s}
-nav.ip-nav .ip-login:hover{color:#FFFFFF}
-@media(min-width:640px){nav.ip-nav .ip-login{display:inline}}
-nav.ip-nav .ip-cta{background:#64FFDA;color:#112D3C;padding:10px 20px;border-radius:8px;font-weight:600;transition:background .2s;white-space:nowrap}
-nav.ip-nav .ip-cta:hover{background:#2BD9B5}
-body.ip-pad{padding-top:72px}
-.mm-btn{display:none;background:none;border:0;color:#C9D6DD;padding:10px;margin-left:4px;cursor:pointer;border-radius:8px}
-.mm-btn:hover{color:#FFFFFF;background:rgba(255,255,255,0.08)}
-.mm-panel{display:none;position:fixed;top:0;left:0;right:0;z-index:40;background:rgba(17,45,60,.98);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.1);padding:96px 24px 24px;max-height:100vh;overflow-y:auto}
-.mm-panel a{display:block;padding:14px 8px;color:#C9D6DD;font-size:18px;font-weight:500;border-bottom:1px solid rgba(255,255,255,0.08);text-decoration:none}
-.mm-panel a:hover{color:#FFFFFF}
-.mm-panel a[aria-current="page"]{color:#64FFDA}
-.mm-panel a.mm-cta{margin-top:16px;background:#64FFDA;color:#112D3C;text-align:center;border-radius:10px;font-weight:700;border-bottom:0;padding:14px}
-.mm-open .mm-panel{display:block}
-@media(max-width:767px){.mm-btn{display:inline-flex;align-items:center}}
-body.mm-noscroll{overflow:hidden}
-footer.ip-footer{background:#112D3C;border-top:1px solid rgba(255,255,255,.1);padding:48px 0 32px;font-family:'Inter',ui-sans-serif,system-ui,sans-serif;margin-top:0}
-.ip-foot-in{max-width:80rem;margin:0 auto;padding:0 1rem}
-@media(min-width:640px){.ip-foot-in{padding:0 1.5rem}}
-@media(min-width:1024px){.ip-foot-in{padding:0 2rem}}
-.ip-fgrid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
-@media(min-width:768px){.ip-fgrid{grid-template-columns:2fr 1fr 1fr 1fr}}
-.ip-fbrand img{margin-bottom:12px}
-.ip-fbrand p{color:rgba(201,214,221,.7);font-size:14px;margin:0;max-width:280px;line-height:1.6}
-.ip-fh{color:#FFFFFF;font-weight:600;font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin:0 0 12px;font-family:'Montserrat','Inter',sans-serif}
-footer.ip-footer a{display:block;color:rgba(201,214,221,.7);font-size:14px;padding:5px 0;text-decoration:none;transition:color .2s}
-footer.ip-footer a:hover{color:#64FFDA}
-.ip-fbot{margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);color:rgba(201,214,221,.7);font-size:13px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
-.ip-fbot a{display:inline;padding:0}
-nav.ip-nav *,nav.ip-nav,footer.ip-footer *,footer.ip-footer,.mm-panel *{box-sizing:border-box}
-nav.ip-nav img,footer.ip-footer img{max-width:none}
-.ip-nav-row{min-width:0}
-@media(max-width:420px){.ip-logo img{height:40px!important}nav.ip-nav .ip-cta{padding:9px 14px;font-size:15px}}
-@media(max-width:374px){.ip-logo img{height:34px!important}nav.ip-nav .ip-cta{padding:8px 11px;font-size:14px}}
-@media print{nav.ip-nav,footer.ip-footer,.mm-btn,.mm-panel{display:none!important}body.ip-pad{padding-top:0}}
-</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Devon Turner", "jobTitle": "Founder", "url": "https://investigatepro.app/#founder", "worksFor": {"@type": "Organization", "name": "InvestigatePro", "url": "https://investigatepro.app"}, "description": "Founder of InvestigatePro. 15+ years leading mining safety across Africa and the Middle East, with an ICAM specialism.", "knowsAbout": ["ICAM investigation", "incident investigation", "mining safety"]}</script>
 </head>
-<body class="font-sans antialiased bg-cloud text-ink">
-<!-- Site chrome: unified navigation -->
-<nav class="ip-nav">
-  <div class="ip-nav-in">
-    <div class="ip-nav-row">
-      <a href="/" class="ip-logo" aria-label="InvestigatePro home"><img src="/assets/brand/logo-horizontal-white.svg" alt="InvestigatePro" width="826" height="168" style="height:48px;width:auto"></a>
-      <div class="ip-links">
-        <a href="/#solutions">Solutions</a>
-        <a href="/#features">Features</a>
-        <a href="/platform.html">Platform</a>
-        <a href="/pricing.html">Pricing</a>
-        <a href="/apps/">Apps</a>
-        <a href="/blog/">Blog</a>
-      </div>
-      <div class="ip-right">
-        <a href="https://app.investigatepro.app/login" class="ip-login">Login</a>
-        <a href="https://cal.com/investigatepro/15min" class="ip-cta">Book Demo</a>
-      </div>
+<body class="ip2-pad">
+<nav class="ip2-nav" aria-label="Main">
+  <div class="ip2-nav-row">
+    <a href="/" class="ip2-logo" aria-label="InvestigatePro home"><span style="color:#64FFDA;display:inline-flex"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="M15.5 15.5 L21 21"></path><path d="M8 10.5h5M10.5 8v5"></path></svg></span><span class="l1">INVESTIGATE</span><span class="l2">PRO</span></a>
+    <div class="ip2-links">
+      <a href="/platform.html">Platform</a><a href="/pricing.html">Pricing</a><a href="/resources.html">Resources</a><a href="/blog/">Blog</a>
+      <a href="https://app.investigatepro.app/login" class="ip2-login">Login</a>
+      <a href="/#pilot" class="ip2-cta">Start a pilot</a>
     </div>
+    <button class="mm-btn" aria-expanded="false" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
+  </div>
+  <div class="mm-panel">
+    <a href="/platform.html">Platform</a><a href="/pricing.html">Pricing</a><a href="/resources.html">Resources</a><a href="/blog/">Blog</a>
+    <a href="https://app.investigatepro.app/login" class="ip2-login-m">Login</a>
+    <a href="/#pilot" class="btn btn-primary">Start a pilot</a>
+    <a href="https://cal.com/investigatepro/15min" class="btn btn-outline">Book a 15-minute demo</a>
   </div>
 </nav>
-    <a href="#main" class="skip-link">Skip to content</a>
+<main>
 
+<div id="ip2-progress" aria-hidden="true"></div>
+<nav class="rail" aria-label="Section progress">
+  <a href="#hero" data-for="hero" class="on">Overview</a>
+  <a href="#swap" data-for="swap">What changes</a>
+  <a href="#line" data-for="line">The line</a>
+  <a href="#coach" data-for="coach">The coach</a>
+</nav>
 
-    <!-- Hero Section -->
-    <main id="main">
-    <section class="gradient-hero pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <!-- Trust Bar -->
-            <div class="flex flex-wrap justify-center items-center gap-4 mb-12">
-                <div class="trust-badge flex items-center px-4 py-2 rounded-full">
-                    <svg class="w-5 h-5 text-apex-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                    </svg>
-                    <span class="text-sm text-slate">EU-Hosted &amp; Isolated</span>
-                </div>
-                <div class="trust-badge flex items-center px-4 py-2 rounded-full">
-                    <svg class="w-5 h-5 text-apex-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11 14a1 1 0 11-2 0 1 1 0 012 0zm0-7a1 1 0 10-2 0v3a1 1 0 102 0V7z" clip-rule="evenodd"/>
-                    </svg>
-                    <span class="text-sm text-slate">GDPR Compliant</span>
-                </div>
-                <div class="trust-badge flex items-center px-4 py-2 rounded-full">
-                    <svg class="w-5 h-5 text-apex-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
-                    </svg>
-                    <span class="text-sm text-slate">256-bit Encryption</span>
-                </div>
-                <div class="trust-badge flex items-center px-4 py-2 rounded-full">
-                    <svg class="w-5 h-5 text-apex-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                    </svg>
-                    <span class="text-sm text-slate">ISO 45001 Aligned</span>
-                </div>
-            </div>
-            
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <!-- Left: Copy -->
-                <div>
-                    <div class="inline-flex items-center bg-mist/50 backdrop-blur rounded-full px-4 py-1.5 mb-6 border border-mist">
-                        <span class="w-2 h-2 bg-apex-500 rounded-full mr-2 animate-pulse"></span>
-                        <span class="text-sm text-slate">AI-Powered ICAM Methodology</span>
-                    </div>
-                    
-                    <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
-                        Every incident,<br>
-                        <span class="gradient-accent">understood.</span>
-                    </h1>
-                    
-                    <p class="mt-6 text-xl text-slate max-w-lg leading-relaxed">
-                        Incident investigation software built on real ICAM methodology, with AI coaching at every step — so safety teams can find the causes, fix the system, and prevent repeat incidents.
-                    </p>
-                    
-                    <div class="mt-8 flex flex-col sm:flex-row gap-4">
-                        <a href="https://cal.com/investigatepro/15min" class="bg-apex-500 hover:bg-apex-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-200 text-center glow-cyan cursor-pointer hover:scale-[1.02]">
-                            Book Free Demo
-                        </a>
-                        <button onclick="openVideoModal()" class="glass-light hover:bg-mist/40 text-ink px-8 py-4 rounded-lg font-bold text-lg transition-all duration-200 text-center cursor-pointer flex items-center justify-center gap-2">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
-                            </svg>
-                            Watch Demo
-                        </button>
-                    </div>
-                    
-                    <p class="mt-4 text-graphite text-sm">Free 15-minute demo • No obligation</p>
-                    
-                    <!-- Metrics -->
-                    <div class="mt-10 grid grid-cols-3 gap-6">
-                        <div>
-                            <div class="text-3xl font-heading font-bold text-apex-500">ICAM</div>
-                            <div class="text-sm text-graphite mt-1">Built on the Real Methodology</div>
-                        </div>
-                        <div>
-                            <div class="text-3xl font-heading font-bold text-apex-500">AI</div>
-                            <div class="text-sm text-graphite mt-1">Root-Cause Coaching on Every Case</div>
-                        </div>
-                        <div>
-                            <div class="text-3xl font-heading font-bold text-apex-500">1-Click</div>
-                            <div class="text-sm text-graphite mt-1">Board-Ready Reports</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Right: Dashboard Preview -->
-                <div class="relative">
-                    <div class="absolute -inset-4 bg-gradient-to-r from-apex-500/10 to-apex-300 rounded-2xl blur-2xl"></div>
-                    <div class="relative glass rounded-2xl p-2 glow-cyan-strong">
-                        <div class="bg-white rounded-xl overflow-hidden shadow-2xl">
-                            <!-- Mock Dashboard Header -->
-                            <div class="bg-cloud px-4 py-3 flex items-center justify-between">
-                                <div class="flex items-center space-x-2">
-                                    <img src="assets/brand/icon-color.svg" alt="InvestigatePro icon" width="24" height="24" class="h-6 w-6">
-                                    <span class="text-ink font-semibold text-sm">InvestigatePro</span>
-                                </div>
-                                <div class="flex space-x-2">
-                                    <div class="w-3 h-3 rounded-full bg-critical"></div>
-                                    <div class="w-3 h-3 rounded-full bg-warning"></div>
-                                    <div class="w-3 h-3 rounded-full bg-growth-500"></div>
-                                </div>
-                            </div>
-                            <!-- Mock Dashboard Content -->
-                            <div class="p-6 bg-gray-50">
-                                <div class="flex space-x-2 mb-4">
-                                    <div class="px-3 py-1 bg-apex-500 text-white text-xs font-medium rounded cursor-pointer">Dashboard</div>
-                                    <div class="px-3 py-1 bg-mist text-graphite text-xs rounded cursor-pointer hover:bg-gray-300 transition-colors duration-200">Cases</div>
-                                    <div class="px-3 py-1 bg-mist text-graphite text-xs rounded cursor-pointer hover:bg-gray-300 transition-colors duration-200">Reports</div>
-                                </div>
-                                <div class="grid grid-cols-3 gap-4 mb-4">
-                                    <div class="bg-white p-4 rounded-lg shadow-sm">
-                                        <div class="text-graphite text-xs mb-1">Open Cases</div>
-                                        <div class="text-2xl font-heading font-bold text-ink">24</div>
-                                        <div class="w-full h-1 bg-apex-50 rounded mt-2">
-                                            <div class="w-3/4 h-1 bg-apex-500 rounded"></div>
-                                        </div>
-                                    </div>
-                                    <div class="bg-white p-4 rounded-lg shadow-sm">
-                                        <div class="text-graphite text-xs mb-1">Critical</div>
-                                        <div class="text-2xl font-heading font-bold text-warning-700">8</div>
-                                        <div class="w-full h-1 bg-orange-100 rounded mt-2">
-                                            <div class="w-1/3 h-1 bg-warning rounded"></div>
-                                        </div>
-                                    </div>
-                                    <div class="bg-white p-4 rounded-lg shadow-sm">
-                                        <div class="text-graphite text-xs mb-1">Avg. Time</div>
-                                        <div class="text-2xl font-heading font-bold text-ink">1h 12m</div>
-                                        <div class="text-green-500 text-xs flex items-center">
-                                            <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
-                                            23% faster
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="bg-white p-4 rounded-lg shadow-sm border-l-4 border-apex-500">
-                                    <div class="flex justify-between items-center mb-2">
-                                        <div class="text-sm font-medium text-ink">AI Root Cause Analysis</div>
-                                        <div class="text-xs bg-apex-50 text-apex-500 px-2 py-0.5 rounded-full font-medium">Active</div>
-                                    </div>
-                                    <div class="flex items-center space-x-2">
-                                        <div class="flex-1 h-2 bg-mist rounded-full overflow-hidden">
-                                            <div class="h-2 bg-gradient-to-r from-apex-500 to-apex-300 rounded-full" style="width: 78%"></div>
-                                        </div>
-                                        <span class="text-xs text-graphite font-medium">78%</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="hero" class="dk" style="position:relative;overflow:hidden">
+  <svg viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice" class="constellation" aria-hidden="true">
+  <g stroke="#2E5561" stroke-width="1">
+    <path d="M170 120 L340 210 L520 150 L700 260"></path><path d="M340 210 L410 380 L610 430"></path>
+    <path d="M900 120 L1040 220 L1180 170 L1310 300"></path><path d="M1040 220 L980 400 L1120 520"></path>
+    <path d="M610 430 L780 520 L980 400"></path><path d="M520 150 L700 90 L900 120"></path>
+    <path d="M1180 170 L1290 90"></path><path d="M410 380 L250 470 L330 620"></path>
+    <path d="M780 520 L820 660"></path><path d="M1120 520 L1260 610"></path>
+  </g>
+  <g fill="#64FFDA">
+    <circle cx="170" cy="120" r="2.5"></circle><circle cx="340" cy="210" r="3"></circle><circle cx="520" cy="150" r="2"></circle>
+    <circle cx="700" cy="260" r="3.5" fill="#2196F3"></circle><circle cx="410" cy="380" r="2.5"></circle><circle cx="610" cy="430" r="3" fill="#2196F3"></circle>
+    <circle cx="900" cy="120" r="2.5"></circle><circle cx="1040" cy="220" r="3"></circle><circle cx="1180" cy="170" r="2"></circle>
+    <circle cx="1310" cy="300" r="3"></circle><circle cx="980" cy="400" r="3.5" fill="#2196F3"></circle><circle cx="1120" cy="520" r="2.5"></circle>
+    <circle cx="700" cy="90" r="2"></circle><circle cx="1290" cy="90" r="2.5"></circle><circle cx="250" cy="470" r="2"></circle>
+    <circle cx="330" cy="620" r="2.5"></circle><circle cx="780" cy="520" r="3"></circle><circle cx="820" cy="660" r="2"></circle><circle cx="1260" cy="610" r="2.5"></circle>
+  </g>
+</svg>
 
-    <!-- Lead Magnet Banner -->
-    <section class="py-8 bg-ink border-y border-white/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 bg-mint/10 rounded-lg flex items-center justify-center">
-                        <svg class="w-6 h-6 text-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <p class="text-white font-semibold">Free: 25-Point ICAM Investigation Checklist</p>
-                        <p class="text-mist/80 text-sm">The complete 25-point framework for ICAM investigations</p>
-                    </div>
-                </div>
-                <a href="checklist.html" class="bg-mint hover:bg-mint-600 text-ink px-6 py-3 rounded-lg font-semibold transition-all duration-200 whitespace-nowrap">
-                    Download Free Checklist →
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Problem Section -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto">
-                <p class="text-warning-700 text-sm font-semibold uppercase tracking-wider mb-4">The Problem</p>
-                <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-6">
-                    Most “Investigation” Software Just <span class="text-apex-500">Logs Incidents</span>
-                </h2>
-                <p class="text-xl text-slate">
-                    Your team needs proper ICAM methodology to find real root causes — not just another form to fill out.
-                </p>
-            </div>
-            
-            <div class="mt-16 grid md:grid-cols-3 gap-8">
-                <div class="glass-card glass-hover rounded-xl p-6 transition-all duration-300">
-                    <div class="w-12 h-12 bg-warning/15 rounded-lg flex items-center justify-center mb-4 backdrop-blur-sm">
-                        <svg class="w-6 h-6 text-warning-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                        </svg>
-                    </div>
-                    <h3 class="font-heading text-lg font-semibold mb-2">Blame-Focused</h3>
-                    <p class="text-graphite">Legacy systems encourage finding who to blame instead of what went wrong in the system.</p>
-                </div>
-                
-                <div class="glass-card glass-hover rounded-xl p-6 transition-all duration-300">
-                    <div class="w-12 h-12 bg-warning/15 rounded-lg flex items-center justify-center mb-4 backdrop-blur-sm">
-                        <svg class="w-6 h-6 text-warning-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="font-heading text-lg font-semibold mb-2">Time-Consuming</h3>
-                    <p class="text-graphite">Hours spent on paperwork and formatting instead of actual investigation work.</p>
-                </div>
-                
-                <div class="glass-card glass-hover rounded-xl p-6 transition-all duration-300">
-                    <div class="w-12 h-12 bg-warning/15 rounded-lg flex items-center justify-center mb-4 backdrop-blur-sm">
-                        <svg class="w-6 h-6 text-warning-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="font-heading text-lg font-semibold mb-2">No Methodology</h3>
-                    <p class="text-graphite">Just forms and checklists — no guided investigation process to find real root causes.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Solutions by Industry (Enterprise Gateway Pattern) -->
-    <section id="solutions" class="py-20 bg-cloud">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <p class="text-apex-500 text-sm font-semibold uppercase tracking-wider mb-4">Solutions</p>
-                <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-6">
-                    Built for Your Industry
-                </h2>
-                <p class="text-xl text-slate">
-                    InvestigatePro understands the unique challenges of high-risk industries.
-                </p>
-            </div>
-            
-            <!-- Industry Tabs -->
-            <div class="flex flex-wrap justify-center gap-3 mb-12">
-                <button onclick="showIndustry('mining')" class="industry-tab active px-6 py-3 rounded-lg bg-white border border-mist text-slate font-medium transition-all duration-200 cursor-pointer" data-industry="mining">
-                    Mining
-                </button>
-                <button onclick="showIndustry('construction')" class="industry-tab px-6 py-3 rounded-lg bg-white border border-mist text-slate font-medium transition-all duration-200 cursor-pointer" data-industry="construction">
-                    Construction
-                </button>
-                <button onclick="showIndustry('oil-gas')" class="industry-tab px-6 py-3 rounded-lg bg-white border border-mist text-slate font-medium transition-all duration-200 cursor-pointer" data-industry="oil-gas">
-                    Oil &amp; Gas
-                </button>
-                <button onclick="showIndustry('manufacturing')" class="industry-tab px-6 py-3 rounded-lg bg-white border border-mist text-slate font-medium transition-all duration-200 cursor-pointer" data-industry="manufacturing">
-                    Manufacturing
-                </button>
-            </div>
-            
-            <!-- Industry Content -->
-            <div id="industry-content" class="glass-frosted rounded-2xl p-8 md:p-12">
-                <div id="industry-mining" class="industry-panel grid md:grid-cols-2 gap-8 items-center">
-                    <div>
-                        <h3 class="font-heading text-2xl font-bold mb-4">Mining & Resources</h3>
-                        <p class="text-slate mb-6">From underground operations to open pit mines, InvestigatePro helps safety teams investigate critical incidents with industry-specific ICAM templates and AI coaching trained on mining hazards.</p>
-                        <ul class="space-y-3">
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-apex-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                                <span class="text-slate">Pre-built templates for falls of ground, mobile equipment, and energy isolation incidents</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-apex-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                                <span class="text-slate">AI trained on mining-specific organizational factors</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-apex-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                                <span class="text-slate">Shift-based collaboration for remote site teams</span>
-                            </li>
-                        </ul>
-                        <a href="https://cal.com/investigatepro/15min" class="inline-flex items-center mt-6 text-apex-500 hover:text-apex-700 font-medium transition-colors duration-200 cursor-pointer">
-                            See it in action
-                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                        </a>
-                    </div>
-                    <div class="bg-white rounded-xl p-6 border border-mist">
-                        <div class="text-sm text-graphite mb-2">Why InvestigatePro</div>
-                        <div class="text-4xl font-heading font-bold text-apex-500 mb-2">15+ yrs</div>
-                        <div class="text-slate">of frontline gold-mine investigation experience across Africa is built into every ICAM template and AI coaching prompt.</div>
-                    </div>
-                </div>
-                
-                <div id="industry-construction" class="industry-panel hidden grid md:grid-cols-2 gap-8 items-center">
-                    <div>
-                        <h3 class="font-heading text-2xl font-bold mb-4">Construction</h3>
-                        <p class="text-slate mb-6">High-risk construction sites need thorough investigations. InvestigatePro provides templates for falls, struck-by incidents, and scaffolding failures with contractor collaboration built in.</p>
-                        <ul class="space-y-3">
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-apex-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                                <span class="text-slate">Multi-contractor investigation workflows</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-apex-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                                <span class="text-slate">OSHA-aligned reporting and documentation</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-apex-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                                <span class="text-slate">Mobile-first for field investigations</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="bg-white rounded-xl p-6 border border-mist">
-                        <div class="text-sm text-graphite mb-2">Built For</div>
-                        <div class="text-4xl font-heading font-bold text-apex-500 mb-2">Multi-party</div>
-                        <div class="text-slate">investigations — principal contractors and subcontractors work the same case file together.</div>
-                    </div>
-                </div>
-                
-                <div id="industry-oil-gas" class="industry-panel hidden grid md:grid-cols-2 gap-8 items-center">
-                    <div>
-                        <h3 class="font-heading text-2xl font-bold mb-4">Oil & Gas</h3>
-                        <p class="text-slate mb-6">Process safety incidents require deep analysis. InvestigatePro helps identify latent organizational factors behind near-misses and process upsets before they become catastrophic.</p>
-                        <ul class="space-y-3">
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-apex-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                                <span class="text-slate">Process safety event templates</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-apex-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                                <span class="text-slate">Barrier analysis and bow-tie integration</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-apex-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                                <span class="text-slate">Tier 1 & 2 PSE tracking</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="bg-white rounded-xl p-6 border border-mist">
-                        <div class="text-sm text-graphite mb-2">Industry Standard</div>
-                        <div class="text-4xl font-heading font-bold text-apex-500 mb-2">API 754</div>
-                        <div class="text-slate">aligned process safety metrics and investigation workflows.</div>
-                    </div>
-                </div>
-                
-                <div id="industry-manufacturing" class="industry-panel hidden grid md:grid-cols-2 gap-8 items-center">
-                    <div>
-                        <h3 class="font-heading text-2xl font-bold mb-4">Manufacturing</h3>
-                        <p class="text-slate mb-6">From machine guarding failures to ergonomic injuries, InvestigatePro helps manufacturing safety teams identify systemic issues and drive continuous improvement.</p>
-                        <ul class="space-y-3">
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-apex-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                                <span class="text-slate">LOTO and machine safety investigation templates</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-apex-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                                <span class="text-slate">Integration with quality management systems</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-apex-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                                <span class="text-slate">Shift handover and production context capture</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="bg-white rounded-xl p-6 border border-mist">
-                        <div class="text-sm text-graphite mb-2">Closing the Loop</div>
-                        <div class="text-4xl font-heading font-bold text-apex-500 mb-2">CAPA</div>
-                        <div class="text-slate">tracking from corrective action assignment through verification and close-out.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-            <p class="mt-12 text-center"><a href="/platform.html" class="text-apex-500 hover:underline font-medium">See how an investigation runs end to end &rarr;</a></p>
-    </section>
-
-    <!-- Solutions by Role -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <p class="text-apex-500 text-sm font-semibold uppercase tracking-wider mb-4">For Your Role</p>
-                <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-6">
-                    I Am A…
-                </h2>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Safety Manager -->
-                <div class="glass-card glass-hover rounded-xl p-8 transition-all duration-300 group cursor-pointer">
-                    <div class="w-16 h-16 glass-cyan rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200">
-                        <svg class="w-8 h-8 text-apex-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                        </svg>
-                    </div>
-                    <h3 class="font-heading text-xl font-bold mb-3">Safety Manager</h3>
-                    <p class="text-graphite mb-4">Oversee investigations across sites, ensure ICAM compliance, and track organizational trends.</p>
-                    <ul class="space-y-2 text-sm text-slate">
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-apex-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                            Multi-site dashboard
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-apex-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                            Trend analytics
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-apex-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                            Quality assurance tools
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Investigator -->
-                <div class="glass-card glass-hover rounded-xl p-8 transition-all duration-300 group cursor-pointer">
-                    <div class="w-16 h-16 glass-cyan rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200">
-                        <svg class="w-8 h-8 text-apex-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="font-heading text-xl font-bold mb-3">Incident Investigator</h3>
-                    <p class="text-graphite mb-4">Conduct thorough investigations with AI guidance and generate professional reports in minutes.</p>
-                    <ul class="space-y-2 text-sm text-slate">
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-apex-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                            AI coaching prompts
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-apex-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                            PEEPO chart generation
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-apex-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                            One-click reports
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Executive -->
-                <div class="glass-card glass-hover rounded-xl p-8 transition-all duration-300 group cursor-pointer">
-                    <div class="w-16 h-16 glass-cyan rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200">
-                        <svg class="w-8 h-8 text-apex-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-                        </svg>
-                    </div>
-                    <h3 class="font-heading text-xl font-bold mb-3">Safety Executive</h3>
-                    <p class="text-graphite mb-4">Get clear visibility into safety performance with executive dashboards and organizational insights.</p>
-                    <ul class="space-y-2 text-sm text-slate">
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-apex-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                            Executive dashboards
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-apex-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                            Organizational factor trends
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-apex-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                            Board-ready reports
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Inline Email Capture -->
-    <section class="py-12 bg-cloud border-y border-mist">
-        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="glass-cyan rounded-2xl p-8 text-center">
-                <div class="inline-flex items-center bg-apex-500/10 rounded-full px-3 py-1 mb-4">
-                    <span class="text-apex-500 text-xs font-semibold">FREE RESOURCE</span>
-                </div>
-                <h3 class="font-heading text-2xl font-bold text-ink mb-2">Get the ICAM Investigation Checklist</h3>
-                <p class="text-graphite mb-6">25 essential steps distilled from 15+ years of frontline ICAM investigations. Enter your email for instant access.</p>
-                
-                <form id="inline-capture-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-                    <input type="email" name="email" placeholder="Enter your work email" required aria-label="Work email" autocomplete="email" spellcheck="false"
-                        class="flex-1 px-4 py-3 bg-white border border-mist rounded-lg text-ink placeholder-graphite focus:outline-none focus:border-apex-500 transition-colors">
-                    <button type="submit" class="bg-apex-500 hover:bg-apex-700 text-white px-6 py-3 rounded-lg font-semibold whitespace-nowrap transition-colors">
-                        Get Checklist →
-                    </button>
-                </form>
-                <p class="text-graphite text-sm mt-3">No spam. Unsubscribe anytime.</p>
-                
-                <div id="inline-success" class="hidden mt-4 text-apex-500 font-medium">
-                    Check your email — the checklist is on its way.
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="py-20 bg-cloud">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <p class="text-apex-500 text-sm font-semibold uppercase tracking-wider mb-4">Features</p>
-                <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-6">
-                    Real ICAM Methodology.<br><span class="text-apex-500">Powered by AI.</span>
-                </h2>
-                <p class="text-xl text-slate">
-                    InvestigatePro guides your team through every step of proper incident investigation.
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="glass-card glass-hover rounded-xl p-6 transition-all duration-300 cursor-pointer">
-                    <div class="w-12 h-12 glass-cyan rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-apex-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
-                        </svg>
-                    </div>
-                    <h3 class="font-heading text-lg font-semibold mb-2">Guided ICAM Workflow</h3>
-                    <p class="text-graphite">Step-by-step investigation process following official ICAM methodology used by industry leaders.</p>
-                </div>
-                
-                <!-- Feature 2 -->
-                <div class="glass-card glass-hover rounded-xl p-6 transition-all duration-300 cursor-pointer">
-                    <div class="w-12 h-12 glass-cyan rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-apex-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-                        </svg>
-                    </div>
-                    <h3 class="font-heading text-lg font-semibold mb-2">AI Root Cause Analysis</h3>
-                    <p class="text-graphite">Our AI coach asks the right questions and helps identify contributing factors you might miss.</p>
-                </div>
-                
-                <!-- Feature 3 -->
-                <div class="glass-card glass-hover rounded-xl p-6 transition-all duration-300 cursor-pointer">
-                    <div class="w-12 h-12 glass-cyan rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-apex-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/>
-                        </svg>
-                    </div>
-                    <h3 class="font-heading text-lg font-semibold mb-2">Visual PEEPO Charts</h3>
-                    <p class="text-graphite">Automatically generate PEEPO contribution charts that communicate findings clearly to leadership.</p>
-                </div>
-                
-                <!-- Feature 4 -->
-                <div class="glass-card glass-hover rounded-xl p-6 transition-all duration-300 cursor-pointer">
-                    <div class="w-12 h-12 glass-cyan rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-apex-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="font-heading text-lg font-semibold mb-2">Team Collaboration</h3>
-                    <p class="text-graphite">Involve witnesses, supervisors, and experts in the investigation process seamlessly.</p>
-                </div>
-                
-                <!-- Feature 5 -->
-                <div class="glass-card glass-hover rounded-xl p-6 transition-all duration-300 cursor-pointer">
-                    <div class="w-12 h-12 glass-cyan rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-apex-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                        </svg>
-                    </div>
-                    <h3 class="font-heading text-lg font-semibold mb-2">One-Click Reports</h3>
-                    <p class="text-graphite">Generate professional investigation reports instantly — no more hours formatting documents.</p>
-                </div>
-                
-                <!-- Feature 6 -->
-                <div class="glass-card glass-hover rounded-xl p-6 transition-all duration-300 cursor-pointer">
-                    <div class="w-12 h-12 glass-cyan rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-apex-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-                        </svg>
-                    </div>
-                    <h3 class="font-heading text-lg font-semibold mb-2">Trend Analytics</h3>
-                    <p class="text-graphite">Spot patterns across investigations and track improvement in your safety performance over time.</p>
-                </div>
-            </div>
-        </div>
-            <p class="mt-12 text-center"><a href="/platform.html#capabilities" class="text-apex-500 hover:underline font-medium">See the full capability inventory, with what is live and what is in build &rarr;</a></p>
-    </section>
-
-    <!-- Built By Section -->
-    <section class="py-16 bg-ink relative overflow-hidden">
-        <!-- Background glass orbs -->
-        <div class="glass-orb w-96 h-96 -top-48 -left-48 opacity-30"></div>
-        <div class="glass-orb w-64 h-64 -bottom-32 -right-32 opacity-20"></div>
-        
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="glass-frosted rounded-2xl p-8 md:p-12">
-                <div class="flex flex-col md:flex-row items-center gap-8">
-                    <div class="flex-shrink-0">
-                        <div class="w-24 h-24 bg-gradient-to-br from-apex-500 to-apex-300 rounded-full flex items-center justify-center text-white text-3xl font-heading font-bold shadow-lg">
-                            DT
-                        </div>
-                    </div>
-                    <div>
-                        <p class="text-mint text-sm font-semibold uppercase tracking-wider mb-2">Built By Someone Who's Been There</p>
-                        <blockquote class="text-white text-xl md:text-2xl font-medium mb-4 leading-relaxed">
-                            “I spent 15 years investigating incidents in gold mines across Africa. I built InvestigatePro because I was tired of watching teams struggle with the same problems I faced.”
-                        </blockquote>
-                        <div class="flex flex-col sm:flex-row sm:items-center gap-2 text-mist/80">
-                            <span class="font-semibold text-white">The Founder</span>
-                            <span class="hidden sm:block">•</span>
-                            <span>15+ years in mining safety across Africa</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <p class="text-apex-500 text-sm font-semibold uppercase tracking-wider mb-4">Pricing</p>
-                <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-6">
-                    Simple, Transparent Pricing
-                </h2>
-                <p class="text-xl text-slate">
-                    No per-seat licenses. No hidden fees. Just powerful investigation tools.
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-                <!-- Starter -->
-                <div class="glass-card rounded-xl p-8">
-                    <h3 class="font-heading text-lg font-semibold text-slate mb-2">Starter</h3>
-                    <div class="mb-6">
-                        <span class="text-4xl font-heading font-bold">$149</span>
-                        <span class="text-graphite">/month</span>
-                    </div>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center text-slate">
-                            <svg class="w-5 h-5 text-apex-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            Up to 5 users
-                        </li>
-                        <li class="flex items-center text-slate">
-                            <svg class="w-5 h-5 text-apex-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            ICAM workflow
-                        </li>
-                        <li class="flex items-center text-slate">
-                            <svg class="w-5 h-5 text-apex-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            Basic reports
-                        </li>
-                        <li class="flex items-center text-slate">
-                            <svg class="w-5 h-5 text-apex-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            Email support
-                        </li>
-                    </ul>
-                    <a href="https://cal.com/investigatepro/15min" class="block text-center border border-apex-500 text-apex-500 hover:bg-apex-500/10 px-6 py-3 rounded-lg font-semibold transition-all duration-200 cursor-pointer">
-                        Book Demo
-                    </a>
-                </div>
-                
-                <!-- Professional (Highlighted) -->
-                <div class="glass-frosted rounded-xl p-8 border-2 border-apex-500 relative glow-cyan-strong">
-                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-apex-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                        Most Popular
-                    </div>
-                    <h3 class="font-heading text-lg font-semibold text-slate mb-2">Professional</h3>
-                    <div class="mb-6">
-                        <span class="text-4xl font-heading font-bold">$349</span>
-                        <span class="text-graphite">/month</span>
-                    </div>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center text-slate">
-                            <svg class="w-5 h-5 text-apex-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            Up to 20 users
-                        </li>
-                        <li class="flex items-center text-slate">
-                            <svg class="w-5 h-5 text-apex-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            <strong class="text-apex-500">AI Root Cause Coach</strong>
-                        </li>
-                        <li class="flex items-center text-slate">
-                            <svg class="w-5 h-5 text-apex-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            Advanced analytics
-                        </li>
-                        <li class="flex items-center text-slate">
-                            <svg class="w-5 h-5 text-apex-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            PEEPO charts
-                        </li>
-                        <li class="flex items-center text-slate">
-                            <svg class="w-5 h-5 text-apex-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            Priority support
-                        </li>
-                    </ul>
-                    <a href="https://cal.com/investigatepro/15min" class="block text-center bg-apex-500 hover:bg-apex-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 cursor-pointer">
-                        Book Demo
-                    </a>
-                </div>
-                
-                <!-- Business -->
-                <div class="glass-card rounded-xl p-8">
-                    <h3 class="font-heading text-lg font-semibold text-slate mb-2">Business</h3>
-                    <div class="mb-6">
-                        <span class="text-4xl font-heading font-bold">$749</span>
-                        <span class="text-graphite">/month</span>
-                    </div>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center text-slate">
-                            <svg class="w-5 h-5 text-apex-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            Up to 100 users
-                        </li>
-                        <li class="flex items-center text-slate">
-                            <svg class="w-5 h-5 text-apex-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            Everything in Pro
-                        </li>
-                        <li class="flex items-center text-slate">
-                            <svg class="w-5 h-5 text-apex-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            SSO / SAML
-                        </li>
-                        <li class="flex items-center text-slate">
-                            <svg class="w-5 h-5 text-apex-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            Scoped data exchange
-                        </li>
-                        <li class="flex items-center text-slate">
-                            <svg class="w-5 h-5 text-apex-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            Dedicated success manager
-                        </li>
-                    </ul>
-                    <a href="https://cal.com/investigatepro/15min" class="block text-center border border-apex-500 text-apex-500 hover:bg-apex-500/10 px-6 py-3 rounded-lg font-semibold transition-all duration-200 cursor-pointer">
-                        Book Demo
-                    </a>
-                </div>
-                
-                <!-- Enterprise -->
-                <div class="glass-card rounded-xl p-8">
-                    <h3 class="font-heading text-lg font-semibold text-slate mb-2">Enterprise</h3>
-                    <div class="mb-6">
-                        <span class="text-graphite text-sm">From </span><span class="text-3xl font-heading font-bold">$1,500</span><span class="text-graphite text-sm">/month</span>
-                    </div>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center text-slate">
-                            <svg class="w-5 h-5 text-apex-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            100+ users or multi-site
-                        </li>
-                        <li class="flex items-center text-slate">
-                            <svg class="w-5 h-5 text-apex-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            Everything in Business
-                        </li>
-                        <li class="flex items-center text-slate">
-                            <svg class="w-5 h-5 text-apex-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            SLA-backed support
-                        </li>
-                        <li class="flex items-center text-slate">
-                            <svg class="w-5 h-5 text-apex-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            On-premise option
-                        </li>
-                    </ul>
-                    <a href="https://cal.com/investigatepro/15min" class="block text-center border border-apex-500 text-apex-500 hover:bg-apex-500/10 px-6 py-3 rounded-lg font-semibold transition-all duration-200 cursor-pointer">
-                        Talk to Us
-                    </a>
-                </div>
-            </div>
-            
-            <p class="mt-10 text-center text-graphite text-sm">All plans billed per organisation, not per seat. Annual billing saves 15%.</p>
-            <p class="mt-2 text-center"><a href="/pricing.html" class="text-apex-500 hover:underline font-medium">Compare all plans and features &rarr;</a></p>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section id="demo" class="py-20 bg-ink">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-6 text-white">
-                Ready to Investigate <span class="text-mint">Smarter</span>?
-            </h2>
-            <p class="text-xl text-mist/85 mb-8">
-                Join safety teams who've switched from logging incidents to actually investigating them.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="https://cal.com/investigatepro/15min" class="bg-mint hover:bg-mint-600 text-ink px-8 py-4 rounded-lg font-bold text-lg transition-all duration-200 glow-cyan cursor-pointer hover:scale-[1.02]">
-                    Book Your Free Demo
-                </a>
-                <a href="/checklist.html" class="border border-white/25 hover:border-mint text-white hover:text-mint px-8 py-4 rounded-lg font-bold text-lg transition-all duration-200 cursor-pointer">
-                    Download Free Checklist
-                </a>
-            </div>
-            <p class="mt-4 text-mist/70 text-sm">See InvestigatePro in action • No obligation • Cancel anytime</p>
-            
-            <!-- Final trust badges -->
-            <div class="mt-12 flex flex-wrap justify-center gap-6 text-mist/75 text-sm">
-                <div class="flex items-center gap-2">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                    EU-Hosted &amp; Isolated
-                </div>
-                <div class="flex items-center gap-2">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
-                    256-bit Encryption
-                </div>
-                <div class="flex items-center gap-2">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                    GDPR Compliant
-                </div>
-                <div class="flex items-center gap-2">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                    ISO 45001 Aligned
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    </main>
-
-    
-
-    <!-- Industry Tab Script -->
-    <script>
-        function showIndustry(industry) {
-            // Hide all panels
-            document.querySelectorAll('.industry-panel').forEach(panel => {
-                panel.classList.add('hidden');
-            });
-            
-            // Remove active from all tabs
-            document.querySelectorAll('.industry-tab').forEach(tab => {
-                tab.classList.remove('active');
-            });
-            
-            // Show selected panel
-            document.getElementById('industry-' + industry).classList.remove('hidden');
-            
-            // Add active to clicked tab
-            document.querySelector(`[data-industry="${industry}"]`).classList.add('active');
-        }
-    </script>
-
-    <script src="/analytics.js"></script>
-
-    <!-- Video Modal -->
-    <div id="videoModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm" onclick="closeVideoModal(event)">
-        <div class="relative w-full max-w-5xl mx-auto" onclick="event.stopPropagation()">
-            <!-- Close Button -->
-            <button onclick="closeVideoModal()" class="absolute -top-12 right-0 text-ink hover:text-apex-700 transition-colors">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-            </button>
-            
-            <!-- Video Container -->
-            <div class="relative rounded-2xl overflow-hidden shadow-2xl" style="box-shadow: 0 0 60px rgba(0,77,64,0.3);">
-                <video id="demoVideo" class="w-full" controls preload="metadata" aria-label="InvestigatePro product demo video" poster="assets/brand/logo-horizontal.svg">
-                    <source src="assets/demo-video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            
-            <!-- Caption -->
-            <p class="text-center text-graphite mt-4 text-sm">InvestigatePro Demo — AI-Powered Incident Investigation</p>
-        </div>
+  <div class="wrap" style="position:relative;padding-top:64px">
+    <p class="eyebrow rise in">The next step for ICAM</p>
+    <h1 class="rise in" style="max-width:760px;margin:18px 0 24px">Every incident,<br>understood.</h1>
+    <p class="lede rise in rise-d1" style="max-width:600px">For decades the depth of an investigation has come down to who happened to be available. InvestigatePro closes that gap: a structured, evidence-led ICAM investigation, guided step by step, with an AI coach that holds the practice of a career full of investigations — and puts it in front of whoever is running this one.</p>
+    <div class="rise in rise-d2" style="display:flex;align-items:center;gap:24px;margin:32px 0 12px;flex-wrap:wrap">
+      <a href="#pilot" class="btn btn-primary btn-inline">Start a pilot</a>
+      <a href="#coach" class="textlink">See the coach at work</a>
     </div>
-
-    <script>
-        function openVideoModal() {
-            const modal = document.getElementById('videoModal');
-            const video = document.getElementById('demoVideo');
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            video.play();
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeVideoModal(event) {
-            const modal = document.getElementById('videoModal');
-            const video = document.getElementById('demoVideo');
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-            video.pause();
-            video.currentTime = 0;
-            document.body.style.overflow = '';
-        }
-
-        // Close on Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeVideoModal();
-            }
-        });
-    </script>
-
-    <!-- Exit Intent Popup -->
-    <div id="exit-popup" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[100] hidden items-center justify-center p-4">
-        <div class="bg-cloud rounded-2xl max-w-md w-full p-8 border border-apex-500/30 shadow-2xl relative">
-            <button onclick="closeExitPopup()" class="absolute top-4 right-4 text-graphite hover:text-ink">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                </svg>
-            </button>
-            
-            <div class="text-center">
-                <div class="w-16 h-16 bg-apex-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg class="w-8 h-8 text-apex-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-                    </svg>
-                </div>
-                
-                <h3 class="text-2xl font-bold text-ink mb-2">Before You Go…</h3>
-                <p class="text-graphite mb-6">Get our free 25-point ICAM Investigation Checklist — the same framework used by mining and construction safety teams worldwide.</p>
-                
-                <a href="checklist.html" class="block w-full bg-apex-500 hover:bg-apex-700 text-white px-6 py-4 rounded-lg font-bold text-lg transition-all duration-200 mb-3">
-                    Yes, Send Me the Checklist
-                </a>
-                
-                <button onclick="closeExitPopup()" class="text-graphite hover:text-slate text-sm">
-                    No thanks
-                </button>
-            </div>
-        </div>
+    <p class="micro">Set up the same day. No procurement cycle.</p>
+    <div style="display:flex;gap:10px;margin-top:28px;flex-wrap:wrap">
+      <span class="chip">EU-hosted &amp; isolated</span><span class="chip">GDPR compliant</span>
+      <span class="chip">256-bit encryption</span><span class="chip">ISO 45001 aligned</span>
     </div>
-
-    <script>
-        // Exit Intent Detection
-        let exitPopupShown = false;
-        
-        document.addEventListener('mouseout', function(e) {
-            if (e.clientY < 10 && !exitPopupShown && !localStorage.getItem('exitPopupDismissed')) {
-                showExitPopup();
-            }
-        });
-        
-        function showExitPopup() {
-            exitPopupShown = true;
-            document.getElementById('exit-popup').classList.remove('hidden');
-            document.getElementById('exit-popup').classList.add('flex');
-        }
-        
-        function closeExitPopup() {
-            document.getElementById('exit-popup').classList.add('hidden');
-            document.getElementById('exit-popup').classList.remove('flex');
-            localStorage.setItem('exitPopupDismissed', 'true');
-        }
-        
-        // Close on background click
-        document.getElementById('exit-popup').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeExitPopup();
-            }
-        });
-    </script>
-
-    <!-- Sticky Bottom Bar (Mobile CTA) -->
-    <div id="sticky-bar" class="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-lg border-t border-apex-500/30 p-3 z-50 transform translate-y-full transition-transform duration-300 md:hidden">
-        <div class="flex items-center justify-between gap-3 max-w-lg mx-auto">
-            <div class="flex-1">
-                <p class="text-ink text-sm font-medium">See InvestigatePro in action</p>
-                <p class="text-graphite text-xs">Free personalized demo</p>
-            </div>
-            <a href="https://cal.com/investigatepro/15min" class="bg-apex-500 hover:bg-apex-700 text-white px-4 py-2 rounded-lg font-semibold text-sm whitespace-nowrap">
-                Book Demo
-            </a>
-        </div>
-    </div>
-
-    <!-- Floating Chat Button -->
-    <div id="chat-widget" class="fixed bottom-20 right-4 md:bottom-6 z-40">
-        <button onclick="openChat()" aria-label="Open chat" class="bg-apex-500 hover:bg-apex-700 text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition-all duration-200 hover:scale-110">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-            </svg>
-        </button>
-        <span class="absolute -top-1 -right-1 w-4 h-4 bg-growth-500 rounded-full border-2 border-mist animate-pulse"></span>
-    </div>
-
-    <!-- Chat Modal -->
-    <div id="chat-modal" class="fixed bottom-24 right-4 md:bottom-20 bg-cloud border border-mist rounded-2xl shadow-2xl z-50 w-80 hidden">
-        <div class="bg-apex-500 text-white p-4 rounded-t-2xl">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center gap-2">
-                    <div class="w-8 h-8 bg-cloud rounded-full flex items-center justify-center">
-                        <span class="text-apex-500 text-sm font-bold">S</span>
-                    </div>
-                    <div>
-                        <p class="font-semibold text-sm">Steve</p>
-                        <p class="text-xs opacity-80">AI Sales Assistant • Replies instantly</p>
-                    </div>
-                </div>
-                <button onclick="closeChat()" aria-label="Close chat" class="text-ink hover:bg-white p-1 rounded">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <div class="p-4">
-            <div class="bg-white rounded-lg p-3 mb-4">
-                <p class="text-ink text-sm">Hi, I'm Steve — InvestigatePro's AI sales assistant. Ask me anything about the product or ICAM investigations.</p>
-            </div>
-            <div class="space-y-2">
-                <a href="https://cal.com/investigatepro/15min" class="block w-full bg-apex-500 hover:bg-apex-700 text-white px-4 py-2 rounded-lg font-medium text-sm text-center transition-colors">
-                    Book a 15-min Demo
-                </a>
-                <a href="checklist.html" class="block w-full bg-cloud hover:bg-mist text-ink px-4 py-2 rounded-lg font-medium text-sm text-center transition-colors">
-                    Get Free ICAM Checklist
-                </a>
-                <a href="mailto:steve@investigatepro.app" class="block w-full border border-mist hover:border-apex-500 text-slate px-4 py-2 rounded-lg font-medium text-sm text-center transition-colors">
-                    Email a Question
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // Show sticky bar after scrolling
-        let stickyShown = false;
-        window.addEventListener('scroll', function() {
-            const stickyBar = document.getElementById('sticky-bar');
-            if (window.scrollY > 500 && !stickyShown) {
-                stickyBar.classList.remove('translate-y-full');
-                stickyShown = true;
-            }
-        });
-        
-
-        
-        // Chat widget
-        function openChat() {
-            document.getElementById('chat-modal').classList.remove('hidden');
-        }
-        
-        function closeChat() {
-            document.getElementById('chat-modal').classList.add('hidden');
-        }
-        
-        // Inline email capture
-        document.getElementById('inline-capture-form').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            const email = this.email.value;
-            
-            try {
-                await fetch('https://api.investigatepro.app/api/leads/capture', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        email: email,
-                        source: 'inline-homepage',
-                        timestamp: new Date().toISOString()
-                    })
-                });
-            } catch(err) {}
-            
-            this.style.display = 'none';
-            document.getElementById('inline-success').classList.remove('hidden');
-            
-            // Redirect to checklist after 2 seconds
-            setTimeout(() => {
-                window.location.href = 'checklist.html?email=' + encodeURIComponent(email);
-            }, 2000);
-        });
-    </script>
-<footer class="ip-footer">
-  <div class="ip-foot-in">
-    <div class="ip-fgrid">
-      <div class="ip-fbrand">
-        <a href="/" aria-label="InvestigatePro home" style="display:inline-block;padding:0"><img src="/assets/brand/logo-horizontal-white.svg" alt="InvestigatePro" loading="lazy" width="826" height="168" style="height:48px;width:auto"></a>
-        <p>AI-driven event analysis. Incident investigation software built on real ICAM methodology.</p>
+    <div class="grid3" style="margin-top:56px;padding-bottom:56px">
+      <div style="border-top:2px solid rgba(100,255,218,.5);padding-top:16px">
+        <h3 style="color:#fff;font-size:17px">I supervise a crew</h3>
+        <p style="font-size:14px;color:var(--dk-dim);margin-top:6px">Run an investigation that stands up, without a week of paperwork.</p>
       </div>
+      <div style="border-top:2px solid rgba(100,255,218,.5);padding-top:16px">
+        <h3 style="color:#fff;font-size:17px">I run HSE for the site</h3>
+        <p style="font-size:14px;color:var(--dk-dim);margin-top:6px">One method across every case, every shift, every contractor.</p>
+      </div>
+      <div style="border-top:2px solid rgba(100,255,218,.5);padding-top:16px">
+        <h3 style="color:#fff;font-size:17px">I sign the findings</h3>
+        <p style="font-size:14px;color:var(--dk-dim);margin-top:6px">Findings you can put in front of a board or a regulator.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="lt-cloud sec">
+  <div class="wrap">
+    <p class="eyebrow">The problem</p>
+    <h2 class="rise" style="margin:14px 0 12px;max-width:720px">Most “investigation” software just logs incidents.</h2>
+    <p class="lede">Your team needs proper ICAM methodology to find real causes — not just another form to fill out.</p>
+    <div class="grid3" style="margin-top:44px">
+      <div class="card rise">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E53935" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"></path></svg>
+        <h3 style="margin:14px 0 8px">Blame-focused</h3>
+        <p style="font-size:15px;color:var(--graphite)">Legacy systems encourage finding who to blame instead of what went wrong in the system.</p>
+      </div>
+      <div class="card rise rise-d1">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFB300" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg>
+        <h3 style="margin:14px 0 8px">Time-consuming</h3>
+        <p style="font-size:15px;color:var(--graphite)">Hours spent on paperwork and formatting instead of actual investigative work.</p>
+      </div>
+      <div class="card rise rise-d2">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5A6B76" stroke-width="1.8" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"></rect><path d="M8 9h8M8 13h5"></path></svg>
+        <h3 style="margin:14px 0 8px">No methodology</h3>
+        <p style="font-size:15px;color:var(--graphite)">Just forms and checklists — no guided investigation process to find real causes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="swap" class="lt sec">
+  <div class="wrap">
+    <p class="eyebrow">What changes</p>
+    <h2 class="rise" style="margin:14px 0 12px">From guesswork to evidence.</h2>
+    <p class="lede">The method has never been the problem. What changes is that every finding is now held to something, and the guidance no longer depends on who is in the room.</p>
+    <div class="track" style="margin:40px 0 28px;max-width:760px"><span>GUESSWORK</span><span class="trackline"><span class="track-marker"></span></span><span style="color:var(--blue)">EVIDENCE</span></div>
+    <div class="grid2 swap-pair" style="max-width:940px">
+      <div class="away">
+        <p style="font-size:12px;font-weight:700;letter-spacing:1.6px;margin-bottom:16px">MOVING AWAY FROM</p>
+        <ul>
+          <li style="--i:0">Conclusions formed before the evidence is in.</li>
+          <li style="--i:1">Depth that depends on which specialist is free that week.</li>
+          <li style="--i:2">Organisational factors quietly skipped when time runs short.</li>
+          <li style="--i:3">A method that lives in a manual, not in the work.</li>
+        </ul>
+      </div>
+      <div class="toward">
+        <p style="font-size:12px;font-weight:700;letter-spacing:1.6px;color:var(--teal);margin-bottom:16px">MOVING TO</p>
+        <ul style="color:var(--ink)">
+          <li style="--i:0">Every factor tied to the evidence that supports it.</li>
+          <li style="--i:1">The same guided method for every investigator, every case.</li>
+          <li style="--i:2">All four ICAM levels prompted — nothing left empty by accident.</li>
+          <li style="--i:3">The method running alongside you as the case is built.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="line" class="lt-cloud sec">
+  <div class="wrap">
+    <p class="eyebrow">The line this sits in</p>
+    <h2 class="rise" style="margin:14px 0 12px">A proven method. A new pace.</h2>
+    <div class="tl tl-draw" style="max-width:920px"><i style="left:6%"></i><i style="left:38%;background:var(--teal-2)"></i><i style="left:80%;background:var(--blue);box-shadow:0 0 0 2px var(--blue)"></i></div>
+    <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:40px;max-width:920px" class="line-grid">
+      <div style="display:flex;flex-direction:column;gap:28px">
+        <div class="rise"><h3 style="font-size:17px">1990</h3><p style="font-size:14px;color:var(--graphite);margin-top:6px">Reason’s model of organisational accidents — failures line up through the layers before anyone gets hurt.</p></div>
+        <div class="rise rise-d1"><h3 style="font-size:17px">1990s</h3><p style="font-size:14px;color:var(--graphite);margin-top:6px">ICAM formalises it for heavy industry: people, task, environment, organisation — and absent or failed defences.</p></div>
+      </div>
+      <div class="now-card rise rise-d2">
+        <p style="font-family:var(--font-head);font-weight:700;color:var(--blue);font-size:15px;margin-bottom:10px">Now</p>
+        <h3 style="font-size:21px;line-height:1.35">Decades of investigation practice, at the fingertips of whoever is running this one.</h3>
+        <p style="font-size:14px;color:var(--graphite);margin-top:12px">The coach carries what a seasoned ICAM lead would ask — the evidence that should exist by now, the question that opens a witness up, the organisational factor that has already appeared twice on this line. It reads the case in front of it and prompts the next step, on every investigation, not only the ones a specialist can attend.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="coach" class="lt sec">
+  <div class="wrap">
+    <p class="eyebrow">The coach at work · Case 2026-0418</p>
+    <h2 class="rise" style="margin:14px 0 12px;max-width:700px">The expertise sits in the case, not in the room.</h2>
+    <p class="lede">Isolation failure during a conveyor gearbox change-out, night shift. Four things the coach did with it — and what the investigator did back.</p>
+    <div class="coach-grid" style="display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:40px;margin-top:44px;align-items:start">
+      <div class="spine">
+        <div class="beat">
+          <span class="beat-tag">Evidence gap</span><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <p style="font-size:15px;color:var(--slate)">Two of five lock points have no verification record, and the isolation certificate is not attached. Ask for the permit and the padlock register before the scene is released.</p>
+        </div>
+        <div class="beat">
+          <span class="beat-tag">Witness prompt</span><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <p style="font-size:15px;color:var(--slate)">Ask the fitter: at what point did you believe the drive was dead, and what told you so?</p>
+        </div>
+        <div class="beat">
+          <span class="beat-tag">Unexamined ICAM level</span><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <p style="font-size:15px;color:var(--slate)">Organisational factors are still empty. Two earlier isolation events on this line cite the same handover step.</p>
+        </div>
+        <div class="beat final">
+          <span class="beat-tag">AI-suggested factor</span><span class="chip" style="margin-left:8px">Organisational</span><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <p style="font-size:15px;color:var(--slate);margin-top:8px">Isolation verification relied on one person’s check, with no independent confirmation required on night shift.</p>
+          <div style="display:flex;align-items:center;gap:12px;margin-top:16px;flex-wrap:wrap">
+            <span class="btn btn-primary btn-inline" style="padding:9px 20px;min-height:40px;font-size:14px;cursor:default">Accept</span>
+            <span style="font-weight:600;font-size:14px;color:var(--slate)">Edit</span>
+            <span style="font-weight:600;font-size:14px;color:var(--slate)">Reject</span>
+            <span style="margin-left:auto;font-size:13px;color:var(--graphite)">Nothing is filed until you accept it.</span>
+          </div>
+        </div>
+      </div>
+      <div class="case-panel">
+        <p style="font-size:11px;font-weight:700;letter-spacing:1.6px;color:var(--graphite)">CASE 2026-0418 · PROGRESS</p>
+        <div style="margin:14px 0 18px">
+          <div class="case-row"><span>Evidence items</span><b data-count="9">9</b></div>
+          <div class="case-row"><span>Factors named</span><b data-count="3">3</b></div>
+          <div class="case-row"><span>Defences assessed</span><b data-count="2">2</b></div>
+        </div>
+        <p style="font-size:11px;font-weight:700;letter-spacing:1.6px;color:var(--graphite);margin-bottom:10px">ICAM COVERAGE</p>
+        <p class="covlabel">People</p><div class="covbar"><i style="--w:68%"></i></div>
+        <p class="covlabel">Task</p><div class="covbar"><i style="--w:62%"></i></div>
+        <p class="covlabel">Environment</p><div class="covbar"><i style="--w:48%"></i></div>
+        <p class="covlabel">Organisation <span class="chip" style="padding:2px 8px;font-size:10px;color:var(--blue);border-color:#BBDEFB">COACH</span></p>
+        <div class="covbar"><i style="--w:56%;background:var(--blue)"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="solutions" class="dk sec">
+  <div class="wrap">
+    <p class="eyebrow">Industries</p>
+    <h2 class="rise" style="margin:14px 0 12px;max-width:720px">Built for the industries where investigations carry weight.</h2>
+    <div class="grid4 ind-grid" style="margin-top:40px;gap:20px">
+      <a href="/industries/mining-incident-investigation.html" class="rise" style="grid-column:span 2;display:block;background:rgba(255,255,255,.04);border:1px solid rgba(220,233,238,.16);border-radius:12px;padding:26px">
+        <h3 style="color:#fff;display:flex;align-items:center;gap:10px">Mining <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64FFDA" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></h3>
+        <p style="font-size:14px;color:var(--dk-dim);margin-top:8px">From open pit to underground: shift-based investigations, MSHA and MHSA reporting clocks, and AI coaching trained on mining hazards. Where InvestigatePro started.</p>
+      </a>
+      <a href="/industries/oil-gas-incident-management.html" class="rise rise-d1" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(220,233,238,.16);border-radius:12px;padding:26px">
+        <h3 style="color:#fff;font-size:17px">Oil &amp; gas</h3>
+        <p style="font-size:14px;color:var(--dk-dim);margin-top:8px">Process safety events with API 754 alignment.</p>
+      </a>
+      <a href="/industries/manufacturing-root-cause-analysis.html" class="rise rise-d2" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(220,233,238,.16);border-radius:12px;padding:26px">
+        <h3 style="color:#fff;font-size:17px">Manufacturing</h3>
+        <p style="font-size:14px;color:var(--dk-dim);margin-top:8px">Recurring-event analysis across lines and shifts.</p>
+      </a>
+      <a href="/industries/construction-safety-software.html" class="rise" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(220,233,238,.16);border-radius:12px;padding:26px">
+        <h3 style="color:#fff;font-size:17px">Construction</h3>
+        <p style="font-size:14px;color:var(--dk-dim);margin-top:8px">Multi-contractor incidents with clean handover of findings.</p>
+      </a>
+      <a href="/industries/engineering-incident-investigation.html" class="rise rise-d1" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(220,233,238,.16);border-radius:12px;padding:26px">
+        <h3 style="color:#fff;font-size:17px">Engineering</h3>
+        <p style="font-size:14px;color:var(--dk-dim);margin-top:8px">Design and commissioning events, tied back to organisational factors.</p>
+      </a>
+      <div style="display:flex;align-items:center;padding:26px">
+        <p style="font-size:13px;color:var(--dk-dim)">Under 1,000 employees? That’s who this is built for.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="lt sec">
+  <div class="wrap">
+    <p class="eyebrow">The platform</p>
+    <h2 class="rise" style="margin:14px 0 12px">Real ICAM methodology. Powered by AI.</h2>
+    <p class="lede">InvestigatePro guides your team through every step of a proper incident investigation. <a href="/platform.html" style="font-weight:600">See the full platform →</a></p>
+    <div class="grid3" style="margin-top:44px">
+      <div class="card rise"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00695C" stroke-width="1.8" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"></path><circle cx="19" cy="18" r="2.5"></circle></svg><h3 style="margin:14px 0 8px">Guided ICAM workflow</h3><p style="font-size:15px;color:var(--graphite)">Step-by-step investigation following the official ICAM methodology used by industry leaders.</p></div>
+      <div class="card rise rise-d1"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00695C" stroke-width="1.8" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"></path><circle cx="12" cy="12" r="4"></circle></svg><h3 style="margin:14px 0 8px">AI coach on the case</h3><p style="font-size:15px;color:var(--graphite)">Asks the hard questions, flags evidence gaps and drafts factors — every suggestion tied to what is in the case.</p></div>
+      <div class="card rise rise-d2"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00695C" stroke-width="1.8" aria-hidden="true"><circle cx="6" cy="6" r="2.5"></circle><circle cx="18" cy="6" r="2.5"></circle><circle cx="12" cy="18" r="2.5"></circle><path d="M7.8 7.8 L10.5 15.7M16.2 7.8 L13.5 15.7M8.5 6h7"></path></svg><h3 style="margin:14px 0 8px">Visual PEEPO charts</h3><p style="font-size:15px;color:var(--graphite)">Automatically generated PEEPO contribution charts that communicate findings clearly to leadership.</p></div>
+      <div class="card rise"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00695C" stroke-width="1.8" aria-hidden="true"><circle cx="9" cy="8" r="3"></circle><circle cx="17" cy="10" r="2.5"></circle><path d="M4 19c0-2.8 2.2-5 5-5s5 2.2 5 5M14.5 14.4c2.3.3 4 2.2 4 4.6"></path></svg><h3 style="margin:14px 0 8px">Multi-party collaboration</h3><p style="font-size:15px;color:var(--graphite)">Witnesses, supervisors and experts contribute to one case — with a record of who added what.</p></div>
+      <div class="card rise rise-d1"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00695C" stroke-width="1.8" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M9 8h6M9 12h6M9 16h4"></path></svg><h3 style="margin:14px 0 8px">Reports that stand up</h3><p style="font-size:15px;color:var(--graphite)">Professional investigation reports, generated from the case itself — no more formatting documents.</p></div>
+      <div class="card rise rise-d2"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00695C" stroke-width="1.8" aria-hidden="true"><path d="M4 19 L9 13 L13 16 L20 7"></path><path d="M15 7h5v5"></path></svg><h3 style="margin:14px 0 8px">Trends across cases</h3><p style="font-size:15px;color:var(--graphite)">Spot patterns across investigations and track improvement in your safety performance over time.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="lt-cloud sec-tight">
+  <div class="wrap" style="display:flex;justify-content:center">
+    <div class="founder-flex" style="max-width:760px;display:flex;gap:24px;align-items:flex-start">
+      <div style="flex:none;width:64px;height:64px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:800;font-size:20px" aria-hidden="true">DT</div>
       <div>
-        <h4 class="ip-fh">Product</h4>
-        <a href="/platform.html">Platform</a>
-        <a href="/pricing.html">Pricing</a>
-        <a href="/demo.html">Book a Demo</a>
-        <a href="/apps/">Apps</a>
-        <a href="/faq.html">FAQ</a>
-        <a href="/security.html">Security</a>
-        <a href="/changelog.html">Changelog</a>
-      </div>
-      <div>
-        <h4 class="ip-fh">Free resources</h4>
-        <a href="/checklist.html">ICAM Checklist</a>
-        <a href="/icam-template.html">ICAM Template</a>
-        <a href="/icam-toolkit.html">ICAM Toolkit</a>
-        <a href="/peepo-chart-builder.html">PEEPO Chart Builder</a>
-        <a href="/peepo-cheatsheet.html">PEEPO Cheat Sheet</a>
-        <a href="/5-whys-worksheet.html">5-Whys Worksheet</a>
-        <a href="/incident-report-template.html">Incident Report Template</a>
-        <a href="/rca-template-pack.html">RCA Template Pack</a>
-        <a href="/state-of-incident-investigation-2026.html">State of Incident Investigation 2026</a>
-      </div>
-      <div>
-        <h4 class="ip-fh">Company</h4>
-        <a href="/blog/">Blog</a>
-        <a href="/status.html">Status</a>
-        <a href="mailto:hello@investigatepro.app">Contact</a>
-        <a href="https://app.investigatepro.app/login">Login</a>
-        <h4 class="ip-fh" style="margin-top:20px">Legal</h4>
-        <a href="/privacy.html">Privacy</a>
-        <a href="/terms.html">Terms</a>
-        <a href="/cookie.html">Cookies</a>
-        <a href="/dpa.html">DPA</a>
+        <p class="eyebrow" style="margin-bottom:12px">Built by someone who’s been there</p>
+        <p style="font-family:var(--font-head);font-weight:700;font-size:24px;line-height:1.45;color:var(--ink)">“I spent 15 years investigating incidents in gold mines across Africa. I built InvestigatePro because I was tired of watching teams struggle with the same problems I faced.”</p>
+        <p style="margin-top:14px;font-size:15px;color:var(--graphite)"><strong style="color:var(--ink)">Devon Turner</strong> · Founder — 15+ years leading mining safety across Africa and the Middle East</p>
       </div>
     </div>
-    <div class="ip-fbot"><span>© 2026 InvestigatePro. All rights reserved.</span><span>Every incident, understood.</span></div>
+  </div>
+</section>
+
+<section id="pricing" class="lt sec">
+  <div class="wrap">
+    <p class="eyebrow">Pricing</p>
+    <h2 class="rise" style="margin:14px 0 12px">Simple, transparent pricing.</h2>
+    <p class="lede">No per-seat licenses. No hidden fees. Billed per organisation.</p>
+    <div class="grid4" style="margin-top:44px">
+      <div class="tier rise">
+        <h3>Starter</h3><p class="price">$149<span class="per">/month</span></p>
+        <p style="font-size:14px;color:var(--graphite)">Up to 5 users · ICAM workflow, templates and reports. No AI coach.</p>
+        <a href="https://app.investigatepro.app/signup" class="btn btn-primary" style="margin-top:auto">Start free</a>
+        <a href="https://cal.com/investigatepro/15min" style="font-size:13px;text-align:center">or book a demo</a>
+      </div>
+      <div class="tier pop rise rise-d1">
+        <span class="pop-badge">Most popular</span>
+        <h3>Professional</h3><p class="price">$349<span class="per">/month</span></p>
+        <p style="font-size:14px;color:var(--graphite)">Up to 20 users · everything in Starter, with the AI coach on every case.</p>
+        <a href="https://app.investigatepro.app/signup" class="btn btn-primary" style="margin-top:auto">Start free</a>
+        <a href="https://cal.com/investigatepro/15min" style="font-size:13px;text-align:center">or book a demo</a>
+      </div>
+      <div class="tier rise rise-d2">
+        <h3>Business</h3><p class="price">$749<span class="per">/month</span></p>
+        <p style="font-size:14px;color:var(--graphite)">Up to 100 users · SSO/SAML, scoped data exchange, dedicated success manager.</p>
+        <a href="#pilot" class="btn btn-teal" style="margin-top:auto">Start a pilot</a>
+        <a href="https://cal.com/investigatepro/15min" style="font-size:13px;text-align:center">or book a demo</a>
+      </div>
+      <div class="tier rise rise-d3">
+        <h3>Enterprise</h3><p class="price" style="font-size:28px">From $1,500<span class="per">/month</span></p>
+        <p style="font-size:14px;color:var(--graphite)">100+ users or multi-site · everything in Business, on-premise option, SLA.</p>
+        <a href="https://cal.com/investigatepro/30min" class="btn btn-outline" style="margin-top:auto">Talk to us</a>
+      </div>
+    </div>
+    <p style="margin-top:24px;font-size:14px;color:var(--graphite)">14-day free trial on Starter and Professional — no card required. Annual billing saves 15%. <a href="/pricing.html" style="font-weight:600">Compare all plans and features →</a></p>
+  </div>
+</section>
+
+<section id="checklist" class="dk sec-tight">
+  <div class="wrap checklist-flex" style="display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap">
+    <div style="max-width:560px">
+      <p class="eyebrow">Free resource</p>
+      <h2 style="font-size:28px;margin:10px 0 8px">The 25-point ICAM investigation checklist.</h2>
+      <p style="font-size:15px;color:var(--dk-dim)">The complete framework for ICAM investigations, distilled from 15+ years of frontline cases. <a href="/checklist.html">Or see the full checklist page →</a></p>
+    </div>
+    <form data-capture="inline-homepage" data-success="Sent — check your inbox for the checklist." style="display:flex;gap:12px;flex:none;flex-wrap:wrap;max-width:100%">
+      <input class="field" style="width:280px;max-width:100%" type="email" name="email" required placeholder="Enter your work email" aria-label="Work email">
+      <button type="submit" class="btn btn-primary btn-inline">Get the checklist</button>
+      <p class="form-msg" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<section id="pilot" class="lt-cloud sec">
+  <span id="demo" style="position:relative;top:-80px"></span>
+  <div class="wrap pilot-grid" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center">
+    <div>
+      <h2 class="rise" style="max-width:480px">Run the next investigation with the method built in.</h2>
+      <p class="lede" style="margin-top:14px">Three fields, and your workspace is ready the same day. Or see it on a real case first — <a href="https://cal.com/investigatepro/15min" style="font-weight:600">book a 15-minute demo</a>.</p>
+    </div>
+    <form class="pilot-box" data-capture="pilot_request" data-success="Received — we’ll set your pilot up today and confirm by email.">
+      <h3 style="margin-bottom:6px">Start a pilot</h3>
+      <p style="font-size:13px;color:var(--graphite);margin-bottom:18px">Three fields. Set up the same day.</p>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <input class="field" type="text" name="name" required placeholder="Name" aria-label="Name">
+        <input class="field" type="text" name="company" required placeholder="Site or operation" aria-label="Site or operation">
+        <input class="field" type="email" name="email" required placeholder="Work email" aria-label="Work email">
+        <button type="submit" class="btn btn-primary" style="width:100%">Start</button>
+      </div>
+      <p class="form-msg" role="status"></p>
+    </form>
+  </div>
+</section>
+<style>@media(max-width:900px){.coach-grid,.pilot-grid,.line-grid{grid-template-columns:minmax(0,1fr)!important}.ind-grid{grid-template-columns:minmax(0,1fr)!important}.ind-grid a{grid-column:span 1!important}.founder-flex{flex-direction:column}}</style>
+
+</main>
+<footer class="ip2-footer">
+  <div class="ip2-wrap">
+    <div class="cols">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <a href="/" class="ip2-logo" aria-label="InvestigatePro home"><span style="color:#64FFDA;display:inline-flex"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="M15.5 15.5 L21 21"></path><path d="M8 10.5h5M10.5 8v5"></path></svg></span><span class="l1">INVESTIGATE</span><span class="l2">PRO</span></a>
+        <p style="max-width:250px;font-size:13px;line-height:1.6">Structured, evidence-led ICAM investigation with an AI coach on every case.</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="ip2-chip">EU-hosted &amp; isolated</span><span class="ip2-chip">GDPR compliant</span></div>
+      </div>
+      <div><h4>Product</h4><ul>
+        <li><a href="/platform.html">Platform</a></li><li><a href="/pricing.html">Pricing</a></li><li><a href="/demo.html">Book a demo</a></li>
+        <li><a href="/apps/">Apps</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/security.html">Security</a></li><li><a href="/changelog.html">Changelog</a></li>
+      </ul></div>
+      <div><h4>Resources</h4><ul>
+        <li><a href="/resources.html">All free tools</a></li><li><a href="/checklist.html">ICAM checklist</a></li><li><a href="/icam-toolkit.html">ICAM toolkit</a></li>
+        <li><a href="/peepo-chart-builder.html">PEEPO chart builder</a></li><li><a href="/5-whys-worksheet.html">5-Whys worksheet</a></li><li><a href="/state-of-incident-investigation-2026.html">State of Incident Investigation</a></li>
+      </ul></div>
+      <div><h4>Industries</h4><ul>
+        <li><a href="/industries/mining-incident-investigation.html">Mining</a></li><li><a href="/industries/oil-gas-incident-management.html">Oil &amp; gas</a></li>
+        <li><a href="/industries/manufacturing-root-cause-analysis.html">Manufacturing</a></li><li><a href="/industries/construction-safety-software.html">Construction</a></li>
+        <li><a href="/industries/engineering-incident-investigation.html">Engineering</a></li>
+      </ul></div>
+      <div><h4>Company</h4><ul>
+        <li><a href="/blog/">Blog</a></li><li><a href="/status.html">Service notices</a></li><li><a href="mailto:hello@investigatepro.app">Contact</a></li><li><a href="https://app.investigatepro.app/login">Login</a></li>
+        <li style="margin-top:10px"><a href="/privacy.html">Privacy</a></li><li><a href="/terms.html">Terms</a></li><li><a href="/cookie.html">Cookies</a></li><li><a href="/dpa.html">DPA</a></li>
+      </ul></div>
+    </div>
+    <p class="accountability">Every suggestion carries its source, and the report goes out attributed to the lead investigator. Built by Devon Turner — fifteen years leading mining safety across Africa and the Middle East, with an ICAM specialism.</p>
+    <p style="margin-top:18px;font-size:12px;color:rgba(159,184,194,.7)">© 2026 InvestigatePro. All rights reserved. · Every incident, understood.</p>
   </div>
 </footer>
-<script>
-(function(){
-  var nav=document.querySelector('nav.ip-nav'); if(!nav) return;
-  var links=nav.querySelector('.ip-links');
-  var cal=nav.querySelector('.ip-cta');
-  if(!links||!cal) return;
-  var ICONS={open:'<svg width="26" height="26" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>',close:'<svg width="26" height="26" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>'};
-  var btn=document.createElement('button');
-  btn.className='mm-btn'; btn.type='button';
-  btn.setAttribute('aria-label','Open menu'); btn.setAttribute('aria-expanded','false'); btn.setAttribute('aria-controls','mm-panel');
-  btn.innerHTML=ICONS.open;
-  cal.parentNode.appendChild(btn);
-  var panel=document.createElement('div');
-  panel.id='mm-panel'; panel.className='mm-panel';
-  links.querySelectorAll('a').forEach(function(a){panel.appendChild(a.cloneNode(true));});
-  var login=nav.querySelector('.ip-login');
-  if(login){var l=login.cloneNode(true); l.removeAttribute('class'); panel.appendChild(l);}
-  var cta=cal.cloneNode(true); cta.className='mm-cta'; panel.appendChild(cta);
-  nav.appendChild(panel);
-  function setOpen(o){
-    document.documentElement.classList.toggle('mm-open',o);
-    document.body.classList.toggle('mm-noscroll',o);
-    btn.setAttribute('aria-expanded',String(o));
-    btn.setAttribute('aria-label',o?'Close menu':'Open menu');
-    btn.innerHTML=o?ICONS.close:ICONS.open;
-  }
-  btn.addEventListener('click',function(){setOpen(!document.documentElement.classList.contains('mm-open'));});
-  panel.addEventListener('click',function(e){if(e.target.closest('a'))setOpen(false);});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')setOpen(false);});
-  window.addEventListener('resize',function(){if(window.innerWidth>=768)setOpen(false);});
-})();
-</script>
+<script defer src="/analytics.js"></script>
+<script defer src="/assets/js/ip2.js"></script>
 </body>
 </html>

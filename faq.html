@@ -1,566 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ — InvestigatePro Incident Investigation Software</title>
-    <meta name="description" content="Frequently asked questions about InvestigatePro incident investigation software. Learn about ICAM methodology, AI features, pricing, and more.">
-    <link rel="canonical" href="https://investigatepro.app/faq.html">
-    <link rel="icon" type="image/png" href="assets/brand/favicon-32.png">
-    
-    <!-- FAQPage Schema -->
-    <script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-        {
-            "@type": "Question",
-            "name": "What is InvestigatePro?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "InvestigatePro is a cloud-based incident investigation platform that combines the proven ICAM (Incident Cause Analysis Method) methodology with AI-powered coaching. It helps safety teams conduct thorough investigations, identify root causes, and implement effective corrective actions."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "How do I get started with InvestigatePro?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Book a free 15-minute demo — we walk through a live investigation, answer your questions, and can set your team up the same day. Business and Enterprise rollouts include guided onboarding."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "What is ICAM?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "ICAM (Incident Cause Analysis Method) is a systematic approach to investigating workplace incidents. It examines four key areas: Absent/Failed Defenses, Individual/Team Actions, Task/Environmental Conditions, and Organisational Factors. This helps identify not just what happened, but why it happened and how to prevent recurrence."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Do I need ICAM training to use InvestigatePro?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "No! Our AI coaching guides you through each step of the ICAM process. It's like having an expert investigation coach available 24/7. The platform explains each concept as you go and suggests what to analyze next."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "How does the AI coaching work?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Our AI analyzes your investigation data and provides intelligent suggestions. It can generate 5-Whys analysis automatically, suggest root causes based on your findings, draft corrective action recommendations, identify patterns across multiple incidents, and guide you through the ICAM framework step-by-step."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Is my investigation data used to train the AI?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "No. Your investigation data is never used to train AI models without your explicit consent. All AI processing is done in real-time and your data remains private and secure."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "What plans are available?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Starter ($149/month): Up to 5 users, full ICAM methodology. Professional ($349/month): Up to 20 users, AI Root Cause Coach, advanced analytics. Business ($749/month): Up to 100 users, SSO/SAML and scoped data exchange. Enterprise from $1,500/month for 100+ users or multi-site. Annual plans save 15%."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "What's your refund policy?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We offer a 30-day money-back guarantee. If you're not satisfied within the first 30 days of your paid subscription, contact us for a full refund \u2014 no questions asked."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "How is my data protected?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We implement industry-standard security measures including TLS 1.3 encryption for all data in transit, AES-256 encryption for data at rest, EU-hosted database infrastructure, role-based access controls, regular security audits, and 24/7 monitoring."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Is InvestigatePro GDPR compliant?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. We're fully GDPR compliant. You have the right to access, correct, export, or delete your data at any time."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "How do I get help?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Email support@investigatepro.app, use our chat widget, or book a demo at cal.com/investigatepro/15min. We typically respond within a few hours during business hours."
-            }
-        }
-    ]
-}</script>
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    
-    <!-- Tailwind CSS (built) -->
-    <link rel="stylesheet" href="assets/css/styles.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
-    
-    
-    <!-- Structured Data: Breadcrumb -->
-    <script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://investigatepro.app/"
-        },
-        {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "FAQ",
-            "item": "https://investigatepro.app/faq.html"
-        }
-    ]
-}</script>
-<style id="ip-chrome">
-nav.ip-nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(17,45,60,.95);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.1);font-family:'Inter',ui-sans-serif,system-ui,sans-serif;margin:0;padding:0;box-shadow:none}
-.ip-nav-in{max-width:80rem;margin:0 auto;padding:0 1rem}
-@media(min-width:640px){.ip-nav-in{padding:0 1.5rem}}
-@media(min-width:1024px){.ip-nav-in{padding:0 2rem}}
-.ip-nav-row{display:flex;justify-content:space-between;align-items:center;padding:12px 0}
-nav.ip-nav a{text-decoration:none}
-.ip-logo{display:flex;align-items:center;padding:0}
-.ip-logo img,.ip-fbrand img{height:48px;width:auto;display:block}
-.ip-links{display:none;align-items:center;gap:2rem}
-@media(min-width:768px){.ip-links{display:flex}}
-nav.ip-nav .ip-links a{color:#C9D6DD;font-size:16px;font-weight:400;transition:color .2s;padding:2px 0}
-nav.ip-nav .ip-links a:hover{color:#FFFFFF}
-nav.ip-nav .ip-links a[aria-current="page"]{color:#FFFFFF;font-weight:600;box-shadow:inset 0 -2px 0 #64FFDA}
-.ip-right{display:flex;align-items:center;gap:1rem}
-nav.ip-nav .ip-login{display:none;color:#C9D6DD;transition:color .2s}
-nav.ip-nav .ip-login:hover{color:#FFFFFF}
-@media(min-width:640px){nav.ip-nav .ip-login{display:inline}}
-nav.ip-nav .ip-cta{background:#64FFDA;color:#112D3C;padding:10px 20px;border-radius:8px;font-weight:600;transition:background .2s;white-space:nowrap}
-nav.ip-nav .ip-cta:hover{background:#2BD9B5}
-body.ip-pad{padding-top:72px}
-.mm-btn{display:none;background:none;border:0;color:#C9D6DD;padding:10px;margin-left:4px;cursor:pointer;border-radius:8px}
-.mm-btn:hover{color:#FFFFFF;background:rgba(255,255,255,0.08)}
-.mm-panel{display:none;position:fixed;top:0;left:0;right:0;z-index:40;background:rgba(17,45,60,.98);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.1);padding:96px 24px 24px;max-height:100vh;overflow-y:auto}
-.mm-panel a{display:block;padding:14px 8px;color:#C9D6DD;font-size:18px;font-weight:500;border-bottom:1px solid rgba(255,255,255,0.08);text-decoration:none}
-.mm-panel a:hover{color:#FFFFFF}
-.mm-panel a[aria-current="page"]{color:#64FFDA}
-.mm-panel a.mm-cta{margin-top:16px;background:#64FFDA;color:#112D3C;text-align:center;border-radius:10px;font-weight:700;border-bottom:0;padding:14px}
-.mm-open .mm-panel{display:block}
-@media(max-width:767px){.mm-btn{display:inline-flex;align-items:center}}
-body.mm-noscroll{overflow:hidden}
-footer.ip-footer{background:#112D3C;border-top:1px solid rgba(255,255,255,.1);padding:48px 0 32px;font-family:'Inter',ui-sans-serif,system-ui,sans-serif;margin-top:0}
-.ip-foot-in{max-width:80rem;margin:0 auto;padding:0 1rem}
-@media(min-width:640px){.ip-foot-in{padding:0 1.5rem}}
-@media(min-width:1024px){.ip-foot-in{padding:0 2rem}}
-.ip-fgrid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
-@media(min-width:768px){.ip-fgrid{grid-template-columns:2fr 1fr 1fr 1fr}}
-.ip-fbrand img{margin-bottom:12px}
-.ip-fbrand p{color:rgba(201,214,221,.7);font-size:14px;margin:0;max-width:280px;line-height:1.6}
-.ip-fh{color:#FFFFFF;font-weight:600;font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin:0 0 12px;font-family:'Montserrat','Inter',sans-serif}
-footer.ip-footer a{display:block;color:rgba(201,214,221,.7);font-size:14px;padding:5px 0;text-decoration:none;transition:color .2s}
-footer.ip-footer a:hover{color:#64FFDA}
-.ip-fbot{margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);color:rgba(201,214,221,.7);font-size:13px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
-.ip-fbot a{display:inline;padding:0}
-nav.ip-nav *,nav.ip-nav,footer.ip-footer *,footer.ip-footer,.mm-panel *{box-sizing:border-box}
-nav.ip-nav img,footer.ip-footer img{max-width:none}
-.ip-nav-row{min-width:0}
-@media(max-width:420px){.ip-logo img{height:40px!important}nav.ip-nav .ip-cta{padding:9px 14px;font-size:15px}}
-@media(max-width:374px){.ip-logo img{height:34px!important}nav.ip-nav .ip-cta{padding:8px 11px;font-size:14px}}
-@media print{nav.ip-nav,footer.ip-footer,.mm-btn,.mm-panel{display:none!important}body.ip-pad{padding-top:0}}
-</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ — InvestigatePro Incident Investigation Software</title>
+<meta name="description" content="Frequently asked questions about InvestigatePro incident investigation software. Learn about ICAM methodology, AI features, pricing, and more.">
+<link rel="canonical" href="https://investigatepro.app/faq.html">
+<meta property="og:title" content="FAQ — InvestigatePro Incident Investigation Software">
+<meta property="og:description" content="Frequently asked questions about InvestigatePro incident investigation software. Learn about ICAM methodology, AI features, pricing, and more.">
+<meta property="og:image" content="https://investigatepro.app/assets/brand/og-image.png">
+<meta property="og:url" content="https://investigatepro.app/faq.html">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/assets/brand/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="/assets/css/ip2.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is InvestigatePro?", "acceptedAnswer": {"@type": "Answer", "text": "InvestigatePro is a cloud-based incident investigation platform that combines the proven ICAM (Incident Cause Analysis Method) methodology with AI-powered coaching. It helps safety teams conduct thorough investigations, identify root causes, and implement effective corrective actions."}}, {"@type": "Question", "name": "Is there a free trial?", "acceptedAnswer": {"@type": "Answer", "text": "Yes \u2014 Starter and Professional include a 14-day free trial. Sign up at app.investigatepro.app/signup; no card required. Business and Enterprise start with a guided pilot on your own cases."}}, {"@type": "Question", "name": "How do I get started with InvestigatePro?", "acceptedAnswer": {"@type": "Answer", "text": "Starter and Professional: create your workspace at app.investigatepro.app/signup and start a 14-day free trial \u2014 no card required. Business and Enterprise: start a pilot from the homepage (three fields, set up the same day) or book a 15-minute demo at cal.com/investigatepro/15min."}}, {"@type": "Question", "name": "What is ICAM?", "acceptedAnswer": {"@type": "Answer", "text": "ICAM (Incident Cause Analysis Method) is a systematic approach to investigating workplace incidents. It examines four key areas: Absent/Failed Defenses, Individual/Team Actions, Task/Environmental Conditions, and Organisational Factors. This helps identify not just what happened, but why it happened and how to prevent recurrence."}}, {"@type": "Question", "name": "Do I need ICAM training to use InvestigatePro?", "acceptedAnswer": {"@type": "Answer", "text": "No! Our AI coaching guides you through each step of the ICAM process. It's like having an expert investigation coach available 24/7. The platform explains each concept as you go and suggests what to analyze next."}}, {"@type": "Question", "name": "How does the AI coaching work?", "acceptedAnswer": {"@type": "Answer", "text": "Our AI analyzes your investigation data and provides intelligent suggestions. It can generate 5-Whys analysis automatically, suggest root causes based on your findings, draft corrective action recommendations, identify patterns across multiple incidents, and guide you through the ICAM framework step-by-step."}}, {"@type": "Question", "name": "Is my investigation data used to train the AI?", "acceptedAnswer": {"@type": "Answer", "text": "No. Your investigation data is never used to train AI models without your explicit consent. All AI processing is done in real-time and your data remains private and secure."}}, {"@type": "Question", "name": "What plans are available?", "acceptedAnswer": {"@type": "Answer", "text": "Starter ($149/month): Up to 5 users, full ICAM methodology. Professional ($349/month): Up to 20 users, AI Root Cause Coach, advanced analytics. Business ($749/month): Up to 100 users, SSO/SAML and scoped data exchange. Enterprise from $1,500/month for 100+ users or multi-site. Annual plans save 15%."}}, {"@type": "Question", "name": "What's your refund policy?", "acceptedAnswer": {"@type": "Answer", "text": "We offer a 30-day money-back guarantee. If you're not satisfied within the first 30 days of your paid subscription, contact us for a full refund \u2014 no questions asked."}}, {"@type": "Question", "name": "How is my data protected?", "acceptedAnswer": {"@type": "Answer", "text": "We implement industry-standard security measures including TLS 1.3 encryption for all data in transit, AES-256 encryption for data at rest, EU-hosted database infrastructure, role-based access controls, regular security audits, and 24/7 monitoring."}}, {"@type": "Question", "name": "Is InvestigatePro GDPR compliant?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We're fully GDPR compliant. You have the right to access, correct, export, or delete your data at any time."}}, {"@type": "Question", "name": "How do I get help?", "acceptedAnswer": {"@type": "Answer", "text": "Email support@investigatepro.app, use our chat widget, or book a demo at cal.com/investigatepro/15min. We typically respond within a few hours during business hours."}}]}</script>
 </head>
-<body class="font-sans antialiased bg-cloud text-ink">
-<!-- Site chrome: unified navigation -->
-<nav class="ip-nav">
-  <div class="ip-nav-in">
-    <div class="ip-nav-row">
-      <a href="/" class="ip-logo" aria-label="InvestigatePro home"><img src="/assets/brand/logo-horizontal-white.svg" alt="InvestigatePro" width="826" height="168" style="height:48px;width:auto"></a>
-      <div class="ip-links">
-        <a href="/#solutions">Solutions</a>
-        <a href="/#features">Features</a>
-        <a href="/platform.html">Platform</a>
-        <a href="/pricing.html">Pricing</a>
-        <a href="/apps/">Apps</a>
-        <a href="/blog/">Blog</a>
-      </div>
-      <div class="ip-right">
-        <a href="https://app.investigatepro.app/login" class="ip-login">Login</a>
-        <a href="https://cal.com/investigatepro/15min" class="ip-cta">Book Demo</a>
-      </div>
+<body class="ip2-pad">
+<nav class="ip2-nav light" aria-label="Main">
+  <div class="ip2-nav-row">
+    <a href="/" class="ip2-logo" aria-label="InvestigatePro home"><span style="color:#00695C;display:inline-flex"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="M15.5 15.5 L21 21"></path><path d="M8 10.5h5M10.5 8v5"></path></svg></span><span class="l1">INVESTIGATE</span><span class="l2">PRO</span></a>
+    <div class="ip2-links">
+      <a href="/platform.html">Platform</a><a href="/pricing.html">Pricing</a><a href="/resources.html">Resources</a><a href="/blog/">Blog</a>
+      <a href="https://app.investigatepro.app/login" class="ip2-login">Login</a>
+      <a href="/#pilot" class="ip2-cta">Start a pilot</a>
     </div>
+    <button class="mm-btn" aria-expanded="false" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
+  </div>
+  <div class="mm-panel">
+    <a href="/platform.html">Platform</a><a href="/pricing.html">Pricing</a><a href="/resources.html">Resources</a><a href="/blog/">Blog</a>
+    <a href="https://app.investigatepro.app/login" class="ip2-login-m">Login</a>
+    <a href="/#pilot" class="btn btn-primary">Start a pilot</a>
+    <a href="https://cal.com/investigatepro/15min" class="btn btn-outline">Book a 15-minute demo</a>
   </div>
 </nav>
+<main>
 
-
-    <!-- Content -->
-    <main class="pt-24 pb-16">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 class="text-4xl font-bold mb-2">Frequently Asked Questions</h1>
-            <p class="text-graphite mb-12">Everything you need to know about InvestigatePro</p>
-            
-            <!-- FAQ Categories -->
-            <div class="space-y-12">
-                
-                <!-- Getting Started -->
-                <section>
-                    <h2 class="text-2xl font-bold text-apex-500 mb-6 flex items-center">
-                        <span class="mr-3">🚀</span> Getting Started
-                    </h2>
-                    <div class="space-y-4">
-                        <details class="bg-white rounded-lg border border-mist group">
-                            <summary class="px-6 py-4 cursor-pointer font-semibold flex justify-between items-center">
-                                What is InvestigatePro?
-                                <span class="text-apex-500 group-open:rotate-180 transition-transform">▼</span>
-                            </summary>
-                            <div class="px-6 pb-4 text-slate">
-                                InvestigatePro is a cloud-based incident investigation platform that combines the proven ICAM (Incident Cause Analysis Method) methodology with AI-powered coaching. It helps safety teams conduct thorough investigations, identify root causes, and implement effective corrective actions.
-                            </div>
-                        </details>
-                        
-                        <details class="bg-white rounded-lg border border-mist group">
-                            <summary class="px-6 py-4 cursor-pointer font-semibold flex justify-between items-center">
-                                How do I get started with InvestigatePro?
-                                <span class="text-apex-500 group-open:rotate-180 transition-transform">▼</span>
-                            </summary>
-                            <div class="px-6 pb-4 text-slate">
-                                Book a free 15-minute demo — we walk through a live investigation, answer your questions, and can set your team up the same day. Business and Enterprise rollouts include guided onboarding.
-                            </div>
-                        </details>
-                        
-                        <details class="bg-white rounded-lg border border-mist group">
-                            <summary class="px-6 py-4 cursor-pointer font-semibold flex justify-between items-center">
-                                How long does it take to set up?
-                                <span class="text-apex-500 group-open:rotate-180 transition-transform">▼</span>
-                            </summary>
-                            <div class="px-6 pb-4 text-slate">
-                                You can start your first investigation within 5 minutes of signing up. No installation required — InvestigatePro runs entirely in your web browser. For teams, invite members via email and they can join instantly.
-                            </div>
-                        </details>
-                    </div>
-                </section>
-
-                <!-- ICAM Methodology -->
-                <section>
-                    <h2 class="text-2xl font-bold text-apex-500 mb-6 flex items-center">
-                        <span class="mr-3">📋</span> ICAM Methodology
-                    </h2>
-                    <div class="space-y-4">
-                        <details class="bg-white rounded-lg border border-mist group">
-                            <summary class="px-6 py-4 cursor-pointer font-semibold flex justify-between items-center">
-                                What is ICAM?
-                                <span class="text-apex-500 group-open:rotate-180 transition-transform">▼</span>
-                            </summary>
-                            <div class="px-6 pb-4 text-slate">
-                                ICAM (Incident Cause Analysis Method) is a systematic approach to investigating workplace incidents. It examines four key areas: Absent/Failed Defenses, Individual/Team Actions, Task/Environmental Conditions, and Organisational Factors. This helps identify not just what happened, but why it happened and how to prevent recurrence.
-                            </div>
-                        </details>
-                        
-                        <details class="bg-white rounded-lg border border-mist group">
-                            <summary class="px-6 py-4 cursor-pointer font-semibold flex justify-between items-center">
-                                Do I need ICAM training to use InvestigatePro?
-                                <span class="text-apex-500 group-open:rotate-180 transition-transform">▼</span>
-                            </summary>
-                            <div class="px-6 pb-4 text-slate">
-                                No! Our AI coaching guides you through each step of the ICAM process. It's like having an expert investigation coach available 24/7. The platform explains each concept as you go and suggests what to analyze next.
-                            </div>
-                        </details>
-                        
-                        <details class="bg-white rounded-lg border border-mist group">
-                            <summary class="px-6 py-4 cursor-pointer font-semibold flex justify-between items-center">
-                                What's the difference between ICAM and other investigation methods?
-                                <span class="text-apex-500 group-open:rotate-180 transition-transform">▼</span>
-                            </summary>
-                            <div class="px-6 pb-4 text-slate">
-                                Unlike simple "blame the worker" approaches, ICAM looks at systemic factors. It examines organizational issues, management systems, and workplace conditions — not just individual actions. This leads to more effective corrective actions that actually prevent future incidents.
-                            </div>
-                        </details>
-                    </div>
-                </section>
-
-                <!-- AI Features -->
-                <section>
-                    <h2 class="text-2xl font-bold text-apex-500 mb-6 flex items-center">
-                        <span class="mr-3">🤖</span> AI Features
-                    </h2>
-                    <div class="space-y-4">
-                        <details class="bg-white rounded-lg border border-mist group">
-                            <summary class="px-6 py-4 cursor-pointer font-semibold flex justify-between items-center">
-                                How does the AI coaching work?
-                                <span class="text-apex-500 group-open:rotate-180 transition-transform">▼</span>
-                            </summary>
-                            <div class="px-6 pb-4 text-slate">
-                                Our AI analyzes your investigation data and provides intelligent suggestions. It can:
-                                <ul class="mt-2 ml-4 list-disc space-y-1">
-                                    <li>Generate 5-Whys analysis automatically</li>
-                                    <li>Suggest root causes based on your findings</li>
-                                    <li>Draft corrective action recommendations</li>
-                                    <li>Identify patterns across multiple incidents</li>
-                                    <li>Guide you through the ICAM framework step-by-step</li>
-                                </ul>
-                            </div>
-                        </details>
-                        
-                        <details class="bg-white rounded-lg border border-mist group">
-                            <summary class="px-6 py-4 cursor-pointer font-semibold flex justify-between items-center">
-                                Is my investigation data used to train the AI?
-                                <span class="text-apex-500 group-open:rotate-180 transition-transform">▼</span>
-                            </summary>
-                            <div class="px-6 pb-4 text-slate">
-                                No. Your investigation data is never used to train AI models without your explicit consent. All AI processing is done in real-time and your data remains private and secure.
-                            </div>
-                        </details>
-                        
-                        <details class="bg-white rounded-lg border border-mist group">
-                            <summary class="px-6 py-4 cursor-pointer font-semibold flex justify-between items-center">
-                                Can I disable AI features?
-                                <span class="text-apex-500 group-open:rotate-180 transition-transform">▼</span>
-                            </summary>
-                            <div class="px-6 pb-4 text-slate">
-                                Yes. AI features can be disabled in your account settings. You'll still have full access to all manual investigation tools, templates, and reporting features.
-                            </div>
-                        </details>
-                    </div>
-                </section>
-
-                <!-- Pricing & Plans -->
-                <section>
-                    <h2 class="text-2xl font-bold text-apex-500 mb-6 flex items-center">
-                        <span class="mr-3">💰</span> Pricing & Plans
-                    </h2>
-                    <div class="space-y-4">
-                        <details class="bg-white rounded-lg border border-mist group">
-                            <summary class="px-6 py-4 cursor-pointer font-semibold flex justify-between items-center">
-                                What plans are available?
-                                <span class="text-apex-500 group-open:rotate-180 transition-transform">▼</span>
-                            </summary>
-                            <div class="px-6 pb-4 text-slate">
-                                <ul class="space-y-3">
-                                    <li><strong class="text-ink">Starter ($149/month):</strong> Up to 5 users, full ICAM methodology, evidence management, email support</li>
-                                    <li><strong class="text-ink">Professional ($349/month):</strong> Up to 20 users, AI Root Cause Coach, PEEPO charts, advanced analytics, priority support</li>
-                                    <li><strong class="text-ink">Business ($749/month):</strong> Up to 100 users, SSO/SAML, scoped data exchange, dedicated success manager</li>
-                                    <li class="mt-3"><a href="/platform.html#capabilities" class="text-apex-500 hover:underline font-medium">Full capability inventory, with what is live and what is in build &rarr;</a></li>
-                                    <li><strong class="text-ink">Enterprise (from ~$1,500/month):</strong> 100+ users or multiple sites &mdash; custom scope, talk to us</li>
-                                </ul>
-                                <p class="mt-3">Annual plans save 15%.</p>
-                            </div>
-                        </details>
-                        
-                        <details class="bg-white rounded-lg border border-mist group">
-                            <summary class="px-6 py-4 cursor-pointer font-semibold flex justify-between items-center">
-                                What's your refund policy?
-                                <span class="text-apex-500 group-open:rotate-180 transition-transform">▼</span>
-                            </summary>
-                            <div class="px-6 pb-4 text-slate">
-                                We offer a <strong class="text-ink">30-day money-back guarantee</strong>. If you're not satisfied within the first 30 days of your paid subscription, contact us for a full refund — no questions asked.
-                            </div>
-                        </details>
-                        
-                        <details class="bg-white rounded-lg border border-mist group">
-                            <summary class="px-6 py-4 cursor-pointer font-semibold flex justify-between items-center">
-                                Can I change plans later?
-                                <span class="text-apex-500 group-open:rotate-180 transition-transform">▼</span>
-                            </summary>
-                            <div class="px-6 pb-4 text-slate">
-                                Yes! You can upgrade or downgrade your plan at any time. Upgrades take effect immediately with prorated billing. Downgrades take effect at your next billing cycle.
-                            </div>
-                        </details>
-                    </div>
-                </section>
-
-                <!-- Security & Compliance -->
-                <section>
-                    <h2 class="text-2xl font-bold text-apex-500 mb-6 flex items-center">
-                        <span class="mr-3">🔒</span> Security & Compliance
-                    </h2>
-                    <div class="space-y-4">
-                        <details class="bg-white rounded-lg border border-mist group">
-                            <summary class="px-6 py-4 cursor-pointer font-semibold flex justify-between items-center">
-                                How is my data protected?
-                                <span class="text-apex-500 group-open:rotate-180 transition-transform">▼</span>
-                            </summary>
-                            <div class="px-6 pb-4 text-slate">
-                                We implement industry-standard security measures:
-                                <ul class="mt-2 ml-4 list-disc space-y-1">
-                                    <li>TLS 1.3 encryption for all data in transit</li>
-                                    <li>AES-256 encryption for data at rest</li>
-                                    <li>EU-hosted database infrastructure</li>
-                                    <li>Role-based access controls</li>
-                                    <li>Regular security audits</li>
-                                    <li>24/7 monitoring and intrusion detection</li>
-                                </ul>
-                            </div>
-                        </details>
-                        
-                        <details class="bg-white rounded-lg border border-mist group">
-                            <summary class="px-6 py-4 cursor-pointer font-semibold flex justify-between items-center">
-                                Is InvestigatePro GDPR compliant?
-                                <span class="text-apex-500 group-open:rotate-180 transition-transform">▼</span>
-                            </summary>
-                            <div class="px-6 pb-4 text-slate">
-                                Yes. We're fully GDPR compliant. You have the right to access, correct, export, or delete your data at any time. See our <a href="privacy.html" class="text-apex-500 hover:underline">Privacy Policy</a> for full details.
-                            </div>
-                        </details>
-                        
-                        <details class="bg-white rounded-lg border border-mist group">
-                            <summary class="px-6 py-4 cursor-pointer font-semibold flex justify-between items-center">
-                                Can I export my data?
-                                <span class="text-apex-500 group-open:rotate-180 transition-transform">▼</span>
-                            </summary>
-                            <div class="px-6 pb-4 text-slate">
-                                Yes. You can export all your investigations, reports, and data at any time in standard formats (PDF, CSV, JSON). This includes all attachments, analysis, and recommendations.
-                            </div>
-                        </details>
-                    </div>
-                </section>
-
-                <!-- Support -->
-                <section>
-                    <h2 class="text-2xl font-bold text-apex-500 mb-6 flex items-center">
-                        <span class="mr-3">💬</span> Support
-                    </h2>
-                    <div class="space-y-4">
-                        <details class="bg-white rounded-lg border border-mist group">
-                            <summary class="px-6 py-4 cursor-pointer font-semibold flex justify-between items-center">
-                                How do I get help?
-                                <span class="text-apex-500 group-open:rotate-180 transition-transform">▼</span>
-                            </summary>
-                            <div class="px-6 pb-4 text-slate">
-                                <ul class="space-y-2">
-                                    <li><strong class="text-ink">Email:</strong> <a href="mailto:support@investigatepro.app" class="text-apex-500 hover:underline">support@investigatepro.app</a></li>
-                                    <li><strong class="text-ink">Chat:</strong> Use the chat widget on our website</li>
-                                    <li><strong class="text-ink">Book a call:</strong> <a href="https://cal.com/investigatepro/15min" class="text-apex-500 hover:underline">Schedule time with our founder</a></li>
-                                </ul>
-                                <p class="mt-2">We typically respond within a few hours during business hours.</p>
-                            </div>
-                        </details>
-                        
-                        <details class="bg-white rounded-lg border border-mist group">
-                            <summary class="px-6 py-4 cursor-pointer font-semibold flex justify-between items-center">
-                                Do you offer training?
-                                <span class="text-apex-500 group-open:rotate-180 transition-transform">▼</span>
-                            </summary>
-                            <div class="px-6 pb-4 text-slate">
-                                Yes! All plans include access to our video tutorials and documentation. Professional and Enterprise plans include live onboarding sessions. Enterprise customers get customized training for their teams.
-                            </div>
-                        </details>
-                    </div>
-                </section>
-
-            </div>
-
-            <!-- Still have questions? -->
-            <div class="mt-16 bg-white rounded-xl p-8 text-center border border-mist">
-                <h2 class="text-2xl font-bold mb-4">Still have questions?</h2>
-                <p class="text-slate mb-6">Our team is here to help. Get in touch and we'll respond as soon as possible.</p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="cookie.html" class="hover:text-ink transition-colors">Cookies</a>
-                    <a href="mailto:hello@investigatepro.app" class="bg-apex-500 hover:bg-apex-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
-                        Email Us
-                    </a>
-                    <a href="https://cal.com/investigatepro/15min" class="border border-mist text-slate hover:border-apex-500 hover:text-ink px-6 py-3 rounded-lg font-semibold transition-colors">
-                        Book a Call
-                    </a>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    
-
-<script src="/analytics.js"></script>
-<footer class="ip-footer">
-  <div class="ip-foot-in">
-    <div class="ip-fgrid">
-      <div class="ip-fbrand">
-        <a href="/" aria-label="InvestigatePro home" style="display:inline-block;padding:0"><img src="/assets/brand/logo-horizontal-white.svg" alt="InvestigatePro" loading="lazy" width="826" height="168" style="height:48px;width:auto"></a>
-        <p>AI-driven event analysis. Incident investigation software built on real ICAM methodology.</p>
-      </div>
-      <div>
-        <h4 class="ip-fh">Product</h4>
-        <a href="/platform.html">Platform</a>
-        <a href="/pricing.html">Pricing</a>
-        <a href="/demo.html">Book a Demo</a>
-        <a href="/apps/">Apps</a>
-        <a href="/faq.html">FAQ</a>
-        <a href="/security.html">Security</a>
-        <a href="/changelog.html">Changelog</a>
-      </div>
-      <div>
-        <h4 class="ip-fh">Free resources</h4>
-        <a href="/checklist.html">ICAM Checklist</a>
-        <a href="/icam-template.html">ICAM Template</a>
-        <a href="/icam-toolkit.html">ICAM Toolkit</a>
-        <a href="/peepo-chart-builder.html">PEEPO Chart Builder</a>
-        <a href="/peepo-cheatsheet.html">PEEPO Cheat Sheet</a>
-        <a href="/5-whys-worksheet.html">5-Whys Worksheet</a>
-        <a href="/incident-report-template.html">Incident Report Template</a>
-        <a href="/rca-template-pack.html">RCA Template Pack</a>
-        <a href="/state-of-incident-investigation-2026.html">State of Incident Investigation 2026</a>
-      </div>
-      <div>
-        <h4 class="ip-fh">Company</h4>
-        <a href="/blog/">Blog</a>
-        <a href="/status.html">Status</a>
-        <a href="mailto:hello@investigatepro.app">Contact</a>
-        <a href="https://app.investigatepro.app/login">Login</a>
-        <h4 class="ip-fh" style="margin-top:20px">Legal</h4>
-        <a href="/privacy.html">Privacy</a>
-        <a href="/terms.html">Terms</a>
-        <a href="/cookie.html">Cookies</a>
-        <a href="/dpa.html">DPA</a>
-      </div>
+<section class="lt sec" style="padding-bottom:48px">
+  <div class="wrap" style="max-width:820px">
+    <p class="eyebrow">FAQ</p>
+    <h1 style="font-size:clamp(32px,4vw,42px);margin:14px 0 12px">Questions, answered plainly.</h1>
+    <p class="lede">Pricing specifics live on the <a href="/pricing.html" style="font-weight:600">pricing page</a>; security detail on the <a href="/security.html" style="font-weight:600">security page</a>.</p>
+  </div>
+</section>
+<section class="lt" style="padding-bottom:96px">
+  <div class="wrap" style="max-width:820px">
+    <div style="display:flex;flex-direction:column;gap:14px"><div class="card"><h3 style="font-size:16px">What is InvestigatePro?</h3><p style="font-size:14px;color:var(--graphite);margin-top:8px">InvestigatePro is a cloud-based incident investigation platform that combines the proven ICAM (Incident Cause Analysis Method) methodology with AI-powered coaching. It helps safety teams conduct thorough investigations, identify root causes, and implement effective corrective actions.</p></div>
+<div class="card"><h3 style="font-size:16px">Is there a free trial?</h3><p style="font-size:14px;color:var(--graphite);margin-top:8px">Yes — Starter and Professional include a 14-day free trial. Sign up at app.investigatepro.app/signup; no card required. Business and Enterprise start with a guided pilot on your own cases.</p></div>
+<div class="card"><h3 style="font-size:16px">How do I get started with InvestigatePro?</h3><p style="font-size:14px;color:var(--graphite);margin-top:8px">Starter and Professional: create your workspace at app.investigatepro.app/signup and start a 14-day free trial — no card required. Business and Enterprise: start a pilot from the homepage (three fields, set up the same day) or book a 15-minute demo at cal.com/investigatepro/15min.</p></div>
+<div class="card"><h3 style="font-size:16px">What is ICAM?</h3><p style="font-size:14px;color:var(--graphite);margin-top:8px">ICAM (Incident Cause Analysis Method) is a systematic approach to investigating workplace incidents. It examines four key areas: Absent/Failed Defenses, Individual/Team Actions, Task/Environmental Conditions, and Organisational Factors. This helps identify not just what happened, but why it happened and how to prevent recurrence.</p></div>
+<div class="card"><h3 style="font-size:16px">Do I need ICAM training to use InvestigatePro?</h3><p style="font-size:14px;color:var(--graphite);margin-top:8px">No! Our AI coaching guides you through each step of the ICAM process. It's like having an expert investigation coach available 24/7. The platform explains each concept as you go and suggests what to analyze next.</p></div>
+<div class="card"><h3 style="font-size:16px">How does the AI coaching work?</h3><p style="font-size:14px;color:var(--graphite);margin-top:8px">Our AI analyzes your investigation data and provides intelligent suggestions. It can generate 5-Whys analysis automatically, suggest root causes based on your findings, draft corrective action recommendations, identify patterns across multiple incidents, and guide you through the ICAM framework step-by-step.</p></div>
+<div class="card"><h3 style="font-size:16px">Is my investigation data used to train the AI?</h3><p style="font-size:14px;color:var(--graphite);margin-top:8px">No. Your investigation data is never used to train AI models without your explicit consent. All AI processing is done in real-time and your data remains private and secure.</p></div>
+<div class="card"><h3 style="font-size:16px">What plans are available?</h3><p style="font-size:14px;color:var(--graphite);margin-top:8px">Starter ($149/month): Up to 5 users, full ICAM methodology. Professional ($349/month): Up to 20 users, AI Root Cause Coach, advanced analytics. Business ($749/month): Up to 100 users, SSO/SAML and scoped data exchange. Enterprise from $1,500/month for 100+ users or multi-site. Annual plans save 15%.</p></div>
+<div class="card"><h3 style="font-size:16px">What's your refund policy?</h3><p style="font-size:14px;color:var(--graphite);margin-top:8px">We offer a 30-day money-back guarantee. If you're not satisfied within the first 30 days of your paid subscription, contact us for a full refund — no questions asked.</p></div>
+<div class="card"><h3 style="font-size:16px">How is my data protected?</h3><p style="font-size:14px;color:var(--graphite);margin-top:8px">We implement industry-standard security measures including TLS 1.3 encryption for all data in transit, AES-256 encryption for data at rest, EU-hosted database infrastructure, role-based access controls, regular security audits, and 24/7 monitoring.</p></div>
+<div class="card"><h3 style="font-size:16px">Is InvestigatePro GDPR compliant?</h3><p style="font-size:14px;color:var(--graphite);margin-top:8px">Yes. We're fully GDPR compliant. You have the right to access, correct, export, or delete your data at any time.</p></div>
+<div class="card"><h3 style="font-size:16px">How do I get help?</h3><p style="font-size:14px;color:var(--graphite);margin-top:8px">Email support@investigatepro.app, use our chat widget, or book a demo at cal.com/investigatepro/15min. We typically respond within a few hours during business hours.</p></div></div>
+    <div style="margin-top:36px;background:var(--cloud);border:1px solid var(--mist);border-radius:12px;padding:24px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap">
+      <p style="font-size:14px;color:var(--slate)">Didn’t find it? Ask on a 15-minute call.</p>
+      <a href="https://cal.com/investigatepro/15min" class="btn btn-teal btn-inline">Book a demo</a>
     </div>
-    <div class="ip-fbot"><span>© 2026 InvestigatePro. All rights reserved.</span><span>Every incident, understood.</span></div>
+  </div>
+</section>
+
+</main>
+<footer class="ip2-footer">
+  <div class="ip2-wrap">
+    <div class="cols">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <a href="/" class="ip2-logo" aria-label="InvestigatePro home"><span style="color:#64FFDA;display:inline-flex"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="M15.5 15.5 L21 21"></path><path d="M8 10.5h5M10.5 8v5"></path></svg></span><span class="l1">INVESTIGATE</span><span class="l2">PRO</span></a>
+        <p style="max-width:250px;font-size:13px;line-height:1.6">Structured, evidence-led ICAM investigation with an AI coach on every case.</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="ip2-chip">EU-hosted &amp; isolated</span><span class="ip2-chip">GDPR compliant</span></div>
+      </div>
+      <div><h4>Product</h4><ul>
+        <li><a href="/platform.html">Platform</a></li><li><a href="/pricing.html">Pricing</a></li><li><a href="/demo.html">Book a demo</a></li>
+        <li><a href="/apps/">Apps</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/security.html">Security</a></li><li><a href="/changelog.html">Changelog</a></li>
+      </ul></div>
+      <div><h4>Resources</h4><ul>
+        <li><a href="/resources.html">All free tools</a></li><li><a href="/checklist.html">ICAM checklist</a></li><li><a href="/icam-toolkit.html">ICAM toolkit</a></li>
+        <li><a href="/peepo-chart-builder.html">PEEPO chart builder</a></li><li><a href="/5-whys-worksheet.html">5-Whys worksheet</a></li><li><a href="/state-of-incident-investigation-2026.html">State of Incident Investigation</a></li>
+      </ul></div>
+      <div><h4>Industries</h4><ul>
+        <li><a href="/industries/mining-incident-investigation.html">Mining</a></li><li><a href="/industries/oil-gas-incident-management.html">Oil &amp; gas</a></li>
+        <li><a href="/industries/manufacturing-root-cause-analysis.html">Manufacturing</a></li><li><a href="/industries/construction-safety-software.html">Construction</a></li>
+        <li><a href="/industries/engineering-incident-investigation.html">Engineering</a></li>
+      </ul></div>
+      <div><h4>Company</h4><ul>
+        <li><a href="/blog/">Blog</a></li><li><a href="/status.html">Service notices</a></li><li><a href="mailto:hello@investigatepro.app">Contact</a></li><li><a href="https://app.investigatepro.app/login">Login</a></li>
+        <li style="margin-top:10px"><a href="/privacy.html">Privacy</a></li><li><a href="/terms.html">Terms</a></li><li><a href="/cookie.html">Cookies</a></li><li><a href="/dpa.html">DPA</a></li>
+      </ul></div>
+    </div>
+    <p class="accountability">Every suggestion carries its source, and the report goes out attributed to the lead investigator. Built by Devon Turner — fifteen years leading mining safety across Africa and the Middle East, with an ICAM specialism.</p>
+    <p style="margin-top:18px;font-size:12px;color:rgba(159,184,194,.7)">© 2026 InvestigatePro. All rights reserved. · Every incident, understood.</p>
   </div>
 </footer>
-<script>
-(function(){
-  var nav=document.querySelector('nav.ip-nav'); if(!nav) return;
-  var links=nav.querySelector('.ip-links');
-  var cal=nav.querySelector('.ip-cta');
-  if(!links||!cal) return;
-  var ICONS={open:'<svg width="26" height="26" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>',close:'<svg width="26" height="26" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>'};
-  var btn=document.createElement('button');
-  btn.className='mm-btn'; btn.type='button';
-  btn.setAttribute('aria-label','Open menu'); btn.setAttribute('aria-expanded','false'); btn.setAttribute('aria-controls','mm-panel');
-  btn.innerHTML=ICONS.open;
-  cal.parentNode.appendChild(btn);
-  var panel=document.createElement('div');
-  panel.id='mm-panel'; panel.className='mm-panel';
-  links.querySelectorAll('a').forEach(function(a){panel.appendChild(a.cloneNode(true));});
-  var login=nav.querySelector('.ip-login');
-  if(login){var l=login.cloneNode(true); l.removeAttribute('class'); panel.appendChild(l);}
-  var cta=cal.cloneNode(true); cta.className='mm-cta'; panel.appendChild(cta);
-  nav.appendChild(panel);
-  function setOpen(o){
-    document.documentElement.classList.toggle('mm-open',o);
-    document.body.classList.toggle('mm-noscroll',o);
-    btn.setAttribute('aria-expanded',String(o));
-    btn.setAttribute('aria-label',o?'Close menu':'Open menu');
-    btn.innerHTML=o?ICONS.close:ICONS.open;
-  }
-  btn.addEventListener('click',function(){setOpen(!document.documentElement.classList.contains('mm-open'));});
-  panel.addEventListener('click',function(e){if(e.target.closest('a'))setOpen(false);});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')setOpen(false);});
-  window.addEventListener('resize',function(){if(window.innerWidth>=768)setOpen(false);});
-})();
-</script>
+<script defer src="/analytics.js"></script>
+<script defer src="/assets/js/ip2.js"></script>
 </body>
 </html>
