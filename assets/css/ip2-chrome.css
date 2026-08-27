@@ -52,3 +52,21 @@ html.mm-open .mm-panel{display:block}
 .form-msg{font-size:14px;margin-top:10px;display:none}
 .form-msg.ok{display:block;color:var(--ip2-green)}.form-msg.err{display:block;color:#E53935}
 @media print{.ip2-nav,.mm-panel,.ip2-byline{display:none!important}body.ip2-pad{padding-top:0}}
+
+/* real brand lockup replaces the drawn magnifier glyph */
+.ip2-logo{gap:0}
+.ip2-logo .lgm{height:30px;width:auto;display:block}
+.ip2-footer .ip2-logo .lgm{height:26px}
+@media(max-width:599px){.ip2-logo .lgm{height:25px}}
+
+/* shared motion language: nav rail, section resolve, phrase lighting */
+.ip2-links{position:relative}
+.nrail{position:absolute;left:0;top:0;width:1px;height:2px;border-radius:1px;opacity:0;background:var(--mint,#64FFDA);transform:translate(0,0) scaleX(0);transform-origin:left center;pointer-events:none;transition:transform .19s cubic-bezier(.16,1,.3,1),opacity .18s ease}
+.ip2-nav.light .nrail{background:var(--teal-2,#00695C)}
+.ln{display:block}
+html:not(.motion-on) .res,html:not(.motion-on) .ln{opacity:1!important;transform:none!important}
+.lit-text .lw{color:var(--graphite,#5A6B76);transition:color .34s ease}
+.lit-text .lw.lit{color:var(--slate,#37474F)}
+html:not(.motion-on) .lit-text .lw{color:var(--slate,#37474F)}
+@media(prefers-reduced-motion:reduce){.nrail{transition:opacity .18s ease}.lit-text .lw{transition:none}}
+@media print{.res,.ln{opacity:1!important;transform:none!important}.lit-text .lw{color:var(--slate,#37474F)!important}}
