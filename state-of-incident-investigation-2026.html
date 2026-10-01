@@ -1,618 +1,252 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-GB" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>State of Incident Investigation 2026 — Industry Report | InvestigatePro</title>
-    <meta name="description" content="The definitive 2026 industry report on workplace incident investigation practices. Key findings on methodology adoption, AI use, investigation quality gaps, and what the most effective safety teams do differently.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://investigatepro.app/state-of-incident-investigation-2026.html">
-    <link rel="icon" type="image/png" href="/assets/brand/icon-color.svg">
-    <meta property="og:title" content="State of Incident Investigation 2026 — Industry Report">
-    <meta property="og:description" content="Key findings on investigation methodology adoption, AI use, quality gaps, and what top-performing safety teams do differently.">
-    <meta property="og:url" content="https://investigatepro.app/state-of-incident-investigation-2026.html">
-    <meta property="og:type" content="article">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>State of Incident Investigation 2026, Industry Report | InvestigatePro</title>
+<meta name="description" content="A 2026 report on how workplace incidents are investigated in mining, construction, oil and gas and manufacturing: methodology adoption, AI use, the gaps in quality and what effective safety teams do differently.">
+<link rel="canonical" href="https://investigatepro.app/state-of-incident-investigation-2026.html">
 
-    <script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "State of Incident Investigation 2026",
-    "description": "Industry report on workplace incident investigation practices, methodology adoption, and AI integration",
-    "datePublished": "2026-05-06",
-    "dateModified": "2026-05-06",
-    "author": {
-        "@type": "Organization",
-        "name": "InvestigatePro"
-    },
-    "publisher": {
-        "@type": "Organization",
-        "name": "InvestigatePro",
-        "url": "https://investigatepro.app"
-    },
-    "mainEntityOfPage": "https://investigatepro.app/state-of-incident-investigation-2026.html"
-}</script>
-
-    <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #F4F7F9; color: #37474F; min-height: 100vh; }
-
-        nav { background: #F4F7F9; border-bottom: 1px solid rgba(0,77,64,0.15); padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
-        .nav-logo { height: 36px; }
-        .nav-cta { background: #004D40; color: #FFFFFF; padding: 8px 18px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.875rem; }
-
-        /* COVER */
-        .cover { background: linear-gradient(160deg, #FFFFFF 0%, #F4F7F9 60%); border-bottom: 1px solid rgba(0,77,64,0.1); padding: 80px 24px 64px; text-align: center; }
-        .cover-badge { display: inline-block; background: rgba(0,77,64,0.1); border: 1px solid rgba(0,77,64,0.3); color: #004D40; padding: 7px 18px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 24px; }
-        .cover h1 { font-size: 2.8rem; font-weight: 900; color: #112D3C; line-height: 1.15; max-width: 800px; margin: 0 auto 20px; }
-        .cover h1 span { color: #004D40; }
-        .cover-sub { color: #5A6B76; font-size: 1.05rem; max-width: 620px; margin: 0 auto 36px; line-height: 1.7; }
-        .cover-meta { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; color: #5A6B76; font-size: 0.85rem; }
-        .cover-meta span { display: flex; align-items: center; gap: 6px; }
-
-        /* MAIN */
-        .main { max-width: 860px; margin: 0 auto; padding: 64px 24px 80px; }
-
-        /* EXEC SUMMARY */
-        .exec-box { background: #FFFFFF; border-left: 4px solid #004D40; border-radius: 0 12px 12px 0; padding: 28px 32px; margin-bottom: 48px; }
-        .exec-box h2 { font-size: 0.8rem; font-weight: 700; color: #004D40; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 16px; }
-        .exec-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-        .exec-box li { color: #5A6B76; font-size: 0.95rem; padding-left: 20px; position: relative; line-height: 1.5; }
-        .exec-box li::before { content: '→'; position: absolute; left: 0; color: #004D40; font-weight: 700; }
-
-        /* STATS GRID */
-        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 32px 0; }
-        .stat-card { background: #FFFFFF; border: 1px solid rgba(17,45,60,0.042); border-radius: 12px; padding: 22px 18px; text-align: center; }
-        .stat-num { font-size: 2.4rem; font-weight: 900; color: #004D40; line-height: 1; margin-bottom: 8px; }
-        .stat-label { font-size: 0.78rem; color: #5A6B76; line-height: 1.4; }
-        .stat-card.highlight { border-color: rgba(0,77,64,0.25); background: rgba(0,77,64,0.05); }
-        .stat-card.warn { border-color: rgba(239,68,68,0.2); }
-        .stat-card.warn .stat-num { color: #E53935; }
-
-        /* SECTION */
-        .report-section { margin-bottom: 56px; }
-        .section-tag { display: inline-block; background: rgba(0,77,64,0.08); color: #004D40; border: 1px solid rgba(0,77,64,0.2); border-radius: 6px; padding: 4px 12px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px; }
-        h2.rh { font-size: 1.7rem; font-weight: 800; color: #112D3C; margin-bottom: 16px; line-height: 1.25; }
-        h3.rh3 { font-size: 1.1rem; font-weight: 700; color: #112D3C; margin: 28px 0 12px; }
-        p.rp { color: #5A6B76; line-height: 1.8; margin-bottom: 16px; font-size: 0.975rem; }
-        p.rp strong { color: #37474F; }
-
-        /* DIVIDER */
-        .divider { border: none; border-top: 1px solid rgba(17,45,60,0.042); margin: 48px 0; }
-
-        /* PULL QUOTE */
-        .pullquote { background: rgba(0,77,64,0.05); border-left: 3px solid #004D40; border-radius: 0 8px 8px 0; padding: 20px 24px; margin: 28px 0; }
-        .pullquote p { color: #004D40; font-size: 1.05rem; font-style: italic; line-height: 1.6; margin: 0; }
-
-        /* FINDING CARDS */
-        .finding-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
-        .finding-card { background: #FFFFFF; border: 1px solid rgba(17,45,60,0.042); border-radius: 10px; padding: 20px; }
-        .finding-card .fc-num { font-size: 1.8rem; font-weight: 900; margin-bottom: 6px; }
-        .finding-card .fc-label { font-size: 0.8rem; color: #5A6B76; line-height: 1.4; }
-        .finding-card.green .fc-num { color: #9DD39F; }
-        .finding-card.red .fc-num { color: #E53935; }
-        .finding-card.yellow .fc-num { color: #FFB300; }
-        .finding-card.blue .fc-num { color: #2196F3; }
-
-        /* HORIZONTAL BAR */
-        .bar-chart { display: flex; flex-direction: column; gap: 12px; margin: 20px 0; }
-        .bar-row { display: flex; align-items: center; gap: 12px; }
-        .bar-label { font-size: 0.82rem; color: #5A6B76; min-width: 200px; }
-        .bar-track { flex: 1; background: rgba(17,45,60,0.04); border-radius: 4px; height: 8px; }
-        .bar-fill { height: 8px; border-radius: 4px; background: #004D40; }
-        .bar-fill.low { background: #E53935; }
-        .bar-fill.med { background: #FFB300; }
-        .bar-pct { font-size: 0.8rem; color: #004D40; font-weight: 700; min-width: 36px; text-align: right; }
-
-        /* COMPARISON TABLE */
-        .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-        .comp-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.875rem; min-width: 540px; }
-        .comp-table th { background: #F4F7F9; padding: 11px 14px; text-align: left; color: #004D40; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; border-bottom: 1px solid rgba(17,45,60,0.06); }
-        .comp-table td { padding: 11px 14px; border-bottom: 1px solid rgba(17,45,60,0.04); color: #5A6B76; vertical-align: top; }
-        .comp-table tr:last-child td { border-bottom: none; }
-        .comp-table td:first-child { font-weight: 600; color: #37474F; }
-        .tag-yes { color: #9DD39F; font-weight: 700; }
-        .tag-no { color: #E53935; }
-        .tag-partial { color: #FFB300; }
-
-        /* RECOMMENDATIONS */
-        .rec-list { display: flex; flex-direction: column; gap: 14px; margin: 20px 0; }
-        .rec-item { background: #FFFFFF; border: 1px solid rgba(17,45,60,0.042); border-radius: 10px; padding: 16px 20px; display: flex; gap: 14px; align-items: flex-start; }
-        .rec-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
-        .rec-text h4 { color: #112D3C; font-size: 0.95rem; font-weight: 700; margin-bottom: 5px; }
-        .rec-text p { color: #5A6B76; font-size: 0.83rem; line-height: 1.55; margin: 0; }
-
-        /* CTA */
-        .report-cta { background: linear-gradient(135deg, rgba(0,77,64,0.08), rgba(244,247,249,0)); border: 1px solid rgba(0,77,64,0.2); border-radius: 16px; padding: 40px; text-align: center; margin-top: 48px; }
-        .report-cta h3 { font-size: 1.4rem; font-weight: 800; color: #112D3C; margin-bottom: 12px; }
-        .report-cta p { color: #5A6B76; font-size: 0.95rem; margin-bottom: 24px; max-width: 520px; margin-left: auto; margin-right: auto; }
-        .report-cta .btn-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
-        .report-cta a.primary { background: #004D40; color: #FFFFFF; padding: 13px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; }
-        .report-cta a.secondary { border: 1px solid rgba(0,77,64,0.4); color: #004D40; padding: 13px 28px; border-radius: 8px; font-weight: 600; text-decoration: none; }
-
-        /* TOOLS */
-        .tool-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 20px 0; }
-        .tool-card { background: #FFFFFF; border: 1px solid rgba(17,45,60,0.042); border-radius: 8px; padding: 16px; text-decoration: none; display: block; }
-        .tool-card:hover { border-color: rgba(0,77,64,0.3); }
-        .tool-card h4 { color: #112D3C; font-size: 0.85rem; font-weight: 700; margin-bottom: 4px; }
-        .tool-card p { color: #5A6B76; font-size: 0.75rem; line-height: 1.4; margin-bottom: 8px; }
-        .tool-card span { color: #004D40; font-size: 0.75rem; font-weight: 600; }
-
-        @media (max-width: 640px) {
-            .cover h1 { font-size: 1.9rem; }
-            .stats-grid { grid-template-columns: 1fr 1fr; }
-            .finding-grid { grid-template-columns: 1fr; }
-            .tool-grid { grid-template-columns: 1fr; }
-            .bar-label { min-width: 140px; font-size: 0.75rem; }
-        }
-    </style>
-<link rel="stylesheet" href="/assets/css/ip2-chrome.css">
+<meta name="theme-color" content="#063A41">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="InvestigatePro">
+<meta property="og:title" content="State of Incident Investigation 2026, Industry Report | InvestigatePro">
+<meta property="og:description" content="A 2026 report on how workplace incidents are investigated in mining, construction, oil and gas and manufacturing: methodology adoption, AI use, the gaps in quality and what effective safety teams do differently.">
+<meta property="og:url" content="https://investigatepro.app/state-of-incident-investigation-2026.html">
+<meta property="og:image" content="https://investigatepro.app/assets/img/og-report.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/montserrat-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/ip-next.css">
+<script>(function(){var h=document.documentElement,r=false;h.className=h.className.replace('no-js','js');try{r=localStorage.getItem('ip-reduce-motion')==='1'}catch(e){}if(!r&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){h.classList.add('motion-on')}else{h.classList.add('motion-off')}})();</script>
+<script src="/assets/ip-next.js" defer></script>
+<script src="/analytics.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Report","name":"State of Incident Investigation 2026","author":{"@type":"Person","name":"Devon Turner"},"publisher":{"@type":"Organization","name":"InvestigatePro"}}</script>
 </head>
-<body class="ip-pad">
-<!-- Site chrome: unified navigation -->
-<nav class="ip2-nav light" aria-label="Main">
-  <div class="ip2-nav-row">
-    <a href="/" class="ip2-logo" aria-label="InvestigatePro home"><img class="lgm" src="/assets/brand/logo-horizontal.svg" alt="InvestigatePro" width="826" height="168" decoding="async"></a>
-    <div class="ip2-links">
-      <a href="/platform.html">Platform</a><a href="/pricing.html">Pricing</a><a href="/resources.html" aria-current="page">Resources</a><a href="/blog/">Blog</a>
-      <a href="https://app.investigatepro.app/login" class="ip2-login">Login</a>
-      <a href="/#pilot" class="ip2-cta">Start a pilot</a>
+<body class="page-article page-report">
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__logo" href="/index.html" aria-label="InvestigatePro home"><img src="/assets/img/logo-horizontal-white.svg" alt="InvestigatePro" width="152" height="31"></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="/platform.html">Platform</a>
+      <div class="nav__menu">
+        <button class="nav__menu-btn" type="button" aria-expanded="false" aria-controls="nav-industries">Industries <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg></button>
+        <div class="nav__panel" id="nav-industries">
+          <a href="/industries/mining-incident-investigation.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,152V136a96.37,96.37,0,0,0-64-90.51V40a16,16,0,0,0-16-16H112A16,16,0,0,0,96,40v5.49A96.37,96.37,0,0,0,32,136v16a16,16,0,0,0-16,16v24a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V168A16,16,0,0,0,224,152Zm-16-16v16H160V62.67A80.36,80.36,0,0,1,208,136ZM144,40V152H112V40ZM48,136A80.36,80.36,0,0,1,96,62.67V152H48Zm176,56H32V168H224v24Z"/></svg><strong>Mining</strong><span>Underground, open-cut, processing and contractors</span></a>
+          <a href="/industries/oil-gas-incident-management.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></svg><strong>Oil and gas</strong><span>Upstream, midstream and field services</span></a>
+          <a href="/industries/manufacturing-root-cause-analysis.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M116,176a8,8,0,0,1-8,8H80a8,8,0,0,1,0-16h28A8,8,0,0,1,116,176Zm60-8H148a8,8,0,0,0,0,16h28a8,8,0,0,0,0-16Zm64,48a8,8,0,0,1-8,8H24a8,8,0,0,1,0-16h8V88a8,8,0,0,1,12.8-6.4L96,120V88a8,8,0,0,1,12.8-6.4l38.74,29.05L159.1,29.74A16.08,16.08,0,0,1,174.94,16h18.12A16.08,16.08,0,0,1,208.9,29.74l15,105.13s.08.78.08,1.13v72h8A8,8,0,0,1,240,216Zm-77.86-94.4,8.53,6.4h36.11L193.06,32H174.94ZM48,208H208V144H168a8,8,0,0,1-4.8-1.6l-14.4-10.8,0,0L112,104v32a8,8,0,0,1-12.8,6.4L48,104Z"/></svg><strong>Manufacturing</strong><span>Plant, maintenance and process safety</span></a>
+          <a href="/industries/construction-safety-software.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M230.91,172A8,8,0,0,1,228,182.91l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,36,169.09l92,53.65,92-53.65A8,8,0,0,1,230.91,172ZM220,121.09l-92,53.65L36,121.09A8,8,0,0,0,28,134.91l96,56a8,8,0,0,0,8.06,0l96-56A8,8,0,1,0,220,121.09ZM24,80a8,8,0,0,1,4-6.91l96-56a8,8,0,0,1,8.06,0l96,56a8,8,0,0,1,0,13.82l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,24,80Zm23.88,0L128,126.74,208.12,80,128,33.26Z"/></svg><strong>Construction</strong><span>Principal contractors and subcontractors</span></a>
+          <a href="/industries/engineering-incident-investigation.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M160,112h48a16,16,0,0,0,16-16V48a16,16,0,0,0-16-16H160a16,16,0,0,0-16,16V64H128a24,24,0,0,0-24,24v32H72v-8A16,16,0,0,0,56,96H24A16,16,0,0,0,8,112v32a16,16,0,0,0,16,16H56a16,16,0,0,0,16-16v-8h32v32a24,24,0,0,0,24,24h16v16a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V160a16,16,0,0,0-16-16H160a16,16,0,0,0-16,16v16H128a8,8,0,0,1-8-8V88a8,8,0,0,1,8-8h16V96A16,16,0,0,0,160,112ZM56,144H24V112H56v32Zm104,16h48v48H160Zm0-112h48V96H160Z"/></svg><strong>Engineering</strong><span>Projects, commissioning and field work</span></a>
+        </div>
+      </div>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/resources.html" aria-current="page">Resources</a>
+      <a href="/blog/index.html">Blog</a>
+    </nav>
+    <div class="nav__actions">
+      <a class="nav__login" href="https://app.investigatepro.app/login">Login</a>
+      <a class="btn btn--primary btn--sm" href="https://app.investigatepro.app/signup">Start a 14-day trial</a>
+      <button class="nav__burger" type="button" aria-expanded="false" aria-controls="mmenu" aria-label="Open menu"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></svg></button>
     </div>
-    <button class="mm-btn" aria-expanded="false" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
   </div>
-  <div class="mm-panel">
-    <a href="/platform.html">Platform</a><a href="/pricing.html">Pricing</a><a href="/resources.html">Resources</a><a href="/blog/">Blog</a>
-    <a href="https://app.investigatepro.app/login" class="ip2-login-m">Login</a>
-    <a href="/#pilot" class="btn btn-primary">Start a pilot</a>
-    <a href="https://cal.com/investigatepro/15min" class="btn btn-outline">Book a 15-minute demo</a>
+</header>
+<div class="mmenu" id="mmenu" hidden role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="mmenu__top">
+    <a class="nav__logo" href="/index.html" aria-label="InvestigatePro home"><img src="/assets/img/logo-horizontal-white.svg" alt="InvestigatePro" width="140" height="28"></a>
+    <button class="nav__burger mmenu__close" type="button" aria-label="Close menu"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg></button>
   </div>
-</nav>
-
-
-<!-- COVER -->
-<div class="cover">
-    <div class="cover-badge">📊 Industry Report 2026</div>
-    <h1>State of Incident <span>Investigation</span> 2026</h1>
-    <p class="cover-sub">How organizations across mining, construction, oil & gas, and manufacturing are investigating workplace incidents — what's working, what's failing, and where the industry is heading.</p>
-    <div class="cover-meta">
-        <span>📅 Published: May 2026</span>
-        <span>🏭 Industries: Mining, Construction, O&G, Manufacturing</span>
-        <span>📍 Regions: Africa, Middle East, Australasia, Americas</span>
-        <span>🏢 Focus: SMBs under 500 employees</span>
-    </div>
+  <nav class="mmenu__list" aria-label="Mobile">
+    <a href="/platform.html" style="--i:0">Platform <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/pricing.html" style="--i:1">Pricing <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/resources.html" style="--i:2">Resources <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/blog/index.html" style="--i:3">Blog <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/demo.html" style="--i:4">Book a demo <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+  </nav>
+  <div class="mmenu__sub">
+    <a href="/industries/mining-incident-investigation.html">Mining</a>
+    <a href="/industries/oil-gas-incident-management.html">Oil and gas</a>
+    <a href="/industries/manufacturing-root-cause-analysis.html">Manufacturing</a>
+    <a href="/industries/construction-safety-software.html">Construction</a>
+    <a href="/industries/engineering-incident-investigation.html">Engineering</a>
+    <a href="https://app.investigatepro.app/login">Login</a>
+  </div>
+  <div class="mmenu__cta">
+    <a class="btn btn--primary btn--block" href="https://app.investigatepro.app/signup">Start a 14-day trial</a>
+    <a class="btn btn--ghost btn--block" href="https://cal.com/investigatepro/15min">Book a 15-minute demo</a>
+  </div>
 </div>
 
-<!-- MAIN CONTENT -->
-<div class="main">
-
-    <!-- EXECUTIVE SUMMARY -->
-    <div class="exec-box">
-        <h2>Executive Summary — Key Findings</h2>
-        <ul>
-            <li>Only <strong>34%</strong> of SMB safety teams use a structured investigation methodology consistently. The majority rely on informal root cause analysis or basic incident report forms.</li>
-            <li>The single most common investigation failure is <strong>stopping at "human error"</strong> — cited as the root cause in an estimated 60–70% of reports that researchers and regulators consider superficial.</li>
-            <li><strong>72%</strong> of corrective actions from investigations are administrative controls or retraining — the least effective levels of the hierarchy of controls.</li>
-            <li>Organizations that adopt structured methodology (ICAM, TapRoot, or equivalent) report <strong>measurably lower serious injury rates</strong> within 2 years of implementation.</li>
-            <li>AI-assisted investigation tools are still nascent, but <strong>early adopters report 40–60% reduction</strong> in time-to-close for complex investigations.</li>
-            <li>The largest quality gap in investigation practice is the <strong>failure to identify organizational factors</strong> — systemic management and cultural contributors that sit above the task level.</li>
-        </ul>
+<main id="main">
+<div class="readbar" aria-hidden="true"><i></i></div>
+<section class="phead">
+  <div class="wrap art-head">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/index.html">Home</a><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg><a href="/resources.html">Resources</a><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg><span>State of Incident Investigation 2026</span></nav>
+    <span class="chip">Industry report</span>
+    <h1>State of Incident Investigation 2026</h1>
+    <p class="lede">How organisations across mining, construction, oil &amp; gas, and manufacturing are investigating workplace incidents, what&#x27;s working, what&#x27;s failing, and where the industry is heading.</p>
+    <p class="legal-meta"><span>Published: May 2026</span><span>Industries: Mining, Construction, O&amp;G, Manufacturing</span><span>Regions: Africa, Middle East, Australasia, Americas Focus: SMBs under 500 employees</span></p>
+  </div>
+</section>
+<section class="sec sec--tight" style="padding-top:0">
+  <div class="wrap art">
+    <nav class="toc" data-toc aria-label="Contents"><p>Contents</p><a href="#executive-summary-key-findings">Executive Summary, Key Findings</a><a href="#the-workplace-investigation-quality-crisis">The Workplace Investigation Quality Crisis</a><a href="#methodology-adoption-structured-vs-ad-hoc">Methodology Adoption: Structured vs Ad Hoc</a><a href="#ai-in-investigation-early-adoption-real-results">AI in Investigation: Early Adoption, Real Results</a><a href="#the-organisational-factor-gap">The Organisational Factor Gap</a><a href="#what-high-performing-investigation-teams-do-differently">What High-Performing Investigation Teams Do Differently</a><a href="#the-investigation-landscape-in-2027-and-beyond">The Investigation Landscape in 2027 and Beyond</a></nav>
+    <article class="prose report">
+<h2 id="executive-summary-key-findings">Executive Summary, Key Findings</h2>
+<ul><li>Only <strong>34%</strong> of SMB safety teams use a structured investigation methodology consistently. The majority rely on informal root cause analysis or basic incident report forms.</li><li>The single most common investigation failure is <strong>stopping at "human error"</strong>, cited as the causes in an estimated 60-70% of reports that researchers and regulators consider superficial.</li><li><strong>72%</strong> of corrective actions from investigations are administrative controls or retraining, the least effective levels of the hierarchy of controls.</li><li>Organisations that adopt structured methodology (ICAM, TapRoot, or equivalent) report <strong>measurably lower serious injury rates</strong> within 2 years of implementation.</li><li>AI-assisted investigation tools are still nascent, but <strong>early adopters report 40-60% reduction</strong> in time-to-close for complex investigations.</li><li>The largest quality gap in investigation practice is the <strong>failure to identify organisational factors</strong>, systemic management and cultural contributors that sit above the task level.</li></ul>
+<p class="eyebrow">Finding 01</p>
+<h2 id="the-workplace-investigation-quality-crisis">The Workplace Investigation Quality Crisis</h2>
+<p>Workplace incident investigation is one of the most critical safety functions any organisation performs, and one of the most poorly executed. Despite decades of regulatory focus, advanced training programs, and growing safety budgets, the evidence points to a stubborn gap between investigation intent and investigation quality.</p>
+<p>The core problem is structural: most organisations investigate incidents the way they have always investigated incidents. Forms are filled out, immediate causes are noted, someone is retrained, and the report is filed. The organisational conditions that created the environment for the incident, the management systems, resource pressures, training gaps, and cultural factors, remain unexamined and unchanged.</p>
+<div class="stats"><div><b>68%</b><span>of investigations identify &quot;human error&quot; as primary cause, without examining why</span></div><div><b>72%</b><span>of corrective actions are administrative controls or retraining, the least effective tier</span></div><div><b>2.4×</b><span>more likely to have a repeat serious incident if organisational factors aren&#x27;t identified</span></div></div>
+<p>The consequences are predictable. Organisations that don't reach organisational factors in their investigations don't fix the systems that allowed the incident. The same or similar events recur. Workers are injured again. And each cycle reinforces the belief that "accidents just happen", a narrative that erodes safety culture far beyond the specific incident at hand.</p>
+<blockquote><p>"If you keep finding the same contributing factors, time pressure, communication breakdown, inadequate supervision, in unrelated incidents, your investigation program is telling you something. The question is whether anyone is listening."</p></blockquote>
+<h3>The Human Error Trap</h3>
+<p>The most common and most damaging pattern in workplace investigation is the assignment of "human error" as the causes. It is common because it is easy: there is almost always a human action at or near the moment of harm. It is damaging because it terminates analysis prematurely, assigns blame rather than identifying systemic failure, and generates corrective actions that have poor effectiveness.</p>
+<p>James Reason's work on the "Swiss Cheese Model" demonstrated decades ago that serious incidents require the simultaneous alignment of multiple failures, not a single human mistake. Investigations that stop at the human act miss the layers of organisational and system failure that made that act possible, likely, and ultimately inevitable given the conditions in place.</p>
+<p>ICAM (Incident Cause Analysis Method) and similar structured methodologies address this directly. By requiring investigators to work through the full PEEPO framework, People, Environment, Equipment, Procedures, and Organisation, they force analysis past the immediate action to the systemic conditions underneath.</p>
+<p class="eyebrow">Finding 02</p>
+<h2 id="methodology-adoption-structured-vs-ad-hoc">Methodology Adoption: Structured vs Ad Hoc</h2>
+<p>Across high-hazard industries, a consistent pattern emerges: organisations that adopt structured, standardized investigation methodology produce better investigations, and over time, safer workplaces. Yet methodology adoption remains far from universal, particularly in small-to-medium enterprises.</p>
+<figure class="bars"><div class="bars__row"><span>Large enterprise (500+ employees)</span><i style="--v:0.71" aria-hidden="true"></i><b>71%</b></div><div class="bars__row"><span>Mid-size (100-500 employees)</span><i style="--v:0.42" aria-hidden="true"></i><b>42%</b></div><div class="bars__row"><span>SMB (&lt;100 employees)</span><i style="--v:0.19" aria-hidden="true"></i><b>19%</b></div><figcaption>Estimated use of structured investigation methodology (ICAM, TapRoot, SCAT, or equivalent) by organisation size.</figcaption></figure>
+<h3>Why SMBs Under-Invest in Methodology</h3>
+<p>Small and medium businesses face specific barriers to structured investigation methodology that large enterprises don't encounter to the same degree. Cost is one factor, structured training, software platforms, and dedicated investigation personnel are typically priced for enterprise budgets. But the more fundamental barriers are:</p>
+<div class="stats"><div><b>1 in 3</b><span>SMB safety managers report no formal investigation training, relying on on-the-job experience</span></div><div><b>58%</b><span>of SMBs use a generic incident report form as their primary investigation tool</span></div><div><b>3-5×</b><span>more time typically spent on regulatory compliance reporting than on causal analysis</span></div><div><b>83%</b><span>of SMB safety managers would adopt structured methodology if training costs were accessible</span></div></div>
+<p>The access gap is real but closing. Digital investigation platforms have significantly reduced the cost and complexity of methodology adoption. Browser-based tools, guided workflows, and AI assistance are making ICAM-quality investigations accessible to organisations that previously couldn't justify the investment.</p>
+<h3>ICAM vs Other Methodologies: Adoption by Industry</h3>
+<table><tr><th>Methodology</th><th>Mining</th><th>Construction</th><th>Oil &amp; Gas</th><th>Manufacturing</th><th>Systemic Focus</th></tr><tr><td>ICAM</td><td>High</td><td>Growing</td><td>Moderate</td><td>Low</td><td>Strong</td></tr><tr><td>TapRoot</td><td>Moderate</td><td>Low</td><td>High</td><td>Moderate</td><td>Strong</td></tr><tr><td>SCAT</td><td>Moderate</td><td>Moderate</td><td>Moderate</td><td>Moderate</td><td>Partial</td></tr><tr><td>5 Whys</td><td>Moderate</td><td>High</td><td>Moderate</td><td>High</td><td>Partial</td></tr><tr><td>Informal / Ad hoc</td><td>Declining</td><td>Dominant</td><td>Rare</td><td>Dominant</td><td>Minimal</td></tr></table>
+<p class="eyebrow">Finding 03</p>
+<h2 id="ai-in-investigation-early-adoption-real-results">AI in Investigation: Early Adoption, Real Results</h2>
+<p>Artificial intelligence is beginning to reshape incident investigation in ways that go beyond simple automation. Where early digital tools merely digitized paper forms, AI-assisted platforms are now augmenting the analytical work, helping investigators identify contributing factors they might miss, flagging patterns across multiple incidents, and improving corrective action quality.</p>
+<div class="stats"><div><b>40-60%</b><span>reduction in time-to-close for complex investigations with AI assistance</span></div><div><b>2.1×</b><span>more contributing factors identified per investigation with AI prompting vs unaided</span></div><div><b>14%</b><span>of SMB safety teams currently use any AI tooling in their investigation process</span></div></div>
+<h3>Where AI Creates Genuine Value</h3>
+<p>The most effective AI applications in investigation are not replacing investigator judgment, they are supporting and extending it. Specific high-value applications include:</p>
+<ul class="recs"><li><strong>Contributing Factor Prompting</strong><span>AI systems trained on ICAM and PEEPO frameworks can prompt investigators with relevant contributing factors they may not have considered, based on incident type, industry, and the data entered so far. This addresses the most common investigation quality gap: incomplete PEEPO analysis.</span></li><li><strong>Pattern Recognition Across Incidents</strong><span>Individual investigations rarely surface organisational factors that appear across multiple events. AI pattern analysis across investigation databases can identify recurring themes, the same organisational factor appearing in five apparently unrelated incidents over 18 months, that human reviewers miss.</span></li><li><strong>Corrective Action Quality Assessment</strong><span>AI can evaluate proposed corrective actions against the hierarchy of controls and the identified underlying causes, flagging where administrative actions are proposed for systemic problems, or where actions don't actually address the organisational factors identified.</span></li><li><strong>Investigation Scope Guidance</strong><span>Determining which incidents warrant deep investigation and which can be addressed with lighter-touch analysis is a perpetual challenge. AI classification based on potential severity, contributing factor complexity, and regulatory requirements helps safety teams allocate investigation resources more effectively.</span></li></ul>
+<h3>The Limits of AI in Investigation</h3>
+<p>Despite genuine capability, AI tools have meaningful limitations in investigation contexts that safety professionals should understand. AI cannot conduct witness interviews, arguably the most information-rich source in any investigation. It cannot interpret the emotional and cultural dynamics on a site that an experienced investigator reads in a conversation. And it cannot make the judgment calls that distinguish a material contributing factor from a peripheral observation.</p>
+<p>The organisations achieving the best results with AI investigation tools treat them as analytical partners, tools that expand the investigator's reach and catch what they might miss, not as autonomous systems that can replace trained, experienced safety professionals.</p>
+<p class="eyebrow">Finding 04</p>
+<h2 id="the-organisational-factor-gap">The Organisational Factor Gap</h2>
+<p>The most important and most consistently missed component of workplace incident investigation is the identification of organisational factors. These are the management systems, cultural norms, resource decisions, and leadership behaviours that create the conditions in which incidents become possible.</p>
+<p>Research from multiple jurisdictions consistently shows that organisational factors are present in the overwhelming majority of serious workplace incidents, often as the most significant contributor. Yet they are identified in a minority of investigations.</p>
+<figure class="bars"><div class="bars__row"><span>Immediate cause identified</span><i style="--v:0.98" aria-hidden="true"></i><b>98%</b></div><div class="bars__row"><span>Equipment / procedure factors noted</span><i style="--v:0.61" aria-hidden="true"></i><b>61%</b></div><div class="bars__row"><span>Supervision / training factors identified</span><i style="--v:0.44" aria-hidden="true"></i><b>44%</b></div><div class="bars__row"><span>Organisational / management factors named</span><i style="--v:0.22" aria-hidden="true"></i><b>22%</b></div><div class="bars__row"><span>Leadership / cultural factors examined</span><i style="--v:0.09" aria-hidden="true"></i><b>9%</b></div><figcaption>Percentage of investigation reports that identify contributing factors at each level of the causal hierarchy. Estimated from industry research across high-hazard sectors.</figcaption></figure>
+<p>The organisational factor gap is not primarily a training problem. Most experienced safety managers understand, intellectually, that organisational factors matter. The gap persists because identifying organisational factors is politically uncomfortable. Naming management systems, supervision failures, resource constraints, or leadership behaviour as contributing factors implicates people with organisational power.</p>
+<blockquote><p>"The investigation stops where the political discomfort begins. That's why organisational factors are so consistently absent from reports, not because they don't exist, but because naming them has consequences that identifying equipment failures doesn't."</p></blockquote>
+<p>Organisations that have successfully closed the organisational factor gap share a common trait: senior leadership that actively protects investigators who surface uncomfortable systemic findings, and visibly acts on them. This requires courage, and it requires that the organisational investigation process be genuinely separated from the performance management process.</p>
+<p class="eyebrow">Finding 05</p>
+<h2 id="what-high-performing-investigation-teams-do-differently">What High-Performing Investigation Teams Do Differently</h2>
+<p>Across the industries covered in this report, the organisations with the most effective investigation practices share a consistent set of behaviours that distinguish them from the average. These are not expensive or operationally complex, many are cultural and process choices that require leadership commitment more than budget.</p>
+<ul class="recs"><li><strong>They investigate near misses with the same rigour as injuries</strong><span>The most significant learning opportunity in any safety system is the high-potential near miss, an event that had the potential to kill but didn't. High-performing teams classify these as pSIF events and investigate them to the same standard as fatalities. Average teams file a form and move on.</span></li><li><strong>They use multi-disciplinary investigation teams</strong><span>Operations, maintenance, HR, and safety, cross-functional teams produce better investigations. The operator sees things the safety manager misses. The HR perspective surfaces the human dynamics the technical team glosses over. Diversity of perspective is an investigation quality multiplier.</span></li><li><strong>They use structured methodology, consistently</strong><span>ICAM, TapRoot, or equivalent, consistently applied across the organisation. The methodology matters less than the consistency. Structured methodology creates a common language, a repeatable process, and a basis for cross-site comparison that informal investigation can never provide.</span></li><li><strong>They track corrective action effectiveness, not just completion</strong><span>The question isn't "was the corrective action completed?", it's "did it actually reduce the risk?" High-performing teams assign outcome measures to corrective actions, verify implementation independently, and track whether the specific contributing factor reappears in subsequent incidents.</span></li><li><strong>They share learnings across sites and teams</strong><span>An investigation at Site A that reveals a recurring organisational factor should trigger a review at Site B, C, and D. High-performing organisations have a formal learning distribution mechanism, not just an email with the investigation report attached, but a structured process for assessing applicability and implementing relevant findings elsewhere.</span></li></ul>
+<p class="eyebrow">Outlook</p>
+<h2 id="the-investigation-landscape-in-2027-and-beyond">The Investigation Landscape in 2027 and Beyond</h2>
+<p>Several converging trends will reshape incident investigation practice over the next 18-24 months:</p>
+<h3>Regulatory Pressure on Investigation Quality</h3>
+<p>Regulators in Australia (SafeWork), South Africa (DMRE), and the UK (HSE) are increasingly scrutinizing investigation quality, not just whether investigations were conducted, but whether they identified systemic causes and whether corrective actions were effective. This regulatory shift is moving investigation quality from a best-practice aspiration to a compliance requirement for high-hazard operations.</p>
+<h3>The pSIF Classification Movement</h3>
+<p>Precursor Serious Injury and Fatality (pSIF) classification, formally identifying near misses and injuries with the potential to kill, is gaining regulatory and organisational traction. Organisations that adopt pSIF classification are driving significant increases in investigation quality, because they are applying deep investigation methodology to a much larger set of events than fatality-only programs reach.</p>
+<h3>AI Integration as Standard Practice</h3>
+<p>AI investigation assistance, currently used by roughly 14% of SMB safety teams, is projected to become standard practice within 3-5 years. As AI tools mature, the organisations that have built structured investigation processes and accumulated investigation data will have a significant advantage: their AI tools will be trained on their own organisational context, making them far more effective than generic implementations.</p>
+<h3>The SMB Capability Gap</h3>
+<p>The investigation quality gap between large enterprises and SMBs is likely to widen before it narrows, unless SMBs actively invest in accessible investigation capability. Digital platforms designed specifically for smaller organisations, with guided methodology, AI assistance, and affordable pricing, represent the most viable path to closing this gap.</p>
+      <div class="author"><strong>Devon Turner</strong><p>Founder of InvestigatePro. Fifteen years leading mining safety across Africa and the Middle East, with an ICAM specialism.</p></div>
+    </article>
+    <aside class="art-aside" aria-label="Related">
+      <div class="bezel meter"><strong>Run it on a real case</strong><p class="muted small">A self-serve 14-day trial on Starter or Professional.</p><a class="btn btn--primary btn--sm" href="https://app.investigatepro.app/signup">Start a 14-day trial</a></div>
+      <div class="bezel meter"><strong>25-point ICAM checklist</strong><p class="muted small">Tick it off in the browser.</p><a class="btn btn--ghost btn--sm" href="/checklist.html">Open the checklist</a></div>
+    </aside>
+  </div>
+</section>
+<section class="sec" aria-labelledby="tools-h">
+  <div class="wrap">
+    <div class="sec-head sec-head--row">
+      <div class="stack" style="--gap:18px"><h2 id="tools-h">Free investigation tools.</h2><p>Free, no account needed.</p></div>
+      <a class="link-arrow" href="/resources.html">All free tools <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
     </div>
-
-    <!-- SECTION 1: THE INVESTIGATION QUALITY CRISIS -->
-    <div class="report-section">
-        <div class="section-tag">Finding 01</div>
-        <h2 class="rh">The Workplace Investigation Quality Crisis</h2>
-
-        <p class="rp">Workplace incident investigation is one of the most critical safety functions any organization performs — and one of the most poorly executed. Despite decades of regulatory focus, advanced training programs, and growing safety budgets, the evidence points to a stubborn gap between investigation intent and investigation quality.</p>
-
-        <p class="rp">The core problem is structural: most organizations investigate incidents the way they have always investigated incidents. Forms are filled out, immediate causes are noted, someone is retrained, and the report is filed. The organizational conditions that created the environment for the incident — the management systems, resource pressures, training gaps, and cultural factors — remain unexamined and unchanged.</p>
-
-        <div class="stats-grid">
-            <div class="stat-card warn">
-                <div class="stat-num">68%</div>
-                <div class="stat-label">of investigations identify "human error" as primary cause — without examining why</div>
-            </div>
-            <div class="stat-card warn">
-                <div class="stat-num">72%</div>
-                <div class="stat-label">of corrective actions are administrative controls or retraining — the least effective tier</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-num">2.4×</div>
-                <div class="stat-label">more likely to have a repeat serious incident if organizational factors aren't identified</div>
-            </div>
-        </div>
-
-        <p class="rp">The consequences are predictable. Organizations that don't reach organizational factors in their investigations don't fix the systems that allowed the incident. The same or similar events recur. Workers are injured again. And each cycle reinforces the belief that "accidents just happen" — a narrative that erodes safety culture far beyond the specific incident at hand.</p>
-
-        <div class="pullquote">
-            <p>"If you keep finding the same contributing factors — time pressure, communication breakdown, inadequate supervision — in unrelated incidents, your investigation program is telling you something. The question is whether anyone is listening."</p>
-        </div>
-
-        <h3 class="rh3">The Human Error Trap</h3>
-        <p class="rp">The most common and most damaging pattern in workplace investigation is the assignment of "human error" as the root cause. It is common because it is easy: there is almost always a human action at or near the moment of harm. It is damaging because it terminates analysis prematurely, assigns blame rather than identifying systemic failure, and generates corrective actions that have poor effectiveness.</p>
-
-        <p class="rp">James Reason's work on the "Swiss Cheese Model" demonstrated decades ago that serious incidents require the simultaneous alignment of multiple failures — not a single human mistake. Investigations that stop at the human act miss the layers of organizational and system failure that made that act possible, likely, and ultimately inevitable given the conditions in place.</p>
-
-        <p class="rp">ICAM (Incident Cause Analysis Method) and similar structured methodologies address this directly. By requiring investigators to work through the full PEEPO framework — People, Environment, Equipment, Procedures, and Organization — they force analysis past the immediate action to the systemic conditions underneath.</p>
+    <div class="tool-list">
+      <a href="/peepo-chart-builder.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z"/></svg><span><strong>PEEPO Chart Builder</strong><span>Interactive PEEPO analysis with guided prompts and printable summary</span></span><svg class="i go" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+      <a href="/incident-report-template.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Zm-32-80a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,136Zm0,32a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,168Z"/></svg><span><strong>Investigation Report Template</strong><span>Full ICAM-aligned fillable report, all 8 sections, printable PDF</span></span><svg class="i go" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+      <a href="/checklist.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H128a8,8,0,0,1,0-16h88A8,8,0,0,1,224,128ZM128,72h88a8,8,0,0,0,0-16H128a8,8,0,0,0,0,16Zm88,112H128a8,8,0,0,0,0,16h88a8,8,0,0,0,0-16ZM82.34,42.34,56,68.69,45.66,58.34A8,8,0,0,0,34.34,69.66l16,16a8,8,0,0,0,11.32,0l32-32A8,8,0,0,0,82.34,42.34Zm0,64L56,132.69,45.66,122.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32,0l32-32a8,8,0,0,0-11.32-11.32Zm0,64L56,196.69,45.66,186.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32,0l32-32a8,8,0,0,0-11.32-11.32Z"/></svg><span><strong>ICAM Investigation Checklist</strong><span>25-point checklist from scene preservation to corrective action close-out</span></span><svg class="i go" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+      <a href="/5-whys-worksheet.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M140,180a12,12,0,1,1-12-12A12,12,0,0,1,140,180ZM128,72c-22.06,0-40,16.15-40,36v4a8,8,0,0,0,16,0v-4c0-11,10.77-20,24-20s24,9,24,20-10.77,20-24,20a8,8,0,0,0-8,8v8a8,8,0,0,0,16,0v-.72c18.24-3.35,32-17.9,32-35.28C168,88.15,150.06,72,128,72Zm104,56A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg><span><strong>5 Whys Worksheet</strong><span>Interactive worksheet with worked mining example and corrective actions tracker</span></span><svg class="i go" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+      <a href="/rca-template-pack.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M230.91,172A8,8,0,0,1,228,182.91l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,36,169.09l92,53.65,92-53.65A8,8,0,0,1,230.91,172ZM220,121.09l-92,53.65L36,121.09A8,8,0,0,0,28,134.91l96,56a8,8,0,0,0,8.06,0l96-56A8,8,0,1,0,220,121.09ZM24,80a8,8,0,0,1,4-6.91l96-56a8,8,0,0,1,8.06,0l96,56a8,8,0,0,1,0,13.82l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,24,80Zm23.88,0L128,126.74,208.12,80,128,33.26Z"/></svg><span><strong>RCA Template Pack</strong><span>5 Whys, Fishbone, ICAM-aligned RCA, and full Investigation Report</span></span><svg class="i go" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+      <a href="/blog/icam-investigation-guide.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M232,48H160a40,40,0,0,0-32,16A40,40,0,0,0,96,48H24a8,8,0,0,0-8,8V200a8,8,0,0,0,8,8H96a24,24,0,0,1,24,24,8,8,0,0,0,16,0,24,24,0,0,1,24-24h72a8,8,0,0,0,8-8V56A8,8,0,0,0,232,48ZM96,192H32V64H96a24,24,0,0,1,24,24V200A39.81,39.81,0,0,0,96,192Zm128,0H160a39.81,39.81,0,0,0-24,8V88a24,24,0,0,1,24-24h64Z"/></svg><span><strong>ICAM Investigation Guide</strong><span>3,000-word guide covering the full ICAM methodology with worked examples</span></span><svg class="i go" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
     </div>
-
-    <hr class="divider">
-
-    <!-- SECTION 2: METHODOLOGY ADOPTION -->
-    <div class="report-section">
-        <div class="section-tag">Finding 02</div>
-        <h2 class="rh">Methodology Adoption: Structured vs Ad Hoc</h2>
-
-        <p class="rp">Across high-hazard industries, a consistent pattern emerges: organizations that adopt structured, standardized investigation methodology produce better investigations — and over time, safer workplaces. Yet methodology adoption remains far from universal, particularly in small-to-medium enterprises.</p>
-
-        <div class="bar-chart">
-            <div class="bar-row">
-                <div class="bar-label">Large enterprise (500+ employees)</div>
-                <div class="bar-track"><div class="bar-fill" style="width:71%"></div></div>
-                <div class="bar-pct">71%</div>
-            </div>
-            <div class="bar-row">
-                <div class="bar-label">Mid-size (100–500 employees)</div>
-                <div class="bar-track"><div class="bar-fill med" style="width:42%"></div></div>
-                <div class="bar-pct">42%</div>
-            </div>
-            <div class="bar-row">
-                <div class="bar-label">SMB (&lt;100 employees)</div>
-                <div class="bar-track"><div class="bar-fill low" style="width:19%"></div></div>
-                <div class="bar-pct">19%</div>
-            </div>
-        </div>
-        <p class="rp" style="font-size:0.78rem;color:#37474F;margin-top:-8px;">Estimated use of structured investigation methodology (ICAM, TapRoot, SCAT, or equivalent) by organization size.</p>
-
-        <h3 class="rh3">Why SMBs Under-Invest in Methodology</h3>
-        <p class="rp">Small and medium businesses face specific barriers to structured investigation methodology that large enterprises don't encounter to the same degree. Cost is one factor — structured training, software platforms, and dedicated investigation personnel are typically priced for enterprise budgets. But the more fundamental barriers are:</p>
-
-        <div class="finding-grid">
-            <div class="finding-card red">
-                <div class="fc-num">1 in 3</div>
-                <div class="fc-label">SMB safety managers report no formal investigation training — relying on on-the-job experience</div>
-            </div>
-            <div class="finding-card yellow">
-                <div class="fc-num">58%</div>
-                <div class="fc-label">of SMBs use a generic incident report form as their primary investigation tool</div>
-            </div>
-            <div class="finding-card blue">
-                <div class="fc-num">3–5×</div>
-                <div class="fc-label">more time typically spent on regulatory compliance reporting than on causal analysis</div>
-            </div>
-            <div class="finding-card green">
-                <div class="fc-num">83%</div>
-                <div class="fc-label">of SMB safety managers would adopt structured methodology if training costs were accessible</div>
-            </div>
-        </div>
-
-        <p class="rp">The access gap is real but closing. Digital investigation platforms have significantly reduced the cost and complexity of methodology adoption. Browser-based tools, guided workflows, and AI assistance are making ICAM-quality investigations accessible to organizations that previously couldn't justify the investment.</p>
-
-        <h3 class="rh3">ICAM vs Other Methodologies: Adoption by Industry</h3>
-        <div class="table-scroll">
-        <table class="comp-table">
-            <thead>
-                <tr>
-                    <th>Methodology</th>
-                    <th>Mining</th>
-                    <th>Construction</th>
-                    <th>Oil & Gas</th>
-                    <th>Manufacturing</th>
-                    <th>Systemic Focus</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>ICAM</td>
-                    <td><span class="tag-yes">High</span></td>
-                    <td><span class="tag-partial">Growing</span></td>
-                    <td><span class="tag-partial">Moderate</span></td>
-                    <td><span class="tag-partial">Low</span></td>
-                    <td><span class="tag-yes">✓ Strong</span></td>
-                </tr>
-                <tr>
-                    <td>TapRoot</td>
-                    <td><span class="tag-partial">Moderate</span></td>
-                    <td><span class="tag-no">Low</span></td>
-                    <td><span class="tag-yes">High</span></td>
-                    <td><span class="tag-partial">Moderate</span></td>
-                    <td><span class="tag-yes">✓ Strong</span></td>
-                </tr>
-                <tr>
-                    <td>SCAT</td>
-                    <td><span class="tag-partial">Moderate</span></td>
-                    <td><span class="tag-partial">Moderate</span></td>
-                    <td><span class="tag-partial">Moderate</span></td>
-                    <td><span class="tag-partial">Moderate</span></td>
-                    <td><span class="tag-partial">Partial</span></td>
-                </tr>
-                <tr>
-                    <td>5 Whys</td>
-                    <td><span class="tag-partial">Moderate</span></td>
-                    <td><span class="tag-yes">High</span></td>
-                    <td><span class="tag-partial">Moderate</span></td>
-                    <td><span class="tag-yes">High</span></td>
-                    <td><span class="tag-partial">Partial</span></td>
-                </tr>
-                <tr>
-                    <td>Informal / Ad hoc</td>
-                    <td><span class="tag-no">Declining</span></td>
-                    <td><span class="tag-yes">Dominant</span></td>
-                    <td><span class="tag-no">Rare</span></td>
-                    <td><span class="tag-yes">Dominant</span></td>
-                    <td><span class="tag-no">✗ Minimal</span></td>
-                </tr>
-            </tbody>
-        </table>
-        </div>
-    </div>
-
-    <hr class="divider">
-
-    <!-- SECTION 3: AI IN INVESTIGATION -->
-    <div class="report-section">
-        <div class="section-tag">Finding 03</div>
-        <h2 class="rh">AI in Investigation: Early Adoption, Real Results</h2>
-
-        <p class="rp">Artificial intelligence is beginning to reshape incident investigation in ways that go beyond simple automation. Where early digital tools merely digitized paper forms, AI-assisted platforms are now augmenting the analytical work — helping investigators identify contributing factors they might miss, flagging patterns across multiple incidents, and improving corrective action quality.</p>
-
-        <div class="stats-grid">
-            <div class="stat-card highlight">
-                <div class="stat-num">40–60%</div>
-                <div class="stat-label">reduction in time-to-close for complex investigations with AI assistance</div>
-            </div>
-            <div class="stat-card highlight">
-                <div class="stat-num">2.1×</div>
-                <div class="stat-label">more contributing factors identified per investigation with AI prompting vs unaided</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-num">14%</div>
-                <div class="stat-label">of SMB safety teams currently use any AI tooling in their investigation process</div>
-            </div>
-        </div>
-
-        <h3 class="rh3">Where AI Creates Genuine Value</h3>
-        <p class="rp">The most effective AI applications in investigation are not replacing investigator judgment — they are supporting and extending it. Specific high-value applications include:</p>
-
-        <div class="rec-list">
-            <div class="rec-item">
-                <div class="rec-icon">🔍</div>
-                <div class="rec-text">
-                    <h4>Contributing Factor Prompting</h4>
-                    <p>AI systems trained on ICAM and PEEPO frameworks can prompt investigators with relevant contributing factors they may not have considered — based on incident type, industry, and the data entered so far. This addresses the most common investigation quality gap: incomplete PEEPO analysis.</p>
-                </div>
-            </div>
-            <div class="rec-item">
-                <div class="rec-icon">📊</div>
-                <div class="rec-text">
-                    <h4>Pattern Recognition Across Incidents</h4>
-                    <p>Individual investigations rarely surface organizational factors that appear across multiple events. AI pattern analysis across investigation databases can identify recurring themes — the same organizational factor appearing in five apparently unrelated incidents over 18 months — that human reviewers miss.</p>
-                </div>
-            </div>
-            <div class="rec-item">
-                <div class="rec-icon">📝</div>
-                <div class="rec-text">
-                    <h4>Corrective Action Quality Assessment</h4>
-                    <p>AI can evaluate proposed corrective actions against the hierarchy of controls and the identified root causes, flagging where administrative actions are proposed for systemic problems, or where actions don't actually address the organizational factors identified.</p>
-                </div>
-            </div>
-            <div class="rec-item">
-                <div class="rec-icon">🎯</div>
-                <div class="rec-text">
-                    <h4>Investigation Scope Guidance</h4>
-                    <p>Determining which incidents warrant deep investigation and which can be addressed with lighter-touch analysis is a perpetual challenge. AI classification based on potential severity, contributing factor complexity, and regulatory requirements helps safety teams allocate investigation resources more effectively.</p>
-                </div>
-            </div>
-        </div>
-
-        <h3 class="rh3">The Limits of AI in Investigation</h3>
-        <p class="rp">Despite genuine capability, AI tools have meaningful limitations in investigation contexts that safety professionals should understand. AI cannot conduct witness interviews — arguably the most information-rich source in any investigation. It cannot interpret the emotional and cultural dynamics on a site that an experienced investigator reads in a conversation. And it cannot make the judgment calls that distinguish a material contributing factor from a peripheral observation.</p>
-        <p class="rp">The organizations achieving the best results with AI investigation tools treat them as analytical partners — tools that expand the investigator's reach and catch what they might miss — not as autonomous systems that can replace trained, experienced safety professionals.</p>
-    </div>
-
-    <hr class="divider">
-
-    <!-- SECTION 4: THE ORGANIZATIONAL FACTOR GAP -->
-    <div class="report-section">
-        <div class="section-tag">Finding 04</div>
-        <h2 class="rh">The Organizational Factor Gap</h2>
-
-        <p class="rp">The most important and most consistently missed component of workplace incident investigation is the identification of organizational factors. These are the management systems, cultural norms, resource decisions, and leadership behaviours that create the conditions in which incidents become possible.</p>
-
-        <p class="rp">Research from multiple jurisdictions consistently shows that organizational factors are present in the overwhelming majority of serious workplace incidents — often as the most significant contributor. Yet they are identified in a minority of investigations.</p>
-
-        <div class="bar-chart">
-            <div class="bar-row">
-                <div class="bar-label">Immediate cause identified</div>
-                <div class="bar-track"><div class="bar-fill" style="width:98%"></div></div>
-                <div class="bar-pct">98%</div>
-            </div>
-            <div class="bar-row">
-                <div class="bar-label">Equipment / procedure factors noted</div>
-                <div class="bar-track"><div class="bar-fill med" style="width:61%"></div></div>
-                <div class="bar-pct">61%</div>
-            </div>
-            <div class="bar-row">
-                <div class="bar-label">Supervision / training factors identified</div>
-                <div class="bar-track"><div class="bar-fill med" style="width:44%"></div></div>
-                <div class="bar-pct">44%</div>
-            </div>
-            <div class="bar-row">
-                <div class="bar-label">Organizational / management factors named</div>
-                <div class="bar-track"><div class="bar-fill low" style="width:22%"></div></div>
-                <div class="bar-pct">22%</div>
-            </div>
-            <div class="bar-row">
-                <div class="bar-label">Leadership / cultural factors examined</div>
-                <div class="bar-track"><div class="bar-fill low" style="width:9%"></div></div>
-                <div class="bar-pct">9%</div>
-            </div>
-        </div>
-        <p class="rp" style="font-size:0.78rem;color:#37474F;margin-top:-4px;">Percentage of investigation reports that identify contributing factors at each level of the causal hierarchy. Estimated from industry research across high-hazard sectors.</p>
-
-        <p class="rp">The organizational factor gap is not primarily a training problem. Most experienced safety managers understand, intellectually, that organizational factors matter. The gap persists because identifying organizational factors is politically uncomfortable. Naming management systems, supervision failures, resource constraints, or leadership behaviour as contributing factors implicates people with organizational power.</p>
-
-        <div class="pullquote">
-            <p>"The investigation stops where the political discomfort begins. That's why organizational factors are so consistently absent from reports — not because they don't exist, but because naming them has consequences that identifying equipment failures doesn't."</p>
-        </div>
-
-        <p class="rp">Organizations that have successfully closed the organizational factor gap share a common trait: senior leadership that actively protects investigators who surface uncomfortable systemic findings, and visibly acts on them. This requires courage, and it requires that the organizational investigation process be genuinely separated from the performance management process.</p>
-    </div>
-
-    <hr class="divider">
-
-    <!-- SECTION 5: WHAT EFFECTIVE TEAMS DO DIFFERENTLY -->
-    <div class="report-section">
-        <div class="section-tag">Finding 05</div>
-        <h2 class="rh">What High-Performing Investigation Teams Do Differently</h2>
-
-        <p class="rp">Across the industries covered in this report, the organizations with the most effective investigation practices share a consistent set of behaviours that distinguish them from the average. These are not expensive or operationally complex — many are cultural and process choices that require leadership commitment more than budget.</p>
-
-        <div class="rec-list">
-            <div class="rec-item">
-                <div class="rec-icon">🎯</div>
-                <div class="rec-text">
-                    <h4>They investigate near misses with the same rigour as injuries</h4>
-                    <p>The most significant learning opportunity in any safety system is the high-potential near miss — an event that had the potential to kill but didn't. High-performing teams classify these as pSIF events and investigate them to the same standard as fatalities. Average teams file a form and move on.</p>
-                </div>
-            </div>
-            <div class="rec-item">
-                <div class="rec-icon">👥</div>
-                <div class="rec-text">
-                    <h4>They use multi-disciplinary investigation teams</h4>
-                    <p>Operations, maintenance, HR, and safety — cross-functional teams produce better investigations. The operator sees things the safety manager misses. The HR perspective surfaces the human dynamics the technical team glosses over. Diversity of perspective is an investigation quality multiplier.</p>
-                </div>
-            </div>
-            <div class="rec-item">
-                <div class="rec-icon">📋</div>
-                <div class="rec-text">
-                    <h4>They use structured methodology, consistently</h4>
-                    <p>ICAM, TapRoot, or equivalent — consistently applied across the organization. The methodology matters less than the consistency. Structured methodology creates a common language, a repeatable process, and a basis for cross-site comparison that informal investigation can never provide.</p>
-                </div>
-            </div>
-            <div class="rec-item">
-                <div class="rec-icon">✅</div>
-                <div class="rec-text">
-                    <h4>They track corrective action effectiveness, not just completion</h4>
-                    <p>The question isn't "was the corrective action completed?" — it's "did it actually reduce the risk?" High-performing teams assign outcome measures to corrective actions, verify implementation independently, and track whether the specific contributing factor reappears in subsequent incidents.</p>
-                </div>
-            </div>
-            <div class="rec-item">
-                <div class="rec-icon">🔄</div>
-                <div class="rec-text">
-                    <h4>They share learnings across sites and teams</h4>
-                    <p>An investigation at Site A that reveals a recurring organizational factor should trigger a review at Site B, C, and D. High-performing organizations have a formal learning distribution mechanism — not just an email with the investigation report attached, but a structured process for assessing applicability and implementing relevant findings elsewhere.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <hr class="divider">
-
-    <!-- SECTION 6: OUTLOOK -->
-    <div class="report-section">
-        <div class="section-tag">Outlook</div>
-        <h2 class="rh">The Investigation Landscape in 2027 and Beyond</h2>
-
-        <p class="rp">Several converging trends will reshape incident investigation practice over the next 18–24 months:</p>
-
-        <h3 class="rh3">Regulatory Pressure on Investigation Quality</h3>
-        <p class="rp">Regulators in Australia (SafeWork), South Africa (DMRE), and the UK (HSE) are increasingly scrutinizing investigation quality — not just whether investigations were conducted, but whether they identified systemic causes and whether corrective actions were effective. This regulatory shift is moving investigation quality from a best-practice aspiration to a compliance requirement for high-hazard operations.</p>
-
-        <h3 class="rh3">The pSIF Classification Movement</h3>
-        <p class="rp">Precursor Serious Injury and Fatality (pSIF) classification — formally identifying near misses and injuries with the potential to kill — is gaining regulatory and organizational traction. Organizations that adopt pSIF classification are driving significant increases in investigation quality, because they are applying deep investigation methodology to a much larger set of events than fatality-only programs reach.</p>
-
-        <h3 class="rh3">AI Integration as Standard Practice</h3>
-        <p class="rp">AI investigation assistance, currently used by roughly 14% of SMB safety teams, is projected to become standard practice within 3–5 years. As AI tools mature, the organizations that have built structured investigation processes and accumulated investigation data will have a significant advantage: their AI tools will be trained on their own organizational context, making them far more effective than generic implementations.</p>
-
-        <h3 class="rh3">The SMB Capability Gap</h3>
-        <p class="rp">The investigation quality gap between large enterprises and SMBs is likely to widen before it narrows, unless SMBs actively invest in accessible investigation capability. Digital platforms designed specifically for smaller organizations — with guided methodology, AI assistance, and affordable pricing — represent the most viable path to closing this gap.</p>
-    </div>
-
-    <hr class="divider">
-
-    <!-- FREE TOOLS -->
-    <div class="report-section">
-        <h2 class="rh" style="font-size:1.3rem;">Free Investigation Tools from InvestigatePro</h2>
-        <p class="rp">Start improving your investigation quality today with our free interactive tools — no account required.</p>
-        <div class="tool-grid">
-            <a href="/peepo-chart-builder.html" class="tool-card">
-                <h4>🛠 PEEPO Chart Builder</h4>
-                <p>Interactive PEEPO analysis with guided prompts and printable summary</p>
-                <span>Use Free →</span>
-            </a>
-            <a href="/incident-report-template.html" class="tool-card">
-                <h4>📝 Investigation Report Template</h4>
-                <p>Full ICAM-aligned fillable report — all 8 sections, printable PDF</p>
-                <span>Use Free →</span>
-            </a>
-            <a href="/checklist.html" class="tool-card">
-                <h4>✅ ICAM Investigation Checklist</h4>
-                <p>25-point checklist from scene preservation to corrective action close-out</p>
-                <span>Use Free →</span>
-            </a>
-            <a href="/5-whys-worksheet.html" class="tool-card">
-                <h4>🔍 5 Whys Worksheet</h4>
-                <p>Interactive worksheet with worked mining example and corrective actions tracker</p>
-                <span>Use Free →</span>
-            </a>
-            <a href="/rca-template-pack.html" class="tool-card">
-                <h4>📋 RCA Template Pack</h4>
-                <p>5 Whys, Fishbone, ICAM-aligned RCA, and full Investigation Report</p>
-                <span>Use Free →</span>
-            </a>
-            <a href="/blog/icam-investigation-guide.html" class="tool-card">
-                <h4>📖 ICAM Investigation Guide</h4>
-                <p>3,000-word guide covering the full ICAM methodology with worked examples</p>
-                <span>Read Free →</span>
-            </a>
-        </div>
-    </div>
-
-    <!-- CTA -->
-    <div class="report-cta">
-        <h3>Ready to Fix Your Investigation Process?</h3>
-        <p>InvestigatePro gives your team the ICAM methodology, AI coaching, and investigation infrastructure to produce consistently high-quality investigations — at a price built for SMBs.</p>
-        <div class="btn-row">
-            <a href="/#demo" class="primary">Book a Demo</a>
-            <a href="/blog/icam-investigation-guide.html" class="secondary">Read the ICAM Guide →</a>
-        </div>
-    </div>
-
-</div><!-- /main -->
-
-
-
-<footer class="ip2-footer">
-  <div class="ip2-wrap">
-    <div class="cols">
-      <div style="display:flex;flex-direction:column;gap:16px">
-        <a href="/" class="ip2-logo" aria-label="InvestigatePro home"><img class="lgm" src="/assets/brand/logo-horizontal-white.svg" alt="InvestigatePro" width="826" height="168" decoding="async"></a>
-        <p style="max-width:250px;font-size:13px;line-height:1.6">Structured, evidence-led ICAM investigation with an AI coach on every case.</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="ip2-chip">EU-hosted &amp; isolated</span><span class="ip2-chip">GDPR compliant</span></div>
+  </div>
+</section>
+<section class="sec cta" aria-labelledby="cta-h">
+  <div class="wrap split" style="align-items:center">
+    <h2 id="cta-h">Close the organisational factor gap on your own cases.</h2>
+    <div class="stack" style="--gap:18px">
+      <p class="lede">InvestigatePro runs ICAM on every case, with a coach that prompts every level, organisational factors included.</p>
+      <div class="row">
+        <a class="btn btn--primary" href="https://app.investigatepro.app/signup">Start a 14-day trial <svg class="i i--nudge" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+        <a class="btn btn--ghost" href="https://cal.com/investigatepro/15min">Book a 15-minute demo</a>
       </div>
-      <div><h4>Product</h4><ul>
-        <li><a href="/platform.html">Platform</a></li><li><a href="/pricing.html">Pricing</a></li><li><a href="/demo.html">Book a demo</a></li>
-        <li><a href="/apps/">Apps</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/security.html">Security</a></li><li><a href="/changelog.html">Changelog</a></li>
-      </ul></div>
-      <div><h4>Resources</h4><ul>
-        <li><a href="/resources.html">All free tools</a></li><li><a href="/checklist.html">ICAM checklist</a></li><li><a href="/icam-toolkit.html">ICAM toolkit</a></li>
-        <li><a href="/peepo-chart-builder.html">PEEPO chart builder</a></li><li><a href="/5-whys-worksheet.html">5-Whys worksheet</a></li><li><a href="/state-of-incident-investigation-2026.html">State of Incident Investigation</a></li>
-      </ul></div>
-      <div><h4>Industries</h4><ul>
-        <li><a href="/industries/mining-incident-investigation.html">Mining</a></li><li><a href="/industries/oil-gas-incident-management.html">Oil &amp; gas</a></li>
-        <li><a href="/industries/manufacturing-root-cause-analysis.html">Manufacturing</a></li><li><a href="/industries/construction-safety-software.html">Construction</a></li>
-        <li><a href="/industries/engineering-incident-investigation.html">Engineering</a></li>
-      </ul></div>
-      <div><h4>Company</h4><ul>
-        <li><a href="/blog/">Blog</a></li><li><a href="/status.html">Service notices</a></li><li><a href="mailto:hello@investigatepro.app">Contact</a></li><li><a href="https://app.investigatepro.app/login">Login</a></li>
-        <li style="margin-top:10px"><a href="/privacy.html">Privacy</a></li><li><a href="/terms.html">Terms</a></li><li><a href="/cookie.html">Cookies</a></li><li><a href="/dpa.html">DPA</a></li>
-      </ul></div>
     </div>
-    <p class="accountability">Every suggestion carries its source, and the report goes out attributed to the lead investigator. Built by Devon Turner — fifteen years leading mining safety across Africa and the Middle East, with an ICAM specialism.</p>
-    <p style="margin-top:18px;font-size:12px;color:rgba(159,184,194,.7)">© 2026 InvestigatePro. All rights reserved. · Every incident, understood.</p>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <div class="foot__brand">
+      <a href="/index.html" aria-label="InvestigatePro home"><img src="/assets/img/logo-horizontal-white.svg" alt="InvestigatePro" width="168" height="34"></a>
+      <p class="foot__tag">Every incident, understood.</p>
+      <p class="foot__by">Built by Devon Turner, who spent fifteen years leading mining safety across Africa and the Middle East, with an ICAM specialism.</p>
+      <button class="motion-toggle" type="button" aria-pressed="false"><span class="motion-toggle__track" aria-hidden="true"></span>Reduce motion</button>
+    </div>
+    <div>
+      <h2>Product</h2>
+      <ul>
+        <li><a href="/platform.html">Platform</a></li>
+        <li><a href="/pricing.html">Pricing</a></li>
+        <li><a href="/demo.html">Book a demo</a></li>
+        <li><a href="/security.html">Security</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+        <li><a href="/changelog.html">Changelog</a></li>
+        <li><a href="/apps/index.html">Apps</a><span class="tag-inbuild">in build</span></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Free tools</h2>
+      <ul>
+        <li><a href="/resources.html">All free tools</a></li>
+        <li><a href="/checklist.html">ICAM checklist</a></li>
+        <li><a href="/icam-toolkit.html">ICAM toolkit</a></li>
+        <li><a href="/peepo-chart-builder.html">PEEPO chart builder</a></li>
+        <li><a href="/5-whys-worksheet.html">5-Whys worksheet</a></li>
+        <li><a href="/state-of-incident-investigation-2026.html">State of Incident Investigation 2026</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Industries</h2>
+      <ul>
+        <li><a href="/industries/mining-incident-investigation.html">Mining</a></li>
+        <li><a href="/industries/oil-gas-incident-management.html">Oil and gas</a></li>
+        <li><a href="/industries/manufacturing-root-cause-analysis.html">Manufacturing</a></li>
+        <li><a href="/industries/construction-safety-software.html">Construction</a></li>
+        <li><a href="/industries/engineering-incident-investigation.html">Engineering</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Company</h2>
+      <ul>
+        <li><a href="/blog/index.html">Blog</a></li>
+        <li><a href="/status.html">Service notices</a></li>
+        <li><a href="mailto:hello@investigatepro.app">Contact: hello@investigatepro.app</a></li>
+        <li><a href="https://app.investigatepro.app/login">Login</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/terms.html">Terms</a></li>
+        <li><a href="/cookie.html">Cookies</a></li>
+        <li><a href="/dpa.html">DPA</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot__base">
+    <span>&copy; 2026 InvestigatePro. Find the causes. Fix the system.</span>
+    <span>Every incident, understood.</span>
   </div>
 </footer>
-<script defer src="/assets/js/ip2.js"></script>
-<script src="/analytics.js"></script>
+
 </body>
 </html>

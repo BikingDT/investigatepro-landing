@@ -1,477 +1,239 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-GB" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICAM Investigation Template | InvestigatePro</title>
-    <meta name="description" content="Free ICAM investigation template with all methodology steps. Download and use for incident investigations in mining, construction, and manufacturing. Includes PEEPO, contributing factors, and action tracking.">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: #f5f5f5;
-        }
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .header {
-            background: #F4F7F9;
-            color: #112D3C;
-            padding: 30px;
-            margin: -40px -40px 30px -40px;
-            border-radius: 8px 8px 0 0;
-            text-align: center;
-        }
-        .header img {
-            height: 50px;
-            margin-bottom: 10px;
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 28px;
-            color: #112D3C;
-        }
-        .header p {
-            margin: 10px 0 0;
-            color: #004D40;
-            font-size: 14px;
-        }
-        h1, h2, h2 {
-            color: #112D3C;
-            border-bottom: 3px solid #004D40;
-            padding-bottom: 10px;
-            margin-top: 40px;
-        }
-        h2 {
-            color: #112D3C;
-            margin-top: 30px;
-            font-size: 20px;
-        }
-        h3 {
-            color: #444;
-            font-size: 16px;
-            margin-top: 25px;
-        }
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin: 15px 0;
-            font-size: 14px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background: #F4F7F9;
-            color: #112D3C;
-            font-weight: 600;
-        }
-        tr:nth-child(even) {
-            background: #F4F7F9;
-        }
-        .checklist {
-            list-style: none;
-            padding: 0;
-        }
-        .checklist li {
-            padding: 8px 0;
-            border-bottom: 1px solid #eee;
-        }
-        .checklist li:before {
-            content: "☐ ";
-            color: #004D40;
-            font-weight: bold;
-        }
-        .section-box {
-            background: #F4F7F9;
-            border-left: 4px solid #004D40;
-            padding: 20px;
-            margin: 20px 0;
-        }
-        .tip-box {
-            background: #e8f8fa;
-            border: 1px solid #004D40;
-            border-radius: 6px;
-            padding: 15px;
-            margin: 20px 0;
-        }
-        .tip-box strong {
-            color: #112D3C;
-        }
-        .peepo-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 10px;
-            margin: 20px 0;
-        }
-        .peepo-item {
-            background: #F4F7F9;
-            color: #112D3C;
-            padding: 15px;
-            text-align: center;
-            border-radius: 6px;
-        }
-        .peepo-item span {
-            display: block;
-            font-size: 24px;
-            font-weight: bold;
-            color: #004D40;
-        }
-        .footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 2px solid #eee;
-            text-align: center;
-            color: #666;
-            font-size: 14px;
-        }
-        .footer a {
-            color: #004D40;
-            text-decoration: none;
-        }
-        .cta-box {
-            background: linear-gradient(135deg, #F4F7F9 0%, #FFFFFF 100%);
-            color: #112D3C;
-            padding: 30px;
-            border-radius: 8px;
-            text-align: center;
-            margin: 40px 0;
-        }
-        .cta-box h3 {
-            color: white;
-            margin-top: 0;
-        }
-        .cta-box a {
-            display: inline-block;
-            background: #004D40;
-            color: #FFFFFF;
-            padding: 12px 30px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 15px;
-        }
-        @media print {
-            body { background: white; }
-            .container { box-shadow: none; padding: 0; }
-            .header { margin: 0 0 20px 0; }
-            .cta-box { display: none; }
-        }
-        @media (max-width: 600px) {
-            .peepo-grid { grid-template-columns: repeat(2, 1fr); }
-            .container { padding: 20px; }
-            .header { padding: 20px; margin: -20px -20px 20px -20px; }
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ICAM investigation template | Free printable template | InvestigatePro</title>
+<meta name="description" content="A printable ICAM investigation template: initial response, evidence log, witnesses, incident description, PEEPO analysis, 5 Whys, corrective actions and sign-off.">
+<link rel="canonical" href="https://investigatepro.app/icam-template.html">
 
-    <!-- Structured Data: Breadcrumb -->
-    <script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://investigatepro.app/"
-        },
-        {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Resources",
-            "item": "https://investigatepro.app/blog/"
-        },
-        {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "ICAM Template",
-            "item": "https://investigatepro.app/icam-template.html"
-        }
-    ]
-}</script>
-<link rel="stylesheet" href="/assets/css/ip2-chrome.css">
-    <link rel="canonical" href="https://investigatepro.app/icam-template.html">
-<style>@media(max-width:640px){.container table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:nowrap}}</style>
+<meta name="theme-color" content="#063A41">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="InvestigatePro">
+<meta property="og:title" content="ICAM investigation template | Free printable template | InvestigatePro">
+<meta property="og:description" content="A printable ICAM investigation template: initial response, evidence log, witnesses, incident description, PEEPO analysis, 5 Whys, corrective actions and sign-off.">
+<meta property="og:url" content="https://investigatepro.app/icam-template.html">
+<meta property="og:image" content="https://investigatepro.app/assets/img/og-resources.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/montserrat-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/ip-next.css">
+<script>(function(){var h=document.documentElement,r=false;h.className=h.className.replace('no-js','js');try{r=localStorage.getItem('ip-reduce-motion')==='1'}catch(e){}if(!r&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){h.classList.add('motion-on')}else{h.classList.add('motion-off')}})();</script>
+<script src="/assets/ip-next.js" defer></script>
+<script src="/analytics.js" defer></script>
+
 </head>
-<body class="ip-pad">
-<!-- Site chrome: unified navigation -->
-<nav class="ip2-nav light" aria-label="Main">
-  <div class="ip2-nav-row">
-    <a href="/" class="ip2-logo" aria-label="InvestigatePro home"><img class="lgm" src="/assets/brand/logo-horizontal.svg" alt="InvestigatePro" width="826" height="168" decoding="async"></a>
-    <div class="ip2-links">
-      <a href="/platform.html">Platform</a><a href="/pricing.html">Pricing</a><a href="/resources.html" aria-current="page">Resources</a><a href="/blog/">Blog</a>
-      <a href="https://app.investigatepro.app/login" class="ip2-login">Login</a>
-      <a href="/#pilot" class="ip2-cta">Start a pilot</a>
-    </div>
-    <button class="mm-btn" aria-expanded="false" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
-  </div>
-  <div class="mm-panel">
-    <a href="/platform.html">Platform</a><a href="/pricing.html">Pricing</a><a href="/resources.html">Resources</a><a href="/blog/">Blog</a>
-    <a href="https://app.investigatepro.app/login" class="ip2-login-m">Login</a>
-    <a href="/#pilot" class="btn btn-primary">Start a pilot</a>
-    <a href="https://cal.com/investigatepro/15min" class="btn btn-outline">Book a 15-minute demo</a>
-  </div>
-</nav>
-    <div class="container">
-        <div class="header">
-            <picture><source srcset="https://investigatepro.app/assets/brand/logo-horizontal-1200w.png" type="image/webp"><img src="https://investigatepro.app/assets/brand/logo-horizontal-1200w.png" alt="InvestigatePro"></picture>
-            <h1>ICAM Investigation Template</h1>
-            <p>Complete Guide for Thorough Incident Investigations</p>
+<body class="page-tool">
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__logo" href="/index.html" aria-label="InvestigatePro home"><img src="/assets/img/logo-horizontal-white.svg" alt="InvestigatePro" width="152" height="31"></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="/platform.html">Platform</a>
+      <div class="nav__menu">
+        <button class="nav__menu-btn" type="button" aria-expanded="false" aria-controls="nav-industries">Industries <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg></button>
+        <div class="nav__panel" id="nav-industries">
+          <a href="/industries/mining-incident-investigation.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,152V136a96.37,96.37,0,0,0-64-90.51V40a16,16,0,0,0-16-16H112A16,16,0,0,0,96,40v5.49A96.37,96.37,0,0,0,32,136v16a16,16,0,0,0-16,16v24a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V168A16,16,0,0,0,224,152Zm-16-16v16H160V62.67A80.36,80.36,0,0,1,208,136ZM144,40V152H112V40ZM48,136A80.36,80.36,0,0,1,96,62.67V152H48Zm176,56H32V168H224v24Z"/></svg><strong>Mining</strong><span>Underground, open-cut, processing and contractors</span></a>
+          <a href="/industries/oil-gas-incident-management.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></svg><strong>Oil and gas</strong><span>Upstream, midstream and field services</span></a>
+          <a href="/industries/manufacturing-root-cause-analysis.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M116,176a8,8,0,0,1-8,8H80a8,8,0,0,1,0-16h28A8,8,0,0,1,116,176Zm60-8H148a8,8,0,0,0,0,16h28a8,8,0,0,0,0-16Zm64,48a8,8,0,0,1-8,8H24a8,8,0,0,1,0-16h8V88a8,8,0,0,1,12.8-6.4L96,120V88a8,8,0,0,1,12.8-6.4l38.74,29.05L159.1,29.74A16.08,16.08,0,0,1,174.94,16h18.12A16.08,16.08,0,0,1,208.9,29.74l15,105.13s.08.78.08,1.13v72h8A8,8,0,0,1,240,216Zm-77.86-94.4,8.53,6.4h36.11L193.06,32H174.94ZM48,208H208V144H168a8,8,0,0,1-4.8-1.6l-14.4-10.8,0,0L112,104v32a8,8,0,0,1-12.8,6.4L48,104Z"/></svg><strong>Manufacturing</strong><span>Plant, maintenance and process safety</span></a>
+          <a href="/industries/construction-safety-software.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M230.91,172A8,8,0,0,1,228,182.91l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,36,169.09l92,53.65,92-53.65A8,8,0,0,1,230.91,172ZM220,121.09l-92,53.65L36,121.09A8,8,0,0,0,28,134.91l96,56a8,8,0,0,0,8.06,0l96-56A8,8,0,1,0,220,121.09ZM24,80a8,8,0,0,1,4-6.91l96-56a8,8,0,0,1,8.06,0l96,56a8,8,0,0,1,0,13.82l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,24,80Zm23.88,0L128,126.74,208.12,80,128,33.26Z"/></svg><strong>Construction</strong><span>Principal contractors and subcontractors</span></a>
+          <a href="/industries/engineering-incident-investigation.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M160,112h48a16,16,0,0,0,16-16V48a16,16,0,0,0-16-16H160a16,16,0,0,0-16,16V64H128a24,24,0,0,0-24,24v32H72v-8A16,16,0,0,0,56,96H24A16,16,0,0,0,8,112v32a16,16,0,0,0,16,16H56a16,16,0,0,0,16-16v-8h32v32a24,24,0,0,0,24,24h16v16a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V160a16,16,0,0,0-16-16H160a16,16,0,0,0-16,16v16H128a8,8,0,0,1-8-8V88a8,8,0,0,1,8-8h16V96A16,16,0,0,0,160,112ZM56,144H24V112H56v32Zm104,16h48v48H160Zm0-112h48V96H160Z"/></svg><strong>Engineering</strong><span>Projects, commissioning and field work</span></a>
         </div>
-
-        <div class="tip-box">
-            <strong>📋 How to Use This Template:</strong> Work through each section sequentially. Print or use digitally. Estimated time: 4-8 hours depending on incident complexity.
-        </div>
-
-        <h2>Section 1: Initial Response</h2>
-        
-        <h2>Immediate Actions (First 60 Minutes)</h2>
-        <ul class="checklist">
-            <li>Ensure scene is safe for investigators</li>
-            <li>Confirm injured persons are receiving care</li>
-            <li>Secure the incident scene (barriers, signage)</li>
-            <li>Identify and preserve evidence</li>
-            <li>Identify witnesses</li>
-            <li>Begin preliminary documentation (photos, notes)</li>
-            <li>Notify required parties (management, regulators)</li>
-        </ul>
-
-        <h2>Evidence Preservation Log</h2>
-        <table>
-            <tr><th>Evidence Type</th><th>Location</th><th>Preserved By</th><th>Date/Time</th></tr>
-            <tr><td>Physical evidence</td><td></td><td></td><td></td></tr>
-            <tr><td>Documents/records</td><td></td><td></td><td></td></tr>
-            <tr><td>Electronic data</td><td></td><td></td><td></td></tr>
-            <tr><td>Photographs</td><td></td><td></td><td></td></tr>
-            <tr><td>Video footage</td><td></td><td></td><td></td></tr>
-        </table>
-
-        <h2>Witness List</h2>
-        <table>
-            <tr><th>Name</th><th>Role</th><th>Contact</th><th>Priority</th></tr>
-            <tr><td></td><td></td><td></td><td>☐ High ☐ Med ☐ Low</td></tr>
-            <tr><td></td><td></td><td></td><td>☐ High ☐ Med ☐ Low</td></tr>
-            <tr><td></td><td></td><td></td><td>☐ High ☐ Med ☐ Low</td></tr>
-        </table>
-
-        <h2>Section 2: Incident Description</h2>
-
-        <h2>Basic Information</h2>
-        <table>
-            <tr><th width="30%">Field</th><th>Details</th></tr>
-            <tr><td>Incident Date</td><td></td></tr>
-            <tr><td>Incident Time</td><td></td></tr>
-            <tr><td>Location</td><td></td></tr>
-            <tr><td>Area/Department</td><td></td></tr>
-            <tr><td>Incident Type</td><td></td></tr>
-            <tr><td>Severity</td><td>☐ Fatality ☐ LTI ☐ MTI ☐ FAI ☐ Near Miss ☐ Property</td></tr>
-        </table>
-
-        <h2>What Happened?</h2>
-        <div class="section-box">
-            <p><strong>Pre-incident (What was happening before?):</strong></p>
-            <p style="min-height: 60px; border-bottom: 1px dashed #ccc;"></p>
-            <p><strong>The incident (What exactly occurred?):</strong></p>
-            <p style="min-height: 60px; border-bottom: 1px dashed #ccc;"></p>
-            <p><strong>Post-incident (What happened immediately after?):</strong></p>
-            <p style="min-height: 60px; border-bottom: 1px dashed #ccc;"></p>
-        </div>
-
-        <h2>Section 3: PEEPO Analysis</h2>
-
-        <div class="tip-box">
-            <strong>What is PEEPO?</strong> A systematic framework to identify contributing factors across five categories. Capture EVERYTHING that may have contributed—don't filter yet.
-        </div>
-
-        <div class="peepo-grid">
-            <div class="peepo-item"><span>P</span>People</div>
-            <div class="peepo-item"><span>E</span>Environment</div>
-            <div class="peepo-item"><span>E</span>Equipment</div>
-            <div class="peepo-item"><span>P</span>Procedures</div>
-            <div class="peepo-item"><span>O</span>Organisation</div>
-        </div>
-
-        <h2>P - People Factors</h2>
-        <p><em>Training, competence, experience, fitness, fatigue, supervision, communication</em></p>
-        <table>
-            <tr><th>Factor</th><th>Present?</th><th>Details/Evidence</th></tr>
-            <tr><td>Adequate training for task</td><td>☐ Yes ☐ No ☐ ?</td><td></td></tr>
-            <tr><td>Competency verified</td><td>☐ Yes ☐ No ☐ ?</td><td></td></tr>
-            <tr><td>Sufficient experience</td><td>☐ Yes ☐ No ☐ ?</td><td></td></tr>
-            <tr><td>Fit for duty</td><td>☐ Yes ☐ No ☐ ?</td><td></td></tr>
-            <tr><td>Adequate rest/not fatigued</td><td>☐ Yes ☐ No ☐ ?</td><td></td></tr>
-            <tr><td>Adequate supervision</td><td>☐ Yes ☐ No ☐ ?</td><td></td></tr>
-            <tr><td>Clear communication</td><td>☐ Yes ☐ No ☐ ?</td><td></td></tr>
-        </table>
-
-        <h2>E - Environment Factors</h2>
-        <p><em>Weather, lighting, noise, temperature, housekeeping, workspace layout</em></p>
-        <table>
-            <tr><th>Factor</th><th>Condition</th><th>Contributed?</th><th>Details</th></tr>
-            <tr><td>Weather conditions</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
-            <tr><td>Lighting adequacy</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
-            <tr><td>Noise levels</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
-            <tr><td>Housekeeping</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
-            <tr><td>Workspace layout</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
-            <tr><td>Ground conditions</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
-        </table>
-
-        <h2>E - Equipment Factors</h2>
-        <p><em>Design, condition, maintenance, guarding, PPE, tools</em></p>
-        <table>
-            <tr><th>Factor</th><th>Assessment</th><th>Contributed?</th><th>Details</th></tr>
-            <tr><td>Equipment fit for purpose</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
-            <tr><td>Maintenance current</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
-            <tr><td>Pre-use inspection done</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
-            <tr><td>Guards/safety devices working</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
-            <tr><td>Correct PPE available & worn</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
-        </table>
-
-        <h2>P - Procedures Factors</h2>
-        <p><em>Existence, quality, accessibility, clarity, compliance, permits, risk assessments</em></p>
-        <table>
-            <tr><th>Factor</th><th>Assessment</th><th>Contributed?</th><th>Details</th></tr>
-            <tr><td>Procedure exists for task</td><td>☐ Yes ☐ No</td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
-            <tr><td>Procedure followed</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
-            <tr><td>Risk assessment current</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
-            <tr><td>Permit obtained if required</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
-            <tr><td>JSA/JHA completed</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
-        </table>
-
-        <h2>O - Organisation Factors</h2>
-        <p><em>Culture, management systems, resources, priorities, change management</em></p>
-        <table>
-            <tr><th>Factor</th><th>Assessment</th><th>Contributed?</th><th>Details</th></tr>
-            <tr><td>Adequate staffing levels</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
-            <tr><td>Adequate resources</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
-            <tr><td>Production pressure</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
-            <tr><td>Safety culture</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
-            <tr><td>Management of change</td><td></td><td>☐ Yes ☐ No ☐ Maybe</td><td></td></tr>
-        </table>
-
-        <h2>Section 4: Root Cause Analysis (5-Whys)</h2>
-
-        <div class="tip-box">
-            <strong>How to Use 5-Whys:</strong> Start with a contributing factor. Ask "Why?" repeatedly until you reach a systemic root cause. Stop when the answer is something the organization can control and change.
-        </div>
-
-        <h2>5-Whys Chain #1</h2>
-        <p><strong>Contributing Factor:</strong> _________________________________</p>
-        <table>
-            <tr><th>Level</th><th>Question</th><th>Answer</th></tr>
-            <tr><td>Why 1</td><td>Why did this happen?</td><td></td></tr>
-            <tr><td>Why 2</td><td>Why?</td><td></td></tr>
-            <tr><td>Why 3</td><td>Why?</td><td></td></tr>
-            <tr><td>Why 4</td><td>Why?</td><td></td></tr>
-            <tr><td>Why 5</td><td>Why?</td><td></td></tr>
-        </table>
-        <p><strong>Root Cause Identified:</strong> _________________________________</p>
-
-        <h2>5-Whys Chain #2</h2>
-        <p><strong>Contributing Factor:</strong> _________________________________</p>
-        <table>
-            <tr><th>Level</th><th>Question</th><th>Answer</th></tr>
-            <tr><td>Why 1</td><td>Why did this happen?</td><td></td></tr>
-            <tr><td>Why 2</td><td>Why?</td><td></td></tr>
-            <tr><td>Why 3</td><td>Why?</td><td></td></tr>
-            <tr><td>Why 4</td><td>Why?</td><td></td></tr>
-            <tr><td>Why 5</td><td>Why?</td><td></td></tr>
-        </table>
-        <p><strong>Root Cause Identified:</strong> _________________________________</p>
-
-        <h2>Section 5: Corrective Actions</h2>
-
-        <div class="tip-box">
-            <strong>SMART Criteria:</strong> Specific, Measurable, Assignable, Realistic, Time-bound<br>
-            <strong>Hierarchy of Controls:</strong> Elimination → Substitution → Engineering → Administrative → PPE
-        </div>
-
-        <table>
-            <tr><th>#</th><th>Root Cause</th><th>Action</th><th>Control Level</th><th>Owner</th><th>Due Date</th><th>Status</th></tr>
-            <tr><td>1</td><td></td><td></td><td></td><td></td><td></td><td>☐</td></tr>
-            <tr><td>2</td><td></td><td></td><td></td><td></td><td></td><td>☐</td></tr>
-            <tr><td>3</td><td></td><td></td><td></td><td></td><td></td><td>☐</td></tr>
-            <tr><td>4</td><td></td><td></td><td></td><td></td><td></td><td>☐</td></tr>
-            <tr><td>5</td><td></td><td></td><td></td><td></td><td></td><td>☐</td></tr>
-        </table>
-
-        <h2>Section 6: Summary & Sign-Off</h2>
-
-        <h2>Executive Summary</h2>
-        <div class="section-box">
-            <p style="min-height: 80px;"><em>3-5 sentences summarizing incident, findings, and critical actions:</em></p>
-        </div>
-
-        <h2>Key Findings</h2>
-        <ol>
-            <li style="min-height: 30px;"></li>
-            <li style="min-height: 30px;"></li>
-            <li style="min-height: 30px;"></li>
-        </ol>
-
-        <h2>Sign-Off</h2>
-        <table>
-            <tr><th>Role</th><th>Name</th><th>Signature</th><th>Date</th></tr>
-            <tr><td>Lead Investigator</td><td></td><td></td><td></td></tr>
-            <tr><td>Area Manager</td><td></td><td></td><td></td></tr>
-            <tr><td>Safety Manager</td><td></td><td></td><td></td></tr>
-        </table>
-
-        <div class="cta-box">
-            <h3>Want AI to Guide You Through This Process?</h3>
-            <p>InvestigatePro automates ICAM methodology with real-time AI coaching. Complete investigations in 5 hours instead of 15.</p>
-            <a href="https://investigatepro.app">Try InvestigatePro Free →</a>
-        </div>
-
-        <div class="footer">
-            <p>This template is provided free by <a href="https://investigatepro.app">InvestigatePro</a></p>
-            <p>Created by Devon Turner | 15+ Years Mining Safety Experience</p>
-            <p>© 2026 InvestigatePro | <a href="https://investigatepro.app">investigatepro.app</a></p>
-        </div>
-    </div>
-<footer class="ip2-footer">
-  <div class="ip2-wrap">
-    <div class="cols">
-      <div style="display:flex;flex-direction:column;gap:16px">
-        <a href="/" class="ip2-logo" aria-label="InvestigatePro home"><img class="lgm" src="/assets/brand/logo-horizontal-white.svg" alt="InvestigatePro" width="826" height="168" decoding="async"></a>
-        <p style="max-width:250px;font-size:13px;line-height:1.6">Structured, evidence-led ICAM investigation with an AI coach on every case.</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="ip2-chip">EU-hosted &amp; isolated</span><span class="ip2-chip">GDPR compliant</span></div>
       </div>
-      <div><h4>Product</h4><ul>
-        <li><a href="/platform.html">Platform</a></li><li><a href="/pricing.html">Pricing</a></li><li><a href="/demo.html">Book a demo</a></li>
-        <li><a href="/apps/">Apps</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/security.html">Security</a></li><li><a href="/changelog.html">Changelog</a></li>
-      </ul></div>
-      <div><h4>Resources</h4><ul>
-        <li><a href="/resources.html">All free tools</a></li><li><a href="/checklist.html">ICAM checklist</a></li><li><a href="/icam-toolkit.html">ICAM toolkit</a></li>
-        <li><a href="/peepo-chart-builder.html">PEEPO chart builder</a></li><li><a href="/5-whys-worksheet.html">5-Whys worksheet</a></li><li><a href="/state-of-incident-investigation-2026.html">State of Incident Investigation</a></li>
-      </ul></div>
-      <div><h4>Industries</h4><ul>
-        <li><a href="/industries/mining-incident-investigation.html">Mining</a></li><li><a href="/industries/oil-gas-incident-management.html">Oil &amp; gas</a></li>
-        <li><a href="/industries/manufacturing-root-cause-analysis.html">Manufacturing</a></li><li><a href="/industries/construction-safety-software.html">Construction</a></li>
-        <li><a href="/industries/engineering-incident-investigation.html">Engineering</a></li>
-      </ul></div>
-      <div><h4>Company</h4><ul>
-        <li><a href="/blog/">Blog</a></li><li><a href="/status.html">Service notices</a></li><li><a href="mailto:hello@investigatepro.app">Contact</a></li><li><a href="https://app.investigatepro.app/login">Login</a></li>
-        <li style="margin-top:10px"><a href="/privacy.html">Privacy</a></li><li><a href="/terms.html">Terms</a></li><li><a href="/cookie.html">Cookies</a></li><li><a href="/dpa.html">DPA</a></li>
-      </ul></div>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/resources.html" aria-current="page">Resources</a>
+      <a href="/blog/index.html">Blog</a>
+    </nav>
+    <div class="nav__actions">
+      <a class="nav__login" href="https://app.investigatepro.app/login">Login</a>
+      <a class="btn btn--primary btn--sm" href="https://app.investigatepro.app/signup">Start a 14-day trial</a>
+      <button class="nav__burger" type="button" aria-expanded="false" aria-controls="mmenu" aria-label="Open menu"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></svg></button>
     </div>
-    <p class="accountability">Every suggestion carries its source, and the report goes out attributed to the lead investigator. Built by Devon Turner — fifteen years leading mining safety across Africa and the Middle East, with an ICAM specialism.</p>
-    <p style="margin-top:18px;font-size:12px;color:rgba(159,184,194,.7)">© 2026 InvestigatePro. All rights reserved. · Every incident, understood.</p>
+  </div>
+</header>
+<div class="mmenu" id="mmenu" hidden role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="mmenu__top">
+    <a class="nav__logo" href="/index.html" aria-label="InvestigatePro home"><img src="/assets/img/logo-horizontal-white.svg" alt="InvestigatePro" width="140" height="28"></a>
+    <button class="nav__burger mmenu__close" type="button" aria-label="Close menu"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg></button>
+  </div>
+  <nav class="mmenu__list" aria-label="Mobile">
+    <a href="/platform.html" style="--i:0">Platform <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/pricing.html" style="--i:1">Pricing <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/resources.html" style="--i:2">Resources <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/blog/index.html" style="--i:3">Blog <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/demo.html" style="--i:4">Book a demo <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+  </nav>
+  <div class="mmenu__sub">
+    <a href="/industries/mining-incident-investigation.html">Mining</a>
+    <a href="/industries/oil-gas-incident-management.html">Oil and gas</a>
+    <a href="/industries/manufacturing-root-cause-analysis.html">Manufacturing</a>
+    <a href="/industries/construction-safety-software.html">Construction</a>
+    <a href="/industries/engineering-incident-investigation.html">Engineering</a>
+    <a href="https://app.investigatepro.app/login">Login</a>
+  </div>
+  <div class="mmenu__cta">
+    <a class="btn btn--primary btn--block" href="https://app.investigatepro.app/signup">Start a 14-day trial</a>
+    <a class="btn btn--ghost btn--block" href="https://cal.com/investigatepro/15min">Book a 15-minute demo</a>
+  </div>
+</div>
+
+<main id="main">
+<section class="phead">
+  <div class="wrap phead__inner">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/index.html">Home</a><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg><a href="/resources.html">Resources</a><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg><span>ICAM investigation template</span></nav>
+    <h1>The ICAM investigation template.</h1>
+    <p class="lede">A printable template for a thorough investigation, from the first 60 minutes to sign-off. Print it and fill it in by hand; to fill one in on screen, use the incident report template.</p>
+  </div>
+</section>
+<section class="sec sheet-sec sec--tight" style="padding-top:0" aria-label="ICAM investigation template">
+  <div class="wrap">
+    <div class="toolbar no-print">
+      <p>Six sections on A4. Print it for your investigation kit.</p>
+      <div class="toolbar__acts"><button class="btn btn--primary btn--sm" type="button" data-print><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M214.67,72H200V40a8,8,0,0,0-8-8H64a8,8,0,0,0-8,8V72H41.33C27.36,72,16,82.77,16,96v80a8,8,0,0,0,8,8H56v32a8,8,0,0,0,8,8H192a8,8,0,0,0,8-8V184h32a8,8,0,0,0,8-8V96C240,82.77,228.64,72,214.67,72ZM72,48H184V72H72ZM184,208H72V160H184Zm40-40H200V152a8,8,0,0,0-8-8H64a8,8,0,0,0-8,8v16H32V96c0-4.41,4.19-8,9.33-8H214.67c5.14,0,9.33,3.59,9.33,8Zm-24-52a12,12,0,1,1-12-12A12,12,0,0,1,200,116Z"/></svg> Print the template</button><a class="btn btn--ghost btn--sm" href="/incident-report-template.html">Fill one in on screen</a></div>
+    </div>
+    <div class="sheet-wrap"><div class="sheet" id="icam" data-sheet>
+      <div class="sheet__top"><strong>ICAM investigation template</strong><span>A complete guide for a thorough investigation</span></div>
+      <section class="sheet__sec">
+        <div class="sheet__head"><span class="sheet__num">1</span><div><h2>Initial response</h2><p>The first 60 minutes.</p></div></div>
+        <ul class="opts" style="display:grid;gap:8px;font-size:.875rem"><li><i class="box"></i>Make the scene safe for investigators</li><li><i class="box"></i>Confirm injured people are receiving care</li><li><i class="box"></i>Secure the scene with barriers and signs</li><li><i class="box"></i>Identify and preserve evidence</li><li><i class="box"></i>Identify witnesses</li><li><i class="box"></i>Start documenting: photographs and notes</li><li><i class="box"></i>Notify the people who must be told: management and regulators</li></ul>
+        <h3>Evidence preservation log</h3>
+        <div class="stable-wrap"><table class="stable"><thead><tr><th scope="col">Evidence</th><th scope="col">Location</th><th scope="col">Preserved by</th><th scope="col">Date and time</th></tr></thead><tbody><tr><td class="rh">Physical evidence</td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><span class="blank"></span></td></tr><tr><td class="rh">Documents and records</td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><span class="blank"></span></td></tr><tr><td class="rh">Electronic data</td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><span class="blank"></span></td></tr><tr><td class="rh">Photographs</td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><span class="blank"></span></td></tr><tr><td class="rh">Video</td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><span class="blank"></span></td></tr></tbody></table></div>
+        <h3>Witnesses</h3>
+        <div class="stable-wrap"><table class="stable"><thead><tr><th scope="col">Name</th><th scope="col">Role</th><th scope="col">Contact</th><th scope="col">Priority</th></tr></thead><tbody><tr><td><span class="blank"></span></td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><span class="opts"><span><i class="box"></i>High</span><span><i class="box"></i>Medium</span><span><i class="box"></i>Low</span></span></td></tr><tr><td><span class="blank"></span></td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><span class="opts"><span><i class="box"></i>High</span><span><i class="box"></i>Medium</span><span><i class="box"></i>Low</span></span></td></tr><tr><td><span class="blank"></span></td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><span class="opts"><span><i class="box"></i>High</span><span><i class="box"></i>Medium</span><span><i class="box"></i>Low</span></span></td></tr></tbody></table></div>
+      </section>
+      <section class="sheet__sec">
+        <div class="sheet__head"><span class="sheet__num">2</span><div><h2>Incident description</h2></div></div>
+        <div class="stable-wrap"><table class="stable"><thead><tr><th scope="col">Field</th><th scope="col">Details</th></tr></thead><tbody><tr><td class="rh">Date</td><td><span class="blank"></span></td></tr><tr><td class="rh">Time</td><td><span class="blank"></span></td></tr><tr><td class="rh">Location</td><td><span class="blank"></span></td></tr><tr><td class="rh">Area or department</td><td><span class="blank"></span></td></tr><tr><td class="rh">Type of incident</td><td><span class="blank"></span></td></tr><tr><td class="rh">Severity</td><td><span class="opts"><span><i class="box"></i>Fatality</span><span><i class="box"></i>Lost time</span><span><i class="box"></i>Medical treatment</span><span><i class="box"></i>First aid</span><span><i class="box"></i>Near miss</span><span><i class="box"></i>Property</span></span></td></tr></tbody></table></div>
+        <div class="sf"><span class="lbl">Before the incident: what was happening?</span><span class="blank"></span><span class="blank"></span></div>
+        <div class="sf"><span class="lbl">The incident: what exactly occurred?</span><span class="blank"></span><span class="blank"></span><span class="blank"></span></div>
+        <div class="sf"><span class="lbl">After the incident: what happened immediately afterwards?</span><span class="blank"></span><span class="blank"></span></div>
+      </section>
+      <section class="sheet__sec">
+        <div class="sheet__head"><span class="sheet__num">3</span><div><h2>PEEPO analysis</h2><p>Evidence for each element, and whether it contributed.</p></div></div>
+        <h3>People</h3><p class="hint">Training, competence, experience, fitness, fatigue, supervision, communication.</p>
+        <div class="stable-wrap"><table class="stable"><thead><tr><th scope="col">Factor</th><th scope="col">Present?</th><th scope="col">Details and evidence</th></tr></thead><tbody><tr><td class="rh">Adequate training for the task</td><td><span class="opts"><span><i class="box"></i>Yes</span><span><i class="box"></i>No</span><span><i class="box"></i>Not known</span></span></td><td><span class="blank"></span></td></tr><tr><td class="rh">Competency verified</td><td><span class="opts"><span><i class="box"></i>Yes</span><span><i class="box"></i>No</span><span><i class="box"></i>Not known</span></span></td><td><span class="blank"></span></td></tr><tr><td class="rh">Enough experience</td><td><span class="opts"><span><i class="box"></i>Yes</span><span><i class="box"></i>No</span><span><i class="box"></i>Not known</span></span></td><td><span class="blank"></span></td></tr><tr><td class="rh">Fit for duty</td><td><span class="opts"><span><i class="box"></i>Yes</span><span><i class="box"></i>No</span><span><i class="box"></i>Not known</span></span></td><td><span class="blank"></span></td></tr><tr><td class="rh">Rested, not fatigued</td><td><span class="opts"><span><i class="box"></i>Yes</span><span><i class="box"></i>No</span><span><i class="box"></i>Not known</span></span></td><td><span class="blank"></span></td></tr><tr><td class="rh">Adequate supervision</td><td><span class="opts"><span><i class="box"></i>Yes</span><span><i class="box"></i>No</span><span><i class="box"></i>Not known</span></span></td><td><span class="blank"></span></td></tr><tr><td class="rh">Clear communication</td><td><span class="opts"><span><i class="box"></i>Yes</span><span><i class="box"></i>No</span><span><i class="box"></i>Not known</span></span></td><td><span class="blank"></span></td></tr></tbody></table></div>
+        <h3>Environment</h3><p class="hint">Weather, lighting, noise, temperature, housekeeping, layout.</p>
+        <div class="stable-wrap"><table class="stable"><thead><tr><th scope="col">Factor</th><th scope="col">Condition</th><th scope="col">Contributed?</th><th scope="col">Details</th></tr></thead><tbody><tr><td class="rh">Weather</td><td><span class="blank"></span></td><td><span class="opts"><span><i class="box"></i>Yes</span><span><i class="box"></i>No</span><span><i class="box"></i>Maybe</span></span></td><td><span class="blank"></span></td></tr><tr><td class="rh">Lighting</td><td><span class="blank"></span></td><td><span class="opts"><span><i class="box"></i>Yes</span><span><i class="box"></i>No</span><span><i class="box"></i>Maybe</span></span></td><td><span class="blank"></span></td></tr><tr><td class="rh">Noise</td><td><span class="blank"></span></td><td><span class="opts"><span><i class="box"></i>Yes</span><span><i class="box"></i>No</span><span><i class="box"></i>Maybe</span></span></td><td><span class="blank"></span></td></tr><tr><td class="rh">Housekeeping</td><td><span class="blank"></span></td><td><span class="opts"><span><i class="box"></i>Yes</span><span><i class="box"></i>No</span><span><i class="box"></i>Maybe</span></span></td><td><span class="blank"></span></td></tr><tr><td class="rh">Workspace layout</td><td><span class="blank"></span></td><td><span class="opts"><span><i class="box"></i>Yes</span><span><i class="box"></i>No</span><span><i class="box"></i>Maybe</span></span></td><td><span class="blank"></span></td></tr><tr><td class="rh">Ground conditions</td><td><span class="blank"></span></td><td><span class="opts"><span><i class="box"></i>Yes</span><span><i class="box"></i>No</span><span><i class="box"></i>Maybe</span></span></td><td><span class="blank"></span></td></tr></tbody></table></div>
+        <h3>Equipment</h3><p class="hint">Design, condition, maintenance, guarding, PPE, tools.</p>
+        <div class="stable-wrap"><table class="stable"><thead><tr><th scope="col">Factor</th><th scope="col">Condition</th><th scope="col">Contributed?</th><th scope="col">Details</th></tr></thead><tbody><tr><td class="rh">Fit for purpose</td><td><span class="blank"></span></td><td><span class="opts"><span><i class="box"></i>Yes</span><span><i class="box"></i>No</span><span><i class="box"></i>Maybe</span></span></td><td><span class="blank"></span></td></tr><tr><td class="rh">Maintenance current</td><td><span class="blank"></span></td><td><span class="opts"><span><i class="box"></i>Yes</span><span><i class="box"></i>No</span><span><i class="box"></i>Maybe</span></span></td><td><span class="blank"></span></td></tr><tr><td class="rh">Pre-use inspection done</td><td><span class="blank"></span></td><td><span class="opts"><span><i class="box"></i>Yes</span><span><i class="box"></i>No</span><span><i class="box"></i>Maybe</span></span></td><td><span class="blank"></span></td></tr><tr><td class="rh">Guards and safety devices working</td><td><span class="blank"></span></td><td><span class="opts"><span><i class="box"></i>Yes</span><span><i class="box"></i>No</span><span><i class="box"></i>Maybe</span></span></td><td><span class="blank"></span></td></tr><tr><td class="rh">Correct PPE available and worn</td><td><span class="blank"></span></td><td><span class="opts"><span><i class="box"></i>Yes</span><span><i class="box"></i>No</span><span><i class="box"></i>Maybe</span></span></td><td><span class="blank"></span></td></tr></tbody></table></div>
+        <h3>Procedures</h3><p class="hint">Existence, quality, access, clarity, use, permits and risk assessments.</p>
+        <div class="stable-wrap"><table class="stable"><thead><tr><th scope="col">Factor</th><th scope="col">Condition</th><th scope="col">Contributed?</th><th scope="col">Details</th></tr></thead><tbody><tr><td class="rh">Procedure exists for the task</td><td><span class="blank"></span></td><td><span class="opts"><span><i class="box"></i>Yes</span><span><i class="box"></i>No</span><span><i class="box"></i>Maybe</span></span></td><td><span class="blank"></span></td></tr><tr><td class="rh">Procedure followed</td><td><span class="blank"></span></td><td><span class="opts"><span><i class="box"></i>Yes</span><span><i class="box"></i>No</span><span><i class="box"></i>Maybe</span></span></td><td><span class="blank"></span></td></tr><tr><td class="rh">Risk assessment current</td><td><span class="blank"></span></td><td><span class="opts"><span><i class="box"></i>Yes</span><span><i class="box"></i>No</span><span><i class="box"></i>Maybe</span></span></td><td><span class="blank"></span></td></tr><tr><td class="rh">Permit obtained where required</td><td><span class="blank"></span></td><td><span class="opts"><span><i class="box"></i>Yes</span><span><i class="box"></i>No</span><span><i class="box"></i>Maybe</span></span></td><td><span class="blank"></span></td></tr><tr><td class="rh">Job safety analysis completed</td><td><span class="blank"></span></td><td><span class="opts"><span><i class="box"></i>Yes</span><span><i class="box"></i>No</span><span><i class="box"></i>Maybe</span></span></td><td><span class="blank"></span></td></tr></tbody></table></div>
+        <h3>Organisation</h3><p class="hint">Culture, management systems, resources, priorities, change management.</p>
+        <div class="stable-wrap"><table class="stable"><thead><tr><th scope="col">Factor</th><th scope="col">Condition</th><th scope="col">Contributed?</th><th scope="col">Details</th></tr></thead><tbody><tr><td class="rh">Staffing levels</td><td><span class="blank"></span></td><td><span class="opts"><span><i class="box"></i>Yes</span><span><i class="box"></i>No</span><span><i class="box"></i>Maybe</span></span></td><td><span class="blank"></span></td></tr><tr><td class="rh">Resources</td><td><span class="blank"></span></td><td><span class="opts"><span><i class="box"></i>Yes</span><span><i class="box"></i>No</span><span><i class="box"></i>Maybe</span></span></td><td><span class="blank"></span></td></tr><tr><td class="rh">Production pressure</td><td><span class="blank"></span></td><td><span class="opts"><span><i class="box"></i>Yes</span><span><i class="box"></i>No</span><span><i class="box"></i>Maybe</span></span></td><td><span class="blank"></span></td></tr><tr><td class="rh">Safety culture</td><td><span class="blank"></span></td><td><span class="opts"><span><i class="box"></i>Yes</span><span><i class="box"></i>No</span><span><i class="box"></i>Maybe</span></span></td><td><span class="blank"></span></td></tr><tr><td class="rh">Management of change</td><td><span class="blank"></span></td><td><span class="opts"><span><i class="box"></i>Yes</span><span><i class="box"></i>No</span><span><i class="box"></i>Maybe</span></span></td><td><span class="blank"></span></td></tr></tbody></table></div>
+      </section>
+      <section class="sheet__sec">
+        <div class="sheet__head"><span class="sheet__num">4</span><div><h2>Cause analysis: 5 Whys</h2><p>One chain per contributing factor.</p></div></div>
+        <h3>Chain 1</h3>
+        <div class="sf"><span class="lbl">Contributing factor</span><span class="blank"></span></div>
+        <div class="stable-wrap"><table class="stable"><thead><tr><th scope="col">Level</th><th scope="col">Question</th><th scope="col">Answer</th></tr></thead><tbody><tr><td class="rh">Why 1</td><td>Why did this happen?</td><td><span class="blank"></span></td></tr><tr><td class="rh">Why 2</td><td>Why?</td><td><span class="blank"></span></td></tr><tr><td class="rh">Why 3</td><td>Why?</td><td><span class="blank"></span></td></tr><tr><td class="rh">Why 4</td><td>Why?</td><td><span class="blank"></span></td></tr><tr><td class="rh">Why 5</td><td>Why?</td><td><span class="blank"></span></td></tr></tbody></table></div>
+        <div class="sf"><span class="lbl">Cause identified</span><span class="blank"></span></div>
+        <h3>Chain 2</h3>
+        <div class="sf"><span class="lbl">Contributing factor</span><span class="blank"></span></div>
+        <div class="stable-wrap"><table class="stable"><thead><tr><th scope="col">Level</th><th scope="col">Question</th><th scope="col">Answer</th></tr></thead><tbody><tr><td class="rh">Why 1</td><td>Why did this happen?</td><td><span class="blank"></span></td></tr><tr><td class="rh">Why 2</td><td>Why?</td><td><span class="blank"></span></td></tr><tr><td class="rh">Why 3</td><td>Why?</td><td><span class="blank"></span></td></tr><tr><td class="rh">Why 4</td><td>Why?</td><td><span class="blank"></span></td></tr><tr><td class="rh">Why 5</td><td>Why?</td><td><span class="blank"></span></td></tr></tbody></table></div>
+        <div class="sf"><span class="lbl">Cause identified</span><span class="blank"></span></div>
+      </section>
+      <section class="sheet__sec">
+        <div class="sheet__head"><span class="sheet__num">5</span><div><h2>Corrective actions</h2><p>On the hierarchy of controls: elimination first, PPE last.</p></div></div>
+        <div class="stable-wrap"><table class="stable"><thead><tr><th scope="col">No.</th><th scope="col">Cause</th><th scope="col">Action</th><th scope="col">Control level</th><th scope="col">Owner</th><th scope="col">Due</th><th scope="col">Done</th></tr></thead><tbody><tr><td class="rh">1</td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><i class="box"></i></td></tr><tr><td class="rh">2</td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><i class="box"></i></td></tr><tr><td class="rh">3</td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><i class="box"></i></td></tr><tr><td class="rh">4</td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><i class="box"></i></td></tr><tr><td class="rh">5</td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><i class="box"></i></td></tr></tbody></table></div>
+      </section>
+      <section class="sheet__sec">
+        <div class="sheet__head"><span class="sheet__num">6</span><div><h2>Summary and sign-off</h2></div></div>
+        <div class="sf"><span class="lbl">Executive summary: three to five sentences on the incident, the findings and the critical actions</span><span class="blank"></span><span class="blank"></span><span class="blank"></span></div>
+        <div class="sf"><span class="lbl">Key findings</span><span class="blank"></span><span class="blank"></span><span class="blank"></span></div>
+        <div class="stable-wrap"><table class="stable"><thead><tr><th scope="col">Role</th><th scope="col">Name</th><th scope="col">Signature</th><th scope="col">Date</th></tr></thead><tbody><tr><td class="rh">Lead investigator</td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><span class="blank"></span></td></tr><tr><td class="rh">Area manager</td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><span class="blank"></span></td></tr><tr><td class="rh">Safety manager</td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><span class="blank"></span></td></tr></tbody></table></div>
+        <p class="hint">Free from InvestigatePro, investigatepro.app. Written by Devon Turner, 15+ years in mining safety.</p>
+      </section>
+    </div></div>
+  </div>
+</section>
+<section class="sec" aria-labelledby="rel-h">
+  <div class="wrap">
+    <div class="sec-head sec-head--row">
+      <div class="stack" style="--gap:18px"><h2 id="rel-h">Related tools</h2><p>Free, no account needed.</p></div>
+      <a class="link-arrow" href="/resources.html">All free tools <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    </div>
+    <div class="tool-list">
+      <a href="/incident-report-template.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Zm-32-80a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,136Zm0,32a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,168Z"/></svg><span><strong>Incident report template</strong><span>The same structure, filled in on screen.</span></span><svg class="i go" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+      <a href="/checklist.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H128a8,8,0,0,1,0-16h88A8,8,0,0,1,224,128ZM128,72h88a8,8,0,0,0,0-16H128a8,8,0,0,0,0,16Zm88,112H128a8,8,0,0,0,0,16h88a8,8,0,0,0,0-16ZM82.34,42.34,56,68.69,45.66,58.34A8,8,0,0,0,34.34,69.66l16,16a8,8,0,0,0,11.32,0l32-32A8,8,0,0,0,82.34,42.34Zm0,64L56,132.69,45.66,122.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32,0l32-32a8,8,0,0,0-11.32-11.32Zm0,64L56,196.69,45.66,186.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32,0l32-32a8,8,0,0,0-11.32-11.32Z"/></svg><span><strong>ICAM checklist</strong><span>25 points, from scene preservation to close-out.</span></span><svg class="i go" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+      <a href="/peepo-chart-builder.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z"/></svg><span><strong>PEEPO chart builder</strong><span>Map the contributing factors, then print a summary.</span></span><svg class="i go" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    </div>
+  </div>
+</section>
+<section class="sec cta" aria-labelledby="cta-h">
+  <div class="wrap split" style="align-items:center">
+    <h2 id="cta-h">Let the method guide every investigator.</h2>
+    <div class="stack" style="--gap:18px">
+      <p class="lede">InvestigatePro walks each investigator through ICAM with a coach, so the structure in this template is applied the same way on every case.</p>
+      <div class="row">
+        <a class="btn btn--primary" href="https://app.investigatepro.app/signup">Start a 14-day trial <svg class="i i--nudge" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+        <a class="btn btn--ghost" href="https://cal.com/investigatepro/15min">Book a 15-minute demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <div class="foot__brand">
+      <a href="/index.html" aria-label="InvestigatePro home"><img src="/assets/img/logo-horizontal-white.svg" alt="InvestigatePro" width="168" height="34"></a>
+      <p class="foot__tag">Every incident, understood.</p>
+      <p class="foot__by">Built by Devon Turner, who spent fifteen years leading mining safety across Africa and the Middle East, with an ICAM specialism.</p>
+      <button class="motion-toggle" type="button" aria-pressed="false"><span class="motion-toggle__track" aria-hidden="true"></span>Reduce motion</button>
+    </div>
+    <div>
+      <h2>Product</h2>
+      <ul>
+        <li><a href="/platform.html">Platform</a></li>
+        <li><a href="/pricing.html">Pricing</a></li>
+        <li><a href="/demo.html">Book a demo</a></li>
+        <li><a href="/security.html">Security</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+        <li><a href="/changelog.html">Changelog</a></li>
+        <li><a href="/apps/index.html">Apps</a><span class="tag-inbuild">in build</span></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Free tools</h2>
+      <ul>
+        <li><a href="/resources.html">All free tools</a></li>
+        <li><a href="/checklist.html">ICAM checklist</a></li>
+        <li><a href="/icam-toolkit.html">ICAM toolkit</a></li>
+        <li><a href="/peepo-chart-builder.html">PEEPO chart builder</a></li>
+        <li><a href="/5-whys-worksheet.html">5-Whys worksheet</a></li>
+        <li><a href="/state-of-incident-investigation-2026.html">State of Incident Investigation 2026</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Industries</h2>
+      <ul>
+        <li><a href="/industries/mining-incident-investigation.html">Mining</a></li>
+        <li><a href="/industries/oil-gas-incident-management.html">Oil and gas</a></li>
+        <li><a href="/industries/manufacturing-root-cause-analysis.html">Manufacturing</a></li>
+        <li><a href="/industries/construction-safety-software.html">Construction</a></li>
+        <li><a href="/industries/engineering-incident-investigation.html">Engineering</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Company</h2>
+      <ul>
+        <li><a href="/blog/index.html">Blog</a></li>
+        <li><a href="/status.html">Service notices</a></li>
+        <li><a href="mailto:hello@investigatepro.app">Contact: hello@investigatepro.app</a></li>
+        <li><a href="https://app.investigatepro.app/login">Login</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/terms.html">Terms</a></li>
+        <li><a href="/cookie.html">Cookies</a></li>
+        <li><a href="/dpa.html">DPA</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot__base">
+    <span>&copy; 2026 InvestigatePro. Find the causes. Fix the system.</span>
+    <span>Every incident, understood.</span>
   </div>
 </footer>
-<script defer src="/assets/js/ip2.js"></script>
-<script src="/analytics.js"></script>
+
 </body>
 </html>

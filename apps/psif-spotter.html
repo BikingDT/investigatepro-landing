@@ -1,806 +1,260 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-GB" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pSIF Spotter — Train Your Eye for Potential Fatality Events</title>
-    <meta name="description" content="Build competence and confidence in identifying Potential Serious Injury or Fatality (pSIF) events through scenario-based training. The skill that prevents the next fatality.">
-    <link rel="icon" type="image/png" href="../assets/brand/favicon-32.png">
-    
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://investigatepro.app/apps/psif-spotter.html">
-    <meta property="og:title" content="pSIF Spotter — Identify High-Potential Incidents">
-    <meta property="og:description" content="Train your eye to see what could have killed. Scenario-based pSIF identification training.">
-    <meta property="og:image" content="https://investigatepro.app/assets/brand/og-image.png">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    
-    <!-- Tailwind CSS (built) -->
-    <link rel="stylesheet" href="../assets/css/styles.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <style>
-        .gradient-hero {background:linear-gradient(180deg,#EBF1F0 0%,#F4F7F9 45%,#FFFFFF 100%)}
-        .glow-orange { box-shadow: 0 0 60px rgba(251, 146, 60, 0.2); }
-        .phone-mockup {
-            background: linear-gradient(145deg, #FFFFFF 0%, #F4F7F9 100%);
-            border-radius: 40px;
-            padding: 12px;
-            box-shadow: 0 25px 80px rgba(17,45,60,0.08), inset 0 0 0 2px rgba(251, 146, 60, 0.1);
-        }
-        .phone-screen {
-            background: #F4F7F9;
-            border-radius: 32px;
-            overflow: hidden;
-        }
-        .psif-yes { background: linear-gradient(135deg, rgba(239, 68, 68, 0.2) 0%, rgba(239, 68, 68, 0.05) 100%); border: 1px solid rgba(239, 68, 68, 0.3); }
-        .psif-no { background: linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(34, 197, 94, 0.05) 100%); border: 1px solid rgba(34, 197, 94, 0.3); }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>pSIF Spotter | Train to recognise serious potential, in build | InvestigatePro</title>
+<meta name="description" content="pSIF Spotter is a companion app in build: scenario training to recognise potential serious injury and fatality events, with a structured assessment. Join the list to hear when it launches.">
+<link rel="canonical" href="https://investigatepro.app/apps/psif-spotter.html">
 
-    <!-- Structured Data: Breadcrumb -->
-    <script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://investigatepro.app/"
-        },
-        {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Mobile Apps",
-            "item": "https://investigatepro.app/apps/"
-        },
-        {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "pSIF Spotter",
-            "item": "https://investigatepro.app/apps/psif-spotter.html"
-        }
-    ]
-}</script>
-<link rel="stylesheet" href="/assets/css/ip2-chrome.css">
-    <link rel="canonical" href="https://investigatepro.app/apps/psif-spotter.html">
+<meta name="theme-color" content="#063A41">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="InvestigatePro">
+<meta property="og:title" content="pSIF Spotter | Train to recognise serious potential, in build | InvestigatePro">
+<meta property="og:description" content="pSIF Spotter is a companion app in build: scenario training to recognise potential serious injury and fatality events, with a structured assessment. Join the list to hear when it launches.">
+<meta property="og:url" content="https://investigatepro.app/apps/psif-spotter.html">
+<meta property="og:image" content="https://investigatepro.app/assets/img/og-apps.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/montserrat-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/ip-next.css">
+<script>(function(){var h=document.documentElement,r=false;h.className=h.className.replace('no-js','js');try{r=localStorage.getItem('ip-reduce-motion')==='1'}catch(e){}if(!r&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){h.classList.add('motion-on')}else{h.classList.add('motion-off')}})();</script>
+<script src="/assets/ip-next.js" defer></script>
+<script src="/analytics.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"pSIF Spotter","applicationCategory":"EducationalApplication","operatingSystem":"iOS, Android","creator":{"@type":"Organization","name":"InvestigatePro","url":"https://investigatepro.app"}}</script>
 </head>
-<body class="font-sans antialiased bg-cloud text-ink">
-<!-- Site chrome: unified navigation -->
-<nav class="ip2-nav light" aria-label="Main">
-  <div class="ip2-nav-row">
-    <a href="/" class="ip2-logo" aria-label="InvestigatePro home"><img class="lgm" src="/assets/brand/logo-horizontal.svg" alt="InvestigatePro" width="826" height="168" decoding="async"></a>
-    <div class="ip2-links">
-      <a href="/platform.html">Platform</a><a href="/pricing.html">Pricing</a><a href="/resources.html" aria-current="page">Resources</a><a href="/blog/">Blog</a>
-      <a href="https://app.investigatepro.app/login" class="ip2-login">Login</a>
-      <a href="/#pilot" class="ip2-cta">Start a pilot</a>
-    </div>
-    <button class="mm-btn" aria-expanded="false" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
-  </div>
-  <div class="mm-panel">
-    <a href="/platform.html">Platform</a><a href="/pricing.html">Pricing</a><a href="/resources.html">Resources</a><a href="/blog/">Blog</a>
-    <a href="https://app.investigatepro.app/login" class="ip2-login-m">Login</a>
-    <a href="/#pilot" class="btn btn-primary">Start a pilot</a>
-    <a href="https://cal.com/investigatepro/15min" class="btn btn-outline">Book a 15-minute demo</a>
-  </div>
-</nav>
-
-
-    <!-- Hero Section -->
-    <section class="gradient-hero pt-44 pb-16 lg:pt-56 lg:pb-24 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                
-                <!-- Left: Copy -->
-                <div>
-                    <div class="inline-flex items-center bg-cloud rounded-full px-4 py-1.5 mb-6">
-                        <span class="w-2 h-2 bg-orange-500 rounded-full mr-2 animate-pulse"></span>
-                        <span class="text-sm text-slate">Coming Soon — Join the Waitlist</span>
-                    </div>
-                    
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                        pSIF Spotter
-                    </h1>
-                    
-                    <p class="text-xl lg:text-2xl text-orange-400 font-medium mb-4">
-                        Train your eye to see what could have killed
-                    </p>
-                    
-                    <p class="text-lg text-slate mb-8">
-                        The difference between a near-miss and a fatality is often just luck. 
-                        Build the skill to recognize Potential Serious Injury or Fatality events 
-                        before luck runs out.
-                    </p>
-                    
-                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
-                        <a href="#waitlist" class="bg-orange-500 hover:bg-orange-400 text-ink px-6 py-3 rounded-lg font-semibold transition-colors text-center">
-                            Join the Waitlist
-                        </a>
-                        <a href="#why-psif" class="border border-mist hover:border-orange-500 text-ink px-6 py-3 rounded-lg font-semibold transition-colors text-center">
-                            Why pSIF Matters
-                        </a>
-                    </div>
-                    
-                    <div class="flex items-center gap-6 text-sm text-graphite">
-                        <div class="flex items-center">
-                            <svg class="w-5 h-5 text-orange-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
-                            </svg>
-                            iOS &amp; Android &mdash; in build
-                        </div>
-                        <div class="flex items-center">
-                            <svg class="w-5 h-5 text-orange-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-                            </svg>
-                            Earn Certifications
-                        </div>
-                        <div class="flex items-center">
-                            <svg class="w-5 h-5 text-orange-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
-                            Team Leaderboards
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Right: Phone Mockup -->
-                <div class="flex justify-center lg:justify-end">
-                    <div class="phone-mockup w-[300px] lg:w-[340px] glow-orange">
-                        <div class="phone-screen p-4 min-h-[580px]">
-                            <!-- App Header -->
-                            <div class="flex items-center justify-between mb-4">
-                                <div class="text-lg font-bold">pSIF Spotter</div>
-                                <div class="flex items-center text-sm">
-                                    <span class="text-orange-400 mr-1">🔥</span>
-                                    <span class="text-graphite">12 streak</span>
-                                </div>
-                            </div>
-                            
-                            <!-- Scenario Card -->
-                            <div class="bg-cloud rounded-xl p-4 mb-4">
-                                <div class="text-xs text-graphite mb-2">SCENARIO 24 of 50</div>
-                                <div class="text-sm mb-3">
-                                    A worker was using a grinder when the disc shattered. 
-                                    Fragments struck his face shield, cracking it. 
-                                    Worker was uninjured but shaken.
-                                </div>
-                                <div class="bg-mist rounded-lg h-32 flex items-center justify-center mb-3">
-                                    <div class="text-center">
-                                        <div class="text-3xl mb-1">🥽</div>
-                                        <div class="text-xs text-graphite">Cracked face shield</div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Question -->
-                            <div class="text-center mb-4">
-                                <div class="text-lg font-bold mb-2">Is this a pSIF event?</div>
-                                <div class="text-xs text-graphite">Could this have resulted in serious injury or death?</div>
-                            </div>
-                            
-                            <!-- Answer Buttons -->
-                            <div class="grid grid-cols-2 gap-3 mb-4">
-                                <button class="psif-yes rounded-xl py-4 text-center">
-                                    <div class="text-2xl mb-1">⚠️</div>
-                                    <div class="font-semibold text-critical">Yes</div>
-                                    <div class="text-xs text-graphite">High potential</div>
-                                </button>
-                                <button class="psif-no rounded-xl py-4 text-center">
-                                    <div class="text-2xl mb-1">✓</div>
-                                    <div class="font-semibold text-growth-700">No</div>
-                                    <div class="text-xs text-graphite">Low potential</div>
-                                </button>
-                            </div>
-                            
-                            <!-- Progress -->
-                            <div class="mt-auto">
-                                <div class="flex justify-between text-xs text-graphite mb-1">
-                                    <span>Progress</span>
-                                    <span>48%</span>
-                                </div>
-                                <div class="h-2 bg-cloud rounded-full overflow-hidden">
-                                    <div class="h-full bg-orange-500 rounded-full" style="width: 48%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
+<body class="page-apps">
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__logo" href="/index.html" aria-label="InvestigatePro home"><img src="/assets/img/logo-horizontal-white.svg" alt="InvestigatePro" width="152" height="31"></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="/platform.html">Platform</a>
+      <div class="nav__menu">
+        <button class="nav__menu-btn" type="button" aria-expanded="false" aria-controls="nav-industries">Industries <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg></button>
+        <div class="nav__panel" id="nav-industries">
+          <a href="/industries/mining-incident-investigation.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,152V136a96.37,96.37,0,0,0-64-90.51V40a16,16,0,0,0-16-16H112A16,16,0,0,0,96,40v5.49A96.37,96.37,0,0,0,32,136v16a16,16,0,0,0-16,16v24a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V168A16,16,0,0,0,224,152Zm-16-16v16H160V62.67A80.36,80.36,0,0,1,208,136ZM144,40V152H112V40ZM48,136A80.36,80.36,0,0,1,96,62.67V152H48Zm176,56H32V168H224v24Z"/></svg><strong>Mining</strong><span>Underground, open-cut, processing and contractors</span></a>
+          <a href="/industries/oil-gas-incident-management.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></svg><strong>Oil and gas</strong><span>Upstream, midstream and field services</span></a>
+          <a href="/industries/manufacturing-root-cause-analysis.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M116,176a8,8,0,0,1-8,8H80a8,8,0,0,1,0-16h28A8,8,0,0,1,116,176Zm60-8H148a8,8,0,0,0,0,16h28a8,8,0,0,0,0-16Zm64,48a8,8,0,0,1-8,8H24a8,8,0,0,1,0-16h8V88a8,8,0,0,1,12.8-6.4L96,120V88a8,8,0,0,1,12.8-6.4l38.74,29.05L159.1,29.74A16.08,16.08,0,0,1,174.94,16h18.12A16.08,16.08,0,0,1,208.9,29.74l15,105.13s.08.78.08,1.13v72h8A8,8,0,0,1,240,216Zm-77.86-94.4,8.53,6.4h36.11L193.06,32H174.94ZM48,208H208V144H168a8,8,0,0,1-4.8-1.6l-14.4-10.8,0,0L112,104v32a8,8,0,0,1-12.8,6.4L48,104Z"/></svg><strong>Manufacturing</strong><span>Plant, maintenance and process safety</span></a>
+          <a href="/industries/construction-safety-software.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M230.91,172A8,8,0,0,1,228,182.91l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,36,169.09l92,53.65,92-53.65A8,8,0,0,1,230.91,172ZM220,121.09l-92,53.65L36,121.09A8,8,0,0,0,28,134.91l96,56a8,8,0,0,0,8.06,0l96-56A8,8,0,1,0,220,121.09ZM24,80a8,8,0,0,1,4-6.91l96-56a8,8,0,0,1,8.06,0l96,56a8,8,0,0,1,0,13.82l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,24,80Zm23.88,0L128,126.74,208.12,80,128,33.26Z"/></svg><strong>Construction</strong><span>Principal contractors and subcontractors</span></a>
+          <a href="/industries/engineering-incident-investigation.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M160,112h48a16,16,0,0,0,16-16V48a16,16,0,0,0-16-16H160a16,16,0,0,0-16,16V64H128a24,24,0,0,0-24,24v32H72v-8A16,16,0,0,0,56,96H24A16,16,0,0,0,8,112v32a16,16,0,0,0,16,16H56a16,16,0,0,0,16-16v-8h32v32a24,24,0,0,0,24,24h16v16a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V160a16,16,0,0,0-16-16H160a16,16,0,0,0-16,16v16H128a8,8,0,0,1-8-8V88a8,8,0,0,1,8-8h16V96A16,16,0,0,0,160,112ZM56,144H24V112H56v32Zm104,16h48v48H160Zm0-112h48V96H160Z"/></svg><strong>Engineering</strong><span>Projects, commissioning and field work</span></a>
         </div>
-    </section>
-
-    <!-- Why pSIF Matters -->
-    <section id="why-psif" class="py-16 lg:py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center mb-12">
-                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Why pSIF Identification is Critical</h2>
-                <p class="text-xl text-slate">
-                    Most fatalities are preceded by near-misses. The question is: did anyone recognize them?
-                </p>
-            </div>
-            
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 bg-critical/10 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
-                                <svg class="w-6 h-6 text-critical" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold mb-2">The Iceberg Problem</h3>
-                                <p class="text-graphite">
-                                    For every fatality, there are hundreds of near-misses with the same potential. 
-                                    Most go unrecognized and unreported.
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
-                                <svg class="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold mb-2">Outcome Bias</h3>
-                                <p class="text-graphite">
-                                    We judge incidents by what happened, not what could have happened. 
-                                    A minor injury gets minor attention — even when it was nearly fatal.
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 bg-growth-500/10 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
-                                <svg class="w-6 h-6 text-growth-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold mb-2">Trainable Skill</h3>
-                                <p class="text-graphite">
-                                    pSIF identification isn't intuition — it's a skill that can be developed 
-                                    through practice. That's exactly what this app does.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="bg-cloud rounded-2xl p-8 border border-mist">
-                    <div class="text-center mb-6">
-                        <div class="text-6xl font-bold text-orange-400 mb-2">90%</div>
-                        <div class="text-graphite">of workplace fatalities were preceded by near-misses with the same hazard profile</div>
-                    </div>
-                    <div class="border-t border-mist pt-6 mt-6">
-                        <div class="text-sm text-graphite mb-4">Organizations that accurately identify pSIF events:</div>
-                        <ul class="space-y-2 text-sm">
-                            <li class="flex items-center text-slate">
-                                <svg class="w-5 h-5 text-growth-700 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                Focus resources on high-severity-potential events
-                            </li>
-                            <li class="flex items-center text-slate">
-                                <svg class="w-5 h-5 text-growth-700 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                Prevent the next fatality before it happens
-                            </li>
-                            <li class="flex items-center text-slate">
-                                <svg class="w-5 h-5 text-growth-700 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                Demonstrate mature safety culture
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Assessment Framework -->
-    <section class="py-16 lg:py-24 bg-cloud">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl lg:text-4xl font-bold mb-4">The pSIF Assessment Framework</h2>
-                <p class="text-xl text-slate max-w-2xl mx-auto">
-                    A structured approach to evaluating whether an incident had serious potential — built into every scenario.
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
-                <div class="bg-white rounded-xl p-6 border border-mist text-center">
-                    <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl">⚡</span>
-                    </div>
-                    <div class="font-bold mb-2">1. Energy ID</div>
-                    <p class="text-sm text-graphite">What hazardous energies were present?</p>
-                </div>
-                
-                <div class="bg-white rounded-xl p-6 border border-mist text-center">
-                    <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl">👤</span>
-                    </div>
-                    <div class="font-bold mb-2">2. Exposure</div>
-                    <p class="text-sm text-graphite">How exposed was the person?</p>
-                </div>
-                
-                <div class="bg-white rounded-xl p-6 border border-mist text-center">
-                    <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl">🎲</span>
-                    </div>
-                    <div class="font-bold mb-2">3. Variability</div>
-                    <p class="text-sm text-graphite">What made this outcome low-severity?</p>
-                </div>
-                
-                <div class="bg-white rounded-xl p-6 border border-mist text-center">
-                    <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl">🔄</span>
-                    </div>
-                    <div class="font-bold mb-2">4. Counterfactual</div>
-                    <p class="text-sm text-graphite">Change one variable — does severity change?</p>
-                </div>
-                
-                <div class="bg-white rounded-xl p-6 border border-mist text-center">
-                    <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl">✓</span>
-                    </div>
-                    <div class="font-bold mb-2">5. Classify</div>
-                    <p class="text-sm text-graphite">pSIF: Yes, No, or Escalate</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works -->
-    <section class="py-16 lg:py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold mb-4">How pSIF Spotter Works</h2>
-                <p class="text-xl text-slate max-w-2xl mx-auto">
-                    Learn by doing. 50+ real scenarios. Instant feedback. Track your improvement.
-                </p>
-            </div>
-            
-            <div class="grid lg:grid-cols-3 gap-8">
-                <!-- Training Mode -->
-                <div class="bg-cloud rounded-2xl p-8 border border-mist">
-                    <div class="w-14 h-14 bg-gradient-to-br from-orange-400 to-red-500 rounded-2xl flex items-center justify-center mb-6">
-                        <svg class="w-7 h-7 text-ink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Training Mode</h3>
-                    <p class="text-graphite mb-4">
-                        Work through 50+ scenarios from real incidents. Each one presents a situation 
-                        and asks: "Is this a pSIF?" Get instant feedback with detailed explanations.
-                    </p>
-                    <ul class="space-y-2 text-sm text-slate">
-                        <li class="flex items-center">
-                            <span class="text-orange-400 mr-2">→</span>
-                            Beginner, Intermediate, Expert levels
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-orange-400 mr-2">→</span>
-                            Industry-specific scenarios
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-orange-400 mr-2">→</span>
-                            Detailed learning explanations
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Assessment Mode -->
-                <div class="bg-cloud rounded-2xl p-8 border border-mist">
-                    <div class="w-14 h-14 bg-gradient-to-br from-apex-500 to-apex-300 rounded-2xl flex items-center justify-center mb-6">
-                        <svg class="w-7 h-7 text-ink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Assessment Mode</h3>
-                    <p class="text-graphite mb-4">
-                        Assess your own real incidents using the structured pSIF framework. 
-                        The app guides you through each step and provides a recommendation.
-                    </p>
-                    <ul class="space-y-2 text-sm text-slate">
-                        <li class="flex items-center">
-                            <span class="text-apex-500 mr-2">→</span>
-                            Enter your own incidents
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-apex-500 mr-2">→</span>
-                            Guided framework walkthrough
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-apex-500 mr-2">→</span>
-                            Export assessments to PDF
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Team Mode -->
-                <div class="bg-cloud rounded-2xl p-8 border border-mist">
-                    <div class="w-14 h-14 bg-gradient-to-br from-purple-400 to-purple-500 rounded-2xl flex items-center justify-center mb-6">
-                        <svg class="w-7 h-7 text-ink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Team Mode</h3>
-                    <p class="text-graphite mb-4">
-                        Train your whole team. Track competency across the organization. 
-                        Create friendly competition with leaderboards.
-                    </p>
-                    <ul class="space-y-2 text-sm text-slate">
-                        <li class="flex items-center">
-                            <span class="text-neural-500 mr-2">→</span>
-                            Team leaderboards
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-neural-500 mr-2">→</span>
-                            Manager competency dashboard
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-neural-500 mr-2">→</span>
-                            Custom organization scenarios
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Scenario Examples -->
-    <section class="py-16 lg:py-24 bg-cloud">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Example Scenarios</h2>
-                <p class="text-xl text-slate">Real situations. Real learning.</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <!-- Scenario 1 -->
-                <div class="bg-white rounded-xl overflow-hidden border border-mist">
-                    <div class="p-6">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-sm text-graphite">Mining</span>
-                            <span class="bg-critical/10 text-critical text-xs font-medium px-2 py-1 rounded">pSIF: YES</span>
-                        </div>
-                        <p class="text-slate mb-4">
-                            A haul truck reversed close to a light vehicle. The LV driver 
-                            saw it coming and moved forward. No contact was made.
-                        </p>
-                        <div class="bg-cloud rounded-lg p-4 text-sm">
-                            <div class="text-orange-400 font-medium mb-2">Why it's a pSIF:</div>
-                            <p class="text-graphite">
-                                The energy differential between a haul truck and light vehicle 
-                                is extreme. The only thing preventing a fatality was the LV driver's 
-                                awareness. Under different circumstances (blind spot, fatigue, 
-                                distraction), this would have been fatal.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Scenario 2 -->
-                <div class="bg-white rounded-xl overflow-hidden border border-mist">
-                    <div class="p-6">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-sm text-graphite">Construction</span>
-                            <span class="bg-growth-500/10 text-growth-700 text-xs font-medium px-2 py-1 rounded">pSIF: NO</span>
-                        </div>
-                        <p class="text-slate mb-4">
-                            Worker stepped on a nail that penetrated their work boot. 
-                            First aid treatment only. Worker returned to work next day.
-                        </p>
-                        <div class="bg-cloud rounded-lg p-4 text-sm">
-                            <div class="text-apex-500 font-medium mb-2">Why it's NOT a pSIF:</div>
-                            <p class="text-graphite">
-                                While painful, the energy involved (nail penetration) has limited 
-                                severity potential. Even under worse circumstances (deeper 
-                                penetration, infection), serious injury or fatality is unlikely. 
-                                This is a standard housekeeping issue.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gamification -->
-    <section class="py-16 lg:py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-3xl lg:text-4xl font-bold mb-6">
-                        Learning That<br>
-                        <span class="text-orange-400">Sticks</span>
-                    </h2>
-                    <p class="text-lg text-slate mb-6">
-                        Gamification isn't just fun — it drives engagement and retention. 
-                        pSIF Spotter uses game mechanics to make safety training actually effective.
-                    </p>
-                    
-                    <div class="space-y-4">
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mr-4">
-                                <span class="text-2xl">🔥</span>
-                            </div>
-                            <div>
-                                <div class="font-semibold">Daily Streaks</div>
-                                <div class="text-sm text-graphite">Build habits with streak tracking</div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mr-4">
-                                <span class="text-2xl">🏆</span>
-                            </div>
-                            <div>
-                                <div class="font-semibold">Leaderboards</div>
-                                <div class="text-sm text-graphite">Compete with colleagues and teams</div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mr-4">
-                                <span class="text-2xl">🎖️</span>
-                            </div>
-                            <div>
-                                <div class="font-semibold">Certifications</div>
-                                <div class="text-sm text-graphite">Earn badges for completing scenario sets</div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mr-4">
-                                <span class="text-2xl">📈</span>
-                            </div>
-                            <div>
-                                <div class="font-semibold">Progress Tracking</div>
-                                <div class="text-sm text-graphite">Watch your accuracy improve over time</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="bg-cloud rounded-2xl p-8 border border-mist">
-                    <div class="text-center mb-6">
-                        <div class="text-sm text-graphite mb-2">CERTIFICATION</div>
-                        <div class="inline-block bg-gradient-to-br from-orange-400 to-red-500 rounded-2xl p-6 mb-4">
-                            <div class="text-5xl">🎖️</div>
-                        </div>
-                        <div class="text-xl font-bold">pSIF Spotter — Gold</div>
-                        <div class="text-graphite">90%+ accuracy on 50 scenarios</div>
-                    </div>
-                    
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-center">
-                            <span class="text-graphite">Scenarios completed</span>
-                            <span class="font-semibold">50/50</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-graphite">Accuracy</span>
-                            <span class="font-semibold text-growth-700">94%</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-graphite">Best streak</span>
-                            <span class="font-semibold">23 correct</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-graphite">Time invested</span>
-                            <span class="font-semibold">4.2 hours</span>
-                        </div>
-                    </div>
-                    
-                    <button class="w-full mt-6 bg-mist hover:bg-mist text-ink py-3 rounded-lg font-medium transition-colors">
-                        Share Certificate
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing -->
-    <section class="py-16 lg:py-24 bg-cloud">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Simple Pricing</h2>
-                <p class="text-xl text-slate">Free to try. Upgrade for your team.</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <div class="bg-white rounded-2xl p-8 border border-mist">
-                    <div class="text-lg font-bold mb-2">Free</div>
-                    <div class="text-4xl font-bold mb-4">$0</div>
-                    <ul class="space-y-3 mb-8 text-sm text-slate">
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-orange-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            10 training scenarios
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-orange-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Basic progress tracking
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-orange-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Learning explanations
-                        </li>
-                    </ul>
-                    <div class="text-sm text-graphite">Try before you commit</div>
-                </div>
-                
-                <div class="bg-gradient-to-b from-orange-500/10 to-white rounded-2xl p-8 border border-orange-500/30 relative">
-                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-orange-500 text-ink text-xs font-bold px-3 py-1 rounded-full">
-                        MOST POPULAR
-                    </div>
-                    <div class="text-lg font-bold mb-2">Pro</div>
-                    <div class="text-4xl font-bold mb-4">$4.99<span class="text-lg text-graphite">/mo</span></div>
-                    <ul class="space-y-3 mb-8 text-sm text-slate">
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-orange-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Full scenario library (50+)
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-orange-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Certifications
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-orange-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Global leaderboards
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-orange-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Assessment mode
-                        </li>
-                    </ul>
-                    <div class="text-sm text-graphite">For safety professionals</div>
-                </div>
-                
-                <div class="bg-white rounded-2xl p-8 border border-mist">
-                    <div class="text-lg font-bold mb-2">Team</div>
-                    <div class="text-4xl font-bold mb-4">$19.99<span class="text-lg text-graphite">/mo</span></div>
-                    <div class="text-sm text-graphite mb-4">Up to 5 users</div>
-                    <ul class="space-y-3 mb-8 text-sm text-slate">
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-orange-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Everything in Pro
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-orange-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Team leaderboards
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-orange-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Manager dashboard
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-orange-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Custom scenarios
-                        </li>
-                    </ul>
-                    <div class="text-sm text-graphite">For safety teams</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Waitlist CTA -->
-    <section id="waitlist" class="py-16 lg:py-24 bg-white">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="bg-gradient-to-b from-orange-500/10 to-cloud rounded-3xl p-8 lg:p-12 border border-orange-500/20">
-                <div class="inline-flex items-center bg-orange-500/20 rounded-full px-4 py-1.5 mb-6">
-                    <span class="w-2 h-2 bg-orange-500 rounded-full mr-2 animate-pulse"></span>
-                    <span class="text-sm text-orange-400">Coming Q2 2026</span>
-                </div>
-                
-                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Train Your Team First</h2>
-                <p class="text-xl text-slate mb-8">
-                    Join the waitlist for early access. Be among the first to build 
-                    pSIF identification skills across your organization.
-                </p>
-                
-                <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" data-capture="psif-spotter-waitlist" data-success="You’re on the list — we’ll email you at launch.">
-                    <input type="hidden" name="source" value="psif-spotter-waitlist">
-                    <input type="hidden" name="app" value="psif-spotter">
-                    <input 
-                        type="email" 
-                        name="email" 
-                        placeholder="Enter your work email" 
-                        required
-                        class="flex-1 px-4 py-3 bg-cloud border border-mist rounded-lg focus:outline-none focus:border-orange-500 text-ink placeholder-graphite"
-                    >
-                    <button type="submit" class="bg-orange-500 hover:bg-orange-400 text-ink px-6 py-3 rounded-lg font-semibold transition-colors whitespace-nowrap">
-                        Join Waitlist
-                    </button>
-                </form>
-                
-                <p class="text-sm text-graphite mt-4">No spam. Just launch updates and early access.</p>
-                
-                <div class="flex justify-center gap-8 mt-8 pt-8 border-t border-mist">
-                    <div class="text-center">
-                        <div class="text-2xl font-bold text-orange-400">50+</div>
-                        <div class="text-sm text-graphite">Launch scenarios</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-2xl font-bold text-orange-400">Q2 2026</div>
-                        <div class="text-sm text-graphite">Expected launch</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-2xl font-bold text-orange-400">Free</div>
-                        <div class="text-sm text-graphite">Beta access</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    
-
-    <!-- Analytics -->
-    <script src="../analytics.js"></script>
-<footer class="ip2-footer">
-  <div class="ip2-wrap">
-    <div class="cols">
-      <div style="display:flex;flex-direction:column;gap:16px">
-        <a href="/" class="ip2-logo" aria-label="InvestigatePro home"><img class="lgm" src="/assets/brand/logo-horizontal-white.svg" alt="InvestigatePro" width="826" height="168" decoding="async"></a>
-        <p style="max-width:250px;font-size:13px;line-height:1.6">Structured, evidence-led ICAM investigation with an AI coach on every case.</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="ip2-chip">EU-hosted &amp; isolated</span><span class="ip2-chip">GDPR compliant</span></div>
       </div>
-      <div><h4>Product</h4><ul>
-        <li><a href="/platform.html">Platform</a></li><li><a href="/pricing.html">Pricing</a></li><li><a href="/demo.html">Book a demo</a></li>
-        <li><a href="/apps/">Apps</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/security.html">Security</a></li><li><a href="/changelog.html">Changelog</a></li>
-      </ul></div>
-      <div><h4>Resources</h4><ul>
-        <li><a href="/resources.html">All free tools</a></li><li><a href="/checklist.html">ICAM checklist</a></li><li><a href="/icam-toolkit.html">ICAM toolkit</a></li>
-        <li><a href="/peepo-chart-builder.html">PEEPO chart builder</a></li><li><a href="/5-whys-worksheet.html">5-Whys worksheet</a></li><li><a href="/state-of-incident-investigation-2026.html">State of Incident Investigation</a></li>
-      </ul></div>
-      <div><h4>Industries</h4><ul>
-        <li><a href="/industries/mining-incident-investigation.html">Mining</a></li><li><a href="/industries/oil-gas-incident-management.html">Oil &amp; gas</a></li>
-        <li><a href="/industries/manufacturing-root-cause-analysis.html">Manufacturing</a></li><li><a href="/industries/construction-safety-software.html">Construction</a></li>
-        <li><a href="/industries/engineering-incident-investigation.html">Engineering</a></li>
-      </ul></div>
-      <div><h4>Company</h4><ul>
-        <li><a href="/blog/">Blog</a></li><li><a href="/status.html">Service notices</a></li><li><a href="mailto:hello@investigatepro.app">Contact</a></li><li><a href="https://app.investigatepro.app/login">Login</a></li>
-        <li style="margin-top:10px"><a href="/privacy.html">Privacy</a></li><li><a href="/terms.html">Terms</a></li><li><a href="/cookie.html">Cookies</a></li><li><a href="/dpa.html">DPA</a></li>
-      </ul></div>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/resources.html">Resources</a>
+      <a href="/blog/index.html">Blog</a>
+    </nav>
+    <div class="nav__actions">
+      <a class="nav__login" href="https://app.investigatepro.app/login">Login</a>
+      <a class="btn btn--primary btn--sm" href="https://app.investigatepro.app/signup">Start a 14-day trial</a>
+      <button class="nav__burger" type="button" aria-expanded="false" aria-controls="mmenu" aria-label="Open menu"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></svg></button>
     </div>
-    <p class="accountability">Every suggestion carries its source, and the report goes out attributed to the lead investigator. Built by Devon Turner — fifteen years leading mining safety across Africa and the Middle East, with an ICAM specialism.</p>
-    <p style="margin-top:18px;font-size:12px;color:rgba(159,184,194,.7)">© 2026 InvestigatePro. All rights reserved. · Every incident, understood.</p>
+  </div>
+</header>
+<div class="mmenu" id="mmenu" hidden role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="mmenu__top">
+    <a class="nav__logo" href="/index.html" aria-label="InvestigatePro home"><img src="/assets/img/logo-horizontal-white.svg" alt="InvestigatePro" width="140" height="28"></a>
+    <button class="nav__burger mmenu__close" type="button" aria-label="Close menu"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg></button>
+  </div>
+  <nav class="mmenu__list" aria-label="Mobile">
+    <a href="/platform.html" style="--i:0">Platform <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/pricing.html" style="--i:1">Pricing <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/resources.html" style="--i:2">Resources <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/blog/index.html" style="--i:3">Blog <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/demo.html" style="--i:4">Book a demo <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+  </nav>
+  <div class="mmenu__sub">
+    <a href="/industries/mining-incident-investigation.html">Mining</a>
+    <a href="/industries/oil-gas-incident-management.html">Oil and gas</a>
+    <a href="/industries/manufacturing-root-cause-analysis.html">Manufacturing</a>
+    <a href="/industries/construction-safety-software.html">Construction</a>
+    <a href="/industries/engineering-incident-investigation.html">Engineering</a>
+    <a href="https://app.investigatepro.app/login">Login</a>
+  </div>
+  <div class="mmenu__cta">
+    <a class="btn btn--primary btn--block" href="https://app.investigatepro.app/signup">Start a 14-day trial</a>
+    <a class="btn btn--ghost btn--block" href="https://cal.com/investigatepro/15min">Book a 15-minute demo</a>
+  </div>
+</div>
+
+<main id="main">
+<section class="phead">
+  <div class="wrap phead__inner">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/index.html">Home</a><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg><a href="/apps/index.html">Apps</a><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg><span>pSIF Spotter</span></nav>
+    <span class="chip chip--amber"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M200,75.64V40a16,16,0,0,0-16-16H72A16,16,0,0,0,56,40V76a16.07,16.07,0,0,0,6.4,12.8L114.67,128,62.4,167.2A16.07,16.07,0,0,0,56,180v36a16,16,0,0,0,16,16H184a16,16,0,0,0,16-16V180.36a16.09,16.09,0,0,0-6.35-12.77L141.27,128l52.38-39.6A16.05,16.05,0,0,0,200,75.64ZM72,40H184V75.64L178.23,80H77.33L72,76Zm56,78L98.67,96h58.4Zm56,98H72V180l48-36v24a8,8,0,0,0,16,0V144.08l48,36.28Z"/></svg> In build for iOS and Android</span>
+    <h1>pSIF Spotter.</h1>
+    <p class="lede">Train your eye to see what could have killed. The difference between a near miss and a fatality is often luck; this app builds the skill to recognise potential serious injury and fatality events before the luck runs out.</p>
+    <div class="phead__actions">
+      <a class="btn btn--primary" href="#waitlist">Join the list <svg class="i i--nudge" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+      <a class="btn btn--ghost" href="#why-psif">Why pSIF matters</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="why-psif" aria-labelledby="why-h">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="why-h">Why recognising pSIF matters.</h2><p>Serious events are usually preceded by near misses. The question is whether anyone recognised them.</p></div>
+    <div class="plan-grid">
+      <div><h3>The iceberg</h3><p>Behind every fatality sit many near misses with the same potential. Most go unrecognised and unreported.</p></div>
+      <div><h3>Outcome bias</h3><p>We judge an event by what happened, not by what could have happened. A minor injury gets minor attention, even when it was nearly fatal.</p></div>
+      <div><h3>A skill you can train</h3><p>Recognising pSIF is not intuition. It improves with practice, and practice is what the app gives.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="fw-h">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="fw-h">The pSIF assessment.</h2><p>The same five questions in every scenario.</p></div>
+    <ol class="steps-line">
+      <li><h3>Energy</h3><p>What hazardous energies were present?</p></li>
+      <li><h3>Exposure</h3><p>How exposed was the person?</p></li>
+      <li><h3>Variability</h3><p>What made this outcome low in severity?</p></li>
+      <li><h3>Counterfactual</h3><p>Change one variable: does the severity change?</p></li>
+      <li><h3>Classify</h3><p>pSIF: yes, no, or escalate.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="try-h">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="try-h">Try two scenarios.</h2><p>From the planned library. Decide, then read the assessment.</p></div>
+    <div class="split">
+      <div class="bezel meter scenario" data-scenario data-correct="yes">
+        <span class="chip">Mining</span>
+        <p class="scenario__q">A haul truck reversed close to a light vehicle. The driver of the light vehicle saw it coming and moved forward. No contact was made.</p>
+        <p class="muted small">Could this have resulted in serious injury or death?</p>
+        <div class="scenario__acts" role="group" aria-label="Your answer">
+          <button class="btn btn--ghost btn--sm" type="button" data-answer="yes" aria-pressed="false">Yes, high potential</button>
+          <button class="btn btn--ghost btn--sm" type="button" data-answer="no" aria-pressed="false">No, low potential</button>
+        </div>
+        <div class="scenario__why" data-why hidden aria-live="polite"><strong data-verdict></strong> pSIF: yes. The energy difference between a haul truck and a light vehicle is extreme. The only thing that prevented a fatality was the driver&rsquo;s awareness; with a blind spot, fatigue or distraction, this would have been fatal.</div>
+      </div>
+      <div class="bezel meter scenario" data-scenario data-correct="no">
+        <span class="chip">Construction</span>
+        <p class="scenario__q">A worker stepped on a nail that went through their work boot. First aid only; they were back at work the next day.</p>
+        <p class="muted small">Could this have resulted in serious injury or death?</p>
+        <div class="scenario__acts" role="group" aria-label="Your answer">
+          <button class="btn btn--ghost btn--sm" type="button" data-answer="yes" aria-pressed="false">Yes, high potential</button>
+          <button class="btn btn--ghost btn--sm" type="button" data-answer="no" aria-pressed="false">No, low potential</button>
+        </div>
+        <div class="scenario__why" data-why hidden aria-live="polite"><strong data-verdict></strong> pSIF: no. Painful, but the energy involved has limited severity potential. Even in worse circumstances, serious injury or death is unlikely. It is a housekeeping issue.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="modes-h">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="modes-h">How it will work.</h2><p>Learn by doing: a scenario, a decision and an explanation. Nothing here is published yet.</p></div>
+    <div class="plan-grid">
+      <div><h3>Training mode</h3><p>A planned library of 50+ scenarios from real incidents, at beginner, intermediate and expert level, each with a full explanation.</p></div>
+      <div><h3>Assessment mode</h3><p>Your own incidents, taken through the five questions, with a recommendation and a PDF export.</p></div>
+      <div><h3>Team mode</h3><p>Practice across a team, a competency view for managers, custom scenarios and team leaderboards.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="plans-h">
+  <div class="wrap">
+    <div class="sec-head"><span class="chip chip--amber"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M200,75.64V40a16,16,0,0,0-16-16H72A16,16,0,0,0,56,40V76a16.07,16.07,0,0,0,6.4,12.8L114.67,128,62.4,167.2A16.07,16.07,0,0,0,56,180v36a16,16,0,0,0,16,16H184a16,16,0,0,0,16-16V180.36a16.09,16.09,0,0,0-6.35-12.77L141.27,128l52.38-39.6A16.05,16.05,0,0,0,200,75.64ZM72,40H184V75.64L178.23,80H77.33L72,76Zm56,78L98.67,96h58.4Zm56,98H72V180l48-36v24a8,8,0,0,0,16,0V144.08l48,36.28Z"/></svg> Planned, not yet on sale</span><h2 id="plans-h">Planned plans.</h2><p>Free to try. The prices are the plan at launch and may change.</p></div>
+    <div class="tiers tiers--plan">
+      <div class="tier"><h3>Free</h3><div class="tier__price"><span class="cur">$</span><span class="amt">0</span></div><p class="tier__for">To try it before you commit.</p><ul><li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M96.26,37.05A8,8,0,0,1,102,27.29a104.11,104.11,0,0,1,52,0,8,8,0,0,1-2,15.75,8.15,8.15,0,0,1-2-.26,88.09,88.09,0,0,0-44,0A8,8,0,0,1,96.26,37.05ZM53.79,55.14a104.05,104.05,0,0,0-26,45,8,8,0,0,0,15.42,4.27,88,88,0,0,1,22-38.09A8,8,0,0,0,53.79,55.14ZM43.21,151.55a8,8,0,1,0-15.42,4.28,104.12,104.12,0,0,0,26,45,8,8,0,0,0,11.41-11.22A88.14,88.14,0,0,1,43.21,151.55ZM150,213.22a88,88,0,0,1-44,0,8,8,0,1,0-4,15.49,104.11,104.11,0,0,0,52,0,8,8,0,0,0-4-15.49ZM222.65,146a8,8,0,0,0-9.85,5.58,87.91,87.91,0,0,1-22,38.08,8,8,0,1,0,11.42,11.21,104,104,0,0,0,26-45A8,8,0,0,0,222.65,146Zm-9.86-41.54a8,8,0,0,0,15.42-4.28,104,104,0,0,0-26-45,8,8,0,1,0-11.41,11.22A88,88,0,0,1,212.79,104.45Z"/></svg><span>10 training scenarios</span></li><li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M96.26,37.05A8,8,0,0,1,102,27.29a104.11,104.11,0,0,1,52,0,8,8,0,0,1-2,15.75,8.15,8.15,0,0,1-2-.26,88.09,88.09,0,0,0-44,0A8,8,0,0,1,96.26,37.05ZM53.79,55.14a104.05,104.05,0,0,0-26,45,8,8,0,0,0,15.42,4.27,88,88,0,0,1,22-38.09A8,8,0,0,0,53.79,55.14ZM43.21,151.55a8,8,0,1,0-15.42,4.28,104.12,104.12,0,0,0,26,45,8,8,0,0,0,11.41-11.22A88.14,88.14,0,0,1,43.21,151.55ZM150,213.22a88,88,0,0,1-44,0,8,8,0,1,0-4,15.49,104.11,104.11,0,0,0,52,0,8,8,0,0,0-4-15.49ZM222.65,146a8,8,0,0,0-9.85,5.58,87.91,87.91,0,0,1-22,38.08,8,8,0,1,0,11.42,11.21,104,104,0,0,0,26-45A8,8,0,0,0,222.65,146Zm-9.86-41.54a8,8,0,0,0,15.42-4.28,104,104,0,0,0-26-45,8,8,0,1,0-11.41,11.22A88,88,0,0,1,212.79,104.45Z"/></svg><span>Progress tracking</span></li><li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M96.26,37.05A8,8,0,0,1,102,27.29a104.11,104.11,0,0,1,52,0,8,8,0,0,1-2,15.75,8.15,8.15,0,0,1-2-.26,88.09,88.09,0,0,0-44,0A8,8,0,0,1,96.26,37.05ZM53.79,55.14a104.05,104.05,0,0,0-26,45,8,8,0,0,0,15.42,4.27,88,88,0,0,1,22-38.09A8,8,0,0,0,53.79,55.14ZM43.21,151.55a8,8,0,1,0-15.42,4.28,104.12,104.12,0,0,0,26,45,8,8,0,0,0,11.41-11.22A88.14,88.14,0,0,1,43.21,151.55ZM150,213.22a88,88,0,0,1-44,0,8,8,0,1,0-4,15.49,104.11,104.11,0,0,0,52,0,8,8,0,0,0-4-15.49ZM222.65,146a8,8,0,0,0-9.85,5.58,87.91,87.91,0,0,1-22,38.08,8,8,0,1,0,11.42,11.21,104,104,0,0,0,26-45A8,8,0,0,0,222.65,146Zm-9.86-41.54a8,8,0,0,0,15.42-4.28,104,104,0,0,0-26-45,8,8,0,1,0-11.41,11.22A88,88,0,0,1,212.79,104.45Z"/></svg><span>Learning explanations</span></li></ul></div>
+      <div class="tier"><h3>Pro</h3><div class="tier__price"><span class="cur">$</span><span class="amt">4.99</span><span class="per">a month</span></div><p class="tier__for">For safety professionals.</p><ul><li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M96.26,37.05A8,8,0,0,1,102,27.29a104.11,104.11,0,0,1,52,0,8,8,0,0,1-2,15.75,8.15,8.15,0,0,1-2-.26,88.09,88.09,0,0,0-44,0A8,8,0,0,1,96.26,37.05ZM53.79,55.14a104.05,104.05,0,0,0-26,45,8,8,0,0,0,15.42,4.27,88,88,0,0,1,22-38.09A8,8,0,0,0,53.79,55.14ZM43.21,151.55a8,8,0,1,0-15.42,4.28,104.12,104.12,0,0,0,26,45,8,8,0,0,0,11.41-11.22A88.14,88.14,0,0,1,43.21,151.55ZM150,213.22a88,88,0,0,1-44,0,8,8,0,1,0-4,15.49,104.11,104.11,0,0,0,52,0,8,8,0,0,0-4-15.49ZM222.65,146a8,8,0,0,0-9.85,5.58,87.91,87.91,0,0,1-22,38.08,8,8,0,1,0,11.42,11.21,104,104,0,0,0,26-45A8,8,0,0,0,222.65,146Zm-9.86-41.54a8,8,0,0,0,15.42-4.28,104,104,0,0,0-26-45,8,8,0,1,0-11.41,11.22A88,88,0,0,1,212.79,104.45Z"/></svg><span>The full scenario library</span></li><li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M96.26,37.05A8,8,0,0,1,102,27.29a104.11,104.11,0,0,1,52,0,8,8,0,0,1-2,15.75,8.15,8.15,0,0,1-2-.26,88.09,88.09,0,0,0-44,0A8,8,0,0,1,96.26,37.05ZM53.79,55.14a104.05,104.05,0,0,0-26,45,8,8,0,0,0,15.42,4.27,88,88,0,0,1,22-38.09A8,8,0,0,0,53.79,55.14ZM43.21,151.55a8,8,0,1,0-15.42,4.28,104.12,104.12,0,0,0,26,45,8,8,0,0,0,11.41-11.22A88.14,88.14,0,0,1,43.21,151.55ZM150,213.22a88,88,0,0,1-44,0,8,8,0,1,0-4,15.49,104.11,104.11,0,0,0,52,0,8,8,0,0,0-4-15.49ZM222.65,146a8,8,0,0,0-9.85,5.58,87.91,87.91,0,0,1-22,38.08,8,8,0,1,0,11.42,11.21,104,104,0,0,0,26-45A8,8,0,0,0,222.65,146Zm-9.86-41.54a8,8,0,0,0,15.42-4.28,104,104,0,0,0-26-45,8,8,0,1,0-11.41,11.22A88,88,0,0,1,212.79,104.45Z"/></svg><span>Certificates</span></li><li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M96.26,37.05A8,8,0,0,1,102,27.29a104.11,104.11,0,0,1,52,0,8,8,0,0,1-2,15.75,8.15,8.15,0,0,1-2-.26,88.09,88.09,0,0,0-44,0A8,8,0,0,1,96.26,37.05ZM53.79,55.14a104.05,104.05,0,0,0-26,45,8,8,0,0,0,15.42,4.27,88,88,0,0,1,22-38.09A8,8,0,0,0,53.79,55.14ZM43.21,151.55a8,8,0,1,0-15.42,4.28,104.12,104.12,0,0,0,26,45,8,8,0,0,0,11.41-11.22A88.14,88.14,0,0,1,43.21,151.55ZM150,213.22a88,88,0,0,1-44,0,8,8,0,1,0-4,15.49,104.11,104.11,0,0,0,52,0,8,8,0,0,0-4-15.49ZM222.65,146a8,8,0,0,0-9.85,5.58,87.91,87.91,0,0,1-22,38.08,8,8,0,1,0,11.42,11.21,104,104,0,0,0,26-45A8,8,0,0,0,222.65,146Zm-9.86-41.54a8,8,0,0,0,15.42-4.28,104,104,0,0,0-26-45,8,8,0,1,0-11.41,11.22A88,88,0,0,1,212.79,104.45Z"/></svg><span>Leaderboards</span></li><li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M96.26,37.05A8,8,0,0,1,102,27.29a104.11,104.11,0,0,1,52,0,8,8,0,0,1-2,15.75,8.15,8.15,0,0,1-2-.26,88.09,88.09,0,0,0-44,0A8,8,0,0,1,96.26,37.05ZM53.79,55.14a104.05,104.05,0,0,0-26,45,8,8,0,0,0,15.42,4.27,88,88,0,0,1,22-38.09A8,8,0,0,0,53.79,55.14ZM43.21,151.55a8,8,0,1,0-15.42,4.28,104.12,104.12,0,0,0,26,45,8,8,0,0,0,11.41-11.22A88.14,88.14,0,0,1,43.21,151.55ZM150,213.22a88,88,0,0,1-44,0,8,8,0,1,0-4,15.49,104.11,104.11,0,0,0,52,0,8,8,0,0,0-4-15.49ZM222.65,146a8,8,0,0,0-9.85,5.58,87.91,87.91,0,0,1-22,38.08,8,8,0,1,0,11.42,11.21,104,104,0,0,0,26-45A8,8,0,0,0,222.65,146Zm-9.86-41.54a8,8,0,0,0,15.42-4.28,104,104,0,0,0-26-45,8,8,0,1,0-11.41,11.22A88,88,0,0,1,212.79,104.45Z"/></svg><span>Assessment mode</span></li></ul></div>
+      <div class="tier"><h3>Team</h3><div class="tier__price"><span class="cur">$</span><span class="amt">19.99</span><span class="per">a month, up to 5 users</span></div><p class="tier__for">For safety teams.</p><ul><li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M96.26,37.05A8,8,0,0,1,102,27.29a104.11,104.11,0,0,1,52,0,8,8,0,0,1-2,15.75,8.15,8.15,0,0,1-2-.26,88.09,88.09,0,0,0-44,0A8,8,0,0,1,96.26,37.05ZM53.79,55.14a104.05,104.05,0,0,0-26,45,8,8,0,0,0,15.42,4.27,88,88,0,0,1,22-38.09A8,8,0,0,0,53.79,55.14ZM43.21,151.55a8,8,0,1,0-15.42,4.28,104.12,104.12,0,0,0,26,45,8,8,0,0,0,11.41-11.22A88.14,88.14,0,0,1,43.21,151.55ZM150,213.22a88,88,0,0,1-44,0,8,8,0,1,0-4,15.49,104.11,104.11,0,0,0,52,0,8,8,0,0,0-4-15.49ZM222.65,146a8,8,0,0,0-9.85,5.58,87.91,87.91,0,0,1-22,38.08,8,8,0,1,0,11.42,11.21,104,104,0,0,0,26-45A8,8,0,0,0,222.65,146Zm-9.86-41.54a8,8,0,0,0,15.42-4.28,104,104,0,0,0-26-45,8,8,0,1,0-11.41,11.22A88,88,0,0,1,212.79,104.45Z"/></svg><span>Everything in Pro</span></li><li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M96.26,37.05A8,8,0,0,1,102,27.29a104.11,104.11,0,0,1,52,0,8,8,0,0,1-2,15.75,8.15,8.15,0,0,1-2-.26,88.09,88.09,0,0,0-44,0A8,8,0,0,1,96.26,37.05ZM53.79,55.14a104.05,104.05,0,0,0-26,45,8,8,0,0,0,15.42,4.27,88,88,0,0,1,22-38.09A8,8,0,0,0,53.79,55.14ZM43.21,151.55a8,8,0,1,0-15.42,4.28,104.12,104.12,0,0,0,26,45,8,8,0,0,0,11.41-11.22A88.14,88.14,0,0,1,43.21,151.55ZM150,213.22a88,88,0,0,1-44,0,8,8,0,1,0-4,15.49,104.11,104.11,0,0,0,52,0,8,8,0,0,0-4-15.49ZM222.65,146a8,8,0,0,0-9.85,5.58,87.91,87.91,0,0,1-22,38.08,8,8,0,1,0,11.42,11.21,104,104,0,0,0,26-45A8,8,0,0,0,222.65,146Zm-9.86-41.54a8,8,0,0,0,15.42-4.28,104,104,0,0,0-26-45,8,8,0,1,0-11.41,11.22A88,88,0,0,1,212.79,104.45Z"/></svg><span>Team leaderboards</span></li><li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M96.26,37.05A8,8,0,0,1,102,27.29a104.11,104.11,0,0,1,52,0,8,8,0,0,1-2,15.75,8.15,8.15,0,0,1-2-.26,88.09,88.09,0,0,0-44,0A8,8,0,0,1,96.26,37.05ZM53.79,55.14a104.05,104.05,0,0,0-26,45,8,8,0,0,0,15.42,4.27,88,88,0,0,1,22-38.09A8,8,0,0,0,53.79,55.14ZM43.21,151.55a8,8,0,1,0-15.42,4.28,104.12,104.12,0,0,0,26,45,8,8,0,0,0,11.41-11.22A88.14,88.14,0,0,1,43.21,151.55ZM150,213.22a88,88,0,0,1-44,0,8,8,0,1,0-4,15.49,104.11,104.11,0,0,0,52,0,8,8,0,0,0-4-15.49ZM222.65,146a8,8,0,0,0-9.85,5.58,87.91,87.91,0,0,1-22,38.08,8,8,0,1,0,11.42,11.21,104,104,0,0,0,26-45A8,8,0,0,0,222.65,146Zm-9.86-41.54a8,8,0,0,0,15.42-4.28,104,104,0,0,0-26-45,8,8,0,1,0-11.41,11.22A88,88,0,0,1,212.79,104.45Z"/></svg><span>Manager competency view</span></li><li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M96.26,37.05A8,8,0,0,1,102,27.29a104.11,104.11,0,0,1,52,0,8,8,0,0,1-2,15.75,8.15,8.15,0,0,1-2-.26,88.09,88.09,0,0,0-44,0A8,8,0,0,1,96.26,37.05ZM53.79,55.14a104.05,104.05,0,0,0-26,45,8,8,0,0,0,15.42,4.27,88,88,0,0,1,22-38.09A8,8,0,0,0,53.79,55.14ZM43.21,151.55a8,8,0,1,0-15.42,4.28,104.12,104.12,0,0,0,26,45,8,8,0,0,0,11.41-11.22A88.14,88.14,0,0,1,43.21,151.55ZM150,213.22a88,88,0,0,1-44,0,8,8,0,1,0-4,15.49,104.11,104.11,0,0,0,52,0,8,8,0,0,0-4-15.49ZM222.65,146a8,8,0,0,0-9.85,5.58,87.91,87.91,0,0,1-22,38.08,8,8,0,1,0,11.42,11.21,104,104,0,0,0,26-45A8,8,0,0,0,222.65,146Zm-9.86-41.54a8,8,0,0,0,15.42-4.28,104,104,0,0,0-26-45,8,8,0,1,0-11.41,11.22A88,88,0,0,1,212.79,104.45Z"/></svg><span>Custom scenarios</span></li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="waitlist" aria-labelledby="wl-h">
+  <div class="wrap pilot" style="margin-top:0;border-top:0;padding-top:0">
+    <div class="stack" style="--gap:10px">
+      <h2 id="wl-h" class="h3">Train your team first.</h2>
+      <p>Early access, and an email when pSIF Spotter launches. Nothing else.</p>
+    </div>
+    <form class="form" data-capture data-endpoint="https://api.investigatepro.app/api/leads/capture" data-source="psif-spotter-waitlist" style="grid-template-columns:minmax(0, 1fr) auto">
+      <input type="hidden" name="app" value="psif-spotter">
+      <div class="field"><label for="w-email">Work email</label><input id="w-email" name="email" type="email" autocomplete="email" required></div>
+      <button class="btn btn--primary" type="submit">Join the list</button>
+      <p class="form__msg" hidden role="status" data-ok="You are on the list. We will email you when pSIF Spotter launches." data-err="That did not send. Check your connection and try again, or email hello@investigatepro.app." data-proto="Prototype build: nothing was sent. On the live site this adds you to the pSIF Spotter launch list."><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg><span></span></p>
+    </form>
+  </div>
+</section>
+
+<section class="sec cta" aria-labelledby="cta-h">
+  <div class="wrap split" style="align-items:center">
+    <h2 id="cta-h">Investigate the high-potential events properly today.</h2>
+    <div class="stack" style="--gap:18px">
+      <p class="lede">InvestigatePro runs ICAM on every case now, with a coach that prompts every level.</p>
+      <div class="row">
+        <a class="btn btn--primary" href="https://app.investigatepro.app/signup">Start a 14-day trial <svg class="i i--nudge" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+        <a class="btn btn--ghost" href="/apps/index.html">Both apps in build</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <div class="foot__brand">
+      <a href="/index.html" aria-label="InvestigatePro home"><img src="/assets/img/logo-horizontal-white.svg" alt="InvestigatePro" width="168" height="34"></a>
+      <p class="foot__tag">Every incident, understood.</p>
+      <p class="foot__by">Built by Devon Turner, who spent fifteen years leading mining safety across Africa and the Middle East, with an ICAM specialism.</p>
+      <button class="motion-toggle" type="button" aria-pressed="false"><span class="motion-toggle__track" aria-hidden="true"></span>Reduce motion</button>
+    </div>
+    <div>
+      <h2>Product</h2>
+      <ul>
+        <li><a href="/platform.html">Platform</a></li>
+        <li><a href="/pricing.html">Pricing</a></li>
+        <li><a href="/demo.html">Book a demo</a></li>
+        <li><a href="/security.html">Security</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+        <li><a href="/changelog.html">Changelog</a></li>
+        <li><a href="/apps/index.html">Apps</a><span class="tag-inbuild">in build</span></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Free tools</h2>
+      <ul>
+        <li><a href="/resources.html">All free tools</a></li>
+        <li><a href="/checklist.html">ICAM checklist</a></li>
+        <li><a href="/icam-toolkit.html">ICAM toolkit</a></li>
+        <li><a href="/peepo-chart-builder.html">PEEPO chart builder</a></li>
+        <li><a href="/5-whys-worksheet.html">5-Whys worksheet</a></li>
+        <li><a href="/state-of-incident-investigation-2026.html">State of Incident Investigation 2026</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Industries</h2>
+      <ul>
+        <li><a href="/industries/mining-incident-investigation.html">Mining</a></li>
+        <li><a href="/industries/oil-gas-incident-management.html">Oil and gas</a></li>
+        <li><a href="/industries/manufacturing-root-cause-analysis.html">Manufacturing</a></li>
+        <li><a href="/industries/construction-safety-software.html">Construction</a></li>
+        <li><a href="/industries/engineering-incident-investigation.html">Engineering</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Company</h2>
+      <ul>
+        <li><a href="/blog/index.html">Blog</a></li>
+        <li><a href="/status.html">Service notices</a></li>
+        <li><a href="mailto:hello@investigatepro.app">Contact: hello@investigatepro.app</a></li>
+        <li><a href="https://app.investigatepro.app/login">Login</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/terms.html">Terms</a></li>
+        <li><a href="/cookie.html">Cookies</a></li>
+        <li><a href="/dpa.html">DPA</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot__base">
+    <span>&copy; 2026 InvestigatePro. Find the causes. Fix the system.</span>
+    <span>Every incident, understood.</span>
   </div>
 </footer>
-<script defer src="/assets/js/ip2.js"></script>
+
 </body>
 </html>

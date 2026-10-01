@@ -1,427 +1,288 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-GB" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Complete Guide to ICAM Methodology — InvestigatePro</title>
-    <meta name="description" content="Learn how the Incident Cause Analysis Method (ICAM) helps organizations uncover real causes and prevent recurrence. A comprehensive guide for safety professionals.">
-    <meta name="keywords" content="ICAM methodology, incident investigation, root cause analysis, workplace safety, incident cause analysis method, safety management, accident investigation">
-    <link rel="icon" type="image/png" href="../assets/brand/favicon-32.png">
-    <link rel="canonical" href="https://investigatepro.app/blog/icam-methodology-guide.html">
-    
-    <!-- Open Graph -->
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://investigatepro.app/blog/icam-methodology-guide.html">
-    <meta property="og:title" content="The Complete Guide to ICAM Methodology">
-    <meta property="og:description" content="Learn how the Incident Cause Analysis Method helps organizations uncover real causes and prevent recurrence.">
-    <meta property="og:image" content="https://investigatepro.app/assets/brand/og-image.png">
-    <meta name="twitter:card" content="summary_large_image">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    
-    <!-- Tailwind CSS (built) -->
-    <link rel="stylesheet" href="../assets/css/styles.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
-    
-    <style>
-        .prose h2 { @apply text-2xl font-bold mt-10 mb-4 text-ink; }
-        .prose h3 { @apply text-xl font-semibold mt-8 mb-3 text-ink; }
-        .prose p { @apply mb-4 text-slate leading-relaxed; }
-        .prose ul, .prose ol { @apply mb-4 ml-6 text-slate; }
-        .prose li { @apply mb-2; }
-        .prose strong { @apply text-ink font-semibold; }
-        .prose blockquote { @apply border-l-4 border-apex-500 pl-4 italic text-graphite my-6; }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Complete Guide to ICAM Methodology, InvestigatePro | InvestigatePro</title>
+<meta name="description" content="Learn how the Incident Cause Analysis Method (ICAM) helps organisations uncover real causes and prevent recurrence. A comprehensive guide for safety professionals.">
+<link rel="canonical" href="https://investigatepro.app/blog/icam-methodology-guide.html">
 
-    <!-- Structured Data: Breadcrumb + Article -->
-    <script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://investigatepro.app/"
-        },
-        {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Blog",
-            "item": "https://investigatepro.app/blog/"
-        },
-        {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "The Complete Guide to ICAM Methodology",
-            "item": "https://investigatepro.app/blog/icam-methodology-guide.html"
-        }
-    ]
-}</script>
-    <script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "The Complete Guide to ICAM Methodology",
-    "description": "Learn how the Incident Cause Analysis Method helps organizations uncover real causes.",
-    "datePublished": "2026-02-20",
-    "dateModified": "2026-05-06",
-    "author": {
-        "@type": "Organization",
-        "name": "InvestigatePro",
-        "url": "https://investigatepro.app"
-    },
-    "publisher": {
-        "@type": "Organization",
-        "name": "InvestigatePro",
-        "logo": {
-            "@type": "ImageObject",
-            "url": "https://investigatepro.app/assets/brand/og-image.png"
-        }
-    },
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://investigatepro.app/blog/icam-methodology-guide.html"
-    }
-}</script>
-<link rel="stylesheet" href="/assets/css/ip2-chrome.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Devon Turner", "jobTitle": "Founder", "url": "https://investigatepro.app/#founder", "worksFor": {"@type": "Organization", "name": "InvestigatePro", "url": "https://investigatepro.app"}, "description": "Founder of InvestigatePro. 15+ years leading mining safety across Africa and the Middle East, with an ICAM specialism.", "knowsAbout": ["ICAM investigation", "incident investigation", "mining safety"]}</script>
+<meta name="theme-color" content="#063A41">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="InvestigatePro">
+<meta property="og:title" content="The Complete Guide to ICAM Methodology, InvestigatePro | InvestigatePro">
+<meta property="og:description" content="Learn how the Incident Cause Analysis Method (ICAM) helps organisations uncover real causes and prevent recurrence. A comprehensive guide for safety professionals.">
+<meta property="og:url" content="https://investigatepro.app/blog/icam-methodology-guide.html">
+<meta property="og:image" content="https://investigatepro.app/assets/img/og-article.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/montserrat-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/ip-next.css">
+<script>(function(){var h=document.documentElement,r=false;h.className=h.className.replace('no-js','js');try{r=localStorage.getItem('ip-reduce-motion')==='1'}catch(e){}if(!r&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){h.classList.add('motion-on')}else{h.classList.add('motion-off')}})();</script>
+<script src="/assets/ip-next.js" defer></script>
+<script src="/analytics.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"The Complete Guide to ICAM Methodology","author":{"@type":"Person","name":"Devon Turner"},"publisher":{"@type":"Organization","name":"InvestigatePro"}}</script>
 </head>
-<body class="font-sans antialiased bg-cloud text-ink">
-<!-- Site chrome: unified navigation -->
-<nav class="ip2-nav light" aria-label="Main">
-  <div class="ip2-nav-row">
-    <a href="/" class="ip2-logo" aria-label="InvestigatePro home"><img class="lgm" src="/assets/brand/logo-horizontal.svg" alt="InvestigatePro" width="826" height="168" decoding="async"></a>
-    <div class="ip2-links">
-      <a href="/platform.html">Platform</a><a href="/pricing.html">Pricing</a><a href="/resources.html">Resources</a><a href="/blog/" aria-current="page">Blog</a>
-      <a href="https://app.investigatepro.app/login" class="ip2-login">Login</a>
-      <a href="/#pilot" class="ip2-cta">Start a pilot</a>
-    </div>
-    <button class="mm-btn" aria-expanded="false" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
-  </div>
-  <div class="mm-panel">
-    <a href="/platform.html">Platform</a><a href="/pricing.html">Pricing</a><a href="/resources.html">Resources</a><a href="/blog/">Blog</a>
-    <a href="https://app.investigatepro.app/login" class="ip2-login-m">Login</a>
-    <a href="/#pilot" class="btn btn-primary">Start a pilot</a>
-    <a href="https://cal.com/investigatepro/15min" class="btn btn-outline">Book a 15-minute demo</a>
-  </div>
-</nav>
-<div class="ip2-byline"><div class="ip2-wrap"><span class="dt" aria-hidden="true">DT</span><span><strong>Devon Turner</strong> · Founder, InvestigatePro — 15+ years leading mining safety</span></div></div>
-
-
-    <!-- Article Header -->
-    <header class="pt-36 pb-12 bg-gradient-to-b from-cloud to-white">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center gap-3 mb-6">
-                <span class="text-xs bg-apex-500/10 text-apex-500 px-3 py-1 rounded-full">ICAM</span>
-                <span class="text-sm text-graphite">12 min read</span>
-            </div>
-            <h1 class="text-4xl sm:text-5xl font-bold mb-6 leading-tight">The Complete Guide to ICAM Methodology</h1>
-            <p class="text-xl text-slate">Learn how the Incident Cause Analysis Method helps organizations uncover real causes and prevent recurrence</p>
+<body class="page-article">
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__logo" href="/index.html" aria-label="InvestigatePro home"><img src="/assets/img/logo-horizontal-white.svg" alt="InvestigatePro" width="152" height="31"></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="/platform.html">Platform</a>
+      <div class="nav__menu">
+        <button class="nav__menu-btn" type="button" aria-expanded="false" aria-controls="nav-industries">Industries <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg></button>
+        <div class="nav__panel" id="nav-industries">
+          <a href="/industries/mining-incident-investigation.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,152V136a96.37,96.37,0,0,0-64-90.51V40a16,16,0,0,0-16-16H112A16,16,0,0,0,96,40v5.49A96.37,96.37,0,0,0,32,136v16a16,16,0,0,0-16,16v24a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V168A16,16,0,0,0,224,152Zm-16-16v16H160V62.67A80.36,80.36,0,0,1,208,136ZM144,40V152H112V40ZM48,136A80.36,80.36,0,0,1,96,62.67V152H48Zm176,56H32V168H224v24Z"/></svg><strong>Mining</strong><span>Underground, open-cut, processing and contractors</span></a>
+          <a href="/industries/oil-gas-incident-management.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></svg><strong>Oil and gas</strong><span>Upstream, midstream and field services</span></a>
+          <a href="/industries/manufacturing-root-cause-analysis.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M116,176a8,8,0,0,1-8,8H80a8,8,0,0,1,0-16h28A8,8,0,0,1,116,176Zm60-8H148a8,8,0,0,0,0,16h28a8,8,0,0,0,0-16Zm64,48a8,8,0,0,1-8,8H24a8,8,0,0,1,0-16h8V88a8,8,0,0,1,12.8-6.4L96,120V88a8,8,0,0,1,12.8-6.4l38.74,29.05L159.1,29.74A16.08,16.08,0,0,1,174.94,16h18.12A16.08,16.08,0,0,1,208.9,29.74l15,105.13s.08.78.08,1.13v72h8A8,8,0,0,1,240,216Zm-77.86-94.4,8.53,6.4h36.11L193.06,32H174.94ZM48,208H208V144H168a8,8,0,0,1-4.8-1.6l-14.4-10.8,0,0L112,104v32a8,8,0,0,1-12.8,6.4L48,104Z"/></svg><strong>Manufacturing</strong><span>Plant, maintenance and process safety</span></a>
+          <a href="/industries/construction-safety-software.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M230.91,172A8,8,0,0,1,228,182.91l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,36,169.09l92,53.65,92-53.65A8,8,0,0,1,230.91,172ZM220,121.09l-92,53.65L36,121.09A8,8,0,0,0,28,134.91l96,56a8,8,0,0,0,8.06,0l96-56A8,8,0,1,0,220,121.09ZM24,80a8,8,0,0,1,4-6.91l96-56a8,8,0,0,1,8.06,0l96,56a8,8,0,0,1,0,13.82l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,24,80Zm23.88,0L128,126.74,208.12,80,128,33.26Z"/></svg><strong>Construction</strong><span>Principal contractors and subcontractors</span></a>
+          <a href="/industries/engineering-incident-investigation.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M160,112h48a16,16,0,0,0,16-16V48a16,16,0,0,0-16-16H160a16,16,0,0,0-16,16V64H128a24,24,0,0,0-24,24v32H72v-8A16,16,0,0,0,56,96H24A16,16,0,0,0,8,112v32a16,16,0,0,0,16,16H56a16,16,0,0,0,16-16v-8h32v32a24,24,0,0,0,24,24h16v16a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V160a16,16,0,0,0-16-16H160a16,16,0,0,0-16,16v16H128a8,8,0,0,1-8-8V88a8,8,0,0,1,8-8h16V96A16,16,0,0,0,160,112ZM56,144H24V112H56v32Zm104,16h48v48H160Zm0-112h48V96H160Z"/></svg><strong>Engineering</strong><span>Projects, commissioning and field work</span></a>
         </div>
-    </header>
-
-    <!-- Article Content -->
-    <article class="py-12 bg-white">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 prose">
-
-            <h2>What is ICAM?</h2>
-            <p>The <strong>Incident Cause Analysis Method (ICAM)</strong> is a structured approach to investigating workplace incidents that goes beyond finding who to blame. Developed in Australia for the mining industry, ICAM has become the gold standard for incident investigation across high-risk industries worldwide.</p>
-            <p>Unlike traditional investigation methods that often stop at "human error," ICAM systematically examines the entire system—from individual actions to organizational factors—to identify the true root causes of incidents.</p>
-
-            <h2>The Problem with Traditional Investigations</h2>
-            <p>Most incident investigations fail for predictable reasons:</p>
-            <p><strong>They stop too soon.</strong> Finding that a worker "didn't follow procedure" feels like a conclusion, but it's actually a starting point. Why didn't they follow procedure? Was it unclear? Impractical? Were they under time pressure?</p>
-            <p><strong>They focus on blame.</strong> When investigations aim to find fault, people become defensive. Information gets hidden. The organization learns nothing.</p>
-            <p><strong>They ignore systemic factors.</strong> A worker making an error is rarely random—it's usually the product of inadequate training, poor equipment design, time pressure, or organizational culture.</p>
-            <p><strong>They don't prevent recurrence.</strong> Generic recommendations like "retrain all workers" or "remind everyone to be careful" rarely address what actually went wrong.</p>
-
-            <h2>How ICAM Works: The Four Levels</h2>
-            <p>ICAM investigates incidents at four interconnected levels:</p>
-
-            <h3>1. Absent or Failed Defenses</h3>
-            <p>What barriers should have prevented this incident or reduced its severity? ICAM identifies:</p>
-            <ul>
-                <li><strong>Physical defenses:</strong> Guards, interlocks, PPE</li>
-                <li><strong>Administrative defenses:</strong> Procedures, permits, checklists</li>
-                <li><strong>Human defenses:</strong> Supervision, buddy systems, competency checks</li>
-            </ul>
-            <p>For each defense, ask: Was it absent? Did it fail? Why?</p>
-
-            <h3>2. Individual/Team Actions</h3>
-            <p>What did people do (or not do) that contributed to the incident? This isn't about blame—it's about understanding behavior in context.</p>
-            <p>ICAM recognizes that "human error" is a symptom, not a cause. The question isn't <em>what</em> someone did wrong, but <em>why</em> it made sense to them at the time.</p>
-
-            <h3>3. Task/Environmental Conditions</h3>
-            <p>What conditions influenced the actions taken? These include:</p>
-            <ul>
-                <li><strong>Task factors:</strong> Complexity, time pressure, unfamiliarity</li>
-                <li><strong>Environmental factors:</strong> Lighting, noise, weather, workspace layout</li>
-                <li><strong>Equipment factors:</strong> Design, maintenance, availability of tools</li>
-                <li><strong>Information factors:</strong> Clarity of procedures, adequacy of training</li>
-            </ul>
-
-            <h3>4. Organizational Factors</h3>
-            <p>What aspects of the organization created the conditions for this incident? This is where ICAM truly shines, examining:</p>
-            <ul>
-                <li><strong>Management systems:</strong> How decisions are made, resources allocated</li>
-                <li><strong>Communication:</strong> How information flows (or doesn't)</li>
-                <li><strong>Training systems:</strong> How competency is developed and verified</li>
-                <li><strong>Organizational culture:</strong> Spoken and unspoken norms</li>
-                <li><strong>External pressures:</strong> Regulatory, financial, competitive</li>
-            </ul>
-
-            <h2>The ICAM Investigation Process</h2>
-
-            <h3>Step 1: Data Collection</h3>
-            <p>Gather evidence systematically:</p>
-            <ul>
-                <li>Witness interviews (using cognitive interviewing techniques)</li>
-                <li>Physical evidence preservation</li>
-                <li>Documentation review (procedures, permits, training records)</li>
-                <li>Timeline reconstruction</li>
-            </ul>
-            <p><strong>Key principle:</strong> Collect facts, not opinions. Don't ask "What went wrong?" Ask "What happened?"</p>
-
-            <h3>Step 2: Timeline Development</h3>
-            <p>Create a detailed chronological sequence:</p>
-            <ul>
-                <li>What happened, when, and where</li>
-                <li>Who was involved at each stage</li>
-                <li>What decisions were made and based on what information</li>
-            </ul>
-            <p>Visual timelines help identify gaps in understanding and critical decision points.</p>
-
-            <h3>Step 3: Identify Actions and Conditions</h3>
-            <p>Map the incident to ICAM's hierarchy:</p>
-            <ul>
-                <li>What actions contributed to the event?</li>
-                <li>What conditions influenced those actions?</li>
-                <li>What organizational factors created those conditions?</li>
-            </ul>
-
-            <h3>Step 4: Identify Absent/Failed Defenses</h3>
-            <p>For each contributing factor, ask:</p>
-            <ul>
-                <li>What defense should have prevented this?</li>
-                <li>Was it absent, inadequate, or did it fail?</li>
-                <li>Why?</li>
-            </ul>
-
-            <h3>Step 5: Develop Recommendations</h3>
-            <p>Effective recommendations are:</p>
-            <ul>
-                <li><strong>Specific:</strong> Not "improve communication" but "implement daily pre-shift briefings covering..."</li>
-                <li><strong>Actionable:</strong> Clear owner, timeline, resources identified</li>
-                <li><strong>Systemic:</strong> Address root causes, not symptoms</li>
-                <li><strong>Measurable:</strong> How will you know if it worked?</li>
-            </ul>
-
-            <h2>Why ICAM Works Better</h2>
-
-            <h3>It creates psychological safety</h3>
-            <p>By explicitly not seeking blame, ICAM encourages honest reporting. People share information because they see investigations as learning opportunities, not witch hunts.</p>
-
-            <h3>It finds systemic causes</h3>
-            <p>The four-level model ensures investigations don't stop at the obvious. Every incident reveals something about the system that created it.</p>
-
-            <h3>It generates better recommendations</h3>
-            <p>Because ICAM identifies root causes, recommendations actually address what went wrong—not just what happened.</p>
-
-            <h3>It improves organizational learning</h3>
-            <p>ICAM investigations become knowledge assets. Patterns emerge across incidents. The organization genuinely learns.</p>
-
-            <h2>The PEEPO Framework: ICAM's Organizational Factor Analysis Tool</h2>
-
-            <p>PEEPO is the core tool ICAM uses to examine organizational factors — the systemic root causes that most traditional investigation methods miss entirely. PEEPO stands for:</p>
-
-            <ul>
-                <li><strong>People</strong> — Human factors: knowledge, skill, experience, fatigue, motivation, and the cultural norms that shape how people behave on the job.</li>
-                <li><strong>Environment</strong> — The physical and social environment: workplace layout, noise, temperature, lighting, work schedules, and the organizational climate that surrounds the task.</li>
-                <li><strong>Equipment</strong> — Hardware and tools: design adequacy, maintenance systems, inspection regimes, and whether the equipment enables or hinders safe work.</li>
-                <li><strong>Procedures</strong> — Documentation and process: whether procedures exist, whether they are accurate, whether they are accessible and written in usable format, and whether they reflect how work is actually done.</li>
-                <li><strong>Organization</strong> — Management systems and culture: leadership priorities, resource allocation, communication systems, change management, and the organizational pressures that create risk.</li>
-            </ul>
-
-            <p>The power of PEEPO is that it forces investigators to look beyond the immediate incident scene to the management systems and organizational decisions that created the conditions for the incident. When an investigation identifies a "People" factor — for example, that a worker lacked the required skill for the task — PEEPO then drives the investigation deeper: Why did they lack the skill? Was there a training system failure? Was the competency assessment inadequate? Was the task assigned to an unqualified person due to resource pressure?</p>
-
-            <p>This recursive questioning process — tracing every causal factor back through the PEEPO categories — is what distinguishes ICAM from surface-level investigation methods. It's uncomfortable, because PEEPO factors almost always implicate management decisions. But discomfort is the point: if the investigation only identifies causes that the frontline worker could have controlled, it has missed the systemic factors that the organization could change.</p>
-
-            <h3>How to Apply PEEPO in Practice</h3>
-
-            <p>For each contributing factor identified during the investigation, ask: which PEEPO category does this belong to, and what was the specific management system failure that allowed this factor to exist? Here is a practical example:</p>
-
-            <p><strong>Incident:</strong> An operator received a burn injury when a steam valve was opened without confirming that downstream isolation was in place.</p>
-
-            <ul>
-                <li><strong>People:</strong> The operator was recently transferred from another department and had not completed the site-specific isolation training program.</li>
-                <li><strong>Environment:</strong> The valve was in a congested area with poor lighting; isolation tags were difficult to read from the valve position.</li>
-                <li><strong>Equipment:</strong> The isolation management system used tags that could be removed without specialist authorization — no physical lock was required.</li>
-                <li><strong>Procedures:</strong> The isolation procedure specified verbal confirmation but did not require a documented pre-task verification step.</li>
-                <li><strong>Organization:</strong> The department had been operating understaffed for six weeks; transferring workers before their induction was complete had become normalized practice.</li>
-            </ul>
-
-            <p>Notice that the final PEEPO factor — the organizational decision to normalize incomplete inductions under staffing pressure — is the actual root cause. Fixing only the immediate technical failure (adding a physical lock requirement) without addressing the organizational pressure would have limited value. ICAM and PEEPO together ensure both the immediate and root causes are identified and addressed.</p>
-
-            <h2>ICAM vs Other Investigation Methodologies</h2>
-
-            <p>Safety professionals often ask how ICAM compares to other commonly used investigation methods. Here is a practical comparison:</p>
-
-            <h3>ICAM vs 5 Whys</h3>
-            <p>5 Whys is the most widely used investigation technique in the world — fast, simple, and accessible to investigators without formal training. ICAM is more rigorous and more demanding. For minor incidents with a relatively straightforward causal chain, 5 Whys is appropriate. For serious incidents — LTIs, high-potential events, or anything with complex multi-causal factors — ICAM's structured approach will produce significantly better analysis and more effective recommendations. Many high-risk industry organizations use 5 Whys for minor events and ICAM for serious ones.</p>
-
-            <h3>ICAM vs SCAT</h3>
-            <p>SCAT (Systematic Cause Analysis Technique) was developed by the International Loss Control Institute and uses the Bird-Germain loss causation model. Like ICAM, SCAT examines multiple causal levels. The key differences: ICAM is explicitly blame-free in its framing and places stronger emphasis on organizational factors; SCAT provides detailed checklists (which aid thoroughness but can feel mechanical); and ICAM typically requires more investigator skill to execute well. Both methods are respected in high-hazard industries. For more detail, see our full comparison: <a href="/blog/icam-vs-scat-investigation-methods.html">ICAM vs SCAT</a>.</p>
-
-            <h3>ICAM vs Fault Tree Analysis</h3>
-            <p>Fault Tree Analysis (FTA) works backwards from the undesired event using Boolean logic to map all possible causal combinations. FTA is powerful for process safety applications where quantitative probability analysis is needed — particularly in oil &amp; gas and nuclear sectors. ICAM is better suited to workplace incident investigation where the goal is qualitative organizational learning rather than quantitative risk modelling. FTA and ICAM can be used together: ICAM for the organizational investigation, FTA for the technical system analysis.</p>
-
-            <h2>ICAM in High-Hazard Industries</h2>
-
-            <p>ICAM was originally developed for the Australian mining industry and has since spread across high-hazard sectors globally. Understanding how ICAM is applied in specific industry contexts helps practitioners adapt the methodology to their operations.</p>
-
-            <h3>Mining</h3>
-            <p>ICAM is the dominant investigation methodology in Australian, South African, and increasingly West African mining operations. Mining regulators in these regions expect ICAM-aligned analysis for serious incidents, and many major mining companies mandate ICAM for all LTI-severity events and above. The methodology is particularly well-suited to mining because underground and surface mining incidents frequently involve multiple overlapping organizational factors: ground control management systems, traffic management design, management of change for equipment modifications, and contractor management interfaces. For a detailed guide to mining-specific investigation practice, see our <a href="/blog/mining-incident-investigation-guide.html">mining incident investigation guide</a> and the <a href="/industries/mining-incident-investigation.html">InvestigatePro for mining page</a>.</p>
-
-            <h3>Construction &amp; Civil Works</h3>
-            <p>On major construction projects with multiple contractors, ICAM's blame-free framing and organizational focus make it the investigation method best suited to getting honest witness accounts and identifying the management system failures — in pre-qualification, supervision, work planning, and change management — that enable incidents on complex sites. ICAM is increasingly required by owners and principal contractors on major infrastructure projects in Australia, the Middle East, and Africa.</p>
-
-            <h3>Oil, Gas &amp; Petrochemicals</h3>
-            <p>Process safety incidents in oil and gas typically involve multiple simultaneous barrier failures across complex systems. ICAM is often used in combination with Bow-Tie analysis (to map barrier states) and Fault Tree Analysis (for technical system analysis). Many operators use a tiered investigation approach: SCAT for recordable incidents, ICAM for LTI-severity and high-potential events. For process safety events, ICAM's organizational factor analysis is essential — it surfaces management of change failures, permit-to-work system weaknesses, and competency system gaps that quantitative methods often miss.</p>
-
-            <h2>Free ICAM Investigation Resources</h2>
-
-            <p>Before implementing ICAM in your organization, these free resources provide practical tools you can use immediately:</p>
-
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;">
-                <a href="/rca-template-pack.html" style="display:block;background:#FFFFFF;border:1px solid rgba(0,77,64,0.25);border-radius:10px;padding:18px;text-decoration:none;">
-                    <p style="color:#004D40;font-weight:700;margin:0 0 6px;font-size:0.9rem;">📋 RCA Template Pack</p>
-                    <p style="color:#5A6B76;font-size:0.82rem;margin:0 0 8px;">Includes an ICAM-aligned RCA template plus 5 Whys, Fishbone, and Investigation Report. Fill in online or print.</p>
-                    <span style="color:#004D40;font-size:0.8rem;font-weight:600;">Download Free →</span>
-                </a>
-                <a href="/checklist.html" style="display:block;background:#FFFFFF;border:1px solid rgba(0,77,64,0.15);border-radius:10px;padding:18px;text-decoration:none;">
-                    <p style="color:#004D40;font-weight:700;margin:0 0 6px;font-size:0.9rem;">✅ ICAM Investigation Checklist</p>
-                    <p style="color:#5A6B76;font-size:0.82rem;margin:0 0 8px;">25-point ICAM checklist from scene preservation through corrective action close-out.</p>
-                    <span style="color:#004D40;font-size:0.8rem;font-weight:600;">Download Free →</span>
-                </a>
-            </div>
-
-            <h2>Implementing ICAM in Your Organization</h2>
-
-            <h3>Start with training</h3>
-            <p>Investigators need to understand the methodology, practice interviewing techniques, and develop analytical skills. This isn't intuitive—it's a discipline.</p>
-
-            <h3>Create the right culture</h3>
-            <p>ICAM only works if people believe it's not about blame. Leaders must visibly demonstrate this commitment through their responses to incidents.</p>
-
-            <h3>Use consistent tools</h3>
-            <p>Standardized templates and software ensure investigations are thorough and comparable. This enables trend analysis across incidents.</p>
-
-            <h3>Close the loop</h3>
-            <p>Track recommendations to completion. Verify they actually work. Share learnings across the organization.</p>
-
-            <h2>Building ICAM Investigation Competency</h2>
-
-            <p>ICAM is a discipline, not a checklist. The quality of an ICAM investigation depends heavily on the skill of the investigator and the culture in which the investigation takes place. Building genuine ICAM competency in your organization requires deliberate effort across three dimensions.</p>
-
-            <h3>Technical Skill Development</h3>
-            <p>Investigators need to understand the ICAM model well enough to apply it to novel situations — not just follow a template. This means understanding why ICAM examines organizational factors (the Swiss Cheese model of accident causation), how to facilitate non-leading witness interviews using cognitive interviewing techniques, how to construct timelines that reveal decision logic rather than just event sequence, and how to translate PEEPO analysis findings into specific, actionable recommendations. A two-day ICAM training workshop provides the foundation; supervised investigation practice builds the skill.</p>
-
-            <h3>Facilitation Skill</h3>
-            <p>The most technically competent ICAM investigator will produce poor results if they cannot facilitate honest conversation. Workers who have been through blame-oriented investigations in the past will be guarded. People tend to minimize their own role and exaggerate others'. Evidence gets withheld when people fear consequences. Building facilitation skill — particularly the ability to create psychological safety during interviews and investigation team meetings — is often the most valuable investment an organization can make in its investigation capability.</p>
-
-            <h3>Leadership Support</h3>
-            <p>No amount of investigator training compensates for leadership that responds defensively to uncomfortable findings. When a PEEPO analysis identifies that a management decision contributed to an incident, the response of senior leaders determines whether the organization learns or retreats to blame. Leaders who ask "what can we do differently?" rather than "who approved that?" create the conditions for genuine ICAM quality. Leaders who demand a culprit undermine the entire methodology, regardless of how skilled the investigators are.</p>
-
-            <h2>Common ICAM Mistakes to Avoid</h2>
-            <p><strong>Rushing to conclusions:</strong> Thorough investigation takes time. Pressure to close quickly undermines quality.</p>
-            <p><strong>Stopping at individual actions:</strong> If your investigation ends with "Worker X failed to..." you haven't finished.</p>
-            <p><strong>Generic recommendations:</strong> "All workers will be retrained" isn't a solution—it's admitting you don't know what went wrong.</p>
-            <p><strong>Ignoring organizational factors:</strong> The most uncomfortable findings are often the most important.</p>
-            <p><strong>Failing to follow up:</strong> Recommendations mean nothing if they're not implemented and verified.</p>
-
-            <h2>Frequently Asked Questions About ICAM</h2>
-
-            <h3>Who developed ICAM and when?</h3>
-            <p>ICAM was developed in the 1990s by the Minerals Council of Australia (now the Minerals Council of Australia) in response to a series of serious mining incidents. It was designed specifically to address the limitations of existing investigation methods — particularly their tendency to stop at human error rather than identifying the organizational factors that create conditions for incidents. The methodology draws heavily on James Reason's work on the "Swiss Cheese" model of accident causation.</p>
-
-            <h3>Is ICAM only suitable for serious incidents?</h3>
-            <p>ICAM is most commonly applied to incidents of LTI severity or above, and to high-potential events (those where the outcome could have been catastrophic even if it wasn't). For minor injuries, near-misses, and first-aid events, a well-executed 5 Whys analysis is usually proportionate and appropriate. Many organizations operate a tiered investigation system: 5 Whys for minor events, ICAM for significant incidents. The key principle is that investigation depth should be proportionate to severity and potential — not every incident warrants a full ICAM investigation, but every serious or high-potential event does.</p>
-
-            <h3>How long does an ICAM investigation take?</h3>
-            <p>A thorough ICAM investigation of a serious incident typically takes 3–10 days from incident occurrence to draft report, depending on the complexity of the event, the number of witnesses, and the volume of documentary evidence. Simple incidents with clear causal chains and limited witness involvement might be completed in 2–3 days; complex multi-contractor incidents with extensive evidence review might take 2 weeks. The most common mistake organizations make is setting arbitrary deadlines (e.g., "the investigation must be complete in 5 days") that compromise investigation quality when the incident complexity requires more time.</p>
-
-            <h3>Can ICAM be used for near-misses and high-potential incidents?</h3>
-            <p>Absolutely — and it should be. Many safety professionals argue that ICAM is more valuable for high-potential near-misses than for actual incidents, because the near-miss reveals systemic vulnerabilities before they produce harm. A vehicle rollover that injures no one reveals the same traffic management failures as a vehicle rollover that kills someone — and investigating the near-miss with ICAM rigor provides the same organizational learning at a fraction of the human cost. High-performing safety cultures investigate near-misses and high-potential events as seriously as actual incidents.</p>
-
-            <h3>Does ICAM eliminate individual accountability?</h3>
-            <p>This is the most common misconception about ICAM. The methodology is designed to produce better causal analysis, not to remove accountability. ICAM does not prevent organizations from taking disciplinary action where an individual's behaviour was genuinely egregious or deliberate. What it does is ensure that disciplinary action is reserved for genuine individual failures — not used as a substitute for identifying the organizational failures that set the scene for the incident. In practice, ICAM investigations usually find that individual actions that appear to be negligence are more accurately understood as rational responses to organizational conditions that the organization itself created.</p>
-
-            <h2>Getting Started with ICAM</h2>
-            <p>Whether you're investigating a minor near-miss or a serious incident, ICAM provides a framework for genuine learning. The key is commitment—to thoroughness, to honesty, and to actually changing based on what you learn.</p>
-
-            <!-- CTA Box -->
-            <div class="bg-cloud rounded-xl p-8 mt-12 border border-apex-500/30">
-                <h3 class="text-xl font-semibold mb-3 mt-0">Ready to investigate smarter?</h3>
-                <p class="text-slate mb-6">InvestigatePro is built on ICAM methodology, providing structured guidance and AI-powered analysis to help organizations conduct better investigations.</p>
-                <a href="/#demo" class="inline-block bg-apex-500 hover:bg-apex-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
-                    Book a Free Demo →
-                </a>
-            </div>
-
-            <!-- Related Articles -->
-            <div class="mt-12 pt-8 border-t border-mist">
-                <h3 class="text-lg font-semibold mb-4 mt-0">Related Articles</h3>
-                <ul class="space-y-2">
-                    <li><a href="/blog/incident-investigation-mistakes.html" class="text-apex-500 hover:text-apex-700">5 Common Incident Investigation Mistakes (And How to Avoid Them)</a></li>
-                    <li><a href="/blog/blame-to-learning-culture.html" class="text-apex-500 hover:text-apex-700">From Blame Culture to Learning Culture: A Practical Guide</a></li>
-                    <li><a href="/blog/icam-vs-scat-investigation-methods.html" class="text-apex-500 hover:text-apex-700">ICAM vs SCAT: Which Investigation Method Should You Use?</a></li>
-                    <li><a href="/blog/peepo-framework-explained.html" class="text-apex-500 hover:text-apex-700">PEEPO Framework Explained</a></li>
-                    <li><a href="/blog/mining-incident-investigation-guide.html" class="text-apex-500 hover:text-apex-700">Mining Incident Investigation Guide</a></li>
-                    <li><a href="/rca-template-pack.html" class="text-apex-500 hover:text-apex-700">📋 Free RCA Template Pack (ICAM template included)</a></li>
-                    <li><a href="/checklist.html" class="text-apex-500 hover:text-apex-700">✅ Free ICAM Investigation Checklist (25 points)</a></li>
-                </ul>
-            </div>
-
-        </div>
-    </article>
-
-    <!-- Footer -->
-    
-
-<script src="/analytics.js"></script>
-<footer class="ip2-footer">
-  <div class="ip2-wrap">
-    <div class="cols">
-      <div style="display:flex;flex-direction:column;gap:16px">
-        <a href="/" class="ip2-logo" aria-label="InvestigatePro home"><img class="lgm" src="/assets/brand/logo-horizontal-white.svg" alt="InvestigatePro" width="826" height="168" decoding="async"></a>
-        <p style="max-width:250px;font-size:13px;line-height:1.6">Structured, evidence-led ICAM investigation with an AI coach on every case.</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="ip2-chip">EU-hosted &amp; isolated</span><span class="ip2-chip">GDPR compliant</span></div>
       </div>
-      <div><h4>Product</h4><ul>
-        <li><a href="/platform.html">Platform</a></li><li><a href="/pricing.html">Pricing</a></li><li><a href="/demo.html">Book a demo</a></li>
-        <li><a href="/apps/">Apps</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/security.html">Security</a></li><li><a href="/changelog.html">Changelog</a></li>
-      </ul></div>
-      <div><h4>Resources</h4><ul>
-        <li><a href="/resources.html">All free tools</a></li><li><a href="/checklist.html">ICAM checklist</a></li><li><a href="/icam-toolkit.html">ICAM toolkit</a></li>
-        <li><a href="/peepo-chart-builder.html">PEEPO chart builder</a></li><li><a href="/5-whys-worksheet.html">5-Whys worksheet</a></li><li><a href="/state-of-incident-investigation-2026.html">State of Incident Investigation</a></li>
-      </ul></div>
-      <div><h4>Industries</h4><ul>
-        <li><a href="/industries/mining-incident-investigation.html">Mining</a></li><li><a href="/industries/oil-gas-incident-management.html">Oil &amp; gas</a></li>
-        <li><a href="/industries/manufacturing-root-cause-analysis.html">Manufacturing</a></li><li><a href="/industries/construction-safety-software.html">Construction</a></li>
-        <li><a href="/industries/engineering-incident-investigation.html">Engineering</a></li>
-      </ul></div>
-      <div><h4>Company</h4><ul>
-        <li><a href="/blog/">Blog</a></li><li><a href="/status.html">Service notices</a></li><li><a href="mailto:hello@investigatepro.app">Contact</a></li><li><a href="https://app.investigatepro.app/login">Login</a></li>
-        <li style="margin-top:10px"><a href="/privacy.html">Privacy</a></li><li><a href="/terms.html">Terms</a></li><li><a href="/cookie.html">Cookies</a></li><li><a href="/dpa.html">DPA</a></li>
-      </ul></div>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/resources.html">Resources</a>
+      <a href="/blog/index.html" aria-current="page">Blog</a>
+    </nav>
+    <div class="nav__actions">
+      <a class="nav__login" href="https://app.investigatepro.app/login">Login</a>
+      <a class="btn btn--primary btn--sm" href="https://app.investigatepro.app/signup">Start a 14-day trial</a>
+      <button class="nav__burger" type="button" aria-expanded="false" aria-controls="mmenu" aria-label="Open menu"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></svg></button>
     </div>
-    <p class="accountability">Every suggestion carries its source, and the report goes out attributed to the lead investigator. Built by Devon Turner — fifteen years leading mining safety across Africa and the Middle East, with an ICAM specialism.</p>
-    <p style="margin-top:18px;font-size:12px;color:rgba(159,184,194,.7)">© 2026 InvestigatePro. All rights reserved. · Every incident, understood.</p>
+  </div>
+</header>
+<div class="mmenu" id="mmenu" hidden role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="mmenu__top">
+    <a class="nav__logo" href="/index.html" aria-label="InvestigatePro home"><img src="/assets/img/logo-horizontal-white.svg" alt="InvestigatePro" width="140" height="28"></a>
+    <button class="nav__burger mmenu__close" type="button" aria-label="Close menu"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg></button>
+  </div>
+  <nav class="mmenu__list" aria-label="Mobile">
+    <a href="/platform.html" style="--i:0">Platform <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/pricing.html" style="--i:1">Pricing <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/resources.html" style="--i:2">Resources <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/blog/index.html" style="--i:3">Blog <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/demo.html" style="--i:4">Book a demo <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+  </nav>
+  <div class="mmenu__sub">
+    <a href="/industries/mining-incident-investigation.html">Mining</a>
+    <a href="/industries/oil-gas-incident-management.html">Oil and gas</a>
+    <a href="/industries/manufacturing-root-cause-analysis.html">Manufacturing</a>
+    <a href="/industries/construction-safety-software.html">Construction</a>
+    <a href="/industries/engineering-incident-investigation.html">Engineering</a>
+    <a href="https://app.investigatepro.app/login">Login</a>
+  </div>
+  <div class="mmenu__cta">
+    <a class="btn btn--primary btn--block" href="https://app.investigatepro.app/signup">Start a 14-day trial</a>
+    <a class="btn btn--ghost btn--block" href="https://cal.com/investigatepro/15min">Book a 15-minute demo</a>
+  </div>
+</div>
+
+<main id="main">
+<div class="readbar" aria-hidden="true"><i></i></div>
+<section class="phead">
+  <div class="wrap art-head">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/index.html">Home</a><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg><a href="/blog/index.html">Blog</a><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg><span>ICAM</span></nav>
+    <h1>The Complete Guide to ICAM Methodology</h1>
+    <div class="byline"><span><strong>Devon Turner</strong>Founder, 15+ years leading mining safety · 12 min read</span></div>
+  </div>
+</section>
+<section class="sec sec--tight" style="padding-top:0">
+  <div class="wrap art">
+    <nav class="toc" data-toc aria-label="Contents"><p>Contents</p><a href="#what-is-icam">What is ICAM?</a><a href="#the-problem-with-traditional-investigations">The Problem with Traditional Investigations</a><a href="#how-icam-works-the-four-levels">How ICAM Works: The Four Levels</a><a href="#the-icam-investigation-process">The ICAM Investigation Process</a><a href="#why-icam-works-better">Why ICAM Works Better</a><a href="#the-peepo-framework-icam-s-organisational-factor-analysis-to">The PEEPO Framework: ICAM&#x27;s Organisational Factor Analysis Tool</a><a href="#icam-vs-other-investigation-methodologies">ICAM vs Other Investigation Methodologies</a><a href="#icam-in-high-hazard-industries">ICAM in High-Hazard Industries</a><a href="#free-icam-investigation-resources">Free ICAM Investigation Resources</a><a href="#implementing-icam-in-your-organisation">Implementing ICAM in Your Organisation</a><a href="#building-icam-investigation-competency">Building ICAM Investigation Competency</a><a href="#common-icam-mistakes-to-avoid">Common ICAM Mistakes to Avoid</a><a href="#frequently-asked-questions-about-icam">Frequently Asked Questions About ICAM</a><a href="#getting-started-with-icam">Getting Started with ICAM</a></nav>
+    <article class="prose">
+<h2 id="what-is-icam">What is ICAM?</h2>
+<p>The <strong>Incident Cause Analysis Method (ICAM)</strong> is a structured approach to investigating workplace incidents that goes beyond finding who to blame. Developed in Australia for the mining industry, ICAM has become the gold standard for incident investigation across high-risk industries worldwide.</p>
+<p>Unlike traditional investigation methods that often stop at "human error," ICAM systematically examines the entire system, from individual actions to organisational factors, to identify the true underlying causes of incidents.</p>
+<h2 id="the-problem-with-traditional-investigations">The Problem with Traditional Investigations</h2>
+<p>Most incident investigations fail for predictable reasons:</p>
+<p><strong>They stop too soon.</strong> Finding that a worker "didn't follow procedure" feels like a conclusion, but it's actually a starting point. Why didn't they follow procedure? Was it unclear? Impractical? Were they under time pressure?</p>
+<p><strong>They focus on blame.</strong> When investigations aim to find fault, people become defensive. Information gets hidden. The organisation learns nothing.</p>
+<p><strong>They ignore systemic factors.</strong> A worker making an error is rarely random, it's usually the product of inadequate training, poor equipment design, time pressure, or organisational culture.</p>
+<p><strong>They don't prevent recurrence.</strong> Generic recommendations like "retrain all workers" or "remind everyone to be careful" rarely address what actually went wrong.</p>
+<h2 id="how-icam-works-the-four-levels">How ICAM Works: The Four Levels</h2>
+<p>ICAM investigates incidents at four interconnected levels:</p>
+<h3>1. Absent or Failed Defenses</h3>
+<p>What barriers should have prevented this incident or reduced its severity? ICAM identifies:</p>
+<ul><li><strong>Physical defenses:</strong> Guards, interlocks, PPE</li><li><strong>Administrative defenses:</strong> Procedures, permits, checklists</li><li><strong>Human defenses:</strong> Supervision, buddy systems, competency checks</li></ul>
+<p>For each defense, ask: Was it absent? Did it fail? Why?</p>
+<h3>2. Individual/Team Actions</h3>
+<p>What did people do (or not do) that contributed to the incident? This isn't about blame, it's about understanding behaviour in context.</p>
+<p>ICAM recognises that "human error" is a symptom, not a cause. The question isn't <em>what</em> someone did wrong, but <em>why</em> it made sense to them at the time.</p>
+<h3>3. Task/Environmental Conditions</h3>
+<p>What conditions influenced the actions taken? These include:</p>
+<ul><li><strong>Task factors:</strong> Complexity, time pressure, unfamiliarity</li><li><strong>Environmental factors:</strong> Lighting, noise, weather, workspace layout</li><li><strong>Equipment factors:</strong> Design, maintenance, availability of tools</li><li><strong>Information factors:</strong> Clarity of procedures, adequacy of training</li></ul>
+<h3>4. Organisational Factors</h3>
+<p>What aspects of the organisation created the conditions for this incident? This is where ICAM truly shines, examining:</p>
+<ul><li><strong>Management systems:</strong> How decisions are made, resources allocated</li><li><strong>Communication:</strong> How information flows (or doesn't)</li><li><strong>Training systems:</strong> How competency is developed and verified</li><li><strong>Organisational culture:</strong> Spoken and unspoken norms</li><li><strong>External pressures:</strong> Regulatory, financial, competitive</li></ul>
+<aside class="callout bezel" aria-label="How InvestigatePro helps"><p><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M168,112a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,112Zm-8,24H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16Zm72-8A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-16,0A88,88,0,1,0,51.81,172.06a8,8,0,0,1,.66,6.54L40,216,77.4,203.53a7.85,7.85,0,0,1,2.53-.42,8,8,0,0,1,4,1.08A88,88,0,0,0,216,128Z"/></svg> <strong>In InvestigatePro,</strong> the coach prompts every ICAM level on every case and drafts factors with their sources. Nothing is filed until the investigator accepts it.</p><div><a class="link-arrow" href="/platform.html">See how the method runs <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a></div></aside>
+<h2 id="the-icam-investigation-process">The ICAM Investigation Process</h2>
+<h3>Step 1: Data Collection</h3>
+<p>Gather evidence systematically:</p>
+<ul><li>Witness interviews (using cognitive interviewing techniques)</li><li>Physical evidence preservation</li><li>Documentation review (procedures, permits, training records)</li><li>Timeline reconstruction</li></ul>
+<p><strong>Key principle:</strong> Collect facts, not opinions. Don't ask "What went wrong?" Ask "What happened?"</p>
+<h3>Step 2: Timeline Development</h3>
+<p>Create a detailed chronological sequence:</p>
+<ul><li>What happened, when, and where</li><li>Who was involved at each stage</li><li>What decisions were made and based on what information</li></ul>
+<p>Visual timelines help identify gaps in understanding and critical decision points.</p>
+<h3>Step 3: Identify Actions and Conditions</h3>
+<p>Map the incident to ICAM's hierarchy:</p>
+<ul><li>What actions contributed to the event?</li><li>What conditions influenced those actions?</li><li>What organisational factors created those conditions?</li></ul>
+<h3>Step 4: Identify Absent/Failed Defenses</h3>
+<p>For each contributing factor, ask:</p>
+<ul><li>What defense should have prevented this?</li><li>Was it absent, inadequate, or did it fail?</li><li>Why?</li></ul>
+<h3>Step 5: Develop Recommendations</h3>
+<p>Effective recommendations are:</p>
+<ul><li><strong>Specific:</strong> Not "improve communication" but "implement daily pre-shift briefings covering..."</li><li><strong>Actionable:</strong> Clear owner, timeline, resources identified</li><li><strong>Systemic:</strong> Address underlying causes, not symptoms</li><li><strong>Measurable:</strong> How will you know if it worked?</li></ul>
+<h2 id="why-icam-works-better">Why ICAM Works Better</h2>
+<h3>It creates psychological safety</h3>
+<p>By explicitly not seeking blame, ICAM encourages honest reporting. People share information because they see investigations as learning opportunities, not witch hunts.</p>
+<h3>It finds systemic causes</h3>
+<p>The four-level model ensures investigations don't stop at the obvious. Every incident reveals something about the system that created it.</p>
+<h3>It generates better recommendations</h3>
+<p>Because ICAM identifies underlying causes, recommendations actually address what went wrong, not just what happened.</p>
+<h3>It improves organisational learning</h3>
+<p>ICAM investigations become knowledge assets. Patterns emerge across incidents. The organisation genuinely learns.</p>
+<h2 id="the-peepo-framework-icam-s-organisational-factor-analysis-to">The PEEPO Framework: ICAM's Organisational Factor Analysis Tool</h2>
+<p>PEEPO is the core tool ICAM uses to examine organisational factors, the systemic underlying causes that most traditional investigation methods miss entirely. PEEPO stands for:</p>
+<ul><li><strong>People</strong>, Human factors: knowledge, skill, experience, fatigue, motivation, and the cultural norms that shape how people behave on the job.</li><li><strong>Environment</strong>, The physical and social environment: workplace layout, noise, temperature, lighting, work schedules, and the organisational climate that surrounds the task.</li><li><strong>Equipment</strong>, Hardware and tools: design adequacy, maintenance systems, inspection regimes, and whether the equipment enables or hinders safe work.</li><li><strong>Procedures</strong>, Documentation and process: whether procedures exist, whether they are accurate, whether they are accessible and written in usable format, and whether they reflect how work is actually done.</li><li><strong>Organisation</strong>, Management systems and culture: leadership priorities, resource allocation, communication systems, change management, and the organisational pressures that create risk.</li></ul>
+<p>The power of PEEPO is that it forces investigators to look beyond the immediate incident scene to the management systems and organisational decisions that created the conditions for the incident. When an investigation identifies a "People" factor, for example, that a worker lacked the required skill for the task, PEEPO then drives the investigation deeper: Why did they lack the skill? Was there a training system failure? Was the competency assessment inadequate? Was the task assigned to an unqualified person due to resource pressure?</p>
+<p>This recursive questioning process, tracing every causal factor back through the PEEPO categories, is what distinguishes ICAM from surface-level investigation methods. It's uncomfortable, because PEEPO factors almost always implicate management decisions. But discomfort is the point: if the investigation only identifies causes that the frontline worker could have controlled, it has missed the systemic factors that the organisation could change.</p>
+<h3>How to Apply PEEPO in Practice</h3>
+<p>For each contributing factor identified during the investigation, ask: which PEEPO category does this belong to, and what was the specific management system failure that allowed this factor to exist? Here is a practical example:</p>
+<p><strong>Incident:</strong> An operator received a burn injury when a steam valve was opened without confirming that downstream isolation was in place.</p>
+<ul><li><strong>People:</strong> The operator was recently transferred from another department and had not completed the site-specific isolation training program.</li><li><strong>Environment:</strong> The valve was in a congested area with poor lighting; isolation tags were difficult to read from the valve position.</li><li><strong>Equipment:</strong> The isolation management system used tags that could be removed without specialist authorization, no physical lock was required.</li><li><strong>Procedures:</strong> The isolation procedure specified verbal confirmation but did not require a documented pre-task verification step.</li><li><strong>Organisation:</strong> The department had been operating understaffed for six weeks; transferring workers before their induction was complete had become normalized practice.</li></ul>
+<p>Notice that the final PEEPO factor, the organisational decision to normalize incomplete inductions under staffing pressure, is the actual cause. Fixing only the immediate technical failure (adding a physical lock requirement) without addressing the organisational pressure would have limited value. ICAM and PEEPO together ensure both the immediate and underlying causes are identified and addressed.</p>
+<h2 id="icam-vs-other-investigation-methodologies">ICAM vs Other Investigation Methodologies</h2>
+<p>Safety professionals often ask how ICAM compares to other commonly used investigation methods. Here is a practical comparison:</p>
+<h3>ICAM vs 5 Whys</h3>
+<p>5 Whys is the most widely used investigation technique in the world, fast, simple, and accessible to investigators without formal training. ICAM is more rigorous and more demanding. For minor incidents with a relatively straightforward causal chain, 5 Whys is appropriate. For serious incidents, LTIs, high-potential events, or anything with complex multi-causal factors, ICAM's structured approach will produce significantly better analysis and more effective recommendations. Many high-risk industry organisations use 5 Whys for minor events and ICAM for serious ones.</p>
+<h3>ICAM vs SCAT</h3>
+<p>SCAT (Systematic Cause Analysis Technique) was developed by the International Loss Control Institute and uses the Bird-Germain loss causation model. Like ICAM, SCAT examines multiple causal levels. The key differences: ICAM is explicitly blame-free in its framing and places stronger emphasis on organisational factors; SCAT provides detailed checklists (which aid thoroughness but can feel mechanical); and ICAM typically requires more investigator skill to execute well. Both methods are respected in high-hazard industries. For more detail, see our full comparison: <a href="/blog/icam-vs-scat-investigation-methods.html">ICAM vs SCAT</a>.</p>
+<h3>ICAM vs Fault Tree Analysis</h3>
+<p>Fault Tree Analysis (FTA) works backwards from the undesired event using Boolean logic to map all possible causal combinations. FTA is powerful for process safety applications where quantitative probability analysis is needed, particularly in oil &amp; gas and nuclear sectors. ICAM is better suited to workplace incident investigation where the goal is qualitative organisational learning rather than quantitative risk modelling. FTA and ICAM can be used together: ICAM for the organisational investigation, FTA for the technical system analysis.</p>
+<h2 id="icam-in-high-hazard-industries">ICAM in High-Hazard Industries</h2>
+<p>ICAM was originally developed for the Australian mining industry and has since spread across high-hazard sectors globally. Understanding how ICAM is applied in specific industry contexts helps practitioners adapt the methodology to their operations.</p>
+<h3>Mining</h3>
+<p>ICAM is the dominant investigation methodology in Australian, South African, and increasingly West African mining operations. Mining regulators in these regions expect ICAM-aligned analysis for serious incidents, and many major mining companies mandate ICAM for all LTI-severity events and above. The methodology is particularly well-suited to mining because underground and surface mining incidents frequently involve multiple overlapping organisational factors: ground control management systems, traffic management design, management of change for equipment modifications, and contractor management interfaces. For a detailed guide to mining-specific investigation practice, see our <a href="/blog/mining-incident-investigation-guide.html">mining incident investigation guide</a> and the <a href="/industries/mining-incident-investigation.html">InvestigatePro for mining page</a>.</p>
+<h3>Construction &amp; Civil Works</h3>
+<p>On major construction projects with multiple contractors, ICAM's blame-free framing and organisational focus make it the investigation method best suited to getting honest witness accounts and identifying the management system failures, in pre-qualification, supervision, work planning, and change management, that enable incidents on complex sites. ICAM is increasingly required by owners and principal contractors on major infrastructure projects in Australia, the Middle East, and Africa.</p>
+<h3>Oil, Gas &amp; Petrochemicals</h3>
+<p>Process safety incidents in oil and gas typically involve multiple simultaneous barrier failures across complex systems. ICAM is often used in combination with Bow-Tie analysis (to map barrier states) and Fault Tree Analysis (for technical system analysis). Many operators use a tiered investigation approach: SCAT for recordable incidents, ICAM for LTI-severity and high-potential events. For process safety events, ICAM's organisational factor analysis is essential, it surfaces management of change failures, permit-to-work system weaknesses, and competency system gaps that quantitative methods often miss.</p>
+<h2 id="free-icam-investigation-resources">Free ICAM Investigation Resources</h2>
+<p>Before implementing ICAM in your organisation, these free resources provide practical tools you can use immediately:</p>
+<p>RCA Template Pack</p>
+<p>Includes an ICAM-aligned RCA template plus 5 Whys, Fishbone, and Investigation Report. Fill in online or print.</p>
+<p>ICAM Investigation Checklist</p>
+<p>25-point ICAM checklist from scene preservation through corrective action close-out.</p>
+<h2 id="implementing-icam-in-your-organisation">Implementing ICAM in Your Organisation</h2>
+<h3>Start with training</h3>
+<p>Investigators need to understand the methodology, practice interviewing techniques, and develop analytical skills. This isn't intuitive, it's a discipline.</p>
+<h3>Create the right culture</h3>
+<p>ICAM only works if people believe it's not about blame. Leaders must visibly demonstrate this commitment through their responses to incidents.</p>
+<h3>Use consistent tools</h3>
+<p>Standardized templates and software ensure investigations are thorough and comparable. This enables trend analysis across incidents.</p>
+<h3>Close the loop</h3>
+<p>Track recommendations to completion. Verify they actually work. Share learnings across the organisation.</p>
+<h2 id="building-icam-investigation-competency">Building ICAM Investigation Competency</h2>
+<p>ICAM is a discipline, not a checklist. The quality of an ICAM investigation depends heavily on the skill of the investigator and the culture in which the investigation takes place. Building genuine ICAM competency in your organisation requires deliberate effort across three dimensions.</p>
+<h3>Technical Skill Development</h3>
+<p>Investigators need to understand the ICAM model well enough to apply it to novel situations, not just follow a template. This means understanding why ICAM examines organisational factors (the Swiss Cheese model of accident causation), how to facilitate non-leading witness interviews using cognitive interviewing techniques, how to construct timelines that reveal decision logic rather than just event sequence, and how to translate PEEPO analysis findings into specific, actionable recommendations. A two-day ICAM training workshop provides the foundation; supervised investigation practice builds the skill.</p>
+<h3>Facilitation Skill</h3>
+<p>The most technically competent ICAM investigator will produce poor results if they cannot facilitate honest conversation. Workers who have been through blame-oriented investigations in the past will be guarded. People tend to minimize their own role and exaggerate others'. Evidence gets withheld when people fear consequences. Building facilitation skill, particularly the ability to create psychological safety during interviews and investigation team meetings, is often the most valuable investment an organisation can make in its investigation capability.</p>
+<h3>Leadership Support</h3>
+<p>No amount of investigator training compensates for leadership that responds defensively to uncomfortable findings. When a PEEPO analysis identifies that a management decision contributed to an incident, the response of senior leaders determines whether the organisation learns or retreats to blame. Leaders who ask "what can we do differently?" rather than "who approved that?" create the conditions for genuine ICAM quality. Leaders who demand a culprit undermine the entire methodology, regardless of how skilled the investigators are.</p>
+<h2 id="common-icam-mistakes-to-avoid">Common ICAM Mistakes to Avoid</h2>
+<p><strong>Rushing to conclusions:</strong> Thorough investigation takes time. Pressure to close quickly undermines quality.</p>
+<p><strong>Stopping at individual actions:</strong> If your investigation ends with "Worker X failed to..." you haven't finished.</p>
+<p><strong>Generic recommendations:</strong> "All workers will be retrained" isn't a solution, it's admitting you don't know what went wrong.</p>
+<p><strong>Ignoring organisational factors:</strong> The most uncomfortable findings are often the most important.</p>
+<p><strong>Failing to follow up:</strong> Recommendations mean nothing if they're not implemented and verified.</p>
+<h2 id="frequently-asked-questions-about-icam">Frequently Asked Questions About ICAM</h2>
+<h3>Who developed ICAM and when?</h3>
+<p>ICAM was developed in the 1990s by the Minerals Council of Australia (now the Minerals Council of Australia) in response to a series of serious mining incidents. It was designed specifically to address the limitations of existing investigation methods, particularly their tendency to stop at human error rather than identifying the organisational factors that create conditions for incidents. The methodology draws heavily on James Reason's work on the "Swiss Cheese" model of accident causation.</p>
+<h3>Is ICAM only suitable for serious incidents?</h3>
+<p>ICAM is most commonly applied to incidents of LTI severity or above, and to high-potential events (those where the outcome could have been catastrophic even if it wasn't). For minor injuries, near-misses, and first-aid events, a well-executed 5 Whys analysis is usually proportionate and appropriate. Many organisations operate a tiered investigation system: 5 Whys for minor events, ICAM for significant incidents. The key principle is that investigation depth should be proportionate to severity and potential, not every incident warrants a full ICAM investigation, but every serious or high-potential event does.</p>
+<h3>How long does an ICAM investigation take?</h3>
+<p>A thorough ICAM investigation of a serious incident typically takes 3-10 days from incident occurrence to draft report, depending on the complexity of the event, the number of witnesses, and the volume of documentary evidence. Simple incidents with clear causal chains and limited witness involvement might be completed in 2-3 days; complex multi-contractor incidents with extensive evidence review might take 2 weeks. The most common mistake organisations make is setting arbitrary deadlines (e.g., "the investigation must be complete in 5 days") that compromise investigation quality when the incident complexity requires more time.</p>
+<h3>Can ICAM be used for near-misses and high-potential incidents?</h3>
+<p>Absolutely, and it should be. Many safety professionals argue that ICAM is more valuable for high-potential near-misses than for actual incidents, because the near-miss reveals systemic vulnerabilities before they produce harm. A vehicle rollover that injures no one reveals the same traffic management failures as a vehicle rollover that kills someone, and investigating the near-miss with ICAM rigor provides the same organisational learning at a fraction of the human cost. High-performing safety cultures investigate near-misses and high-potential events as seriously as actual incidents.</p>
+<h3>Does ICAM eliminate individual accountability?</h3>
+<p>This is the most common misconception about ICAM. The methodology is designed to produce better causal analysis, not to remove accountability. ICAM does not prevent organisations from taking disciplinary action where an individual's behaviour was genuinely egregious or deliberate. What it does is ensure that disciplinary action is reserved for genuine individual failures, not used as a substitute for identifying the organisational failures that set the scene for the incident. In practice, ICAM investigations usually find that individual actions that appear to be negligence are more accurately understood as rational responses to organisational conditions that the organisation itself created.</p>
+<h2 id="getting-started-with-icam">Getting Started with ICAM</h2>
+<p>Whether you're investigating a minor near-miss or a serious incident, ICAM provides a framework for genuine learning. The key is commitment, to thoroughness, to honesty, and to actually changing based on what you learn.</p>
+<h3>Related Articles</h3>
+<ul><li><a href="/blog/incident-investigation-mistakes.html">5 Common Incident Investigation Mistakes (And How to Avoid Them)</a></li><li><a href="/blog/blame-to-learning-culture.html">From Blame Culture to Learning Culture: A Practical Guide</a></li><li><a href="/blog/icam-vs-scat-investigation-methods.html">ICAM vs SCAT: Which Investigation Method Should You Use?</a></li><li><a href="/blog/peepo-framework-explained.html">PEEPO Framework Explained</a></li><li><a href="/blog/mining-incident-investigation-guide.html">Mining Incident Investigation Guide</a></li><li><a href="/rca-template-pack.html">Free RCA Template Pack (ICAM template included)</a></li><li><a href="/checklist.html">Free ICAM Investigation Checklist (25 points)</a></li></ul>
+      <div class="author"><strong>Devon Turner</strong><p>Founder of InvestigatePro. Fifteen years leading mining safety across Africa and the Middle East, with an ICAM specialism.</p></div>
+    </article>
+    <aside class="art-aside" aria-label="Related">
+      <div class="bezel meter"><strong>Run it on a real case</strong><p class="muted small">A self-serve 14-day trial on Starter or Professional.</p><a class="btn btn--primary btn--sm" href="https://app.investigatepro.app/signup">Start a 14-day trial</a></div>
+      <div class="bezel meter"><strong>25-point ICAM checklist</strong><p class="muted small">Tick it off in the browser.</p><a class="btn btn--ghost btn--sm" href="/checklist.html">Open the checklist</a></div>
+    </aside>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <div class="foot__brand">
+      <a href="/index.html" aria-label="InvestigatePro home"><img src="/assets/img/logo-horizontal-white.svg" alt="InvestigatePro" width="168" height="34"></a>
+      <p class="foot__tag">Every incident, understood.</p>
+      <p class="foot__by">Built by Devon Turner, who spent fifteen years leading mining safety across Africa and the Middle East, with an ICAM specialism.</p>
+      <button class="motion-toggle" type="button" aria-pressed="false"><span class="motion-toggle__track" aria-hidden="true"></span>Reduce motion</button>
+    </div>
+    <div>
+      <h2>Product</h2>
+      <ul>
+        <li><a href="/platform.html">Platform</a></li>
+        <li><a href="/pricing.html">Pricing</a></li>
+        <li><a href="/demo.html">Book a demo</a></li>
+        <li><a href="/security.html">Security</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+        <li><a href="/changelog.html">Changelog</a></li>
+        <li><a href="/apps/index.html">Apps</a><span class="tag-inbuild">in build</span></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Free tools</h2>
+      <ul>
+        <li><a href="/resources.html">All free tools</a></li>
+        <li><a href="/checklist.html">ICAM checklist</a></li>
+        <li><a href="/icam-toolkit.html">ICAM toolkit</a></li>
+        <li><a href="/peepo-chart-builder.html">PEEPO chart builder</a></li>
+        <li><a href="/5-whys-worksheet.html">5-Whys worksheet</a></li>
+        <li><a href="/state-of-incident-investigation-2026.html">State of Incident Investigation 2026</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Industries</h2>
+      <ul>
+        <li><a href="/industries/mining-incident-investigation.html">Mining</a></li>
+        <li><a href="/industries/oil-gas-incident-management.html">Oil and gas</a></li>
+        <li><a href="/industries/manufacturing-root-cause-analysis.html">Manufacturing</a></li>
+        <li><a href="/industries/construction-safety-software.html">Construction</a></li>
+        <li><a href="/industries/engineering-incident-investigation.html">Engineering</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Company</h2>
+      <ul>
+        <li><a href="/blog/index.html">Blog</a></li>
+        <li><a href="/status.html">Service notices</a></li>
+        <li><a href="mailto:hello@investigatepro.app">Contact: hello@investigatepro.app</a></li>
+        <li><a href="https://app.investigatepro.app/login">Login</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/terms.html">Terms</a></li>
+        <li><a href="/cookie.html">Cookies</a></li>
+        <li><a href="/dpa.html">DPA</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot__base">
+    <span>&copy; 2026 InvestigatePro. Find the causes. Fix the system.</span>
+    <span>Every incident, understood.</span>
   </div>
 </footer>
-<script defer src="/assets/js/ip2.js"></script>
+
 </body>
 </html>

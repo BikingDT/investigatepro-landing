@@ -1,480 +1,252 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-GB" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PEEPO Framework Explained: The Heart of ICAM Investigation | InvestigatePro</title>
-    <meta name="description" content="Learn the PEEPO framework for incident investigation. People, Environment, Equipment, Procedures, Organization — the systematic approach to finding root causes.">
-    <meta name="keywords" content="PEEPO framework, PEEPO analysis, ICAM PEEPO, incident investigation framework, root cause analysis">
-    <link rel="icon" type="image/png" href="../assets/brand/favicon-32.png">
-    <link rel="canonical" href="https://investigatepro.app/blog/peepo-framework-explained.html">
-    
-    <!-- Open Graph -->
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://investigatepro.app/blog/peepo-framework-explained.html">
-    <meta property="og:title" content="PEEPO Framework Explained: The Heart of ICAM Investigation">
-    <meta property="og:description" content="Master the PEEPO framework — People, Environment, Equipment, Procedures, Organization — for systematic root cause analysis.">
-    <meta property="og:image" content="https://investigatepro.app/assets/brand/og-image.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="article:published_time" content="2026-03-02">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    
-    <!-- Tailwind CSS (built) -->
-    <link rel="stylesheet" href="../assets/css/styles.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
-    
-    <style>
-        .prose h2 { color: #004D40; margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.75rem; font-weight: 700; }
-        .prose h3 { color: #112D3C; margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.25rem; font-weight: 600; }
-        .prose p { color: #37474F; margin-bottom: 1.25rem; line-height: 1.8; }
-        .prose ul, .prose ol { color: #37474F; margin-bottom: 1.25rem; padding-left: 1.5rem; }
-        .prose li { margin-bottom: 0.5rem; line-height: 1.7; }
-        .prose strong { color: #112D3C; }
-        .prose a { color: #004D40; text-decoration: underline; }
-        .prose blockquote { border-left: 4px solid #004D40; padding-left: 1rem; margin: 1.5rem 0; font-style: italic; color: #5A6B76; }
-        .peepo-card { background: linear-gradient(135deg, #FFFFFF 0%, #FFFFFF 100%); }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PEEPO Framework Explained: The Heart of ICAM Investigation | InvestigatePro</title>
+<meta name="description" content="Learn the PEEPO framework for incident investigation. People, Environment, Equipment, Procedures, Organisation, the systematic approach to finding underlying causes.">
+<link rel="canonical" href="https://investigatepro.app/blog/peepo-framework-explained.html">
 
-    <!-- Schema.org -->
-    <script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "PEEPO Framework Explained: The Heart of ICAM Investigation",
-    "description": "Master the PEEPO framework for systematic root cause analysis in incident investigations.",
-    "author": {
-        "@type": "Organization",
-        "name": "InvestigatePro"
-    },
-    "publisher": {
-        "@type": "Organization",
-        "name": "InvestigatePro"
-    },
-    "datePublished": "2026-03-02"
-}</script>
-
-    <!-- Structured Data: Breadcrumb + Article -->
-    <script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://investigatepro.app/"
-        },
-        {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Blog",
-            "item": "https://investigatepro.app/blog/"
-        },
-        {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "PEEPO Framework Explained: The Heart of ICAM Investigation",
-            "item": "https://investigatepro.app/blog/peepo-framework-explained.html"
-        }
-    ]
-}</script>
-<link rel="stylesheet" href="/assets/css/ip2-chrome.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Devon Turner", "jobTitle": "Founder", "url": "https://investigatepro.app/#founder", "worksFor": {"@type": "Organization", "name": "InvestigatePro", "url": "https://investigatepro.app"}, "description": "Founder of InvestigatePro. 15+ years leading mining safety across Africa and the Middle East, with an ICAM specialism.", "knowsAbout": ["ICAM investigation", "incident investigation", "mining safety"]}</script>
+<meta name="theme-color" content="#063A41">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="InvestigatePro">
+<meta property="og:title" content="PEEPO Framework Explained: The Heart of ICAM Investigation | InvestigatePro">
+<meta property="og:description" content="Learn the PEEPO framework for incident investigation. People, Environment, Equipment, Procedures, Organisation, the systematic approach to finding underlying causes.">
+<meta property="og:url" content="https://investigatepro.app/blog/peepo-framework-explained.html">
+<meta property="og:image" content="https://investigatepro.app/assets/img/og-article.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/montserrat-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/ip-next.css">
+<script>(function(){var h=document.documentElement,r=false;h.className=h.className.replace('no-js','js');try{r=localStorage.getItem('ip-reduce-motion')==='1'}catch(e){}if(!r&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){h.classList.add('motion-on')}else{h.classList.add('motion-off')}})();</script>
+<script src="/assets/ip-next.js" defer></script>
+<script src="/analytics.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"PEEPO Framework Explained: The Heart of ICAM Investigation","author":{"@type":"Person","name":"Devon Turner"},"publisher":{"@type":"Organization","name":"InvestigatePro"}}</script>
 </head>
-<body class="font-sans antialiased bg-cloud text-ink">
-<!-- Site chrome: unified navigation -->
-<nav class="ip2-nav light" aria-label="Main">
-  <div class="ip2-nav-row">
-    <a href="/" class="ip2-logo" aria-label="InvestigatePro home"><img class="lgm" src="/assets/brand/logo-horizontal.svg" alt="InvestigatePro" width="826" height="168" decoding="async"></a>
-    <div class="ip2-links">
-      <a href="/platform.html">Platform</a><a href="/pricing.html">Pricing</a><a href="/resources.html">Resources</a><a href="/blog/" aria-current="page">Blog</a>
-      <a href="https://app.investigatepro.app/login" class="ip2-login">Login</a>
-      <a href="/#pilot" class="ip2-cta">Start a pilot</a>
-    </div>
-    <button class="mm-btn" aria-expanded="false" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
-  </div>
-  <div class="mm-panel">
-    <a href="/platform.html">Platform</a><a href="/pricing.html">Pricing</a><a href="/resources.html">Resources</a><a href="/blog/">Blog</a>
-    <a href="https://app.investigatepro.app/login" class="ip2-login-m">Login</a>
-    <a href="/#pilot" class="btn btn-primary">Start a pilot</a>
-    <a href="https://cal.com/investigatepro/15min" class="btn btn-outline">Book a 15-minute demo</a>
-  </div>
-</nav>
-<div class="ip2-byline"><div class="ip2-wrap"><span class="dt" aria-hidden="true">DT</span><span><strong>Devon Turner</strong> · Founder, InvestigatePro — 15+ years leading mining safety</span></div></div>
-
-
-    <!-- Article -->
-    <article class="pt-32 pb-20">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6">
-            
-            <!-- Breadcrumb -->
-            <nav class="text-sm text-graphite mb-8">
-                <a href="/" class="hover:text-apex-700">Home</a>
-                <span class="mx-2">›</span>
-                <a href="/blog/" class="hover:text-apex-700">Blog</a>
-                <span class="mx-2">›</span>
-                <span class="text-slate">PEEPO Framework</span>
-            </nav>
-
-            <!-- Header -->
-            <header class="mb-12">
-                <div class="flex items-center gap-3 mb-4">
-                    <span class="bg-apex-500/10 text-apex-500 px-3 py-1 rounded-full text-sm font-medium">Methodology</span>
-                    <span class="text-graphite text-sm">10 min read</span>
-                </div>
-                <h1 class="text-4xl sm:text-5xl font-bold mb-6 leading-tight">PEEPO Framework Explained: The Heart of ICAM Investigation</h1>
-                <p class="text-xl text-slate mb-6">The PEEPO framework is your systematic lens for analyzing any workplace incident. Learn how to use it to uncover the contributing factors others miss.</p>
-                <div class="flex items-center text-graphite text-sm">
-                    <span>Published March 2, 2026</span>
-                </div>
-            </header>
-
-            <!-- Visual Overview -->
-            <div class="grid grid-cols-5 gap-2 mb-12" style="overflow-wrap:anywhere;word-break:break-word">
-                <div class="peepo-card rounded-lg p-4 text-center">
-                    <div class="text-3xl font-bold text-apex-500">P</div>
-                    <div class="text-xs text-graphite mt-1">People</div>
-                </div>
-                <div class="peepo-card rounded-lg p-4 text-center">
-                    <div class="text-3xl font-bold text-apex-500">E</div>
-                    <div class="text-xs text-graphite mt-1">Environment</div>
-                </div>
-                <div class="peepo-card rounded-lg p-4 text-center">
-                    <div class="text-3xl font-bold text-apex-500">E</div>
-                    <div class="text-xs text-graphite mt-1">Equipment</div>
-                </div>
-                <div class="peepo-card rounded-lg p-4 text-center">
-                    <div class="text-3xl font-bold text-apex-500">P</div>
-                    <div class="text-xs text-graphite mt-1">Procedures</div>
-                </div>
-                <div class="peepo-card rounded-lg p-4 text-center">
-                    <div class="text-3xl font-bold text-apex-500">O</div>
-                    <div class="text-xs text-graphite mt-1">Organization</div>
-                </div>
-            </div>
-
-            <!-- Content -->
-            <div class="prose max-w-none">
-                
-                <h2>What is the PEEPO Framework?</h2>
-                
-                <p><strong>PEEPO</strong> is a structured analysis framework used in ICAM (Incident Cause Analysis Method) investigations to systematically identify all contributing factors to an incident. The acronym stands for:</p>
-                
-                <ul>
-                    <li><strong>P</strong>eople — Human factors and individual actions</li>
-                    <li><strong>E</strong>nvironment — Physical conditions and surroundings</li>
-                    <li><strong>E</strong>quipment — Tools, machinery, and PPE</li>
-                    <li><strong>P</strong>rocedures — Work methods and documentation</li>
-                    <li><strong>O</strong>rganization — Management systems and culture</li>
-                </ul>
-                
-                <p>The power of PEEPO lies in its comprehensiveness. By examining an incident through all five lenses, investigators avoid the common trap of fixating on a single cause — usually blaming the person closest to the incident.</p>
-                
-                <blockquote>
-                    "An incident is never just about one thing. PEEPO ensures you see the full picture."
-                </blockquote>
-
-                <h2>P — People: The Human Element</h2>
-                
-                <p>Human factors are often the most visible part of an incident, but they're rarely the root cause. When analyzing People factors, consider:</p>
-                
-                <h3>Physical State</h3>
-                <ul>
-                    <li><strong>Fatigue:</strong> How many hours had they worked? What was their sleep quality?</li>
-                    <li><strong>Health:</strong> Any illness, injury, or medication effects?</li>
-                    <li><strong>Impairment:</strong> Alcohol, drugs, or other substances?</li>
-                    <li><strong>Physical capability:</strong> Strength, reach, vision, hearing?</li>
-                </ul>
-                
-                <h3>Mental State</h3>
-                <ul>
-                    <li><strong>Stress:</strong> Work pressure, personal issues, deadlines?</li>
-                    <li><strong>Distraction:</strong> Multitasking, interruptions, personal concerns?</li>
-                    <li><strong>Complacency:</strong> Over-familiarity with the task?</li>
-                    <li><strong>Rushing:</strong> Time pressure affecting judgment?</li>
-                </ul>
-                
-                <h3>Knowledge & Skills</h3>
-                <ul>
-                    <li><strong>Training:</strong> Were they properly trained for the task?</li>
-                    <li><strong>Experience:</strong> How familiar were they with this work?</li>
-                    <li><strong>Competency:</strong> Had their skills been verified?</li>
-                    <li><strong>Awareness:</strong> Did they understand the hazards?</li>
-                </ul>
-                
-                <h3>Communication</h3>
-                <ul>
-                    <li><strong>Instructions:</strong> Were they clear and understood?</li>
-                    <li><strong>Language:</strong> Any barriers to understanding?</li>
-                    <li><strong>Handover:</strong> Was shift/task handover adequate?</li>
-                </ul>
-                
-                <div class="bg-white rounded-lg p-4 my-6">
-                    <p class="text-sm text-slate mb-0"><strong>Remember:</strong> People factors explain <em>how</em> the incident happened, but rarely <em>why</em> it was possible. Always dig deeper into Equipment, Procedures, and Organization.</p>
-                </div>
-
-                <h2>E — Environment: The Physical Context</h2>
-                
-                <p>Environmental factors set the stage for incidents. Even the most skilled worker can fail in a hostile environment. Consider:</p>
-                
-                <h3>Physical Conditions</h3>
-                <ul>
-                    <li><strong>Weather:</strong> Rain, wind, extreme temperatures, ice?</li>
-                    <li><strong>Lighting:</strong> Too dark, too bright, glare, shadows?</li>
-                    <li><strong>Noise:</strong> Could they hear warnings or communicate?</li>
-                    <li><strong>Temperature:</strong> Heat stress, cold exposure?</li>
-                    <li><strong>Ventilation:</strong> Air quality, fumes, dust?</li>
-                </ul>
-                
-                <h3>Workspace</h3>
-                <ul>
-                    <li><strong>Housekeeping:</strong> Clutter, obstructions, slip hazards?</li>
-                    <li><strong>Layout:</strong> Awkward access, confined spaces?</li>
-                    <li><strong>Ergonomics:</strong> Work height, reach, posture?</li>
-                    <li><strong>Ground conditions:</strong> Uneven, slippery, unstable?</li>
-                </ul>
-                
-                <h3>Temporal Factors</h3>
-                <ul>
-                    <li><strong>Time of day:</strong> Night shift, early morning, end of shift?</li>
-                    <li><strong>Day of week:</strong> Monday restart, Friday rush?</li>
-                    <li><strong>Shift pattern:</strong> Rotating shifts, extended hours?</li>
-                    <li><strong>Season:</strong> Summer heat, winter conditions?</li>
-                </ul>
-                
-                <h3>Location</h3>
-                <ul>
-                    <li><strong>Remote/isolated:</strong> Distance from help or supervision?</li>
-                    <li><strong>Multi-employer:</strong> Other contractors working nearby?</li>
-                    <li><strong>Public interface:</strong> Pedestrians, traffic, customers?</li>
-                </ul>
-
-                <h2>E — Equipment: Tools and Technology</h2>
-                
-                <p>Equipment factors include everything workers use to do their jobs — from simple hand tools to complex machinery. Consider:</p>
-                
-                <h3>Design</h3>
-                <ul>
-                    <li><strong>Suitability:</strong> Right tool for the job?</li>
-                    <li><strong>Ergonomics:</strong> Comfortable to use safely?</li>
-                    <li><strong>Human factors:</strong> Controls intuitive? Displays readable?</li>
-                    <li><strong>Failure modes:</strong> Does it fail safely?</li>
-                </ul>
-                
-                <h3>Condition</h3>
-                <ul>
-                    <li><strong>Maintenance:</strong> Properly maintained? Up to date?</li>
-                    <li><strong>Wear:</strong> Signs of deterioration?</li>
-                    <li><strong>Defects:</strong> Known issues not addressed?</li>
-                    <li><strong>Inspections:</strong> Pre-use checks completed?</li>
-                </ul>
-                
-                <h3>Safety Features</h3>
-                <ul>
-                    <li><strong>Guards:</strong> Present and functional?</li>
-                    <li><strong>Interlocks:</strong> Working correctly?</li>
-                    <li><strong>Emergency stops:</strong> Accessible and tested?</li>
-                    <li><strong>Alarms/warnings:</strong> Audible/visible and understood?</li>
-                </ul>
-                
-                <h3>PPE</h3>
-                <ul>
-                    <li><strong>Availability:</strong> Correct PPE provided?</li>
-                    <li><strong>Condition:</strong> Good repair, not expired?</li>
-                    <li><strong>Fit:</strong> Properly sized for the individual?</li>
-                    <li><strong>Suitability:</strong> Right protection for the hazard?</li>
-                </ul>
-
-                <h2>P — Procedures: The Documented Way</h2>
-                
-                <p>Procedural factors examine how work is supposed to be done versus how it's actually done. This gap is often where incidents originate. Consider:</p>
-                
-                <h3>Existence & Availability</h3>
-                <ul>
-                    <li><strong>Documented:</strong> Does a procedure exist for this task?</li>
-                    <li><strong>Accessible:</strong> Can workers easily find and use it?</li>
-                    <li><strong>Format:</strong> Appropriate for the work environment?</li>
-                </ul>
-                
-                <h3>Quality</h3>
-                <ul>
-                    <li><strong>Accuracy:</strong> Does it reflect how the work should actually be done?</li>
-                    <li><strong>Completeness:</strong> Does it cover all steps and hazards?</li>
-                    <li><strong>Clarity:</strong> Easy to understand? Appropriate language?</li>
-                    <li><strong>Currency:</strong> Up to date with current equipment/methods?</li>
-                </ul>
-                
-                <h3>Practicality</h3>
-                <ul>
-                    <li><strong>Workable:</strong> Can it actually be followed as written?</li>
-                    <li><strong>Time:</strong> Does following it allow for realistic timeframes?</li>
-                    <li><strong>Resources:</strong> Are required tools/materials available?</li>
-                </ul>
-                
-                <h3>Compliance</h3>
-                <ul>
-                    <li><strong>Known:</strong> Are workers aware of the procedure?</li>
-                    <li><strong>Trained:</strong> Have they been trained on it?</li>
-                    <li><strong>Followed:</strong> Is it routinely followed?</li>
-                    <li><strong>Enforced:</strong> Are deviations addressed?</li>
-                </ul>
-                
-                <div class="bg-white rounded-lg p-4 my-6">
-                    <p class="text-sm text-slate mb-0"><strong>Key insight:</strong> If workers routinely deviate from procedures, the procedure is the problem, not the workers. Either the procedure is impractical, or there's pressure to shortcut. Both are organizational issues.</p>
-                </div>
-
-                <h2>O — Organization: The Root of Most Causes</h2>
-                
-                <p>Organizational factors are where ICAM and PEEPO really shine. This is where you find the <em>true</em> root causes — the management decisions, systems, and culture that created the conditions for an incident.</p>
-                
-                <h3>Management Systems</h3>
-                <ul>
-                    <li><strong>Risk assessment:</strong> Was the hazard identified? Were controls adequate?</li>
-                    <li><strong>Change management:</strong> Were recent changes properly managed?</li>
-                    <li><strong>Permit systems:</strong> Were required permits in place?</li>
-                    <li><strong>Contractor management:</strong> Were third parties properly controlled?</li>
-                </ul>
-                
-                <h3>Resources</h3>
-                <ul>
-                    <li><strong>Staffing:</strong> Adequate numbers and skill levels?</li>
-                    <li><strong>Budget:</strong> Sufficient for safety requirements?</li>
-                    <li><strong>Time:</strong> Realistic schedules and deadlines?</li>
-                    <li><strong>Equipment:</strong> Proper tools available when needed?</li>
-                </ul>
-                
-                <h3>Training & Competency</h3>
-                <ul>
-                    <li><strong>Training system:</strong> Effective and current?</li>
-                    <li><strong>Verification:</strong> Is competency actually assessed?</li>
-                    <li><strong>Refresher:</strong> Are skills maintained over time?</li>
-                    <li><strong>Supervision:</strong> Appropriate oversight for experience level?</li>
-                </ul>
-                
-                <h3>Culture & Leadership</h3>
-                <ul>
-                    <li><strong>Safety priority:</strong> Is safety genuinely valued or just talked about?</li>
-                    <li><strong>Reporting:</strong> Do workers feel safe reporting concerns?</li>
-                    <li><strong>Accountability:</strong> Are leaders accountable for safety?</li>
-                    <li><strong>Learning:</strong> Does the organization learn from incidents?</li>
-                </ul>
-                
-                <h3>Communication</h3>
-                <ul>
-                    <li><strong>Information flow:</strong> Do relevant people get relevant information?</li>
-                    <li><strong>Safety alerts:</strong> Are lessons shared across the organization?</li>
-                    <li><strong>Feedback:</strong> Can workers raise concerns that get addressed?</li>
-                </ul>
-                
-                <h3>Competing Priorities</h3>
-                <ul>
-                    <li><strong>Production pressure:</strong> Was there pressure to prioritize output over safety?</li>
-                    <li><strong>Cost pressure:</strong> Were safety measures cut to save money?</li>
-                    <li><strong>Schedule pressure:</strong> Were shortcuts encouraged to meet deadlines?</li>
-                </ul>
-
-                <h2>How to Use PEEPO in Practice</h2>
-                
-                <h3>Step 1: Gather Data First</h3>
-                <p>Don't start analyzing until you have solid data from interviews, evidence, and documents. PEEPO is an analysis tool, not a data-gathering checklist.</p>
-                
-                <h3>Step 2: Work Through Each Category</h3>
-                <p>Systematically consider each PEEPO element. Use the questions above as prompts. Document what you find <em>and</em> what you rule out.</p>
-                
-                <h3>Step 3: Look for Connections</h3>
-                <p>Factors don't exist in isolation. A tired worker (People) + poor lighting (Environment) + inadequate procedure (Procedures) + lack of supervision (Organization) = a perfect storm.</p>
-                
-                <h3>Step 4: Always Reach Organization</h3>
-                <p>If your analysis stops at People, Equipment, or Procedures, keep asking "why?" The organizational factors that allowed those conditions to exist are where you'll find the leverage for real change.</p>
-                
-                <h3>Step 5: Validate with Evidence</h3>
-                <p>Every contributing factor you identify must be supported by evidence. If you can't point to specific data, it's speculation.</p>
-
-                <h2>Common PEEPO Pitfalls</h2>
-                
-                <ul>
-                    <li><strong>Stopping at People:</strong> "Worker error" is almost never the root cause.</li>
-                    <li><strong>Ignoring Organization:</strong> The hardest category to analyze, but the most important.</li>
-                    <li><strong>Listing everything:</strong> Focus on factors that actually contributed, not just existed.</li>
-                    <li><strong>Weak corrective actions:</strong> Use the hierarchy of controls — don't just retrain people.</li>
-                </ul>
-
-                <div class="bg-cloud rounded-xl p-6 my-8">
-                    <h3 style="margin-top: 0;">PEEPO Analysis Made Easy</h3>
-                    <p class="mb-4">InvestigatePro guides you through PEEPO analysis with AI-powered prompts that help you identify factors you might miss. No more staring at a blank chart wondering what to write.</p>
-                    <a href="/#demo" class="inline-block bg-apex-500 hover:bg-apex-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">Try InvestigatePro Free →</a>
-                </div>
-
-                <h2>Conclusion</h2>
-                
-                <p>The PEEPO framework transforms incident investigation from a blame-finding exercise into a genuine learning opportunity. By systematically examining People, Environment, Equipment, Procedures, and Organization, you ensure no stone is left unturned — and you find the root causes that will actually prevent recurrence.</p>
-                
-                <p>Remember: <strong>most incidents have multiple contributing factors</strong>. PEEPO helps you see them all.</p>
-
-                <p>Perhaps most importantly, PEEPO shifts the conversation from "who made a mistake" to "what conditions made a mistake possible." That shift — from blame to understanding — is what separates organizations that genuinely improve safety from those that cycle through the same incidents year after year. The framework gives investigators a common language and a structured lens, so every investigation benefits from the same rigor regardless of who runs it or how complex the event was.</p>
-
-            </div>
-
-            <!-- Free Tool Callout -->
-            <div style="background:#FFFFFF;border:1px solid rgba(0,77,64,0.25);border-radius:12px;padding:28px;margin:32px 0;">
-                <p style="color:#004D40;font-weight:700;margin:0 0 12px;font-size:0.9rem;">🛠 FREE INTERACTIVE TOOL</p>
-                <h3 style="color:#112D3C;font-size:1.1rem;margin:0 0 8px;">PEEPO Chart Builder</h3>
-                <p style="color:#5A6B76;font-size:0.9rem;margin:0 0 16px;">Use our free browser-based PEEPO Chart Builder to map all contributing factors for any incident. Includes guided prompts for each category, a printable summary chart, and factor count breakdown.</p>
-                <a href="/peepo-chart-builder.html" style="display:inline-block;background:#004D40;color:#FFFFFF;padding:10px 20px;border-radius:8px;font-weight:700;text-decoration:none;font-size:0.9rem;">Open PEEPO Chart Builder →</a>
-            </div>
-
-            <!-- CTA -->
-            <div class="mt-16 pt-8 border-t border-mist">
-                <div class="bg-white rounded-xl p-8">
-                    <h3 class="text-xl font-semibold mb-3">Master PEEPO Analysis</h3>
-                    <p class="text-slate mb-6">InvestigatePro's AI coach guides you through each PEEPO category with smart prompts and suggestions based on your incident type.</p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="/#demo" class="bg-apex-500 hover:bg-apex-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center">Book a Demo</a>
-                        <a href="/blog/icam-investigation-guide.html" class="border border-apex-500 text-apex-500 hover:bg-apex-500/10 px-6 py-3 rounded-lg font-semibold transition-colors text-center">Read Full ICAM Guide</a>
-                    </div>
-                </div>
-            </div>
-
+<body class="page-article">
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__logo" href="/index.html" aria-label="InvestigatePro home"><img src="/assets/img/logo-horizontal-white.svg" alt="InvestigatePro" width="152" height="31"></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="/platform.html">Platform</a>
+      <div class="nav__menu">
+        <button class="nav__menu-btn" type="button" aria-expanded="false" aria-controls="nav-industries">Industries <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg></button>
+        <div class="nav__panel" id="nav-industries">
+          <a href="/industries/mining-incident-investigation.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,152V136a96.37,96.37,0,0,0-64-90.51V40a16,16,0,0,0-16-16H112A16,16,0,0,0,96,40v5.49A96.37,96.37,0,0,0,32,136v16a16,16,0,0,0-16,16v24a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V168A16,16,0,0,0,224,152Zm-16-16v16H160V62.67A80.36,80.36,0,0,1,208,136ZM144,40V152H112V40ZM48,136A80.36,80.36,0,0,1,96,62.67V152H48Zm176,56H32V168H224v24Z"/></svg><strong>Mining</strong><span>Underground, open-cut, processing and contractors</span></a>
+          <a href="/industries/oil-gas-incident-management.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></svg><strong>Oil and gas</strong><span>Upstream, midstream and field services</span></a>
+          <a href="/industries/manufacturing-root-cause-analysis.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M116,176a8,8,0,0,1-8,8H80a8,8,0,0,1,0-16h28A8,8,0,0,1,116,176Zm60-8H148a8,8,0,0,0,0,16h28a8,8,0,0,0,0-16Zm64,48a8,8,0,0,1-8,8H24a8,8,0,0,1,0-16h8V88a8,8,0,0,1,12.8-6.4L96,120V88a8,8,0,0,1,12.8-6.4l38.74,29.05L159.1,29.74A16.08,16.08,0,0,1,174.94,16h18.12A16.08,16.08,0,0,1,208.9,29.74l15,105.13s.08.78.08,1.13v72h8A8,8,0,0,1,240,216Zm-77.86-94.4,8.53,6.4h36.11L193.06,32H174.94ZM48,208H208V144H168a8,8,0,0,1-4.8-1.6l-14.4-10.8,0,0L112,104v32a8,8,0,0,1-12.8,6.4L48,104Z"/></svg><strong>Manufacturing</strong><span>Plant, maintenance and process safety</span></a>
+          <a href="/industries/construction-safety-software.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M230.91,172A8,8,0,0,1,228,182.91l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,36,169.09l92,53.65,92-53.65A8,8,0,0,1,230.91,172ZM220,121.09l-92,53.65L36,121.09A8,8,0,0,0,28,134.91l96,56a8,8,0,0,0,8.06,0l96-56A8,8,0,1,0,220,121.09ZM24,80a8,8,0,0,1,4-6.91l96-56a8,8,0,0,1,8.06,0l96,56a8,8,0,0,1,0,13.82l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,24,80Zm23.88,0L128,126.74,208.12,80,128,33.26Z"/></svg><strong>Construction</strong><span>Principal contractors and subcontractors</span></a>
+          <a href="/industries/engineering-incident-investigation.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M160,112h48a16,16,0,0,0,16-16V48a16,16,0,0,0-16-16H160a16,16,0,0,0-16,16V64H128a24,24,0,0,0-24,24v32H72v-8A16,16,0,0,0,56,96H24A16,16,0,0,0,8,112v32a16,16,0,0,0,16,16H56a16,16,0,0,0,16-16v-8h32v32a24,24,0,0,0,24,24h16v16a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V160a16,16,0,0,0-16-16H160a16,16,0,0,0-16,16v16H128a8,8,0,0,1-8-8V88a8,8,0,0,1,8-8h16V96A16,16,0,0,0,160,112ZM56,144H24V112H56v32Zm104,16h48v48H160Zm0-112h48V96H160Z"/></svg><strong>Engineering</strong><span>Projects, commissioning and field work</span></a>
         </div>
-    </article>
-
-    <!-- Footer -->
-    
-
-<footer class="ip2-footer">
-  <div class="ip2-wrap">
-    <div class="cols">
-      <div style="display:flex;flex-direction:column;gap:16px">
-        <a href="/" class="ip2-logo" aria-label="InvestigatePro home"><img class="lgm" src="/assets/brand/logo-horizontal-white.svg" alt="InvestigatePro" width="826" height="168" decoding="async"></a>
-        <p style="max-width:250px;font-size:13px;line-height:1.6">Structured, evidence-led ICAM investigation with an AI coach on every case.</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="ip2-chip">EU-hosted &amp; isolated</span><span class="ip2-chip">GDPR compliant</span></div>
       </div>
-      <div><h4>Product</h4><ul>
-        <li><a href="/platform.html">Platform</a></li><li><a href="/pricing.html">Pricing</a></li><li><a href="/demo.html">Book a demo</a></li>
-        <li><a href="/apps/">Apps</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/security.html">Security</a></li><li><a href="/changelog.html">Changelog</a></li>
-      </ul></div>
-      <div><h4>Resources</h4><ul>
-        <li><a href="/resources.html">All free tools</a></li><li><a href="/checklist.html">ICAM checklist</a></li><li><a href="/icam-toolkit.html">ICAM toolkit</a></li>
-        <li><a href="/peepo-chart-builder.html">PEEPO chart builder</a></li><li><a href="/5-whys-worksheet.html">5-Whys worksheet</a></li><li><a href="/state-of-incident-investigation-2026.html">State of Incident Investigation</a></li>
-      </ul></div>
-      <div><h4>Industries</h4><ul>
-        <li><a href="/industries/mining-incident-investigation.html">Mining</a></li><li><a href="/industries/oil-gas-incident-management.html">Oil &amp; gas</a></li>
-        <li><a href="/industries/manufacturing-root-cause-analysis.html">Manufacturing</a></li><li><a href="/industries/construction-safety-software.html">Construction</a></li>
-        <li><a href="/industries/engineering-incident-investigation.html">Engineering</a></li>
-      </ul></div>
-      <div><h4>Company</h4><ul>
-        <li><a href="/blog/">Blog</a></li><li><a href="/status.html">Service notices</a></li><li><a href="mailto:hello@investigatepro.app">Contact</a></li><li><a href="https://app.investigatepro.app/login">Login</a></li>
-        <li style="margin-top:10px"><a href="/privacy.html">Privacy</a></li><li><a href="/terms.html">Terms</a></li><li><a href="/cookie.html">Cookies</a></li><li><a href="/dpa.html">DPA</a></li>
-      </ul></div>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/resources.html">Resources</a>
+      <a href="/blog/index.html" aria-current="page">Blog</a>
+    </nav>
+    <div class="nav__actions">
+      <a class="nav__login" href="https://app.investigatepro.app/login">Login</a>
+      <a class="btn btn--primary btn--sm" href="https://app.investigatepro.app/signup">Start a 14-day trial</a>
+      <button class="nav__burger" type="button" aria-expanded="false" aria-controls="mmenu" aria-label="Open menu"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></svg></button>
     </div>
-    <p class="accountability">Every suggestion carries its source, and the report goes out attributed to the lead investigator. Built by Devon Turner — fifteen years leading mining safety across Africa and the Middle East, with an ICAM specialism.</p>
-    <p style="margin-top:18px;font-size:12px;color:rgba(159,184,194,.7)">© 2026 InvestigatePro. All rights reserved. · Every incident, understood.</p>
+  </div>
+</header>
+<div class="mmenu" id="mmenu" hidden role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="mmenu__top">
+    <a class="nav__logo" href="/index.html" aria-label="InvestigatePro home"><img src="/assets/img/logo-horizontal-white.svg" alt="InvestigatePro" width="140" height="28"></a>
+    <button class="nav__burger mmenu__close" type="button" aria-label="Close menu"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg></button>
+  </div>
+  <nav class="mmenu__list" aria-label="Mobile">
+    <a href="/platform.html" style="--i:0">Platform <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/pricing.html" style="--i:1">Pricing <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/resources.html" style="--i:2">Resources <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/blog/index.html" style="--i:3">Blog <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/demo.html" style="--i:4">Book a demo <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+  </nav>
+  <div class="mmenu__sub">
+    <a href="/industries/mining-incident-investigation.html">Mining</a>
+    <a href="/industries/oil-gas-incident-management.html">Oil and gas</a>
+    <a href="/industries/manufacturing-root-cause-analysis.html">Manufacturing</a>
+    <a href="/industries/construction-safety-software.html">Construction</a>
+    <a href="/industries/engineering-incident-investigation.html">Engineering</a>
+    <a href="https://app.investigatepro.app/login">Login</a>
+  </div>
+  <div class="mmenu__cta">
+    <a class="btn btn--primary btn--block" href="https://app.investigatepro.app/signup">Start a 14-day trial</a>
+    <a class="btn btn--ghost btn--block" href="https://cal.com/investigatepro/15min">Book a 15-minute demo</a>
+  </div>
+</div>
+
+<main id="main">
+<div class="readbar" aria-hidden="true"><i></i></div>
+<section class="phead">
+  <div class="wrap art-head">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/index.html">Home</a><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg><a href="/blog/index.html">Blog</a><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg><span>Methodology</span></nav>
+    <h1>PEEPO Framework Explained: The Heart of ICAM Investigation</h1>
+    <div class="byline"><span><strong>Devon Turner</strong>Founder, 15+ years leading mining safety · 10 min read</span></div>
+  </div>
+</section>
+<section class="sec sec--tight" style="padding-top:0">
+  <div class="wrap art">
+    <nav class="toc" data-toc aria-label="Contents"><p>Contents</p><a href="#what-is-the-peepo-framework">What is the PEEPO Framework?</a><a href="#p-people-the-human-element">P, People: The Human Element</a><a href="#e-environment-the-physical-context">E, Environment: The Physical Context</a><a href="#e-equipment-tools-and-technology">E, Equipment: Tools and Technology</a><a href="#p-procedures-the-documented-way">P, Procedures: The Documented Way</a><a href="#o-organisation-the-root-of-most-causes">O, Organisation: The Root of Most Causes</a><a href="#how-to-use-peepo-in-practice">How to Use PEEPO in Practice</a><a href="#common-peepo-pitfalls">Common PEEPO Pitfalls</a><a href="#conclusion">Conclusion</a></nav>
+    <article class="prose">
+<h2 id="what-is-the-peepo-framework">What is the PEEPO Framework?</h2>
+<p><strong>PEEPO</strong> is a structured analysis framework used in ICAM (Incident Cause Analysis Method) investigations to systematically identify all contributing factors to an incident. The acronym stands for:</p>
+<ul><li><strong>P</strong>eople, Human factors and individual actions</li><li><strong>E</strong>nvironment, Physical conditions and surroundings</li><li><strong>E</strong>quipment, Tools, machinery, and PPE</li><li><strong>P</strong>rocedures, Work methods and documentation</li><li><strong>O</strong>rganization, Management systems and culture</li></ul>
+<p>The power of PEEPO lies in its comprehensiveness. By examining an incident through all five lenses, investigators avoid the common trap of fixating on a single cause, usually blaming the person closest to the incident.</p>
+<blockquote><p>"An incident is never just about one thing. PEEPO ensures you see the full picture."</p></blockquote>
+<h2 id="p-people-the-human-element">P, People: The Human Element</h2>
+<p>Human factors are often the most visible part of an incident, but they're rarely the causes. When analyzing People factors, consider:</p>
+<h3>Physical State</h3>
+<ul><li><strong>Fatigue:</strong> How many hours had they worked? What was their sleep quality?</li><li><strong>Health:</strong> Any illness, injury, or medication effects?</li><li><strong>Impairment:</strong> Alcohol, drugs, or other substances?</li><li><strong>Physical capability:</strong> Strength, reach, vision, hearing?</li></ul>
+<h3>Mental State</h3>
+<ul><li><strong>Stress:</strong> Work pressure, personal issues, deadlines?</li><li><strong>Distraction:</strong> Multitasking, interruptions, personal concerns?</li><li><strong>Complacency:</strong> Over-familiarity with the task?</li><li><strong>Rushing:</strong> Time pressure affecting judgment?</li></ul>
+<h3>Knowledge &amp; Skills</h3>
+<ul><li><strong>Training:</strong> Were they properly trained for the task?</li><li><strong>Experience:</strong> How familiar were they with this work?</li><li><strong>Competency:</strong> Had their skills been verified?</li><li><strong>Awareness:</strong> Did they understand the hazards?</li></ul>
+<h3>Communication</h3>
+<ul><li><strong>Instructions:</strong> Were they clear and understood?</li><li><strong>Language:</strong> Any barriers to understanding?</li><li><strong>Handover:</strong> Was shift/task handover adequate?</li></ul>
+<p><strong>Remember:</strong> People factors explain <em>how</em> the incident happened, but rarely <em>why</em> it was possible. Always dig deeper into Equipment, Procedures, and Organisation.</p>
+<h2 id="e-environment-the-physical-context">E, Environment: The Physical Context</h2>
+<p>Environmental factors set the stage for incidents. Even the most skilled worker can fail in a hostile environment. Consider:</p>
+<h3>Physical Conditions</h3>
+<ul><li><strong>Weather:</strong> Rain, wind, extreme temperatures, ice?</li><li><strong>Lighting:</strong> Too dark, too bright, glare, shadows?</li><li><strong>Noise:</strong> Could they hear warnings or communicate?</li><li><strong>Temperature:</strong> Heat stress, cold exposure?</li><li><strong>Ventilation:</strong> Air quality, fumes, dust?</li></ul>
+<h3>Workspace</h3>
+<ul><li><strong>Housekeeping:</strong> Clutter, obstructions, slip hazards?</li><li><strong>Layout:</strong> Awkward access, confined spaces?</li><li><strong>Ergonomics:</strong> Work height, reach, posture?</li><li><strong>Ground conditions:</strong> Uneven, slippery, unstable?</li></ul>
+<h3>Temporal Factors</h3>
+<ul><li><strong>Time of day:</strong> Night shift, early morning, end of shift?</li><li><strong>Day of week:</strong> Monday restart, Friday rush?</li><li><strong>Shift pattern:</strong> Rotating shifts, extended hours?</li><li><strong>Season:</strong> Summer heat, winter conditions?</li></ul>
+<h3>Location</h3>
+<ul><li><strong>Remote/isolated:</strong> Distance from help or supervision?</li><li><strong>Multi-employer:</strong> Other contractors working nearby?</li><li><strong>Public interface:</strong> Pedestrians, traffic, customers?</li></ul>
+<aside class="callout bezel" aria-label="How InvestigatePro helps"><p><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M168,112a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,112Zm-8,24H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16Zm72-8A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-16,0A88,88,0,1,0,51.81,172.06a8,8,0,0,1,.66,6.54L40,216,77.4,203.53a7.85,7.85,0,0,1,2.53-.42,8,8,0,0,1,4,1.08A88,88,0,0,0,216,128Z"/></svg> <strong>In InvestigatePro,</strong> the coach prompts every ICAM level on every case and drafts factors with their sources. Nothing is filed until the investigator accepts it.</p><div><a class="link-arrow" href="/platform.html">See how the method runs <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a></div></aside>
+<h2 id="e-equipment-tools-and-technology">E, Equipment: Tools and Technology</h2>
+<p>Equipment factors include everything workers use to do their jobs, from simple hand tools to complex machinery. Consider:</p>
+<h3>Design</h3>
+<ul><li><strong>Suitability:</strong> Right tool for the job?</li><li><strong>Ergonomics:</strong> Comfortable to use safely?</li><li><strong>Human factors:</strong> Controls intuitive? Displays readable?</li><li><strong>Failure modes:</strong> Does it fail safely?</li></ul>
+<h3>Condition</h3>
+<ul><li><strong>Maintenance:</strong> Properly maintained? Up to date?</li><li><strong>Wear:</strong> Signs of deterioration?</li><li><strong>Defects:</strong> Known issues not addressed?</li><li><strong>Inspections:</strong> Pre-use checks completed?</li></ul>
+<h3>Safety Features</h3>
+<ul><li><strong>Guards:</strong> Present and functional?</li><li><strong>Interlocks:</strong> Working correctly?</li><li><strong>Emergency stops:</strong> Accessible and tested?</li><li><strong>Alarms/warnings:</strong> Audible/visible and understood?</li></ul>
+<h3>PPE</h3>
+<ul><li><strong>Availability:</strong> Correct PPE provided?</li><li><strong>Condition:</strong> Good repair, not expired?</li><li><strong>Fit:</strong> Properly sized for the individual?</li><li><strong>Suitability:</strong> Right protection for the hazard?</li></ul>
+<h2 id="p-procedures-the-documented-way">P, Procedures: The Documented Way</h2>
+<p>Procedural factors examine how work is supposed to be done versus how it's actually done. This gap is often where incidents originate. Consider:</p>
+<h3>Existence &amp; Availability</h3>
+<ul><li><strong>Documented:</strong> Does a procedure exist for this task?</li><li><strong>Accessible:</strong> Can workers easily find and use it?</li><li><strong>Format:</strong> Appropriate for the work environment?</li></ul>
+<h3>Quality</h3>
+<ul><li><strong>Accuracy:</strong> Does it reflect how the work should actually be done?</li><li><strong>Completeness:</strong> Does it cover all steps and hazards?</li><li><strong>Clarity:</strong> Easy to understand? Appropriate language?</li><li><strong>Currency:</strong> Up to date with current equipment/methods?</li></ul>
+<h3>Practicality</h3>
+<ul><li><strong>Workable:</strong> Can it actually be followed as written?</li><li><strong>Time:</strong> Does following it allow for realistic timeframes?</li><li><strong>Resources:</strong> Are required tools/materials available?</li></ul>
+<h3>Compliance</h3>
+<ul><li><strong>Known:</strong> Are workers aware of the procedure?</li><li><strong>Trained:</strong> Have they been trained on it?</li><li><strong>Followed:</strong> Is it routinely followed?</li><li><strong>Enforced:</strong> Are deviations addressed?</li></ul>
+<p><strong>Key insight:</strong> If workers routinely deviate from procedures, the procedure is the problem, not the workers. Either the procedure is impractical, or there's pressure to shortcut. Both are organisational issues.</p>
+<h2 id="o-organisation-the-root-of-most-causes">O, Organisation: The Root of Most Causes</h2>
+<p>Organisational factors are where ICAM and PEEPO really shine. This is where you find the <em>true</em> underlying causes, the management decisions, systems, and culture that created the conditions for an incident.</p>
+<h3>Management Systems</h3>
+<ul><li><strong>Risk assessment:</strong> Was the hazard identified? Were controls adequate?</li><li><strong>Change management:</strong> Were recent changes properly managed?</li><li><strong>Permit systems:</strong> Were required permits in place?</li><li><strong>Contractor management:</strong> Were third parties properly controlled?</li></ul>
+<h3>Resources</h3>
+<ul><li><strong>Staffing:</strong> Adequate numbers and skill levels?</li><li><strong>Budget:</strong> Sufficient for safety requirements?</li><li><strong>Time:</strong> Realistic schedules and deadlines?</li><li><strong>Equipment:</strong> Proper tools available when needed?</li></ul>
+<h3>Training &amp; Competency</h3>
+<ul><li><strong>Training system:</strong> Effective and current?</li><li><strong>Verification:</strong> Is competency actually assessed?</li><li><strong>Refresher:</strong> Are skills maintained over time?</li><li><strong>Supervision:</strong> Appropriate oversight for experience level?</li></ul>
+<h3>Culture &amp; Leadership</h3>
+<ul><li><strong>Safety priority:</strong> Is safety genuinely valued or just talked about?</li><li><strong>Reporting:</strong> Do workers feel safe reporting concerns?</li><li><strong>Accountability:</strong> Are leaders accountable for safety?</li><li><strong>Learning:</strong> Does the organisation learn from incidents?</li></ul>
+<h3>Communication</h3>
+<ul><li><strong>Information flow:</strong> Do relevant people get relevant information?</li><li><strong>Safety alerts:</strong> Are lessons shared across the organisation?</li><li><strong>Feedback:</strong> Can workers raise concerns that get addressed?</li></ul>
+<h3>Competing Priorities</h3>
+<ul><li><strong>Production pressure:</strong> Was there pressure to prioritize output over safety?</li><li><strong>Cost pressure:</strong> Were safety measures cut to save money?</li><li><strong>Schedule pressure:</strong> Were shortcuts encouraged to meet deadlines?</li></ul>
+<h2 id="how-to-use-peepo-in-practice">How to Use PEEPO in Practice</h2>
+<h3>Step 1: Gather Data First</h3>
+<p>Don't start analyzing until you have solid data from interviews, evidence, and documents. PEEPO is an analysis tool, not a data-gathering checklist.</p>
+<h3>Step 2: Work Through Each Category</h3>
+<p>Systematically consider each PEEPO element. Use the questions above as prompts. Document what you find <em>and</em> what you rule out.</p>
+<h3>Step 3: Look for Connections</h3>
+<p>Factors don't exist in isolation. A tired worker (People) + poor lighting (Environment) + inadequate procedure (Procedures) + lack of supervision (Organisation) = a perfect storm.</p>
+<h3>Step 4: Always Reach Organisation</h3>
+<p>If your analysis stops at People, Equipment, or Procedures, keep asking "why?" The organisational factors that allowed those conditions to exist are where you'll find the leverage for real change.</p>
+<h3>Step 5: Validate with Evidence</h3>
+<p>Every contributing factor you identify must be supported by evidence. If you can't point to specific data, it's speculation.</p>
+<h2 id="common-peepo-pitfalls">Common PEEPO Pitfalls</h2>
+<ul><li><strong>Stopping at People:</strong> "Worker error" is almost never the causes.</li><li><strong>Ignoring Organisation:</strong> The hardest category to analyse, but the most important.</li><li><strong>Listing everything:</strong> Focus on factors that actually contributed, not just existed.</li><li><strong>Weak corrective actions:</strong> Use the hierarchy of controls, don't just retrain people.</li></ul>
+<h3>PEEPO Analysis Made Easy</h3>
+<p>InvestigatePro guides you through PEEPO analysis with AI-powered prompts that help you identify factors you might miss. No more staring at a blank chart wondering what to write.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>The PEEPO framework transforms incident investigation from a blame-finding exercise into a genuine learning opportunity. By systematically examining People, Environment, Equipment, Procedures, and Organisation, you ensure no stone is left unturned, and you find the underlying causes that will actually prevent recurrence.</p>
+<p>Remember: <strong>most incidents have multiple contributing factors</strong>. PEEPO helps you see them all.</p>
+<p>Perhaps most importantly, PEEPO shifts the conversation from "who made a mistake" to "what conditions made a mistake possible." That shift, from blame to understanding, is what separates organisations that genuinely improve safety from those that cycle through the same incidents year after year. The framework gives investigators a common language and a structured lens, so every investigation benefits from the same rigor regardless of who runs it or how complex the event was.</p>
+<p>FREE INTERACTIVE TOOL</p>
+<h3>PEEPO Chart Builder</h3>
+<p>Use our free browser-based PEEPO Chart Builder to map all contributing factors for any incident. Includes guided prompts for each category, a printable summary chart, and factor count breakdown.</p>
+<h3>Master PEEPO Analysis</h3>
+<p>InvestigatePro's AI coach guides you through each PEEPO category with smart prompts and suggestions based on your incident type.</p>
+      <div class="author"><strong>Devon Turner</strong><p>Founder of InvestigatePro. Fifteen years leading mining safety across Africa and the Middle East, with an ICAM specialism.</p></div>
+    </article>
+    <aside class="art-aside" aria-label="Related">
+      <div class="bezel meter"><strong>Run it on a real case</strong><p class="muted small">A self-serve 14-day trial on Starter or Professional.</p><a class="btn btn--primary btn--sm" href="https://app.investigatepro.app/signup">Start a 14-day trial</a></div>
+      <div class="bezel meter"><strong>25-point ICAM checklist</strong><p class="muted small">Tick it off in the browser.</p><a class="btn btn--ghost btn--sm" href="/checklist.html">Open the checklist</a></div>
+    </aside>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <div class="foot__brand">
+      <a href="/index.html" aria-label="InvestigatePro home"><img src="/assets/img/logo-horizontal-white.svg" alt="InvestigatePro" width="168" height="34"></a>
+      <p class="foot__tag">Every incident, understood.</p>
+      <p class="foot__by">Built by Devon Turner, who spent fifteen years leading mining safety across Africa and the Middle East, with an ICAM specialism.</p>
+      <button class="motion-toggle" type="button" aria-pressed="false"><span class="motion-toggle__track" aria-hidden="true"></span>Reduce motion</button>
+    </div>
+    <div>
+      <h2>Product</h2>
+      <ul>
+        <li><a href="/platform.html">Platform</a></li>
+        <li><a href="/pricing.html">Pricing</a></li>
+        <li><a href="/demo.html">Book a demo</a></li>
+        <li><a href="/security.html">Security</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+        <li><a href="/changelog.html">Changelog</a></li>
+        <li><a href="/apps/index.html">Apps</a><span class="tag-inbuild">in build</span></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Free tools</h2>
+      <ul>
+        <li><a href="/resources.html">All free tools</a></li>
+        <li><a href="/checklist.html">ICAM checklist</a></li>
+        <li><a href="/icam-toolkit.html">ICAM toolkit</a></li>
+        <li><a href="/peepo-chart-builder.html">PEEPO chart builder</a></li>
+        <li><a href="/5-whys-worksheet.html">5-Whys worksheet</a></li>
+        <li><a href="/state-of-incident-investigation-2026.html">State of Incident Investigation 2026</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Industries</h2>
+      <ul>
+        <li><a href="/industries/mining-incident-investigation.html">Mining</a></li>
+        <li><a href="/industries/oil-gas-incident-management.html">Oil and gas</a></li>
+        <li><a href="/industries/manufacturing-root-cause-analysis.html">Manufacturing</a></li>
+        <li><a href="/industries/construction-safety-software.html">Construction</a></li>
+        <li><a href="/industries/engineering-incident-investigation.html">Engineering</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Company</h2>
+      <ul>
+        <li><a href="/blog/index.html">Blog</a></li>
+        <li><a href="/status.html">Service notices</a></li>
+        <li><a href="mailto:hello@investigatepro.app">Contact: hello@investigatepro.app</a></li>
+        <li><a href="https://app.investigatepro.app/login">Login</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/terms.html">Terms</a></li>
+        <li><a href="/cookie.html">Cookies</a></li>
+        <li><a href="/dpa.html">DPA</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot__base">
+    <span>&copy; 2026 InvestigatePro. Find the causes. Fix the system.</span>
+    <span>Every incident, understood.</span>
   </div>
 </footer>
-<script defer src="/assets/js/ip2.js"></script>
-<script src="/analytics.js"></script>
+
 </body>
 </html>

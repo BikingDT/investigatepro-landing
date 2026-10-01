@@ -1,284 +1,793 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-GB" class="no-js">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>InvestigatePro — AI Incident Investigation with ICAM</title>
-<meta name="description" content="AI-powered incident investigation with real ICAM methodology. Used by mining, construction, and manufacturing safety teams. Book a free demo.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>InvestigatePro | ICAM incident investigation, with a coach on every case</title>
+<meta name="description" content="Run a structured, evidence-led ICAM investigation step by step, with a coach inside every case. Start a 14-day trial or book a 15-minute demo.">
 <link rel="canonical" href="https://investigatepro.app/">
-<meta property="og:title" content="InvestigatePro — AI Incident Investigation with ICAM">
-<meta property="og:description" content="AI-powered incident investigation with real ICAM methodology. Used by mining, construction, and manufacturing safety teams. Book a free demo.">
-<meta property="og:image" content="https://investigatepro.app/assets/brand/og-image.png">
-<meta property="og:url" content="https://investigatepro.app/">
+
+<meta name="theme-color" content="#063A41">
 <meta property="og:type" content="website">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="icon" type="image/png" href="/assets/brand/favicon-32.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
-<link rel="stylesheet" href="/assets/css/home.css">
-<script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "InvestigatePro",
-    "applicationCategory": "BusinessApplication",
-    "applicationSubCategory": "Safety Management Software",
-    "operatingSystem": "Web Browser",
-    "description": "AI-powered incident investigation software using ICAM methodology. Helps safety teams find root causes faster with AI coaching.",
-    "url": "https://investigatepro.app",
-    "image": "https://investigatepro.app/assets/brand/og-image.png",
-    "screenshot": "https://investigatepro.app/assets/screenshots/dashboard.png",
-    "featureList": "ICAM Methodology, AI Root Cause Coach, PEEPO Charts, Evidence Management, Action Tracking, Team Collaboration",
-    "offers": {
-        "@type": "AggregateOffer",
-        "lowPrice": "149",
-        "highPrice": "1500",
-        "priceCurrency": "USD",
-        "offerCount": "4"
-    },
-    "author": {
-        "@type": "Organization",
-        "name": "InvestigatePro",
-        "url": "https://investigatepro.app"
-    }
-}</script>
-<script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "InvestigatePro",
-    "url": "https://investigatepro.app",
-    "logo": "https://investigatepro.app/assets/brand/logo-horizontal-1200w.png",
-    "description": "AI-powered incident investigation software for mining, construction, and manufacturing safety teams.",
-    "sameAs": [
-        "https://www.linkedin.com/company/investigatepro"
-    ],
-    "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "sales",
-        "email": "hello@investigatepro.app",
-        "availableLanguage": "English"
-    }
-}</script>
-<script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://investigatepro.app/"
-        }
-    ]
-}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Devon Turner", "jobTitle": "Founder", "url": "https://investigatepro.app/", "worksFor": {"@type": "Organization", "name": "InvestigatePro", "url": "https://investigatepro.app"}, "description": "Founder of InvestigatePro. 15+ years leading mining safety across Africa and the Middle East, with an ICAM specialism.", "knowsAbout": ["ICAM investigation", "incident investigation", "mining safety"]}</script>
+<meta property="og:site_name" content="InvestigatePro">
+<meta property="og:title" content="Every incident, understood.">
+<meta property="og:description" content="Run a structured, evidence-led ICAM investigation step by step, with a coach inside every case. Start a 14-day trial or book a 15-minute demo.">
+<meta property="og:url" content="https://investigatepro.app/">
+<meta property="og:image" content="https://investigatepro.app/assets/img/og-home.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/montserrat-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/ip-next.css">
+<script>(function(){var h=document.documentElement,r=false;h.className=h.className.replace('no-js','js');try{r=localStorage.getItem('ip-reduce-motion')==='1'}catch(e){}if(!r&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){h.classList.add('motion-on')}else{h.classList.add('motion-off')}})();</script>
+<script src="/assets/ip-next.js" defer></script>
+<script src="/analytics.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"InvestigatePro","applicationCategory":"BusinessApplication","applicationSubCategory":"Incident investigation software","operatingSystem":"Web browser","description":"Structured, evidence-led ICAM incident investigation, guided step by step, with a coach inside every case.","url":"https://investigatepro.app/","offers":{"@type":"AggregateOffer","lowPrice":"149","highPrice":"1500","priceCurrency":"USD","offerCount":"4"}},{"@type":"Organization","name":"InvestigatePro","url":"https://investigatepro.app","logo":"https://investigatepro.app/assets/brand/logo-horizontal-1200w.png","sameAs":["https://www.linkedin.com/company/investigatepro"],"founder":{"@type":"Person","name":"Devon Turner"}},{"@type":"Person","name":"Devon Turner","jobTitle":"Founder and CEO","worksFor":{"@type":"Organization","name":"InvestigatePro"},"knowsAbout":["ICAM investigation","Incident investigation","Mining safety"]}]}</script>
 </head>
-<body>
-<a href="#main" class="skip-link">Skip to content</a>
-<div class="hairline" data-hairline aria-hidden="true"><i data-hairline-fill></i></div>
-<nav class="rail" data-rail aria-label="Section progress"><a href="#hero" data-for="hero"><span class="rail-lb">Overview</span><span class="tick" aria-hidden="true"></span></a><a href="#what" data-for="what"><span class="rail-lb">What changes</span><span class="tick" aria-hidden="true"></span></a><a href="#line" data-for="line"><span class="rail-lb">The line</span><span class="tick" aria-hidden="true"></span></a><a href="#coach" data-for="coach"><span class="rail-lb">The coach</span><span class="tick" aria-hidden="true"></span></a></nav>
-<main id="main">
-<section id="hero" class="dk" data-section="hero">
-<canvas class="hero-canvas" data-constellation role="img" aria-label="Evidence points converging into the four ICAM factor groups"></canvas><div class="cluster-labels" data-cluster-labels aria-hidden="true"><span class="cluster-label" data-cluster="0" style="left:86%;top:16%">People</span><span class="cluster-label" data-cluster="1" style="left:94%;top:33%">Equipment</span><span class="cluster-label" data-cluster="2" style="left:88%;top:62%">Environment</span><span class="cluster-label" data-cluster="3" style="left:55.00000000000001%;top:72%">Procedure</span><span class="cluster-label" data-cluster="4" style="left:52%;top:19%">Organisation</span></div>
-<nav class="hero-nav h-e" style="--d:420ms;--dl:0ms" aria-label="Main">
-  <div class="nav-row">
-    <a href="/" class="logo" aria-label="InvestigatePro home"><img class="lgm" src="/assets/brand/logo-horizontal-white.svg" alt="InvestigatePro" width="826" height="168" decoding="async"></a>
-    <div class="nav-links">
-      <a href="/platform.html">Platform</a><a href="/pricing.html">Pricing</a><a href="/resources.html">Resources</a><a href="/blog/">Blog</a>
-      <a href="https://app.investigatepro.app/login" class="nav-login">Login</a>
-      <a href="#pilot" class="nav-cta">Start a pilot</a>
-      <span class="nrail" aria-hidden="true"></span>
+<body class="page-home">
+<!--
+THESIS: The investigation assembling itself under the coach's light. Evidence converges into ICAM's four levels, the coach asks what a seasoned lead would ask, the investigator decides. Refuses hard-hat stock photos, feature-card grids and AI badges.
+OWN-WORLD: The 3a teal canvas at night. Product screens are the light source inside dark bezels; Neural Blue edge-light only while the coach works, Signal Mint for what the investigator does, Growth Green for verified. Montserrat 800 statements, Inter UI, tabular numerals, survey-station line work on every timeline.
+STORY: See the method run, trust that nothing is filed without the investigator, see the report it produces, find their role and their clock, start a 14-day trial.
+FIRST VIEWPORT: Left-aligned 'Every incident, understood.', 16-word lede, mint 'Start a 14-day trial' beside a ghost demo link, sample-report link right; below, the edge-lit case frame where the evidence field lands as the ICAM board.
+FORM: Framer-recording motion language, brief-pinned; raised by survey-plan line discipline. Seed 7fc136c2 (degraded roll, index 4).
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+-->
+
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__logo" href="/index.html" aria-label="InvestigatePro home"><img src="/assets/img/logo-horizontal-white.svg" alt="InvestigatePro" width="152" height="31"></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="/platform.html">Platform</a>
+      <div class="nav__menu">
+        <button class="nav__menu-btn" type="button" aria-expanded="false" aria-controls="nav-industries">Industries <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg></button>
+        <div class="nav__panel" id="nav-industries">
+          <a href="/industries/mining-incident-investigation.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,152V136a96.37,96.37,0,0,0-64-90.51V40a16,16,0,0,0-16-16H112A16,16,0,0,0,96,40v5.49A96.37,96.37,0,0,0,32,136v16a16,16,0,0,0-16,16v24a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V168A16,16,0,0,0,224,152Zm-16-16v16H160V62.67A80.36,80.36,0,0,1,208,136ZM144,40V152H112V40ZM48,136A80.36,80.36,0,0,1,96,62.67V152H48Zm176,56H32V168H224v24Z"/></svg><strong>Mining</strong><span>Underground, open-cut, processing and contractors</span></a>
+          <a href="/industries/oil-gas-incident-management.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></svg><strong>Oil and gas</strong><span>Upstream, midstream and field services</span></a>
+          <a href="/industries/manufacturing-root-cause-analysis.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M116,176a8,8,0,0,1-8,8H80a8,8,0,0,1,0-16h28A8,8,0,0,1,116,176Zm60-8H148a8,8,0,0,0,0,16h28a8,8,0,0,0,0-16Zm64,48a8,8,0,0,1-8,8H24a8,8,0,0,1,0-16h8V88a8,8,0,0,1,12.8-6.4L96,120V88a8,8,0,0,1,12.8-6.4l38.74,29.05L159.1,29.74A16.08,16.08,0,0,1,174.94,16h18.12A16.08,16.08,0,0,1,208.9,29.74l15,105.13s.08.78.08,1.13v72h8A8,8,0,0,1,240,216Zm-77.86-94.4,8.53,6.4h36.11L193.06,32H174.94ZM48,208H208V144H168a8,8,0,0,1-4.8-1.6l-14.4-10.8,0,0L112,104v32a8,8,0,0,1-12.8,6.4L48,104Z"/></svg><strong>Manufacturing</strong><span>Plant, maintenance and process safety</span></a>
+          <a href="/industries/construction-safety-software.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M230.91,172A8,8,0,0,1,228,182.91l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,36,169.09l92,53.65,92-53.65A8,8,0,0,1,230.91,172ZM220,121.09l-92,53.65L36,121.09A8,8,0,0,0,28,134.91l96,56a8,8,0,0,0,8.06,0l96-56A8,8,0,1,0,220,121.09ZM24,80a8,8,0,0,1,4-6.91l96-56a8,8,0,0,1,8.06,0l96,56a8,8,0,0,1,0,13.82l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,24,80Zm23.88,0L128,126.74,208.12,80,128,33.26Z"/></svg><strong>Construction</strong><span>Principal contractors and subcontractors</span></a>
+          <a href="/industries/engineering-incident-investigation.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M160,112h48a16,16,0,0,0,16-16V48a16,16,0,0,0-16-16H160a16,16,0,0,0-16,16V64H128a24,24,0,0,0-24,24v32H72v-8A16,16,0,0,0,56,96H24A16,16,0,0,0,8,112v32a16,16,0,0,0,16,16H56a16,16,0,0,0,16-16v-8h32v32a24,24,0,0,0,24,24h16v16a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V160a16,16,0,0,0-16-16H160a16,16,0,0,0-16,16v16H128a8,8,0,0,1-8-8V88a8,8,0,0,1,8-8h16V96A16,16,0,0,0,160,112ZM56,144H24V112H56v32Zm104,16h48v48H160Zm0-112h48V96H160Z"/></svg><strong>Engineering</strong><span>Projects, commissioning and field work</span></a>
+        </div>
+      </div>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/resources.html">Resources</a>
+      <a href="/blog/index.html">Blog</a>
+    </nav>
+    <div class="nav__actions">
+      <a class="nav__login" href="https://app.investigatepro.app/login">Login</a>
+      <a class="btn btn--primary btn--sm" href="https://app.investigatepro.app/signup">Start a 14-day trial</a>
+      <button class="nav__burger" type="button" aria-expanded="false" aria-controls="mmenu" aria-label="Open menu"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></svg></button>
     </div>
-    <button class="mm-btn" aria-expanded="false" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
   </div>
-  <div class="mm-panel">
-    <a href="/platform.html">Platform</a>
-    <a href="/pricing.html">Pricing</a>
-    <a href="/resources.html">Resources</a>
-    <a href="/blog/">Blog</a>
-    <a href="https://app.investigatepro.app/login" class="nav-login-m">Login</a>
-    <a href="#pilot" class="btn btn-mint">Start a pilot</a>
-    <a href="https://cal.com/investigatepro/15min" class="btn btn-outline">Book a 15-minute demo</a>
+</header>
+<div class="mmenu" id="mmenu" hidden role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="mmenu__top">
+    <a class="nav__logo" href="/index.html" aria-label="InvestigatePro home"><img src="/assets/img/logo-horizontal-white.svg" alt="InvestigatePro" width="140" height="28"></a>
+    <button class="nav__burger mmenu__close" type="button" aria-label="Close menu"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg></button>
   </div>
-</nav>
-<div class="hero-body">
-  <div class="wrap" data-parallax>
-    <div class="hero-copy">
-      <p class="eyebrow h-e" style="--d:520ms;--dl:100ms">The next step for ICAM</p>
-      <h1 class="h-e" style="--d:560ms;--dl:180ms">Every incident,<br>understood.</h1>
-      <p class="lede h-e" style="--d:560ms;--dl:280ms">For decades the depth of an investigation has come down to who happened to be available. InvestigatePro closes that gap: a structured, evidence-led ICAM investigation, guided step by step, with an AI coach that holds the practice of a career full of investigations — and puts it in front of whoever is running this one.</p>
-      <div class="hero-ctas h-e" style="--d:560ms;--dl:380ms">
-        <a href="#pilot" class="btn btn-mint btn-inline">Start a pilot</a>
-        <a href="#coach" class="textlink">See the coach at work</a>
-      </div>
-      <p class="micro hero-note h-e" style="--d:560ms;--dl:460ms">Set up the same day. No procurement cycle.</p>
-    </div>
-    <div class="hero-roles">
-      <div class="role-card h-e" style="--d:520ms;--dl:540ms">
-        <h2>I supervise a crew</h2>
-        <p>Run an investigation that stands up, without a week of paperwork.</p>
-      </div>
-      <div class="role-card h-e" style="--d:520ms;--dl:620ms">
-        <h2>I run HSE for the site</h2>
-        <p>One method across every case, every shift, every contractor.</p>
-      </div>
-      <div class="role-card h-e" style="--d:520ms;--dl:700ms">
-        <h2>I sign the findings</h2>
-        <p>Findings you can put in front of a board or a regulator.</p>
-      </div>
-    </div>
+  <nav class="mmenu__list" aria-label="Mobile">
+    <a href="/platform.html" style="--i:0">Platform <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/pricing.html" style="--i:1">Pricing <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/resources.html" style="--i:2">Resources <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/blog/index.html" style="--i:3">Blog <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/demo.html" style="--i:4">Book a demo <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+  </nav>
+  <div class="mmenu__sub">
+    <a href="/industries/mining-incident-investigation.html">Mining</a>
+    <a href="/industries/oil-gas-incident-management.html">Oil and gas</a>
+    <a href="/industries/manufacturing-root-cause-analysis.html">Manufacturing</a>
+    <a href="/industries/construction-safety-software.html">Construction</a>
+    <a href="/industries/engineering-incident-investigation.html">Engineering</a>
+    <a href="https://app.investigatepro.app/login">Login</a>
+  </div>
+  <div class="mmenu__cta">
+    <a class="btn btn--primary btn--block" href="https://app.investigatepro.app/signup">Start a 14-day trial</a>
+    <a class="btn btn--ghost btn--block" href="https://cal.com/investigatepro/15min">Book a 15-minute demo</a>
   </div>
 </div>
-</section>
-<section id="what" class="lt sec" data-section="what">
-  <div class="wrap">
-    <div class="sw-head">
-      <p class="eyebrow">What changes</p>
-      <h2>From guesswork to evidence.</h2>
-      <p class="lede">The method has never been the problem. What changes is that every finding is now held to something, and the guidance no longer depends on who is in the room.</p>
-    </div>
-    <div class="sw-track" aria-hidden="true">
-      <span class="from">GUESSWORK</span>
-      <span class="sw-line"><span class="sw-fill" data-sw-fill></span><span class="sw-marker" data-sw-marker></span></span>
-      <span class="to">EVIDENCE</span>
-    </div>
-    <div class="sw-pair">
-      <div class="sw-away">
-        <p class="sw-h">MOVING AWAY FROM</p>
-        <ul><li data-sw-away="0">Conclusions formed before the evidence is in.</li><li data-sw-away="1">Depth that depends on which specialist is free that week.</li><li data-sw-away="2">Organisational factors quietly skipped when time runs short.</li><li data-sw-away="3">A method that lives in a manual, not in the work.</li></ul>
+
+<main id="main">
+
+<!-- ============================================================
+     HERO: the case frame is the first thing the page proves
+     ============================================================ -->
+<section class="hero" id="hero" data-case>
+  <canvas class="hero__field" aria-hidden="true"></canvas>
+  <div class="hero__labels" aria-hidden="true"></div>
+
+  <div class="wrap hero__inner">
+    <div class="hero__copy">
+      <h1 class="display"><span class="ln">Every incident,</span> <span class="ln">understood.</span></h1>
+      <p class="lede">A structured, evidence-led ICAM investigation, guided step by step, with a coach inside every case.</p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="https://app.investigatepro.app/signup">Start a 14-day trial <svg class="i i--nudge" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+        <a class="btn btn--ghost" href="https://cal.com/investigatepro/15min">Book a 15-minute demo</a>
       </div>
-      <div class="sw-toward">
-        <span class="sw-edge" data-sw-edge aria-hidden="true"></span>
-        <p class="sw-h">MOVING TO</p>
-        <ul><li data-sw-toward="0">Every factor tied to the evidence that supports it.</li><li data-sw-toward="1">The same guided method for every investigator, every case.</li><li data-sw-toward="2">All four ICAM levels prompted — nothing left empty by accident.</li><li data-sw-toward="3">The method running alongside you as the case is built.</li></ul>
+    </div>
+    <a class="hero__aside link-arrow" href="/resources/full_investigation_2026-08-10.pdf"><span><b>Sample report</b> INC-2026-0001</span> <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+  </div>
+
+  <div class="wrap hero__stage">
+    <div class="frame" id="case-frame">
+      <div class="frame__screen">
+        <div class="frame__stage">
+          <div class="app" role="group" aria-label="Sample case INC-2026-0418 on the ICAM Analysis screen">
+            <div class="app-top">
+              <div class="app-brand"><img src="/assets/img/icon-color.svg" alt="" width="20" height="20">INVESTIGATEPRO</div>
+              <span class="app-avatar" aria-hidden="true">LI</span>
+            </div>
+            <div class="app-tabs" aria-hidden="true">
+              <span class="app-tab"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z"/></svg>Dashboard</span>
+              <span class="app-tab is-active"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm-8-80V80a8,8,0,0,1,16,0v56a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,172Z"/></svg>Events</span>
+              <span class="app-tab"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M168,152a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,152Zm-8-40H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16Zm56-64V216a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V48A16,16,0,0,1,56,32H92.26a47.92,47.92,0,0,1,71.48,0H200A16,16,0,0,1,216,48ZM96,64h64a32,32,0,0,0-64,0ZM200,48H173.25A47.93,47.93,0,0,1,176,64v8a8,8,0,0,1-8,8H88a8,8,0,0,1-8-8V64a47.93,47.93,0,0,1,2.75-16H56V216H200Z"/></svg>Actions</span>
+              <span class="app-tab"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Zm-32-80a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,136Zm0,32a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,168Z"/></svg>Reports</span>
+              <span class="app-tab"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M251.76,88.94l-120-64a8,8,0,0,0-7.52,0l-120,64a8,8,0,0,0,0,14.12L32,117.87v48.42a15.91,15.91,0,0,0,4.06,10.65C49.16,191.53,78.51,216,128,216a130,130,0,0,0,48-8.76V240a8,8,0,0,0,16,0V199.51a115.63,115.63,0,0,0,27.94-22.57A15.91,15.91,0,0,0,224,166.29V117.87l27.76-14.81a8,8,0,0,0,0-14.12ZM128,200c-43.27,0-68.72-21.14-80-33.71V126.4l76.24,40.66a8,8,0,0,0,7.52,0L176,143.47v46.34C163.4,195.69,147.52,200,128,200Zm80-33.75a97.83,97.83,0,0,1-16,14.25V134.93l16-8.53ZM188,118.94l-.22-.13-56-29.87a8,8,0,0,0-7.52,14.12L171,128l-43,22.93L25,96,128,41.07,231,96Z"/></svg>Training</span>
+            </div>
+            <div class="app-body">
+              <div class="app-crumbs">Events <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg> INC-2026-0418 <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg> ICAM Analysis</div>
+              <div class="app-case">
+                <div>
+                  <div class="app-case__title">Isolation failure during a conveyor gearbox change-out</div>
+                  <p>INC-2026-0418 <span aria-hidden="true">·</span> Night shift, transfer tower 2</p>
+                </div>
+                <div class="app-pills">
+                  <span class="app-pill app-pill--high">High potential</span>
+                  <span class="app-pill app-pill--teal">ICAM</span>
+                  <span class="app-pill">In progress</span>
+                </div>
+              </div>
+
+              <div class="app-card" style="position:relative">
+                <div class="app-card__head">
+                  <div>
+                    <div class="app-card__title"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M236.8,188.09,149.35,36.22h0a24.76,24.76,0,0,0-42.7,0L19.2,188.09a23.51,23.51,0,0,0,0,23.72A24.35,24.35,0,0,0,40.55,224h174.9a24.35,24.35,0,0,0,21.33-12.19A23.51,23.51,0,0,0,236.8,188.09ZM222.93,203.8a8.5,8.5,0,0,1-7.48,4.2H40.55a8.5,8.5,0,0,1-7.48-4.2,7.59,7.59,0,0,1,0-7.72L120.52,44.21a8.75,8.75,0,0,1,15,0l87.45,151.87A7.59,7.59,0,0,1,222.93,203.8ZM120,144V104a8,8,0,0,1,16,0v40a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,180Z"/></svg> ICAM Analysis</div>
+                    <div class="app-card__sub">Identify contributing factors across Individual, Task, Organisational, and Defence categories</div>
+                  </div>
+                  <div class="row" style="--gap:8px">
+                    <span class="app-btn app-btn--suggest"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M248,124a56.11,56.11,0,0,0-32-50.61V72a48,48,0,0,0-88-26.49A48,48,0,0,0,40,72v1.39a56,56,0,0,0,0,101.2V176a48,48,0,0,0,88,26.49A48,48,0,0,0,216,176v-1.41A56.09,56.09,0,0,0,248,124ZM88,208a32,32,0,0,1-31.81-28.56A55.87,55.87,0,0,0,64,180h8a8,8,0,0,0,0-16H64A40,40,0,0,1,50.67,86.27,8,8,0,0,0,56,78.73V72a32,32,0,0,1,64,0v68.26A47.8,47.8,0,0,0,88,128a8,8,0,0,0,0,16,32,32,0,0,1,0,64Zm104-44h-8a8,8,0,0,0,0,16h8a55.87,55.87,0,0,0,7.81-.56A32,32,0,1,1,168,144a8,8,0,0,0,0-16,47.8,47.8,0,0,0-32,12.26V72a32,32,0,0,1,64,0v6.73a8,8,0,0,0,5.33,7.54A40,40,0,0,1,192,164Zm16-52a8,8,0,0,1-8,8h-4a36,36,0,0,1-36-36V80a8,8,0,0,1,16,0v4a20,20,0,0,0,20,20h4A8,8,0,0,1,208,112ZM60,120H56a8,8,0,0,1,0-16h4A20,20,0,0,0,80,84V80a8,8,0,0,1,16,0v4A36,36,0,0,1,60,120Z"/></svg> AI Suggest</span>
+                    <span class="app-btn app-btn--teal app-btn--add"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg> Add Factor</span>
+                  </div>
+                </div>
+
+                <div class="icam-cols">
+                  <div class="icam-col icam-col--ind" data-col="ind">
+                    <div class="icam-col__head"><div class="icam-col__name">Individual</div><div class="icam-col__count" data-count-for="ind">1 factor(s)</div></div>
+                    <div class="icam-col__body">
+                      <div class="factor" data-at=".62">Work began after the drive was stopped locally, before isolation was tested at the lock points.<small>Evidence: E-05 fitter statement</small></div>
+                    </div>
+                  </div>
+                  <div class="icam-col icam-col--task" data-col="task">
+                    <div class="icam-col__head"><div class="icam-col__name">Task/Environment</div><div class="icam-col__count" data-count-for="task">1 factor(s)</div></div>
+                    <div class="icam-col__body">
+                      <div class="factor" data-at=".78">Night shift with a reduced crew; the five lock points sit on two levels of the transfer tower.<small>Evidence: E-04 scene photographs</small></div>
+                    </div>
+                  </div>
+                  <div class="icam-col icam-col--org" data-col="org">
+                    <div class="icam-col__head"><div class="icam-col__name">Organisation</div><div class="icam-col__count" data-count-for="org">1 factor(s)</div></div>
+                    <div class="icam-col__body">
+                      <div class="dropzone" hidden>No organisational factors yet</div>
+                      <div class="factor factor--org" data-accepted="true">Isolation verification relied on one person&rsquo;s check, with no independent confirmation required on night shift.<small>Accepted by the lead investigator</small></div>
+                    </div>
+                  </div>
+                  <div class="icam-col icam-col--def" data-col="def">
+                    <div class="icam-col__head"><div class="icam-col__name">Defences</div><div class="icam-col__count" data-count-for="def">2 factor(s)</div></div>
+                    <div class="icam-col__body">
+                      <div class="factor factor--def" data-at=".40">No test-for-dead step at the gearbox drive before work started.<small>Evidence: E-02 lock-point records</small></div>
+                      <div class="factor factor--def" data-at=".52">Isolation certificate not attached; two of five lock points without a verification record.<small>Evidence: E-01, E-02</small></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="suggest" aria-hidden="true">
+                  <div class="suggest__title"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M248,124a56.11,56.11,0,0,0-32-50.61V72a48,48,0,0,0-88-26.49A48,48,0,0,0,40,72v1.39a56,56,0,0,0,0,101.2V176a48,48,0,0,0,88,26.49A48,48,0,0,0,216,176v-1.41A56.09,56.09,0,0,0,248,124ZM88,208a32,32,0,0,1-31.81-28.56A55.87,55.87,0,0,0,64,180h8a8,8,0,0,0,0-16H64A40,40,0,0,1,50.67,86.27,8,8,0,0,0,56,78.73V72a32,32,0,0,1,64,0v68.26A47.8,47.8,0,0,0,88,128a8,8,0,0,0,0,16,32,32,0,0,1,0,64Zm104-44h-8a8,8,0,0,0,0,16h8a55.87,55.87,0,0,0,7.81-.56A32,32,0,1,1,168,144a8,8,0,0,0,0-16,47.8,47.8,0,0,0-32,12.26V72a32,32,0,0,1,64,0v6.73a8,8,0,0,0,5.33,7.54A40,40,0,0,1,192,164Zm16-52a8,8,0,0,1-8,8h-4a36,36,0,0,1-36-36V80a8,8,0,0,1,16,0v4a20,20,0,0,0,20,20h4A8,8,0,0,1,208,112ZM60,120H56a8,8,0,0,1,0-16h4A20,20,0,0,0,80,84V80a8,8,0,0,1,16,0v4A36,36,0,0,1,60,120Z"/></svg> AI-Suggested ICAM Factors</div>
+                  <div class="suggest__status" data-suggest-status>Analysing the full investigation&hellip;</div>
+                  <div class="suggest__progress">
+                    <div class="suggest__row"><span class="row" style="--gap:8px"><span class="spinner"></span>Analysing the full investigation</span><strong data-suggest-count>1 factor · 0 gaps</strong></div>
+                    <div class="bar"><i></i></div>
+                    <div class="micro" style="color:var(--app-muted)">Suggested factors appear as each one is formed. You can add them while the analysis continues.</div>
+                  </div>
+                  <div class="suggest__card" hidden>
+                    <div class="suggest__meta"><span class="suggest__lvl">Organisation</span><span>Cites E-02, E-05 and two linked events</span></div>
+                    <div class="suggest__text">Isolation verification relied on one person&rsquo;s check, with no independent confirmation required on night shift.</div>
+                    <div class="suggest__why"><b>Reasoning:</b> both earlier isolation events on this line cite the same handover step.</div>
+                    <span class="suggest__add"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></span>
+                  </div>
+                  <div class="suggest__foot"><span>Nothing is added until you accept it.</span><span class="app-btn">Close</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+    <div class="frame__meta">
+      <span class="frame__caption"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M247.31,124.76c-.35-.79-8.82-19.58-27.65-38.41C194.57,61.26,162.88,48,128,48S61.43,61.26,36.34,86.35C17.51,105.18,9,124,8.69,124.76a8,8,0,0,0,0,6.5c.35.79,8.82,19.57,27.65,38.4C61.43,194.74,93.12,208,128,208s66.57-13.26,91.66-38.34c18.83-18.83,27.3-37.61,27.65-38.4A8,8,0,0,0,247.31,124.76ZM128,192c-30.78,0-57.67-11.19-79.93-33.25A133.47,133.47,0,0,1,25,128,133.33,133.33,0,0,1,48.07,97.25C70.33,75.19,97.22,64,128,64s57.67,11.19,79.93,33.25A133.46,133.46,0,0,1,231.05,128C223.84,141.46,192.43,192,128,192Zm0-112a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Z"/></svg> Sample case, simplified from the product&rsquo;s ICAM Analysis screen.</span>
+      <button class="replay" type="button"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,128a96,96,0,0,1-94.71,96H128A95.38,95.38,0,0,1,62.1,197.8a8,8,0,0,1,11-11.63A80,80,0,1,0,71.43,71.39a3.07,3.07,0,0,1-.26.25L44.59,96H72a8,8,0,0,1,0,16H24a8,8,0,0,1-8-8V56a8,8,0,0,1,16,0V85.8L60.25,60A96,96,0,0,1,224,128Z"/></svg> Replay</button>
     </div>
   </div>
 </section>
-<section id="line" class="lt-cloud sec" data-section="line">
-  <div class="wrap">
-    <p class="eyebrow">The line this sits in</p>
-    <h2>A proven method. A new pace.</h2>
-    <div class="tl-track" aria-hidden="true"><span class="tl-fill" data-tl-fill></span><span class="tl-node" data-tl-node="0" data-gate="0.1" style="left:6%"></span><span class="tl-node" data-tl-node="1" data-gate="0.42" style="left:38%"></span><span class="tl-node blue" data-tl-node="2" data-gate="0.86" style="left:86%"></span></div>
-    <div class="tl-grid">
-      <div class="tl-entries">
-        <div class="tl-entry" data-tl-entry="0">
-          <h3>1990</h3>
-          <p>Reason’s model of organisational accidents — failures line up through the layers before anyone gets hurt.</p>
-        </div>
-        <div class="tl-entry" data-tl-entry="1">
-          <h3>1990s</h3>
-          <p>ICAM formalises it for heavy industry: people, task, environment, organisation — and absent or failed defences.</p>
-        </div>
-      </div>
-      <div class="now-card" data-now>
-        <span class="now-edge" aria-hidden="true"></span>
-        <p class="now-kicker">Now</p>
-        <h3>Decades of investigation practice, at the fingertips of whoever is running this one.</h3>
-        <p>The coach carries what a seasoned ICAM lead would ask — the evidence that should exist by now, the question that opens a witness up, the organisational factor that has already appeared twice on this line. It reads the case in front of it and prompts the next step, on every investigation, not only the ones a specialist can attend.</p>
-      </div>
-    </div>
+
+<!-- ============================================================
+     ROLES: where a logo wall would sit, we name the people
+     ============================================================ -->
+<section class="roles" aria-labelledby="roles-h">
+  <h2 id="roles-h" class="sr-only">Who InvestigatePro is for</h2>
+  <div class="wrap roles__grid">
+    <a class="role" href="#coach">
+      <h3>I supervise a crew</h3>
+      <p>Run an investigation that stands up, without a week of paperwork.</p>
+      <span class="link-arrow">See the coach at work <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span>
+    </a>
+    <a class="role" href="/platform.html">
+      <h3>I run HSE for the site</h3>
+      <p>One method across every case, every shift, every contractor.</p>
+      <span class="link-arrow">How the method runs <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span>
+    </a>
+    <a class="role" href="#report">
+      <h3>I sign the findings</h3>
+      <p>Findings you can put in front of a board or a regulator.</p>
+      <span class="link-arrow">Read a sample report <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span>
+    </a>
   </div>
 </section>
-<section id="coach" class="lt sec" data-section="coach">
+
+<!-- ============================================================
+     THE COACH AT WORK: stacked canvases, a pinned narrator
+     ============================================================ -->
+<section class="sec narr" id="coach" data-narrator aria-labelledby="coach-h">
   <div class="wrap">
-    <p class="eyebrow">The coach at work · Case 2026-0418</p>
-    <h2>The expertise sits in the case, not in the room.</h2>
-    <p class="lede">Isolation failure during a conveyor gearbox change-out, night shift. Four things the coach did with it — and what the investigator did back.</p>
-    <div class="coach-grid">
-      <ol class="spine" data-spine>
-        <span class="spine-track" aria-hidden="true"><span class="spine-fill" data-spine-fill></span></span>
-        <li class="beat" data-beat="0">
-      <span class="beat-node" aria-hidden="true"></span>
-      <div class="beat-head"><span class="badge badge-ai">Evidence gap</span><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
-      <p class="beat-text">Two of five lock points have no verification record, and the isolation certificate is not attached. Ask for the permit and the padlock register before the scene is released.</p>
-    </li>
-        <li class="beat" data-beat="1">
-      <span class="beat-node" aria-hidden="true"></span>
-      <div class="beat-head"><span class="badge badge-ai">Witness prompt</span><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
-      <p class="beat-text">Ask the fitter: at what point did you believe the drive was dead, and what told you so?</p>
-    </li>
-        <li class="beat" data-beat="2">
-      <span class="beat-node" aria-hidden="true"></span>
-      <div class="beat-head"><span class="badge badge-brand">Unexamined ICAM level</span><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
-      <p class="beat-text">Organisational factors are still empty. Two earlier isolation events on this line cite the same handover step.</p>
-    </li>
-        <li class="beat final" data-beat="3">
-      <span class="beat-node" aria-hidden="true"></span>
-      <div class="beat-head"><span class="badge badge-ai">AI-suggested factor</span><span class="factor-tag">Organisational</span><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
-      <p class="beat-text">Isolation verification relied on one person’s check, with no independent confirmation required on night shift.</p>
-      <div class="beat-actions">
-        <span class="btn btn-primary" style="cursor:default">Accept</span>
-        <span class="act">Edit</span>
-        <span class="act">Reject</span>
-        <span class="act-note">Nothing is filed until you accept it.</span>
-      </div>
-    </li>
+    <div class="sec-head">
+      <h2 id="coach-h">The expertise sits in the case, not in the room.</h2>
+      <p>Isolation failure during a conveyor gearbox change-out, night shift. Four things the coach did with it, and what the investigator did back.</p>
+    </div>
+
+    <div class="narr__grid">
+      <ol class="narr__beats">
+
+        <li class="beat" data-counts="6,0,0" data-cov=".58,.30,.05,.40" data-flag="">
+          <div class="frame beat__canvas"><div class="frame__screen"><div class="app">
+            <div class="app-body">
+              <div class="app-crumbs">INC-2026-0418 <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg> Evidence register</div>
+              <div class="app-card">
+                <div class="app-card__head">
+                  <div><div class="app-card__title"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H128a8,8,0,0,1,0-16h88A8,8,0,0,1,224,128ZM128,72h88a8,8,0,0,0,0-16H128a8,8,0,0,0,0,16Zm88,112H128a8,8,0,0,0,0,16h88a8,8,0,0,0,0-16ZM82.34,42.34,56,68.69,45.66,58.34A8,8,0,0,0,34.34,69.66l16,16a8,8,0,0,0,11.32,0l32-32A8,8,0,0,0,82.34,42.34Zm0,64L56,132.69,45.66,122.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32,0l32-32a8,8,0,0,0-11.32-11.32Zm0,64L56,196.69,45.66,186.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32,0l32-32a8,8,0,0,0-11.32-11.32Z"/></svg> Evidence register</div><div class="app-card__sub">Collected by PEEPO category</div></div>
+                  <span class="app-btn"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg> Add evidence</span>
+                </div>
+                <div class="ev-tabs" aria-hidden="true">
+                  <span class="ev-tab is-active">All <b>6</b></span><span class="ev-tab">People <b>1</b></span><span class="ev-tab">Environment <b>1</b></span><span class="ev-tab">Equipment <b>2</b></span><span class="ev-tab">Procedures <b>2</b></span><span class="ev-tab">Organisation <b>0</b></span>
+                </div>
+                <table class="ev-table">
+                  <thead><tr><th>Ref</th><th>Item</th><th class="ev-hide">Category</th><th>Status</th></tr></thead>
+                  <tbody>
+                    <tr><td class="ev-ref">E-01</td><td>Isolation certificate (permit to work)</td><td class="ev-hide">Procedures</td><td><span class="status status--miss">Missing</span></td></tr>
+                    <tr><td class="ev-ref">E-02</td><td>Lock-point verification records, L1 to L5</td><td class="ev-hide">Equipment</td><td><span class="status status--part">3 of 5</span></td></tr>
+                    <tr class="is-new"><td class="ev-ref">E-03</td><td>Padlock register, night shift</td><td class="ev-hide">Procedures</td><td><span class="status status--req">Requested</span></td></tr>
+                    <tr><td class="ev-ref">E-04</td><td>Scene photographs, gearbox drive</td><td class="ev-hide">Environment</td><td><span class="status status--ok">Attached</span></td></tr>
+                    <tr><td class="ev-ref">E-05</td><td>Fitter statement</td><td class="ev-hide">People</td><td><span class="status status--sched">Scheduled</span></td></tr>
+                    <tr><td class="ev-ref">E-06</td><td>SCADA event log, 21:00 to 23:30</td><td class="ev-hide">Equipment</td><td><span class="status status--ok">Attached</span></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div></div></div>
+          <div class="beat__cap">
+            <h3>Evidence gap</h3>
+            <p>The coach compares what should exist by now with what the case holds, and names what is missing.</p>
+            <span class="chip chip--blue"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/></svg> Evidence</span>
+          </div>
+          <div class="coach-card">
+            <div class="feed__kind"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M168,112a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,112Zm-8,24H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16Zm72-8A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-16,0A88,88,0,1,0,51.81,172.06a8,8,0,0,1,.66,6.54L40,216,77.4,203.53a7.85,7.85,0,0,1,2.53-.42,8,8,0,0,1,4,1.08A88,88,0,0,0,216,128Z"/></svg><span class="sr-only">Coach: </span>Evidence gap</div>
+            <p class="feed__msg">Two of five lock points have no verification record, and the isolation certificate is not attached. Ask for the permit and the padlock register before the scene is released.</p>
+            <div class="feed__reply"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg> Investigator requested the permit and the padlock register</div>
+          </div>
+        </li>
+
+        <li class="beat" data-counts="7,1,1" data-cov=".70,.64,.10,.52" data-flag="">
+          <div class="frame beat__canvas"><div class="frame__screen"><div class="app">
+            <div class="app-body">
+              <div class="app-crumbs">INC-2026-0418 <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg> Witnesses</div>
+              <div class="app-card">
+                <div class="app-card__head">
+                  <div><div class="app-card__title"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z"/></svg> Witness interviews</div><div class="app-card__sub">Planned for the next 24 hours</div></div>
+                  <span class="app-btn"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg> Add witness</span>
+                </div>
+                <div class="wit">
+                  <div class="wit__person">
+                    <div class="wit__who">Fitter <span>Interview 06:40, before handover</span></div>
+                    <div class="wit__q"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M140,180a12,12,0,1,1-12-12A12,12,0,0,1,140,180ZM128,72c-22.06,0-40,16.15-40,36v4a8,8,0,0,0,16,0v-4c0-11,10.77-20,24-20s24,9,24,20-10.77,20-24,20a8,8,0,0,0-8,8v8a8,8,0,0,0,16,0v-.72c18.24-3.35,32-17.9,32-35.28C168,88.15,150.06,72,128,72Zm104,56A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg> Walk me through the change-out from the moment the drive stopped.</div>
+                    <div class="wit__q is-coach"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M168,112a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,112Zm-8,24H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16Zm72-8A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-16,0A88,88,0,1,0,51.81,172.06a8,8,0,0,1,.66,6.54L40,216,77.4,203.53a7.85,7.85,0,0,1,2.53-.42,8,8,0,0,1,4,1.08A88,88,0,0,0,216,128Z"/></svg> At what point did you believe the drive was dead, and what told you so?</div>
+                  </div>
+                  <div class="wit__person">
+                    <div class="wit__who">Night-shift supervisor <span>Interview 07:15</span></div>
+                    <div class="wit__q"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M140,180a12,12,0,1,1-12-12A12,12,0,0,1,140,180ZM128,72c-22.06,0-40,16.15-40,36v4a8,8,0,0,0,16,0v-4c0-11,10.77-20,24-20s24,9,24,20-10.77,20-24,20a8,8,0,0,0-8,8v8a8,8,0,0,0,16,0v-.72c18.24-3.35,32-17.9,32-35.28C168,88.15,150.06,72,128,72Zm104,56A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg> How was the isolation handed over at the start of the job?</div>
+                  </div>
+                  <div class="wit__person">
+                    <div class="wit__who">Control-room operator <span>Interview 07:40</span></div>
+                    <div class="wit__q"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M140,180a12,12,0,1,1-12-12A12,12,0,0,1,140,180ZM128,72c-22.06,0-40,16.15-40,36v4a8,8,0,0,0,16,0v-4c0-11,10.77-20,24-20s24,9,24,20-10.77,20-24,20a8,8,0,0,0-8,8v8a8,8,0,0,0,16,0v-.72c18.24-3.35,32-17.9,32-35.28C168,88.15,150.06,72,128,72Zm104,56A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg> What did the conveyor show on your screen at 21:10?</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div></div></div>
+          <div class="beat__cap">
+            <h3>Witness prompt</h3>
+            <p>It drafts the question that opens a witness up, for the interview that is about to run.</p>
+            <span class="chip chip--blue"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z"/></svg> Witnesses</span>
+          </div>
+          <div class="coach-card">
+            <div class="feed__kind"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M168,112a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,112Zm-8,24H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16Zm72-8A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-16,0A88,88,0,1,0,51.81,172.06a8,8,0,0,1,.66,6.54L40,216,77.4,203.53a7.85,7.85,0,0,1,2.53-.42,8,8,0,0,1,4,1.08A88,88,0,0,0,216,128Z"/></svg><span class="sr-only">Coach: </span>Witness prompt</div>
+            <p class="feed__msg">Ask the fitter: at what point did you believe the drive was dead, and what told you so?</p>
+            <div class="feed__reply"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg> Added to the fitter&rsquo;s interview plan</div>
+          </div>
+        </li>
+
+        <li class="beat" data-counts="9,2,2" data-cov=".72,.68,.12,.60" data-flag="org">
+          <div class="frame beat__canvas"><div class="frame__screen"><div class="app">
+            <div class="app-body">
+              <div class="app-crumbs">INC-2026-0418 <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg> ICAM Analysis</div>
+              <div class="app-card">
+                <div class="app-card__head">
+                  <div><div class="app-card__title"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M236.8,188.09,149.35,36.22h0a24.76,24.76,0,0,0-42.7,0L19.2,188.09a23.51,23.51,0,0,0,0,23.72A24.35,24.35,0,0,0,40.55,224h174.9a24.35,24.35,0,0,0,21.33-12.19A23.51,23.51,0,0,0,236.8,188.09ZM222.93,203.8a8.5,8.5,0,0,1-7.48,4.2H40.55a8.5,8.5,0,0,1-7.48-4.2,7.59,7.59,0,0,1,0-7.72L120.52,44.21a8.75,8.75,0,0,1,15,0l87.45,151.87A7.59,7.59,0,0,1,222.93,203.8ZM120,144V104a8,8,0,0,1,16,0v40a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,180Z"/></svg> ICAM Analysis</div><div class="app-card__sub">Coverage across the four levels</div></div>
+                  <span class="app-btn app-btn--suggest"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M248,124a56.11,56.11,0,0,0-32-50.61V72a48,48,0,0,0-88-26.49A48,48,0,0,0,40,72v1.39a56,56,0,0,0,0,101.2V176a48,48,0,0,0,88,26.49A48,48,0,0,0,216,176v-1.41A56.09,56.09,0,0,0,248,124ZM88,208a32,32,0,0,1-31.81-28.56A55.87,55.87,0,0,0,64,180h8a8,8,0,0,0,0-16H64A40,40,0,0,1,50.67,86.27,8,8,0,0,0,56,78.73V72a32,32,0,0,1,64,0v68.26A47.8,47.8,0,0,0,88,128a8,8,0,0,0,0,16,32,32,0,0,1,0,64Zm104-44h-8a8,8,0,0,0,0,16h8a55.87,55.87,0,0,0,7.81-.56A32,32,0,1,1,168,144a8,8,0,0,0,0-16,47.8,47.8,0,0,0-32,12.26V72a32,32,0,0,1,64,0v6.73a8,8,0,0,0,5.33,7.54A40,40,0,0,1,192,164Zm16-52a8,8,0,0,1-8,8h-4a36,36,0,0,1-36-36V80a8,8,0,0,1,16,0v4a20,20,0,0,0,20,20h4A8,8,0,0,1,208,112ZM60,120H56a8,8,0,0,1,0-16h4A20,20,0,0,0,80,84V80a8,8,0,0,1,16,0v4A36,36,0,0,1,60,120Z"/></svg> AI Suggest</span>
+                </div>
+                <div class="icam-cols">
+                  <div class="icam-col icam-col--ind"><div class="icam-col__head"><div class="icam-col__name">Individual</div><div class="icam-col__count">1 factor(s)</div></div><div class="icam-col__body"><div class="factor">Work began after a local stop, before isolation was tested.</div></div></div>
+                  <div class="icam-col icam-col--task"><div class="icam-col__head"><div class="icam-col__name">Task/Environment</div><div class="icam-col__count">1 factor(s)</div></div><div class="icam-col__body"><div class="factor">Night shift, reduced crew, lock points on two levels.</div></div></div>
+                  <div class="icam-col icam-col--org is-flagged"><div class="icam-col__head"><div class="icam-col__name">Organisation</div><div class="icam-col__count">0 factor(s)</div></div><div class="icam-col__body"><div class="dropzone">No organisational factors yet</div></div></div>
+                  <div class="icam-col icam-col--def"><div class="icam-col__head"><div class="icam-col__name">Defences</div><div class="icam-col__count">2 factor(s)</div></div><div class="icam-col__body"><div class="factor factor--def">No test-for-dead step at the drive.</div><div class="factor factor--def">Certificate missing; 2 of 5 lock points unverified.</div></div></div>
+                </div>
+                <div class="linked" aria-label="Linked events">
+                  <span><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M240,88.23a54.43,54.43,0,0,1-16,37L189.25,160a54.27,54.27,0,0,1-38.63,16h-.05A54.63,54.63,0,0,1,96,119.84a8,8,0,0,1,16,.45A38.62,38.62,0,0,0,150.58,160h0a38.39,38.39,0,0,0,27.31-11.31l34.75-34.75a38.63,38.63,0,0,0-54.63-54.63l-11,11A8,8,0,0,1,135.7,59l11-11A54.65,54.65,0,0,1,224,48,54.86,54.86,0,0,1,240,88.23ZM109,185.66l-11,11A38.41,38.41,0,0,1,70.6,208h0a38.63,38.63,0,0,1-27.29-65.94L78,107.31A38.63,38.63,0,0,1,144,135.71a8,8,0,0,0,16,.45A54.86,54.86,0,0,0,144,96a54.65,54.65,0,0,0-77.27,0L32,130.75A54.62,54.62,0,0,0,70.56,224h0a54.28,54.28,0,0,0,38.64-16l11-11A8,8,0,0,0,109,185.66Z"/></svg> INC-2025-1107 · handover step</span>
+                  <span><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M240,88.23a54.43,54.43,0,0,1-16,37L189.25,160a54.27,54.27,0,0,1-38.63,16h-.05A54.63,54.63,0,0,1,96,119.84a8,8,0,0,1,16,.45A38.62,38.62,0,0,0,150.58,160h0a38.39,38.39,0,0,0,27.31-11.31l34.75-34.75a38.63,38.63,0,0,0-54.63-54.63l-11,11A8,8,0,0,1,135.7,59l11-11A54.65,54.65,0,0,1,224,48,54.86,54.86,0,0,1,240,88.23ZM109,185.66l-11,11A38.41,38.41,0,0,1,70.6,208h0a38.63,38.63,0,0,1-27.29-65.94L78,107.31A38.63,38.63,0,0,1,144,135.71a8,8,0,0,0,16,.45A54.86,54.86,0,0,0,144,96a54.65,54.65,0,0,0-77.27,0L32,130.75A54.62,54.62,0,0,0,70.56,224h0a54.28,54.28,0,0,0,38.64-16l11-11A8,8,0,0,0,109,185.66Z"/></svg> INC-2026-0122 · handover step</span>
+                </div>
+              </div>
+            </div>
+          </div></div></div>
+          <div class="beat__cap">
+            <h3>Unexamined ICAM level</h3>
+            <p>It flags a level left empty and points to earlier events on the same line.</p>
+            <span class="chip chip--blue"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M160,112h48a16,16,0,0,0,16-16V48a16,16,0,0,0-16-16H160a16,16,0,0,0-16,16V64H128a24,24,0,0,0-24,24v32H72v-8A16,16,0,0,0,56,96H24A16,16,0,0,0,8,112v32a16,16,0,0,0,16,16H56a16,16,0,0,0,16-16v-8h32v32a24,24,0,0,0,24,24h16v16a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V160a16,16,0,0,0-16-16H160a16,16,0,0,0-16,16v16H128a8,8,0,0,1-8-8V88a8,8,0,0,1,8-8h16V96A16,16,0,0,0,160,112ZM56,144H24V112H56v32Zm104,16h48v48H160Zm0-112h48V96H160Z"/></svg> ICAM levels</span>
+          </div>
+          <div class="coach-card">
+            <div class="feed__kind"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M168,112a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,112Zm-8,24H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16Zm72-8A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-16,0A88,88,0,1,0,51.81,172.06a8,8,0,0,1,.66,6.54L40,216,77.4,203.53a7.85,7.85,0,0,1,2.53-.42,8,8,0,0,1,4,1.08A88,88,0,0,0,216,128Z"/></svg><span class="sr-only">Coach: </span>Unexamined ICAM level</div>
+            <p class="feed__msg">Organisational factors are still empty. Two earlier isolation events on this line cite the same handover step.</p>
+            <div class="feed__reply"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg> Investigator opened both linked events</div>
+          </div>
+        </li>
+
+        <li class="beat" data-counts="9,3,2" data-cov=".78,.74,.86,.66" data-flag="">
+          <div class="frame beat__canvas"><div class="frame__screen"><div class="app">
+            <div class="app-body">
+              <div class="app-crumbs">INC-2026-0418 <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg> ICAM Analysis <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg> Suggested factors</div>
+              <div class="app-card">
+                <div class="app-card__head">
+                  <div><div class="app-card__title"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M248,124a56.11,56.11,0,0,0-32-50.61V72a48,48,0,0,0-88-26.49A48,48,0,0,0,40,72v1.39a56,56,0,0,0,0,101.2V176a48,48,0,0,0,88,26.49A48,48,0,0,0,216,176v-1.41A56.09,56.09,0,0,0,248,124ZM88,208a32,32,0,0,1-31.81-28.56A55.87,55.87,0,0,0,64,180h8a8,8,0,0,0,0-16H64A40,40,0,0,1,50.67,86.27,8,8,0,0,0,56,78.73V72a32,32,0,0,1,64,0v68.26A47.8,47.8,0,0,0,88,128a8,8,0,0,0,0,16,32,32,0,0,1,0,64Zm104-44h-8a8,8,0,0,0,0,16h8a55.87,55.87,0,0,0,7.81-.56A32,32,0,1,1,168,144a8,8,0,0,0,0-16,47.8,47.8,0,0,0-32,12.26V72a32,32,0,0,1,64,0v6.73a8,8,0,0,0,5.33,7.54A40,40,0,0,1,192,164Zm16-52a8,8,0,0,1-8,8h-4a36,36,0,0,1-36-36V80a8,8,0,0,1,16,0v4a20,20,0,0,0,20,20h4A8,8,0,0,1,208,112ZM60,120H56a8,8,0,0,1,0-16h4A20,20,0,0,0,80,84V80a8,8,0,0,1,16,0v4A36,36,0,0,1,60,120Z"/></svg> AI-Suggested ICAM Factors</div><div class="app-card__sub">Analysis complete: 1 factor, 0 gaps</div></div>
+                </div>
+                <div style="padding:0 16px 16px;display:grid;gap:10px">
+                  <div class="suggest__card">
+                    <div class="suggest__meta"><span class="suggest__lvl">Organisation</span><span>Cites E-02, E-05, INC-2025-1107</span></div>
+                    <div class="suggest__text">Isolation verification relied on one person&rsquo;s check, with no independent confirmation required on night shift.</div>
+                    <div class="suggest__why"><b>Reasoning:</b> the lock-point records carry one signature each, and both earlier events cite the same handover step.</div>
+                    <div class="row" style="--gap:8px;margin-top:4px">
+                      <span class="app-btn app-btn--teal"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg> Accept</span>
+                      <span class="app-btn">Edit</span>
+                      <span class="app-btn">Reject</span>
+                    </div>
+                  </div>
+                  <div class="icam-detail"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M88,96a8,8,0,0,1,8-8h64a8,8,0,0,1,0,16H96A8,8,0,0,1,88,96Zm8,40h64a8,8,0,0,0,0-16H96a8,8,0,0,0,0,16Zm32,16H96a8,8,0,0,0,0,16h32a8,8,0,0,0,0-16ZM224,48V156.69A15.86,15.86,0,0,1,219.31,168L168,219.31A15.86,15.86,0,0,1,156.69,224H48a16,16,0,0,1-16-16V48A16,16,0,0,1,48,32H208A16,16,0,0,1,224,48ZM48,208H152V160a8,8,0,0,1,8-8h48V48H48Zm120-40v28.7L196.69,168Z"/></svg> The report lists this factor under the lead investigator&rsquo;s name, with its sources.</div>
+                </div>
+              </div>
+            </div>
+          </div></div></div>
+          <div class="beat__cap">
+            <h3>Suggested factor</h3>
+            <p>It drafts a factor with its reasoning and sources. The investigator accepts, edits or rejects it.</p>
+            <span class="chip chip--mint"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg> You decide</span>
+          </div>
+          <div class="coach-card">
+            <div class="feed__kind"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M168,112a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,112Zm-8,24H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16Zm72-8A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-16,0A88,88,0,1,0,51.81,172.06a8,8,0,0,1,.66,6.54L40,216,77.4,203.53a7.85,7.85,0,0,1,2.53-.42,8,8,0,0,1,4,1.08A88,88,0,0,0,216,128Z"/></svg><span class="sr-only">Coach: </span>Suggested factor, organisational</div>
+            <p class="feed__msg">Isolation verification relied on one person&rsquo;s check, with no independent confirmation required on night shift.</p>
+            <div class="feed__reply"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg> Accepted by the lead investigator</div>
+          </div>
+        </li>
       </ol>
-      <aside class="case-panel" data-case-panel aria-label="CASE 2026-0418 · PROGRESS">
-        <p class="case-kicker">CASE 2026-0418 · PROGRESS</p>
-        <div class="case-rows">
-          <div class="case-row"><span>Evidence items</span><b data-counter="0" data-from="4" data-to="9" role="status" aria-live="off">9</b></div>
-          <div class="case-row"><span>Factors named</span><b data-counter="1" data-from="0" data-to="3" role="status" aria-live="off">3</b></div>
-          <div class="case-row"><span>Defences assessed</span><b data-counter="2" data-from="0" data-to="2" role="status" aria-live="off">2</b></div>
+
+      <aside class="narr__panel" aria-label="The coach, following the case">
+        <div class="panel frame">
+          <div class="panel__head"><span><b>INC-2026-0418</b> · Isolation failure</span><span class="chip chip--blue"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M248,124a56.11,56.11,0,0,0-32-50.61V72a48,48,0,0,0-88-26.49A48,48,0,0,0,40,72v1.39a56,56,0,0,0,0,101.2V176a48,48,0,0,0,88,26.49A48,48,0,0,0,216,176v-1.41A56.09,56.09,0,0,0,248,124ZM88,208a32,32,0,0,1-31.81-28.56A55.87,55.87,0,0,0,64,180h8a8,8,0,0,0,0-16H64A40,40,0,0,1,50.67,86.27,8,8,0,0,0,56,78.73V72a32,32,0,0,1,64,0v68.26A47.8,47.8,0,0,0,88,128a8,8,0,0,0,0,16,32,32,0,0,1,0,64Zm104-44h-8a8,8,0,0,0,0,16h8a55.87,55.87,0,0,0,7.81-.56A32,32,0,1,1,168,144a8,8,0,0,0,0-16,47.8,47.8,0,0,0-32,12.26V72a32,32,0,0,1,64,0v6.73a8,8,0,0,0,5.33,7.54A40,40,0,0,1,192,164Zm16-52a8,8,0,0,1-8,8h-4a36,36,0,0,1-36-36V80a8,8,0,0,1,16,0v4a20,20,0,0,0,20,20h4A8,8,0,0,1,208,112ZM60,120H56a8,8,0,0,1,0-16h4A20,20,0,0,0,80,84V80a8,8,0,0,1,16,0v4A36,36,0,0,1,60,120Z"/></svg> Coach</span></div>
+          <dl class="counts">
+            <div><dt>Evidence items</dt><dd data-count>9</dd></div>
+            <div><dt>Factors named</dt><dd data-count>3</dd></div>
+            <div><dt>Defences assessed</dt><dd data-count>2</dd></div>
+          </dl>
+          <div class="pcov">
+            <div class="pcov__title">ICAM coverage</div>
+            <div class="pcov__row" data-level="ind"><span>Individual</span><span class="pcov__bar"><i style="--v:.78;--cc:#85C5F8"></i></span></div>
+            <div class="pcov__row" data-level="task"><span>Task/Environment</span><span class="pcov__bar"><i style="--v:.74;--cc:#9DD39F"></i></span></div>
+            <div class="pcov__row" data-level="org"><span>Organisation</span><span class="pcov__bar"><i style="--v:.86;--cc:#64FFDA"></i></span></div>
+            <div class="pcov__row" data-level="def"><span>Defences</span><span class="pcov__bar"><i style="--v:.66;--cc:#FF8A80"></i></span></div>
+          </div>
+          <div class="feed" aria-live="polite">
+            <div class="reading" hidden><span>Reading the case</span><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
+            <div class="feed__kind"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M168,112a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,112Zm-8,24H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16Zm72-8A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-16,0A88,88,0,1,0,51.81,172.06a8,8,0,0,1,.66,6.54L40,216,77.4,203.53a7.85,7.85,0,0,1,2.53-.42,8,8,0,0,1,4,1.08A88,88,0,0,0,216,128Z"/></svg><span class="sr-only">Coach: </span>Suggested factor, organisational</div>
+            <p class="feed__msg">Isolation verification relied on one person&rsquo;s check, with no independent confirmation required on night shift.</p>
+            <div class="feed__reply"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg> Accepted by the lead investigator</div>
+          </div>
+          <div class="panel__foot">Nothing is filed until you accept it.</div>
         </div>
-        <p class="cov-kicker">ICAM COVERAGE</p>
-          <p class="covlabel">People</p>
-          <div class="covbar" role="img" aria-label="People coverage 78%"><i data-cov="0" data-stops="0.16,0.58,0.7,0.72,0.78" style="--w:78%"></i></div>
-          <p class="covlabel">Task</p>
-          <div class="covbar" role="img" aria-label="Task coverage 74%"><i data-cov="1" data-stops="0.1,0.3,0.64,0.68,0.74" style="--w:74%"></i></div>
-          <p class="covlabel">Environment</p>
-          <div class="covbar" role="img" aria-label="Environment coverage 60%"><i data-cov="2" data-stops="0.06,0.18,0.28,0.52,0.6" style="--w:60%"></i></div>
-          <p class="covlabel">Organisation <span class="cov-flag" data-cov-flag>COACH</span></p>
-          <div class="covbar blue" role="img" aria-label="Organisation coverage 86%"><i data-cov="3" data-stops="0.02,0.05,0.1,0.44,0.86" style="--w:86%"></i></div>
       </aside>
     </div>
-    <div class="pilot" id="pilot" data-pilot>
-      <span id="demo" style="position:relative;top:-80px" aria-hidden="true"></span>
-      <h2>Run the next investigation with the method built in.</h2>
-      <p class="lede">Three fields, and your workspace is ready the same day. Or see it on a real case first — <a href="https://cal.com/investigatepro/15min" style="font-weight:600">book a 15-minute demo</a>.</p>
-      <form class="pilot-form" data-capture="pilot_request" data-success="Received — we’ll set your pilot up today and confirm by email.">
-        <div class="pilot-label"><strong>Start a pilot</strong><span>Three fields. Set up the same day.</span></div>
-        <input class="field" type="text" name="name" required placeholder="Name" aria-label="Name">
-        <input class="field" type="text" name="company" required placeholder="Site or operation" aria-label="Site or operation">
-        <input class="field f-email" type="email" name="email" required placeholder="Work email" aria-label="Work email">
-        <button type="submit" class="btn btn-primary">Start</button>
-        <p class="form-msg" role="status"></p>
+  </div>
+</section>
+
+<!-- ============================================================
+     FROM GUESSWORK TO EVIDENCE: two states, changed by the scroll
+     ============================================================ -->
+<section class="sec swap" id="what" aria-labelledby="what-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="what-h">From guesswork to evidence.</h2>
+      <p>The method has never been the problem. What changes is that every finding is held to something, and the guidance no longer depends on who is in the room.</p>
+    </div>
+    <div class="swap__head" aria-hidden="true"><span>Moving away from</span><span></span><span>Moving to</span></div>
+    <ol class="swap__rows">
+      <li class="swap__row"><p class="swap__away">Conclusions formed before the evidence is in.</p><span class="swap__arrow" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span><p class="swap__to">Every factor tied to the evidence that supports it.</p></li>
+      <li class="swap__row"><p class="swap__away">Depth that depends on which specialist is free that week.</p><span class="swap__arrow" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span><p class="swap__to">The same guided method for every investigator, every case.</p></li>
+      <li class="swap__row"><p class="swap__away">Organisational factors quietly skipped when time runs short.</p><span class="swap__arrow" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span><p class="swap__to">All four ICAM levels prompted, so nothing is left empty by accident.</p></li>
+      <li class="swap__row"><p class="swap__away">A method that lives in a manual, not in the work.</p><span class="swap__arrow" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span><p class="swap__to">The method running alongside you as the case is built.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================================================
+     THE WHOLE CASE: one container, hairline cells, each plays once
+     ============================================================ -->
+<section class="sec" id="platform" aria-labelledby="platform-h">
+  <div class="wrap">
+    <div class="sec-head sec-head--row">
+      <div class="stack" style="--gap:18px">
+        <h2 id="platform-h">From first notification to a report you can sign.</h2>
+        <p>One method carried through the whole case. Sample data from INC-2026-0418.</p>
+      </div>
+      <a class="btn btn--ghost" href="/platform.html">See the platform <svg class="i i--nudge" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    </div>
+
+    <div class="bento">
+      <article class="cell cell--ev" data-cell>
+        <div class="cell__viz" aria-hidden="true">
+          <div class="peepo">
+            <div class="peepo__row"><span>People</span><span class="peepo__bar"><i style="--v:.34"></i></span><b data-to="1" data-from="0">1</b></div>
+            <div class="peepo__row"><span>Environment</span><span class="peepo__bar"><i style="--v:.34"></i></span><b data-to="1" data-from="0">1</b></div>
+            <div class="peepo__row"><span>Equipment</span><span class="peepo__bar"><i style="--v:.9"></i></span><b data-to="3" data-from="0">3</b></div>
+            <div class="peepo__row"><span>Procedures</span><span class="peepo__bar"><i style="--v:.9"></i></span><b data-to="3" data-from="0">3</b></div>
+            <div class="peepo__row"><span>Organisation</span><span class="peepo__bar"><i style="--v:.34"></i></span><b data-to="1" data-from="0">1</b></div>
+          </div>
+          <div class="ev-list">
+            <div class="ev-line"><span class="mono">E-02</span>Lock-point verification records<span class="chip chip--amber">3 of 5</span></div>
+            <div class="ev-line"><span class="mono">E-01</span>Isolation certificate<span class="chip chip--amber">Missing</span></div>
+          </div>
+        </div>
+        <div class="cell__txt">
+          <a href="/platform.html">Evidence, by PEEPO <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+          <p>People, environment, equipment, procedures and organisation. Every item gets a reference the findings can cite.</p>
+        </div>
+      </article>
+
+      <article class="cell cell--ic" data-cell>
+        <div class="cell__viz" aria-hidden="true">
+          <div class="levels">
+            <div class="level level--org"><div class="level__top"><span class="level__name">Organisational factors</span><span class="level__n" data-to="1" data-from="0">1</span></div><p>Verification relied on one person&rsquo;s check on night shift.</p></div>
+            <div class="level level--task"><div class="level__top"><span class="level__name">Task or environmental conditions</span><span class="level__n" data-to="1" data-from="0">1</span></div><p>Night shift, reduced crew, lock points on two levels.</p></div>
+            <div class="level level--ind"><div class="level__top"><span class="level__name">Individual or team actions</span><span class="level__n" data-to="1" data-from="0">1</span></div><p>Work began after a local stop, before isolation was tested.</p></div>
+            <div class="level level--def"><div class="level__top"><span class="level__name">Absent or failed defences</span><span class="level__n" data-to="2" data-from="0">2</span></div><p>No test-for-dead step at the gearbox drive.</p></div>
+            <div class="level level--event"><div class="level__top"><span class="level__name">The event</span></div><p>INC-2026-0418, isolation failure during a gearbox change-out.</p></div>
+          </div>
+        </div>
+        <div class="cell__txt">
+          <a href="/platform.html">All four ICAM levels <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+          <p>Read from the organisation down to the event. Each level is prompted on every case, so an empty one is a finding, not an oversight.</p>
+        </div>
+      </article>
+
+      <article class="cell cell--sq" data-cell>
+        <div class="cell__viz" aria-hidden="true">
+          <div class="traverse">
+            <div class="traverse__line"><i></i></div>
+            <div class="station" style="left:8%"><time>20:52</time><i></i><span>Change-out begins</span></div>
+            <div class="station" style="left:29%"><time>21:04</time><i></i><span>Stopped at local panel</span></div>
+            <div class="station" style="left:50%"><time>21:10</time><i></i><span>Work starts at gearbox</span></div>
+            <div class="station is-key" style="left:71%"><time>21:12</time><i></i><span>Drive restarts from control room</span></div>
+            <div class="station" style="left:91%"><time>21:13</time><i></i><span>Emergency stop, no injury</span></div>
+          </div>
+        </div>
+        <div class="cell__txt">
+          <a href="/platform.html">Sequence of events <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+          <p>Times and sources on one line, so the gaps in the story show before the analysis starts.</p>
+        </div>
+      </article>
+
+      <article class="cell cell--ct" data-cell>
+        <div class="cell__viz" aria-hidden="true">
+          <ol class="hoc">
+            <li>Elimination</li>
+            <li>Substitution</li>
+            <li class="is-here">Engineering <b>Interlock on remote restart</b></li>
+            <li class="is-here">Administrative <b>Two-person verification</b></li>
+            <li>PPE</li>
+          </ol>
+        </div>
+        <div class="cell__txt">
+          <a href="/platform.html">Actions on the hierarchy of controls <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+          <p>Each corrective action sits on the hierarchy, so a retraining-only fix is visible for what it is.</p>
+        </div>
+      </article>
+
+      <article class="cell cell--vf" data-cell>
+        <div class="cell__viz" aria-hidden="true">
+          <div class="flow">
+            <div class="flow__col"><p class="flow__h">In progress</p><div class="flow__card">Update isolation procedure</div><div class="flow__card flow__card--moving">Interlock on remote restart</div></div>
+            <div class="flow__col"><p class="flow__h">Completed</p></div>
+            <div class="flow__col flow__col--ver"><p class="flow__h">Verified</p><div class="flow__card">Two-person verification</div></div>
+          </div>
+        </div>
+        <div class="cell__txt">
+          <a href="/platform.html">Verified, not just closed <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+          <p>An action reaches verified when someone checks the control works. Owner and due date stay on the record.</p>
+        </div>
+      </article>
+
+      <article class="cell cell--rp" data-cell>
+        <div class="cell__viz" aria-hidden="true">
+          <div class="pagestack">
+            <img src="/assets/img/report-p01.webp" alt="" width="560" height="792" loading="lazy">
+            <img src="/assets/img/report-p08.webp" alt="" width="560" height="792" loading="lazy">
+          </div>
+        </div>
+        <div class="cell__txt">
+          <a href="#report">A report you can sign <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+          <p>One click renders the full investigation report, attributed to the lead investigator, as PDF or PPTX.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     THE REPORT: real pages from a real generated report
+     ============================================================ -->
+<section class="sec" id="report" aria-labelledby="report-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="report-h">The report is the case, formatted.</h2>
+      <p>A report generated in the demo workspace: INC-2026-0001, a conveyor guard left off after a belt change. Fifteen pages, each cause traced to the evidence behind it.</p>
+    </div>
+    <div class="report__rail">
+      <figure class="rpage"><div class="rpage__img"><img src="/assets/img/report-p01.webp" alt="Report cover: Injury, INC-2026-0001, with document control table" width="560" height="792" loading="lazy"></div><figcaption>Cover and document control</figcaption></figure>
+      <figure class="rpage"><div class="rpage__img"><img src="/assets/img/report-p08.webp" alt="ICAM factor analysis page showing absent or failed defences, individual actions and task conditions" width="560" height="792" loading="lazy"></div><figcaption>ICAM factor analysis, all four levels reported</figcaption></figure>
+      <figure class="rpage"><div class="rpage__img"><img src="/assets/img/report-p10.webp" alt="Causal analysis page with a diagram linking causes across ICAM levels" width="560" height="792" loading="lazy"></div><figcaption>Causal analysis, each cause linked to its basis</figcaption></figure>
+      <figure class="rpage"><div class="rpage__img"><img src="/assets/img/report-p13.webp" alt="Corrective actions page listing actions with control type, owner and due date" width="560" height="792" loading="lazy"></div><figcaption>Corrective actions with control type, owner and date</figcaption></figure>
+    </div>
+    <div class="report__foot">
+      <a class="btn btn--ghost" href="/resources/full_investigation_2026-08-10.pdf">Read the sample report <svg class="i i--nudge" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+      <span class="muted">PDF, 15 pages. Demo Mining Corp is a fictional workspace.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     THE LINE THIS SITS IN: a survey line with three stations
+     ============================================================ -->
+<section class="sec" id="line" aria-labelledby="line-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="line-h">A proven method. A new pace.</h2>
+    </div>
+    <div class="lineage">
+      <div class="lineage__line" aria-hidden="true"><i></i></div>
+      <div class="lstation">
+        <time>1990</time>
+        <p>Reason&rsquo;s model of organisational accidents: failures line up through the layers before anyone gets hurt.</p>
+      </div>
+      <div class="lstation">
+        <time>1990s</time>
+        <p>ICAM formalises it for heavy industry: individual and team actions, task and environmental conditions, organisational factors, and absent or failed defences.</p>
+      </div>
+      <div class="lstation lstation--now">
+        <time>Now</time>
+        <h3>Decades of investigation practice, at the fingertips of whoever is running this one.</h3>
+        <p>The coach carries what a seasoned ICAM lead would ask: the evidence that should exist by now, the question that opens a witness up, the organisational factor that has already appeared twice on this line. It prompts the next step on every investigation, not only the ones a specialist can attend.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     STATUTORY CLOCKS: the one drifting row on the page
+     ============================================================ -->
+<section class="sec" id="clocks" aria-labelledby="clocks-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="clocks-h">Every investigation starts on someone&rsquo;s clock.</h2>
+      <p>The method holds on every case. The deadline depends on where the case happened, and the first one can be fifteen minutes.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="clockline"><div class="clockline__axis" aria-hidden="true"><span class="clockline__scale"><span style="--at:0.0462">15 min</span><span style="--at:0.2042">1 hour</span><span style="--at:0.4411">8 hours</span><span style="--at:0.5663">1 day</span><span style="--at:0.7880">1 week</span><span style="--at:0.9538">30 days</span></span></div><div class="clockline__grid" aria-hidden="true"><i style="--at:0.0462"></i><i style="--at:0.2042"></i><i style="--at:0.4411"></i><i style="--at:0.5663"></i><i style="--at:0.7880"></i><i style="--at:0.9538"></i></div><ol class="clockline__rows"><li class="cl" style="--at:0.0462"><div class="cl__txt"><span class="cl__where">United States, mines</span><span class="cl__what">Notify MSHA of an accident, by phone, within 15 minutes of knowing about it.</span><span class="cl__ref">30 CFR 50.10</span></div><div class="cl__track" aria-hidden="true"><i class="cl__line"></i><b class="cl__stn"></b></div><span class="cl__t"><strong class="num">15</strong> min</span></li><li class="cl" style="--at:0.4411"><div class="cl__txt"><span class="cl__where">United States, OSHA</span><span class="cl__what">Report a work-related fatality.</span><span class="cl__ref">29 CFR 1904.39</span></div><div class="cl__track" aria-hidden="true"><i class="cl__line"></i><b class="cl__stn"></b></div><span class="cl__t"><strong class="num">8</strong> hours</span></li><li class="cl" style="--at:0.5663"><div class="cl__txt"><span class="cl__where">United States, OSHA</span><span class="cl__what">Report an in-patient hospitalisation, an amputation or the loss of an eye.</span><span class="cl__ref">29 CFR 1904.39</span></div><div class="cl__track" aria-hidden="true"><i class="cl__line"></i><b class="cl__stn"></b></div><span class="cl__t"><strong class="num">24</strong> hours</span></li><li class="cl" style="--at:0.6452"><div class="cl__txt"><span class="cl__where">Canada, British Columbia</span><span class="cl__what">Complete the preliminary investigation and its report.</span><span class="cl__ref">Workers Compensation Act s.71</span></div><div class="cl__track" aria-hidden="true"><i class="cl__line"></i><b class="cl__stn"></b></div><span class="cl__t"><strong class="num">48</strong> hours</span></li><li class="cl" style="--at:0.7880"><div class="cl__txt"><span class="cl__where">United States, OSHA</span><span class="cl__what">Record the incident on Form 301.</span><span class="cl__ref">29 CFR 1904.29</span></div><div class="cl__track" aria-hidden="true"><i class="cl__line"></i><b class="cl__stn"></b></div><span class="cl__t"><strong class="num">7</strong> days</span></li><li class="cl" style="--at:0.7880"><div class="cl__txt"><span class="cl__where">South Africa</span><span class="cl__what">Report the accident to the Compensation Fund on form W.Cl.2.</span><span class="cl__ref">COIDA</span></div><div class="cl__track" aria-hidden="true"><i class="cl__line"></i><b class="cl__stn"></b></div><span class="cl__t"><strong class="num">7</strong> days</span></li><li class="cl cl--late" style="--at:0.8286"><div class="cl__txt"><span class="cl__where">South Africa, mines</span><span class="cl__what">Begin the investigation of a reportable accident.</span><span class="cl__ref">MHSA s11(5)</span></div><div class="cl__track" aria-hidden="true"><i class="cl__line"></i><b class="cl__stn"></b></div><span class="cl__t"><strong class="num">10</strong> days</span></li><li class="cl cl--late" style="--at:0.8670"><div class="cl__txt"><span class="cl__where">United States, mines</span><span class="cl__what">File the accident, injury and illness report on form 7000-1.</span><span class="cl__ref">30 CFR 50.20</span></div><div class="cl__track" aria-hidden="true"><i class="cl__line"></i><b class="cl__stn"></b></div><span class="cl__t"><strong class="num">10</strong> working days</span></li><li class="cl cl--late" style="--at:0.8748"><div class="cl__txt"><span class="cl__where">United Kingdom</span><span class="cl__what">Report an over-seven-day injury to a worker.</span><span class="cl__ref">RIDDOR 2013</span></div><div class="cl__track" aria-hidden="true"><i class="cl__line"></i><b class="cl__stn"></b></div><span class="cl__t"><strong class="num">15</strong> days</span></li><li class="cl cl--late" style="--at:0.9538"><div class="cl__txt"><span class="cl__where">Canada, British Columbia</span><span class="cl__what">Complete the full investigation and its report.</span><span class="cl__ref">Workers Compensation Act s.72</span></div><div class="cl__track" aria-hidden="true"><i class="cl__line"></i><b class="cl__stn"></b></div><span class="cl__t"><strong class="num">30</strong> days</span></li></ol></div>
+    <p class="clockline__note muted small">Duties as written in each regulation, checked September 2026. Your site&rsquo;s obligations depend on the event and the jurisdiction.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOUNDER: a named practitioner, not a signature
+     ============================================================ -->
+<section class="sec" id="founder" aria-labelledby="founder-h">
+  <div class="wrap founder">
+    <div class="founder__txt">
+      <h2 id="founder-h">Built by someone who has run the investigations.</h2>
+      <p>Devon Turner led safety across Africa and the Middle East for one of the world&rsquo;s largest gold producers, with an ICAM specialism. InvestigatePro is the way he wanted every investigation run: evidence first, all four levels examined, and nobody blamed for a gap in the system.</p>
+    </div>
+    <div class="founder__side">
+      <dl class="founder__facts">
+        <div><dt>Experience</dt><dd>15+ years leading mining safety</dd></div>
+        <div><dt>Regions</dt><dd>Africa and the Middle East</dd></div>
+        <div><dt>Method</dt><dd>ICAM specialist</dd></div>
+      </dl>
+      <div class="row">
+        <a class="btn btn--ghost" href="https://cal.com/investigatepro/15min">Book a 15-minute demo</a>
+        <span class="muted small">Demos are run by Devon.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FREE TOOLS
+     ============================================================ -->
+<section class="sec" id="tools" aria-labelledby="tools-h">
+  <div class="wrap">
+    <div class="sec-head sec-head--row">
+      <div class="stack" style="--gap:18px">
+        <h2 id="tools-h">Free tools for real investigations.</h2>
+        <p>Templates, worksheets and working tools from frontline ICAM practice. No account needed.</p>
+      </div>
+      <a class="link-arrow" href="/resources.html">All free tools <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    </div>
+    <div class="tools">
+      <a class="tool-feature" href="/checklist.html">
+        <span class="tool-feature__shot"><img src="/assets/img/checklist-shot.webp" alt="The ICAM checklist in the browser: the first response steps, three ticked, and a progress meter reading 3 of 25" width="1200" height="474" loading="lazy"></span>
+        <h3>The 25-point ICAM checklist</h3>
+        <p>From the first thirty minutes to close-out. Tick items off as you go; your progress stays in your browser.</p>
+        <span class="link-arrow">Open the checklist <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span>
+      </a>
+      <div class="tool-list">
+        <a href="/peepo-chart-builder.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,200h-8V40a8,8,0,0,0-8-8H152a8,8,0,0,0-8,8V80H96a8,8,0,0,0-8,8v40H48a8,8,0,0,0-8,8v64H32a8,8,0,0,0,0,16H224a8,8,0,0,0,0-16ZM160,48h40V200H160ZM104,96h40V200H104ZM56,144H88v56H56Z"/></svg><span><strong>PEEPO chart builder</strong><span>Build a contribution chart in the browser and export it.</span></span><svg class="i go" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+        <a href="/icam-toolkit.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M232,48H160a40,40,0,0,0-32,16A40,40,0,0,0,96,48H24a8,8,0,0,0-8,8V200a8,8,0,0,0,8,8H96a24,24,0,0,1,24,24,8,8,0,0,0,16,0,24,24,0,0,1,24-24h72a8,8,0,0,0,8-8V56A8,8,0,0,0,232,48ZM96,192H32V64H96a24,24,0,0,1,24,24V200A39.81,39.81,0,0,0,96,192Zm128,0H160a39.81,39.81,0,0,0-24,8V88a24,24,0,0,1,24-24h64Z"/></svg><span><strong>ICAM toolkit</strong><span>Templates, prompts and guides for the full method.</span></span><svg class="i go" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+        <a href="/icam-template.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Zm-32-80a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,136Zm0,32a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,168Z"/></svg><span><strong>ICAM investigation template</strong><span>The four-level structure, ready for your next case.</span></span><svg class="i go" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+        <a href="/state-of-incident-investigation-2026.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M232,48H160a40,40,0,0,0-32,16A40,40,0,0,0,96,48H24a8,8,0,0,0-8,8V200a8,8,0,0,0,8,8H96a24,24,0,0,1,24,24,8,8,0,0,0,16,0,24,24,0,0,1,24-24h72a8,8,0,0,0,8-8V56A8,8,0,0,0,232,48ZM96,192H32V64H96a24,24,0,0,1,24,24V200A39.81,39.81,0,0,0,96,192Zm128,0H160a39.81,39.81,0,0,0-24,8V88a24,24,0,0,1,24-24h64Z"/></svg><span><strong>State of Incident Investigation 2026</strong><span>An industry report on investigation practice and tooling.</span></span><svg class="i go" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CLOSE: start the trial; see where the coach would begin
+     ============================================================ -->
+<section class="sec cta" id="demo" aria-labelledby="cta-h">
+  <div class="wrap">
+    <div class="cta__grid">
+      <div class="cta__copy">
+        <h2 id="cta-h">Run the next investigation with the method built in.</h2>
+        <p class="lede">Start a self-serve 14-day trial on Starter or Professional, and run your next case with the coach.</p>
+        <div class="row">
+          <a class="btn btn--primary" href="https://app.investigatepro.app/signup">Start a 14-day trial <svg class="i i--nudge" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+          <a class="btn btn--ghost" href="https://cal.com/investigatepro/15min">Book a 15-minute demo</a>
+        </div>
+      </div>
+
+      <div class="frame prompt">
+        <form class="prompt__inner" data-prompt>
+          <label for="incident">Where would the coach start on your incident?</label>
+          <div class="prompt__box">
+            <textarea id="incident" name="incident" rows="3" placeholder="Fitter&rsquo;s hand caught at a tail pulley during clean-up; the guard was off after a belt change on the previous shift."></textarea>
+            <button class="btn btn--primary btn--sm prompt__send" type="submit">Show questions <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></button>
+          </div>
+          <div class="prompt__chips" role="group" aria-label="Incident types">
+            <button type="button" data-kind="isolation" aria-pressed="false">Isolation failure</button>
+            <button type="button" data-kind="vehicle" aria-pressed="false">Vehicle interaction</button>
+            <button type="button" data-kind="height" aria-pressed="false">Fall from height</button>
+            <button type="button" data-kind="dropped" aria-pressed="false">Dropped object</button>
+          </div>
+          <div class="prompt__out" aria-live="polite">
+            <ol>
+              <li>Which lock points were verified, by whom, and where is that recorded?</li>
+              <li>At what point did the worker believe the equipment was dead, and what told them so?</li>
+              <li>Has the same isolation step appeared in earlier events on this line?</li>
+            </ol>
+            <p class="prompt__hint">Example questions for this kind of incident. On a live case the coach reads your evidence, statements and timeline, and cites them.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="pilot" id="pilot">
+      <div class="stack" style="--gap:10px">
+        <h3>Running several sites?</h3>
+        <p>Business and Enterprise start with a guided pilot on your own cases. Leave three details and Devon calls within one working day.</p>
+      </div>
+      <form class="form" data-capture data-endpoint="https://api.investigatepro.app/api/leads/capture" data-source="pilot_request">
+        <div class="field"><label for="p-name">Name</label><input id="p-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="p-email">Work email</label><input id="p-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="p-co">Company</label><input id="p-co" name="company" autocomplete="organization" required></div>
+        <button class="btn btn--ghost" type="submit">Ask for a pilot</button>
+        <p class="form__msg" hidden role="status" data-ok="Received. Devon calls within one working day to set up your pilot." data-err="That did not send. Check your connection and try again, or email hello@investigatepro.app." data-proto="Prototype build: nothing was sent. On the live site this request goes to Devon, who calls within one working day."><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg><span></span></p>
       </form>
     </div>
   </div>
 </section>
+
 </main>
-<footer class="footer">
-  <div class="wrap">
-    <div class="cols">
-      <div style="display:flex;flex-direction:column;gap:16px">
-        <a href="/" class="logo" aria-label="InvestigatePro home"><img class="lgm" src="/assets/brand/logo-horizontal-white.svg" alt="InvestigatePro" width="826" height="168" decoding="async"></a>
-        <p style="max-width:250px;font-size:13px;line-height:1.6">Structured, evidence-led ICAM investigation with an AI coach on every case.</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="chip">EU-hosted &amp; isolated</span><span class="chip">GDPR compliant</span></div>
-      </div>
-      <div><h3>Product</h3><ul>
-        <li><a href="/platform.html">Platform</a></li><li><a href="/pricing.html">Pricing</a></li><li><a href="/demo.html">Book a demo</a></li><li><a href="/apps/">Apps</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/security.html">Security</a></li><li><a href="/changelog.html">Changelog</a></li>
-      </ul></div>
-      <div><h3>Resources</h3><ul>
-        <li><a href="/resources.html">All free tools</a></li><li><a href="/checklist.html">ICAM checklist</a></li><li><a href="/icam-toolkit.html">ICAM toolkit</a></li><li><a href="/peepo-chart-builder.html">PEEPO chart builder</a></li><li><a href="/5-whys-worksheet.html">5-Whys worksheet</a></li><li><a href="/state-of-incident-investigation-2026.html">State of Incident Investigation</a></li>
-      </ul></div>
-      <div><h3>Industries</h3><ul>
-        <li><a href="/industries/mining-incident-investigation.html">Mining</a></li><li><a href="/industries/oil-gas-incident-management.html">Oil &amp; gas</a></li><li><a href="/industries/manufacturing-root-cause-analysis.html">Manufacturing</a></li><li><a href="/industries/construction-safety-software.html">Construction</a></li><li><a href="/industries/engineering-incident-investigation.html">Engineering</a></li>
-      </ul></div>
-      <div><h3>Company</h3><ul>
-        <li><a href="/blog/">Blog</a></li><li><a href="/status.html">Service notices</a></li><li><a href="mailto:hello@investigatepro.app">Contact</a></li><li><a href="https://app.investigatepro.app/login">Login</a></li><li><a href="/privacy.html">Privacy</a></li><li><a href="/terms.html">Terms</a></li><li><a href="/cookie.html">Cookies</a></li><li><a href="/dpa.html">DPA</a></li>
-      </ul></div>
+
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <div class="foot__brand">
+      <a href="/index.html" aria-label="InvestigatePro home"><img src="/assets/img/logo-horizontal-white.svg" alt="InvestigatePro" width="168" height="34"></a>
+      <p class="foot__tag">Every incident, understood.</p>
+      <p class="foot__by">Built by Devon Turner, who spent fifteen years leading mining safety across Africa and the Middle East, with an ICAM specialism.</p>
+      <button class="motion-toggle" type="button" aria-pressed="false"><span class="motion-toggle__track" aria-hidden="true"></span>Reduce motion</button>
     </div>
-    <p class="accountability">Every suggestion carries its source, and the report goes out attributed to the lead investigator. Built by Devon Turner — fifteen years leading mining safety across Africa and the Middle East, with an ICAM specialism.</p>
-    <div class="foot-bottom">
-      <p>© 2026 InvestigatePro. All rights reserved. · Every incident, understood.</p>
-      <button type="button" class="rm-toggle" data-rm-toggle aria-pressed="false"><span class="rm-dot" aria-hidden="true"></span>Reduce motion</button>
+    <div>
+      <h2>Product</h2>
+      <ul>
+        <li><a href="/platform.html">Platform</a></li>
+        <li><a href="/pricing.html">Pricing</a></li>
+        <li><a href="/demo.html">Book a demo</a></li>
+        <li><a href="/security.html">Security</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+        <li><a href="/changelog.html">Changelog</a></li>
+        <li><a href="/apps/index.html">Apps</a><span class="tag-inbuild">in build</span></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Free tools</h2>
+      <ul>
+        <li><a href="/resources.html">All free tools</a></li>
+        <li><a href="/checklist.html">ICAM checklist</a></li>
+        <li><a href="/icam-toolkit.html">ICAM toolkit</a></li>
+        <li><a href="/peepo-chart-builder.html">PEEPO chart builder</a></li>
+        <li><a href="/5-whys-worksheet.html">5-Whys worksheet</a></li>
+        <li><a href="/state-of-incident-investigation-2026.html">State of Incident Investigation 2026</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Industries</h2>
+      <ul>
+        <li><a href="/industries/mining-incident-investigation.html">Mining</a></li>
+        <li><a href="/industries/oil-gas-incident-management.html">Oil and gas</a></li>
+        <li><a href="/industries/manufacturing-root-cause-analysis.html">Manufacturing</a></li>
+        <li><a href="/industries/construction-safety-software.html">Construction</a></li>
+        <li><a href="/industries/engineering-incident-investigation.html">Engineering</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Company</h2>
+      <ul>
+        <li><a href="/blog/index.html">Blog</a></li>
+        <li><a href="/status.html">Service notices</a></li>
+        <li><a href="mailto:hello@investigatepro.app">Contact: hello@investigatepro.app</a></li>
+        <li><a href="https://app.investigatepro.app/login">Login</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/terms.html">Terms</a></li>
+        <li><a href="/cookie.html">Cookies</a></li>
+        <li><a href="/dpa.html">DPA</a></li>
+      </ul>
     </div>
   </div>
+  <div class="wrap foot__base">
+    <span>&copy; 2026 InvestigatePro. Find the causes. Fix the system.</span>
+    <span>Every incident, understood.</span>
+  </div>
 </footer>
-<script defer src="/analytics.js"></script>
-<script defer src="/assets/js/home.js"></script>
+
 </body>
 </html>

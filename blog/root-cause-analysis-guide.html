@@ -1,496 +1,303 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-GB" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Root Cause Analysis: The Complete Guide — InvestigatePro</title>
-    <meta name="description" content="Master root cause analysis techniques including 5 Whys, Fishbone diagrams, and more. A practical guide to finding and fixing the real reasons incidents happen.">
-    <meta name="keywords" content="root cause analysis, incident investigation, 5 whys, fishbone diagram, Ishikawa, workplace safety, accident investigation, safety management">
-    <link rel="icon" type="image/png" href="../assets/brand/favicon-32.png">
-    <link rel="canonical" href="https://investigatepro.app/blog/root-cause-analysis-guide.html">
-    
-    <!-- Open Graph -->
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://investigatepro.app/blog/root-cause-analysis-guide.html">
-    <meta property="og:title" content="Root Cause Analysis: The Complete Guide">
-    <meta property="og:description" content="Master root cause analysis techniques including 5 Whys, Fishbone diagrams, and beyond.">
-    <meta property="og:image" content="https://investigatepro.app/assets/brand/og-image.png">
-    <meta name="twitter:card" content="summary_large_image">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    
-    <!-- Tailwind CSS (built) -->
-    <link rel="stylesheet" href="../assets/css/styles.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
-    
-    <style>
-        .prose h2 { @apply text-2xl font-bold mt-10 mb-4 text-ink; }
-        .prose h3 { @apply text-xl font-semibold mt-8 mb-3 text-ink; }
-        .prose p { @apply mb-4 text-slate leading-relaxed; }
-        .prose ul, .prose ol { @apply mb-4 ml-6 text-slate; }
-        .prose li { @apply mb-2; }
-        .prose strong { @apply text-ink font-semibold; }
-        .prose blockquote { @apply border-l-4 border-apex-500 pl-4 italic text-graphite my-6; }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Root Cause Analysis: The Complete Guide, InvestigatePro | InvestigatePro</title>
+<meta name="description" content="Master root cause analysis techniques including 5 Whys, Fishbone diagrams, and more. A practical guide to finding and fixing the real reasons incidents happen.">
+<link rel="canonical" href="https://investigatepro.app/blog/root-cause-analysis-guide.html">
 
-    <!-- Structured Data: Breadcrumb + Article -->
-    <script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://investigatepro.app/"
-        },
-        {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Blog",
-            "item": "https://investigatepro.app/blog/"
-        },
-        {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Root Cause Analysis: The Complete Guide",
-            "item": "https://investigatepro.app/blog/root-cause-analysis-guide.html"
-        }
-    ]
-}</script>
-    <script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Root Cause Analysis: The Complete Guide",
-    "description": "Master root cause analysis techniques including 5 Whys, Fishbone diagrams, and more.",
-    "datePublished": "2026-02-18",
-    "dateModified": "2026-05-06",
-    "author": {
-        "@type": "Organization",
-        "name": "InvestigatePro",
-        "url": "https://investigatepro.app"
-    },
-    "publisher": {
-        "@type": "Organization",
-        "name": "InvestigatePro",
-        "logo": {
-            "@type": "ImageObject",
-            "url": "https://investigatepro.app/assets/brand/og-image.png"
-        }
-    },
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://investigatepro.app/blog/root-cause-analysis-guide.html"
-    }
-}</script>
-<link rel="stylesheet" href="/assets/css/ip2-chrome.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Devon Turner", "jobTitle": "Founder", "url": "https://investigatepro.app/#founder", "worksFor": {"@type": "Organization", "name": "InvestigatePro", "url": "https://investigatepro.app"}, "description": "Founder of InvestigatePro. 15+ years leading mining safety across Africa and the Middle East, with an ICAM specialism.", "knowsAbout": ["ICAM investigation", "incident investigation", "mining safety"]}</script>
+<meta name="theme-color" content="#063A41">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="InvestigatePro">
+<meta property="og:title" content="Root Cause Analysis: The Complete Guide, InvestigatePro | InvestigatePro">
+<meta property="og:description" content="Master root cause analysis techniques including 5 Whys, Fishbone diagrams, and more. A practical guide to finding and fixing the real reasons incidents happen.">
+<meta property="og:url" content="https://investigatepro.app/blog/root-cause-analysis-guide.html">
+<meta property="og:image" content="https://investigatepro.app/assets/img/og-article.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/montserrat-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/ip-next.css">
+<script>(function(){var h=document.documentElement,r=false;h.className=h.className.replace('no-js','js');try{r=localStorage.getItem('ip-reduce-motion')==='1'}catch(e){}if(!r&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){h.classList.add('motion-on')}else{h.classList.add('motion-off')}})();</script>
+<script src="/assets/ip-next.js" defer></script>
+<script src="/analytics.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Root Cause Analysis: Going Beyond the Obvious","author":{"@type":"Person","name":"Devon Turner"},"publisher":{"@type":"Organization","name":"InvestigatePro"}}</script>
 </head>
-<body class="font-sans antialiased bg-cloud text-ink">
-<!-- Site chrome: unified navigation -->
-<nav class="ip2-nav light" aria-label="Main">
-  <div class="ip2-nav-row">
-    <a href="/" class="ip2-logo" aria-label="InvestigatePro home"><img class="lgm" src="/assets/brand/logo-horizontal.svg" alt="InvestigatePro" width="826" height="168" decoding="async"></a>
-    <div class="ip2-links">
-      <a href="/platform.html">Platform</a><a href="/pricing.html">Pricing</a><a href="/resources.html">Resources</a><a href="/blog/" aria-current="page">Blog</a>
-      <a href="https://app.investigatepro.app/login" class="ip2-login">Login</a>
-      <a href="/#pilot" class="ip2-cta">Start a pilot</a>
-    </div>
-    <button class="mm-btn" aria-expanded="false" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
-  </div>
-  <div class="mm-panel">
-    <a href="/platform.html">Platform</a><a href="/pricing.html">Pricing</a><a href="/resources.html">Resources</a><a href="/blog/">Blog</a>
-    <a href="https://app.investigatepro.app/login" class="ip2-login-m">Login</a>
-    <a href="/#pilot" class="btn btn-primary">Start a pilot</a>
-    <a href="https://cal.com/investigatepro/15min" class="btn btn-outline">Book a 15-minute demo</a>
-  </div>
-</nav>
-<div class="ip2-byline"><div class="ip2-wrap"><span class="dt" aria-hidden="true">DT</span><span><strong>Devon Turner</strong> · Founder, InvestigatePro — 15+ years leading mining safety</span></div></div>
-
-
-    <!-- Article Header -->
-    <header class="pt-40 pb-12 bg-gradient-to-b from-cloud to-white">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center gap-3 mb-6">
-                <span class="bg-orange-500/20 text-orange-400 px-3 py-1 rounded text-sm font-medium">Analysis</span>
-                <span class="text-graphite text-sm">16 min read</span>
-            </div>
-            <h1 class="text-4xl sm:text-5xl font-bold mb-6">Root Cause Analysis: Going Beyond the Obvious</h1>
-            <p class="text-xl text-slate">A practical guide to finding—and fixing—the real reasons incidents happen</p>
+<body class="page-article">
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__logo" href="/index.html" aria-label="InvestigatePro home"><img src="/assets/img/logo-horizontal-white.svg" alt="InvestigatePro" width="152" height="31"></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="/platform.html">Platform</a>
+      <div class="nav__menu">
+        <button class="nav__menu-btn" type="button" aria-expanded="false" aria-controls="nav-industries">Industries <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg></button>
+        <div class="nav__panel" id="nav-industries">
+          <a href="/industries/mining-incident-investigation.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,152V136a96.37,96.37,0,0,0-64-90.51V40a16,16,0,0,0-16-16H112A16,16,0,0,0,96,40v5.49A96.37,96.37,0,0,0,32,136v16a16,16,0,0,0-16,16v24a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V168A16,16,0,0,0,224,152Zm-16-16v16H160V62.67A80.36,80.36,0,0,1,208,136ZM144,40V152H112V40ZM48,136A80.36,80.36,0,0,1,96,62.67V152H48Zm176,56H32V168H224v24Z"/></svg><strong>Mining</strong><span>Underground, open-cut, processing and contractors</span></a>
+          <a href="/industries/oil-gas-incident-management.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></svg><strong>Oil and gas</strong><span>Upstream, midstream and field services</span></a>
+          <a href="/industries/manufacturing-root-cause-analysis.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M116,176a8,8,0,0,1-8,8H80a8,8,0,0,1,0-16h28A8,8,0,0,1,116,176Zm60-8H148a8,8,0,0,0,0,16h28a8,8,0,0,0,0-16Zm64,48a8,8,0,0,1-8,8H24a8,8,0,0,1,0-16h8V88a8,8,0,0,1,12.8-6.4L96,120V88a8,8,0,0,1,12.8-6.4l38.74,29.05L159.1,29.74A16.08,16.08,0,0,1,174.94,16h18.12A16.08,16.08,0,0,1,208.9,29.74l15,105.13s.08.78.08,1.13v72h8A8,8,0,0,1,240,216Zm-77.86-94.4,8.53,6.4h36.11L193.06,32H174.94ZM48,208H208V144H168a8,8,0,0,1-4.8-1.6l-14.4-10.8,0,0L112,104v32a8,8,0,0,1-12.8,6.4L48,104Z"/></svg><strong>Manufacturing</strong><span>Plant, maintenance and process safety</span></a>
+          <a href="/industries/construction-safety-software.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M230.91,172A8,8,0,0,1,228,182.91l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,36,169.09l92,53.65,92-53.65A8,8,0,0,1,230.91,172ZM220,121.09l-92,53.65L36,121.09A8,8,0,0,0,28,134.91l96,56a8,8,0,0,0,8.06,0l96-56A8,8,0,1,0,220,121.09ZM24,80a8,8,0,0,1,4-6.91l96-56a8,8,0,0,1,8.06,0l96,56a8,8,0,0,1,0,13.82l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,24,80Zm23.88,0L128,126.74,208.12,80,128,33.26Z"/></svg><strong>Construction</strong><span>Principal contractors and subcontractors</span></a>
+          <a href="/industries/engineering-incident-investigation.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M160,112h48a16,16,0,0,0,16-16V48a16,16,0,0,0-16-16H160a16,16,0,0,0-16,16V64H128a24,24,0,0,0-24,24v32H72v-8A16,16,0,0,0,56,96H24A16,16,0,0,0,8,112v32a16,16,0,0,0,16,16H56a16,16,0,0,0,16-16v-8h32v32a24,24,0,0,0,24,24h16v16a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V160a16,16,0,0,0-16-16H160a16,16,0,0,0-16,16v16H128a8,8,0,0,1-8-8V88a8,8,0,0,1,8-8h16V96A16,16,0,0,0,160,112ZM56,144H24V112H56v32Zm104,16h48v48H160Zm0-112h48V96H160Z"/></svg><strong>Engineering</strong><span>Projects, commissioning and field work</span></a>
         </div>
-    </header>
-
-    <!-- Article Content -->
-    <article class="py-12 bg-white">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 prose">
-            
-            <p>Every incident has a story. The surface story is usually simple: someone made a mistake, equipment failed, conditions were bad.</p>
-            
-            <p>The real story goes deeper. The mistake happened because of pressure. The equipment failed because of deferred maintenance. The conditions existed because no one had authority to stop work.</p>
-            
-            <p>Root cause analysis is the discipline of finding the real story. Done well, it transforms incidents from recurring frustrations into genuine learning opportunities.</p>
-            
-            <p>Done poorly, it's just a box to tick.</p>
-
-            <h2>What Root Cause Analysis Actually Means</h2>
-            
-            <p>Let's start with what it doesn't mean:</p>
-            
-            <p><strong>Root cause ≠ proximate cause.</strong> The proximate cause is what directly caused the incident. The root cause is why the proximate cause existed. "Operator failed to isolate equipment" is proximate. "Procedure was impractical under production pressure, and no alternative procedure existed" is closer to root.</p>
-            
-            <p><strong>Root cause ≠ first cause.</strong> Going all the way back to the Big Bang isn't helpful. Root causes are the factors where practical intervention can prevent recurrence.</p>
-            
-            <p><strong>Root cause ≠ single cause.</strong> Most incidents have multiple contributing factors. Looking for "the" root cause often means stopping too soon.</p>
-            
-            <p>A working definition: <strong>Root causes are the systemic factors that, if changed, would prevent recurrence of this incident and similar incidents.</strong></p>
-
-            <h2>Why Root Cause Analysis Fails</h2>
-            
-            <p>Most root cause analysis stops too soon or goes down the wrong paths. Here's why:</p>
-
-            <h3>The Human Error Trap</h3>
-            
-            <p>Investigation identifies a human error and declares success. "The worker didn't follow procedure."</p>
-            
-            <p>This is where investigation should <em>start</em>, not end. Why didn't they follow procedure?</p>
-            
-            <p>Maybe the procedure was 45 minutes long for a 10-minute task. Maybe they weren't trained on it. Maybe following it required equipment that wasn't available. Maybe everyone does this workaround and supervision knows about it.</p>
-            
-            <p><strong>Rule of thumb:</strong> When you identify a human error, you've found a symptom. Keep asking why.</p>
-
-            <h3>The Blame Reflex</h3>
-            
-            <p>When investigation aims to assign blame, people get defensive. Information gets hidden. The investigation finds a scapegoat, not a root cause.</p>
-            
-            <p>Genuine root cause analysis requires psychological safety—the confidence that honest information won't be used against you.</p>
-
-            <h3>The Confirmation Trap</h3>
-            
-            <p>Investigators often form early hypotheses and then look for confirming evidence. First impressions become final conclusions.</p>
-            
-            <p>Good root cause analysis requires actively seeking disconfirming evidence. What else could explain this? What doesn't fit your hypothesis?</p>
-
-            <h3>The Scope Trap</h3>
-            
-            <p>Some investigations go so deep they become philosophical. Others stop at the first convenient answer.</p>
-            
-            <p>The right scope is determined by practicality: What can we actually change? Where can intervention prevent this and similar incidents?</p>
-
-            <h2>Techniques That Actually Work</h2>
-
-            <h3>The Five Whys (With Caveats)</h3>
-            
-            <p>The classic technique: Ask "why" five times to drill down to root cause.</p>
-            
-            <p><strong>Example:</strong></p>
-            <ol>
-                <li>Why did the worker get injured? <em>They were struck by falling material.</em></li>
-                <li>Why did material fall? <em>It wasn't secured properly.</em></li>
-                <li>Why wasn't it secured? <em>The tie-down equipment wasn't available.</em></li>
-                <li>Why wasn't equipment available? <em>It was being used elsewhere and there's only one set.</em></li>
-                <li>Why is there only one set? <em>Request for additional equipment was denied six months ago.</em></li>
-            </ol>
-            
-            <p><strong>The caveats:</strong></p>
-            <ul>
-                <li>Five isn't a magic number. Sometimes you need three; sometimes you need seven.</li>
-                <li>Each "why" can branch into multiple paths. Explore all relevant branches.</li>
-                <li>"Why" can trigger defensive responses. Consider "What led to..." or "What conditions contributed to..."</li>
-            </ul>
-
-            <h3>Fishbone Diagrams (Ishikawa)</h3>
-            
-            <p>Organize potential causes into categories:</p>
-            <ul>
-                <li><strong>Man</strong> (People): Training, competence, fatigue, distraction</li>
-                <li><strong>Machine</strong> (Equipment): Design, maintenance, reliability</li>
-                <li><strong>Method</strong> (Process): Procedures, sequence, workflow</li>
-                <li><strong>Material</strong> (Inputs): Quality, availability, appropriateness</li>
-                <li><strong>Measurement</strong> (Data): Accuracy, feedback, monitoring</li>
-                <li><strong>Environment:</strong> Physical conditions, organizational climate</li>
-            </ul>
-            
-            <p>For each branch, brainstorm contributing factors. Then investigate which actually contributed.</p>
-            
-            <p><strong>The value:</strong> Fishbone diagrams ensure you consider multiple categories rather than fixating on the first plausible cause.</p>
-
-            <h3>Timeline Analysis</h3>
-            
-            <p>Construct a detailed chronological sequence:</p>
-            <ul>
-                <li>What happened</li>
-                <li>When (precise timing)</li>
-                <li>Where</li>
-                <li>Who was involved</li>
-                <li>What decisions were made</li>
-                <li>What information was available</li>
-            </ul>
-            
-            <p>Then look for:</p>
-            <ul>
-                <li>Decision points where different choices might have led to different outcomes</li>
-                <li>Information gaps where people didn't know things they needed to know</li>
-                <li>Timing factors that created pressure or confusion</li>
-            </ul>
-            
-            <p><strong>The value:</strong> Timelines reveal how events cascaded and where intervention could have broken the chain.</p>
-
-            <h3>Change Analysis</h3>
-            
-            <p>Compare the incident situation to normal operations:</p>
-            <ul>
-                <li>What was different this time?</li>
-                <li>What recent changes occurred?</li>
-                <li>What was unusual about the conditions, people, or equipment?</li>
-            </ul>
-            
-            <p>Often the root cause hides in recent changes—new procedures, different personnel, modified equipment, unusual production demands.</p>
-
-            <h3>Barrier Analysis</h3>
-            
-            <p>Identify what should have prevented the incident:</p>
-            <ul>
-                <li>What defenses were supposed to exist?</li>
-                <li>Were they absent, failed, or inadequate?</li>
-                <li>Why?</li>
-            </ul>
-            
-            <p>For each failed barrier, conduct a mini-root-cause analysis. If a procedure was supposed to prevent this, why didn't it?</p>
-
-            <h3>Causal Factor Charting</h3>
-            
-            <p>Build a visual map connecting:</p>
-            <ul>
-                <li>Events (what happened)</li>
-                <li>Conditions (circumstances that existed)</li>
-                <li>Causal factors (things that contributed to the outcome)</li>
-            </ul>
-            
-            <p>Arrows show relationships. The chart reveals where intervention can break causal chains.</p>
-
-            <h2>The Systemic Perspective</h2>
-            
-            <p>Good root cause analysis eventually reaches organizational factors:</p>
-            
-            <p><strong>Resource allocation:</strong> Were sufficient resources (time, personnel, equipment, budget) provided?</p>
-            
-            <p><strong>Management systems:</strong> How are decisions made? How is information communicated?</p>
-            
-            <p><strong>Culture:</strong> What behaviors are actually rewarded? What's tolerated? What's punished?</p>
-            
-            <p><strong>External pressures:</strong> Regulatory requirements, competitive pressures, customer demands</p>
-            
-            <p><strong>Design decisions:</strong> How were processes, equipment, and procedures designed?</p>
-            
-            <p>These factors often feel uncomfortable to identify. They implicate decisions made by leadership, not just actions taken by workers.</p>
-            
-            <p>But they're where the leverage is. Fixing an organizational factor prevents entire categories of incidents. Disciplining an individual prevents nothing.</p>
-
-            <h2>From Causes to Action</h2>
-            
-            <p>Identifying root causes is only valuable if it leads to effective action.</p>
-            
-            <p><strong>Good recommendations are:</strong></p>
-            <ul>
-                <li><strong>Specific:</strong> Not "improve communication" but "implement daily shift briefings covering..."</li>
-                <li><strong>Systemic:</strong> Address root causes, not symptoms</li>
-                <li><strong>Feasible:</strong> Can actually be implemented with available resources</li>
-                <li><strong>Verifiable:</strong> You can measure whether they worked</li>
-                <li><strong>Owned:</strong> Someone is responsible for implementation</li>
-                <li><strong>Timebound:</strong> Clear deadline for completion</li>
-            </ul>
-            
-            <p><strong>Bad recommendations:</strong></p>
-            <ul>
-                <li>"Workers should be more careful"</li>
-                <li>"Supervisors need to enforce procedures"</li>
-                <li>"Provide additional training"</li>
-                <li>"Remind everyone about policy"</li>
-            </ul>
-            
-            <p>These change nothing. They're wishes, not recommendations.</p>
-            
-            <p><strong>The hierarchy of controls applies:</strong></p>
-            <ol>
-                <li><strong>Elimination:</strong> Remove the hazard entirely</li>
-                <li><strong>Substitution:</strong> Replace with something less hazardous</li>
-                <li><strong>Engineering controls:</strong> Physical changes that reduce risk</li>
-                <li><strong>Administrative controls:</strong> Changes to procedures, training, communication</li>
-                <li><strong>PPE:</strong> Personal protective equipment</li>
-            </ol>
-            
-            <p>Prefer controls higher in the hierarchy. They're more reliable than depending on human behavior.</p>
-
-            <h2>Common Root Cause Analysis Mistakes</h2>
-            
-            <p><strong>Stopping at first plausible cause:</strong> There's usually more. Keep investigating until you reach organizational factors.</p>
-            
-            <p><strong>Accepting "human error" as a root cause:</strong> It never is. Human error is shaped by system design.</p>
-            
-            <p><strong>Ignoring organizational factors:</strong> The most important causes often make leadership uncomfortable.</p>
-            
-            <p><strong>Recommending retraining as default action:</strong> Retraining rarely prevents recurrence unless the original training was genuinely deficient.</p>
-            
-            <p><strong>Not verifying causes:</strong> A plausible cause isn't a confirmed cause. Verify through evidence.</p>
-            
-            <p><strong>Failing to follow up:</strong> Recommendations that don't get implemented don't prevent anything.</p>
-
-            <h2>Choosing the Right RCA Method for Your Situation</h2>
-
-            <p>Not all RCA methods are equally suited to every investigation. The method you choose should be matched to the incident's complexity, your team's experience, and the time available. Here is a practical decision framework:</p>
-
-            <h3>5 Whys: When to Use It</h3>
-            <p>Use 5 Whys for incidents that are relatively simple — a single causal chain, limited personnel involvement, and no indication of complex organizational factors. 5 Whys is fast, accessible to investigators without formal training, and well-suited to high-volume, low-severity incident investigations. The critical discipline is not stopping at human error: if your 5th "why" is "because the worker wasn't paying attention," you have not reached a root cause — you have reached a symptom. Use 5 Whys as a starting point, not a destination.</p>
-
-            <h3>Fishbone / Ishikawa: When to Use It</h3>
-            <p>Use a Fishbone diagram when you suspect multiple contributing factors across different categories, or when you want to ensure team brainstorming covers all potential causes before analysis begins. The Fishbone is particularly valuable at the start of a complex investigation, as a structure for generating hypotheses before deeper investigation determines which actually contributed. It works well as a team exercise in the first 24–48 hours after a serious incident.</p>
-
-            <h3>ICAM: When to Use It</h3>
-            <p>Use ICAM for serious incidents — LTI severity and above, and for high-potential events. ICAM's structured four-factor model (absent/failed defences, individual/team actions, task/environmental conditions, and organizational factors via PEEPO) is designed for the complexity of multi-causal incidents in high-hazard industries. It requires more investigator time and skill than 5 Whys, but produces substantially better organizational learning. ICAM is the gold standard in Australian, African, and Middle Eastern mining and construction operations, and is increasingly adopted in oil and gas.</p>
-
-            <h3>Fault Tree Analysis: When to Use It</h3>
-            <p>Use Fault Tree Analysis (FTA) when the incident involves complex technical systems where you need to understand all possible causal combinations, or when quantitative probability analysis is required. FTA is most common in process safety applications (oil and gas, chemical, nuclear) where understanding the probability of simultaneous barrier failures is essential for risk modelling. FTA is often used alongside ICAM in major incident investigations — ICAM for the organizational investigation, FTA for the technical system analysis.</p>
-
-            <h2>Root Cause Analysis in High-Hazard Industries</h2>
-
-            <p>RCA has different emphases and requirements across different high-hazard sectors. Understanding these differences helps practitioners calibrate their approach.</p>
-
-            <h3>Mining</h3>
-            <p>Mining operations experience a diverse range of incident types — ground control failures, mobile equipment collisions, blasting incidents, and occupational health events. Mining regulators in Australia, South Africa, and West Africa increasingly require ICAM-aligned investigations for serious incidents. The most significant organizational factors in mining RCA typically involve: management of change (for equipment modifications and procedure changes), contractor management systems (since major mine sites often have dozens of contractors), and the tension between production targets and safe work pace. For a detailed guide, see our <a href="/blog/mining-incident-investigation-guide.html">mining incident investigation guide</a>.</p>
-
-            <h3>Construction</h3>
-            <p>Construction sites present unique RCA challenges because of their dynamic multi-contractor environment. The same physical location might have a dozen subcontractors working simultaneously, each with their own safety management systems. RCA on construction sites frequently surfaces failures in: task-specific risk assessment quality, site induction adequacy for short-tenure workers, supervision gaps at principal-subcontractor interfaces, and the production pressure that leads to compressed timelines for safety-critical work. The blame-free framing of ICAM is particularly valuable on construction sites because workers and subcontractors are often reluctant to share information candidly when they fear consequences.</p>
-
-            <h3>Oil, Gas &amp; Petrochemicals</h3>
-            <p>Process safety incidents in oil and gas demand the deepest RCA capability. These incidents typically involve multiple simultaneous barrier failures — no single point failure causes a catastrophic event — and the organizational factors are often complex: management of change systems that have accumulated exceptions, permit-to-work systems that have become performative rather than functional, and production pressure that has normalized operating outside design intent. Many operators combine ICAM with Bow-Tie analysis to map barrier states, and with FTA for technical system analysis. The Deepwater Horizon and Texas City disasters both revealed organizational root causes that preceded the immediate technical failures by years.</p>
-
-            <h3>Manufacturing</h3>
-            <p>In manufacturing, RCA is often used for high-frequency, lower-severity incidents — lacerations, musculoskeletal injuries, and machine-interaction events — as well as for serious incidents. The 5 Whys is the most common RCA technique in manufacturing, but it is frequently executed poorly: investigations stop at "worker did not use guard" rather than asking why the guard was not used, why the machine could be operated without the guard, why the guarding design allowed bypass, and what production pressure led workers to develop the bypass practice. A manufacturing organization that consistently executes 5 Whys to systemic organizational causes will outperform one that uses ICAM poorly.</p>
-
-            <h2>Frequently Asked Questions About Root Cause Analysis</h2>
-
-            <h3>How many root causes can one incident have?</h3>
-            <p>Most serious incidents have multiple root causes — typically between three and eight organizational factor failures that combined to create conditions for the event. Investigators who find only one root cause have usually stopped too early. Each contributing factor at the immediate cause level should be traced independently to its organizational root, which means a single incident can legitimately reveal multiple management system failures across different organizational systems.</p>
-
-            <h3>How long should a root cause analysis take?</h3>
-            <p>This depends heavily on incident complexity. A 5 Whys analysis for a minor incident might be completed in one to two hours. An ICAM investigation of a serious LTI with multiple witnesses, complex system interactions, and extensive documentary evidence might take ten to fifteen working days from incident to final report. The most common error is setting an arbitrary investigation deadline (common examples: "investigations must close within five working days") that forces investigators to cut corners when the incident complexity demands more time. Investigation duration should be proportionate to incident severity — not organizational impatience.</p>
-
-            <h3>When should we bring in an external investigator?</h3>
-            <p>External investigation support is appropriate when: the incident is of sufficient severity that regulatory scrutiny is likely; when internal investigators have a conflict of interest or insufficient experience with the investigation complexity; when the incident involves senior leadership decisions that internal investigators cannot examine objectively; or when a pattern of recurring incidents suggests that internal investigations have consistently missed systemic causes. The presence of an external investigator signals organizational seriousness to regulators, workers, and insurers — but only adds value if the external investigator has genuine ICAM expertise, not just general consulting experience.</p>
-
-            <h3>How do we know if our RCA quality is improving?</h3>
-            <p>Leading indicators of RCA quality improvement include: an increasing proportion of investigations that identify organizational factors (not just immediate causes); a declining proportion of recommendations that rely on retraining or reminding workers; improving recommendation implementation rates; and reducing recurrence rates for incident types that have been investigated. The most direct test: ask whether your investigation recommendations would have prevented similar incidents at other sites. If they rely entirely on individual behavior change, they probably would not — and your RCA quality has room to improve.</p>
-
-            <h2>Free Root Cause Analysis Resources</h2>
-
-            <p>These free tools let you apply RCA methodology immediately — no software required:</p>
-
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;">
-                <a href="/rca-template-pack.html" style="display:block;background:#FFFFFF;border:1px solid rgba(0,77,64,0.25);border-radius:10px;padding:18px;text-decoration:none;">
-                    <p style="color:#004D40;font-weight:700;margin:0 0 6px;font-size:0.9rem;">📋 RCA Template Pack (Free)</p>
-                    <p style="color:#5A6B76;font-size:0.82rem;margin:0 0 8px;">4 interactive templates: 5 Whys, Fishbone, ICAM-aligned RCA, Investigation Report. Fill in online or print.</p>
-                    <span style="color:#004D40;font-size:0.8rem;font-weight:600;">Download Free →</span>
-                </a>
-                <a href="/5-whys-worksheet.html" style="display:block;background:#FFFFFF;border:1px solid rgba(0,77,64,0.15);border-radius:10px;padding:18px;text-decoration:none;">
-                    <p style="color:#004D40;font-weight:700;margin:0 0 6px;font-size:0.9rem;">🔍 5 Whys Worksheet (Free)</p>
-                    <p style="color:#5A6B76;font-size:0.82rem;margin:0 0 8px;">Interactive worksheet with a worked manufacturing example and corrective action tracker.</p>
-                    <span style="color:#004D40;font-size:0.8rem;font-weight:600;">Download Free →</span>
-                </a>
-            </div>
-
-            <h2>Building Organizational Capability</h2>
-            
-            <p>Root cause analysis is a skill. It improves with practice, training, and feedback.</p>
-            
-            <p><strong>Train investigators</strong> not just on techniques, but on critical thinking, interviewing, and organizational dynamics.</p>
-            
-            <p><strong>Review investigations</strong> for quality, not just completion. Are root causes genuinely systemic?</p>
-            
-            <p><strong>Learn from experience.</strong> When incidents recur, the previous investigation failed. Understand why.</p>
-            
-            <p><strong>Share methodology.</strong> Consistent approaches enable comparison and pattern recognition across incidents.</p>
-            
-            <p><strong>Use structured tools.</strong> Software that guides investigators through systematic analysis improves quality and consistency.</p>
-
-            <h2>The Investment Pays Off</h2>
-            
-            <p>Thorough root cause analysis takes time. It's easier to blame someone, close the investigation, and move on.</p>
-            
-            <p>But that's not really moving on. That's waiting for the next incident.</p>
-            
-            <p>Organizations that invest in genuine root cause analysis learn. They improve. They get safer over time.</p>
-            
-            <p>The choice is yours: learning or repetition?</p>
-
-            <p>Consider what genuine RCA investment actually costs. A thorough ICAM investigation of a serious incident might require two investigators for five days — approximately 80 person-hours. At a total cost of perhaps $8,000–$15,000 in investigation time, that investment needs to prevent only a fraction of a future LTI (with its associated workers' compensation, lost production, reputational, and regulatory costs) to generate positive return. Most high-hazard organizations spend more on investigation report formatting than on investigation quality.</p>
-
-            <p>The organizations with the best safety records are not the ones that investigate fastest. They are the ones that investigate most thoroughly. Thoroughness is not a virtue — it is a strategy. When an investigation reaches the organizational factors that created conditions for an incident, it creates the possibility of preventing entire categories of future events. When it stops at the first plausible cause, it creates the illusion of action while the real risk persists unchanged.</p>
-
-            <p>Every investigation is a choice: learn something real, or learn nothing at all while appearing to learn. Good root cause analysis is the discipline of making the first choice consistently, even when it is uncomfortable, even when it implicates management decisions, and even when it takes longer than the production schedule would like.</p>
-
-            <!-- CTA Box -->
-            <div class="bg-gradient-to-br from-apex-500/10 to-cloud rounded-xl p-8 my-12 border border-apex-500/30">
-                <h3 class="text-2xl font-bold mb-4 mt-0">Master Root Cause Analysis</h3>
-                <p class="text-slate mb-6">InvestigatePro guides investigators through systematic root cause analysis using proven methodology and AI-powered support. The result: better investigations, real insights, and recommendations that actually prevent recurrence.</p>
-                <a href="/#demo" class="inline-block bg-apex-500 hover:bg-apex-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
-                    Book a Free Demo →
-                </a>
-            </div>
-
-            <!-- Related Articles -->
-            <div class="border-t border-mist pt-8 mt-12">
-                <h3 class="text-xl font-semibold mb-4">Related Articles</h3>
-                <ul class="space-y-2">
-                    <li><a href="/blog/icam-methodology-guide.html" class="text-apex-500 hover:text-apex-700">The Complete Guide to ICAM Methodology</a></li>
-                    <li><a href="/blog/icam-vs-scat-investigation-methods.html" class="text-apex-500 hover:text-apex-700">ICAM vs SCAT: Which Investigation Method Should You Use?</a></li>
-                    <li><a href="/blog/how-to-use-5-whys-analysis.html" class="text-apex-500 hover:text-apex-700">How to Use 5 Whys Analysis — Step by Step</a></li>
-                    <li><a href="/blog/root-cause-analysis-templates.html" class="text-apex-500 hover:text-apex-700">Root Cause Analysis Templates (Free Download)</a></li>
-                    <li><a href="/blog/incident-investigation-mistakes.html" class="text-apex-500 hover:text-apex-700">5 Common Incident Investigation Mistakes (And How to Avoid Them)</a></li>
-                    <li><a href="/blog/blame-to-learning-culture.html" class="text-apex-500 hover:text-apex-700">From Blame Culture to Learning Culture: A Practical Guide</a></li>
-                    <li><a href="/rca-template-pack.html" class="text-apex-500 hover:text-apex-700">📋 Free RCA Template Pack (5 Whys, Fishbone, ICAM, Report)</a></li>
-                </ul>
-            </div>
-
-        </div>
-    </article>
-
-    <!-- Footer -->
-    
-
-<script src="/analytics.js"></script>
-<footer class="ip2-footer">
-  <div class="ip2-wrap">
-    <div class="cols">
-      <div style="display:flex;flex-direction:column;gap:16px">
-        <a href="/" class="ip2-logo" aria-label="InvestigatePro home"><img class="lgm" src="/assets/brand/logo-horizontal-white.svg" alt="InvestigatePro" width="826" height="168" decoding="async"></a>
-        <p style="max-width:250px;font-size:13px;line-height:1.6">Structured, evidence-led ICAM investigation with an AI coach on every case.</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="ip2-chip">EU-hosted &amp; isolated</span><span class="ip2-chip">GDPR compliant</span></div>
       </div>
-      <div><h4>Product</h4><ul>
-        <li><a href="/platform.html">Platform</a></li><li><a href="/pricing.html">Pricing</a></li><li><a href="/demo.html">Book a demo</a></li>
-        <li><a href="/apps/">Apps</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/security.html">Security</a></li><li><a href="/changelog.html">Changelog</a></li>
-      </ul></div>
-      <div><h4>Resources</h4><ul>
-        <li><a href="/resources.html">All free tools</a></li><li><a href="/checklist.html">ICAM checklist</a></li><li><a href="/icam-toolkit.html">ICAM toolkit</a></li>
-        <li><a href="/peepo-chart-builder.html">PEEPO chart builder</a></li><li><a href="/5-whys-worksheet.html">5-Whys worksheet</a></li><li><a href="/state-of-incident-investigation-2026.html">State of Incident Investigation</a></li>
-      </ul></div>
-      <div><h4>Industries</h4><ul>
-        <li><a href="/industries/mining-incident-investigation.html">Mining</a></li><li><a href="/industries/oil-gas-incident-management.html">Oil &amp; gas</a></li>
-        <li><a href="/industries/manufacturing-root-cause-analysis.html">Manufacturing</a></li><li><a href="/industries/construction-safety-software.html">Construction</a></li>
-        <li><a href="/industries/engineering-incident-investigation.html">Engineering</a></li>
-      </ul></div>
-      <div><h4>Company</h4><ul>
-        <li><a href="/blog/">Blog</a></li><li><a href="/status.html">Service notices</a></li><li><a href="mailto:hello@investigatepro.app">Contact</a></li><li><a href="https://app.investigatepro.app/login">Login</a></li>
-        <li style="margin-top:10px"><a href="/privacy.html">Privacy</a></li><li><a href="/terms.html">Terms</a></li><li><a href="/cookie.html">Cookies</a></li><li><a href="/dpa.html">DPA</a></li>
-      </ul></div>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/resources.html">Resources</a>
+      <a href="/blog/index.html" aria-current="page">Blog</a>
+    </nav>
+    <div class="nav__actions">
+      <a class="nav__login" href="https://app.investigatepro.app/login">Login</a>
+      <a class="btn btn--primary btn--sm" href="https://app.investigatepro.app/signup">Start a 14-day trial</a>
+      <button class="nav__burger" type="button" aria-expanded="false" aria-controls="mmenu" aria-label="Open menu"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></svg></button>
     </div>
-    <p class="accountability">Every suggestion carries its source, and the report goes out attributed to the lead investigator. Built by Devon Turner — fifteen years leading mining safety across Africa and the Middle East, with an ICAM specialism.</p>
-    <p style="margin-top:18px;font-size:12px;color:rgba(159,184,194,.7)">© 2026 InvestigatePro. All rights reserved. · Every incident, understood.</p>
+  </div>
+</header>
+<div class="mmenu" id="mmenu" hidden role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="mmenu__top">
+    <a class="nav__logo" href="/index.html" aria-label="InvestigatePro home"><img src="/assets/img/logo-horizontal-white.svg" alt="InvestigatePro" width="140" height="28"></a>
+    <button class="nav__burger mmenu__close" type="button" aria-label="Close menu"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg></button>
+  </div>
+  <nav class="mmenu__list" aria-label="Mobile">
+    <a href="/platform.html" style="--i:0">Platform <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/pricing.html" style="--i:1">Pricing <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/resources.html" style="--i:2">Resources <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/blog/index.html" style="--i:3">Blog <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/demo.html" style="--i:4">Book a demo <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+  </nav>
+  <div class="mmenu__sub">
+    <a href="/industries/mining-incident-investigation.html">Mining</a>
+    <a href="/industries/oil-gas-incident-management.html">Oil and gas</a>
+    <a href="/industries/manufacturing-root-cause-analysis.html">Manufacturing</a>
+    <a href="/industries/construction-safety-software.html">Construction</a>
+    <a href="/industries/engineering-incident-investigation.html">Engineering</a>
+    <a href="https://app.investigatepro.app/login">Login</a>
+  </div>
+  <div class="mmenu__cta">
+    <a class="btn btn--primary btn--block" href="https://app.investigatepro.app/signup">Start a 14-day trial</a>
+    <a class="btn btn--ghost btn--block" href="https://cal.com/investigatepro/15min">Book a 15-minute demo</a>
+  </div>
+</div>
+
+<main id="main">
+<div class="readbar" aria-hidden="true"><i></i></div>
+<section class="phead">
+  <div class="wrap art-head">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/index.html">Home</a><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg><a href="/blog/index.html">Blog</a><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg><span>Guide</span></nav>
+    <h1>Root Cause Analysis: Going Beyond the Obvious</h1>
+    <div class="byline"><span><strong>Devon Turner</strong>Founder, 15+ years leading mining safety · 16 min read</span></div>
+  </div>
+</section>
+<section class="sec sec--tight" style="padding-top:0">
+  <div class="wrap art">
+    <nav class="toc" data-toc aria-label="Contents"><p>Contents</p><a href="#what-root-cause-analysis-actually-means">What Root Cause Analysis Actually Means</a><a href="#why-root-cause-analysis-fails">Why Root Cause Analysis Fails</a><a href="#techniques-that-actually-work">Techniques That Actually Work</a><a href="#the-systemic-perspective">The Systemic Perspective</a><a href="#from-causes-to-action">From Causes to Action</a><a href="#common-root-cause-analysis-mistakes">Common Root Cause Analysis Mistakes</a><a href="#choosing-the-right-rca-method-for-your-situation">Choosing the Right RCA Method for Your Situation</a><a href="#root-cause-analysis-in-high-hazard-industries">Root Cause Analysis in High-Hazard Industries</a><a href="#frequently-asked-questions-about-root-cause-analysis">Frequently Asked Questions About Root Cause Analysis</a><a href="#free-root-cause-analysis-resources">Free Root Cause Analysis Resources</a><a href="#building-organisational-capability">Building Organisational Capability</a><a href="#the-investment-pays-off">The Investment Pays Off</a></nav>
+    <article class="prose">
+<p>Every incident has a story. The surface story is usually simple: someone made a mistake, equipment failed, conditions were bad.</p>
+<p>The real story goes deeper. The mistake happened because of pressure. The equipment failed because of deferred maintenance. The conditions existed because no one had authority to stop work.</p>
+<p>Root cause analysis is the discipline of finding the real story. Done well, it transforms incidents from recurring frustrations into genuine learning opportunities.</p>
+<p>Done poorly, it's just a box to tick.</p>
+<h2 id="what-root-cause-analysis-actually-means">What Root Cause Analysis Actually Means</h2>
+<p>Let's start with what it doesn't mean:</p>
+<p><strong>Cause ≠ proximate cause.</strong> The proximate cause is what directly caused the incident. The cause is why the proximate cause existed. "Operator failed to isolate equipment" is proximate. "Procedure was impractical under production pressure, and no alternative procedure existed" is closer to root.</p>
+<p><strong>Cause ≠ first cause.</strong> Going all the way back to the Big Bang isn't helpful. Underlying causes are the factors where practical intervention can prevent recurrence.</p>
+<p><strong>Cause ≠ single cause.</strong> Most incidents have multiple contributing factors. Looking for "the" cause often means stopping too soon.</p>
+<p>A working definition: <strong>Underlying causes are the systemic factors that, if changed, would prevent recurrence of this incident and similar incidents.</strong></p>
+<h2 id="why-root-cause-analysis-fails">Why Root Cause Analysis Fails</h2>
+<p>Most root cause analysis stops too soon or goes down the wrong paths. Here's why:</p>
+<h3>The Human Error Trap</h3>
+<p>Investigation identifies a human error and declares success. "The worker didn't follow procedure."</p>
+<p>This is where investigation should <em>start</em>, not end. Why didn't they follow procedure?</p>
+<p>Maybe the procedure was 45 minutes long for a 10-minute task. Maybe they weren't trained on it. Maybe following it required equipment that wasn't available. Maybe everyone does this workaround and supervision knows about it.</p>
+<p><strong>Rule of thumb:</strong> When you identify a human error, you've found a symptom. Keep asking why.</p>
+<h3>The Blame Reflex</h3>
+<p>When investigation aims to assign blame, people get defensive. Information gets hidden. The investigation finds a scapegoat, not a cause.</p>
+<p>Genuine root cause analysis requires psychological safety, the confidence that honest information won't be used against you.</p>
+<h3>The Confirmation Trap</h3>
+<p>Investigators often form early hypotheses and then look for confirming evidence. First impressions become final conclusions.</p>
+<p>Good root cause analysis requires actively seeking disconfirming evidence. What else could explain this? What doesn't fit your hypothesis?</p>
+<h3>The Scope Trap</h3>
+<p>Some investigations go so deep they become philosophical. Others stop at the first convenient answer.</p>
+<p>The right scope is determined by practicality: What can we actually change? Where can intervention prevent this and similar incidents?</p>
+<h2 id="techniques-that-actually-work">Techniques That Actually Work</h2>
+<h3>The Five Whys (With Caveats)</h3>
+<p>The classic technique: Ask "why" five times to drill down to cause.</p>
+<p><strong>Example:</strong></p>
+<ol><li>Why did the worker get injured? <em>They were struck by falling material.</em></li><li>Why did material fall? <em>It wasn't secured properly.</em></li><li>Why wasn't it secured? <em>The tie-down equipment wasn't available.</em></li><li>Why wasn't equipment available? <em>It was being used elsewhere and there's only one set.</em></li><li>Why is there only one set? <em>Request for additional equipment was denied six months ago.</em></li></ol>
+<p><strong>The caveats:</strong></p>
+<ul><li>Five isn't a magic number. Sometimes you need three; sometimes you need seven.</li><li>Each "why" can branch into multiple paths. Explore all relevant branches.</li><li>"Why" can trigger defensive responses. Consider "What led to..." or "What conditions contributed to..."</li></ul>
+<h3>Fishbone Diagrams (Ishikawa)</h3>
+<p>Organize potential causes into categories:</p>
+<ul><li><strong>Man</strong> (People): Training, competence, fatigue, distraction</li><li><strong>Machine</strong> (Equipment): Design, maintenance, reliability</li><li><strong>Method</strong> (Process): Procedures, sequence, workflow</li><li><strong>Material</strong> (Inputs): Quality, availability, appropriateness</li><li><strong>Measurement</strong> (Data): Accuracy, feedback, monitoring</li><li><strong>Environment:</strong> Physical conditions, organisational climate</li></ul>
+<p>For each branch, brainstorm contributing factors. Then investigate which actually contributed.</p>
+<p><strong>The value:</strong> Fishbone diagrams ensure you consider multiple categories rather than fixating on the first plausible cause.</p>
+<h3>Timeline Analysis</h3>
+<p>Construct a detailed chronological sequence:</p>
+<ul><li>What happened</li><li>When (precise timing)</li><li>Where</li><li>Who was involved</li><li>What decisions were made</li><li>What information was available</li></ul>
+<p>Then look for:</p>
+<ul><li>Decision points where different choices might have led to different outcomes</li><li>Information gaps where people didn't know things they needed to know</li><li>Timing factors that created pressure or confusion</li></ul>
+<p><strong>The value:</strong> Timelines reveal how events cascaded and where intervention could have broken the chain.</p>
+<h3>Change Analysis</h3>
+<p>Compare the incident situation to normal operations:</p>
+<ul><li>What was different this time?</li><li>What recent changes occurred?</li><li>What was unusual about the conditions, people, or equipment?</li></ul>
+<p>Often the causes hides in recent changes, new procedures, different personnel, modified equipment, unusual production demands.</p>
+<h3>Barrier Analysis</h3>
+<p>Identify what should have prevented the incident:</p>
+<ul><li>What defenses were supposed to exist?</li><li>Were they absent, failed, or inadequate?</li><li>Why?</li></ul>
+<p>For each failed barrier, conduct a mini-root-cause analysis. If a procedure was supposed to prevent this, why didn't it?</p>
+<h3>Causal Factor Charting</h3>
+<p>Build a visual map connecting:</p>
+<ul><li>Events (what happened)</li><li>Conditions (circumstances that existed)</li><li>Causal factors (things that contributed to the outcome)</li></ul>
+<p>Arrows show relationships. The chart reveals where intervention can break causal chains.</p>
+<aside class="callout bezel" aria-label="How InvestigatePro helps"><p><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M168,112a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,112Zm-8,24H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16Zm72-8A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-16,0A88,88,0,1,0,51.81,172.06a8,8,0,0,1,.66,6.54L40,216,77.4,203.53a7.85,7.85,0,0,1,2.53-.42,8,8,0,0,1,4,1.08A88,88,0,0,0,216,128Z"/></svg> <strong>In InvestigatePro,</strong> the coach prompts every ICAM level on every case and drafts factors with their sources. Nothing is filed until the investigator accepts it.</p><div><a class="link-arrow" href="/platform.html">See how the method runs <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a></div></aside>
+<h2 id="the-systemic-perspective">The Systemic Perspective</h2>
+<p>Good root cause analysis eventually reaches organisational factors:</p>
+<p><strong>Resource allocation:</strong> Were sufficient resources (time, personnel, equipment, budget) provided?</p>
+<p><strong>Management systems:</strong> How are decisions made? How is information communicated?</p>
+<p><strong>Culture:</strong> What behaviours are actually rewarded? What's tolerated? What's punished?</p>
+<p><strong>External pressures:</strong> Regulatory requirements, competitive pressures, customer demands</p>
+<p><strong>Design decisions:</strong> How were processes, equipment, and procedures designed?</p>
+<p>These factors often feel uncomfortable to identify. They implicate decisions made by leadership, not just actions taken by workers.</p>
+<p>But they're where the leverage is. Fixing an organisational factor prevents entire categories of incidents. Disciplining an individual prevents nothing.</p>
+<h2 id="from-causes-to-action">From Causes to Action</h2>
+<p>Identifying underlying causes is only valuable if it leads to effective action.</p>
+<p><strong>Good recommendations are:</strong></p>
+<ul><li><strong>Specific:</strong> Not "improve communication" but "implement daily shift briefings covering..."</li><li><strong>Systemic:</strong> Address underlying causes, not symptoms</li><li><strong>Feasible:</strong> Can actually be implemented with available resources</li><li><strong>Verifiable:</strong> You can measure whether they worked</li><li><strong>Owned:</strong> Someone is responsible for implementation</li><li><strong>Timebound:</strong> Clear deadline for completion</li></ul>
+<p><strong>Bad recommendations:</strong></p>
+<ul><li>"Workers should be more careful"</li><li>"Supervisors need to enforce procedures"</li><li>"Provide additional training"</li><li>"Remind everyone about policy"</li></ul>
+<p>These change nothing. They're wishes, not recommendations.</p>
+<p><strong>The hierarchy of controls applies:</strong></p>
+<ol><li><strong>Elimination:</strong> Remove the hazard entirely</li><li><strong>Substitution:</strong> Replace with something less hazardous</li><li><strong>Engineering controls:</strong> Physical changes that reduce risk</li><li><strong>Administrative controls:</strong> Changes to procedures, training, communication</li><li><strong>PPE:</strong> Personal protective equipment</li></ol>
+<p>Prefer controls higher in the hierarchy. They're more reliable than depending on human behaviour.</p>
+<h2 id="common-root-cause-analysis-mistakes">Common Root Cause Analysis Mistakes</h2>
+<p><strong>Stopping at first plausible cause:</strong> There's usually more. Keep investigating until you reach organisational factors.</p>
+<p><strong>Accepting "human error" as a cause:</strong> It never is. Human error is shaped by system design.</p>
+<p><strong>Ignoring organisational factors:</strong> The most important causes often make leadership uncomfortable.</p>
+<p><strong>Recommending retraining as default action:</strong> Retraining rarely prevents recurrence unless the original training was genuinely deficient.</p>
+<p><strong>Not verifying causes:</strong> A plausible cause isn't a confirmed cause. Verify through evidence.</p>
+<p><strong>Failing to follow up:</strong> Recommendations that don't get implemented don't prevent anything.</p>
+<h2 id="choosing-the-right-rca-method-for-your-situation">Choosing the Right RCA Method for Your Situation</h2>
+<p>Not all RCA methods are equally suited to every investigation. The method you choose should be matched to the incident's complexity, your team's experience, and the time available. Here is a practical decision framework:</p>
+<h3>5 Whys: When to Use It</h3>
+<p>Use 5 Whys for incidents that are relatively simple, a single causal chain, limited personnel involvement, and no indication of complex organisational factors. 5 Whys is fast, accessible to investigators without formal training, and well-suited to high-volume, low-severity incident investigations. The critical discipline is not stopping at human error: if your 5th "why" is "because the worker wasn't paying attention," you have not reached a cause, you have reached a symptom. Use 5 Whys as a starting point, not a destination.</p>
+<h3>Fishbone / Ishikawa: When to Use It</h3>
+<p>Use a Fishbone diagram when you suspect multiple contributing factors across different categories, or when you want to ensure team brainstorming covers all potential causes before analysis begins. The Fishbone is particularly valuable at the start of a complex investigation, as a structure for generating hypotheses before deeper investigation determines which actually contributed. It works well as a team exercise in the first 24-48 hours after a serious incident.</p>
+<h3>ICAM: When to Use It</h3>
+<p>Use ICAM for serious incidents, LTI severity and above, and for high-potential events. ICAM's structured four-factor model (absent/failed defences, individual/team actions, task/environmental conditions, and organisational factors via PEEPO) is designed for the complexity of multi-causal incidents in high-hazard industries. It requires more investigator time and skill than 5 Whys, but produces substantially better organisational learning. ICAM is the gold standard in Australian, African, and Middle Eastern mining and construction operations, and is increasingly adopted in oil and gas.</p>
+<h3>Fault Tree Analysis: When to Use It</h3>
+<p>Use Fault Tree Analysis (FTA) when the incident involves complex technical systems where you need to understand all possible causal combinations, or when quantitative probability analysis is required. FTA is most common in process safety applications (oil and gas, chemical, nuclear) where understanding the probability of simultaneous barrier failures is essential for risk modelling. FTA is often used alongside ICAM in major incident investigations, ICAM for the organisational investigation, FTA for the technical system analysis.</p>
+<h2 id="root-cause-analysis-in-high-hazard-industries">Root Cause Analysis in High-Hazard Industries</h2>
+<p>RCA has different emphases and requirements across different high-hazard sectors. Understanding these differences helps practitioners calibrate their approach.</p>
+<h3>Mining</h3>
+<p>Mining operations experience a diverse range of incident types, ground control failures, mobile equipment collisions, blasting incidents, and occupational health events. Mining regulators in Australia, South Africa, and West Africa increasingly require ICAM-aligned investigations for serious incidents. The most significant organisational factors in mining RCA typically involve: management of change (for equipment modifications and procedure changes), contractor management systems (since major mine sites often have dozens of contractors), and the tension between production targets and safe work pace. For a detailed guide, see our <a href="/blog/mining-incident-investigation-guide.html">mining incident investigation guide</a>.</p>
+<h3>Construction</h3>
+<p>Construction sites present unique RCA challenges because of their dynamic multi-contractor environment. The same physical location might have a dozen subcontractors working simultaneously, each with their own safety management systems. RCA on construction sites frequently surfaces failures in: task-specific risk assessment quality, site induction adequacy for short-tenure workers, supervision gaps at principal-subcontractor interfaces, and the production pressure that leads to compressed timelines for safety-critical work. The blame-free framing of ICAM is particularly valuable on construction sites because workers and subcontractors are often reluctant to share information candidly when they fear consequences.</p>
+<h3>Oil, Gas &amp; Petrochemicals</h3>
+<p>Process safety incidents in oil and gas demand the deepest RCA capability. These incidents typically involve multiple simultaneous barrier failures, no single point failure causes a catastrophic event, and the organisational factors are often complex: management of change systems that have accumulated exceptions, permit-to-work systems that have become performative rather than functional, and production pressure that has normalized operating outside design intent. Many operators combine ICAM with Bow-Tie analysis to map barrier states, and with FTA for technical system analysis. The Deepwater Horizon and Texas City disasters both revealed organisational underlying causes that preceded the immediate technical failures by years.</p>
+<h3>Manufacturing</h3>
+<p>In manufacturing, RCA is often used for high-frequency, lower-severity incidents, lacerations, musculoskeletal injuries, and machine-interaction events, as well as for serious incidents. The 5 Whys is the most common RCA technique in manufacturing, but it is frequently executed poorly: investigations stop at "worker did not use guard" rather than asking why the guard was not used, why the machine could be operated without the guard, why the guarding design allowed bypass, and what production pressure led workers to develop the bypass practice. A manufacturing organisation that consistently executes 5 Whys to systemic organisational causes will outperform one that uses ICAM poorly.</p>
+<h2 id="frequently-asked-questions-about-root-cause-analysis">Frequently Asked Questions About Root Cause Analysis</h2>
+<h3>How many underlying causes can one incident have?</h3>
+<p>Most serious incidents have multiple underlying causes, typically between three and eight organisational factor failures that combined to create conditions for the event. Investigators who find only one cause have usually stopped too early. Each contributing factor at the immediate cause level should be traced independently to its organisational root, which means a single incident can legitimately reveal multiple management system failures across different organisational systems.</p>
+<h3>How long should a root cause analysis take?</h3>
+<p>This depends heavily on incident complexity. A 5 Whys analysis for a minor incident might be completed in one to two hours. An ICAM investigation of a serious LTI with multiple witnesses, complex system interactions, and extensive documentary evidence might take ten to fifteen working days from incident to final report. The most common error is setting an arbitrary investigation deadline (common examples: "investigations must close within five working days") that forces investigators to cut corners when the incident complexity demands more time. Investigation duration should be proportionate to incident severity, not organisational impatience.</p>
+<h3>When should we bring in an external investigator?</h3>
+<p>External investigation support is appropriate when: the incident is of sufficient severity that regulatory scrutiny is likely; when internal investigators have a conflict of interest or insufficient experience with the investigation complexity; when the incident involves senior leadership decisions that internal investigators cannot examine objectively; or when a pattern of recurring incidents suggests that internal investigations have consistently missed systemic causes. The presence of an external investigator signals organisational seriousness to regulators, workers, and insurers, but only adds value if the external investigator has genuine ICAM expertise, not just general consulting experience.</p>
+<h3>How do we know if our RCA quality is improving?</h3>
+<p>Leading indicators of RCA quality improvement include: an increasing proportion of investigations that identify organisational factors (not just immediate causes); a declining proportion of recommendations that rely on retraining or reminding workers; improving recommendation implementation rates; and reducing recurrence rates for incident types that have been investigated. The most direct test: ask whether your investigation recommendations would have prevented similar incidents at other sites. If they rely entirely on individual behaviour change, they probably would not, and your RCA quality has room to improve.</p>
+<h2 id="free-root-cause-analysis-resources">Free Root Cause Analysis Resources</h2>
+<p>These free tools let you apply RCA methodology immediately, no software required:</p>
+<p>RCA Template Pack (Free)</p>
+<p>4 interactive templates: 5 Whys, Fishbone, ICAM-aligned RCA, Investigation Report. Fill in online or print.</p>
+<p>5 Whys Worksheet (Free)</p>
+<p>Interactive worksheet with a worked manufacturing example and corrective action tracker.</p>
+<h2 id="building-organisational-capability">Building Organisational Capability</h2>
+<p>Root cause analysis is a skill. It improves with practice, training, and feedback.</p>
+<p><strong>Train investigators</strong> not just on techniques, but on critical thinking, interviewing, and organisational dynamics.</p>
+<p><strong>Review investigations</strong> for quality, not just completion. Are underlying causes genuinely systemic?</p>
+<p><strong>Learn from experience.</strong> When incidents recur, the previous investigation failed. Understand why.</p>
+<p><strong>Share methodology.</strong> Consistent approaches enable comparison and pattern recognition across incidents.</p>
+<p><strong>Use structured tools.</strong> Software that guides investigators through systematic analysis improves quality and consistency.</p>
+<h2 id="the-investment-pays-off">The Investment Pays Off</h2>
+<p>Thorough root cause analysis takes time. It's easier to blame someone, close the investigation, and move on.</p>
+<p>But that's not really moving on. That's waiting for the next incident.</p>
+<p>Organisations that invest in genuine root cause analysis learn. They improve. They get safer over time.</p>
+<p>The choice is yours: learning or repetition?</p>
+<p>Consider what genuine RCA investment actually costs. A thorough ICAM investigation of a serious incident might require two investigators for five days, approximately 80 person-hours. At a total cost of perhaps $8,000-$15,000 in investigation time, that investment needs to prevent only a fraction of a future LTI (with its associated workers' compensation, lost production, reputational, and regulatory costs) to generate positive return. Most high-hazard organisations spend more on investigation report formatting than on investigation quality.</p>
+<p>The organisations with the best safety records are not the ones that investigate fastest. They are the ones that investigate most thoroughly. Thoroughness is not a virtue, it is a strategy. When an investigation reaches the organisational factors that created conditions for an incident, it creates the possibility of preventing entire categories of future events. When it stops at the first plausible cause, it creates the illusion of action while the real risk persists unchanged.</p>
+<p>Every investigation is a choice: learn something real, or learn nothing at all while appearing to learn. Good root cause analysis is the discipline of making the first choice consistently, even when it is uncomfortable, even when it implicates management decisions, and even when it takes longer than the production schedule would like.</p>
+<h3>Master Root Cause Analysis</h3>
+<p>InvestigatePro guides investigators through systematic root cause analysis using proven methodology and AI-powered support. The result: better investigations, real insights, and recommendations that actually prevent recurrence.</p>
+<h3>Related Articles</h3>
+<ul><li><a href="/blog/icam-methodology-guide.html">The Complete Guide to ICAM Methodology</a></li><li><a href="/blog/icam-vs-scat-investigation-methods.html">ICAM vs SCAT: Which Investigation Method Should You Use?</a></li><li><a href="/blog/how-to-use-5-whys-analysis.html">How to Use 5 Whys Analysis, Step by Step</a></li><li><a href="/blog/root-cause-analysis-templates.html">Root Cause Analysis Templates (Free Download)</a></li><li><a href="/blog/incident-investigation-mistakes.html">5 Common Incident Investigation Mistakes (And How to Avoid Them)</a></li><li><a href="/blog/blame-to-learning-culture.html">From Blame Culture to Learning Culture: A Practical Guide</a></li><li><a href="/rca-template-pack.html">Free RCA Template Pack (5 Whys, Fishbone, ICAM, Report)</a></li></ul>
+      <div class="author"><strong>Devon Turner</strong><p>Founder of InvestigatePro. Fifteen years leading mining safety across Africa and the Middle East, with an ICAM specialism.</p></div>
+    </article>
+    <aside class="art-aside" aria-label="Related">
+      <div class="bezel meter"><strong>Run it on a real case</strong><p class="muted small">A self-serve 14-day trial on Starter or Professional.</p><a class="btn btn--primary btn--sm" href="https://app.investigatepro.app/signup">Start a 14-day trial</a></div>
+      <div class="bezel meter"><strong>25-point ICAM checklist</strong><p class="muted small">Tick it off in the browser.</p><a class="btn btn--ghost btn--sm" href="/checklist.html">Open the checklist</a></div>
+    </aside>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <div class="foot__brand">
+      <a href="/index.html" aria-label="InvestigatePro home"><img src="/assets/img/logo-horizontal-white.svg" alt="InvestigatePro" width="168" height="34"></a>
+      <p class="foot__tag">Every incident, understood.</p>
+      <p class="foot__by">Built by Devon Turner, who spent fifteen years leading mining safety across Africa and the Middle East, with an ICAM specialism.</p>
+      <button class="motion-toggle" type="button" aria-pressed="false"><span class="motion-toggle__track" aria-hidden="true"></span>Reduce motion</button>
+    </div>
+    <div>
+      <h2>Product</h2>
+      <ul>
+        <li><a href="/platform.html">Platform</a></li>
+        <li><a href="/pricing.html">Pricing</a></li>
+        <li><a href="/demo.html">Book a demo</a></li>
+        <li><a href="/security.html">Security</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+        <li><a href="/changelog.html">Changelog</a></li>
+        <li><a href="/apps/index.html">Apps</a><span class="tag-inbuild">in build</span></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Free tools</h2>
+      <ul>
+        <li><a href="/resources.html">All free tools</a></li>
+        <li><a href="/checklist.html">ICAM checklist</a></li>
+        <li><a href="/icam-toolkit.html">ICAM toolkit</a></li>
+        <li><a href="/peepo-chart-builder.html">PEEPO chart builder</a></li>
+        <li><a href="/5-whys-worksheet.html">5-Whys worksheet</a></li>
+        <li><a href="/state-of-incident-investigation-2026.html">State of Incident Investigation 2026</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Industries</h2>
+      <ul>
+        <li><a href="/industries/mining-incident-investigation.html">Mining</a></li>
+        <li><a href="/industries/oil-gas-incident-management.html">Oil and gas</a></li>
+        <li><a href="/industries/manufacturing-root-cause-analysis.html">Manufacturing</a></li>
+        <li><a href="/industries/construction-safety-software.html">Construction</a></li>
+        <li><a href="/industries/engineering-incident-investigation.html">Engineering</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Company</h2>
+      <ul>
+        <li><a href="/blog/index.html">Blog</a></li>
+        <li><a href="/status.html">Service notices</a></li>
+        <li><a href="mailto:hello@investigatepro.app">Contact: hello@investigatepro.app</a></li>
+        <li><a href="https://app.investigatepro.app/login">Login</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/terms.html">Terms</a></li>
+        <li><a href="/cookie.html">Cookies</a></li>
+        <li><a href="/dpa.html">DPA</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot__base">
+    <span>&copy; 2026 InvestigatePro. Find the causes. Fix the system.</span>
+    <span>Every incident, understood.</span>
   </div>
 </footer>
-<script defer src="/assets/js/ip2.js"></script>
+
 </body>
 </html>

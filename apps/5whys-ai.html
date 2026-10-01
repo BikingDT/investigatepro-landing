@@ -1,697 +1,267 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-GB" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>5 Whys AI — AI-Powered Root Cause Analysis App</title>
-    <meta name="description" content="Your AI investigation partner in your pocket. Get coached through rigorous 5 Whys root cause analysis with an AI that challenges shallow answers and pushes you deeper.">
-    <link rel="icon" type="image/png" href="../assets/brand/favicon-32.png">
-    
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://investigatepro.app/apps/5whys-ai.html">
-    <meta property="og:title" content="5 Whys AI — AI-Powered Root Cause Analysis">
-    <meta property="og:description" content="Your AI investigation partner in your pocket. Root cause analysis with AI coaching.">
-    <meta property="og:image" content="https://investigatepro.app/assets/brand/og-image.png">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    
-    <!-- Tailwind CSS (built) -->
-    <link rel="stylesheet" href="../assets/css/styles.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <style>
-        .gradient-hero {background:linear-gradient(180deg,#EBF1F0 0%,#F4F7F9 45%,#FFFFFF 100%)}
-        .glow-cyan { box-shadow: 0 0 60px rgba(0,77,64,0.3); }
-        .phone-mockup {
-            background: linear-gradient(145deg, #FFFFFF 0%, #F4F7F9 100%);
-            border-radius: 40px;
-            padding: 12px;
-            box-shadow: 0 25px 80px rgba(17,45,60,0.08), inset 0 0 0 2px rgba(0,77,64,0.1);
-        }
-        .phone-screen {
-            background: #F4F7F9;
-            border-radius: 32px;
-            overflow: hidden;
-        }
-        .chat-bubble-ai {
-            background: linear-gradient(135deg, rgba(0,77,64,0.15) 0%, rgba(0,77,64,0.05) 100%);
-            border: 1px solid rgba(0,77,64,0.3);
-        }
-        .chat-bubble-user {
-            background: #D9E2E8;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>5-Whys AI | A coach for the 5 Whys, in build | InvestigatePro</title>
+<meta name="description" content="5-Whys AI is a companion app in build: a coach that challenges shallow answers, points out blind spots and takes the 5 Whys past the person to the system. Join the list to hear when it launches.">
+<link rel="canonical" href="https://investigatepro.app/apps/5whys-ai.html">
 
-    <!-- Structured Data: Breadcrumb -->
-    <script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://investigatepro.app/"
-        },
-        {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Mobile Apps",
-            "item": "https://investigatepro.app/apps/"
-        },
-        {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "5 Whys AI",
-            "item": "https://investigatepro.app/apps/5whys-ai.html"
-        }
-    ]
-}</script>
-<link rel="stylesheet" href="/assets/css/ip2-chrome.css">
-    <link rel="canonical" href="https://investigatepro.app/apps/5whys-ai.html">
+<meta name="theme-color" content="#063A41">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="InvestigatePro">
+<meta property="og:title" content="5-Whys AI | A coach for the 5 Whys, in build | InvestigatePro">
+<meta property="og:description" content="5-Whys AI is a companion app in build: a coach that challenges shallow answers, points out blind spots and takes the 5 Whys past the person to the system. Join the list to hear when it launches.">
+<meta property="og:url" content="https://investigatepro.app/apps/5whys-ai.html">
+<meta property="og:image" content="https://investigatepro.app/assets/img/og-apps.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/montserrat-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/ip-next.css">
+<script>(function(){var h=document.documentElement,r=false;h.className=h.className.replace('no-js','js');try{r=localStorage.getItem('ip-reduce-motion')==='1'}catch(e){}if(!r&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){h.classList.add('motion-on')}else{h.classList.add('motion-off')}})();</script>
+<script src="/assets/ip-next.js" defer></script>
+<script src="/analytics.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"5 Whys AI","applicationCategory":"BusinessApplication","operatingSystem":"iOS, Android","creator":{"@type":"Organization","name":"InvestigatePro","url":"https://investigatepro.app"}}</script>
 </head>
-<body class="font-sans antialiased bg-cloud text-ink">
-<!-- Site chrome: unified navigation -->
-<nav class="ip2-nav light" aria-label="Main">
-  <div class="ip2-nav-row">
-    <a href="/" class="ip2-logo" aria-label="InvestigatePro home"><img class="lgm" src="/assets/brand/logo-horizontal.svg" alt="InvestigatePro" width="826" height="168" decoding="async"></a>
-    <div class="ip2-links">
-      <a href="/platform.html">Platform</a><a href="/pricing.html">Pricing</a><a href="/resources.html" aria-current="page">Resources</a><a href="/blog/">Blog</a>
-      <a href="https://app.investigatepro.app/login" class="ip2-login">Login</a>
-      <a href="/#pilot" class="ip2-cta">Start a pilot</a>
-    </div>
-    <button class="mm-btn" aria-expanded="false" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
-  </div>
-  <div class="mm-panel">
-    <a href="/platform.html">Platform</a><a href="/pricing.html">Pricing</a><a href="/resources.html">Resources</a><a href="/blog/">Blog</a>
-    <a href="https://app.investigatepro.app/login" class="ip2-login-m">Login</a>
-    <a href="/#pilot" class="btn btn-primary">Start a pilot</a>
-    <a href="https://cal.com/investigatepro/15min" class="btn btn-outline">Book a 15-minute demo</a>
-  </div>
-</nav>
-
-
-    <!-- Hero Section -->
-    <section class="gradient-hero pt-44 pb-16 lg:pt-56 lg:pb-24 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                
-                <!-- Left: Copy -->
-                <div>
-                    <div class="inline-flex items-center bg-cloud rounded-full px-4 py-1.5 mb-6">
-                        <span class="w-2 h-2 bg-apex-500 rounded-full mr-2 animate-pulse"></span>
-                        <span class="text-sm text-slate">Coming Soon — Join the Waitlist</span>
-                    </div>
-                    
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                        5 Whys AI
-                    </h1>
-                    
-                    <p class="text-xl lg:text-2xl text-apex-500 font-medium mb-4">
-                        Your AI investigation partner in your pocket
-                    </p>
-                    
-                    <p class="text-lg text-slate mb-8">
-                        Stop at surface-level causes? Not anymore. Get coached through rigorous 
-                        root cause analysis with an AI that challenges shallow answers, 
-                        suggests blind spots, and pushes you to dig deeper.
-                    </p>
-                    
-                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
-                        <a href="#waitlist" class="bg-apex-500 hover:bg-apex-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center">
-                            Join the Waitlist
-                        </a>
-                        <a href="#how-it-works" class="border border-mist hover:border-apex-500 text-ink px-6 py-3 rounded-lg font-semibold transition-colors text-center">
-                            See How It Works
-                        </a>
-                    </div>
-                    
-                    <div class="flex items-center gap-6 text-sm text-graphite">
-                        <div class="flex items-center">
-                            <svg class="w-5 h-5 text-apex-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
-                            </svg>
-                            iOS &amp; Android &mdash; in build
-                        </div>
-                        <div class="flex items-center">
-                            <svg class="w-5 h-5 text-apex-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414"></path>
-                            </svg>
-                            Works Offline
-                        </div>
-                        <div class="flex items-center">
-                            <svg class="w-5 h-5 text-apex-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-                            </svg>
-                            Free Tier Available
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Right: Phone Mockup -->
-                <div class="flex justify-center lg:justify-end">
-                    <div class="phone-mockup w-[300px] lg:w-[340px] glow-cyan">
-                        <div class="phone-screen p-4 min-h-[580px]">
-                            <!-- App Header -->
-                            <div class="flex items-center justify-between mb-6">
-                                <div class="text-lg font-bold">5 Whys AI</div>
-                                <div class="text-xs text-graphite">Forklift Incident</div>
-                            </div>
-                            
-                            <!-- Chat Interface -->
-                            <div class="space-y-4">
-                                <!-- Problem Statement -->
-                                <div class="chat-bubble-user rounded-2xl rounded-br-md px-4 py-3 ml-8">
-                                    <div class="text-xs text-graphite mb-1">Problem</div>
-                                    <div class="text-sm">Forklift struck warehouse racking causing damage</div>
-                                </div>
-                                
-                                <!-- Why 1 -->
-                                <div class="chat-bubble-user rounded-2xl rounded-br-md px-4 py-3 ml-8">
-                                    <div class="text-xs text-apex-500 mb-1">Why 1</div>
-                                    <div class="text-sm">Operator was going too fast</div>
-                                </div>
-                                
-                                <!-- AI Response -->
-                                <div class="chat-bubble-ai rounded-2xl rounded-bl-md px-4 py-3 mr-8">
-                                    <div class="flex items-center mb-2">
-                                        <div class="w-6 h-6 bg-apex-500 rounded-full flex items-center justify-center mr-2">
-                                            <span class="text-ink text-xs font-bold">AI</span>
-                                        </div>
-                                        <span class="text-xs text-apex-500">Coach</span>
-                                    </div>
-                                    <div class="text-sm text-slate">
-                                        Speed is a factor. But <span class="text-apex-500 font-medium">WHY</span> was the operator going too fast?
-                                    </div>
-                                    <div class="mt-2 text-xs text-graphite">
-                                        Consider: Production pressure? Lack of awareness? Equipment issue?
-                                    </div>
-                                </div>
-                                
-                                <!-- Why 2 -->
-                                <div class="chat-bubble-user rounded-2xl rounded-br-md px-4 py-3 ml-8">
-                                    <div class="text-xs text-apex-500 mb-1">Why 2</div>
-                                    <div class="text-sm">Rushing to meet shift deadline</div>
-                                </div>
-                                
-                                <!-- AI Challenge -->
-                                <div class="chat-bubble-ai rounded-2xl rounded-bl-md px-4 py-3 mr-8">
-                                    <div class="flex items-center mb-2">
-                                        <div class="w-6 h-6 bg-apex-500 rounded-full flex items-center justify-center mr-2">
-                                            <span class="text-ink text-xs font-bold">AI</span>
-                                        </div>
-                                        <span class="text-xs text-apex-500">Challenge</span>
-                                    </div>
-                                    <div class="text-sm text-slate">
-                                        Time pressure identified. <span class="text-apex-500 font-medium">WHY</span> was there a deadline pressure?
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Input Area -->
-                            <div class="absolute bottom-4 left-4 right-4">
-                                <div class="bg-cloud rounded-full px-4 py-3 flex items-center">
-                                    <input type="text" placeholder="Enter Why 3..." class="bg-transparent flex-1 text-sm outline-none text-slate placeholder-graphite">
-                                    <button class="ml-2 w-8 h-8 bg-apex-500 rounded-full flex items-center justify-center">
-                                        <svg class="w-4 h-4 text-ink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
+<body class="page-apps">
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__logo" href="/index.html" aria-label="InvestigatePro home"><img src="/assets/img/logo-horizontal-white.svg" alt="InvestigatePro" width="152" height="31"></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="/platform.html">Platform</a>
+      <div class="nav__menu">
+        <button class="nav__menu-btn" type="button" aria-expanded="false" aria-controls="nav-industries">Industries <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg></button>
+        <div class="nav__panel" id="nav-industries">
+          <a href="/industries/mining-incident-investigation.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,152V136a96.37,96.37,0,0,0-64-90.51V40a16,16,0,0,0-16-16H112A16,16,0,0,0,96,40v5.49A96.37,96.37,0,0,0,32,136v16a16,16,0,0,0-16,16v24a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V168A16,16,0,0,0,224,152Zm-16-16v16H160V62.67A80.36,80.36,0,0,1,208,136ZM144,40V152H112V40ZM48,136A80.36,80.36,0,0,1,96,62.67V152H48Zm176,56H32V168H224v24Z"/></svg><strong>Mining</strong><span>Underground, open-cut, processing and contractors</span></a>
+          <a href="/industries/oil-gas-incident-management.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></svg><strong>Oil and gas</strong><span>Upstream, midstream and field services</span></a>
+          <a href="/industries/manufacturing-root-cause-analysis.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M116,176a8,8,0,0,1-8,8H80a8,8,0,0,1,0-16h28A8,8,0,0,1,116,176Zm60-8H148a8,8,0,0,0,0,16h28a8,8,0,0,0,0-16Zm64,48a8,8,0,0,1-8,8H24a8,8,0,0,1,0-16h8V88a8,8,0,0,1,12.8-6.4L96,120V88a8,8,0,0,1,12.8-6.4l38.74,29.05L159.1,29.74A16.08,16.08,0,0,1,174.94,16h18.12A16.08,16.08,0,0,1,208.9,29.74l15,105.13s.08.78.08,1.13v72h8A8,8,0,0,1,240,216Zm-77.86-94.4,8.53,6.4h36.11L193.06,32H174.94ZM48,208H208V144H168a8,8,0,0,1-4.8-1.6l-14.4-10.8,0,0L112,104v32a8,8,0,0,1-12.8,6.4L48,104Z"/></svg><strong>Manufacturing</strong><span>Plant, maintenance and process safety</span></a>
+          <a href="/industries/construction-safety-software.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M230.91,172A8,8,0,0,1,228,182.91l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,36,169.09l92,53.65,92-53.65A8,8,0,0,1,230.91,172ZM220,121.09l-92,53.65L36,121.09A8,8,0,0,0,28,134.91l96,56a8,8,0,0,0,8.06,0l96-56A8,8,0,1,0,220,121.09ZM24,80a8,8,0,0,1,4-6.91l96-56a8,8,0,0,1,8.06,0l96,56a8,8,0,0,1,0,13.82l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,24,80Zm23.88,0L128,126.74,208.12,80,128,33.26Z"/></svg><strong>Construction</strong><span>Principal contractors and subcontractors</span></a>
+          <a href="/industries/engineering-incident-investigation.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M160,112h48a16,16,0,0,0,16-16V48a16,16,0,0,0-16-16H160a16,16,0,0,0-16,16V64H128a24,24,0,0,0-24,24v32H72v-8A16,16,0,0,0,56,96H24A16,16,0,0,0,8,112v32a16,16,0,0,0,16,16H56a16,16,0,0,0,16-16v-8h32v32a24,24,0,0,0,24,24h16v16a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V160a16,16,0,0,0-16-16H160a16,16,0,0,0-16,16v16H128a8,8,0,0,1-8-8V88a8,8,0,0,1,8-8h16V96A16,16,0,0,0,160,112ZM56,144H24V112H56v32Zm104,16h48v48H160Zm0-112h48V96H160Z"/></svg><strong>Engineering</strong><span>Projects, commissioning and field work</span></a>
         </div>
-    </section>
-
-    <!-- Problem Section -->
-    <section class="py-16 lg:py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center mb-12">
-                <h2 class="text-3xl lg:text-4xl font-bold mb-4">The Problem with 5 Whys Today</h2>
-                <p class="text-xl text-slate">
-                    5 Whys is powerful — when done right. But most investigators struggle.
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-cloud rounded-xl p-6 border border-mist">
-                    <div class="w-12 h-12 bg-critical/10 rounded-xl flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-critical" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Stop Too Soon</h3>
-                    <p class="text-graphite">
-                        Most people stop at 2-3 whys, missing the systemic root causes that actually prevent recurrence.
-                    </p>
-                </div>
-                
-                <div class="bg-cloud rounded-xl p-6 border border-mist">
-                    <div class="w-12 h-12 bg-critical/10 rounded-xl flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-critical" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">No Challenge</h3>
-                    <p class="text-graphite">
-                        Without a skilled facilitator to challenge assumptions, investigators accept weak answers.
-                    </p>
-                </div>
-                
-                <div class="bg-cloud rounded-xl p-6 border border-mist">
-                    <div class="w-12 h-12 bg-critical/10 rounded-xl flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-critical" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Inconsistent Quality</h3>
-                    <p class="text-graphite">
-                        Results vary wildly depending on who's doing the analysis. No standardized approach across the team.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works -->
-    <section id="how-it-works" class="py-16 lg:py-24 bg-cloud">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold mb-4">How 5 Whys AI Works</h2>
-                <p class="text-xl text-slate max-w-2xl mx-auto">
-                    An AI coach that guides you through rigorous root cause analysis — in the field or at your desk.
-                </p>
-            </div>
-            
-            <div class="grid lg:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-apex-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl font-bold text-ink">1</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Describe the Problem</h3>
-                    <p class="text-graphite">
-                        Enter what happened — text, voice, or photos. The clearer the problem statement, the better the analysis.
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-apex-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl font-bold text-ink">2</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Answer the Whys</h3>
-                    <p class="text-graphite">
-                        For each "Why," the AI asks follow-up questions and challenges weak answers to push you deeper.
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-apex-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl font-bold text-ink">3</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Explore Branches</h3>
-                    <p class="text-graphite">
-                        Real incidents have multiple causes. Branch your analysis to capture the full causal picture.
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-apex-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl font-bold text-ink">4</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Export & Integrate</h3>
-                    <p class="text-graphite">
-                        Share your analysis as PDF, or sync directly to InvestigatePro for a complete investigation record.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Grid -->
-    <section class="py-16 lg:py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Features That Make the Difference</h2>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-cloud rounded-xl p-6 border border-mist">
-                    <div class="w-10 h-10 bg-apex-500/10 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-5 h-5 text-apex-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="font-bold mb-2">AI Challenge Coach</h3>
-                    <p class="text-sm text-graphite">
-                        "Is that really the root cause?" The AI pushes back on surface-level answers.
-                    </p>
-                </div>
-                
-                <div class="bg-cloud rounded-xl p-6 border border-mist">
-                    <div class="w-10 h-10 bg-apex-500/10 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-5 h-5 text-apex-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="font-bold mb-2">Branching Analysis</h3>
-                    <p class="text-sm text-graphite">
-                        Handle multiple causal chains. Real incidents rarely have a single linear cause.
-                    </p>
-                </div>
-                
-                <div class="bg-cloud rounded-xl p-6 border border-mist">
-                    <div class="w-10 h-10 bg-apex-500/10 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-5 h-5 text-apex-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="font-bold mb-2">Voice Input</h3>
-                    <p class="text-sm text-graphite">
-                        Speak your answers in the field. AI transcribes and continues the analysis.
-                    </p>
-                </div>
-                
-                <div class="bg-cloud rounded-xl p-6 border border-mist">
-                    <div class="w-10 h-10 bg-apex-500/10 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-5 h-5 text-apex-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="font-bold mb-2">Photo Evidence</h3>
-                    <p class="text-sm text-graphite">
-                        Attach photos at any level of the analysis. Visual evidence strengthens your findings.
-                    </p>
-                </div>
-                
-                <div class="bg-cloud rounded-xl p-6 border border-mist">
-                    <div class="w-10 h-10 bg-apex-500/10 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-5 h-5 text-apex-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414"></path>
-                        </svg>
-                    </div>
-                    <h3 class="font-bold mb-2">Offline Mode</h3>
-                    <p class="text-sm text-graphite">
-                        No signal underground? No problem. Works offline, syncs when you're connected.
-                    </p>
-                </div>
-                
-                <div class="bg-cloud rounded-xl p-6 border border-mist">
-                    <div class="w-10 h-10 bg-apex-500/10 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-5 h-5 text-apex-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
-                        </svg>
-                    </div>
-                    <h3 class="font-bold mb-2">InvestigatePro Sync</h3>
-                    <p class="text-sm text-graphite">
-                        Push analyses directly to your InvestigatePro investigations. One ecosystem.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Industry Templates -->
-    <section class="py-16 lg:py-24 bg-cloud">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-3xl lg:text-4xl font-bold mb-6">
-                        Industry-Specific<br>
-                        <span class="text-apex-500">Prompt Libraries</span>
-                    </h2>
-                    <p class="text-lg text-slate mb-6">
-                        Not all incidents are the same. 5 Whys AI comes loaded with industry-specific 
-                        question sets that guide you toward the root causes that matter in your context.
-                    </p>
-                    
-                    <div class="space-y-4">
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 bg-warning/10 rounded-lg flex items-center justify-center mr-4">
-                                <span class="text-warning-700 text-lg">⛏️</span>
-                            </div>
-                            <div>
-                                <div class="font-semibold">Mining</div>
-                                <div class="text-sm text-graphite">Ground control, vehicle interactions, energy isolation</div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center mr-4">
-                                <span class="text-orange-400 text-lg">🏗️</span>
-                            </div>
-                            <div>
-                                <div class="font-semibold">Construction</div>
-                                <div class="text-sm text-graphite">Falls, struck-by, excavation, electrical</div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 bg-neural-500/10 rounded-lg flex items-center justify-center mr-4">
-                                <span class="text-neural-500 text-lg">🏭</span>
-                            </div>
-                            <div>
-                                <div class="font-semibold">Manufacturing</div>
-                                <div class="text-sm text-graphite">Machine guarding, ergonomics, chemical exposure</div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 bg-growth-500/10 rounded-lg flex items-center justify-center mr-4">
-                                <span class="text-growth-700 text-lg">🛢️</span>
-                            </div>
-                            <div>
-                                <div class="font-semibold">Oil & Gas</div>
-                                <div class="text-sm text-graphite">Process safety, H2S, dropped objects, confined space</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-2xl p-8 border border-mist">
-                    <div class="text-sm text-graphite mb-4">Example: Mining Industry Prompt</div>
-                    <div class="space-y-4">
-                        <div class="bg-cloud rounded-lg p-4">
-                            <div class="text-apex-500 text-sm mb-1">When analyzing vehicle interactions:</div>
-                            <ul class="text-sm text-slate space-y-1">
-                                <li>• Was positive communication established?</li>
-                                <li>• Were traffic management protocols followed?</li>
-                                <li>• Was fatigue a contributing factor?</li>
-                                <li>• What was the visibility condition?</li>
-                            </ul>
-                        </div>
-                        <div class="bg-cloud rounded-lg p-4">
-                            <div class="text-apex-500 text-sm mb-1">When analyzing energy isolation failures:</div>
-                            <ul class="text-sm text-slate space-y-1">
-                                <li>• Was the isolation procedure current?</li>
-                                <li>• Was verification performed?</li>
-                                <li>• Were all energy sources identified?</li>
-                                <li>• Was the person competent and authorized?</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Preview -->
-    <section class="py-16 lg:py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Simple Pricing</h2>
-                <p class="text-xl text-slate">Free to start. Upgrade when you need more.</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <div class="bg-cloud rounded-2xl p-8 border border-mist">
-                    <div class="text-lg font-bold mb-2">Free</div>
-                    <div class="text-4xl font-bold mb-4">$0</div>
-                    <ul class="space-y-3 mb-8 text-sm text-slate">
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-apex-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            5 analyses per month
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-apex-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Basic AI coaching
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-apex-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            PDF export
-                        </li>
-                    </ul>
-                    <div class="text-sm text-graphite">Perfect for trying it out</div>
-                </div>
-                
-                <div class="bg-gradient-to-b from-apex-500/10 to-cloud rounded-2xl p-8 border border-apex-500/30 relative">
-                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-apex-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-                        MOST POPULAR
-                    </div>
-                    <div class="text-lg font-bold mb-2">Pro</div>
-                    <div class="text-4xl font-bold mb-4">$4.99<span class="text-lg text-graphite">/mo</span></div>
-                    <ul class="space-y-3 mb-8 text-sm text-slate">
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-apex-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Unlimited analyses
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-apex-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Voice input
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-apex-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Industry templates
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-apex-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Team sharing
-                        </li>
-                    </ul>
-                    <div class="text-sm text-graphite">For serious safety professionals</div>
-                </div>
-                
-                <div class="bg-cloud rounded-2xl p-8 border border-mist">
-                    <div class="text-lg font-bold mb-2">Enterprise</div>
-                    <div class="text-4xl font-bold mb-4">Contact</div>
-                    <ul class="space-y-3 mb-8 text-sm text-slate">
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-apex-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Everything in Pro
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-apex-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            InvestigatePro integration
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-apex-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            SSO & admin controls
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-apex-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Custom branding
-                        </li>
-                    </ul>
-                    <div class="text-sm text-graphite">For organizations</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Waitlist CTA -->
-    <section id="waitlist" class="py-16 lg:py-24 bg-cloud">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="bg-gradient-to-b from-apex-500/10 to-white rounded-3xl p-8 lg:p-12 border border-apex-500/30">
-                <div class="inline-flex items-center bg-apex-500/10 rounded-full px-4 py-1.5 mb-6">
-                    <span class="w-2 h-2 bg-apex-500 rounded-full mr-2 animate-pulse"></span>
-                    <span class="text-sm text-apex-500">Coming Q2 2026</span>
-                </div>
-                
-                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Be First in Line</h2>
-                <p class="text-xl text-slate mb-8">
-                    Join the waitlist for early access, beta testing opportunities, 
-                    and a lifetime discount when we launch.
-                </p>
-                
-                <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" data-capture="5whys-ai-waitlist" data-success="You’re on the list — we’ll email you at launch.">
-                    <input type="hidden" name="source" value="5whys-ai-waitlist">
-                    <input type="hidden" name="app" value="5whys-ai">
-                    <input 
-                        type="email" 
-                        name="email" 
-                        placeholder="Enter your work email" 
-                        required
-                        class="flex-1 px-4 py-3 bg-cloud border border-mist rounded-lg focus:outline-none focus:border-apex-500 text-ink placeholder-graphite"
-                    >
-                    <button type="submit" class="bg-apex-500 hover:bg-apex-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors whitespace-nowrap">
-                        Join Waitlist
-                    </button>
-                </form>
-                
-                <p class="text-sm text-graphite mt-4">No spam. Just launch updates and early access.</p>
-                
-                <div class="flex justify-center gap-8 mt-8 pt-8 border-t border-mist">
-                    <div class="text-center">
-                        <div class="text-2xl font-bold text-apex-500">500+</div>
-                        <div class="text-sm text-graphite">On waitlist</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-2xl font-bold text-apex-500">Q2 2026</div>
-                        <div class="text-sm text-graphite">Expected launch</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-2xl font-bold text-apex-500">30%</div>
-                        <div class="text-sm text-graphite">Early bird discount</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    
-
-    <!-- Analytics -->
-    <script src="../analytics.js"></script>
-<footer class="ip2-footer">
-  <div class="ip2-wrap">
-    <div class="cols">
-      <div style="display:flex;flex-direction:column;gap:16px">
-        <a href="/" class="ip2-logo" aria-label="InvestigatePro home"><img class="lgm" src="/assets/brand/logo-horizontal-white.svg" alt="InvestigatePro" width="826" height="168" decoding="async"></a>
-        <p style="max-width:250px;font-size:13px;line-height:1.6">Structured, evidence-led ICAM investigation with an AI coach on every case.</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="ip2-chip">EU-hosted &amp; isolated</span><span class="ip2-chip">GDPR compliant</span></div>
       </div>
-      <div><h4>Product</h4><ul>
-        <li><a href="/platform.html">Platform</a></li><li><a href="/pricing.html">Pricing</a></li><li><a href="/demo.html">Book a demo</a></li>
-        <li><a href="/apps/">Apps</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/security.html">Security</a></li><li><a href="/changelog.html">Changelog</a></li>
-      </ul></div>
-      <div><h4>Resources</h4><ul>
-        <li><a href="/resources.html">All free tools</a></li><li><a href="/checklist.html">ICAM checklist</a></li><li><a href="/icam-toolkit.html">ICAM toolkit</a></li>
-        <li><a href="/peepo-chart-builder.html">PEEPO chart builder</a></li><li><a href="/5-whys-worksheet.html">5-Whys worksheet</a></li><li><a href="/state-of-incident-investigation-2026.html">State of Incident Investigation</a></li>
-      </ul></div>
-      <div><h4>Industries</h4><ul>
-        <li><a href="/industries/mining-incident-investigation.html">Mining</a></li><li><a href="/industries/oil-gas-incident-management.html">Oil &amp; gas</a></li>
-        <li><a href="/industries/manufacturing-root-cause-analysis.html">Manufacturing</a></li><li><a href="/industries/construction-safety-software.html">Construction</a></li>
-        <li><a href="/industries/engineering-incident-investigation.html">Engineering</a></li>
-      </ul></div>
-      <div><h4>Company</h4><ul>
-        <li><a href="/blog/">Blog</a></li><li><a href="/status.html">Service notices</a></li><li><a href="mailto:hello@investigatepro.app">Contact</a></li><li><a href="https://app.investigatepro.app/login">Login</a></li>
-        <li style="margin-top:10px"><a href="/privacy.html">Privacy</a></li><li><a href="/terms.html">Terms</a></li><li><a href="/cookie.html">Cookies</a></li><li><a href="/dpa.html">DPA</a></li>
-      </ul></div>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/resources.html">Resources</a>
+      <a href="/blog/index.html">Blog</a>
+    </nav>
+    <div class="nav__actions">
+      <a class="nav__login" href="https://app.investigatepro.app/login">Login</a>
+      <a class="btn btn--primary btn--sm" href="https://app.investigatepro.app/signup">Start a 14-day trial</a>
+      <button class="nav__burger" type="button" aria-expanded="false" aria-controls="mmenu" aria-label="Open menu"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></svg></button>
     </div>
-    <p class="accountability">Every suggestion carries its source, and the report goes out attributed to the lead investigator. Built by Devon Turner — fifteen years leading mining safety across Africa and the Middle East, with an ICAM specialism.</p>
-    <p style="margin-top:18px;font-size:12px;color:rgba(159,184,194,.7)">© 2026 InvestigatePro. All rights reserved. · Every incident, understood.</p>
+  </div>
+</header>
+<div class="mmenu" id="mmenu" hidden role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="mmenu__top">
+    <a class="nav__logo" href="/index.html" aria-label="InvestigatePro home"><img src="/assets/img/logo-horizontal-white.svg" alt="InvestigatePro" width="140" height="28"></a>
+    <button class="nav__burger mmenu__close" type="button" aria-label="Close menu"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg></button>
+  </div>
+  <nav class="mmenu__list" aria-label="Mobile">
+    <a href="/platform.html" style="--i:0">Platform <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/pricing.html" style="--i:1">Pricing <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/resources.html" style="--i:2">Resources <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/blog/index.html" style="--i:3">Blog <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/demo.html" style="--i:4">Book a demo <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+  </nav>
+  <div class="mmenu__sub">
+    <a href="/industries/mining-incident-investigation.html">Mining</a>
+    <a href="/industries/oil-gas-incident-management.html">Oil and gas</a>
+    <a href="/industries/manufacturing-root-cause-analysis.html">Manufacturing</a>
+    <a href="/industries/construction-safety-software.html">Construction</a>
+    <a href="/industries/engineering-incident-investigation.html">Engineering</a>
+    <a href="https://app.investigatepro.app/login">Login</a>
+  </div>
+  <div class="mmenu__cta">
+    <a class="btn btn--primary btn--block" href="https://app.investigatepro.app/signup">Start a 14-day trial</a>
+    <a class="btn btn--ghost btn--block" href="https://cal.com/investigatepro/15min">Book a 15-minute demo</a>
+  </div>
+</div>
+
+<main id="main">
+<section class="phead">
+  <div class="wrap phead__inner">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/index.html">Home</a><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg><a href="/apps/index.html">Apps</a><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg><span>5-Whys AI</span></nav>
+    <span class="chip chip--amber"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M200,75.64V40a16,16,0,0,0-16-16H72A16,16,0,0,0,56,40V76a16.07,16.07,0,0,0,6.4,12.8L114.67,128,62.4,167.2A16.07,16.07,0,0,0,56,180v36a16,16,0,0,0,16,16H184a16,16,0,0,0,16-16V180.36a16.09,16.09,0,0,0-6.35-12.77L141.27,128l52.38-39.6A16.05,16.05,0,0,0,200,75.64ZM72,40H184V75.64L178.23,80H77.33L72,76Zm56,78L98.67,96h58.4Zm56,98H72V180l48-36v24a8,8,0,0,0,16,0V144.08l48,36.28Z"/></svg> In build for iOS and Android</span>
+    <h1>5-Whys AI.</h1>
+    <p class="lede">A coach for the 5 Whys that challenges shallow answers, points out blind spots and takes the analysis past the person to the system. It is being built alongside the platform.</p>
+    <div class="phead__actions">
+      <a class="btn btn--primary" href="#waitlist">Join the list <svg class="i i--nudge" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+      <a class="btn btn--ghost" href="#how-it-works">How it will work</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="prob-h">
+  <div class="wrap split" style="align-items:center">
+    <div class="stack" style="--gap:18px">
+      <h2 id="prob-h">The problem with the 5 Whys today.</h2>
+      <p class="lede">The method works when it is done well. Most of the time it is done alone, in a hurry, with nobody to push back.</p>
+      <ul class="ledger ledger--build">
+        <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm-8-80V80a8,8,0,0,1,16,0v56a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,172Z"/></svg><div><strong>It stops too soon</strong><span>Two or three whys, and the causes in the system are never reached.</span></div></li>
+        <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm-8-80V80a8,8,0,0,1,16,0v56a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,172Z"/></svg><div><strong>Nobody challenges the answers</strong><span>Without a facilitator, weak answers are accepted.</span></div></li>
+        <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm-8-80V80a8,8,0,0,1,16,0v56a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,172Z"/></svg><div><strong>The quality depends on who does it</strong><span>No common standard across a team.</span></div></li>
+      </ul>
+    </div>
+    <div class="appmock-wrap">
+      <div class="appmock" aria-label="Design sample of the 5-Whys AI app">
+        <div class="appmock__screen">
+          <div class="appmock__bar">Forklift incident <span>Why 2 of 5</span></div>
+          <div class="appmock__card"><small>Problem</small>A forklift struck warehouse racking and damaged it.</div>
+          <div class="appmock__card"><small>Why 1</small>The operator was going too fast.</div>
+          <div class="appmock__coach"><small>Coach</small>Speed is a factor. Why was the operator going too fast? Consider production pressure, awareness and the equipment.</div>
+          <div class="appmock__card"><small>Why 2</small>Rushing to meet the shift deadline.</div>
+          <div class="appmock__coach"><small>Coach</small>Time pressure identified. Why was there deadline pressure?</div>
+        </div>
+      </div>
+      <p class="appmock__cap">Design sample. The app is in build.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="how-it-works" aria-labelledby="how-h">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="how-h">How it will work.</h2><p>In the field or at a desk.</p></div>
+    <ol class="steps-line steps-line--4">
+      <li><h3>Describe the problem</h3><p>What happened, in text, by voice or with photos. A clear problem statement gives a better analysis.</p></li>
+      <li><h3>Answer the whys</h3><p>For each why, the coach asks follow-up questions and challenges weak answers.</p></li>
+      <li><h3>Explore the branches</h3><p>Real incidents have several causes. Branch the analysis to capture them all.</p></li>
+      <li><h3>Export or send on</h3><p>Share the analysis as a PDF, or send it to an InvestigatePro investigation.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="feat-h">
+  <div class="wrap split">
+    <div class="stack" style="--gap:18px">
+      <h2 id="feat-h">What is planned.</h2>
+      <p class="lede">Nothing here is published yet. Each line is part of the build.</p>
+    </div>
+    <ul class="ledger ledger--build">
+      <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M96.26,37.05A8,8,0,0,1,102,27.29a104.11,104.11,0,0,1,52,0,8,8,0,0,1-2,15.75,8.15,8.15,0,0,1-2-.26,88.09,88.09,0,0,0-44,0A8,8,0,0,1,96.26,37.05ZM53.79,55.14a104.05,104.05,0,0,0-26,45,8,8,0,0,0,15.42,4.27,88,88,0,0,1,22-38.09A8,8,0,0,0,53.79,55.14ZM43.21,151.55a8,8,0,1,0-15.42,4.28,104.12,104.12,0,0,0,26,45,8,8,0,0,0,11.41-11.22A88.14,88.14,0,0,1,43.21,151.55ZM150,213.22a88,88,0,0,1-44,0,8,8,0,1,0-4,15.49,104.11,104.11,0,0,0,52,0,8,8,0,0,0-4-15.49ZM222.65,146a8,8,0,0,0-9.85,5.58,87.91,87.91,0,0,1-22,38.08,8,8,0,1,0,11.42,11.21,104,104,0,0,0,26-45A8,8,0,0,0,222.65,146Zm-9.86-41.54a8,8,0,0,0,15.42-4.28,104,104,0,0,0-26-45,8,8,0,1,0-11.41,11.22A88,88,0,0,1,212.79,104.45Z"/></svg><div><strong>A challenge at every why</strong><span>&ldquo;Is that really the cause?&rdquo; The coach pushes back on answers that stop at the surface.</span></div></li>
+      <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M96.26,37.05A8,8,0,0,1,102,27.29a104.11,104.11,0,0,1,52,0,8,8,0,0,1-2,15.75,8.15,8.15,0,0,1-2-.26,88.09,88.09,0,0,0-44,0A8,8,0,0,1,96.26,37.05ZM53.79,55.14a104.05,104.05,0,0,0-26,45,8,8,0,0,0,15.42,4.27,88,88,0,0,1,22-38.09A8,8,0,0,0,53.79,55.14ZM43.21,151.55a8,8,0,1,0-15.42,4.28,104.12,104.12,0,0,0,26,45,8,8,0,0,0,11.41-11.22A88.14,88.14,0,0,1,43.21,151.55ZM150,213.22a88,88,0,0,1-44,0,8,8,0,1,0-4,15.49,104.11,104.11,0,0,0,52,0,8,8,0,0,0-4-15.49ZM222.65,146a8,8,0,0,0-9.85,5.58,87.91,87.91,0,0,1-22,38.08,8,8,0,1,0,11.42,11.21,104,104,0,0,0,26-45A8,8,0,0,0,222.65,146Zm-9.86-41.54a8,8,0,0,0,15.42-4.28,104,104,0,0,0-26-45,8,8,0,1,0-11.41,11.22A88,88,0,0,1,212.79,104.45Z"/></svg><div><strong>Branching analysis</strong><span>More than one causal chain, the way real incidents work.</span></div></li>
+      <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M96.26,37.05A8,8,0,0,1,102,27.29a104.11,104.11,0,0,1,52,0,8,8,0,0,1-2,15.75,8.15,8.15,0,0,1-2-.26,88.09,88.09,0,0,0-44,0A8,8,0,0,1,96.26,37.05ZM53.79,55.14a104.05,104.05,0,0,0-26,45,8,8,0,0,0,15.42,4.27,88,88,0,0,1,22-38.09A8,8,0,0,0,53.79,55.14ZM43.21,151.55a8,8,0,1,0-15.42,4.28,104.12,104.12,0,0,0,26,45,8,8,0,0,0,11.41-11.22A88.14,88.14,0,0,1,43.21,151.55ZM150,213.22a88,88,0,0,1-44,0,8,8,0,1,0-4,15.49,104.11,104.11,0,0,0,52,0,8,8,0,0,0-4-15.49ZM222.65,146a8,8,0,0,0-9.85,5.58,87.91,87.91,0,0,1-22,38.08,8,8,0,1,0,11.42,11.21,104,104,0,0,0,26-45A8,8,0,0,0,222.65,146Zm-9.86-41.54a8,8,0,0,0,15.42-4.28,104,104,0,0,0-26-45,8,8,0,1,0-11.41,11.22A88,88,0,0,1,212.79,104.45Z"/></svg><div><strong>Voice input</strong><span>Speak the answers in the field; the app transcribes them.</span></div></li>
+      <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M96.26,37.05A8,8,0,0,1,102,27.29a104.11,104.11,0,0,1,52,0,8,8,0,0,1-2,15.75,8.15,8.15,0,0,1-2-.26,88.09,88.09,0,0,0-44,0A8,8,0,0,1,96.26,37.05ZM53.79,55.14a104.05,104.05,0,0,0-26,45,8,8,0,0,0,15.42,4.27,88,88,0,0,1,22-38.09A8,8,0,0,0,53.79,55.14ZM43.21,151.55a8,8,0,1,0-15.42,4.28,104.12,104.12,0,0,0,26,45,8,8,0,0,0,11.41-11.22A88.14,88.14,0,0,1,43.21,151.55ZM150,213.22a88,88,0,0,1-44,0,8,8,0,1,0-4,15.49,104.11,104.11,0,0,0,52,0,8,8,0,0,0-4-15.49ZM222.65,146a8,8,0,0,0-9.85,5.58,87.91,87.91,0,0,1-22,38.08,8,8,0,1,0,11.42,11.21,104,104,0,0,0,26-45A8,8,0,0,0,222.65,146Zm-9.86-41.54a8,8,0,0,0,15.42-4.28,104,104,0,0,0-26-45,8,8,0,1,0-11.41,11.22A88,88,0,0,1,212.79,104.45Z"/></svg><div><strong>Photo evidence</strong><span>Attach photographs at any level of the analysis.</span></div></li>
+      <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M96.26,37.05A8,8,0,0,1,102,27.29a104.11,104.11,0,0,1,52,0,8,8,0,0,1-2,15.75,8.15,8.15,0,0,1-2-.26,88.09,88.09,0,0,0-44,0A8,8,0,0,1,96.26,37.05ZM53.79,55.14a104.05,104.05,0,0,0-26,45,8,8,0,0,0,15.42,4.27,88,88,0,0,1,22-38.09A8,8,0,0,0,53.79,55.14ZM43.21,151.55a8,8,0,1,0-15.42,4.28,104.12,104.12,0,0,0,26,45,8,8,0,0,0,11.41-11.22A88.14,88.14,0,0,1,43.21,151.55ZM150,213.22a88,88,0,0,1-44,0,8,8,0,1,0-4,15.49,104.11,104.11,0,0,0,52,0,8,8,0,0,0-4-15.49ZM222.65,146a8,8,0,0,0-9.85,5.58,87.91,87.91,0,0,1-22,38.08,8,8,0,1,0,11.42,11.21,104,104,0,0,0,26-45A8,8,0,0,0,222.65,146Zm-9.86-41.54a8,8,0,0,0,15.42-4.28,104,104,0,0,0-26-45,8,8,0,1,0-11.41,11.22A88,88,0,0,1,212.79,104.45Z"/></svg><div><strong>Offline mode</strong><span>For sites with no signal; it syncs when you reconnect.</span></div></li>
+      <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M96.26,37.05A8,8,0,0,1,102,27.29a104.11,104.11,0,0,1,52,0,8,8,0,0,1-2,15.75,8.15,8.15,0,0,1-2-.26,88.09,88.09,0,0,0-44,0A8,8,0,0,1,96.26,37.05ZM53.79,55.14a104.05,104.05,0,0,0-26,45,8,8,0,0,0,15.42,4.27,88,88,0,0,1,22-38.09A8,8,0,0,0,53.79,55.14ZM43.21,151.55a8,8,0,1,0-15.42,4.28,104.12,104.12,0,0,0,26,45,8,8,0,0,0,11.41-11.22A88.14,88.14,0,0,1,43.21,151.55ZM150,213.22a88,88,0,0,1-44,0,8,8,0,1,0-4,15.49,104.11,104.11,0,0,0,52,0,8,8,0,0,0-4-15.49ZM222.65,146a8,8,0,0,0-9.85,5.58,87.91,87.91,0,0,1-22,38.08,8,8,0,1,0,11.42,11.21,104,104,0,0,0,26-45A8,8,0,0,0,222.65,146Zm-9.86-41.54a8,8,0,0,0,15.42-4.28,104,104,0,0,0-26-45,8,8,0,1,0-11.41,11.22A88,88,0,0,1,212.79,104.45Z"/></svg><div><strong>InvestigatePro sync</strong><span>An analysis carried into an investigation on the platform.</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="ind-h">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="ind-h">Question sets for each industry.</h2><p>Planned prompt libraries that steer the whys toward the causes that matter in your work.</p></div>
+    <div class="plan-grid">
+      <div><h3>Mining</h3><p>Ground control, vehicle interaction, energy isolation.</p></div>
+      <div><h3>Construction</h3><p>Falls, struck-by, excavation, electrical.</p></div>
+      <div><h3>Manufacturing</h3><p>Machine guarding, ergonomics, chemical exposure.</p></div>
+      <div><h3>Oil and gas</h3><p>Process safety, H&#8322;S, dropped objects, confined spaces.</p></div>
+      <div><h3>Vehicle interaction (mining)</h3><p>Was positive communication established? Were traffic management rules followed? Was fatigue a factor? What was the visibility?</p></div>
+      <div><h3>Energy isolation (mining)</h3><p>Was the isolation procedure current? Was verification done? Were all energy sources identified? Was the person competent and authorised?</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="plans-h">
+  <div class="wrap">
+    <div class="sec-head"><span class="chip chip--amber"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M200,75.64V40a16,16,0,0,0-16-16H72A16,16,0,0,0,56,40V76a16.07,16.07,0,0,0,6.4,12.8L114.67,128,62.4,167.2A16.07,16.07,0,0,0,56,180v36a16,16,0,0,0,16,16H184a16,16,0,0,0,16-16V180.36a16.09,16.09,0,0,0-6.35-12.77L141.27,128l52.38-39.6A16.05,16.05,0,0,0,200,75.64ZM72,40H184V75.64L178.23,80H77.33L72,76Zm56,78L98.67,96h58.4Zm56,98H72V180l48-36v24a8,8,0,0,0,16,0V144.08l48,36.28Z"/></svg> Planned, not yet on sale</span><h2 id="plans-h">Planned plans.</h2><p>Free to start. The prices are the plan at launch and may change.</p></div>
+    <div class="tiers tiers--plan">
+      <div class="tier"><h3>Free</h3><div class="tier__price"><span class="cur">$</span><span class="amt">0</span></div><p class="tier__for">For trying it out.</p><ul><li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M96.26,37.05A8,8,0,0,1,102,27.29a104.11,104.11,0,0,1,52,0,8,8,0,0,1-2,15.75,8.15,8.15,0,0,1-2-.26,88.09,88.09,0,0,0-44,0A8,8,0,0,1,96.26,37.05ZM53.79,55.14a104.05,104.05,0,0,0-26,45,8,8,0,0,0,15.42,4.27,88,88,0,0,1,22-38.09A8,8,0,0,0,53.79,55.14ZM43.21,151.55a8,8,0,1,0-15.42,4.28,104.12,104.12,0,0,0,26,45,8,8,0,0,0,11.41-11.22A88.14,88.14,0,0,1,43.21,151.55ZM150,213.22a88,88,0,0,1-44,0,8,8,0,1,0-4,15.49,104.11,104.11,0,0,0,52,0,8,8,0,0,0-4-15.49ZM222.65,146a8,8,0,0,0-9.85,5.58,87.91,87.91,0,0,1-22,38.08,8,8,0,1,0,11.42,11.21,104,104,0,0,0,26-45A8,8,0,0,0,222.65,146Zm-9.86-41.54a8,8,0,0,0,15.42-4.28,104,104,0,0,0-26-45,8,8,0,1,0-11.41,11.22A88,88,0,0,1,212.79,104.45Z"/></svg><span>5 analyses a month</span></li><li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M96.26,37.05A8,8,0,0,1,102,27.29a104.11,104.11,0,0,1,52,0,8,8,0,0,1-2,15.75,8.15,8.15,0,0,1-2-.26,88.09,88.09,0,0,0-44,0A8,8,0,0,1,96.26,37.05ZM53.79,55.14a104.05,104.05,0,0,0-26,45,8,8,0,0,0,15.42,4.27,88,88,0,0,1,22-38.09A8,8,0,0,0,53.79,55.14ZM43.21,151.55a8,8,0,1,0-15.42,4.28,104.12,104.12,0,0,0,26,45,8,8,0,0,0,11.41-11.22A88.14,88.14,0,0,1,43.21,151.55ZM150,213.22a88,88,0,0,1-44,0,8,8,0,1,0-4,15.49,104.11,104.11,0,0,0,52,0,8,8,0,0,0-4-15.49ZM222.65,146a8,8,0,0,0-9.85,5.58,87.91,87.91,0,0,1-22,38.08,8,8,0,1,0,11.42,11.21,104,104,0,0,0,26-45A8,8,0,0,0,222.65,146Zm-9.86-41.54a8,8,0,0,0,15.42-4.28,104,104,0,0,0-26-45,8,8,0,1,0-11.41,11.22A88,88,0,0,1,212.79,104.45Z"/></svg><span>Basic coaching</span></li><li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M96.26,37.05A8,8,0,0,1,102,27.29a104.11,104.11,0,0,1,52,0,8,8,0,0,1-2,15.75,8.15,8.15,0,0,1-2-.26,88.09,88.09,0,0,0-44,0A8,8,0,0,1,96.26,37.05ZM53.79,55.14a104.05,104.05,0,0,0-26,45,8,8,0,0,0,15.42,4.27,88,88,0,0,1,22-38.09A8,8,0,0,0,53.79,55.14ZM43.21,151.55a8,8,0,1,0-15.42,4.28,104.12,104.12,0,0,0,26,45,8,8,0,0,0,11.41-11.22A88.14,88.14,0,0,1,43.21,151.55ZM150,213.22a88,88,0,0,1-44,0,8,8,0,1,0-4,15.49,104.11,104.11,0,0,0,52,0,8,8,0,0,0-4-15.49ZM222.65,146a8,8,0,0,0-9.85,5.58,87.91,87.91,0,0,1-22,38.08,8,8,0,1,0,11.42,11.21,104,104,0,0,0,26-45A8,8,0,0,0,222.65,146Zm-9.86-41.54a8,8,0,0,0,15.42-4.28,104,104,0,0,0-26-45,8,8,0,1,0-11.41,11.22A88,88,0,0,1,212.79,104.45Z"/></svg><span>PDF export</span></li></ul></div>
+      <div class="tier"><h3>Pro</h3><div class="tier__price"><span class="cur">$</span><span class="amt">4.99</span><span class="per">a month</span></div><p class="tier__for">For safety professionals.</p><ul><li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M96.26,37.05A8,8,0,0,1,102,27.29a104.11,104.11,0,0,1,52,0,8,8,0,0,1-2,15.75,8.15,8.15,0,0,1-2-.26,88.09,88.09,0,0,0-44,0A8,8,0,0,1,96.26,37.05ZM53.79,55.14a104.05,104.05,0,0,0-26,45,8,8,0,0,0,15.42,4.27,88,88,0,0,1,22-38.09A8,8,0,0,0,53.79,55.14ZM43.21,151.55a8,8,0,1,0-15.42,4.28,104.12,104.12,0,0,0,26,45,8,8,0,0,0,11.41-11.22A88.14,88.14,0,0,1,43.21,151.55ZM150,213.22a88,88,0,0,1-44,0,8,8,0,1,0-4,15.49,104.11,104.11,0,0,0,52,0,8,8,0,0,0-4-15.49ZM222.65,146a8,8,0,0,0-9.85,5.58,87.91,87.91,0,0,1-22,38.08,8,8,0,1,0,11.42,11.21,104,104,0,0,0,26-45A8,8,0,0,0,222.65,146Zm-9.86-41.54a8,8,0,0,0,15.42-4.28,104,104,0,0,0-26-45,8,8,0,1,0-11.41,11.22A88,88,0,0,1,212.79,104.45Z"/></svg><span>No monthly limit on analyses</span></li><li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M96.26,37.05A8,8,0,0,1,102,27.29a104.11,104.11,0,0,1,52,0,8,8,0,0,1-2,15.75,8.15,8.15,0,0,1-2-.26,88.09,88.09,0,0,0-44,0A8,8,0,0,1,96.26,37.05ZM53.79,55.14a104.05,104.05,0,0,0-26,45,8,8,0,0,0,15.42,4.27,88,88,0,0,1,22-38.09A8,8,0,0,0,53.79,55.14ZM43.21,151.55a8,8,0,1,0-15.42,4.28,104.12,104.12,0,0,0,26,45,8,8,0,0,0,11.41-11.22A88.14,88.14,0,0,1,43.21,151.55ZM150,213.22a88,88,0,0,1-44,0,8,8,0,1,0-4,15.49,104.11,104.11,0,0,0,52,0,8,8,0,0,0-4-15.49ZM222.65,146a8,8,0,0,0-9.85,5.58,87.91,87.91,0,0,1-22,38.08,8,8,0,1,0,11.42,11.21,104,104,0,0,0,26-45A8,8,0,0,0,222.65,146Zm-9.86-41.54a8,8,0,0,0,15.42-4.28,104,104,0,0,0-26-45,8,8,0,1,0-11.41,11.22A88,88,0,0,1,212.79,104.45Z"/></svg><span>Voice input</span></li><li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M96.26,37.05A8,8,0,0,1,102,27.29a104.11,104.11,0,0,1,52,0,8,8,0,0,1-2,15.75,8.15,8.15,0,0,1-2-.26,88.09,88.09,0,0,0-44,0A8,8,0,0,1,96.26,37.05ZM53.79,55.14a104.05,104.05,0,0,0-26,45,8,8,0,0,0,15.42,4.27,88,88,0,0,1,22-38.09A8,8,0,0,0,53.79,55.14ZM43.21,151.55a8,8,0,1,0-15.42,4.28,104.12,104.12,0,0,0,26,45,8,8,0,0,0,11.41-11.22A88.14,88.14,0,0,1,43.21,151.55ZM150,213.22a88,88,0,0,1-44,0,8,8,0,1,0-4,15.49,104.11,104.11,0,0,0,52,0,8,8,0,0,0-4-15.49ZM222.65,146a8,8,0,0,0-9.85,5.58,87.91,87.91,0,0,1-22,38.08,8,8,0,1,0,11.42,11.21,104,104,0,0,0,26-45A8,8,0,0,0,222.65,146Zm-9.86-41.54a8,8,0,0,0,15.42-4.28,104,104,0,0,0-26-45,8,8,0,1,0-11.41,11.22A88,88,0,0,1,212.79,104.45Z"/></svg><span>Industry question sets</span></li><li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M96.26,37.05A8,8,0,0,1,102,27.29a104.11,104.11,0,0,1,52,0,8,8,0,0,1-2,15.75,8.15,8.15,0,0,1-2-.26,88.09,88.09,0,0,0-44,0A8,8,0,0,1,96.26,37.05ZM53.79,55.14a104.05,104.05,0,0,0-26,45,8,8,0,0,0,15.42,4.27,88,88,0,0,1,22-38.09A8,8,0,0,0,53.79,55.14ZM43.21,151.55a8,8,0,1,0-15.42,4.28,104.12,104.12,0,0,0,26,45,8,8,0,0,0,11.41-11.22A88.14,88.14,0,0,1,43.21,151.55ZM150,213.22a88,88,0,0,1-44,0,8,8,0,1,0-4,15.49,104.11,104.11,0,0,0,52,0,8,8,0,0,0-4-15.49ZM222.65,146a8,8,0,0,0-9.85,5.58,87.91,87.91,0,0,1-22,38.08,8,8,0,1,0,11.42,11.21,104,104,0,0,0,26-45A8,8,0,0,0,222.65,146Zm-9.86-41.54a8,8,0,0,0,15.42-4.28,104,104,0,0,0-26-45,8,8,0,1,0-11.41,11.22A88,88,0,0,1,212.79,104.45Z"/></svg><span>Team sharing</span></li></ul></div>
+      <div class="tier"><h3>Enterprise</h3><div class="tier__price"><span class="amt" style="font-size:1.6rem">Contact us</span></div><p class="tier__for">For organisations.</p><ul><li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M96.26,37.05A8,8,0,0,1,102,27.29a104.11,104.11,0,0,1,52,0,8,8,0,0,1-2,15.75,8.15,8.15,0,0,1-2-.26,88.09,88.09,0,0,0-44,0A8,8,0,0,1,96.26,37.05ZM53.79,55.14a104.05,104.05,0,0,0-26,45,8,8,0,0,0,15.42,4.27,88,88,0,0,1,22-38.09A8,8,0,0,0,53.79,55.14ZM43.21,151.55a8,8,0,1,0-15.42,4.28,104.12,104.12,0,0,0,26,45,8,8,0,0,0,11.41-11.22A88.14,88.14,0,0,1,43.21,151.55ZM150,213.22a88,88,0,0,1-44,0,8,8,0,1,0-4,15.49,104.11,104.11,0,0,0,52,0,8,8,0,0,0-4-15.49ZM222.65,146a8,8,0,0,0-9.85,5.58,87.91,87.91,0,0,1-22,38.08,8,8,0,1,0,11.42,11.21,104,104,0,0,0,26-45A8,8,0,0,0,222.65,146Zm-9.86-41.54a8,8,0,0,0,15.42-4.28,104,104,0,0,0-26-45,8,8,0,1,0-11.41,11.22A88,88,0,0,1,212.79,104.45Z"/></svg><span>Everything in Pro</span></li><li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M96.26,37.05A8,8,0,0,1,102,27.29a104.11,104.11,0,0,1,52,0,8,8,0,0,1-2,15.75,8.15,8.15,0,0,1-2-.26,88.09,88.09,0,0,0-44,0A8,8,0,0,1,96.26,37.05ZM53.79,55.14a104.05,104.05,0,0,0-26,45,8,8,0,0,0,15.42,4.27,88,88,0,0,1,22-38.09A8,8,0,0,0,53.79,55.14ZM43.21,151.55a8,8,0,1,0-15.42,4.28,104.12,104.12,0,0,0,26,45,8,8,0,0,0,11.41-11.22A88.14,88.14,0,0,1,43.21,151.55ZM150,213.22a88,88,0,0,1-44,0,8,8,0,1,0-4,15.49,104.11,104.11,0,0,0,52,0,8,8,0,0,0-4-15.49ZM222.65,146a8,8,0,0,0-9.85,5.58,87.91,87.91,0,0,1-22,38.08,8,8,0,1,0,11.42,11.21,104,104,0,0,0,26-45A8,8,0,0,0,222.65,146Zm-9.86-41.54a8,8,0,0,0,15.42-4.28,104,104,0,0,0-26-45,8,8,0,1,0-11.41,11.22A88,88,0,0,1,212.79,104.45Z"/></svg><span>InvestigatePro integration</span></li><li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M96.26,37.05A8,8,0,0,1,102,27.29a104.11,104.11,0,0,1,52,0,8,8,0,0,1-2,15.75,8.15,8.15,0,0,1-2-.26,88.09,88.09,0,0,0-44,0A8,8,0,0,1,96.26,37.05ZM53.79,55.14a104.05,104.05,0,0,0-26,45,8,8,0,0,0,15.42,4.27,88,88,0,0,1,22-38.09A8,8,0,0,0,53.79,55.14ZM43.21,151.55a8,8,0,1,0-15.42,4.28,104.12,104.12,0,0,0,26,45,8,8,0,0,0,11.41-11.22A88.14,88.14,0,0,1,43.21,151.55ZM150,213.22a88,88,0,0,1-44,0,8,8,0,1,0-4,15.49,104.11,104.11,0,0,0,52,0,8,8,0,0,0-4-15.49ZM222.65,146a8,8,0,0,0-9.85,5.58,87.91,87.91,0,0,1-22,38.08,8,8,0,1,0,11.42,11.21,104,104,0,0,0,26-45A8,8,0,0,0,222.65,146Zm-9.86-41.54a8,8,0,0,0,15.42-4.28,104,104,0,0,0-26-45,8,8,0,1,0-11.41,11.22A88,88,0,0,1,212.79,104.45Z"/></svg><span>SSO and admin controls</span></li><li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M96.26,37.05A8,8,0,0,1,102,27.29a104.11,104.11,0,0,1,52,0,8,8,0,0,1-2,15.75,8.15,8.15,0,0,1-2-.26,88.09,88.09,0,0,0-44,0A8,8,0,0,1,96.26,37.05ZM53.79,55.14a104.05,104.05,0,0,0-26,45,8,8,0,0,0,15.42,4.27,88,88,0,0,1,22-38.09A8,8,0,0,0,53.79,55.14ZM43.21,151.55a8,8,0,1,0-15.42,4.28,104.12,104.12,0,0,0,26,45,8,8,0,0,0,11.41-11.22A88.14,88.14,0,0,1,43.21,151.55ZM150,213.22a88,88,0,0,1-44,0,8,8,0,1,0-4,15.49,104.11,104.11,0,0,0,52,0,8,8,0,0,0-4-15.49ZM222.65,146a8,8,0,0,0-9.85,5.58,87.91,87.91,0,0,1-22,38.08,8,8,0,1,0,11.42,11.21,104,104,0,0,0,26-45A8,8,0,0,0,222.65,146Zm-9.86-41.54a8,8,0,0,0,15.42-4.28,104,104,0,0,0-26-45,8,8,0,1,0-11.41,11.22A88,88,0,0,1,212.79,104.45Z"/></svg><span>Custom branding</span></li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="waitlist" aria-labelledby="wl-h">
+  <div class="wrap pilot" style="margin-top:0;border-top:0;padding-top:0">
+    <div class="stack" style="--gap:10px">
+      <h2 id="wl-h" class="h3">Be first in line.</h2>
+      <p>Early access, beta testing, and an email when 5-Whys AI launches. Nothing else.</p>
+    </div>
+    <form class="form" data-capture data-endpoint="https://api.investigatepro.app/api/leads/capture" data-source="5whys-ai-waitlist" style="grid-template-columns:minmax(0, 1fr) auto">
+      <input type="hidden" name="app" value="5whys-ai">
+      <div class="field"><label for="w-email">Work email</label><input id="w-email" name="email" type="email" autocomplete="email" required></div>
+      <button class="btn btn--primary" type="submit">Join the list</button>
+      <p class="form__msg" hidden role="status" data-ok="You are on the list. We will email you when 5-Whys AI launches." data-err="That did not send. Check your connection and try again, or email hello@investigatepro.app." data-proto="Prototype build: nothing was sent. On the live site this adds you to the 5-Whys AI launch list."><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg><span></span></p>
+    </form>
+  </div>
+</section>
+
+<section class="sec cta" aria-labelledby="cta-h">
+  <div class="wrap split" style="align-items:center">
+    <h2 id="cta-h">For the serious incidents, use the platform today.</h2>
+    <div class="stack" style="--gap:18px">
+      <p class="lede">InvestigatePro runs ICAM on every case now, with a coach that prompts every level.</p>
+      <div class="row">
+        <a class="btn btn--primary" href="https://app.investigatepro.app/signup">Start a 14-day trial <svg class="i i--nudge" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+        <a class="btn btn--ghost" href="/apps/index.html">Both apps in build</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <div class="foot__brand">
+      <a href="/index.html" aria-label="InvestigatePro home"><img src="/assets/img/logo-horizontal-white.svg" alt="InvestigatePro" width="168" height="34"></a>
+      <p class="foot__tag">Every incident, understood.</p>
+      <p class="foot__by">Built by Devon Turner, who spent fifteen years leading mining safety across Africa and the Middle East, with an ICAM specialism.</p>
+      <button class="motion-toggle" type="button" aria-pressed="false"><span class="motion-toggle__track" aria-hidden="true"></span>Reduce motion</button>
+    </div>
+    <div>
+      <h2>Product</h2>
+      <ul>
+        <li><a href="/platform.html">Platform</a></li>
+        <li><a href="/pricing.html">Pricing</a></li>
+        <li><a href="/demo.html">Book a demo</a></li>
+        <li><a href="/security.html">Security</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+        <li><a href="/changelog.html">Changelog</a></li>
+        <li><a href="/apps/index.html">Apps</a><span class="tag-inbuild">in build</span></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Free tools</h2>
+      <ul>
+        <li><a href="/resources.html">All free tools</a></li>
+        <li><a href="/checklist.html">ICAM checklist</a></li>
+        <li><a href="/icam-toolkit.html">ICAM toolkit</a></li>
+        <li><a href="/peepo-chart-builder.html">PEEPO chart builder</a></li>
+        <li><a href="/5-whys-worksheet.html">5-Whys worksheet</a></li>
+        <li><a href="/state-of-incident-investigation-2026.html">State of Incident Investigation 2026</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Industries</h2>
+      <ul>
+        <li><a href="/industries/mining-incident-investigation.html">Mining</a></li>
+        <li><a href="/industries/oil-gas-incident-management.html">Oil and gas</a></li>
+        <li><a href="/industries/manufacturing-root-cause-analysis.html">Manufacturing</a></li>
+        <li><a href="/industries/construction-safety-software.html">Construction</a></li>
+        <li><a href="/industries/engineering-incident-investigation.html">Engineering</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Company</h2>
+      <ul>
+        <li><a href="/blog/index.html">Blog</a></li>
+        <li><a href="/status.html">Service notices</a></li>
+        <li><a href="mailto:hello@investigatepro.app">Contact: hello@investigatepro.app</a></li>
+        <li><a href="https://app.investigatepro.app/login">Login</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/terms.html">Terms</a></li>
+        <li><a href="/cookie.html">Cookies</a></li>
+        <li><a href="/dpa.html">DPA</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot__base">
+    <span>&copy; 2026 InvestigatePro. Find the causes. Fix the system.</span>
+    <span>Every incident, understood.</span>
   </div>
 </footer>
-<script defer src="/assets/js/ip2.js"></script>
+
 </body>
 </html>

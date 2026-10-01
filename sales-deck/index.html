@@ -1,987 +1,467 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-GB" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InvestigatePro — Sales Deck</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --navy-900: #F4F7F9;
-            --navy-800: #FFFFFF;
-            --navy-700: #FFFFFF;
-            --navy-600: #D9E2E8;
-            --cyan-500: #004D40;
-            --cyan-400: #004D40;
-            --cyan-300: #004D40;
-            --white: #FFFFFF;
-            --gray-300: #D9E2E8;
-            --gray-500: #5A6B76;
-            --success: #4CAF50;
-            --warning: #FFB300;
-            --error: #E53935;
-        }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sales deck | InvestigatePro</title>
+<meta name="description" content="InvestigatePro in twelve slides: the problem, the method, what is live and in build, the proof, pricing and the person who built it.">
+<link rel="canonical" href="https://investigatepro.app/sales-deck/">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#063A41">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="InvestigatePro">
+<meta property="og:title" content="Sales deck | InvestigatePro">
+<meta property="og:description" content="InvestigatePro in twelve slides: the problem, the method, what is live and in build, the proof, pricing and the person who built it.">
+<meta property="og:url" content="https://investigatepro.app/sales-deck/">
+<meta property="og:image" content="https://investigatepro.app/assets/img/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/montserrat-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/ip-next.css">
+<script>(function(){var h=document.documentElement,r=false;h.className=h.className.replace('no-js','js');try{r=localStorage.getItem('ip-reduce-motion')==='1'}catch(e){}if(!r&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){h.classList.add('motion-on')}else{h.classList.add('motion-off')}})();</script>
+<script src="/assets/ip-next.js" defer></script>
+<script src="/analytics.js" defer></script>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--navy-900);
-            color: var(--white);
-            line-height: 1.6;
-        }
-
-        /* Slide Container */
-        .slide {
-            min-height: 100vh;
-            padding: 60px 80px;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            page-break-after: always;
-        }
-
-        .slide::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0,77,64,0.08) 0%, transparent 50%);
-            pointer-events: none;
-        }
-
-        /* Header with Logo */
-        .slide-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 40px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .logo {
-            height: 40px;
-        }
-
-        .slide-number {
-            color: var(--gray-500);
-            font-size: 14px;
-        }
-
-        /* Typography */
-        h1 {
-            font-size: 56px;
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 24px;
-        }
-
-        h2 {
-            font-size: 42px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 20px;
-        }
-
-        h3 {
-            font-size: 28px;
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-
-        h4 {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-
-        .highlight {
-            color: var(--cyan-500);
-        }
-
-        .subtitle {
-            font-size: 24px;
-            color: var(--gray-300);
-            margin-bottom: 40px;
-        }
-
-        p {
-            font-size: 18px;
-            color: var(--gray-300);
-            margin-bottom: 16px;
-        }
-
-        /* Content Area */
-        .content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .content-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
-        }
-
-        .content-grid-3 {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-        }
-
-        .content-grid-4 {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-        }
-
-        /* Cards */
-        .card {
-            background: var(--navy-700);
-            border: 1px solid rgba(17,45,60,0.06);
-            border-radius: 16px;
-            padding: 32px;
-        }
-
-        .card-highlight {
-            background: linear-gradient(135deg, rgba(0,77,64,0.15) 0%, rgba(0,77,64,0.05) 100%);
-            border: 1px solid var(--cyan-500);
-        }
-
-        .card-icon {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        /* Stats */
-        .stat {
-            text-align: center;
-        }
-
-        .stat-value {
-            font-size: 64px;
-            font-weight: 800;
-            color: var(--cyan-500);
-            line-height: 1;
-        }
-
-        .stat-label {
-            font-size: 18px;
-            color: var(--gray-300);
-            margin-top: 8px;
-        }
-
-        /* Lists */
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        li {
-            font-size: 20px;
-            padding: 12px 0;
-            padding-left: 32px;
-            position: relative;
-            color: var(--gray-300);
-        }
-
-        li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--cyan-500);
-        }
-
-        /* Table */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-
-        th, td {
-            padding: 16px 20px;
-            text-align: left;
-            border-bottom: 1px solid var(--navy-600);
-        }
-
-        th {
-            color: var(--cyan-500);
-            font-weight: 600;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        td {
-            font-size: 16px;
-            color: var(--gray-300);
-        }
-
-        tr:hover td {
-            background: rgba(0,77,64,0.05);
-        }
-
-        /* CTA Button */
-        .cta {
-            display: inline-block;
-            background: var(--cyan-500);
-            color: var(--navy-900);
-            padding: 16px 32px;
-            border-radius: 12px;
-            font-weight: 700;
-            font-size: 18px;
-            text-decoration: none;
-            margin-top: 24px;
-        }
-
-        /* Footer */
-        .slide-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 40px;
-            border-top: 1px solid var(--navy-600);
-            margin-top: auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .footer-text {
-            color: var(--gray-500);
-            font-size: 14px;
-        }
-
-        /* Title Slide */
-        .title-slide {
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        .title-slide .logo {
-            height: 80px;
-            margin-bottom: 40px;
-        }
-
-        .title-slide h1 {
-            font-size: 72px;
-        }
-
-        /* Quote */
-        .quote {
-            font-size: 28px;
-            font-style: italic;
-            color: var(--white);
-            border-left: 4px solid var(--cyan-500);
-            padding-left: 24px;
-            margin: 40px 0;
-        }
-
-        /* Badge */
-        .badge {
-            display: inline-block;
-            background: rgba(0,77,64,0.2);
-            color: var(--cyan-500);
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-
-        /* Comparison */
-        .vs {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-        }
-
-        .vs-item {
-            flex: 1;
-            padding: 32px;
-            border-radius: 16px;
-        }
-
-        .vs-old {
-            background: rgba(239, 68, 68, 0.1);
-            border: 1px solid rgba(239, 68, 68, 0.3);
-        }
-
-        .vs-new {
-            background: rgba(16, 185, 129, 0.1);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-        }
-
-        .vs-divider {
-            font-size: 32px;
-            font-weight: 800;
-            color: var(--gray-500);
-        }
-
-        /* Print styles */
-        @media print {
-            .slide {
-                height: 100vh;
-                page-break-after: always;
-            }
-        }
-
-        /* Positioning Matrix */
-        .matrix {
-            position: relative;
-            width: 100%;
-            height: 400px;
-            border-left: 2px solid var(--gray-500);
-            border-bottom: 2px solid var(--gray-500);
-            margin: 40px 0;
-        }
-
-        .matrix-label {
-            position: absolute;
-            font-size: 14px;
-            color: var(--gray-500);
-        }
-
-        .matrix-dot {
-            position: absolute;
-            padding: 8px 16px;
-            background: var(--navy-700);
-            border-radius: 8px;
-            font-size: 14px;
-            white-space: nowrap;
-        }
-
-        .matrix-dot.us {
-            background: var(--cyan-500);
-            color: var(--navy-900);
-            font-weight: 700;
-        }
-
-        /* Pricing Table */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-        }
-
-        .pricing-card {
-            background: var(--navy-700);
-            border: 1px solid rgba(17,45,60,0.06);
-            border-radius: 16px;
-            padding: 32px;
-            text-align: center;
-        }
-
-        .pricing-card.featured {
-            border: 2px solid var(--cyan-500);
-            position: relative;
-        }
-
-        .pricing-card.featured::before {
-            content: 'MOST POPULAR';
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--cyan-500);
-            color: var(--navy-900);
-            padding: 4px 16px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 700;
-        }
-
-        .price {
-            font-size: 48px;
-            font-weight: 800;
-            color: var(--white);
-        }
-
-        .price-period {
-            font-size: 16px;
-            color: var(--gray-500);
-        }
-
-        .pricing-features {
-            text-align: left;
-            margin-top: 24px;
-        }
-
-        .pricing-features li {
-            font-size: 14px;
-            padding: 8px 0;
-        }
-    </style>
-    <meta name="robots" content="noindex">
 </head>
-<body>
-
-<!-- Slide 1: Title -->
-<div class="slide title-slide">
-    <img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="logo">
-    <h1>Investigate <span class="highlight">Smarter</span></h1>
-    <p class="subtitle">AI-Powered Incident Investigation for Safety Teams Who Care About Root Cause</p>
-    <p style="color: var(--gray-500); margin-top: 60px;">Sales Presentation 2026</p>
+<body class="page-deck">
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__logo" href="/index.html" aria-label="InvestigatePro home"><img src="/assets/img/logo-horizontal-white.svg" alt="InvestigatePro" width="152" height="31"></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="/platform.html">Platform</a>
+      <div class="nav__menu">
+        <button class="nav__menu-btn" type="button" aria-expanded="false" aria-controls="nav-industries">Industries <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg></button>
+        <div class="nav__panel" id="nav-industries">
+          <a href="/industries/mining-incident-investigation.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,152V136a96.37,96.37,0,0,0-64-90.51V40a16,16,0,0,0-16-16H112A16,16,0,0,0,96,40v5.49A96.37,96.37,0,0,0,32,136v16a16,16,0,0,0-16,16v24a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V168A16,16,0,0,0,224,152Zm-16-16v16H160V62.67A80.36,80.36,0,0,1,208,136ZM144,40V152H112V40ZM48,136A80.36,80.36,0,0,1,96,62.67V152H48Zm176,56H32V168H224v24Z"/></svg><strong>Mining</strong><span>Underground, open-cut, processing and contractors</span></a>
+          <a href="/industries/oil-gas-incident-management.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></svg><strong>Oil and gas</strong><span>Upstream, midstream and field services</span></a>
+          <a href="/industries/manufacturing-root-cause-analysis.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M116,176a8,8,0,0,1-8,8H80a8,8,0,0,1,0-16h28A8,8,0,0,1,116,176Zm60-8H148a8,8,0,0,0,0,16h28a8,8,0,0,0,0-16Zm64,48a8,8,0,0,1-8,8H24a8,8,0,0,1,0-16h8V88a8,8,0,0,1,12.8-6.4L96,120V88a8,8,0,0,1,12.8-6.4l38.74,29.05L159.1,29.74A16.08,16.08,0,0,1,174.94,16h18.12A16.08,16.08,0,0,1,208.9,29.74l15,105.13s.08.78.08,1.13v72h8A8,8,0,0,1,240,216Zm-77.86-94.4,8.53,6.4h36.11L193.06,32H174.94ZM48,208H208V144H168a8,8,0,0,1-4.8-1.6l-14.4-10.8,0,0L112,104v32a8,8,0,0,1-12.8,6.4L48,104Z"/></svg><strong>Manufacturing</strong><span>Plant, maintenance and process safety</span></a>
+          <a href="/industries/construction-safety-software.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M230.91,172A8,8,0,0,1,228,182.91l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,36,169.09l92,53.65,92-53.65A8,8,0,0,1,230.91,172ZM220,121.09l-92,53.65L36,121.09A8,8,0,0,0,28,134.91l96,56a8,8,0,0,0,8.06,0l96-56A8,8,0,1,0,220,121.09ZM24,80a8,8,0,0,1,4-6.91l96-56a8,8,0,0,1,8.06,0l96,56a8,8,0,0,1,0,13.82l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,24,80Zm23.88,0L128,126.74,208.12,80,128,33.26Z"/></svg><strong>Construction</strong><span>Principal contractors and subcontractors</span></a>
+          <a href="/industries/engineering-incident-investigation.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M160,112h48a16,16,0,0,0,16-16V48a16,16,0,0,0-16-16H160a16,16,0,0,0-16,16V64H128a24,24,0,0,0-24,24v32H72v-8A16,16,0,0,0,56,96H24A16,16,0,0,0,8,112v32a16,16,0,0,0,16,16H56a16,16,0,0,0,16-16v-8h32v32a24,24,0,0,0,24,24h16v16a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V160a16,16,0,0,0-16-16H160a16,16,0,0,0-16,16v16H128a8,8,0,0,1-8-8V88a8,8,0,0,1,8-8h16V96A16,16,0,0,0,160,112ZM56,144H24V112H56v32Zm104,16h48v48H160Zm0-112h48V96H160Z"/></svg><strong>Engineering</strong><span>Projects, commissioning and field work</span></a>
+        </div>
+      </div>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/resources.html">Resources</a>
+      <a href="/blog/index.html">Blog</a>
+    </nav>
+    <div class="nav__actions">
+      <a class="nav__login" href="https://app.investigatepro.app/login">Login</a>
+      <a class="btn btn--primary btn--sm" href="https://app.investigatepro.app/signup">Start a 14-day trial</a>
+      <button class="nav__burger" type="button" aria-expanded="false" aria-controls="mmenu" aria-label="Open menu"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="mmenu" id="mmenu" hidden role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="mmenu__top">
+    <a class="nav__logo" href="/index.html" aria-label="InvestigatePro home"><img src="/assets/img/logo-horizontal-white.svg" alt="InvestigatePro" width="140" height="28"></a>
+    <button class="nav__burger mmenu__close" type="button" aria-label="Close menu"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg></button>
+  </div>
+  <nav class="mmenu__list" aria-label="Mobile">
+    <a href="/platform.html" style="--i:0">Platform <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/pricing.html" style="--i:1">Pricing <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/resources.html" style="--i:2">Resources <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/blog/index.html" style="--i:3">Blog <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/demo.html" style="--i:4">Book a demo <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+  </nav>
+  <div class="mmenu__sub">
+    <a href="/industries/mining-incident-investigation.html">Mining</a>
+    <a href="/industries/oil-gas-incident-management.html">Oil and gas</a>
+    <a href="/industries/manufacturing-root-cause-analysis.html">Manufacturing</a>
+    <a href="/industries/construction-safety-software.html">Construction</a>
+    <a href="/industries/engineering-incident-investigation.html">Engineering</a>
+    <a href="https://app.investigatepro.app/login">Login</a>
+  </div>
+  <div class="mmenu__cta">
+    <a class="btn btn--primary btn--block" href="https://app.investigatepro.app/signup">Start a 14-day trial</a>
+    <a class="btn btn--ghost btn--block" href="https://cal.com/investigatepro/15min">Book a 15-minute demo</a>
+  </div>
 </div>
 
-<!-- Slide 2: The Problem -->
-<div class="slide">
-    <div class="slide-header">
-        <picture><source srcset="../assets/brand/logo-horizontal.svg" type="image/webp"><img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="logo"></picture>
-        <span class="slide-number">02</span>
-    </div>
-    <div class="content">
-        <span class="badge">THE PROBLEM</span>
-        <h2>Incident Investigation is <span class="highlight">Broken</span></h2>
-        
-        <div class="content-grid" style="margin-top: 40px;">
-            <div>
-                <div class="quote">
-                    "We investigate incidents, but the same things keep happening."
-                </div>
-                <p style="margin-top: 24px;">Safety teams spend weeks filling out forms, but rarely find the causes — and fix the system. Incidents get logged. Reports get filed. Nothing changes.</p>
-            </div>
-            <div class="content-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                <div class="card">
-                    <div class="card-icon">📋</div>
-                    <h4>Forms, Not Thinking</h4>
-                    <p style="font-size: 16px;">Current tools are glorified forms. They capture what happened — not why.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🔄</div>
-                    <h4>Repeat Incidents</h4>
-                    <p style="font-size: 16px;">40% of incidents are repeats. Root causes weren't found.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">⏰</div>
-                    <h4>Weeks to Close</h4>
-                    <p style="font-size: 16px;">Investigations drag on. Actions get forgotten.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">💸</div>
-                    <h4>Wasted Investment</h4>
-                    <p style="font-size: 16px;">Enterprise tools cost $100K+, but investigation is an afterthought.</p>
-                </div>
-            </div>
+<main id="main" class="deck">
+
+<!-- 01 · title -->
+<section class="slide slide--title" id="s01" aria-labelledby="s01-h">
+  <div class="wrap slide__in">
+    <p class="slide__no"><b>01</b><span>Sales presentation 2026</span></p>
+    <div class="slide__split">
+      <div class="stack" style="--gap:26px">
+        <h1 id="s01-h" class="display">Investigate smarter.</h1>
+        <p class="lede">AI-powered incident investigation for safety teams who care about the causes.</p>
+        <div class="row">
+          <a class="btn btn--primary" href="https://app.investigatepro.app/signup">Start a 14-day trial <svg class="i i--nudge" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+          <a class="btn btn--ghost" href="https://cal.com/investigatepro/15min">Book a 15-minute demo</a>
         </div>
-    </div>
-    <div class="slide-footer">
-        <span class="footer-text">investigatepro.app</span>
-        <span class="footer-text">Confidential</span>
-    </div>
-</div>
-
-<!-- Slide 3: The Solution -->
-<div class="slide">
-    <div class="slide-header">
-        <picture><source srcset="../assets/brand/logo-horizontal.svg" type="image/webp"><img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="logo"></picture>
-        <span class="slide-number">03</span>
-    </div>
-    <div class="content">
-        <span class="badge">THE SOLUTION</span>
-        <h2>InvestigatePro: <span class="highlight">AI + ICAM</span></h2>
-        <p class="subtitle">The first investigation platform that actually helps you think.</p>
-        
-        <div class="vs" style="margin-top: 40px;">
-            <div class="vs-item vs-old">
-                <h4 style="color: #E53935;">❌ Traditional Tools</h4>
-                <ul>
-                    <li>Blank text boxes</li>
-                    <li>No methodology guidance</li>
-                    <li>Investigators on their own</li>
-                    <li>Same mistakes repeated</li>
-                </ul>
-            </div>
-            <div class="vs-divider">→</div>
-            <div class="vs-item vs-new">
-                <h4 style="color: #4CAF50;">✓ InvestigatePro</h4>
-                <ul>
-                    <li>ICAM methodology built-in</li>
-                    <li>AI coaching at every step</li>
-                    <li>Guided factor analysis</li>
-                    <li>Real root causes found</li>
-                </ul>
-            </div>
+        <button class="btn btn--ghost btn--sm deck__print" type="button" data-print-page><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M214.67,72H200V40a8,8,0,0,0-8-8H64a8,8,0,0,0-8,8V72H41.33C27.36,72,16,82.77,16,96v80a8,8,0,0,0,8,8H56v32a8,8,0,0,0,8,8H192a8,8,0,0,0,8-8V184h32a8,8,0,0,0,8-8V96C240,82.77,228.64,72,214.67,72ZM72,48H184V72H72ZM184,208H72V160H184Zm40-40H200V152a8,8,0,0,0-8-8H64a8,8,0,0,0-8,8v16H32V96c0-4.41,4.19-8,9.33-8H214.67c5.14,0,9.33,3.59,9.33,8Zm-24-52a12,12,0,1,1-12-12A12,12,0,0,1,200,116Z"/></svg>Save the deck as a PDF</button>
+      </div>
+      <figure class="deck-fig">
+        <div class="levels">
+          <div class="level level--org"><div class="level__top"><span class="level__name">Organisational factors</span></div></div>
+          <div class="level level--task"><div class="level__top"><span class="level__name">Task or environmental conditions</span></div></div>
+          <div class="level level--ind"><div class="level__top"><span class="level__name">Individual or team actions</span></div></div>
+          <div class="level level--def"><div class="level__top"><span class="level__name">Absent or failed defences</span></div></div>
         </div>
+        <figcaption>The four ICAM levels, examined on every case.</figcaption>
+      </figure>
     </div>
-    <div class="slide-footer">
-        <span class="footer-text">investigatepro.app</span>
-        <span class="footer-text">Confidential</span>
-    </div>
-</div>
+  </div>
+</section>
 
-<!-- Slide 4: How It Works -->
-<div class="slide">
-    <div class="slide-header">
-        <picture><source srcset="../assets/brand/logo-horizontal.svg" type="image/webp"><img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="logo"></picture>
-        <span class="slide-number">04</span>
+<!-- 02 · the problem -->
+<section class="slide" id="s02" aria-labelledby="s02-h">
+  <div class="wrap slide__in">
+    <p class="slide__no"><b>02</b><span>The problem</span></p>
+    <div class="slide__split">
+      <div class="stack" style="--gap:24px">
+        <h2 id="s02-h">Incident investigation is broken.</h2>
+        <blockquote class="deck-quote"><p>&ldquo;We investigate incidents, but the same things keep happening.&rdquo;</p></blockquote>
+        <p class="lede">Safety teams spend weeks filling out forms, but rarely find the causes and fix the system. Incidents get logged. Reports get filed. Nothing changes.</p>
+      </div>
+      <ul class="ledger ledger--build">
+        <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm-8-80V80a8,8,0,0,1,16,0v56a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,172Z"/></svg><div><strong>Forms, not thinking</strong><span>Current tools are glorified forms. They capture what happened, not why.</span></div></li>
+        <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm-8-80V80a8,8,0,0,1,16,0v56a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,172Z"/></svg><div><strong>Repeat incidents</strong><span>The same events come back when the causes in the system are never found.</span></div></li>
+        <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm-8-80V80a8,8,0,0,1,16,0v56a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,172Z"/></svg><div><strong>Weeks to close</strong><span>Investigations drag on. Actions get forgotten.</span></div></li>
+        <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm-8-80V80a8,8,0,0,1,16,0v56a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,172Z"/></svg><div><strong>Wasted investment</strong><span>Enterprise tools cost $100K+, but investigation is an afterthought.</span></div></li>
+      </ul>
     </div>
-    <div class="content">
-        <span class="badge">HOW IT WORKS</span>
-        <h2>From Incident to <span class="highlight">Insight</span></h2>
-        
-        <div class="content-grid-4" style="margin-top: 40px;">
-            <div class="card" style="text-align: center;">
-                <div style="font-size: 64px; color: var(--cyan-500); font-weight: 800;">1</div>
-                <h4 style="margin-top: 16px;">Report</h4>
-                <p style="font-size: 14px;">Mobile-first incident capture in under 60 seconds</p>
-            </div>
-            <div class="card" style="text-align: center;">
-                <div style="font-size: 64px; color: var(--cyan-500); font-weight: 800;">2</div>
-                <h4 style="margin-top: 16px;">Investigate</h4>
-                <p style="font-size: 14px;">ICAM-guided analysis with AI coaching</p>
-            </div>
-            <div class="card" style="text-align: center;">
-                <div style="font-size: 64px; color: var(--cyan-500); font-weight: 800;">3</div>
-                <h4 style="margin-top: 16px;">Analyze</h4>
-                <p style="font-size: 14px;">Find contributing factors and root causes</p>
-            </div>
-            <div class="card" style="text-align: center;">
-                <div style="font-size: 64px; color: var(--cyan-500); font-weight: 800;">4</div>
-                <h4 style="margin-top: 16px;">Prevent</h4>
-                <p style="font-size: 14px;">Track actions to closure, share learnings</p>
-            </div>
+  </div>
+</section>
+
+<!-- 03 · the solution -->
+<section class="slide" id="s03" aria-labelledby="s03-h">
+  <div class="wrap slide__in">
+    <p class="slide__no"><b>03</b><span>The solution</span></p>
+    <div class="stack" style="--gap:18px">
+      <h2 id="s03-h">InvestigatePro: AI and ICAM.</h2>
+      <p class="lede">An investigation platform that helps you think.</p>
+    </div>
+    <div class="swap swap--deck">
+      <div class="swap__head" aria-hidden="true"><span>Traditional tools</span><span></span><span>InvestigatePro</span></div>
+      <ol class="swap__rows">
+        <li class="swap__row"><p class="swap__away">Blank text boxes.</p><span class="swap__arrow" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span><p class="swap__to">ICAM methodology built in.</p></li>
+        <li class="swap__row"><p class="swap__away">No methodology guidance.</p><span class="swap__arrow" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span><p class="swap__to">AI coaching at every step.</p></li>
+        <li class="swap__row"><p class="swap__away">Investigators on their own.</p><span class="swap__arrow" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span><p class="swap__to">Guided factor analysis.</p></li>
+        <li class="swap__row"><p class="swap__away">The same mistakes repeated.</p><span class="swap__arrow" aria-hidden="true"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span><p class="swap__to">The real causes found.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 04 · how it works -->
+<section class="slide" id="s04" aria-labelledby="s04-h">
+  <div class="wrap slide__in">
+    <p class="slide__no"><b>04</b><span>How it works</span></p>
+    <h2 id="s04-h">From incident to insight.</h2>
+    <ol class="steps-line steps-line--4">
+      <li><h3>Report</h3><p>Capture the event while it is fresh, placed in your own site structure.</p></li>
+      <li><h3>Investigate</h3><p>ICAM-guided analysis with AI coaching.</p></li>
+      <li><h3>Analyse</h3><p>Find the contributing factors and the underlying causes.</p></li>
+      <li><h3>Prevent</h3><p>Track actions to closure and share the learnings.</p></li>
+    </ol>
+    <aside class="callout bezel deck-callout" aria-label="AI coaching throughout">
+      <p><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M168,112a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,112Zm-8,24H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16Zm72-8A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-16,0A88,88,0,1,0,51.81,172.06a8,8,0,0,1,.66,6.54L40,216,77.4,203.53a7.85,7.85,0,0,1,2.53-.42,8,8,0,0,1,4,1.08A88,88,0,0,0,216,128Z"/></svg> <strong>AI coaching throughout.</strong> Get unstuck with suggestions as you work: &ldquo;Have you considered organisational factors?&rdquo; The coach helps investigators think deeper, without expensive training. Every suggestion is accepted, edited or rejected by the investigator.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- 05 · key features: the same live and in-build ledger as the platform page -->
+<section class="slide" id="s05" aria-labelledby="s05-h">
+  <div class="wrap slide__in">
+    <p class="slide__no"><b>05</b><span>Key features</span></p>
+    <div class="slide__split slide__split--top">
+      <div class="stack" style="--gap:18px">
+        <h2 id="s05-h">Everything you need to investigate.</h2>
+        <p class="lede">We label what isn&rsquo;t shipped. If it is not in the live list, it is not in the product yet.</p>
+        <a class="link-arrow" href="/platform.html#capabilities">The full capability list <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+      </div>
+      <div class="stack" style="--gap:24px">
+        <div>
+          <h3 class="h4" style="margin-bottom:10px">Live</h3>
+          <ul class="ledger">
+            <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg><div><strong>Guided ICAM investigations</strong><span>Capture, evidence, sequence, analysis, actions and report.</span></div></li>
+            <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg><div><strong>Coach with accept, edit and reject</strong><span>Evidence gaps, witness prompts, unexamined levels, drafted factors.</span></div></li>
+            <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg><div><strong>PEEPO contribution charts</strong><span>Evidence by people, environment, equipment, procedures and organisation.</span></div></li>
+            <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg><div><strong>Full investigation reports</strong><span>PDF and PPTX, attributed to the lead investigator.</span></div></li>
+            <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg><div><strong>Multi-party collaboration</strong><span>Investigators, reviewers and approvers on one case.</span></div></li>
+            <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg><div><strong>Trend analytics</strong><span>Recurring factors and hazards across your cases.</span></div></li>
+          </ul>
         </div>
-
-        <div class="card card-highlight" style="margin-top: 40px; display: flex; align-items: center; gap: 24px;">
-            <div style="font-size: 48px;">🤖</div>
-            <div>
-                <h4>AI Coaching Throughout</h4>
-                <p style="font-size: 16px; margin: 0;">Get unstuck with intelligent suggestions. "Have you considered organizational factors?" The AI helps investigators think deeper — no expensive training required.</p>
-            </div>
+        <div>
+          <h3 class="h4" style="margin-bottom:10px">In build</h3>
+          <ul class="ledger ledger--build">
+            <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M96.26,37.05A8,8,0,0,1,102,27.29a104.11,104.11,0,0,1,52,0,8,8,0,0,1-2,15.75,8.15,8.15,0,0,1-2-.26,88.09,88.09,0,0,0-44,0A8,8,0,0,1,96.26,37.05ZM53.79,55.14a104.05,104.05,0,0,0-26,45,8,8,0,0,0,15.42,4.27,88,88,0,0,1,22-38.09A8,8,0,0,0,53.79,55.14ZM43.21,151.55a8,8,0,1,0-15.42,4.28,104.12,104.12,0,0,0,26,45,8,8,0,0,0,11.41-11.22A88.14,88.14,0,0,1,43.21,151.55ZM150,213.22a88,88,0,0,1-44,0,8,8,0,1,0-4,15.49,104.11,104.11,0,0,0,52,0,8,8,0,0,0-4-15.49ZM222.65,146a8,8,0,0,0-9.85,5.58,87.91,87.91,0,0,1-22,38.08,8,8,0,1,0,11.42,11.21,104,104,0,0,0,26-45A8,8,0,0,0,222.65,146Zm-9.86-41.54a8,8,0,0,0,15.42-4.28,104,104,0,0,0-26-45,8,8,0,1,0-11.41,11.22A88,88,0,0,1,212.79,104.45Z"/></svg><div><strong>Mobile apps for iOS and Android</strong><span>Not published yet.</span></div></li>
+            <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M96.26,37.05A8,8,0,0,1,102,27.29a104.11,104.11,0,0,1,52,0,8,8,0,0,1-2,15.75,8.15,8.15,0,0,1-2-.26,88.09,88.09,0,0,0-44,0A8,8,0,0,1,96.26,37.05ZM53.79,55.14a104.05,104.05,0,0,0-26,45,8,8,0,0,0,15.42,4.27,88,88,0,0,1,22-38.09A8,8,0,0,0,53.79,55.14ZM43.21,151.55a8,8,0,1,0-15.42,4.28,104.12,104.12,0,0,0,26,45,8,8,0,0,0,11.41-11.22A88.14,88.14,0,0,1,43.21,151.55ZM150,213.22a88,88,0,0,1-44,0,8,8,0,1,0-4,15.49,104.11,104.11,0,0,0,52,0,8,8,0,0,0-4-15.49ZM222.65,146a8,8,0,0,0-9.85,5.58,87.91,87.91,0,0,1-22,38.08,8,8,0,1,0,11.42,11.21,104,104,0,0,0,26-45A8,8,0,0,0,222.65,146Zm-9.86-41.54a8,8,0,0,0,15.42-4.28,104,104,0,0,0-26-45,8,8,0,1,0-11.41,11.22A88,88,0,0,1,212.79,104.45Z"/></svg><div><strong>Scoped data exchange with EHS suites</strong><span>Set up per integration. Today, reports and actions feed your system of record.</span></div></li>
+          </ul>
         </div>
+      </div>
     </div>
-    <div class="slide-footer">
-        <span class="footer-text">investigatepro.app</span>
-        <span class="footer-text">Confidential</span>
-    </div>
-</div>
+  </div>
+</section>
 
-<!-- Slide 5: Key Features -->
-<div class="slide">
-    <div class="slide-header">
-        <picture><source srcset="../assets/brand/logo-horizontal.svg" type="image/webp"><img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="logo"></picture>
-        <span class="slide-number">05</span>
+<!-- 06 · the proof: the public sample report -->
+<section class="slide" id="s06" aria-labelledby="s06-h">
+  <div class="wrap slide__in">
+    <p class="slide__no"><b>06</b><span>The proof</span></p>
+    <div class="stack" style="--gap:18px">
+      <h2 id="s06-h">The report is the case, formatted.</h2>
+      <p class="lede">A report generated in the demo workspace: INC-2026-0001, a conveyor guard left off after a belt change. Fifteen pages, each cause traced to the evidence behind it.</p>
     </div>
-    <div class="content">
-        <span class="badge">KEY FEATURES</span>
-        <h2>Everything You Need to <span class="highlight">Investigate</span></h2>
-        
-        <div class="content-grid" style="margin-top: 40px;">
-            <div class="card">
-                <div class="card-icon">📊</div>
-                <h3>Executive Dashboard</h3>
-                <p>Real-time pSIF metrics, trends, and alerts. See what matters most at a glance.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">🎯</div>
-                <h3>ICAM Analysis</h3>
-                <p>Structured framework: Individual, Task, Organisational, Absent Defences. Built into every investigation.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">🤖</div>
-                <h3>AI Coaching</h3>
-                <p>Intelligent suggestions when you're stuck. Factor recommendations based on incident type.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">✅</div>
-                <h3>Action Tracking</h3>
-                <p>Assign, track, and close corrective actions. Automated reminders. Nothing falls through.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">📱</div>
-                <h3>Mobile-First</h3>
-                <p>Report incidents from the field. Access investigations anywhere. Works offline.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">📈</div>
-                <h3>Analytics & Reports</h3>
-                <p>Custom reports, trend analysis, exportable data. Board-ready in minutes.</p>
-            </div>
-        </div>
+    <div class="report__rail">
+      <figure class="rpage"><div class="rpage__img"><img src="/assets/img/report-p01.webp" alt="Report cover: Injury, INC-2026-0001, with document control table" width="560" height="792" loading="lazy"></div><figcaption>Cover and document control</figcaption></figure>
+      <figure class="rpage"><div class="rpage__img"><img src="/assets/img/report-p08.webp" alt="ICAM factor analysis page showing absent or failed defences, individual actions and task conditions" width="560" height="792" loading="lazy"></div><figcaption>ICAM factor analysis, all four levels reported</figcaption></figure>
+      <figure class="rpage"><div class="rpage__img"><img src="/assets/img/report-p10.webp" alt="Causal analysis page with a diagram linking causes across ICAM levels" width="560" height="792" loading="lazy"></div><figcaption>Causal analysis, each cause linked to its basis</figcaption></figure>
+      <figure class="rpage"><div class="rpage__img"><img src="/assets/img/report-p13.webp" alt="Corrective actions page listing actions with control type, owner and due date" width="560" height="792" loading="lazy"></div><figcaption>Corrective actions with control type, owner and date</figcaption></figure>
     </div>
-    <div class="slide-footer">
-        <span class="footer-text">investigatepro.app</span>
-        <span class="footer-text">Confidential</span>
+    <div class="row">
+      <a class="btn btn--ghost" href="/resources/full_investigation_2026-08-10.pdf">Read the sample report <svg class="i i--nudge" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+      <span class="muted small">PDF, 15 pages. Demo Mining Corp is a fictional workspace.</span>
     </div>
-</div>
+  </div>
+</section>
 
-<!-- Slide 6: Results -->
-<div class="slide">
-    <div class="slide-header">
-        <picture><source srcset="../assets/brand/logo-horizontal.svg" type="image/webp"><img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="logo"></picture>
-        <span class="slide-number">06</span>
+<!-- 07 · market position -->
+<section class="slide" id="s07" aria-labelledby="s07-h">
+  <div class="wrap slide__in">
+    <p class="slide__no"><b>07</b><span>Market position</span></p>
+    <div class="slide__split">
+      <div class="stack" style="--gap:22px">
+        <h2 id="s07-h">Where we win.</h2>
+        <p class="lede">The market has two extremes, and a massive gap in the middle.</p>
+        <dl class="mkt">
+          <div><dt>Enterprise suites <span>$50K to $500K a year</span></dt><dd>Intelex, Enablon, Sphera: comprehensive, but investigation is a checkbox module. 6 to 12 month implementations.</dd></div>
+          <div><dt>Point solutions <span>$5K to $20K a year</span></dt><dd>SafetyCulture, 1st Reporting: easy to use, but just reporting, with no actual investigation methodology.</dd></div>
+          <div class="mkt__us"><dt>InvestigatePro</dt><dd>Enterprise-grade investigation depth at mid-market pricing. AI-powered. Implements in days, not months.</dd></div>
+        </dl>
+      </div>
+      <figure class="mmap">
+        <svg viewBox="0 0 560 410" role="img" aria-labelledby="mmap-t mmap-d">
+          <title id="mmap-t">Market map: investigation depth against ease of use</title>
+          <desc id="mmap-d">TapRooT, Sologic and Intelex sit at high depth but hard to use. SafetyCulture and 1st Reporting are easy to use with low depth. InvestigatePro sits at high depth and easy to use.</desc>
+          <line class="mmap__grid" x1="302" y1="20" x2="302" y2="356"/>
+          <line class="mmap__grid" x1="64" y1="188" x2="540" y2="188"/>
+          <line class="mmap__axis" x1="64" y1="20" x2="64" y2="356"/>
+          <line class="mmap__axis" x1="64" y1="356" x2="540" y2="356"/>
+          <text class="mmap__tick" x="54" y="30" text-anchor="end">High</text>
+          <text class="mmap__tick" x="54" y="356" text-anchor="end">Low</text>
+          <text class="mmap__tick" x="64" y="378">Hard</text>
+          <text class="mmap__tick" x="540" y="378" text-anchor="end">Easy</text>
+          <text class="mmap__axt" x="302" y="402" text-anchor="middle">Ease of use</text>
+          <text class="mmap__axt" transform="translate(18 188) rotate(-90)" text-anchor="middle">Investigation depth</text>
+          <circle class="mmap__dot" cx="102" cy="54" r="6"/><text class="mmap__lbl" x="114" y="59">TapRooT</text>
+          <circle class="mmap__dot" cx="169" cy="87" r="6"/><text class="mmap__lbl" x="181" y="92">Sologic</text>
+          <circle class="mmap__dot" cx="93" cy="144" r="6"/><text class="mmap__lbl" x="105" y="149">Intelex</text>
+          <circle class="mmap__dot" cx="445" cy="272" r="6"/><text class="mmap__lbl" x="433" y="292" text-anchor="end">SafetyCulture</text>
+          <circle class="mmap__dot" cx="492" cy="255" r="6"/><text class="mmap__lbl" x="480" y="246" text-anchor="end">1st Reporting</text>
+          <circle class="mmap__halo" cx="454" cy="64" r="15"/>
+          <circle class="mmap__dot mmap__dot--us" cx="454" cy="64" r="7"/><text class="mmap__lbl mmap__lbl--us" x="436" y="69" text-anchor="end">InvestigatePro</text>
+        </svg>
+        <figcaption>Positions as we see the market, 2026.</figcaption>
+      </figure>
     </div>
-    <div class="content" style="text-align: center;">
-        <span class="badge">RESULTS</span>
-        <h2>What Our Customers <span class="highlight">Achieve</span></h2>
-        
-        <div class="content-grid-4" style="margin-top: 60px;">
-            <div class="stat">
-                <div class="stat-value">60%</div>
-                <div class="stat-label">Faster Investigation Closure</div>
-            </div>
-            <div class="stat">
-                <div class="stat-value">40%</div>
-                <div class="stat-label">Reduction in Repeat Incidents</div>
-            </div>
-            <div class="stat">
-                <div class="stat-value">3x</div>
-                <div class="stat-label">More Root Causes Found</div>
-            </div>
-            <div class="stat">
-                <div class="stat-value">$50K+</div>
-                <div class="stat-label">Saved Per Prevented Incident</div>
-            </div>
-        </div>
+  </div>
+</section>
 
-        <div class="quote" style="max-width: 800px; margin: 60px auto 0; text-align: left;">
-            "InvestigatePro helped us find factors we'd been missing for years. The AI coaching is like having an expert investigator on every case."
-        </div>
-        <p style="text-align: left; max-width: 800px; margin: 16px auto 0;">— Safety Director, Mining Company</p>
+<!-- 08 · why InvestigatePro -->
+<section class="slide" id="s08" aria-labelledby="s08-h">
+  <div class="wrap slide__in">
+    <p class="slide__no"><b>08</b><span>Why InvestigatePro</span></p>
+    <h2 id="s08-h">Our competitive moat.</h2>
+    <div class="dtable-wrap">
+      <table class="dtable">
+        <thead><tr><th scope="col">Advantage</th><th scope="col">What we have</th><th scope="col">What competitors offer</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">AI-native</th><td>AI coaching during the investigation</td><td>Document search marketed as &ldquo;AI&rdquo;</td></tr>
+          <tr><th scope="row">Real ICAM</th><td>Methodology built into the workflow</td><td>Blank text boxes and dropdowns</td></tr>
+          <tr><th scope="row">Time to value</th><td>A self-serve 14-day trial on your own case</td><td>3 to 12 month implementations</td></tr>
+          <tr><th scope="row">Pricing</th><td>Enterprise depth, SMB price</td><td>$50K+ for the same capability</td></tr>
+          <tr><th scope="row">Modern stack</th><td>Browser-based, with mobile apps in build</td><td>Legacy systems, quarterly updates</td></tr>
+        </tbody>
+      </table>
     </div>
-    <div class="slide-footer">
-        <span class="footer-text">investigatepro.app</span>
-        <span class="footer-text">Confidential</span>
-    </div>
-</div>
+  </div>
+</section>
 
-<!-- Slide 7: Market Position -->
-<div class="slide">
-    <div class="slide-header">
-        <picture><source srcset="../assets/brand/logo-horizontal.svg" type="image/webp"><img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="logo"></picture>
-        <span class="slide-number">07</span>
+<!-- 09 · pricing: the same plans as the pricing page -->
+<section class="slide" id="s09" aria-labelledby="s09-h">
+  <div class="wrap slide__in">
+    <p class="slide__no"><b>09</b><span>Pricing</span></p>
+    <div class="stack" style="--gap:18px">
+      <h2 id="s09-h">Simple, transparent pricing.</h2>
+      <p class="lede">Priced per organisation, not per seat. Starter and Professional start with a self-serve 14-day trial.</p>
     </div>
-    <div class="content">
-        <span class="badge">MARKET POSITION</span>
-        <h2>Where We <span class="highlight">Win</span></h2>
-        
-        <div class="content-grid">
-            <div>
-                <p style="font-size: 20px; margin-bottom: 32px;">The market has two extremes — and a massive gap in the middle.</p>
-                
-                <div class="card" style="margin-bottom: 16px;">
-                    <h4 style="color: var(--error);">Enterprise Suites ($50K-500K/yr)</h4>
-                    <p style="font-size: 14px;">Intelex, Enablon, Sphera — comprehensive but investigation is a checkbox module. 6-12 month implementations.</p>
-                </div>
-                
-                <div class="card" style="margin-bottom: 16px;">
-                    <h4 style="color: var(--warning);">Point Solutions ($5K-20K/yr)</h4>
-                    <p style="font-size: 14px;">SafetyCulture, 1st Reporting — easy to use but just reporting, no actual investigation methodology.</p>
-                </div>
-                
-                <div class="card card-highlight">
-                    <h4 style="color: var(--cyan-500);">InvestigatePro ★</h4>
-                    <p style="font-size: 14px;">Enterprise-grade investigation depth at mid-market pricing. AI-powered. Implements in days, not months.</p>
-                </div>
-            </div>
-            <div style="display: flex; align-items: center; justify-content: center;">
-                <div style="position: relative; width: 100%; height: 350px; border-left: 2px solid var(--gray-500); border-bottom: 2px solid var(--gray-500);">
-                    <span style="position: absolute; top: 0; left: -80px; color: var(--gray-500); font-size: 12px;">HIGH<br>Depth</span>
-                    <span style="position: absolute; bottom: 0; left: -60px; color: var(--gray-500); font-size: 12px;">LOW</span>
-                    <span style="position: absolute; bottom: -30px; left: 0; color: var(--gray-500); font-size: 12px;">HARD</span>
-                    <span style="position: absolute; bottom: -30px; right: 0; color: var(--gray-500); font-size: 12px;">EASY</span>
-                    
-                    <div style="position: absolute; top: 30px; left: 30px; background: var(--navy-700); padding: 8px 12px; border-radius: 6px; font-size: 12px;">TapRooT</div>
-                    <div style="position: absolute; top: 60px; left: 100px; background: var(--navy-700); padding: 8px 12px; border-radius: 6px; font-size: 12px;">Sologic</div>
-                    <div style="position: absolute; top: 120px; left: 20px; background: var(--navy-700); padding: 8px 12px; border-radius: 6px; font-size: 12px;">Intelex</div>
-                    <div style="position: absolute; bottom: 80px; right: 60px; background: var(--navy-700); padding: 8px 12px; border-radius: 6px; font-size: 12px;">SafetyCulture</div>
-                    <div style="position: absolute; bottom: 100px; right: 20px; background: var(--navy-700); padding: 8px 12px; border-radius: 6px; font-size: 12px;">1st Reporting</div>
-                    
-                    <div style="position: absolute; top: 40px; right: 60px; background: var(--cyan-500); color: var(--navy-900); padding: 10px 16px; border-radius: 8px; font-size: 14px; font-weight: 700;">InvestigatePro ★</div>
-                </div>
-            </div>
-        </div>
+    <div class="tiers">
+      <article class="tier">
+        <h3>Starter</h3>
+        <p class="tier__for">For a single site starting to run the method properly.</p>
+        <div class="tier__price"><span class="cur">$</span><span class="amt">149</span><span class="per">/month</span></div>
+        <ul>
+          <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Up to 5 users</span></li>
+          <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Guided ICAM workflow</span></li>
+          <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Templates and reports</span></li>
+          <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Email support</span></li>
+          <li class="is-out"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg><span>The coach is not included</span></li>
+        </ul>
+      </article>
+      <article class="tier frame is-coaching">
+        <h3>Professional</h3>
+        <p class="tier__for">For teams who want the coach on every case.</p>
+        <div class="tier__price"><span class="cur">$</span><span class="amt">349</span><span class="per">/month</span></div>
+        <ul>
+          <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Up to 20 users</span></li>
+          <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>The coach on every case</span></li>
+          <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>PEEPO charts</span></li>
+          <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Advanced analytics</span></li>
+          <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Priority support</span></li>
+        </ul>
+      </article>
+      <article class="tier">
+        <h3>Business</h3>
+        <p class="tier__for">For multi-site operators and contractors with several crews.</p>
+        <div class="tier__price"><span class="cur">$</span><span class="amt">749</span><span class="per">/month</span></div>
+        <ul>
+          <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Up to 100 users</span></li>
+          <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Everything in Professional</span></li>
+          <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>SSO and SAML</span></li>
+          <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Scoped data exchange, per integration</span></li>
+          <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Dedicated success manager</span></li>
+        </ul>
+      </article>
+      <article class="tier">
+        <h3>Enterprise</h3>
+        <p class="tier__for">For 100+ users, several sites, or an on-premise requirement.</p>
+        <div class="tier__price"><span class="from">From</span><span class="cur">$</span><span class="amt">1,500</span><span class="per">/month</span></div>
+        <ul>
+          <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>100+ users or multi-site</span></li>
+          <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Everything in Business</span></li>
+          <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>SLA-backed support</span></li>
+          <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>On-premise option</span></li>
+        </ul>
+      </article>
     </div>
-    <div class="slide-footer">
-        <span class="footer-text">investigatepro.app</span>
-        <span class="footer-text">Confidential</span>
-    </div>
-</div>
+    <p class="muted small measure">Prices in US dollars, billed per organisation up to the plan&rsquo;s user cap. Annual billing saves 15%. <a href="/pricing.html">Compare the plans</a>.</p>
+  </div>
+</section>
 
-<!-- Slide 8: Why Us -->
-<div class="slide">
-    <div class="slide-header">
-        <picture><source srcset="../assets/brand/logo-horizontal.svg" type="image/webp"><img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="logo"></picture>
-        <span class="slide-number">08</span>
-    </div>
-    <div class="content">
-        <span class="badge">WHY INVESTIGATEPRO</span>
-        <h2>Our <span class="highlight">Competitive Moat</span></h2>
-        
-        <table style="margin-top: 40px;">
-            <thead>
-                <tr>
-                    <th>Advantage</th>
-                    <th>What We Have</th>
-                    <th>Competitors Don't</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>🤖 AI-Native</strong></td>
-                    <td>AI coaching during investigation</td>
-                    <td>Document search marketed as "AI"</td>
-                </tr>
-                <tr>
-                    <td><strong>📊 Real ICAM</strong></td>
-                    <td>Methodology built into workflow</td>
-                    <td>Blank text boxes and dropdowns</td>
-                </tr>
-                <tr>
-                    <td><strong>⚠️ pSIF Focus</strong></td>
-                    <td>Dashboard prioritizes fatality potential</td>
-                    <td>Treat all incidents equally</td>
-                </tr>
-                <tr>
-                    <td><strong>⚡ Time-to-Value</strong></td>
-                    <td>Signup to investigating in 1 hour</td>
-                    <td>3-12 month implementations</td>
-                </tr>
-                <tr>
-                    <td><strong>💰 Pricing</strong></td>
-                    <td>Enterprise depth, SMB price</td>
-                    <td>$50K+ for same capability</td>
-                </tr>
-                <tr>
-                    <td><strong>🔧 Modern Stack</strong></td>
-                    <td>Real-time, mobile-first, API-ready</td>
-                    <td>Legacy systems, quarterly updates</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="slide-footer">
-        <span class="footer-text">investigatepro.app</span>
-        <span class="footer-text">Confidential</span>
-    </div>
-</div>
+<!-- 10 · industries -->
+<section class="slide" id="s10" aria-labelledby="s10-h">
+  <div class="wrap slide__in">
+    <p class="slide__no"><b>10</b><span>Industries</span></p>
+    <h2 id="s10-h">Built for high-risk industries.</h2>
+    <ul class="deck-ind">
+      <li><a href="/industries/mining-incident-investigation.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M245.66,58.34l-48-48a8,8,0,0,0-11.32,11.32L204.69,40l-71,71L99.31,76.68a16,16,0,0,0-22.62,0l-56,56A15.89,15.89,0,0,0,16,144v80a16,16,0,0,0,16,16h80a15.86,15.86,0,0,0,11.31-4.69l56-56a16,16,0,0,0,0-22.62L145,122.34l71-71,18.34,18.35a8,8,0,0,0,11.32-11.32ZM168,168l-56,56H32V144L88,88l34.34,34.34-40,40a8,8,0,0,0,11.32,11.32l40-40Z"/></svg><strong>Mining and resources</strong><span>High serious-injury potential. Built by a mining safety veteran with 15+ years&rsquo; experience.</span></a></li>
+      <li><a href="/industries/oil-gas-incident-management.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M174,47.75a254.19,254.19,0,0,0-41.45-38.3,8,8,0,0,0-9.18,0A254.19,254.19,0,0,0,82,47.75C54.51,79.32,40,112.6,40,144a88,88,0,0,0,176,0C216,112.6,201.49,79.32,174,47.75ZM128,216a72.08,72.08,0,0,1-72-72c0-57.23,55.47-105,72-118,16.53,13,72,60.75,72,118A72.08,72.08,0,0,1,128,216Zm55.89-62.66a57.6,57.6,0,0,1-46.56,46.55A8.75,8.75,0,0,1,136,200a8,8,0,0,1-1.32-15.89c16.57-2.79,30.63-16.85,33.44-33.45a8,8,0,0,1,15.78,2.68Z"/></svg><strong>Oil and gas</strong><span>Complex operations. High-consequence environments. Process safety focus.</span></a></li>
+      <li><a href="/industries/construction-safety-software.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,152V136a96.37,96.37,0,0,0-64-90.51V40a16,16,0,0,0-16-16H112A16,16,0,0,0,96,40v5.49A96.37,96.37,0,0,0,32,136v16a16,16,0,0,0-16,16v24a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V168A16,16,0,0,0,224,152Zm-16-16v16H160V62.67A80.36,80.36,0,0,1,208,136ZM144,40V152H112V40ZM48,136A80.36,80.36,0,0,1,96,62.67V152H48Zm176,56H32V168H224v24Z"/></svg><strong>Construction</strong><span>High incident rates. Fragmented workforce. Multi-contractor coordination.</span></a></li>
+      <li><a href="/industries/manufacturing-root-cause-analysis.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M116,176a8,8,0,0,1-8,8H80a8,8,0,0,1,0-16h28A8,8,0,0,1,116,176Zm60-8H148a8,8,0,0,0,0,16h28a8,8,0,0,0,0-16Zm64,48a8,8,0,0,1-8,8H24a8,8,0,0,1,0-16h8V88a8,8,0,0,1,12.8-6.4L96,120V88a8,8,0,0,1,12.8-6.4l38.74,29.05L159.1,29.74A16.08,16.08,0,0,1,174.94,16h18.12A16.08,16.08,0,0,1,208.9,29.74l15,105.13s.08.78.08,1.13v72h8A8,8,0,0,1,240,216Zm-77.86-94.4,8.53,6.4h36.11L193.06,32H174.94ZM48,208H208V144H168a8,8,0,0,1-4.8-1.6l-14.4-10.8,0,0L112,104v32a8,8,0,0,1-12.8,6.4L48,104Z"/></svg><strong>Manufacturing</strong><span>Machinery hazards. Process safety. Quality and safety integration.</span></a></li>
+      <li><div><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M255.42,117l-14-35A15.93,15.93,0,0,0,226.58,72H192V64a8,8,0,0,0-8-8H32A16,16,0,0,0,16,72V184a16,16,0,0,0,16,16H49a32,32,0,0,0,62,0h50a32,32,0,0,0,62,0h17a16,16,0,0,0,16-16V120A7.94,7.94,0,0,0,255.42,117ZM192,88h34.58l9.6,24H192ZM32,72H176v64H32ZM80,208a16,16,0,1,1,16-16A16,16,0,0,1,80,208Zm81-24H111a32,32,0,0,0-62,0H32V152H176v12.31A32.11,32.11,0,0,0,161,184Zm31,24a16,16,0,1,1,16-16A16,16,0,0,1,192,208Zm48-24H223a32.06,32.06,0,0,0-31-24V128h48Z"/></svg><strong>Transportation</strong><span>Fleet incidents. DOT compliance. Driver safety programmes.</span></div></li>
+      <li><div><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></svg><strong>Utilities</strong><span>Critical infrastructure. Public safety. Regulatory scrutiny.</span></div></li>
+    </ul>
+  </div>
+</section>
 
-<!-- Slide 9: Pricing -->
-<div class="slide">
-    <div class="slide-header">
-        <picture><source srcset="../assets/brand/logo-horizontal.svg" type="image/webp"><img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="logo"></picture>
-        <span class="slide-number">09</span>
+<!-- 11 · founder: text only, no photograph (Devon's decision, 30 Sep 2026) -->
+<section class="slide" id="s11" aria-labelledby="s11-h">
+  <div class="wrap slide__in">
+    <p class="slide__no"><b>11</b><span>Founder</span></p>
+    <div class="founder">
+      <div class="founder__txt">
+        <h2 id="s11-h">Built by someone who has been there.</h2>
+        <blockquote class="deck-quote"><p>&ldquo;I spent 15 years investigating incidents in gold mines across Africa. I built InvestigatePro because I was tired of watching teams struggle with the same problems I faced.&rdquo;</p><footer>Devon Turner, founder and CEO</footer></blockquote>
+      </div>
+      <div class="founder__side">
+        <dl class="founder__facts">
+          <div><dt>Experience</dt><dd>15+ years in mining safety, Africa and the Middle East</dd></div>
+          <div><dt>Role</dt><dd>Head of Safety, Africa and Middle East, Barrick Mining</dd></div>
+          <div><dt>Education</dt><dd>MBA, Edinburgh Business School</dd></div>
+          <div><dt>Method</dt><dd>Lean Six Sigma Black Belt</dd></div>
+          <div><dt>Investigations</dt><dd>Led investigations for major incidents, including fatalities</dd></div>
+        </dl>
+        <p class="deck-fit"><strong>Founder-market fit.</strong> Not a software company learning about safety. A safety professional building software.</p>
+      </div>
     </div>
-    <div class="content">
-        <span class="badge">PRICING</span>
-        <h2>Simple, <span class="highlight">Transparent</span> Pricing</h2>
-        
-        <div class="pricing-grid" style="margin-top: 40px;">
-            <div class="pricing-card">
-                <h4>Starter</h4>
-                <div class="price">$149</div>
-                <div class="price-period">/month</div>
-                <ul class="pricing-features">
-                    <li>Up to 5 users</li>
-                    <li>Full ICAM methodology</li>
-                    <li>Evidence management</li>
-                    <li>Board-grade reports</li>
-                    <li>Email support</li>
-                </ul>
-            </div>
-            <div class="pricing-card featured">
-                <h4>Professional</h4>
-                <div class="price">$349</div>
-                <div class="price-period">/month</div>
-                <ul class="pricing-features">
-                    <li>Up to 20 users</li>
-                    <li>AI Root Cause Coach</li>
-                    <li>PEEPO + 5-Whys</li>
-                    <li>Advanced analytics</li>
-                    <li>Priority support</li>
-                </ul>
-            </div>
-            <div class="pricing-card">
-                <h4>Business</h4>
-                <div class="price">$749</div>
-                <div class="price-period">/month</div>
-                <ul class="pricing-features">
-                    <li>Up to 100 users</li>
-                    <li>SSO / SAML</li>
-                    <li>Scoped data exchange</li>
-                    <li>Mobile field capture (in build)</li>
-                    <li>Dedicated success manager</li>
-                </ul>
-            </div>
-            <div class="pricing-card">
-                <h4>Enterprise</h4>
-                <div class="price">from $1,500</div>
-                <div class="price-period">/month</div>
-                <ul class="pricing-features">
-                    <li>100+ users / multi-site</li>
-                    <li>White-labeling</li>
-                    <li>On-premise option</li>
-                    <li>SLA guarantee</li>
-                    <li>Account manager</li>
-                </ul>
-            </div>
-        </div>
-        
-        <p style="text-align: center; margin-top: 32px; font-size: 16px;">14-day free trial • No credit card required • Founding customers: 50% off year 1</p>
-    </div>
-    <div class="slide-footer">
-        <span class="footer-text">investigatepro.app</span>
-        <span class="footer-text">Confidential</span>
-    </div>
-</div>
+  </div>
+</section>
 
-<!-- Slide 10: Industries -->
-<div class="slide">
-    <div class="slide-header">
-        <picture><source srcset="../assets/brand/logo-horizontal.svg" type="image/webp"><img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="logo"></picture>
-        <span class="slide-number">10</span>
+<!-- 12 · next steps -->
+<section class="slide slide--end" id="s12" aria-labelledby="s12-h">
+  <div class="wrap slide__in">
+    <p class="slide__no"><b>12</b><span>Next steps</span></p>
+    <h2 id="s12-h">Ready to investigate smarter?</h2>
+    <ol class="steps-line steps-line--3">
+      <li><h3>Start a 14-day trial</h3><p>Self-serve on Starter or Professional. Run a real case.</p></li>
+      <li><h3>Book a demo</h3><p>15 minutes on the method, or 30 minutes for your team&rsquo;s questions.</p></li>
+      <li><h3>Go live</h3><p>Implementation in days, not months. Start investigating.</p></li>
+    </ol>
+    <div class="row">
+      <a class="btn btn--primary" href="https://app.investigatepro.app/signup">Start a 14-day trial <svg class="i i--nudge" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+      <a class="btn btn--ghost" href="https://cal.com/investigatepro/15min">Book a 15-minute demo</a>
+      <a class="btn btn--ghost" href="https://cal.com/investigatepro/30min">Book a 30-minute call</a>
     </div>
-    <div class="content">
-        <span class="badge">INDUSTRIES</span>
-        <h2>Built for <span class="highlight">High-Risk</span> Industries</h2>
-        
-        <div class="content-grid-3" style="margin-top: 40px;">
-            <div class="card" style="text-align: center;">
-                <div class="card-icon">⛏️</div>
-                <h4>Mining & Resources</h4>
-                <p style="font-size: 14px;">Highest pSIF rates. Built by a mining safety veteran with 15+ years experience.</p>
-            </div>
-            <div class="card" style="text-align: center;">
-                <div class="card-icon">🛢️</div>
-                <h4>Oil & Gas</h4>
-                <p style="font-size: 14px;">Complex operations. High-consequence environments. Process safety focus.</p>
-            </div>
-            <div class="card" style="text-align: center;">
-                <div class="card-icon">🏗️</div>
-                <h4>Construction</h4>
-                <p style="font-size: 14px;">High incident rates. Fragmented workforce. Multi-contractor coordination.</p>
-            </div>
-            <div class="card" style="text-align: center;">
-                <div class="card-icon">🏭</div>
-                <h4>Manufacturing</h4>
-                <p style="font-size: 14px;">Machinery hazards. Process safety. Quality and safety integration.</p>
-            </div>
-            <div class="card" style="text-align: center;">
-                <div class="card-icon">🚛</div>
-                <h4>Transportation</h4>
-                <p style="font-size: 14px;">Fleet incidents. DOT compliance. Driver safety programs.</p>
-            </div>
-            <div class="card" style="text-align: center;">
-                <div class="card-icon">⚡</div>
-                <h4>Utilities</h4>
-                <p style="font-size: 14px;">Critical infrastructure. Public safety. Regulatory scrutiny.</p>
-            </div>
-        </div>
-    </div>
-    <div class="slide-footer">
-        <span class="footer-text">investigatepro.app</span>
-        <span class="footer-text">Confidential</span>
-    </div>
-</div>
+    <p class="muted small">investigatepro.app &middot; <a href="mailto:hello@investigatepro.app">hello@investigatepro.app</a></p>
+  </div>
+</section>
 
-<!-- Slide 11: Founder -->
-<div class="slide">
-    <div class="slide-header">
-        <picture><source srcset="../assets/brand/logo-horizontal.svg" type="image/webp"><img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="logo"></picture>
-        <span class="slide-number">11</span>
-    </div>
-    <div class="content">
-        <span class="badge">FOUNDER</span>
-        <h2>Built by Someone Who's <span class="highlight">Been There</span></h2>
-        
-        <div class="content-grid" style="margin-top: 40px;">
-            <div>
-                <div class="quote">
-                    "I spent 15 years investigating incidents in gold mines across Africa. I built InvestigatePro because I was tired of watching teams struggle with the same problems I faced."
-                </div>
-                <h3 style="margin-top: 32px;">Devon Turner</h3>
-                <p style="color: var(--cyan-500); font-size: 20px; margin-bottom: 16px;">Founder & CEO</p>
-                <ul>
-                    <li>15+ years in mining safety (Africa, Middle East)</li>
-                    <li>Head of Safety - Africa & Middle East, Barrick Mining</li>
-                    <li>MBA, Edinburgh Business School</li>
-                    <li>Lean Six Sigma Black Belt</li>
-                    <li>Led investigations for major incidents including fatalities</li>
-                </ul>
-            </div>
-            <div style="display: flex; align-items: center; justify-content: center;">
-                <div class="card card-highlight" style="text-align: center; padding: 48px;">
-                    <div style="font-size: 72px; margin-bottom: 24px;">🎯</div>
-                    <h3>Founder-Market Fit</h3>
-                    <p style="font-size: 16px;">Not a software company learning about safety.<br><strong>A safety professional building software.</strong></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="slide-footer">
-        <span class="footer-text">investigatepro.app</span>
-        <span class="footer-text">Confidential</span>
-    </div>
-</div>
+</main>
 
-<!-- Slide 12: Next Steps -->
-<div class="slide">
-    <div class="slide-header">
-        <picture><source srcset="../assets/brand/logo-horizontal.svg" type="image/webp"><img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="logo"></picture>
-        <span class="slide-number">12</span>
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <div class="foot__brand">
+      <a href="/index.html" aria-label="InvestigatePro home"><img src="/assets/img/logo-horizontal-white.svg" alt="InvestigatePro" width="168" height="34"></a>
+      <p class="foot__tag">Every incident, understood.</p>
+      <p class="foot__by">Built by Devon Turner, who spent fifteen years leading mining safety across Africa and the Middle East, with an ICAM specialism.</p>
+      <button class="motion-toggle" type="button" aria-pressed="false"><span class="motion-toggle__track" aria-hidden="true"></span>Reduce motion</button>
     </div>
-    <div class="content" style="text-align: center;">
-        <span class="badge">NEXT STEPS</span>
-        <h2>Ready to Investigate <span class="highlight">Smarter</span>?</h2>
-        
-        <div class="content-grid-3" style="margin-top: 60px; max-width: 900px; margin-left: auto; margin-right: auto;">
-            <div class="card" style="text-align: center;">
-                <div style="font-size: 48px; color: var(--cyan-500); font-weight: 800;">1</div>
-                <h4 style="margin-top: 16px;">Book a Demo</h4>
-                <p style="font-size: 14px;">14 days, no credit card required. See it in action.</p>
-            </div>
-            <div class="card" style="text-align: center;">
-                <div style="font-size: 48px; color: var(--cyan-500); font-weight: 800;">2</div>
-                <h4 style="margin-top: 16px;">Book a Demo</h4>
-                <p style="font-size: 14px;">30-minute walkthrough with our team. See your use case.</p>
-            </div>
-            <div class="card" style="text-align: center;">
-                <div style="font-size: 48px; color: var(--cyan-500); font-weight: 800;">3</div>
-                <h4 style="margin-top: 16px;">Go Live</h4>
-                <p style="font-size: 14px;">Implementation in days, not months. Start investigating.</p>
-            </div>
-        </div>
-
-        <a href="https://investigatepro.app" class="cta" style="margin-top: 60px;">
-            Start Your Free Trial →
-        </a>
-
-        <div style="margin-top: 60px;">
-            <p style="font-size: 24px; color: var(--white);">investigatepro.app</p>
-            <p style="font-size: 16px; color: var(--gray-500); margin-top: 8px;">hello@investigatepro.app</p>
-        </div>
+    <div>
+      <h2>Product</h2>
+      <ul>
+        <li><a href="/platform.html">Platform</a></li>
+        <li><a href="/pricing.html">Pricing</a></li>
+        <li><a href="/demo.html">Book a demo</a></li>
+        <li><a href="/security.html">Security</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+        <li><a href="/changelog.html">Changelog</a></li>
+        <li><a href="/apps/index.html">Apps</a><span class="tag-inbuild">in build</span></li>
+      </ul>
     </div>
-    <div class="slide-footer">
-        <span class="footer-text">investigatepro.app</span>
-        <span class="footer-text">Confidential</span>
+    <div>
+      <h2>Free tools</h2>
+      <ul>
+        <li><a href="/resources.html">All free tools</a></li>
+        <li><a href="/checklist.html">ICAM checklist</a></li>
+        <li><a href="/icam-toolkit.html">ICAM toolkit</a></li>
+        <li><a href="/peepo-chart-builder.html">PEEPO chart builder</a></li>
+        <li><a href="/5-whys-worksheet.html">5-Whys worksheet</a></li>
+        <li><a href="/state-of-incident-investigation-2026.html">State of Incident Investigation 2026</a></li>
+      </ul>
     </div>
-</div>
-
-<!-- Slide 13: Thank You -->
-<div class="slide title-slide">
-    <img src="../assets/brand/logo-horizontal.svg" alt="InvestigatePro" class="logo">
-    <h1>Thank <span class="highlight">You</span></h1>
-    <p class="subtitle">Questions?</p>
-    <div style="margin-top: 60px;">
-        <p style="font-size: 20px; color: var(--white);">investigatepro.app</p>
-        <p style="font-size: 16px; color: var(--gray-500); margin-top: 8px;">hello@investigatepro.app</p>
+    <div>
+      <h2>Industries</h2>
+      <ul>
+        <li><a href="/industries/mining-incident-investigation.html">Mining</a></li>
+        <li><a href="/industries/oil-gas-incident-management.html">Oil and gas</a></li>
+        <li><a href="/industries/manufacturing-root-cause-analysis.html">Manufacturing</a></li>
+        <li><a href="/industries/construction-safety-software.html">Construction</a></li>
+        <li><a href="/industries/engineering-incident-investigation.html">Engineering</a></li>
+      </ul>
     </div>
-</div>
+    <div>
+      <h2>Company</h2>
+      <ul>
+        <li><a href="/blog/index.html">Blog</a></li>
+        <li><a href="/status.html">Service notices</a></li>
+        <li><a href="mailto:hello@investigatepro.app">Contact: hello@investigatepro.app</a></li>
+        <li><a href="https://app.investigatepro.app/login">Login</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/terms.html">Terms</a></li>
+        <li><a href="/cookie.html">Cookies</a></li>
+        <li><a href="/dpa.html">DPA</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot__base">
+    <span>&copy; 2026 InvestigatePro. Find the causes. Fix the system.</span>
+    <span>Every incident, understood.</span>
+  </div>
+</footer>
 
 </body>
 </html>

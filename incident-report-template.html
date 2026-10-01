@@ -1,591 +1,256 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-GB" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Incident Investigation Report Template — Free Fillable | InvestigatePro</title>
-    <meta name="description" content="Free professional incident investigation report template. Fillable, printable, ICAM-aligned. Covers immediate causes, contributing factors, PEEPO analysis, corrective actions and sign-off. No registration required.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://investigatepro.app/incident-report-template.html">
-    <link rel="icon" type="image/png" href="/assets/brand/icon-color.svg">
-    <meta property="og:title" content="Free Incident Investigation Report Template — Fillable & Printable">
-    <meta property="og:description" content="ICAM-aligned investigation report. Fill online, print as PDF. Covers all phases from immediate cause to corrective action sign-off.">
-    <meta property="og:url" content="https://investigatepro.app/incident-report-template.html">
-    <meta property="og:type" content="website">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Incident investigation report template | Free and fillable | InvestigatePro</title>
+<meta name="description" content="An ICAM-aligned investigation report you fill in in the browser: details, description, immediate cause, contributing factors, causes, actions, lessons and sign-off. Print it or save it as a PDF.">
+<link rel="canonical" href="https://investigatepro.app/incident-report-template.html">
 
-    <script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Incident Investigation Report Template",
-    "description": "Free fillable incident investigation report template \u2014 ICAM-aligned, printable",
-    "url": "https://investigatepro.app/incident-report-template.html",
-    "applicationCategory": "BusinessApplication",
-    "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-    },
-    "creator": {
-        "@type": "Organization",
-        "name": "InvestigatePro",
-        "url": "https://investigatepro.app"
-    }
-}</script>
-
-    <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #F4F7F9; color: #37474F; min-height: 100vh; }
-
-        nav { background: #F4F7F9; border-bottom: 1px solid rgba(0,77,64,0.15); padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
-        .nav-logo { height: 36px; }
-        .nav-cta { background: #004D40; color: #FFFFFF; padding: 8px 18px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.875rem; }
-
-        .hero { text-align: center; padding: 60px 24px 44px; max-width: 700px; margin: 0 auto; }
-        .badge { display: inline-block; background: rgba(0,77,64,0.1); border: 1px solid rgba(0,77,64,0.3); color: #004D40; padding: 6px 16px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 18px; }
-        .hero h1 { font-size: 2.1rem; font-weight: 800; color: #112D3C; line-height: 1.25; margin-bottom: 14px; }
-        .hero h1 span { color: #004D40; }
-        .hero p { color: #5A6B76; font-size: 1rem; line-height: 1.7; margin-bottom: 28px; }
-        .chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-        .chip { background: rgba(17,45,60,0.04); border: 1px solid rgba(17,45,60,0.06); border-radius: 20px; padding: 5px 14px; font-size: 0.78rem; color: #5A6B76; }
-
-        /* GATE */
-        #gate { max-width: 460px; margin: 0 auto 60px; padding: 0 24px; }
-        .gate-card { background: #FFFFFF; border: 1px solid rgba(0,77,64,0.2); border-radius: 16px; padding: 34px; }
-        .gate-card h2 { font-size: 1.15rem; font-weight: 700; color: #112D3C; margin-bottom: 6px; }
-        .gate-card p { color: #5A6B76; font-size: 0.875rem; margin-bottom: 22px; }
-        .frow { display: flex; flex-direction: column; gap: 11px; }
-        .frow input { background: #F4F7F9; border: 1px solid rgba(17,45,60,0.084); border-radius: 8px; padding: 11px 15px; color: #112D3C; font-size: 0.925rem; outline: none; }
-        .frow input:focus { border-color: #004D40; }
-        .frow input::placeholder { color: #37474F; }
-        .btn-go { background: #004D40; color: #FFFFFF; border: none; border-radius: 8px; padding: 13px; font-weight: 700; font-size: 0.95rem; cursor: pointer; width: 100%; margin-top: 4px; }
-        .btn-go:hover { background: #5bc8d8; }
-        .btn-go:disabled { background: #4a5568; cursor: not-allowed; }
-        .gate-note { font-size: 0.73rem; color: #37474F; text-align: center; margin-top: 10px; }
-        #gate-err { color: #E53935; font-size: 0.83rem; margin-top: 6px; display: none; }
-
-        /* REPORT */
-        #report { display: none; max-width: 860px; margin: 0 auto; padding: 0 24px 80px; }
-
-        /* sections */
-        .section { background: #FFFFFF; border: 1px solid rgba(17,45,60,0.048); border-radius: 12px; padding: 26px; margin-bottom: 22px; }
-        .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid rgba(17,45,60,0.042); }
-        .section-num { background: #004D40; color: #FFFFFF; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; flex-shrink: 0; }
-        .section-header h2 { font-size: 1rem; font-weight: 700; color: #112D3C; }
-        .section-header p { font-size: 0.78rem; color: #5A6B76; margin-top: 2px; }
-
-        .field-grid { display: grid; gap: 14px; }
-        .field-grid.cols-2 { grid-template-columns: 1fr 1fr; }
-        .field-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
-        .field { display: flex; flex-direction: column; gap: 5px; }
-        label.fl { font-size: 0.78rem; font-weight: 600; color: #004D40; text-transform: uppercase; letter-spacing: 0.04em; }
-        input.fi, select.fi, textarea.fi { background: #F4F7F9; border: 1px solid rgba(17,45,60,0.06); border-radius: 7px; padding: 9px 12px; color: #112D3C; font-size: 0.9rem; outline: none; font-family: inherit; }
-        input.fi:focus, select.fi:focus, textarea.fi:focus { border-color: rgba(0,77,64,0.5); }
-        input.fi::placeholder, textarea.fi::placeholder { color: #2d3748; }
-        select.fi { cursor: pointer; }
-        select.fi option { background: #FFFFFF; }
-        textarea.fi { resize: vertical; }
-        textarea.fi.sm { min-height: 60px; }
-        textarea.fi.md { min-height: 90px; }
-        textarea.fi.lg { min-height: 120px; }
-
-        /* Severity badge */
-        .sev-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
-        .sev-btn { border: 2px solid rgba(17,45,60,0.06); border-radius: 8px; padding: 8px 16px; font-size: 0.83rem; font-weight: 600; cursor: pointer; background: transparent; transition: all 0.15s; color: #5A6B76; }
-        .sev-btn:hover { border-color: rgba(17,45,60,0.18); }
-        .sev-btn.active-low { background: rgba(16,185,129,0.15); border-color: #4CAF50; color: #9DD39F; }
-        .sev-btn.active-med { background: rgba(245,158,11,0.15); border-color: #FFB300; color: #FFB300; }
-        .sev-btn.active-high { background: rgba(239,68,68,0.15); border-color: #E53935; color: #EF9A9A; }
-        .sev-btn.active-crit { background: rgba(139,0,0,0.2); border-color: #E53935; color: #EF9A9A; }
-
-        /* Rows with +/- */
-        .row-list { display: flex; flex-direction: column; gap: 9px; margin-bottom: 10px; }
-        .row-item { display: flex; gap: 8px; align-items: flex-start; }
-        .row-item .row-num { background: rgba(0,77,64,0.1); color: #004D40; min-width: 26px; height: 26px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; margin-top: 8px; flex-shrink: 0; }
-        .row-item textarea { flex: 1; }
-        .btn-del { background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.2); color: #E53935; border-radius: 6px; padding: 5px 9px; cursor: pointer; font-size: 0.75rem; margin-top: 6px; flex-shrink: 0; }
-        .btn-del:hover { background: rgba(239,68,68,0.15); }
-        .btn-add { background: transparent; border: 1px dashed rgba(17,45,60,0.09); border-radius: 7px; padding: 8px 14px; color: #37474F; font-size: 0.83rem; cursor: pointer; width: 100%; transition: all 0.15s; }
-        .btn-add:hover { border-color: rgba(0,77,64,0.35); color: #004D40; }
-
-        /* PEEPO mini */
-        .peepo-mini { display: flex; flex-direction: column; gap: 14px; }
-        .pm-row { border-left: 3px solid; border-radius: 0 8px 8px 0; padding: 12px 14px; }
-        .pm-row.P1 { border-color: #2196F3; background: rgba(59,130,246,0.04); }
-        .pm-row.E1 { border-color: #9DD39F; background: rgba(16,185,129,0.04); }
-        .pm-row.E2 { border-color: #FFB300; background: rgba(245,158,11,0.04); }
-        .pm-row.P2 { border-color: #c4b5fd; background: rgba(139,92,246,0.04); }
-        .pm-row.O  { border-color: #EF9A9A; background: rgba(239,68,68,0.04); }
-        .pm-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
-        .pm-row.P1 .pm-label { color: #2196F3; }
-        .pm-row.E1 .pm-label { color: #9DD39F; }
-        .pm-row.E2 .pm-label { color: #FFB300; }
-        .pm-row.P2 .pm-label { color: #c4b5fd; }
-        .pm-row.O  .pm-label { color: #EF9A9A; }
-
-        /* Corrective actions table */
-        .ca-table { width: 100%; border-collapse: collapse; }
-        .ca-table th { background: #F4F7F9; padding: 9px 10px; text-align: left; font-size: 0.73rem; font-weight: 600; color: #004D40; text-transform: uppercase; letter-spacing: 0.04em; border-bottom: 1px solid rgba(17,45,60,0.048); }
-        .ca-table td { padding: 7px 8px; vertical-align: top; border-bottom: 1px solid rgba(17,45,60,0.04); }
-        .ca-table input, .ca-table textarea, .ca-table select { background: rgba(17,45,60,0.04); border: 1px solid rgba(17,45,60,0.048); border-radius: 6px; padding: 7px 9px; color: #112D3C; font-size: 0.85rem; width: 100%; outline: none; font-family: inherit; }
-        .ca-table input:focus, .ca-table textarea:focus, .ca-table select:focus { border-color: rgba(0,77,64,0.4); }
-        .ca-table input::placeholder, .ca-table textarea::placeholder { color: #2d3748; }
-        .ca-priority { border-radius: 5px; padding: 4px 8px; font-size: 0.75rem; font-weight: 700; border: none; cursor: pointer; }
-        .btn-add-ca { background: transparent; border: 1px dashed rgba(17,45,60,0.09); border-radius: 7px; padding: 8px 14px; color: #37474F; font-size: 0.83rem; cursor: pointer; width: 100%; margin-top: 10px; }
-        .btn-add-ca:hover { border-color: rgba(0,77,64,0.35); color: #004D40; }
-
-        /* Signoff */
-        .signoff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-        .sign-box { background: #F4F7F9; border: 1px solid rgba(17,45,60,0.048); border-radius: 8px; padding: 14px; }
-        .sign-box label { font-size: 0.73rem; font-weight: 600; color: #004D40; text-transform: uppercase; display: block; margin-bottom: 8px; }
-        .sign-box input { background: transparent; border: none; border-bottom: 1px solid rgba(17,45,60,0.09); width: 100%; color: #112D3C; font-size: 0.875rem; padding: 4px 0; outline: none; margin-bottom: 8px; display: block; }
-        .sign-line { border-top: 1px solid rgba(17,45,60,0.06); margin-top: 24px; padding-top: 8px; font-size: 0.72rem; color: #37474F; }
-
-        /* Actions bar */
-        .actions { display: flex; gap: 12px; flex-wrap: wrap; margin: 8px 0 24px; }
-        .btn-p { background: #004D40; color: #FFFFFF; border: none; border-radius: 8px; padding: 12px 22px; font-weight: 700; font-size: 0.9rem; cursor: pointer; }
-        .btn-p:hover { background: #5bc8d8; }
-        .btn-s { background: transparent; border: 1px solid rgba(17,45,60,0.12); color: #37474F; border-radius: 8px; padding: 12px 22px; font-weight: 600; font-size: 0.9rem; cursor: pointer; }
-        .btn-s:hover { border-color: rgba(0,77,64,0.5); color: #004D40; }
-
-        /* CTA */
-        .cta-box { background: linear-gradient(135deg, rgba(0,77,64,0.07), rgba(244,247,249,0)); border: 1px solid rgba(0,77,64,0.18); border-radius: 14px; padding: 30px; text-align: center; margin-top: 36px; }
-        .cta-box h3 { color: #112D3C; font-size: 1.1rem; margin-bottom: 8px; }
-        .cta-box p { color: #5A6B76; font-size: 0.875rem; margin-bottom: 18px; }
-        .cta-box a { display: inline-block; background: #004D40; color: #FFFFFF; padding: 11px 26px; border-radius: 8px; font-weight: 700; text-decoration: none; }
-
-        /* PRINT */
-        @media print {
-            nav, #gate, .actions, .btn-del, .btn-add, .btn-add-ca, .cta-box { display: none !important; }
-            body { background: #fff; color: #000; font-size: 11pt; }
-            .section { background: #fff !important; border: 1px solid #ccc !important; break-inside: avoid; margin-bottom: 14px; }
-            .section-header { border-bottom: 1px solid #ddd !important; }
-            .section-num { background: #F4F7F9 !important; }
-            input.fi, textarea.fi, select.fi, .ca-table input, .ca-table textarea, .ca-table select { border: none !important; border-bottom: 1px solid #ccc !important; background: transparent !important; color: #000 !important; }
-            .pm-row { background: #f9f9f9 !important; }
-            .ca-table th { background: #f0f0f0 !important; color: #000 !important; }
-            .ca-table input, .ca-table select { background: transparent !important; }
-            h1, h2, .section-header h2, label.fl, .pm-label, .section-header h2 { color: #000 !important; }
-            .sign-box { background: #f9f9f9 !important; border: 1px solid #ccc !important; }
-            .sign-box input { color: #000 !important; }
-        }
-
-        @media (max-width: 600px) {
-            .hero h1 { font-size: 1.65rem; }
-            .field-grid.cols-2, .field-grid.cols-3 { grid-template-columns: 1fr; }
-            .signoff-grid { grid-template-columns: 1fr; }
-            .ca-table { font-size: 0.8rem; }
-        }
-    </style>
-<link rel="stylesheet" href="/assets/css/ip2-chrome.css">
+<meta name="theme-color" content="#063A41">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="InvestigatePro">
+<meta property="og:title" content="Incident investigation report template | Free and fillable | InvestigatePro">
+<meta property="og:description" content="An ICAM-aligned investigation report you fill in in the browser: details, description, immediate cause, contributing factors, causes, actions, lessons and sign-off. Print it or save it as a PDF.">
+<meta property="og:url" content="https://investigatepro.app/incident-report-template.html">
+<meta property="og:image" content="https://investigatepro.app/assets/img/og-resources.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/montserrat-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/ip-next.css">
+<script>(function(){var h=document.documentElement,r=false;h.className=h.className.replace('no-js','js');try{r=localStorage.getItem('ip-reduce-motion')==='1'}catch(e){}if(!r&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){h.classList.add('motion-on')}else{h.classList.add('motion-off')}})();</script>
+<script src="/assets/ip-next.js" defer></script>
+<script src="/analytics.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Incident Investigation Report Template","description":"Fillable ICAM-aligned incident investigation report template","url":"https://investigatepro.app/incident-report-template.html","applicationCategory":"BusinessApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"InvestigatePro","url":"https://investigatepro.app"}}</script>
 </head>
-<body class="ip-pad">
-<!-- Site chrome: unified navigation -->
-<nav class="ip2-nav light" aria-label="Main">
-  <div class="ip2-nav-row">
-    <a href="/" class="ip2-logo" aria-label="InvestigatePro home"><img class="lgm" src="/assets/brand/logo-horizontal.svg" alt="InvestigatePro" width="826" height="168" decoding="async"></a>
-    <div class="ip2-links">
-      <a href="/platform.html">Platform</a><a href="/pricing.html">Pricing</a><a href="/resources.html" aria-current="page">Resources</a><a href="/blog/">Blog</a>
-      <a href="https://app.investigatepro.app/login" class="ip2-login">Login</a>
-      <a href="/#pilot" class="ip2-cta">Start a pilot</a>
-    </div>
-    <button class="mm-btn" aria-expanded="false" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
-  </div>
-  <div class="mm-panel">
-    <a href="/platform.html">Platform</a><a href="/pricing.html">Pricing</a><a href="/resources.html">Resources</a><a href="/blog/">Blog</a>
-    <a href="https://app.investigatepro.app/login" class="ip2-login-m">Login</a>
-    <a href="/#pilot" class="btn btn-primary">Start a pilot</a>
-    <a href="https://cal.com/investigatepro/15min" class="btn btn-outline">Book a 15-minute demo</a>
-  </div>
-</nav>
-
-
-<!-- HERO -->
-<div class="hero">
-    <div class="badge">Free Fillable Template</div>
-    <h1>Incident Investigation <span>Report Template</span></h1>
-    <p>A complete, ICAM-aligned investigation report you can fill in your browser, then print or save as PDF. Covers every phase from incident details to corrective action sign-off.</p>
-    <div class="chips">
-        <span class="chip">✓ Incident Details</span>
-        <span class="chip">✓ Immediate Cause</span>
-        <span class="chip">✓ PEEPO Analysis</span>
-        <span class="chip">✓ Absent Defences</span>
-        <span class="chip">✓ Corrective Actions</span>
-        <span class="chip">✓ Sign-off</span>
-        <span class="chip">✓ Printable PDF</span>
-    </div>
-</div>
-
-<!-- GATE -->
-<div id="gate">
-    <div class="gate-card">
-        <h2>Download Free Template</h2>
-        <p>Enter your work email to access the full fillable report template — no account required.</p>
-        <div class="frow">
-            <input type="text" id="g-name" placeholder="First name" autocomplete="given-name">
-            <input type="email" id="g-email" placeholder="Work email address" autocomplete="email">
-            <input type="text" id="g-company" placeholder="Company name" autocomplete="organization">
-            <button class="btn-go" id="btn-go" onclick="unlock()">Access Free Template →</button>
+<body class="page-tool">
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__logo" href="/index.html" aria-label="InvestigatePro home"><img src="/assets/img/logo-horizontal-white.svg" alt="InvestigatePro" width="152" height="31"></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="/platform.html">Platform</a>
+      <div class="nav__menu">
+        <button class="nav__menu-btn" type="button" aria-expanded="false" aria-controls="nav-industries">Industries <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg></button>
+        <div class="nav__panel" id="nav-industries">
+          <a href="/industries/mining-incident-investigation.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,152V136a96.37,96.37,0,0,0-64-90.51V40a16,16,0,0,0-16-16H112A16,16,0,0,0,96,40v5.49A96.37,96.37,0,0,0,32,136v16a16,16,0,0,0-16,16v24a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V168A16,16,0,0,0,224,152Zm-16-16v16H160V62.67A80.36,80.36,0,0,1,208,136ZM144,40V152H112V40ZM48,136A80.36,80.36,0,0,1,96,62.67V152H48Zm176,56H32V168H224v24Z"/></svg><strong>Mining</strong><span>Underground, open-cut, processing and contractors</span></a>
+          <a href="/industries/oil-gas-incident-management.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></svg><strong>Oil and gas</strong><span>Upstream, midstream and field services</span></a>
+          <a href="/industries/manufacturing-root-cause-analysis.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M116,176a8,8,0,0,1-8,8H80a8,8,0,0,1,0-16h28A8,8,0,0,1,116,176Zm60-8H148a8,8,0,0,0,0,16h28a8,8,0,0,0,0-16Zm64,48a8,8,0,0,1-8,8H24a8,8,0,0,1,0-16h8V88a8,8,0,0,1,12.8-6.4L96,120V88a8,8,0,0,1,12.8-6.4l38.74,29.05L159.1,29.74A16.08,16.08,0,0,1,174.94,16h18.12A16.08,16.08,0,0,1,208.9,29.74l15,105.13s.08.78.08,1.13v72h8A8,8,0,0,1,240,216Zm-77.86-94.4,8.53,6.4h36.11L193.06,32H174.94ZM48,208H208V144H168a8,8,0,0,1-4.8-1.6l-14.4-10.8,0,0L112,104v32a8,8,0,0,1-12.8,6.4L48,104Z"/></svg><strong>Manufacturing</strong><span>Plant, maintenance and process safety</span></a>
+          <a href="/industries/construction-safety-software.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M230.91,172A8,8,0,0,1,228,182.91l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,36,169.09l92,53.65,92-53.65A8,8,0,0,1,230.91,172ZM220,121.09l-92,53.65L36,121.09A8,8,0,0,0,28,134.91l96,56a8,8,0,0,0,8.06,0l96-56A8,8,0,1,0,220,121.09ZM24,80a8,8,0,0,1,4-6.91l96-56a8,8,0,0,1,8.06,0l96,56a8,8,0,0,1,0,13.82l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,24,80Zm23.88,0L128,126.74,208.12,80,128,33.26Z"/></svg><strong>Construction</strong><span>Principal contractors and subcontractors</span></a>
+          <a href="/industries/engineering-incident-investigation.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M160,112h48a16,16,0,0,0,16-16V48a16,16,0,0,0-16-16H160a16,16,0,0,0-16,16V64H128a24,24,0,0,0-24,24v32H72v-8A16,16,0,0,0,56,96H24A16,16,0,0,0,8,112v32a16,16,0,0,0,16,16H56a16,16,0,0,0,16-16v-8h32v32a24,24,0,0,0,24,24h16v16a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V160a16,16,0,0,0-16-16H160a16,16,0,0,0-16,16v16H128a8,8,0,0,1-8-8V88a8,8,0,0,1,8-8h16V96A16,16,0,0,0,160,112ZM56,144H24V112H56v32Zm104,16h48v48H160Zm0-112h48V96H160Z"/></svg><strong>Engineering</strong><span>Projects, commissioning and field work</span></a>
         </div>
-        <p id="gate-err">Please enter your name, a valid email, and company.</p>
-        <p class="gate-note">No spam. Unsubscribe anytime.</p>
-    </div>
-</div>
-
-<!-- REPORT TEMPLATE -->
-<div id="report">
-
-    <div class="actions">
-        <button class="btn-p" onclick="window.print()">🖨 Print / Save as PDF</button>
-        <button class="btn-s" onclick="clearReport()">🗑 Clear All Fields</button>
-    </div>
-
-    <!-- 1. INCIDENT DETAILS -->
-    <div class="section">
-        <div class="section-header">
-            <div class="section-num">1</div>
-            <div><h2>Incident Details</h2><p>Basic classification and location information</p></div>
-        </div>
-        <div class="field-grid cols-2">
-            <div class="field"><label class="fl">Report Number</label><input class="fi" type="text" placeholder="e.g. INV-2026-047"></div>
-            <div class="field"><label class="fl">Date of Incident</label><input class="fi" type="date" id="r-date"></div>
-            <div class="field"><label class="fl">Time of Incident</label><input class="fi" type="time"></div>
-            <div class="field"><label class="fl">Date Reported</label><input class="fi" type="date"></div>
-            <div class="field"><label class="fl">Location / Site</label><input class="fi" type="text" placeholder="e.g. Open pit, Crusher area"></div>
-            <div class="field"><label class="fl">Department / Section</label><input class="fi" type="text" placeholder="e.g. Mining, Maintenance"></div>
-        </div>
-        <div style="margin-top:14px;">
-            <label class="fl" style="display:block;margin-bottom:8px;">Severity Classification</label>
-            <div class="sev-row" id="sev-row">
-                <button class="sev-btn" onclick="setSev(this,'active-low')">🟢 Low (First Aid / Near Miss)</button>
-                <button class="sev-btn" onclick="setSev(this,'active-med')">🟡 Medium (Medical Treatment)</button>
-                <button class="sev-btn" onclick="setSev(this,'active-high')">🔴 High (Lost Time / Serious)</button>
-                <button class="sev-btn" onclick="setSev(this,'active-crit')">⚫ Critical (Fatality / pSIF)</button>
-            </div>
-        </div>
-        <div class="field-grid" style="margin-top:14px;">
-            <div class="field"><label class="fl">Type of Incident</label>
-                <select class="fi">
-                    <option value="">Select type…</option>
-                    <option>Struck by / contact with object</option>
-                    <option>Pedestrian-vehicle interaction</option>
-                    <option>Fall from height</option>
-                    <option>Slip, trip or fall on same level</option>
-                    <option>Caught in / between</option>
-                    <option>Electrical contact</option>
-                    <option>Hazardous substance exposure</option>
-                    <option>Explosion / fire</option>
-                    <option>Ground control / structural</option>
-                    <option>Ergonomic / musculoskeletal</option>
-                    <option>Environmental release</option>
-                    <option>Near miss — high potential</option>
-                    <option>Other</option>
-                </select>
-            </div>
-        </div>
-        <div class="field-grid" style="margin-top:14px;">
-            <div class="field"><label class="fl">Personnel Involved (names, roles)</label><textarea class="fi sm" placeholder="List all involved parties and their roles…"></textarea></div>
-        </div>
-    </div>
-
-    <!-- 2. INCIDENT DESCRIPTION -->
-    <div class="section">
-        <div class="section-header">
-            <div class="section-num">2</div>
-            <div><h2>Incident Description</h2><p>What happened — factual, chronological, no conclusions</p></div>
-        </div>
-        <div class="field-grid">
-            <div class="field"><label class="fl">Narrative Description</label><textarea class="fi lg" placeholder="Describe exactly what happened, in chronological order. State facts only — avoid assigning blame or drawing conclusions at this stage."></textarea></div>
-            <div class="field"><label class="fl">Activity Being Performed</label><textarea class="fi sm" placeholder="What specific task was being carried out at the time?"></textarea></div>
-            <div class="field"><label class="fl">Environmental / Site Conditions</label><textarea class="fi sm" placeholder="Weather, lighting, shift timing, noise levels, housekeeping…"></textarea></div>
-        </div>
-    </div>
-
-    <!-- 3. IMMEDIATE CAUSE -->
-    <div class="section">
-        <div class="section-header">
-            <div class="section-num">3</div>
-            <div><h2>Immediate Cause</h2><p>The direct action or condition that caused harm — NOT the root cause</p></div>
-        </div>
-        <div class="field-grid">
-            <div class="field"><label class="fl">Immediate Cause (what directly caused the harm?)</label><textarea class="fi md" placeholder="e.g. Worker's hand contacted unguarded rotating shaft — this is the immediate cause, not the root cause."></textarea></div>
-        </div>
-        <div style="margin-top:14px;">
-            <label class="fl" style="display:block;margin-bottom:10px;">Absent or Failed Defences</label>
-            <p style="color:#5A6B76;font-size:0.78rem;margin-bottom:10px;">Barriers or controls that should have prevented harm but were absent, failed, or bypassed.</p>
-            <div class="row-list" id="defs-list"></div>
-            <button class="btn-add" onclick="addRow('defs-list','Describe the absent or failed defence…')">+ Add defence</button>
-        </div>
-    </div>
-
-    <!-- 4. PEEPO CONTRIBUTING FACTORS -->
-    <div class="section">
-        <div class="section-header">
-            <div class="section-num">4</div>
-            <div><h2>Contributing Factors (PEEPO)</h2><p>Conditions that enabled the incident — the full causal picture</p></div>
-        </div>
-        <div class="peepo-mini">
-            <div class="pm-row P1">
-                <div class="pm-label">P — People</div>
-                <textarea class="fi sm" placeholder="Fatigue, skill gaps, communication failures, risk perception, distraction, physical condition…"></textarea>
-            </div>
-            <div class="pm-row E1">
-                <div class="pm-label">E — Environment</div>
-                <textarea class="fi sm" placeholder="Lighting, noise, weather, housekeeping, workspace layout, production pressure culture…"></textarea>
-            </div>
-            <div class="pm-row E2">
-                <div class="pm-label">E — Equipment</div>
-                <textarea class="fi sm" placeholder="Design flaws, deferred maintenance, PPE gaps, safety device failures, alarm fatigue…"></textarea>
-            </div>
-            <div class="pm-row P2">
-                <div class="pm-label">P — Procedures</div>
-                <textarea class="fi sm" placeholder="Missing, outdated, impractical or unfollowed procedures; PTW/isolation failures; absent risk assessment…"></textarea>
-            </div>
-            <div class="pm-row O">
-                <div class="pm-label">O — Organization</div>
-                <textarea class="fi md" placeholder="Supervision gaps, training system failures, Management of Change, incompatible goals, contractor management, resource constraints, leadership failures…"></textarea>
-            </div>
-        </div>
-    </div>
-
-    <!-- 5. ROOT CAUSES -->
-    <div class="section">
-        <div class="section-header">
-            <div class="section-num">5</div>
-            <div><h2>Root Causes</h2><p>Underlying organizational or systemic failures — if fixed, would prevent recurrence</p></div>
-        </div>
-        <p style="color:#5A6B76;font-size:0.8rem;margin-bottom:14px;">Root causes are systemic — typically management systems, organizational culture, resource constraints, or design failures. <strong style="color:#5A6B76;">"Human error" is not a root cause.</strong></p>
-        <div class="row-list" id="roots-list"></div>
-        <button class="btn-add" onclick="addRow('roots-list','Describe the root cause and the organizational system that failed…')">+ Add root cause</button>
-    </div>
-
-    <!-- 6. CORRECTIVE ACTIONS -->
-    <div class="section">
-        <div class="section-header">
-            <div class="section-num">6</div>
-            <div><h2>Corrective Actions</h2><p>What will be done, by whom, and by when</p></div>
-        </div>
-        <p style="color:#5A6B76;font-size:0.8rem;margin-bottom:14px;">Prioritize elimination and engineering controls over administrative and PPE. Every root cause should have at least one corrective action.</p>
-        <div style="overflow-x:auto;">
-        <table class="ca-table" id="ca-table">
-            <thead>
-                <tr>
-                    <th style="width:35%;">Action Description</th>
-                    <th style="width:18%;">Responsible Person</th>
-                    <th style="width:13%;">Due Date</th>
-                    <th style="width:12%;">Priority</th>
-                    <th style="width:15%;">Status</th>
-                    <th style="width:7%;"></th>
-                </tr>
-            </thead>
-            <tbody id="ca-body">
-            </tbody>
-        </table>
-        </div>
-        <button class="btn-add-ca" onclick="addCARow()">+ Add corrective action</button>
-    </div>
-
-    <!-- 7. LESSONS LEARNED -->
-    <div class="section">
-        <div class="section-header">
-            <div class="section-num">7</div>
-            <div><h2>Lessons Learned</h2><p>Key learnings to share with the broader organization</p></div>
-        </div>
-        <div class="field-grid">
-            <div class="field"><label class="fl">Key Lessons (for sharing across teams / sites)</label><textarea class="fi lg" placeholder="What are the most important things others should know from this investigation? What conditions made this incident possible — and where else might they exist?"></textarea></div>
-            <div class="field"><label class="fl">Similar Incidents / Hazards at Other Locations</label><textarea class="fi sm" placeholder="Are there other sites or areas where the same contributing factors may exist?"></textarea></div>
-        </div>
-    </div>
-
-    <!-- 8. SIGN-OFF -->
-    <div class="section">
-        <div class="section-header">
-            <div class="section-num">8</div>
-            <div><h2>Sign-Off</h2><p>Investigation team authorization</p></div>
-        </div>
-        <div class="signoff-grid">
-            <div class="sign-box">
-                <label>Lead Investigator</label>
-                <input type="text" placeholder="Full name">
-                <input type="text" placeholder="Title / Role">
-                <input type="date">
-                <div class="sign-line">Signature: ___________________________</div>
-            </div>
-            <div class="sign-box">
-                <label>Site Manager / Approver</label>
-                <input type="text" placeholder="Full name">
-                <input type="text" placeholder="Title / Role">
-                <input type="date">
-                <div class="sign-line">Signature: ___________________________</div>
-            </div>
-            <div class="sign-box">
-                <label>Safety Manager / HSE</label>
-                <input type="text" placeholder="Full name">
-                <input type="text" placeholder="Title / Role">
-                <input type="date">
-                <div class="sign-line">Signature: ___________________________</div>
-            </div>
-            <div class="sign-box">
-                <label>Management Representative</label>
-                <input type="text" placeholder="Full name">
-                <input type="text" placeholder="Title / Role">
-                <input type="date">
-                <div class="sign-line">Signature: ___________________________</div>
-            </div>
-        </div>
-        <div class="field-grid" style="margin-top:16px;">
-            <div class="field"><label class="fl">Corrective Action Verification Date</label><input class="fi" type="date" placeholder="Date all corrective actions verified complete"></div>
-        </div>
-    </div>
-
-    <div class="actions">
-        <button class="btn-p" onclick="window.print()">🖨 Print / Save as PDF</button>
-    </div>
-
-    <div class="cta-box">
-        <h3>Need to run investigations at scale?</h3>
-        <p>InvestigatePro gives your whole team a structured, ICAM-aligned investigation platform — with AI coaching, automated report generation, corrective action tracking, and trend analysis across incidents.</p>
-        <a href="/#demo">Book a Free Demo →</a>
-    </div>
-
-</div><!-- /report -->
-
-
-
-<script>
-// ===== GATE =====
-function unlock() {
-    const name = document.getElementById('g-name').value.trim();
-    const email = document.getElementById('g-email').value.trim();
-    const company = document.getElementById('g-company').value.trim();
-    const err = document.getElementById('gate-err');
-    const btn = document.getElementById('btn-go');
-    if (!name || !company || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        err.style.display = 'block'; return;
-    }
-    err.style.display = 'none';
-    btn.disabled = true; btn.textContent = 'Loading…';
-    fetch('https://api.investigatepro.app/api/leads/capture', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ first_name: name, email, company, source: 'incident_report_template', lead_magnet: 'incident_report_template' })
-    }).catch(() => {});
-    setTimeout(() => {
-        document.getElementById('gate').style.display = 'none';
-        document.getElementById('report').style.display = 'block';
-        document.getElementById('r-date').value = new Date().toISOString().split('T')[0];
-        // pre-add rows
-        addRow('defs-list','');
-        addRow('roots-list','');
-        addCARow(); addCARow(); addCARow();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 500);
-}
-['g-name','g-email','g-company'].forEach(id => {
-    document.getElementById(id)?.addEventListener('keypress', e => { if(e.key==='Enter') unlock(); });
-});
-
-// ===== SEVERITY =====
-function setSev(btn, cls) {
-    document.querySelectorAll('.sev-btn').forEach(b => b.className = 'sev-btn');
-    btn.classList.add(cls);
-}
-
-// ===== DYNAMIC ROWS =====
-let rowCounters = {};
-function addRow(listId, placeholder) {
-    rowCounters[listId] = (rowCounters[listId] || 0) + 1;
-    const list = document.getElementById(listId);
-    const div = document.createElement('div');
-    div.className = 'row-item';
-    div.innerHTML = `
-        <div class="row-num">${rowCounters[listId]}</div>
-        <textarea class="fi sm" style="flex:1" placeholder="${placeholder}"></textarea>
-        <button class="btn-del" onclick="removeRow(this,'${listId}')">✕</button>`;
-    list.appendChild(div);
-}
-function removeRow(btn, listId) {
-    btn.parentElement.remove();
-    // Renumber
-    document.querySelectorAll('#' + listId + ' .row-num').forEach((el, i) => el.textContent = i+1);
-    rowCounters[listId] = document.querySelectorAll('#' + listId + ' .row-item').length;
-}
-
-// ===== CORRECTIVE ACTIONS =====
-let caCount = 0;
-function addCARow() {
-    caCount++;
-    const tbody = document.getElementById('ca-body');
-    const tr = document.createElement('tr');
-    tr.innerHTML = `
-        <td><textarea placeholder="Describe the action…" style="min-height:52px;"></textarea></td>
-        <td><input type="text" placeholder="Name / Role"></td>
-        <td><input type="date"></td>
-        <td>
-            <select>
-                <option value="P1">🔴 P1 — Immediate</option>
-                <option value="P2" selected>🟡 P2 — Short-term</option>
-                <option value="P3">🟢 P3 — Long-term</option>
-            </select>
-        </td>
-        <td>
-            <select>
-                <option>Open</option>
-                <option>In Progress</option>
-                <option>Complete</option>
-                <option>Verified</option>
-            </select>
-        </td>
-        <td style="text-align:center;"><button class="btn-del" onclick="this.closest('tr').remove()">✕</button></td>`;
-    tbody.appendChild(tr);
-}
-
-// ===== CLEAR =====
-function clearReport() {
-    if (!confirm('Clear all fields? This cannot be undone.')) return;
-    document.querySelectorAll('#report input, #report textarea, #report select').forEach(el => {
-        if (el.tagName === 'SELECT') el.selectedIndex = 0;
-        else el.value = '';
-    });
-    document.querySelectorAll('.sev-btn').forEach(b => b.className = 'sev-btn');
-    document.getElementById('defs-list').innerHTML = '';
-    document.getElementById('roots-list').innerHTML = '';
-    document.getElementById('ca-body').innerHTML = '';
-    rowCounters = {}; caCount = 0;
-    addRow('defs-list',''); addRow('roots-list','');
-    addCARow(); addCARow(); addCARow();
-}
-</script>
-<footer class="ip2-footer">
-  <div class="ip2-wrap">
-    <div class="cols">
-      <div style="display:flex;flex-direction:column;gap:16px">
-        <a href="/" class="ip2-logo" aria-label="InvestigatePro home"><img class="lgm" src="/assets/brand/logo-horizontal-white.svg" alt="InvestigatePro" width="826" height="168" decoding="async"></a>
-        <p style="max-width:250px;font-size:13px;line-height:1.6">Structured, evidence-led ICAM investigation with an AI coach on every case.</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="ip2-chip">EU-hosted &amp; isolated</span><span class="ip2-chip">GDPR compliant</span></div>
       </div>
-      <div><h4>Product</h4><ul>
-        <li><a href="/platform.html">Platform</a></li><li><a href="/pricing.html">Pricing</a></li><li><a href="/demo.html">Book a demo</a></li>
-        <li><a href="/apps/">Apps</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/security.html">Security</a></li><li><a href="/changelog.html">Changelog</a></li>
-      </ul></div>
-      <div><h4>Resources</h4><ul>
-        <li><a href="/resources.html">All free tools</a></li><li><a href="/checklist.html">ICAM checklist</a></li><li><a href="/icam-toolkit.html">ICAM toolkit</a></li>
-        <li><a href="/peepo-chart-builder.html">PEEPO chart builder</a></li><li><a href="/5-whys-worksheet.html">5-Whys worksheet</a></li><li><a href="/state-of-incident-investigation-2026.html">State of Incident Investigation</a></li>
-      </ul></div>
-      <div><h4>Industries</h4><ul>
-        <li><a href="/industries/mining-incident-investigation.html">Mining</a></li><li><a href="/industries/oil-gas-incident-management.html">Oil &amp; gas</a></li>
-        <li><a href="/industries/manufacturing-root-cause-analysis.html">Manufacturing</a></li><li><a href="/industries/construction-safety-software.html">Construction</a></li>
-        <li><a href="/industries/engineering-incident-investigation.html">Engineering</a></li>
-      </ul></div>
-      <div><h4>Company</h4><ul>
-        <li><a href="/blog/">Blog</a></li><li><a href="/status.html">Service notices</a></li><li><a href="mailto:hello@investigatepro.app">Contact</a></li><li><a href="https://app.investigatepro.app/login">Login</a></li>
-        <li style="margin-top:10px"><a href="/privacy.html">Privacy</a></li><li><a href="/terms.html">Terms</a></li><li><a href="/cookie.html">Cookies</a></li><li><a href="/dpa.html">DPA</a></li>
-      </ul></div>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/resources.html" aria-current="page">Resources</a>
+      <a href="/blog/index.html">Blog</a>
+    </nav>
+    <div class="nav__actions">
+      <a class="nav__login" href="https://app.investigatepro.app/login">Login</a>
+      <a class="btn btn--primary btn--sm" href="https://app.investigatepro.app/signup">Start a 14-day trial</a>
+      <button class="nav__burger" type="button" aria-expanded="false" aria-controls="mmenu" aria-label="Open menu"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></svg></button>
     </div>
-    <p class="accountability">Every suggestion carries its source, and the report goes out attributed to the lead investigator. Built by Devon Turner — fifteen years leading mining safety across Africa and the Middle East, with an ICAM specialism.</p>
-    <p style="margin-top:18px;font-size:12px;color:rgba(159,184,194,.7)">© 2026 InvestigatePro. All rights reserved. · Every incident, understood.</p>
+  </div>
+</header>
+<div class="mmenu" id="mmenu" hidden role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="mmenu__top">
+    <a class="nav__logo" href="/index.html" aria-label="InvestigatePro home"><img src="/assets/img/logo-horizontal-white.svg" alt="InvestigatePro" width="140" height="28"></a>
+    <button class="nav__burger mmenu__close" type="button" aria-label="Close menu"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg></button>
+  </div>
+  <nav class="mmenu__list" aria-label="Mobile">
+    <a href="/platform.html" style="--i:0">Platform <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/pricing.html" style="--i:1">Pricing <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/resources.html" style="--i:2">Resources <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/blog/index.html" style="--i:3">Blog <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    <a href="/demo.html" style="--i:4">Book a demo <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+  </nav>
+  <div class="mmenu__sub">
+    <a href="/industries/mining-incident-investigation.html">Mining</a>
+    <a href="/industries/oil-gas-incident-management.html">Oil and gas</a>
+    <a href="/industries/manufacturing-root-cause-analysis.html">Manufacturing</a>
+    <a href="/industries/construction-safety-software.html">Construction</a>
+    <a href="/industries/engineering-incident-investigation.html">Engineering</a>
+    <a href="https://app.investigatepro.app/login">Login</a>
+  </div>
+  <div class="mmenu__cta">
+    <a class="btn btn--primary btn--block" href="https://app.investigatepro.app/signup">Start a 14-day trial</a>
+    <a class="btn btn--ghost btn--block" href="https://cal.com/investigatepro/15min">Book a 15-minute demo</a>
+  </div>
+</div>
+
+<main id="main">
+<section class="phead">
+  <div class="wrap phead__inner">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/index.html">Home</a><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg><a href="/resources.html">Resources</a><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg><span>Incident report template</span></nav>
+    <h1>The incident investigation report template.</h1>
+    <p class="lede">A complete, ICAM-aligned report you fill in in your browser, from incident details to sign-off. Print it or save it as a PDF.</p>
+  </div>
+</section>
+<section class="sec sec--tight" style="padding-top:0" aria-labelledby="g-h">
+  <div class="wrap gate">
+    <div class="stack" style="--gap:18px">
+      <h2 id="g-h" class="h3">What the template covers</h2>
+      <ul class="ledger">
+        <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg><div><strong>Details and severity</strong><span>Classification, location and the people involved.</span></div></li>
+        <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg><div><strong>What happened, and why</strong><span>Description, immediate cause, defences, PEEPO factors and causes.</span></div></li>
+        <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg><div><strong>Actions to verified</strong><span>Owner, due date, priority and status for every action.</span></div></li>
+        <li><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg><div><strong>Lessons and sign-off</strong><span>What to share, and who authorised it.</span></div></li>
+      </ul>
+    </div>
+    <form class="bezel gate__form" data-capture data-endpoint="https://api.investigatepro.app/api/leads/capture" data-source="incident_report_template" data-gate="report">
+      <input type="hidden" name="lead_magnet" value="incident_report_template">
+      <strong>Open the template</strong>
+      <div class="field"><label for="g-name">First name</label><input id="g-name" name="first_name" type="text" autocomplete="given-name" required></div>
+      <div class="field"><label for="g-email">Work email</label><input id="g-email" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="g-company">Company</label><input id="g-company" name="company" type="text" autocomplete="organization" required></div>
+      <button class="btn btn--primary" type="submit">Open the template <svg class="i i--nudge" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></button>
+      <p class="form__msg" hidden role="status" data-ok="Thank you. It is open below." data-err="That did not send, but the tool is open below. Email hello@investigatepro.app if you want updates." data-proto="Prototype build: nothing was sent. The tool is open below; on the live site your details go to InvestigatePro first."><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg><span></span></p>
+      <span class="gate__small">No spam. Unsubscribe any time.</span>
+    </form>
+  </div>
+</section>
+<section class="sec sheet-sec" id="report" hidden aria-label="Incident report template">
+  <div class="wrap">
+    <div class="toolbar no-print">
+      <p>Fill in each section, then print it or save it as a PDF. Nothing you type is stored or sent.</p>
+      <div class="toolbar__acts"><button class="btn btn--primary btn--sm" type="button" data-print><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M214.67,72H200V40a8,8,0,0,0-8-8H64a8,8,0,0,0-8,8V72H41.33C27.36,72,16,82.77,16,96v80a8,8,0,0,0,8,8H56v32a8,8,0,0,0,8,8H192a8,8,0,0,0,8-8V184h32a8,8,0,0,0,8-8V96C240,82.77,228.64,72,214.67,72ZM72,48H184V72H72ZM184,208H72V160H184Zm40-40H200V152a8,8,0,0,0-8-8H64a8,8,0,0,0-8,8v16H32V96c0-4.41,4.19-8,9.33-8H214.67c5.14,0,9.33,3.59,9.33,8Zm-24-52a12,12,0,1,1-12-12A12,12,0,0,1,200,116Z"/></svg> Print or save as PDF</button><button class="btn btn--ghost btn--sm" type="button" data-clear="rep">Clear all</button></div>
+    </div>
+    <div class="sheet-wrap"><div class="sheet" id="rep" data-sheet>
+      <div class="sheet__top"><strong>Incident investigation report</strong><span>InvestigatePro report template</span></div>
+      <section class="sheet__sec">
+        <div class="sheet__head"><span class="sheet__num">1</span><div><h2>Incident details</h2><p>Classification and location.</p></div></div>
+        <div class="cols"><div class="sf"><label for="r-no">Report number</label><input id="r-no" type="text" placeholder="e.g. INV-2026-047"></div><div class="sf"><label for="r-date">Date of incident</label><input id="r-date" type="date" data-today></div><div class="sf"><label for="r-time">Time of incident</label><input id="r-time" type="time"></div><div class="sf"><label for="r-rep">Date reported</label><input id="r-rep" type="date"></div><div class="sf"><label for="r-loc">Location or site</label><input id="r-loc" type="text" placeholder="e.g. Open pit, crusher area"></div><div class="sf"><label for="r-dept">Department or section</label><input id="r-dept" type="text" placeholder="e.g. Mining, maintenance"></div></div>
+        <fieldset class="choice"><legend>Severity</legend><label class="sev-low"><input type="radio" name="r-sev"><span>Low: first aid or near miss</span></label><label class="sev-med"><input type="radio" name="r-sev"><span>Medium: medical treatment</span></label><label class="sev-high"><input type="radio" name="r-sev"><span>High: lost time or serious</span></label><label class="sev-crit"><input type="radio" name="r-sev"><span>Critical: fatality or pSIF</span></label></fieldset>
+        <div class="cols"><div class="sf"><label for="r-type">Type of incident</label><select id="r-type"><option>Select a type</option><option>Struck by or contact with an object</option><option>Pedestrian and vehicle interaction</option><option>Fall from height</option><option>Slip, trip or fall on the same level</option><option>Caught in or between</option><option>Electrical contact</option><option>Hazardous substance exposure</option><option>Explosion or fire</option><option>Ground control or structural</option><option>Ergonomic or musculoskeletal</option><option>Environmental release</option><option>High-potential near miss</option><option>Other</option></select></div><div class="sf"><label for="r-people">People involved</label><textarea id="r-people" class="sm" placeholder="Names and roles of everyone involved"></textarea></div></div>
+      </section>
+      <section class="sheet__sec">
+        <div class="sheet__head"><span class="sheet__num">2</span><div><h2>Incident description</h2><p>What happened: factual, in order, no conclusions yet.</p></div></div>
+        <div class="sf"><label for="r-narr">Narrative</label><textarea id="r-narr" class="lg" placeholder="Describe exactly what happened, in order. State facts only, without blame or conclusions."></textarea></div>
+        <div class="cols"><div class="sf"><label for="r-act">Activity being carried out</label><textarea id="r-act" class="sm" placeholder="What task was being done at the time?"></textarea></div><div class="sf"><label for="r-cond">Site conditions</label><textarea id="r-cond" class="sm" placeholder="Weather, lighting, shift timing, noise, housekeeping"></textarea></div></div>
+      </section>
+      <section class="sheet__sec">
+        <div class="sheet__head"><span class="sheet__num">3</span><div><h2>Immediate cause</h2><p>The direct action or condition that caused harm. It is not the cause in the system.</p></div></div>
+        <div class="sf"><label for="r-imm">Immediate cause</label><textarea id="r-imm" class="sm" placeholder="e.g. The hand contacted an unguarded rotating shaft."></textarea></div>
+        <p class="hint">Absent or failed defences: barriers or controls that should have prevented harm but were missing, failed or bypassed.</p>
+        <div class="rows" id="r-defs" data-rows><div class="row-i" data-row><b data-n>1</b><textarea class="sm" aria-label="Absent or failed defence" placeholder="Describe the absent or failed defence"></textarea><button class="rm" type="button" data-remove aria-label="Remove this row"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg></button></div></div>
+        <template id="r-defs-tpl"><div class="row-i" data-row><b data-n>1</b><textarea class="sm" aria-label="Absent or failed defence" placeholder="Describe the absent or failed defence"></textarea><button class="rm" type="button" data-remove aria-label="Remove this row"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg></button></div></template>
+        <button class="addrow" type="button" data-add="r-defs"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg> Add a defence</button>
+      </section>
+      <section class="sheet__sec">
+        <div class="sheet__head"><span class="sheet__num">4</span><div><h2>Contributing factors (PEEPO)</h2><p>The conditions that made the incident possible.</p></div></div>
+        <div class="cols" style="--n:1"><div class="sf"><label for="c-0"><span class="sheet__num" style="display:inline-grid;width:22px;height:22px;font-size:.75rem;margin-right:8px">P</span>People</label><textarea id="c-0" class="sm" placeholder="Fatigue, skill gaps, communication, risk perception, distraction, physical condition"></textarea></div><div class="sf"><label for="c-1"><span class="sheet__num" style="display:inline-grid;width:22px;height:22px;font-size:.75rem;margin-right:8px">E</span>Environment</label><textarea id="c-1" class="sm" placeholder="Lighting, noise, weather, housekeeping, layout, production pressure"></textarea></div><div class="sf"><label for="c-2"><span class="sheet__num" style="display:inline-grid;width:22px;height:22px;font-size:.75rem;margin-right:8px">E</span>Equipment</label><textarea id="c-2" class="sm" placeholder="Design, deferred maintenance, PPE, safety devices, alarm fatigue"></textarea></div><div class="sf"><label for="c-3"><span class="sheet__num" style="display:inline-grid;width:22px;height:22px;font-size:.75rem;margin-right:8px">P</span>Procedures</label><textarea id="c-3" class="sm" placeholder="Missing, outdated, impractical or unfollowed procedures; permits and isolation; risk assessment"></textarea></div><div class="sf"><label for="c-4"><span class="sheet__num" style="display:inline-grid;width:22px;height:22px;font-size:.75rem;margin-right:8px">O</span>Organisation</label><textarea id="c-4" class="sm" placeholder="Supervision, training systems, management of change, incompatible goals, contractors, resources, leadership"></textarea></div></div>
+      </section>
+      <section class="sheet__sec">
+        <div class="sheet__head"><span class="sheet__num">5</span><div><h2>Causes</h2><p>Causes sit in management systems, culture, resources or design. Human error is not a cause.</p></div></div>
+        <div class="rows" id="r-causes" data-rows><div class="row-i" data-row><b data-n>1</b><textarea class="sm" aria-label="Cause" placeholder="A cause in the system that, if fixed, prevents recurrence"></textarea><button class="rm" type="button" data-remove aria-label="Remove this row"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg></button></div></div>
+        <template id="r-causes-tpl"><div class="row-i" data-row><b data-n>1</b><textarea class="sm" aria-label="Cause" placeholder="A cause in the system that, if fixed, prevents recurrence"></textarea><button class="rm" type="button" data-remove aria-label="Remove this row"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg></button></div></template>
+        <button class="addrow" type="button" data-add="r-causes"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg> Add a cause</button>
+      </section>
+      <section class="sheet__sec">
+        <div class="sheet__head"><span class="sheet__num">6</span><div><h2>Corrective actions</h2><p>Prefer elimination and engineering controls to administrative controls and PPE. Every cause needs at least one action.</p></div></div>
+        <div class="stable-wrap"><table class="stable"><thead><tr><th scope="col">Action</th><th scope="col">Responsible</th><th scope="col">Due date</th><th scope="col">Priority</th><th scope="col">Status</th><th scope="col"><span class="sr-only">Remove</span></th></tr></thead><tbody id="r-actions" data-rows><tr data-row><td><textarea class="sm" aria-label="Action" placeholder="Describe the action"></textarea></td><td><input type="text" aria-label="Responsible" placeholder="Name or role"></td><td><input type="date" aria-label="Due date"></td><td><select aria-label="Priority"><option>P2: short term</option><option>P1: immediate</option><option>P3: long term</option></select></td><td><select aria-label="Status"><option>Open</option><option>In progress</option><option>Complete</option><option>Verified</option></select></td><td class="act"><button class="rm" type="button" data-remove aria-label="Remove this row"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg></button></td></tr><tr data-row><td><textarea class="sm" aria-label="Action" placeholder="Describe the action"></textarea></td><td><input type="text" aria-label="Responsible" placeholder="Name or role"></td><td><input type="date" aria-label="Due date"></td><td><select aria-label="Priority"><option>P2: short term</option><option>P1: immediate</option><option>P3: long term</option></select></td><td><select aria-label="Status"><option>Open</option><option>In progress</option><option>Complete</option><option>Verified</option></select></td><td class="act"><button class="rm" type="button" data-remove aria-label="Remove this row"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg></button></td></tr><tr data-row><td><textarea class="sm" aria-label="Action" placeholder="Describe the action"></textarea></td><td><input type="text" aria-label="Responsible" placeholder="Name or role"></td><td><input type="date" aria-label="Due date"></td><td><select aria-label="Priority"><option>P2: short term</option><option>P1: immediate</option><option>P3: long term</option></select></td><td><select aria-label="Status"><option>Open</option><option>In progress</option><option>Complete</option><option>Verified</option></select></td><td class="act"><button class="rm" type="button" data-remove aria-label="Remove this row"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg></button></td></tr></tbody></table></div>
+        <template id="r-actions-tpl"><tr data-row><td><textarea class="sm" aria-label="Action" placeholder="Describe the action"></textarea></td><td><input type="text" aria-label="Responsible" placeholder="Name or role"></td><td><input type="date" aria-label="Due date"></td><td><select aria-label="Priority"><option>P2: short term</option><option>P1: immediate</option><option>P3: long term</option></select></td><td><select aria-label="Status"><option>Open</option><option>In progress</option><option>Complete</option><option>Verified</option></select></td><td class="act"><button class="rm" type="button" data-remove aria-label="Remove this row"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg></button></td></tr></template>
+        <button class="addrow" type="button" data-add="r-actions"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg> Add an action</button>
+      </section>
+      <section class="sheet__sec">
+        <div class="sheet__head"><span class="sheet__num">7</span><div><h2>Lessons learned</h2><p>What others should know.</p></div></div>
+        <div class="cols"><div class="sf"><label for="r-less">Key lessons</label><textarea id="r-less" class="sm" placeholder="What made this incident possible, and where else might those conditions exist?"></textarea></div><div class="sf"><label for="r-else">The same hazards elsewhere</label><textarea id="r-else" class="sm" placeholder="Other sites or areas where the same factors may exist"></textarea></div></div>
+      </section>
+      <section class="sheet__sec">
+        <div class="sheet__head"><span class="sheet__num">8</span><div><h2>Sign-off</h2><p>The investigation team&rsquo;s authorisation.</p></div></div>
+        <div class="stable-wrap"><table class="stable"><thead><tr><th scope="col">Role</th><th scope="col">Name</th><th scope="col">Title</th><th scope="col">Date</th></tr></thead><tbody><tr><td class="rh">Lead investigator</td><td><input type="text" aria-label="Lead investigator: name" placeholder="Full name"></td><td><input type="text" aria-label="Lead investigator: title" placeholder="Title or role"></td><td><input type="date" aria-label="Lead investigator: date"></td></tr><tr><td class="rh">Site manager or approver</td><td><input type="text" aria-label="Site manager or approver: name" placeholder="Full name"></td><td><input type="text" aria-label="Site manager or approver: title" placeholder="Title or role"></td><td><input type="date" aria-label="Site manager or approver: date"></td></tr><tr><td class="rh">Safety manager or HSE</td><td><input type="text" aria-label="Safety manager or HSE: name" placeholder="Full name"></td><td><input type="text" aria-label="Safety manager or HSE: title" placeholder="Title or role"></td><td><input type="date" aria-label="Safety manager or HSE: date"></td></tr><tr><td class="rh">Management representative</td><td><input type="text" aria-label="Management representative: name" placeholder="Full name"></td><td><input type="text" aria-label="Management representative: title" placeholder="Title or role"></td><td><input type="date" aria-label="Management representative: date"></td></tr></tbody></table></div>
+        <div class="cols"><div class="sf"><label for="r-verified">Date all corrective actions were verified</label><input id="r-verified" type="date"></div></div>
+      </section>
+    </div></div>
+  </div>
+</section>
+<section class="sec" aria-labelledby="rel-h">
+  <div class="wrap">
+    <div class="sec-head sec-head--row">
+      <div class="stack" style="--gap:18px"><h2 id="rel-h">Related tools</h2><p>Free, no account needed.</p></div>
+      <a class="link-arrow" href="/resources.html">All free tools <svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    </div>
+    <div class="tool-list">
+      <a href="/checklist.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H128a8,8,0,0,1,0-16h88A8,8,0,0,1,224,128ZM128,72h88a8,8,0,0,0,0-16H128a8,8,0,0,0,0,16Zm88,112H128a8,8,0,0,0,0,16h88a8,8,0,0,0,0-16ZM82.34,42.34,56,68.69,45.66,58.34A8,8,0,0,0,34.34,69.66l16,16a8,8,0,0,0,11.32,0l32-32A8,8,0,0,0,82.34,42.34Zm0,64L56,132.69,45.66,122.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32,0l32-32a8,8,0,0,0-11.32-11.32Zm0,64L56,196.69,45.66,186.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32,0l32-32a8,8,0,0,0-11.32-11.32Z"/></svg><span><strong>ICAM checklist</strong><span>25 points, from scene preservation to close-out.</span></span><svg class="i go" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+      <a href="/rca-template-pack.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M230.91,172A8,8,0,0,1,228,182.91l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,36,169.09l92,53.65,92-53.65A8,8,0,0,1,230.91,172ZM220,121.09l-92,53.65L36,121.09A8,8,0,0,0,28,134.91l96,56a8,8,0,0,0,8.06,0l96-56A8,8,0,1,0,220,121.09ZM24,80a8,8,0,0,1,4-6.91l96-56a8,8,0,0,1,8.06,0l96,56a8,8,0,0,1,0,13.82l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,24,80Zm23.88,0L128,126.74,208.12,80,128,33.26Z"/></svg><span><strong>Cause-analysis template pack</strong><span>5 Whys, fishbone, ICAM-aligned and a full report.</span></span><svg class="i go" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+      <a href="/icam-template.html"><svg class="i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Zm-32-80a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,136Zm0,32a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,168Z"/></svg><span><strong>ICAM investigation template</strong><span>A printable template to fill in by hand.</span></span><svg class="i go" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    </div>
+  </div>
+</section>
+<section class="sec cta" aria-labelledby="cta-h">
+  <div class="wrap split" style="align-items:center">
+    <h2 id="cta-h">Run investigations like this on every case.</h2>
+    <div class="stack" style="--gap:18px">
+      <p class="lede">InvestigatePro gives every investigator the same ICAM structure, with a coach, corrective actions to verified and the report generated from the case.</p>
+      <div class="row">
+        <a class="btn btn--primary" href="https://app.investigatepro.app/signup">Start a 14-day trial <svg class="i i--nudge" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+        <a class="btn btn--ghost" href="https://cal.com/investigatepro/15min">Book a 15-minute demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <div class="foot__brand">
+      <a href="/index.html" aria-label="InvestigatePro home"><img src="/assets/img/logo-horizontal-white.svg" alt="InvestigatePro" width="168" height="34"></a>
+      <p class="foot__tag">Every incident, understood.</p>
+      <p class="foot__by">Built by Devon Turner, who spent fifteen years leading mining safety across Africa and the Middle East, with an ICAM specialism.</p>
+      <button class="motion-toggle" type="button" aria-pressed="false"><span class="motion-toggle__track" aria-hidden="true"></span>Reduce motion</button>
+    </div>
+    <div>
+      <h2>Product</h2>
+      <ul>
+        <li><a href="/platform.html">Platform</a></li>
+        <li><a href="/pricing.html">Pricing</a></li>
+        <li><a href="/demo.html">Book a demo</a></li>
+        <li><a href="/security.html">Security</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+        <li><a href="/changelog.html">Changelog</a></li>
+        <li><a href="/apps/index.html">Apps</a><span class="tag-inbuild">in build</span></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Free tools</h2>
+      <ul>
+        <li><a href="/resources.html">All free tools</a></li>
+        <li><a href="/checklist.html">ICAM checklist</a></li>
+        <li><a href="/icam-toolkit.html">ICAM toolkit</a></li>
+        <li><a href="/peepo-chart-builder.html">PEEPO chart builder</a></li>
+        <li><a href="/5-whys-worksheet.html">5-Whys worksheet</a></li>
+        <li><a href="/state-of-incident-investigation-2026.html">State of Incident Investigation 2026</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Industries</h2>
+      <ul>
+        <li><a href="/industries/mining-incident-investigation.html">Mining</a></li>
+        <li><a href="/industries/oil-gas-incident-management.html">Oil and gas</a></li>
+        <li><a href="/industries/manufacturing-root-cause-analysis.html">Manufacturing</a></li>
+        <li><a href="/industries/construction-safety-software.html">Construction</a></li>
+        <li><a href="/industries/engineering-incident-investigation.html">Engineering</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Company</h2>
+      <ul>
+        <li><a href="/blog/index.html">Blog</a></li>
+        <li><a href="/status.html">Service notices</a></li>
+        <li><a href="mailto:hello@investigatepro.app">Contact: hello@investigatepro.app</a></li>
+        <li><a href="https://app.investigatepro.app/login">Login</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/terms.html">Terms</a></li>
+        <li><a href="/cookie.html">Cookies</a></li>
+        <li><a href="/dpa.html">DPA</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot__base">
+    <span>&copy; 2026 InvestigatePro. Find the causes. Fix the system.</span>
+    <span>Every incident, understood.</span>
   </div>
 </footer>
-<script defer src="/assets/js/ip2.js"></script>
-<script src="/analytics.js"></script>
+
 </body>
 </html>
