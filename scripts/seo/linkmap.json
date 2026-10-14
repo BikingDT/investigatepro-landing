@@ -1,0 +1,184 @@
+{
+  "_comment": "Related-reading map. Keys are site-relative paths; values are ordered lists of related paths. Edit here, then run scripts/seo/apply.py. Labels are taken from each target page's <h1>.",
+  "posts": {
+    "/blog/icam-investigation-guide.html": [
+      "/blog/peepo-framework-explained.html",
+      "/blog/icam-vs-scat-investigation-methods.html",
+      "/blog/mining-incident-investigation-guide.html",
+      "/checklist.html",
+      "/icam-template.html",
+      "/platform.html"
+    ],
+    "/blog/icam-methodology-guide.html": [
+      "/blog/icam-investigation-guide.html",
+      "/blog/peepo-framework-explained.html",
+      "/blog/why-incident-investigations-fail.html",
+      "/icam-toolkit.html",
+      "/platform.html"
+    ],
+    "/blog/peepo-framework-explained.html": [
+      "/blog/icam-investigation-guide.html",
+      "/peepo-chart-builder.html",
+      "/peepo-cheatsheet.html",
+      "/blog/root-cause-analysis-guide.html",
+      "/platform.html"
+    ],
+    "/blog/icam-vs-scat-investigation-methods.html": [
+      "/blog/icam-investigation-guide.html",
+      "/blog/root-cause-analysis-guide.html",
+      "/blog/how-to-use-5-whys-analysis.html",
+      "/industries/mining-incident-investigation.html"
+    ],
+    "/blog/mining-incident-investigation-guide.html": [
+      "/industries/mining-incident-investigation.html",
+      "/blog/icam-investigation-guide.html",
+      "/checklist.html",
+      "/blog/why-incident-investigations-fail.html",
+      "/platform.html"
+    ],
+    "/blog/construction-site-incident-investigation-checklist.html": [
+      "/industries/construction-safety-software.html",
+      "/checklist.html",
+      "/blog/icam-investigation-guide.html",
+      "/incident-report-template.html"
+    ],
+    "/blog/root-cause-analysis-guide.html": [
+      "/blog/root-cause-analysis-mistakes.html",
+      "/blog/root-cause-analysis-templates.html",
+      "/blog/how-to-use-5-whys-analysis.html",
+      "/blog/icam-investigation-guide.html",
+      "/rca-template-pack.html"
+    ],
+    "/blog/root-cause-analysis-mistakes.html": [
+      "/blog/root-cause-analysis-guide.html",
+      "/blog/incident-investigation-mistakes.html",
+      "/blog/why-incident-investigations-fail.html",
+      "/platform.html"
+    ],
+    "/blog/root-cause-analysis-templates.html": [
+      "/rca-template-pack.html",
+      "/icam-template.html",
+      "/5-whys-worksheet.html",
+      "/blog/root-cause-analysis-guide.html"
+    ],
+    "/blog/how-to-use-5-whys-analysis.html": [
+      "/5-whys-worksheet.html",
+      "/apps/5whys-ai.html",
+      "/blog/root-cause-analysis-guide.html",
+      "/blog/icam-vs-scat-investigation-methods.html"
+    ],
+    "/blog/incident-investigation-mistakes.html": [
+      "/blog/why-incident-investigations-fail.html",
+      "/blog/root-cause-analysis-mistakes.html",
+      "/blog/icam-investigation-guide.html",
+      "/checklist.html"
+    ],
+    "/blog/why-incident-investigations-fail.html": [
+      "/blog/incident-investigation-mistakes.html",
+      "/blog/blame-to-learning-culture.html",
+      "/blog/icam-methodology-guide.html",
+      "/platform.html"
+    ],
+    "/blog/blame-to-learning-culture.html": [
+      "/blog/why-incident-investigations-fail.html",
+      "/blog/icam-methodology-guide.html",
+      "/blog/paper-vs-digital-investigation.html"
+    ],
+    "/blog/paper-vs-digital-investigation.html": [
+      "/blog/best-root-cause-analysis-software-2026.html",
+      "/platform.html",
+      "/pricing.html",
+      "/blog/why-incident-investigations-fail.html"
+    ],
+    "/blog/best-root-cause-analysis-software-2026.html": [
+      "/blog/cority-alternative-incident-investigation.html",
+      "/blog/intelex-alternative-incident-investigation.html",
+      "/blog/velocityehs-alternative-incident-investigation.html",
+      "/blog/safetyculture-alternative-incident-investigation.html",
+      "/blog/ehs-insight-alternative-incident-investigation.html",
+      "/platform.html"
+    ],
+    "/blog/cority-alternative-incident-investigation.html": [
+      "/blog/best-root-cause-analysis-software-2026.html",
+      "/blog/intelex-alternative-incident-investigation.html",
+      "/platform.html",
+      "/pricing.html"
+    ],
+    "/blog/intelex-alternative-incident-investigation.html": [
+      "/blog/best-root-cause-analysis-software-2026.html",
+      "/blog/cority-alternative-incident-investigation.html",
+      "/platform.html",
+      "/pricing.html"
+    ],
+    "/blog/velocityehs-alternative-incident-investigation.html": [
+      "/blog/best-root-cause-analysis-software-2026.html",
+      "/blog/ehs-insight-alternative-incident-investigation.html",
+      "/platform.html",
+      "/pricing.html"
+    ],
+    "/blog/safetyculture-alternative-incident-investigation.html": [
+      "/blog/best-root-cause-analysis-software-2026.html",
+      "/blog/velocityehs-alternative-incident-investigation.html",
+      "/platform.html",
+      "/pricing.html"
+    ],
+    "/blog/ehs-insight-alternative-incident-investigation.html": [
+      "/blog/best-root-cause-analysis-software-2026.html",
+      "/blog/safetyculture-alternative-incident-investigation.html",
+      "/platform.html",
+      "/pricing.html"
+    ],
+    "/blog/ai-in-safety-machine-learning-root-cause-analysis.html": [
+      "/blog/ai-safety-management.html",
+      "/platform.html",
+      "/blog/root-cause-analysis-guide.html",
+      "/security.html"
+    ],
+    "/blog/ai-safety-management.html": [
+      "/blog/ai-in-safety-machine-learning-root-cause-analysis.html",
+      "/platform.html",
+      "/faq.html",
+      "/blog/icam-methodology-guide.html"
+    ]
+  },
+  "industries": {
+    "/industries/mining-incident-investigation.html": [
+      "/blog/mining-incident-investigation-guide.html",
+      "/blog/icam-investigation-guide.html",
+      "/blog/icam-vs-scat-investigation-methods.html",
+      "/checklist.html"
+    ],
+    "/industries/oil-gas-incident-management.html": [
+      "/blog/icam-investigation-guide.html",
+      "/blog/peepo-framework-explained.html",
+      "/blog/why-incident-investigations-fail.html",
+      "/checklist.html"
+    ],
+    "/industries/manufacturing-root-cause-analysis.html": [
+      "/blog/root-cause-analysis-guide.html",
+      "/blog/how-to-use-5-whys-analysis.html",
+      "/blog/root-cause-analysis-mistakes.html",
+      "/rca-template-pack.html"
+    ],
+    "/industries/construction-safety-software.html": [
+      "/blog/construction-site-incident-investigation-checklist.html",
+      "/blog/icam-investigation-guide.html",
+      "/blog/incident-investigation-mistakes.html",
+      "/incident-report-template.html"
+    ],
+    "/industries/engineering-incident-investigation.html": [
+      "/blog/icam-methodology-guide.html",
+      "/blog/root-cause-analysis-guide.html",
+      "/blog/paper-vs-digital-investigation.html",
+      "/icam-template.html"
+    ]
+  },
+  "regulators": {
+    "MSHA": "https://www.msha.gov/",
+    "OSHA": "https://www.osha.gov/",
+    "RIDDOR": "https://www.hse.gov.uk/riddor/",
+    "MHSA": "https://www.gov.za/documents/mine-health-and-safety-act",
+    "Safe Work Australia": "https://www.safeworkaustralia.gov.au/",
+    "WorkSafeBC": "https://www.worksafebc.com/"
+  }
+}
