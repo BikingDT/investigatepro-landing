@@ -319,8 +319,13 @@ body.menu-open{overflow:hidden}
 .foot__brand img{width:168px}
 .foot__tag{font-family:var(--f-display);font-weight:700;font-size:1.25rem;letter-spacing:-.02em;color:var(--fg)}
 .foot__by{color:var(--fg-3);font-size:var(--t-small)}
-.foot h2{font-family:var(--f-body);font-size:var(--t-small);font-weight:600;letter-spacing:0;color:var(--fg);margin-bottom:14px}
+.foot h2,.foot .foot__h{font-family:var(--f-body);font-size:var(--t-small);font-weight:600;letter-spacing:0;color:var(--fg);margin-bottom:14px}
 .foot ul{display:grid;gap:9px}
+.related{margin-top:3em;max-width:760px;padding:22px;border-radius:18px;border:1px solid var(--line)}
+.related__h{font-family:var(--f-body);font-size:var(--t-small);font-weight:600;color:var(--fg);margin:0 0 12px}
+.related ul{display:grid;gap:9px;list-style:none;padding:0;margin:0}
+.related ul a{color:var(--fg-2);font-size:.9375rem}
+.related ul a:hover{color:var(--fg)}
 .foot ul a{color:var(--fg-2);text-decoration:none;font-size:.9375rem}
 .foot ul a:hover{color:var(--fg)}
 .foot__base{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-top:56px;padding-top:22px;border-top:1px solid var(--line);color:var(--fg-3);font-size:var(--t-micro)}
